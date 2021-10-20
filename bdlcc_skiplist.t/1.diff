@@ -1,0 +1,22 @@
+0000000000649ba0 <BloombergLP::bdlcc::SkipList_Control::decrementRefCount()>:			   |	000000000064a560 <BloombergLP::bdlcc::SkipList_Control::decrementRefCount()>:
+0000000000000000: 02	movl	(%rdi), %esi							   |	0000000000000000: 02	movl	(%rdi), %ecx
+0000000000000002: 03	leal	-1(%rsi), %ecx							   |	0000000000000002: 10	nopw	%cs:(%rax,%rax)
+0000000000000005: 02	movl	%esi, %eax							   |	000000000000000c: 04	nopl	(%rax)
+0000000000000007: 01	lock									   |	0000000000000010: 03	leal	-1(%rcx), %edx
+0000000000000008: 03	cmpxchgl	%ecx, (%rdi)						   |	0000000000000013: 02	movl	%ecx, %eax
+000000000000000b: 02	cmpl	%eax, %esi							   |	0000000000000015: 01	lock	
+000000000000000d: 02	je	0x649bcf <BloombergLP::bdlcc::SkipList_Control::decrementRefCoun   |	0000000000000016: 03	cmpxchgl	%edx, (%rdi)
+000000000000000f: 02	movl	%eax, %edx							   |	0000000000000019: 02	cmpl	%eax, %ecx
+0000000000000011: 10	nopw	%cs:(%rax,%rax)							   |	000000000000001b: 02	movl	%eax, %ecx
+000000000000001b: 05	nopl	(%rax,%rax)							   |	000000000000001d: 02	jne	0x64a570 <BloombergLP::bdlcc::SkipList_Control::decrementRefCoun
+0000000000000020: 03	leal	-1(%rdx), %ecx							   |	000000000000001f: 06	andl	$1048575, %edx
+0000000000000023: 02	movl	%edx, %eax							   |	0000000000000025: 02	movl	%edx, %eax
+0000000000000025: 01	lock									   |	0000000000000027: 01	retq	
+0000000000000026: 03	cmpxchgl	%ecx, (%rdi)						   |	0000000000000028: 08	nopl	(%rax,%rax)
+0000000000000029: 02	cmpl	%eax, %edx							   <
+000000000000002b: 02	movl	%eax, %edx							   <
+000000000000002d: 02	jne	0x649bc0 <BloombergLP::bdlcc::SkipList_Control::decrementRefCoun   <
+000000000000002f: 06	andl	$1048575, %ecx							   <
+0000000000000035: 02	movl	%ecx, %eax							   <
+0000000000000037: 01	retq									   <
+0000000000000038: 08	nopl	(%rax,%rax)							   <

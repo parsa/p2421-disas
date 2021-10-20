@@ -1,0 +1,347 @@
+000000000041b040 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)>:
+0000000000000000: 01	pushq	%rbp
+0000000000000001: 02	pushq	%r15
+0000000000000003: 02	pushq	%r14
+0000000000000005: 02	pushq	%r13
+0000000000000007: 02	pushq	%r12
+0000000000000009: 01	pushq	%rbx
+000000000000000a: 04	subq	$40, %rsp
+000000000000000e: 03	movq	%rcx, %rbx
+0000000000000011: 03	movl	%esi, %r14d
+0000000000000014: 03	movq	%rdi, %r12
+0000000000000017: 02	movl	%esi, (%rdi)
+0000000000000019: 04	movl	%edx, 4(%rsp)
+000000000000001d: 03	movl	%edx, 4(%rdi)
+0000000000000020: 03	movq	%rcx, %rax
+0000000000000023: 03	testq	%rcx, %rcx
+0000000000000026: 02	jne	0x41b079 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x39>
+0000000000000028: 07	movq	2163865(%rip), %rax  # 62b508 <BloombergLP::bslma::Default::s_defaultAllocator>
+000000000000002f: 03	testq	%rax, %rax
+0000000000000032: 02	jne	0x41b079 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x39>
+0000000000000034: 05	callq	0x420e30 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
+0000000000000039: 05	movq	%rax, 16(%r12)
+000000000000003e: 05	leaq	24(%r12), %rax
+0000000000000043: 05	movq	%rax, 8(%rsp)
+0000000000000048: 03	xorps	%xmm0, %xmm0
+000000000000004b: 06	movups	%xmm0, 24(%r12)
+0000000000000051: 09	movl	$1, 40(%r12)
+000000000000005a: 05	movq	%rbx, 48(%r12)
+000000000000005f: 03	movslq	%r14d, %rsi
+0000000000000062: 04	shlq	$4, %rsi
+0000000000000066: 03	movq	(%rbx), %rax
+0000000000000069: 03	movq	%rbx, %rdi
+000000000000006c: 03	callq	*16(%rax)
+000000000000006f: 05	movq	%rax, 8(%r12)
+0000000000000074: 05	callq	0x420eb0 <BloombergLP::bslma::MallocFreeAllocator::singleton()>
+0000000000000079: 05	movq	32(%r12), %rdi
+000000000000007e: 03	testq	%rdi, %rdi
+0000000000000081: 06	jne	0x41b1d5 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x195>
+0000000000000087: 05	movslq	40(%r12), %rax
+000000000000008c: 04	leaq	(%rax,%rax,2), %rbx
+0000000000000090: 08	leaq	23(,%rbx,8), %rsi
+0000000000000098: 04	andq	$-16, %rsi
+000000000000009c: 05	movq	16(%r12), %rdi
+00000000000000a1: 03	movq	(%rdi), %rax
+00000000000000a4: 03	callq	*16(%rax)
+00000000000000a7: 03	movq	%rax, %rcx
+00000000000000aa: 05	movq	8(%rsp), %rdx
+00000000000000af: 03	movq	(%rdx), %rax
+00000000000000b2: 03	movq	%rax, (%rcx)
+00000000000000b5: 03	movq	%rcx, (%rdx)
+00000000000000b8: 04	leaq	8(%rcx), %rdi
+00000000000000bc: 05	leaq	-16(%rcx,%rbx,8), %rbp
+00000000000000c1: 03	cmpq	%rdi, %rbp
+00000000000000c4: 06	jbe	0x41b1b6 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x176>
+00000000000000ca: 08	leaq	-25(,%rbx,8), %rsi
+00000000000000d2: 10	movabsq	$-6148914691236517205, %rdx
+00000000000000dc: 03	movq	%rsi, %rax
+00000000000000df: 03	mulq	%rdx
+00000000000000e2: 03	shrl	$4, %edx
+00000000000000e5: 02	incl	%edx
+00000000000000e7: 04	andq	$7, %rdx
+00000000000000eb: 06	je	0x41b597 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x557>
+00000000000000f1: 04	addq	$32, %rcx
+00000000000000f5: 03	negq	%rdx
+00000000000000f8: 08	nopl	(%rax,%rax)
+0000000000000100: 04	movq	%rcx, -24(%rcx)
+0000000000000104: 04	addq	$24, %rcx
+0000000000000108: 03	incq	%rdx
+000000000000010b: 02	jne	0x41b140 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x100>
+000000000000010d: 04	addq	$-24, %rcx
+0000000000000111: 07	cmpq	$168, %rsi
+0000000000000118: 02	jb	0x41b1b6 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x176>
+000000000000011a: 06	nopw	(%rax,%rax)
+0000000000000120: 04	leaq	24(%rcx), %rax
+0000000000000124: 03	movq	%rax, (%rcx)
+0000000000000127: 04	leaq	48(%rcx), %rax
+000000000000012b: 04	movq	%rax, 24(%rcx)
+000000000000012f: 04	leaq	72(%rcx), %rax
+0000000000000133: 04	movq	%rax, 48(%rcx)
+0000000000000137: 04	leaq	96(%rcx), %rax
+000000000000013b: 04	movq	%rax, 72(%rcx)
+000000000000013f: 04	leaq	120(%rcx), %rax
+0000000000000143: 04	movq	%rax, 96(%rcx)
+0000000000000147: 07	leaq	144(%rcx), %rax
+000000000000014e: 04	movq	%rax, 120(%rcx)
+0000000000000152: 07	leaq	168(%rcx), %rax
+0000000000000159: 07	movq	%rax, 144(%rcx)
+0000000000000160: 07	leaq	192(%rcx), %rax
+0000000000000167: 07	movq	%rax, 168(%rcx)
+000000000000016e: 03	movq	%rax, %rcx
+0000000000000171: 03	cmpq	%rbp, %rax
+0000000000000174: 02	jb	0x41b160 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x120>
+0000000000000176: 05	movq	32(%r12), %rax
+000000000000017b: 04	movq	%rax, (%rbp)
+000000000000017f: 05	movq	%rdi, 32(%r12)
+0000000000000184: 05	movl	40(%r12), %eax
+0000000000000189: 03	cmpl	$31, %eax
+000000000000018c: 02	jg	0x41b1d5 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x195>
+000000000000018e: 02	addl	%eax, %eax
+0000000000000190: 05	movl	%eax, 40(%r12)
+0000000000000195: 03	movq	(%rdi), %rax
+0000000000000198: 05	movq	%rax, 32(%r12)
+000000000000019d: 08	movq	$0, 16(%rdi)
+00000000000001a5: 05	movq	8(%r12), %rax
+00000000000001aa: 03	movq	%rdi, (%rax)
+00000000000001ad: 05	movq	8(%r12), %rax
+00000000000001b2: 03	movq	(%rax), %rax
+00000000000001b5: 07	movq	$0, (%rax)
+00000000000001bc: 05	movq	8(%r12), %rax
+00000000000001c1: 03	movq	(%rax), %rax
+00000000000001c4: 08	movq	$0, 8(%rax)
+00000000000001cc: 03	testl	%r14d, %r14d
+00000000000001cf: 06	jle	0x41b588 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x548>
+00000000000001d5: 03	movl	%r14d, %r15d
+00000000000001d8: 06	movl	$1, %r14d
+00000000000001de: 02	xorl	%ebp, %ebp
+00000000000001e0: 05	movq	%r15, 16(%rsp)
+00000000000001e5: 02	jmp	0x41b258 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x218>
+00000000000001e7: 09	nopw	(%rax,%rax)
+00000000000001f0: 05	movq	8(%r12), %rax
+00000000000001f5: 03	movq	%rbp, %rbx
+00000000000001f8: 05	movq	16(%rsp), %r15
+00000000000001fd: 05	movq	32(%rsp), %rbp
+0000000000000202: 05	movq	24(%rsp), %rcx
+0000000000000207: 05	movq	%rbx, 8(%rax,%rcx)
+000000000000020c: 03	incq	%rbp
+000000000000020f: 03	cmpq	%r15, %rbp
+0000000000000212: 06	je	0x41b588 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x548>
+0000000000000218: 03	testq	%rbp, %rbp
+000000000000021b: 06	je	0x41b3cc <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x38c>
+0000000000000221: 05	callq	0x420eb0 <BloombergLP::bslma::MallocFreeAllocator::singleton()>
+0000000000000226: 05	movq	32(%r12), %rdi
+000000000000022b: 03	testq	%rdi, %rdi
+000000000000022e: 06	jne	0x41b390 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x350>
+0000000000000234: 05	movslq	40(%r12), %rax
+0000000000000239: 04	leaq	(%rax,%rax,2), %rbx
+000000000000023d: 08	leaq	23(,%rbx,8), %rsi
+0000000000000245: 04	andq	$-16, %rsi
+0000000000000249: 05	movq	16(%r12), %rdi
+000000000000024e: 03	movq	(%rdi), %rax
+0000000000000251: 03	callq	*16(%rax)
+0000000000000254: 03	movq	%rax, %rcx
+0000000000000257: 05	movq	8(%rsp), %rdx
+000000000000025c: 03	movq	(%rdx), %rax
+000000000000025f: 03	movq	%rax, (%rcx)
+0000000000000262: 03	movq	%rcx, (%rdx)
+0000000000000265: 04	leaq	8(%rcx), %rdi
+0000000000000269: 05	leaq	-16(%rcx,%rbx,8), %rsi
+000000000000026e: 03	cmpq	%rdi, %rsi
+0000000000000271: 06	jbe	0x41b366 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x326>
+0000000000000277: 08	leaq	-25(,%rbx,8), %rbx
+000000000000027f: 03	movq	%rbx, %rax
+0000000000000282: 10	movabsq	$-6148914691236517205, %rdx
+000000000000028c: 03	mulq	%rdx
+000000000000028f: 03	shrl	$4, %edx
+0000000000000292: 02	incl	%edx
+0000000000000294: 04	andq	$7, %rdx
+0000000000000298: 06	je	0x41b573 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x533>
+000000000000029e: 04	addq	$32, %rcx
+00000000000002a2: 03	negq	%rdx
+00000000000002a5: 10	nopw	%cs:(%rax,%rax)
+00000000000002af: 01	nop	
+00000000000002b0: 04	movq	%rcx, -24(%rcx)
+00000000000002b4: 04	addq	$24, %rcx
+00000000000002b8: 03	incq	%rdx
+00000000000002bb: 02	jne	0x41b2f0 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x2b0>
+00000000000002bd: 04	addq	$-24, %rcx
+00000000000002c1: 07	cmpq	$168, %rbx
+00000000000002c8: 02	jb	0x41b366 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x326>
+00000000000002ca: 06	nopw	(%rax,%rax)
+00000000000002d0: 04	leaq	24(%rcx), %rax
+00000000000002d4: 03	movq	%rax, (%rcx)
+00000000000002d7: 04	leaq	48(%rcx), %rax
+00000000000002db: 04	movq	%rax, 24(%rcx)
+00000000000002df: 04	leaq	72(%rcx), %rax
+00000000000002e3: 04	movq	%rax, 48(%rcx)
+00000000000002e7: 04	leaq	96(%rcx), %rax
+00000000000002eb: 04	movq	%rax, 72(%rcx)
+00000000000002ef: 04	leaq	120(%rcx), %rax
+00000000000002f3: 04	movq	%rax, 96(%rcx)
+00000000000002f7: 07	leaq	144(%rcx), %rax
+00000000000002fe: 04	movq	%rax, 120(%rcx)
+0000000000000302: 07	leaq	168(%rcx), %rax
+0000000000000309: 07	movq	%rax, 144(%rcx)
+0000000000000310: 07	leaq	192(%rcx), %rax
+0000000000000317: 07	movq	%rax, 168(%rcx)
+000000000000031e: 03	movq	%rax, %rcx
+0000000000000321: 03	cmpq	%rsi, %rax
+0000000000000324: 02	jb	0x41b310 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x2d0>
+0000000000000326: 05	movq	32(%r12), %rax
+000000000000032b: 03	movq	%rax, (%rsi)
+000000000000032e: 05	movq	%rdi, 32(%r12)
+0000000000000333: 05	movl	40(%r12), %eax
+0000000000000338: 03	cmpl	$31, %eax
+000000000000033b: 02	jg	0x41b390 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x350>
+000000000000033d: 02	addl	%eax, %eax
+000000000000033f: 05	movl	%eax, 40(%r12)
+0000000000000344: 10	nopw	%cs:(%rax,%rax)
+000000000000034e: 02	nop	
+0000000000000350: 03	movslq	%r14d, %rax
+0000000000000353: 03	movq	(%rdi), %rcx
+0000000000000356: 05	movq	%rcx, 32(%r12)
+000000000000035b: 04	movq	%rax, 16(%rdi)
+000000000000035f: 05	movq	8(%r12), %rax
+0000000000000364: 03	movq	%rbp, %rcx
+0000000000000367: 04	shlq	$4, %rcx
+000000000000036b: 04	movq	%rdi, (%rax,%rcx)
+000000000000036f: 05	movq	8(%r12), %rax
+0000000000000374: 04	movq	(%rax,%rcx), %rdi
+0000000000000378: 03	leal	-1(%rbp), %ecx
+000000000000037b: 04	shlq	$4, %rcx
+000000000000037f: 05	movq	8(%rax,%rcx), %rsi
+0000000000000384: 05	callq	0x4204b0 <BloombergLP::bslalg::BidirectionalLinkListUtil::insertLinkAfterTarget(BloombergLP::bslalg::BidirectionalLink*, BloombergLP::bslalg::BidirectionalLink*)>
+0000000000000389: 03	incl	%r14d
+000000000000038c: 03	movq	%rbp, %rcx
+000000000000038f: 04	shlq	$4, %rcx
+0000000000000393: 05	movq	8(%r12), %rax
+0000000000000398: 04	movq	(%rax,%rcx), %rbx
+000000000000039c: 05	cmpl	$2, 4(%rsp)
+00000000000003a1: 06	jl	0x41b247 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x207>
+00000000000003a7: 05	movq	%rcx, 24(%rsp)
+00000000000003ac: 05	movq	%rbp, 32(%rsp)
+00000000000003b1: 03	movslq	%r14d, %r14
+00000000000003b4: 06	movl	$1, %r15d
+00000000000003ba: 06	nopw	(%rax,%rax)
+00000000000003c0: 05	callq	0x420eb0 <BloombergLP::bslma::MallocFreeAllocator::singleton()>
+00000000000003c5: 05	movq	32(%r12), %rbp
+00000000000003ca: 03	testq	%rbp, %rbp
+00000000000003cd: 06	jne	0x41b530 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x4f0>
+00000000000003d3: 05	movslq	40(%r12), %rax
+00000000000003d8: 04	leaq	(%rax,%rax,2), %r13
+00000000000003dc: 08	leaq	23(,%r13,8), %rsi
+00000000000003e4: 04	andq	$-16, %rsi
+00000000000003e8: 05	movq	16(%r12), %rdi
+00000000000003ed: 03	movq	(%rdi), %rax
+00000000000003f0: 03	callq	*16(%rax)
+00000000000003f3: 03	movq	%rax, %rcx
+00000000000003f6: 05	movq	8(%rsp), %rdx
+00000000000003fb: 03	movq	(%rdx), %rax
+00000000000003fe: 03	movq	%rax, (%rcx)
+0000000000000401: 03	movq	%rcx, (%rdx)
+0000000000000404: 04	leaq	8(%rcx), %rbp
+0000000000000408: 05	leaq	-16(%rcx,%r13,8), %rdi
+000000000000040d: 03	cmpq	%rbp, %rdi
+0000000000000410: 06	jbe	0x41b506 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x4c6>
+0000000000000416: 08	leaq	-25(,%r13,8), %rsi
+000000000000041e: 03	movq	%rsi, %rax
+0000000000000421: 10	movabsq	$-6148914691236517205, %rdx
+000000000000042b: 03	mulq	%rdx
+000000000000042e: 03	shrl	$4, %edx
+0000000000000431: 02	incl	%edx
+0000000000000433: 04	andq	$7, %rdx
+0000000000000437: 06	je	0x41b561 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x521>
+000000000000043d: 04	addq	$32, %rcx
+0000000000000441: 03	negq	%rdx
+0000000000000444: 10	nopw	%cs:(%rax,%rax)
+000000000000044e: 02	nop	
+0000000000000450: 04	movq	%rcx, -24(%rcx)
+0000000000000454: 04	addq	$24, %rcx
+0000000000000458: 03	incq	%rdx
+000000000000045b: 02	jne	0x41b490 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x450>
+000000000000045d: 04	addq	$-24, %rcx
+0000000000000461: 07	cmpq	$168, %rsi
+0000000000000468: 02	jb	0x41b506 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x4c6>
+000000000000046a: 06	nopw	(%rax,%rax)
+0000000000000470: 04	leaq	24(%rcx), %rax
+0000000000000474: 03	movq	%rax, (%rcx)
+0000000000000477: 04	leaq	48(%rcx), %rax
+000000000000047b: 04	movq	%rax, 24(%rcx)
+000000000000047f: 04	leaq	72(%rcx), %rax
+0000000000000483: 04	movq	%rax, 48(%rcx)
+0000000000000487: 04	leaq	96(%rcx), %rax
+000000000000048b: 04	movq	%rax, 72(%rcx)
+000000000000048f: 04	leaq	120(%rcx), %rax
+0000000000000493: 04	movq	%rax, 96(%rcx)
+0000000000000497: 07	leaq	144(%rcx), %rax
+000000000000049e: 04	movq	%rax, 120(%rcx)
+00000000000004a2: 07	leaq	168(%rcx), %rax
+00000000000004a9: 07	movq	%rax, 144(%rcx)
+00000000000004b0: 07	leaq	192(%rcx), %rax
+00000000000004b7: 07	movq	%rax, 168(%rcx)
+00000000000004be: 03	movq	%rax, %rcx
+00000000000004c1: 03	cmpq	%rdi, %rax
+00000000000004c4: 02	jb	0x41b4b0 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x470>
+00000000000004c6: 05	movq	32(%r12), %rax
+00000000000004cb: 03	movq	%rax, (%rdi)
+00000000000004ce: 05	movq	%rbp, 32(%r12)
+00000000000004d3: 05	movl	40(%r12), %eax
+00000000000004d8: 03	cmpl	$31, %eax
+00000000000004db: 02	jg	0x41b530 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x4f0>
+00000000000004dd: 02	addl	%eax, %eax
+00000000000004df: 05	movl	%eax, 40(%r12)
+00000000000004e4: 10	nopw	%cs:(%rax,%rax)
+00000000000004ee: 02	nop	
+00000000000004f0: 04	movq	(%rbp), %rax
+00000000000004f4: 05	movq	%rax, 32(%r12)
+00000000000004f9: 04	movq	%r14, 16(%rbp)
+00000000000004fd: 03	movq	%rbp, %rdi
+0000000000000500: 03	movq	%rbx, %rsi
+0000000000000503: 05	callq	0x4204b0 <BloombergLP::bslalg::BidirectionalLinkListUtil::insertLinkAfterTarget(BloombergLP::bslalg::BidirectionalLink*, BloombergLP::bslalg::BidirectionalLink*)>
+0000000000000508: 03	incq	%r14
+000000000000050b: 03	incl	%r15d
+000000000000050e: 03	movq	%rbp, %rbx
+0000000000000511: 05	cmpl	4(%rsp), %r15d
+0000000000000516: 06	jne	0x41b400 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x3c0>
+000000000000051c: 05	jmp	0x41b230 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x1f0>
+0000000000000521: 03	movq	%rbp, %rcx
+0000000000000524: 07	cmpq	$168, %rsi
+000000000000052b: 06	jae	0x41b4b0 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x470>
+0000000000000531: 02	jmp	0x41b506 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x4c6>
+0000000000000533: 03	movq	%rdi, %rcx
+0000000000000536: 07	cmpq	$168, %rbx
+000000000000053d: 06	jae	0x41b310 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x2d0>
+0000000000000543: 05	jmp	0x41b366 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x326>
+0000000000000548: 04	addq	$40, %rsp
+000000000000054c: 01	popq	%rbx
+000000000000054d: 02	popq	%r12
+000000000000054f: 02	popq	%r13
+0000000000000551: 02	popq	%r14
+0000000000000553: 02	popq	%r15
+0000000000000555: 01	popq	%rbp
+0000000000000556: 01	retq	
+0000000000000557: 03	movq	%rdi, %rcx
+000000000000055a: 07	cmpq	$168, %rsi
+0000000000000561: 06	jae	0x41b160 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x120>
+0000000000000567: 05	jmp	0x41b1b6 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x176>
+000000000000056c: 02	jmp	0x41b5b2 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x572>
+000000000000056e: 02	jmp	0x41b5b2 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x572>
+0000000000000570: 02	jmp	0x41b5b2 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x572>
+0000000000000572: 03	movq	%rax, %rbx
+0000000000000575: 05	movq	8(%rsp), %rbp
+000000000000057a: 06	nopw	(%rax,%rax)
+0000000000000580: 04	movq	(%rbp), %rsi
+0000000000000584: 03	testq	%rsi, %rsi
+0000000000000587: 02	je	0x41b5de <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x59e>
+0000000000000589: 03	movq	(%rsi), %rax
+000000000000058c: 05	movq	%rax, 24(%r12)
+0000000000000591: 05	movq	16(%r12), %rdi
+0000000000000596: 03	movq	(%rdi), %rax
+0000000000000599: 03	callq	*24(%rax)
+000000000000059c: 02	jmp	0x41b5c0 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)+0x580>
+000000000000059e: 09	movq	$0, 32(%r12)
+00000000000005a7: 03	movq	%rbx, %rdi
+00000000000005aa: 05	callq	0x401850 <_Unwind_Resume@plt>
+00000000000005af: 03	movq	%rax, %rdi
+00000000000005b2: 05	callq	0x41f690 <__clang_call_terminate>
+00000000000005b7: 09	nopw	(%rax,%rax)

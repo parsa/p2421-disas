@@ -1,0 +1,170 @@
+0000000000407220 <int BloombergLP::bslmt::ChronoUtil::timedWait<BloombergLP::bslmt::FastPostSema	0000000000407220 <int BloombergLP::bslmt::ChronoUtil::timedWait<BloombergLP::bslmt::FastPostSema
+0000000000000000: 01	pushq	%rbp									0000000000000000: 01	pushq	%rbp
+0000000000000001: 02	pushq	%r15									0000000000000001: 02	pushq	%r15
+0000000000000003: 02	pushq	%r14									0000000000000003: 02	pushq	%r14
+0000000000000005: 02	pushq	%r13									0000000000000005: 02	pushq	%r13
+0000000000000007: 02	pushq	%r12									0000000000000007: 02	pushq	%r12
+0000000000000009: 01	pushq	%rbx									0000000000000009: 01	pushq	%rbx
+000000000000000a: 04	subq	$40, %rsp								000000000000000a: 04	subq	$40, %rsp
+000000000000000e: 03	movq	%rsi, %rbp								000000000000000e: 03	movq	%rsi, %rbp
+0000000000000011: 03	movq	%rdi, %r13								0000000000000011: 03	movq	%rdi, %r13
+0000000000000014: 04	cmpl	$0, 96(%rdi)								0000000000000014: 04	cmpl	$0, 96(%rdi)
+0000000000000018: 06	je	0x407330 <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber   |	0000000000000018: 06	je	0x40734f <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber
+000000000000001e: 05	callq	0x402920 <_ZNSt3__16chrono12system_clock3nowEv@plt>			000000000000001e: 05	callq	0x402920 <_ZNSt3__16chrono12system_clock3nowEv@plt>
+0000000000000023: 06	movl	$4294967294, %r14d							0000000000000023: 06	movl	$4294967294, %r14d
+0000000000000029: 04	cmpq	(%rbp), %rax								0000000000000029: 04	cmpq	(%rbp), %rax
+000000000000002d: 06	jge	0x40746c <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber   |	000000000000002d: 06	jge	0x40748b <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber
+0000000000000033: 03	movq	%rax, %rbx								0000000000000033: 03	movq	%rax, %rbx
+0000000000000036: 10	movabsq	$4835703278458516699, %r14						0000000000000036: 10	movabsq	$4835703278458516699, %r14
+0000000000000040: 05	leaq	24(%rsp), %r15								0000000000000040: 05	leaq	24(%rsp), %r15
+0000000000000045: 03	movq	%rsp, %r12								0000000000000045: 03	movq	%rsp, %r12
+0000000000000048: 08	nopl	(%rax,%rax)								0000000000000048: 08	nopl	(%rax,%rax)
+0000000000000050: 05	cmpl	$1, 96(%r13)							   |	0000000000000050: 04	movl	96(%r13), %eax
+0000000000000055: 02	jne	0x407280 <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber   |	0000000000000054: 02	testl	%eax, %eax
+0000000000000057: 05	callq	0x422180 <BloombergLP::bsls::SystemTime::nowMonotonicClock()>	   |	0000000000000056: 02	je	0x407290 <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber
+000000000000005c: 02	jmp	0x407285 <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber   |	0000000000000058: 03	cmpl	$1, %eax
+000000000000005e: 02	nop									   |	000000000000005b: 02	jne	0x4072a0 <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber
+0000000000000060: 05	callq	0x422210 <BloombergLP::bsls::SystemTime::nowRealtimeClock()>	   |	000000000000005d: 05	callq	0x422240 <BloombergLP::bsls::SystemTime::nowMonotonicClock()>
+0000000000000065: 05	movq	%rax, 24(%rsp)							   |	0000000000000062: 02	jmp	0x407295 <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber
+000000000000006a: 04	movl	%edx, 32(%rsp)							   |	0000000000000064: 10	nopw	%cs:(%rax,%rax)
+000000000000006e: 04	movq	(%rbp), %rcx							   |	000000000000006e: 02	nop	
+0000000000000072: 03	subq	%rbx, %rcx							   |	0000000000000070: 05	callq	0x4222d0 <BloombergLP::bsls::SystemTime::nowRealtimeClock()>
+0000000000000075: 03	movq	%rcx, %rax							   |	0000000000000075: 02	jmp	0x4072a4 <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber
+0000000000000078: 03	imulq	%r14								   |	0000000000000077: 09	nopw	(%rax,%rax)
+000000000000007b: 03	movq	%rdx, %rax							   |	0000000000000080: 02	xorl	%edx, %edx
+000000000000007e: 04	shrq	$63, %rax							   |	0000000000000082: 02	xorl	%eax, %eax
+0000000000000082: 04	sarq	$18, %rdx							   |	0000000000000084: 05	movq	%rax, 24(%rsp)
+0000000000000086: 03	addq	%rax, %rdx							   |	0000000000000089: 04	movl	%edx, 32(%rsp)
+0000000000000089: 06	imull	$4293967296, %edx, %eax						   |	000000000000008d: 04	movq	(%rbp), %rcx
+000000000000008f: 02	addl	%eax, %ecx							   |	0000000000000091: 03	subq	%rbx, %rcx
+0000000000000091: 06	imull	$1000, %ecx, %eax						   |	0000000000000094: 03	movq	%rcx, %rax
+0000000000000097: 03	movq	%r15, %rdi							   |	0000000000000097: 03	imulq	%r14
+000000000000009a: 03	movq	%rdx, %rsi							   |	000000000000009a: 03	movq	%rdx, %rax
+000000000000009d: 02	movl	%eax, %edx							   |	000000000000009d: 04	shrq	$63, %rax
+000000000000009f: 05	callq	0x422330 <BloombergLP::bsls::TimeInterval::addInterval(long long   |	00000000000000a1: 04	sarq	$18, %rdx
+00000000000000a4: 03	movups	(%rax), %xmm0							   |	00000000000000a5: 03	addq	%rax, %rdx
+00000000000000a7: 04	movaps	%xmm0, (%rsp)							   |	00000000000000a8: 06	imull	$4293967296, %edx, %eax
+00000000000000ab: 07	movq	$-268435456, %rax						   |	00000000000000ae: 02	addl	%eax, %ecx
+00000000000000b2: 01	lock									   |	00000000000000b0: 06	imull	$1000, %ecx, %eax
+00000000000000b3: 05	xaddq	%rax, (%r13)							   |	00000000000000b6: 03	movq	%r15, %rdi
+00000000000000b8: 05	testl	$16777216, %eax							   |	00000000000000b9: 03	movq	%rdx, %rsi
+00000000000000bd: 06	jne	0x40740e <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber   |	00000000000000bc: 02	movl	%eax, %edx
+00000000000000c3: 07	leaq	-268435456(%rax), %rdx						   |	00000000000000be: 05	callq	0x4223f0 <BloombergLP::bsls::TimeInterval::addInterval(long long
+00000000000000ca: 03	movq	%rdx, %rcx							   |	00000000000000c3: 03	movups	(%rax), %xmm0
+00000000000000cd: 04	sarq	$28, %rcx							   |	00000000000000c6: 04	movaps	%xmm0, (%rsp)
+00000000000000d1: 05	andl	$16777215, %eax							   |	00000000000000ca: 07	movq	$-268435456, %rax
+00000000000000d6: 03	cmpq	%rax, %rcx							   |	00000000000000d1: 01	lock	
+00000000000000d9: 06	jge	0x407469 <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber   |	00000000000000d2: 05	xaddq	%rax, (%r13)
+00000000000000df: 03	movq	%r13, %rdi							   |	00000000000000d7: 05	testl	$16777216, %eax
+00000000000000e2: 03	movq	%r12, %rsi							   |	00000000000000dc: 06	jne	0x40742d <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber
+00000000000000e5: 05	callq	0x406df0 <BloombergLP::bslmt::FastPostSemaphoreImpl<BloombergLP:   |	00000000000000e2: 07	leaq	-268435456(%rax), %rdx
+00000000000000ea: 03	cmpl	$-2, %eax							   |	00000000000000e9: 03	movq	%rdx, %rcx
+00000000000000ed: 06	jne	0x407409 <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber   |	00000000000000ec: 04	sarq	$28, %rcx
+00000000000000f3: 05	callq	0x402920 <_ZNSt3__16chrono12system_clock3nowEv@plt>		   |	00000000000000f0: 05	andl	$16777215, %eax
+00000000000000f8: 03	movq	%rax, %rbx							   |	00000000000000f5: 03	cmpq	%rax, %rcx
+00000000000000fb: 04	cmpq	(%rbp), %rax							   |	00000000000000f8: 06	jge	0x407488 <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber
+00000000000000ff: 06	jl	0x407270 <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber   |	00000000000000fe: 03	movq	%r13, %rdi
+0000000000000105: 06	movl	$4294967294, %r14d						   |	0000000000000101: 03	movq	%r12, %rsi
+000000000000010b: 05	jmp	0x40746c <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber   |	0000000000000104: 05	callq	0x406df0 <BloombergLP::bslmt::FastPostSemaphoreImpl<BloombergLP:
+0000000000000110: 04	movq	(%rbp), %rcx							   |	0000000000000109: 03	cmpl	$-2, %eax
+0000000000000114: 10	movabsq	$4835703278458516699, %rdx					   |	000000000000010c: 06	jne	0x407428 <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber
+000000000000011e: 03	movq	%rcx, %rax							   |	0000000000000112: 05	callq	0x402920 <_ZNSt3__16chrono12system_clock3nowEv@plt>
+0000000000000121: 03	imulq	%rdx								   |	0000000000000117: 03	movq	%rax, %rbx
+0000000000000124: 03	movq	%rdx, %rax							   |	000000000000011a: 04	cmpq	(%rbp), %rax
+0000000000000127: 04	shrq	$63, %rax							   |	000000000000011e: 06	jl	0x407270 <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber
+000000000000012b: 04	sarq	$18, %rdx							   |	0000000000000124: 06	movl	$4294967294, %r14d
+000000000000012f: 03	addq	%rax, %rdx							   |	000000000000012a: 05	jmp	0x40748b <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber
+0000000000000132: 06	imull	$4293967296, %edx, %eax						   |	000000000000012f: 04	movq	(%rbp), %rcx
+0000000000000138: 02	addl	%eax, %ecx							   |	0000000000000133: 10	movabsq	$4835703278458516699, %rdx
+000000000000013a: 06	imull	$1000, %ecx, %eax						   |	000000000000013d: 03	movq	%rcx, %rax
+0000000000000140: 04	movq	%rdx, (%rsp)							   |	0000000000000140: 03	imulq	%rdx
+0000000000000144: 06	leal	999999999(%rax), %ecx						   |	0000000000000143: 03	movq	%rdx, %rax
+000000000000014a: 06	cmpl	$1999999999, %ecx						   |	0000000000000146: 04	shrq	$63, %rax
+0000000000000150: 02	jb	0x40739b <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber   |	000000000000014a: 04	sarq	$18, %rdx
+0000000000000152: 03	movslq	%eax, %rcx							   |	000000000000014e: 03	addq	%rax, %rdx
+0000000000000155: 07	imulq	$1152921505, %rcx, %rcx						   |	0000000000000151: 06	imull	$4293967296, %edx, %eax
+000000000000015c: 03	movq	%rcx, %rsi							   |	0000000000000157: 02	addl	%eax, %ecx
+000000000000015f: 04	shrq	$63, %rsi							   |	0000000000000159: 06	imull	$1000, %ecx, %eax
+0000000000000163: 04	sarq	$60, %rcx							   |	000000000000015f: 04	movq	%rdx, (%rsp)
+0000000000000167: 02	addl	%esi, %ecx							   |	0000000000000163: 06	leal	999999999(%rax), %ecx
+0000000000000169: 03	movslq	%ecx, %rcx							   |	0000000000000169: 06	cmpl	$1999999999, %ecx
+000000000000016c: 03	addq	%rcx, %rdx							   |	000000000000016f: 02	jb	0x4073ba <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber
+000000000000016f: 04	movq	%rdx, (%rsp)							   |	0000000000000171: 03	movslq	%eax, %rcx
+0000000000000173: 06	imull	$1000000000, %ecx, %ecx						   |	0000000000000174: 07	imulq	$1152921505, %rcx, %rcx
+0000000000000179: 02	subl	%ecx, %eax							   |	000000000000017b: 03	movq	%rcx, %rsi
+000000000000017b: 04	movl	%eax, 8(%rsp)							   |	000000000000017e: 04	shrq	$63, %rsi
+000000000000017f: 03	testq	%rdx, %rdx							   |	0000000000000182: 04	sarq	$60, %rcx
+0000000000000182: 02	jle	0x4073b6 <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber   |	0000000000000186: 02	addl	%esi, %ecx
+0000000000000184: 02	testl	%eax, %eax							   |	0000000000000188: 03	movslq	%ecx, %rcx
+0000000000000186: 02	jns	0x4073cf <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber   |	000000000000018b: 03	addq	%rcx, %rdx
+0000000000000188: 03	decq	%rdx								   |	000000000000018e: 04	movq	%rdx, (%rsp)
+000000000000018b: 04	movq	%rdx, (%rsp)							   |	0000000000000192: 06	imull	$1000000000, %ecx, %ecx
+000000000000018f: 05	addl	$1000000000, %eax						   |	0000000000000198: 02	subl	%ecx, %eax
+0000000000000194: 02	jmp	0x4073cb <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber   |	000000000000019a: 04	movl	%eax, 8(%rsp)
+0000000000000196: 02	testl	%eax, %eax							   |	000000000000019e: 03	testq	%rdx, %rdx
+0000000000000198: 02	jle	0x4073cf <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber   |	00000000000001a1: 02	jle	0x4073d5 <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber
+000000000000019a: 03	testq	%rdx, %rdx							   |	00000000000001a3: 02	testl	%eax, %eax
+000000000000019d: 02	je	0x4073cf <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber   |	00000000000001a5: 02	jns	0x4073ee <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber
+000000000000019f: 03	incq	%rdx								   |	00000000000001a7: 03	decq	%rdx
+00000000000001a2: 04	movq	%rdx, (%rsp)							   |	00000000000001aa: 04	movq	%rdx, (%rsp)
+00000000000001a6: 05	addl	$3294967296, %eax						   |	00000000000001ae: 05	addl	$1000000000, %eax
+00000000000001ab: 04	movl	%eax, 8(%rsp)							   |	00000000000001b3: 02	jmp	0x4073ea <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber
+00000000000001af: 07	movq	$-268435456, %rax						   |	00000000000001b5: 02	testl	%eax, %eax
+00000000000001b6: 01	lock									   |	00000000000001b7: 02	jle	0x4073ee <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber
+00000000000001b7: 05	xaddq	%rax, (%r13)							   |	00000000000001b9: 03	testq	%rdx, %rdx
+00000000000001bc: 05	testl	$16777216, %eax							   |	00000000000001bc: 02	je	0x4073ee <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber
+00000000000001c1: 02	jne	0x40740e <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber   |	00000000000001be: 03	incq	%rdx
+00000000000001c3: 07	leaq	-268435456(%rax), %rdx						   |	00000000000001c1: 04	movq	%rdx, (%rsp)
+00000000000001ca: 03	movq	%rdx, %rcx							   |	00000000000001c5: 05	addl	$3294967296, %eax
+00000000000001cd: 04	sarq	$28, %rcx							   |	00000000000001ca: 04	movl	%eax, 8(%rsp)
+00000000000001d1: 05	andl	$16777215, %eax							   |	00000000000001ce: 07	movq	$-268435456, %rax
+00000000000001d6: 03	xorl	%r14d, %r14d							   |	00000000000001d5: 01	lock	
+00000000000001d9: 03	cmpq	%rax, %rcx							   |	00000000000001d6: 05	xaddq	%rax, (%r13)
+00000000000001dc: 02	jge	0x40746c <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber   |	00000000000001db: 05	testl	$16777216, %eax
+00000000000001de: 03	movq	%rsp, %rsi							   |	00000000000001e0: 02	jne	0x40742d <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber
+00000000000001e1: 03	movq	%r13, %rdi							   |	00000000000001e2: 07	leaq	-268435456(%rax), %rdx
+00000000000001e4: 05	callq	0x406df0 <BloombergLP::bslmt::FastPostSemaphoreImpl<BloombergLP:   |	00000000000001e9: 03	movq	%rdx, %rcx
+00000000000001e9: 03	movl	%eax, %r14d							   |	00000000000001ec: 04	sarq	$28, %rcx
+00000000000001ec: 02	jmp	0x40746c <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber   |	00000000000001f0: 05	andl	$16777215, %eax
+00000000000001ee: 05	movl	$268435456, %eax						   |	00000000000001f5: 03	xorl	%r14d, %r14d
+00000000000001f3: 01	lock									   |	00000000000001f8: 03	cmpq	%rax, %rcx
+00000000000001f4: 05	xaddq	%rax, (%r13)							   |	00000000000001fb: 02	jge	0x40748b <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber
+00000000000001f9: 06	movl	$4294967295, %r14d						   |	00000000000001fd: 03	movq	%rsp, %rsi
+00000000000001ff: 05	testl	$16777215, %eax							   |	0000000000000200: 03	movq	%r13, %rdi
+0000000000000204: 02	je	0x40746c <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber   |	0000000000000203: 05	callq	0x406df0 <BloombergLP::bslmt::FastPostSemaphoreImpl<BloombergLP:
+0000000000000206: 02	movl	%eax, %ecx							   |	0000000000000208: 03	movl	%eax, %r14d
+0000000000000208: 06	andl	$16777216, %ecx							   |	000000000000020b: 02	jmp	0x40748b <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber
+000000000000020e: 03	testq	%rcx, %rcx							   |	000000000000020d: 05	movl	$268435456, %eax
+0000000000000211: 02	jne	0x40746c <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber   |	0000000000000212: 01	lock	
+0000000000000213: 06	addq	$268435456, %rax						   |	0000000000000213: 05	xaddq	%rax, (%r13)
+0000000000000219: 06	andq	$-268435456, %rax						   |	0000000000000218: 06	movl	$4294967295, %r14d
+000000000000021f: 06	cmpq	$268435456, %rax						   |	000000000000021e: 05	testl	$16777215, %eax
+0000000000000225: 02	jne	0x40746c <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber   |	0000000000000223: 02	je	0x40748b <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber
+0000000000000227: 04	leaq	8(%r13), %rbx							   |	0000000000000225: 02	movl	%eax, %ecx
+000000000000022b: 03	movq	%rbx, %rdi							   |	0000000000000227: 06	andl	$16777216, %ecx
+000000000000022e: 05	callq	0x402970 <pthread_mutex_lock@plt>				   |	000000000000022d: 03	testq	%rcx, %rcx
+0000000000000233: 03	movq	%rbx, %rdi							   |	0000000000000230: 02	jne	0x40748b <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber
+0000000000000236: 05	callq	0x4029e0 <pthread_mutex_unlock@plt>				   |	0000000000000232: 06	addq	$268435456, %rax
+000000000000023b: 04	addq	$48, %r13							   |	0000000000000238: 06	andq	$-268435456, %rax
+000000000000023f: 03	movq	%r13, %rdi							   |	000000000000023e: 06	cmpq	$268435456, %rax
+0000000000000242: 05	callq	0x4026b0 <pthread_cond_signal@plt>				   |	0000000000000244: 02	jne	0x40748b <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber
+0000000000000247: 02	jmp	0x40746c <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber   |	0000000000000246: 04	leaq	8(%r13), %rbx
+0000000000000249: 03	xorl	%r14d, %r14d							   |	000000000000024a: 03	movq	%rbx, %rdi
+000000000000024c: 03	movl	%r14d, %eax							   |	000000000000024d: 05	callq	0x402970 <pthread_mutex_lock@plt>
+000000000000024f: 04	addq	$40, %rsp							   |	0000000000000252: 03	movq	%rbx, %rdi
+0000000000000253: 01	popq	%rbx								   |	0000000000000255: 05	callq	0x4029e0 <pthread_mutex_unlock@plt>
+0000000000000254: 02	popq	%r12								   |	000000000000025a: 04	addq	$48, %r13
+0000000000000256: 02	popq	%r13								   |	000000000000025e: 03	movq	%r13, %rdi
+0000000000000258: 02	popq	%r14								   |	0000000000000261: 05	callq	0x4026b0 <pthread_cond_signal@plt>
+000000000000025a: 02	popq	%r15								   |	0000000000000266: 02	jmp	0x40748b <int BloombergLP::bslmt::ChronoUtil::timedWait<Bloomber
+000000000000025c: 01	popq	%rbp								   |	0000000000000268: 03	xorl	%r14d, %r14d
+000000000000025d: 01	retq									   |	000000000000026b: 03	movl	%r14d, %eax
+000000000000025e: 02	nop									   |	000000000000026e: 04	addq	$40, %rsp
+												   >	0000000000000272: 01	popq	%rbx
+												   >	0000000000000273: 02	popq	%r12
+												   >	0000000000000275: 02	popq	%r13
+												   >	0000000000000277: 02	popq	%r14
+												   >	0000000000000279: 02	popq	%r15
+												   >	000000000000027b: 01	popq	%rbp
+												   >	000000000000027c: 01	retq	
+												   >	000000000000027d: 03	nopl	(%rax)
