@@ -1,0 +1,53 @@
+0000000000403e50 <testThread5a>:
+0000000000000000: 02	pushq	%r14
+0000000000000002: 01	pushq	%rbx
+0000000000000003: 04	subq	$24, %rsp
+0000000000000007: 03	movq	%rdi, %rbx
+000000000000000a: 05	movl	$1, %eax
+000000000000000f: 01	lock	
+0000000000000010: 04	xaddl	%eax, 120(%rdi)
+0000000000000014: 02	testl	%eax, %eax
+0000000000000016: 02	je	0x403e7e <testThread5a+0x2e>
+0000000000000018: 06	movl	132(%rbx), %eax
+000000000000001e: 02	testl	%eax, %eax
+0000000000000020: 02	je	0x403e88 <testThread5a+0x38>
+0000000000000022: 03	cmpl	$1, %eax
+0000000000000025: 02	jne	0x403e8f <testThread5a+0x3f>
+0000000000000027: 05	callq	0x42f1e0 <BloombergLP::bsls::SystemTime::nowMonotonicClock()>
+000000000000002c: 02	jmp	0x403e8d <testThread5a+0x3d>
+000000000000002e: 03	movq	%rbx, %rdi
+0000000000000031: 05	callq	0x409280 <BloombergLP::bslmt::Barrier::wait()>
+0000000000000036: 02	jmp	0x403ee8 <testThread5a+0x98>
+0000000000000038: 05	callq	0x42f270 <BloombergLP::bsls::SystemTime::nowRealtimeClock()>
+000000000000003d: 02	jmp	0x403e93 <testThread5a+0x43>
+000000000000003f: 02	xorl	%edx, %edx
+0000000000000041: 02	xorl	%eax, %eax
+0000000000000043: 05	movq	%rax, 8(%rsp)
+0000000000000048: 04	movl	%edx, 16(%rsp)
+000000000000004c: 04	movslq	124(%rbx), %rax
+0000000000000050: 07	imulq	$1125899907, %rax, %rcx
+0000000000000057: 03	movq	%rcx, %rdx
+000000000000005a: 04	shrq	$63, %rdx
+000000000000005e: 04	sarq	$50, %rcx
+0000000000000062: 02	addl	%edx, %ecx
+0000000000000064: 03	movslq	%ecx, %rsi
+0000000000000067: 06	imull	$1000000, %esi, %ecx
+000000000000006d: 02	subl	%ecx, %eax
+000000000000006f: 06	imull	$1000, %eax, %edx
+0000000000000075: 05	leaq	8(%rsp), %r14
+000000000000007a: 03	movq	%r14, %rdi
+000000000000007d: 05	callq	0x42f390 <BloombergLP::bsls::TimeInterval::addInterval(long long, int)>
+0000000000000082: 03	movq	%rbx, %rdi
+0000000000000085: 03	movq	%r14, %rsi
+0000000000000088: 05	callq	0x4091d0 <BloombergLP::bslmt::Barrier::timedWait(BloombergLP::bsls::TimeInterval const&)>
+000000000000008d: 02	testl	%eax, %eax
+000000000000008f: 02	je	0x403ee8 <testThread5a+0x98>
+0000000000000091: 01	lock	
+0000000000000092: 06	incl	128(%rbx)
+0000000000000098: 03	movq	%rbx, %rax
+000000000000009b: 04	addq	$24, %rsp
+000000000000009f: 01	popq	%rbx
+00000000000000a0: 02	popq	%r14
+00000000000000a2: 01	retq	
+00000000000000a3: 10	nopw	%cs:(%rax,%rax)
+00000000000000ad: 03	nopl	(%rax)

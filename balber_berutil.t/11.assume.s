@@ -1,0 +1,52 @@
+00000000004770a0 <BloombergLP::bdldfp::DecimalImpUtil::decompose(int*, BloombergLP::bdldfp::Uint128*, int*, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128)>:
+0000000000000000: 02	pushq	%r15
+0000000000000002: 02	pushq	%r14
+0000000000000004: 02	pushq	%r13
+0000000000000006: 02	pushq	%r12
+0000000000000008: 01	pushq	%rbx
+0000000000000009: 03	movq	%r8, %rbx
+000000000000000c: 03	movq	%rcx, %r15
+000000000000000f: 03	movq	%rdx, %r14
+0000000000000012: 03	movq	%rsi, %r12
+0000000000000015: 03	movq	%rdi, %r13
+0000000000000018: 03	movq	%rcx, %rdi
+000000000000001b: 03	movq	%r8, %rsi
+000000000000001e: 05	callq	0x4a2490 <__bid128_class>
+0000000000000023: 02	cltq	
+0000000000000025: 07	movl	5284112(,%rax,4), %eax
+000000000000002c: 02	xorl	%ecx, %ecx
+000000000000002e: 03	testq	%rbx, %rbx
+0000000000000031: 03	setns	%cl
+0000000000000034: 04	leal	-1(%rcx,%rcx), %ecx
+0000000000000038: 04	movl	%ecx, (%r13)
+000000000000003c: 10	movabsq	$6917529027641081856, %rcx
+0000000000000046: 03	movq	%rbx, %rdx
+0000000000000049: 03	andq	%rcx, %rdx
+000000000000004c: 03	cmpq	%rcx, %rdx
+000000000000004f: 02	jne	0x477123 <BloombergLP::bdldfp::DecimalImpUtil::decompose(int*, BloombergLP::bdldfp::Uint128*, int*, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128)+0x83>
+0000000000000051: 10	movabsq	$140737488355327, %rcx
+000000000000005b: 03	andq	%rbx, %rcx
+000000000000005e: 10	movabsq	$9007199254740992, %rdx
+0000000000000068: 03	orq	%rcx, %rdx
+000000000000006b: 05	movq	%rdx, 8(%r12)
+0000000000000070: 04	movq	%r15, (%r12)
+0000000000000074: 04	shrq	$47, %rbx
+0000000000000078: 06	andl	$16383, %ebx
+000000000000007e: 03	movl	%ebx, (%r14)
+0000000000000081: 02	jmp	0x47714f <BloombergLP::bdldfp::DecimalImpUtil::decompose(int*, BloombergLP::bdldfp::Uint128*, int*, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128)+0xaf>
+0000000000000083: 03	movq	%rbx, %rcx
+0000000000000086: 04	shrq	$49, %rcx
+000000000000008a: 06	andl	$16383, %ecx
+0000000000000090: 06	addl	$4294961120, %ecx
+0000000000000096: 03	movl	%ecx, (%r14)
+0000000000000099: 10	movabsq	$562949953421311, %rcx
+00000000000000a3: 03	andq	%rbx, %rcx
+00000000000000a6: 05	movq	%rcx, 8(%r12)
+00000000000000ab: 04	movq	%r15, (%r12)
+00000000000000af: 01	popq	%rbx
+00000000000000b0: 02	popq	%r12
+00000000000000b2: 02	popq	%r13
+00000000000000b4: 02	popq	%r14
+00000000000000b6: 02	popq	%r15
+00000000000000b8: 01	retq	
+00000000000000b9: 07	nopl	(%rax)
