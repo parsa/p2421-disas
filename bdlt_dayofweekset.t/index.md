@@ -4,5 +4,5 @@
 
 |   Index | Function                                                                                      |   Difference in number of lines |   Function size difference in bytes |   Number of lines in assumed build | Number of bytes in assumed build   |   Number of lines in ignored build | Number of bytes in ignored build   |
 |--------:|:----------------------------------------------------------------------------------------------|--------------------------------:|------------------------------------:|-----------------------------------:|:-----------------------------------|-----------------------------------:|:-----------------------------------|
-|       0 | `g(char const*)` <sup>\[[Assumed](0-assume)\], \[[Ignored](0-none)\], \[[Diff](0.diff.html)\] |                               1 |                                   0 |                                 80 | 4,210,912                          |                                 80 | 4,210,912                          |
+|       0 | `g(char const*)` <sup>\[[Assumed](0-assume)\], \[[Ignored](0-none)\], \[[Diff](0-diff.html)\] |                               1 |                                   0 |                                 80 | 4,210,912                          |                                 80 | 4,210,912                          |
 {: .sortable }
