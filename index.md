@@ -1,4 +1,6 @@
-# Test Drivers
+# BDE Test drivers list
+
+<script src="sorttable.js"></script>
 
 | Test Driver | Total Lines Delta | Total Bytes Delta |
 | --- | --- | --- |
@@ -140,3 +142,4 @@
 | [`bslx_genericinstream.t`](bslx_genericinstream.t) | 5 | 16 |
 | [`bslx_streambufinstream.t`](bslx_streambufinstream.t) | 5 | 16 |
 | [`s_baltst_test.t`](s_baltst_test.t) | 4 | 0 |
+{: .sortable }
