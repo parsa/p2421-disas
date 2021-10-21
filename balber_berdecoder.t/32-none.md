@@ -1,6 +1,6 @@
 # 32.none.s
 
-```asm
+```x86asm
 0000000000455170 <BloombergLP::balber::BerUtil_DateImpUtil::putIso8601DateValue(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, BloombergLP::bdlt::Date const&, BloombergLP::balber::BerEncoderOptions const*)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

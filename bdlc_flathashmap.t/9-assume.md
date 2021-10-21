@@ -1,6 +1,6 @@
 # 9.assume.s
 
-```asm
+```x86asm
 0000000000453100 <BloombergLP::bdlc::FlatHashTable<int, bsl::pair<int, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, BloombergLP::bdlc::FlatHashMap_EntryUtil<int, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::pair<int, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslh::FibonacciBadHashWrapper<bsl::hash<int> >, bsl::equal_to<int> >::rehashRaw(unsigned long)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

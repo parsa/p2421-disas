@@ -1,6 +1,6 @@
 # 6.assume.s
 
-```asm
+```x86asm
 0000000000412e60 <BloombergLP::bslstl::HashTable<BloombergLP::bslstl::UnorderedSetKeyConfiguration<BloombergLP::ball::ManagedAttribute>, BloombergLP::ball::ManagedAttributeSet::AttributeHash, bsl::equal_to<BloombergLP::ball::ManagedAttribute>, bsl::allocator<BloombergLP::ball::ManagedAttribute> >::insertIfMissing(bool*, BloombergLP::ball::ManagedAttribute const&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

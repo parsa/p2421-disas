@@ -1,6 +1,6 @@
 # 0.none.s
 
-```asm
+```x86asm
 0000000000404970 <BloombergLP::bslx::GenericInStream<std::__1::basic_streambuf<char, std::__1::char_traits<char> > >::getString(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

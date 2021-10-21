@@ -1,6 +1,6 @@
 # 14.assume.s
 
-```asm
+```x86asm
 000000000041b6e0 <BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Signed>::PackedIntArrayImp(unsigned long, long, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 02	pushq	%r14
 0000000000000002: 01	pushq	%rbx

@@ -1,6 +1,6 @@
 # 8.none.s
 
-```asm
+```x86asm
 000000000041b280 <BloombergLP::ball::(anonymous namespace)::ThreadIdFormatter::parse(BloombergLP::bdld::DatumMapRef)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

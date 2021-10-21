@@ -1,6 +1,6 @@
 # 0.assume.s
 
-```asm
+```x86asm
 0000000000419870 <(anonymous namespace)::BucketsWrapper<signed char>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

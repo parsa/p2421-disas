@@ -1,6 +1,6 @@
 # 15.none.s
 
-```asm
+```x86asm
 000000000040b810 <BloombergLP::bdlma::BufferedSequentialPool::BufferedSequentialPool(char*, unsigned long, BloombergLP::bsls::BlockGrowth::Strategy, BloombergLP::bsls::Alignment::Strategy, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 03	movq	%rdi, %rbx

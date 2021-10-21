@@ -1,6 +1,6 @@
 # 0.none.s
 
-```asm
+```x86asm
 0000000000403040 <parseCalendar(char const*, BloombergLP::bdlt::Date const&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

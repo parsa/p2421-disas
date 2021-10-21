@@ -1,6 +1,6 @@
 # 0.none.s
 
-```asm
+```x86asm
 0000000000447bb0 <BloombergLP::bdlmt::Throttle::initialize(int, long long, BloombergLP::bsls::SystemClockType::Enum)>:
 0000000000000000: 10	movabsq	$-316224000000000000, %rax
 000000000000000a: 03	xchgq	%rax, (%rdi)

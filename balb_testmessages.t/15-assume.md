@@ -1,6 +1,6 @@
 # 15.assume.s
 
-```asm
+```x86asm
 000000000041dc70 <BloombergLP::bdlde::Utf8Util::advanceRaw(char const**, char const*, unsigned long, long)>:
 0000000000000000: 03	testq	%rdx, %rdx
 0000000000000003: 02	jle	0x41dcd3 <BloombergLP::bdlde::Utf8Util::advanceRaw(char const**, char const*, unsigned long, long)+0x63>

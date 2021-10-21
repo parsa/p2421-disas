@@ -1,6 +1,6 @@
 # 10.none.s
 
-```asm
+```x86asm
 000000000040d2d0 <BloombergLP::bdlb::String::strstrCaseless(char const*, int, char const*, int)>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 03	movq	%rdi, %rax

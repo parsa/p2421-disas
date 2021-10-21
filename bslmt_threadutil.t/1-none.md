@@ -1,6 +1,6 @@
 # 1.none.s
 
-```asm
+```x86asm
 0000000000418170 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BSLMT_THREAD_POLICY_CREATION_TEST::Touch>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BSLMT_THREAD_POLICY_CREATION_TEST::Touch const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

@@ -1,6 +1,6 @@
 # 5.assume.s
 
-```asm
+```x86asm
 000000000041a170 <BloombergLP::ball::(anonymous namespace)::ThreadIdFormatter::format(BloombergLP::baljsn::SimpleFormatter*, BloombergLP::ball::Record const&)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

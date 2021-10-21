@@ -1,6 +1,6 @@
 # 23.assume.s
 
-```asm
+```x86asm
 00000000004b67b0 <BloombergLP::s_baltst::MySequenceWithChoice::operator=(BloombergLP::s_baltst::MySequenceWithChoice&&)>:
 0000000000000000: 03	movq	%rdi, %rax
 0000000000000003: 03	cmpq	%rsi, %rdi

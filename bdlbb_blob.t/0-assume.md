@@ -1,6 +1,6 @@
 # 0.assume.s
 
-```asm
+```x86asm
 000000000041dcd0 <BloombergLP::bdlbb::Blob::assertInvariants() const>:
 0000000000000000: 04	movl	40(%rdi), %r9d
 0000000000000004: 03	movq	(%rdi), %r8

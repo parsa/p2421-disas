@@ -1,6 +1,6 @@
 # 6.none.s
 
-```asm
+```x86asm
 0000000000410740 <BloombergLP::bdlt::PackedCalendar::addWeekendDaysTransition(BloombergLP::bdlt::Date const&, BloombergLP::bdlt::DayOfWeekSet const&)>:
 0000000000000000: 01	pushq	%rax
 0000000000000001: 03	movl	(%rsi), %r10d

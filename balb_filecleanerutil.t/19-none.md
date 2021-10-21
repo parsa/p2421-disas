@@ -1,6 +1,6 @@
 # 19.none.s
 
-```asm
+```x86asm
 000000000040bcc0 <BloombergLP::bdlma::SequentialPool::SequentialPool(BloombergLP::bsls::Alignment::Strategy, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 03	movq	%rdi, %rbx

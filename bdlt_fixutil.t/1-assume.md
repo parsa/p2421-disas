@@ -1,6 +1,6 @@
 # 1.assume.s
 
-```asm
+```x86asm
 000000000043bcb0 <(anonymous namespace)::u::parseTime(char const**, BloombergLP::bdlt::Time*, int*, bool*, char const*, char const*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

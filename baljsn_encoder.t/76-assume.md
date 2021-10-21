@@ -1,6 +1,6 @@
 # 76.assume.s
 
-```asm
+```x86asm
 00000000004b98a0 <BloombergLP::s_baltst::Choice3::makeSelection4(BloombergLP::s_baltst::CustomInt&&)>:
 0000000000000000: 02	pushq	%r14
 0000000000000002: 01	pushq	%rbx

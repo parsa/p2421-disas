@@ -1,6 +1,6 @@
 # 34.none.s
 
-```asm
+```x86asm
 000000000041dd00 <BloombergLP::bdlde::Utf8Util::advanceRaw(char const**, char const*, long)>:
 0000000000000000: 02	xorl	%eax, %eax
 0000000000000002: 03	testq	%rdx, %rdx

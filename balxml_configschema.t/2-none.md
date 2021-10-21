@@ -1,6 +1,6 @@
 # 2.none.s
 
-```asm
+```x86asm
 000000000043a6c0 <BloombergLP::s_baltst::BasicSchemaSequenceElementChoice::selectionName() const>:
 0000000000000000: 03	movl	64(%rdi), %eax
 0000000000000003: 03	cmpl	$1, %eax

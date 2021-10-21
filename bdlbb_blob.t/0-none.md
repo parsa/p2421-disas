@@ -1,6 +1,6 @@
 # 0.none.s
 
-```asm
+```x86asm
 000000000041dcd0 <BloombergLP::bdlbb::Blob::assertInvariants() const>:
 0000000000000000: 02	xorl	%eax, %eax
 0000000000000002: 01	retq	

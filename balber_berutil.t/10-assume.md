@@ -1,6 +1,6 @@
 # 10.assume.s
 
-```asm
+```x86asm
 0000000000476600 <BloombergLP::bdldfp::DecimalImpUtil::classify(BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType64)>:
 0000000000000000: 01	pushq	%rax
 0000000000000001: 05	callq	0x489c30 <__bid64_class>

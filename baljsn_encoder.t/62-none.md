@@ -1,6 +1,6 @@
 # 62.none.s
 
-```asm
+```x86asm
 00000000004cfe10 <BloombergLP::s_baltst::SequenceWithAnonymityChoice::makeSelection1(BloombergLP::s_baltst::Sequence6 const&)>:
 0000000000000000: 02	pushq	%r14
 0000000000000002: 01	pushq	%rbx

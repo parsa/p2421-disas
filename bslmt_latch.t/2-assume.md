@@ -1,6 +1,6 @@
 # 2.assume.s
 
-```asm
+```x86asm
 0000000000409020 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<ThreadBinder>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, ThreadBinder const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

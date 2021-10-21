@@ -1,6 +1,6 @@
 # 1.assume.s
 
-```asm
+```x86asm
 0000000000413470 <(anonymous namespace)::u::constructTypeInfo(void*, BloombergLP::balcl::OptionType::Enum, void*, void*, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 03	movq	%rdi, %rbx

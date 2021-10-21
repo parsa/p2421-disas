@@ -1,6 +1,6 @@
 # 0.assume.s
 
-```asm
+```x86asm
 0000000000434cb0 <BloombergLP::s_baltst::BasicSchemaChoiceElementChoice::selectionName() const>:
 0000000000000000: 03	movl	64(%rdi), %eax
 0000000000000003: 02	testl	%eax, %eax

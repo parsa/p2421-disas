@@ -1,6 +1,6 @@
 # 8.assume.s
 
-```asm
+```x86asm
 00000000004ef780 <BloombergLP::bdlat_TypeName_Imp::xsdName(unsigned char const*, int)>:
 0000000000000000: 04	testb	$6, %sil
 0000000000000004: 05	movl	$5637744, %ecx

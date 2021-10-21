@@ -1,6 +1,6 @@
 # 35.none.s
 
-```asm
+```x86asm
 000000000041ce70 <BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Signed>::reserveCapacity(unsigned long, long)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

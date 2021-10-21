@@ -1,6 +1,6 @@
 # 8.none.s
 
-```asm
+```x86asm
 000000000042a940 <int BloombergLP::baljsn::SimpleFormatter::addValue<BloombergLP::bdlt::TimeTz>(BloombergLP::bdlt::TimeTz const&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

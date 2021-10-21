@@ -1,6 +1,6 @@
 # 0.assume.s
 
-```asm
+```x86asm
 000000000049bad0 <void BloombergLP::bslalg::ArrayPrimitives_Imp::copyConstruct<BloombergLP::ball::ManagedAttribute, BloombergLP::ball::ManagedAttribute const*, bsl::allocator<BloombergLP::ball::ManagedAttribute> >(BloombergLP::ball::ManagedAttribute*, BloombergLP::ball::ManagedAttribute const*, BloombergLP::ball::ManagedAttribute const*, bsl::allocator<BloombergLP::ball::ManagedAttribute>, BloombergLP::bslmf::MetaInt<0>*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

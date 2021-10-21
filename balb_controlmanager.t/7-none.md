@@ -1,6 +1,6 @@
 # 7.none.s
 
-```asm
+```x86asm
 000000000040cf60 <BloombergLP::bdlb::String::areEqualCaseless(char const*, char const*, int)>:
 0000000000000000: 02	testl	%edx, %edx
 0000000000000002: 02	jle	0x40cfa4 <BloombergLP::bdlb::String::areEqualCaseless(char const*, char const*, int)+0x44>

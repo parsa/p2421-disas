@@ -1,6 +1,6 @@
 # 87.assume.s
 
-```asm
+```x86asm
 00000000004b3dc0 <BloombergLP::s_baltst::Enumerated::toString(BloombergLP::s_baltst::Enumerated::Value)>:
 0000000000000000: 03	movslq	%edi, %rax
 0000000000000003: 08	movq	5575072(,%rax,8), %rax

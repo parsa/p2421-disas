@@ -1,6 +1,6 @@
 # 17.none.s
 
-```asm
+```x86asm
 0000000000411100 <BloombergLP::balb::SequenceWithAnonymity::SequenceWithAnonymity(BloombergLP::bslma::Allocator*)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

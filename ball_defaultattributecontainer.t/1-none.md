@@ -1,6 +1,6 @@
 # 1.none.s
 
-```asm
+```x86asm
 0000000000417750 <void BloombergLP::bslalg::ArrayPrimitives_Imp::moveIfNoexcept<BloombergLP::ball::Attribute, bsl::allocator<BloombergLP::ball::Attribute> >(BloombergLP::ball::Attribute*, BloombergLP::ball::Attribute*, BloombergLP::ball::Attribute*, bsl::allocator<BloombergLP::ball::Attribute>, BloombergLP::bslmf::MetaInt<0>*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

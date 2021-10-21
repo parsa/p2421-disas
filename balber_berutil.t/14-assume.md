@@ -1,6 +1,6 @@
 # 14.assume.s
 
-```asm
+```x86asm
 0000000000477460 <BloombergLP::bdldfp::DecimalImpUtil::round(BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, unsigned int)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r14

@@ -1,6 +1,6 @@
 # 0.assume.s
 
-```asm
+```x86asm
 0000000000434af0 <BloombergLP::bdlmt::MultiQueueThreadPool::pauseQueue(int)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

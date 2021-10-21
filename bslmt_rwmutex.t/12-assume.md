@@ -1,6 +1,6 @@
 # 12.assume.s
 
-```asm
+```x86asm
 000000000040bd30 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<ReadWaitThread<BloombergLP::bslmt::ReaderWriterLock> >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, ReadWaitThread<BloombergLP::bslmt::ReaderWriterLock> const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

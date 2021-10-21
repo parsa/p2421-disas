@@ -1,6 +1,6 @@
 # 2.assume.s
 
-```asm
+```x86asm
 0000000000437c30 <BloombergLP::bdlmt::ThreadPool::enqueueJob(bsl::function<void ()> const&)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

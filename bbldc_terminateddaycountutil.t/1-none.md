@@ -1,6 +1,6 @@
 # 1.none.s
 
-```asm
+```x86asm
 0000000000403ac0 <BloombergLP::bbldc::TerminatedDayCountUtil::yearsDiff(BloombergLP::bdlt::Date const&, BloombergLP::bdlt::Date const&, BloombergLP::bdlt::Date const&, BloombergLP::bbldc::DayCountConvention::Enum)>:
 0000000000000000: 04	xorpd	%xmm0, %xmm0
 0000000000000004: 03	cmpl	$11, %ecx

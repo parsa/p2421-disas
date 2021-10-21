@@ -1,6 +1,6 @@
 # 0.assume.s
 
-```asm
+```x86asm
 00000000004405c0 <GenerateXmlElement::operator()(BloombergLP::bslstl::StringRefImp<char> const&, BloombergLP::bslstl::StringRefImp<char> const&) const>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

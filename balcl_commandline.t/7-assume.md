@@ -1,6 +1,6 @@
 # 7.assume.s
 
-```asm
+```x86asm
 000000000046c430 <BloombergLP::balcl::(anonymous namespace)::u::ScalarConstraint<int, bsl::function<bool (int const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 3>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

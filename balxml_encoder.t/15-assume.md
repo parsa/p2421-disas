@@ -1,6 +1,6 @@
 # 15.assume.s
 
-```asm
+```x86asm
 00000000004e2380 <int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

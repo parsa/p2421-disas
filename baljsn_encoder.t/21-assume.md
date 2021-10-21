@@ -1,6 +1,6 @@
 # 21.assume.s
 
-```asm
+```x86asm
 000000000047ee60 <int BloombergLP::s_baltst::SequenceWithAnonymityChoice1::accessSelection<BloombergLP::baljsn::Encoder_SelectionVisitor>(BloombergLP::baljsn::Encoder_SelectionVisitor&) const>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 04	subq	$64, %rsp

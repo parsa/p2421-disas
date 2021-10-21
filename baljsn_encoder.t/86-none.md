@@ -1,6 +1,6 @@
 # 86.none.s
 
-```asm
+```x86asm
 0000000000484850 <BloombergLP::baljsn::Encoder_EncodeImplUtil::encodeCharArray(BloombergLP::baljsn::Formatter*, bsl::vector<char, bsl::allocator<char> > const&, BloombergLP::baljsn::EncoderOptions const&)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

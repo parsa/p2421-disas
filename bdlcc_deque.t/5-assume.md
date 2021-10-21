@@ -1,6 +1,6 @@
 # 5.assume.s
 
-```asm
+```x86asm
 0000000000493870 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<USAGE_EXAMPLE_2::WorkerFunctor>(unsigned long*, USAGE_EXAMPLE_2::WorkerFunctor const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

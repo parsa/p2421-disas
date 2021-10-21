@@ -1,6 +1,6 @@
 # 1.none.s
 
-```asm
+```x86asm
 000000000040fbd0 <BloombergLP::bdlma::BufferImpUtil::allocateFromBufferRaw(long*, char*, unsigned long, BloombergLP::bsls::Alignment::Strategy)>:
 0000000000000000: 03	movq	%rsi, %rax
 0000000000000003: 03	cmpl	$2, %ecx

@@ -1,6 +1,6 @@
 # 2.assume.s
 
-```asm
+```x86asm
 000000000041f4f0 <BloombergLP::bdlde::QuotedPrintableEncoder::endConvert(char*, int*, int)>:
 0000000000000000: 03	movl	28(%rdi), %eax
 0000000000000003: 03	cmpl	$-1, %eax

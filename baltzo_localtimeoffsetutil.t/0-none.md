@@ -1,6 +1,6 @@
 # 0.none.s
 
-```asm
+```x86asm
 0000000000412b30 <BloombergLP::baltzo::TimeZoneUtil::convertLocalToLocalTime(BloombergLP::baltzo::LocalDatetime*, char const*, BloombergLP::bdlt::Datetime const&, char const*, BloombergLP::baltzo::DstPolicy::Enum)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r14

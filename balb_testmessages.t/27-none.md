@@ -1,6 +1,6 @@
 # 27.none.s
 
-```asm
+```x86asm
 00000000004139c0 <BloombergLP::balb::Request::selectionName() const>:
 0000000000000000: 06	movl	872(%rdi), %eax
 0000000000000006: 03	cmpl	$1, %eax

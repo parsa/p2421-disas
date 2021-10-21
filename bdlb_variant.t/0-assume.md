@@ -1,6 +1,6 @@
 # 0.assume.s
 
-```asm
+```x86asm
 00000000004f2190 <void BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApply<my_PrintVisitor&>(my_PrintVisitor&, int)>:
 0000000000000000: 03	movq	%rdi, %rax
 0000000000000003: 02	decl	%edx

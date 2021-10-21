@@ -1,6 +1,6 @@
 # 2.none.s
 
-```asm
+```x86asm
 000000000064a590 <BloombergLP::bdlcc::SkipList_Control::incrementRefCount()>:
 0000000000000000: 02	movl	(%rdi), %ecx
 0000000000000002: 10	nopw	%cs:(%rax,%rax)

@@ -1,6 +1,6 @@
 # 3.none.s
 
-```asm
+```x86asm
 000000000042df00 <BloombergLP::ball::AsyncFileObserver::releaseRecords()>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

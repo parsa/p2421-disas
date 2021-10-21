@@ -1,6 +1,6 @@
 # 9.none.s
 
-```asm
+```x86asm
 000000000041c8c0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, double, int, bool*, bool*, BloombergLP::bslmt::Condition*), BloombergLP::bdlf::Bind_BoundTuple6<BloombergLP::bdlcc::FixedQueue<int>*, double, int, bool*, bool*, BloombergLP::bslmt::Condition*> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, double, int, bool*, bool*, BloombergLP::bslmt::Condition*), BloombergLP::bdlf::Bind_BoundTuple6<BloombergLP::bdlcc::FixedQueue<int>*, double, int, bool*, bool*, BloombergLP::bslmt::Condition*> > const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

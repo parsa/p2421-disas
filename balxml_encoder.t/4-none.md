@@ -1,6 +1,6 @@
 # 4.none.s
 
-```asm
+```x86asm
 00000000004e7240 <BloombergLP::balxml::EncodingStyle::toString(BloombergLP::balxml::EncodingStyle::Value)>:
 0000000000000000: 02	xorl	%ecx, %ecx
 0000000000000002: 03	cmpl	$1, %edi

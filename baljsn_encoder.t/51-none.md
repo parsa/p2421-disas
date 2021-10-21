@@ -1,6 +1,6 @@
 # 51.none.s
 
-```asm
+```x86asm
 00000000004b69b0 <BloombergLP::s_baltst::MySequenceWithChoiceChoice::selectionName() const>:
 0000000000000000: 04	cmpl	$0, 4(%rdi)
 0000000000000004: 05	movl	$6589624, %ecx

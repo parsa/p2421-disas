@@ -1,6 +1,6 @@
 # 3.assume.s
 
-```asm
+```x86asm
 00000000004aea10 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<SEQUENCE_CONSTRAINT_TEST::PopperThread>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, SEQUENCE_CONSTRAINT_TEST::PopperThread const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

@@ -1,6 +1,6 @@
 # 0.none.s
 
-```asm
+```x86asm
 00000000004043f0 <DoubleStack::pop()>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 03	movq	%rdi, %rbx

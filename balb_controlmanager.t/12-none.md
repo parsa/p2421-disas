@@ -1,6 +1,6 @@
 # 12.none.s
 
-```asm
+```x86asm
 000000000040fce0 <BloombergLP::bslmt::ThreadUtilImpl<BloombergLP::bslmt::Platform::PosixThreads>::getMaxSchedulingPriority(BloombergLP::bslmt::ThreadAttributes::SchedulingPolicy)>:
 0000000000000000: 02	movl	%edi, %eax
 0000000000000002: 02	xorl	%edi, %edi

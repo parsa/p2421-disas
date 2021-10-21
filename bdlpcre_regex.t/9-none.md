@@ -1,6 +1,6 @@
 # 9.none.s
 
-```asm
+```x86asm
 000000000042a7d0 <BloombergLP::bdlpcre::RegEx::prepareImp(char*, unsigned long, unsigned long*, char const*, int, unsigned long)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

@@ -1,6 +1,6 @@
 # 21.none.s
 
-```asm
+```x86asm
 000000000042b570 <BloombergLP::bdlde::CharConvertUtf16::utf8ToUtf16(bsl::basic_string<wchar_t, std::__1::char_traits<wchar_t>, bsl::allocator<wchar_t> >*, char const*, unsigned long*, wchar_t, BloombergLP::bdlde::ByteOrder::Enum)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

@@ -1,6 +1,6 @@
 # 19.none.s
 
-```asm
+```x86asm
 0000000000476650 <BloombergLP::bdldfp::DecimalImpUtil::normalize(BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType32)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 01	pushq	%rbx

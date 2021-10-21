@@ -1,6 +1,6 @@
 # 0.none.s
 
-```asm
+```x86asm
 00000000004326d0 <(anonymous namespace)::u::ObjChecker<double>::~ObjChecker()>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

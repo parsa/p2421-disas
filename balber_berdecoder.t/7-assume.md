@@ -1,6 +1,6 @@
 # 7.assume.s
 
-```asm
+```x86asm
 000000000044ee80 <int BloombergLP::balber::BerDecoder_Node::decodeChoice<BloombergLP::s_baltst::TimingRequest>(BloombergLP::s_baltst::TimingRequest*)>:
 0000000000000000: 02	pushq	%r14
 0000000000000002: 01	pushq	%rbx

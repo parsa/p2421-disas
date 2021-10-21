@@ -1,6 +1,6 @@
 # 1.none.s
 
-```asm
+```x86asm
 00000000004104a0 <BloombergLP::bslstl::Function_Rep::copyInit(BloombergLP::bslstl::Function_Rep const&)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

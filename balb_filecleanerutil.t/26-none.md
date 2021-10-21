@@ -1,6 +1,6 @@
 # 26.none.s
 
-```asm
+```x86asm
 0000000000411ef0 <BloombergLP::bdls::PathUtil::appendIfValid(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >*, BloombergLP::bslstl::StringRefImp<char> const&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

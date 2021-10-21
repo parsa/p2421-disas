@@ -1,6 +1,6 @@
 # 9.none.s
 
-```asm
+```x86asm
 000000000064a650 <BloombergLP::bdlcc::SkipList_PoolManager::SkipList_PoolManager(int*, int, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

@@ -1,6 +1,6 @@
 # 4.assume.s
 
-```asm
+```x86asm
 0000000000430250 <BloombergLP::s_baltst::BasicSchemaEnumerationElementChoice::selectionName() const>:
 0000000000000000: 04	cmpl	$0, 64(%rdi)
 0000000000000004: 02	je	0x43025c <BloombergLP::s_baltst::BasicSchemaEnumerationElementChoice::selectionName() const+0xc>

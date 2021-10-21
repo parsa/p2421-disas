@@ -1,6 +1,6 @@
 # 59.assume.s
 
-```asm
+```x86asm
 000000000040a260 <BloombergLP::balb::Choice3::operator=(BloombergLP::balb::Choice3 const&)>:
 0000000000000000: 02	pushq	%r14
 0000000000000002: 01	pushq	%rbx

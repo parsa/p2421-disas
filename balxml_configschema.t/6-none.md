@@ -1,6 +1,6 @@
 # 6.none.s
 
-```asm
+```x86asm
 000000000042fe30 <BloombergLP::s_baltst::BasicSchemaEnumerationElementChoice::operator=(BloombergLP::s_baltst::BasicSchemaEnumerationElementChoice const&)>:
 0000000000000000: 02	pushq	%r14
 0000000000000002: 01	pushq	%rbx

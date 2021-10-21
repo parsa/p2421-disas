@@ -1,6 +1,6 @@
 # 18.assume.s
 
-```asm
+```x86asm
 00000000005e9610 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bslmt::Barrier*), BloombergLP::bdlf::Bind_BoundTuple1<BloombergLP::bslmt::Barrier*> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bslmt::Barrier*), BloombergLP::bdlf::Bind_BoundTuple1<BloombergLP::bslmt::Barrier*> > const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

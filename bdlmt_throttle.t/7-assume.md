@@ -1,6 +1,6 @@
 # 7.assume.s
 
-```asm
+```x86asm
 00000000004055c0 <Case_Throttle_MULTITHREADED::threadJob()>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

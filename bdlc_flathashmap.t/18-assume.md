@@ -1,6 +1,6 @@
 # 18.assume.s
 
-```asm
+```x86asm
 0000000000455610 <BloombergLP::bdlc::FlatHashTable<int, bsl::pair<int, int>, BloombergLP::bdlc::FlatHashMap_EntryUtil<int, int, bsl::pair<int, int> >, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

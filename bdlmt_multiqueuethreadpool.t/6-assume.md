@@ -1,6 +1,6 @@
 # 6.assume.s
 
-```asm
+```x86asm
 00000000004311d0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<Case27DrainThread>(unsigned long*, Case27DrainThread const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

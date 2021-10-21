@@ -1,6 +1,6 @@
 # 6.assume.s
 
-```asm
+```x86asm
 00000000004484e0 <BloombergLP::ball::UserFieldValue::type() const>:
 0000000000000000: 03	movl	48(%rdi), %eax
 0000000000000003: 01	retq	

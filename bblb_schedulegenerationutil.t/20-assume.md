@@ -1,6 +1,6 @@
 # 20.assume.s
 
-```asm
+```x86asm
 000000000040cc10 <BloombergLP::bdlt::Calendar::addWeekendDays(BloombergLP::bdlt::DayOfWeekSet const&)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

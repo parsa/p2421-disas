@@ -1,6 +1,6 @@
 # 10.none.s
 
-```asm
+```x86asm
 000000000044add0 <void BloombergLP::bdld::Datum::apply<BloombergLP::bdld::(anonymous namespace)::Datum_StreamVisitor>(BloombergLP::bdld::(anonymous namespace)::Datum_StreamVisitor&) const>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

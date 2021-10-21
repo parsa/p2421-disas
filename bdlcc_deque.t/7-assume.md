@@ -1,6 +1,6 @@
 # 7.assume.s
 
-```asm
+```x86asm
 0000000000496330 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<TEST_CASE_26::TimedPopRecordFront<double> >(unsigned long*, TEST_CASE_26::TimedPopRecordFront<double> const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

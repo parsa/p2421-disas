@@ -1,6 +1,6 @@
 # 71.none.s
 
-```asm
+```x86asm
 0000000000454a70 <BloombergLP::balber::BerUtil_StringImpUtil::putChars(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, char, int)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

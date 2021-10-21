@@ -1,6 +1,6 @@
 # 1.none.s
 
-```asm
+```x86asm
 0000000000406890 <Case_Minus_1_Events_Dropped::threadJob()>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 01	pushq	%rbx

@@ -1,6 +1,6 @@
 # 6.assume.s
 
-```asm
+```x86asm
 0000000000418ca0 <(anonymous namespace)::u::isUniqueAdd((anonymous namespace)::u::AddMode)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 01	pushq	%rbx

@@ -1,6 +1,6 @@
 # 8.none.s
 
-```asm
+```x86asm
 0000000000465850 <BloombergLP::balcl::OptionValue::type() const>:
 0000000000000000: 03	movl	64(%rdi), %ecx
 0000000000000003: 03	leal	-1(%rcx), %edx

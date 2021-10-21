@@ -1,6 +1,6 @@
 # 0.none.s
 
-```asm
+```x86asm
 000000000040dee0 <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

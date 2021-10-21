@@ -1,6 +1,6 @@
 # 3.assume.s
 
-```asm
+```x86asm
 0000000000405d20 <usageExample2>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

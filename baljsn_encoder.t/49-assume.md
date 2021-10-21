@@ -1,6 +1,6 @@
 # 49.assume.s
 
-```asm
+```x86asm
 00000000004b65e0 <BloombergLP::s_baltst::MySequenceWithChoiceChoice::makeSelection(char const*, int)>:
 0000000000000000: 05	movl	$4294967295, %eax
 0000000000000005: 03	cmpl	$7, %edx

@@ -1,6 +1,6 @@
 # 2.none.s
 
-```asm
+```x86asm
 0000000000419e40 <(anonymous namespace)::BucketsWrapper<unsigned long>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

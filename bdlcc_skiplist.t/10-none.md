@@ -1,6 +1,6 @@
 # 10.none.s
 
-```asm
+```x86asm
 00000000004059e0 <SKIPLIST_TEST_CASE_DRQS_144652915::addNodes(BloombergLP::bslmt::Barrier*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

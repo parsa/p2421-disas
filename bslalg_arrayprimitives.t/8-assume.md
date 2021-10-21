@@ -1,6 +1,6 @@
 # 8.assume.s
 
-```asm
+```x86asm
 00000000004c8a00 <void testCopyConstructWithIterators<void const*>(bool, bool, bool)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

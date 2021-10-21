@@ -1,6 +1,6 @@
 # 79.none.s
 
-```asm
+```x86asm
 0000000000466e90 <BloombergLP::bdlt::Iso8601Util::generateRaw(char*, BloombergLP::bdlt::Datetime const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

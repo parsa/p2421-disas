@@ -1,6 +1,6 @@
 # 5.assume.s
 
-```asm
+```x86asm
 00000000004104e0 <BloombergLP::bslstl::Function_Rep::allocateBuf(unsigned long)>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 03	movq	%rdi, %rbx

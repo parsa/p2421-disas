@@ -1,6 +1,6 @@
 # 3.assume.s
 
-```asm
+```x86asm
 00000000004130b0 <BloombergLP::baltzo::TimeZoneUtil::initLocalTime(BloombergLP::baltzo::LocalDatetime*, BloombergLP::bdlt::Datetime const&, char const*, BloombergLP::baltzo::DstPolicy::Enum)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

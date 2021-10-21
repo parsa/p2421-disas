@@ -1,6 +1,6 @@
 # 36.assume.s
 
-```asm
+```x86asm
 000000000040a450 <BloombergLP::balb::Choice3::makeSelection1(BloombergLP::balb::Sequence6 const&)>:
 0000000000000000: 02	pushq	%r14
 0000000000000002: 01	pushq	%rbx

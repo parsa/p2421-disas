@@ -1,6 +1,6 @@
 # 4.assume.s
 
-```asm
+```x86asm
 00000000004e6a70 <BloombergLP::balxml::EncodingStyle::toString(BloombergLP::balxml::EncodingStyle::Value)>:
 0000000000000000: 02	testl	%edi, %edi
 0000000000000002: 05	movl	$5634602, %ecx

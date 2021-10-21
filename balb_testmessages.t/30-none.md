@@ -1,6 +1,6 @@
 # 30.none.s
 
-```asm
+```x86asm
 0000000000405220 <BloombergLP::balb::SequenceWithAnonymityChoice1::makeSelection6(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

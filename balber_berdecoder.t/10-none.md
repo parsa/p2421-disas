@@ -1,6 +1,6 @@
 # 10.none.s
 
-```asm
+```x86asm
 0000000000449440 <int BloombergLP::balber::BerDecoder_Node::decodeChoice<BloombergLP::s_baltst::MyChoice>(BloombergLP::s_baltst::MyChoice*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

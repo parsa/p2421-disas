@@ -1,6 +1,6 @@
 # 22.none.s
 
-```asm
+```x86asm
 000000000045e530 <void (anonymous namespace)::u::checksumAppend<(anonymous namespace)::u::Md5ChecksumAlgorithm>((anonymous namespace)::u::Md5ChecksumAlgorithm&, (anonymous namespace)::u::GetValueFingerprint const&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

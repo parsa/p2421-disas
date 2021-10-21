@@ -1,6 +1,6 @@
 # 0.none.s
 
-```asm
+```x86asm
 000000000047ef10 <bsl::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, bsl::allocator<wchar_t> >::seekoff(long long, std::__1::ios_base::seekdir, unsigned int)>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 03	cmpl	$1, %edx

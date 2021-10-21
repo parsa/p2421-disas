@@ -1,6 +1,6 @@
 # 27.assume.s
 
-```asm
+```x86asm
 0000000000405150 <BloombergLP::s_baltst::MyChoiceWithDefaultValues::makeSelection1(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

@@ -1,6 +1,6 @@
 # 0.assume.s
 
-```asm
+```x86asm
 000000000040da10 <BloombergLP::baltzo::Zoneinfo::addTransition(long long, BloombergLP::baltzo::LocalTimeDescriptor const&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

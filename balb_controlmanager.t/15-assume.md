@@ -1,6 +1,6 @@
 # 15.assume.s
 
-```asm
+```x86asm
 000000000040d490 <BloombergLP::bdlb::String::strrstrCaseless(char const*, int, char const*, int)>:
 0000000000000000: 02	pushq	%r14
 0000000000000002: 01	pushq	%rbx

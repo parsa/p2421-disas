@@ -1,6 +1,6 @@
 # 10.assume.s
 
-```asm
+```x86asm
 0000000000415ce0 <BloombergLP::ball::UserFieldValue& bsl::vector<BloombergLP::ball::UserFieldValue, bsl::allocator<BloombergLP::ball::UserFieldValue> >::emplace_back<>()>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

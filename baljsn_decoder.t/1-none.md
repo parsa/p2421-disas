@@ -1,6 +1,6 @@
 # 1.none.s
 
-```asm
+```x86asm
 000000000048c4e0 <BloombergLP::bdlde::Utf8CheckingInStreamBufWrapper::xsgetn(char*, long)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

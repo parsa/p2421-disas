@@ -1,6 +1,6 @@
 # 8.assume.s
 
-```asm
+```x86asm
 000000000040d0c0 <BloombergLP::bdlb::String::areEqualCaseless(char const*, int, char const*, int)>:
 0000000000000000: 02	cmpl	%ecx, %esi
 0000000000000002: 02	jne	0x40d0f6 <BloombergLP::bdlb::String::areEqualCaseless(char const*, int, char const*, int)+0x36>

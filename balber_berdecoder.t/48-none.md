@@ -1,6 +1,6 @@
 # 48.none.s
 
-```asm
+```x86asm
 0000000000447360 <void BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<BloombergLP::bdlt::Time, BloombergLP::bdlt::TimeTz> >::doApply<BloombergLP::bdlb::Variant_PrintVisitor const&>(BloombergLP::bdlb::Variant_PrintVisitor const&, int) const>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r14

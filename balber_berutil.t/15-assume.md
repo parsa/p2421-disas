@@ -1,6 +1,6 @@
 # 15.assume.s
 
-```asm
+```x86asm
 0000000000464fd0 <(anonymous namespace)::u::Md5ChecksumAlgorithm::operator()(void const*, unsigned long)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

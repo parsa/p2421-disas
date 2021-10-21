@@ -1,6 +1,6 @@
 # 6.assume.s
 
-```asm
+```x86asm
 00000000004132e0 <(anonymous namespace)::u::setConstraint(BloombergLP::balcl::TypeInfo*, BloombergLP::balcl::OptionType::Enum, void const*)>:
 0000000000000000: 03	addl	$-2, %esi
 0000000000000003: 07	jmpq	*4538528(,%rsi,8)

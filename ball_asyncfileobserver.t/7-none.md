@@ -1,6 +1,6 @@
 # 7.none.s
 
-```asm
+```x86asm
 0000000000429a00 <BloombergLP::ball::Record::Record(BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

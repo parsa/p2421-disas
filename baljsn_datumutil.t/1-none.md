@@ -1,6 +1,6 @@
 # 1.none.s
 
-```asm
+```x86asm
 000000000044f350 <BloombergLP::bdlde::CharConvertUtf32::utf8ToUtf32(unsigned int*, unsigned long, std::__1::basic_string_view<char, std::__1::char_traits<char> > const&, unsigned long*, unsigned int, BloombergLP::bdlde::ByteOrder::Enum)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

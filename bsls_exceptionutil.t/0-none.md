@@ -1,6 +1,6 @@
 # 0.none.s
 
-```asm
+```x86asm
 0000000000400fb0 <abortSignalHandler>:
 0000000000000000: 01	pushq	%rax
 0000000000000001: 07	cmpb	$0, 2105796(%rip)  # 60317c <g_inTest>

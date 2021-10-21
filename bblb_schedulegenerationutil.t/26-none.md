@@ -1,6 +1,6 @@
 # 26.none.s
 
-```asm
+```x86asm
 000000000040cf00 <BloombergLP::bdlt::Calendar::getNextBusinessDay(BloombergLP::bdlt::Date*, BloombergLP::bdlt::Date const&, int) const>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r14

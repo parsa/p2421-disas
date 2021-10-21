@@ -1,6 +1,6 @@
 # 0.none.s
 
-```asm
+```x86asm
 000000000040db90 <BloombergLP::baljsn::EncodingStyle::toString(BloombergLP::baljsn::EncodingStyle::Value)>:
 0000000000000000: 02	xorl	%ecx, %ecx
 0000000000000002: 03	cmpl	$1, %edi

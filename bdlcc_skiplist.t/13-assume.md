@@ -1,6 +1,6 @@
 # 13.assume.s
 
-```asm
+```x86asm
 00000000005bc130 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (USAGE::SimpleScheduler::*)(), BloombergLP::bdlf::Bind_BoundTuple1<USAGE::SimpleScheduler*> > >(unsigned long*, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (USAGE::SimpleScheduler::*)(), BloombergLP::bdlf::Bind_BoundTuple1<USAGE::SimpleScheduler*> > const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

@@ -1,6 +1,6 @@
 # 0.assume.s
 
-```asm
+```x86asm
 0000000000410b00 <BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::OtherType, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::OtherType> >::getObject()>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

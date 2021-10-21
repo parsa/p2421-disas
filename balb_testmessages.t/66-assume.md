@@ -1,6 +1,6 @@
 # 66.assume.s
 
-```asm
+```x86asm
 0000000000414cf0 <bsl::vector<BloombergLP::balb::Choice1, bsl::allocator<BloombergLP::balb::Choice1> >::~vector()>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 04	subq	$16, %rsp

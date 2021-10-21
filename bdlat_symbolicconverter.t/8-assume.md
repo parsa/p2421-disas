@@ -1,6 +1,6 @@
 # 8.assume.s
 
-```asm
+```x86asm
 0000000000404a20 <BloombergLP::test::MixedSequence::print(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, int, int) const>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

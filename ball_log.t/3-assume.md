@@ -1,6 +1,6 @@
 # 3.assume.s
 
-```asm
+```x86asm
 0000000000498340 <BloombergLP::ball::Record::Record(BloombergLP::ball::Record const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

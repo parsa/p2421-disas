@@ -1,6 +1,6 @@
 # 34.none.s
 
-```asm
+```x86asm
 0000000000412ce0 <BloombergLP::bdlt::PackedCalendar_BusinessDayConstIterator::previousBusinessDay()>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r14

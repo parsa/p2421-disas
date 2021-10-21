@@ -1,6 +1,6 @@
 # 12.assume.s
 
-```asm
+```x86asm
 000000000046a350 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (BloombergLP::bdlt::Date const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

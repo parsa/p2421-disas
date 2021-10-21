@@ -1,6 +1,6 @@
 # 2.assume.s
 
-```asm
+```x86asm
 000000000040be50 <BloombergLP::bdlcc::FixedQueueIndexManager::FixedQueueIndexManager(unsigned long, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

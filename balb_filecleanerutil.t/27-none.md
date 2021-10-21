@@ -1,6 +1,6 @@
 # 27.none.s
 
-```asm
+```x86asm
 000000000040ca50 <BloombergLP::bdls::FilesystemUtil::open(char const*, BloombergLP::bdls::FilesystemUtil::FileOpenPolicy, BloombergLP::bdls::FilesystemUtil::FileIOPolicy, BloombergLP::bdls::FilesystemUtil::FileTruncatePolicy)>:
 0000000000000000: 02	movl	%esi, %eax
 0000000000000002: 02	movl	%ecx, %esi

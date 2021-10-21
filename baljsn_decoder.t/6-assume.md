@@ -1,6 +1,6 @@
 # 6.assume.s
 
-```asm
+```x86asm
 0000000000478750 <BloombergLP::balxml::Decoder_ParseObject::executeImp(bsl::vector<char, bsl::allocator<char> >*, int, BloombergLP::bdlat_TypeCategory::Array)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

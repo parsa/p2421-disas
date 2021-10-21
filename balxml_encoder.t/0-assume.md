@@ -1,6 +1,6 @@
 # 0.assume.s
 
-```asm
+```x86asm
 000000000044a940 <GenerateXmlElement::operator()(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&, std::__1::basic_string_view<char, std::__1::char_traits<char> > const&) const>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

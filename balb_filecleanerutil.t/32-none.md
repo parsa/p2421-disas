@@ -1,6 +1,6 @@
 # 32.none.s
 
-```asm
+```x86asm
 00000000004124b0 <BloombergLP::bdls::PathUtil::getLeaf(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >*, BloombergLP::bslstl::StringRefImp<char> const&, int)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

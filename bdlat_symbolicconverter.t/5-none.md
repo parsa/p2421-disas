@@ -1,6 +1,6 @@
 # 5.none.s
 
-```asm
+```x86asm
 00000000004109c0 <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationA::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationA::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

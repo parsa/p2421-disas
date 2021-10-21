@@ -1,6 +1,6 @@
 # 0.none.s
 
-```asm
+```x86asm
 0000000000424220 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& BloombergLP::balxml::TypesPrintUtil::print<BloombergLP::bdlt::Datetime>(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::bdlt::Datetime const&, int, BloombergLP::balxml::EncoderOptions const*)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

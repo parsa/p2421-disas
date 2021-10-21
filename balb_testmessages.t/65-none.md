@@ -1,6 +1,6 @@
 # 65.none.s
 
-```asm
+```x86asm
 000000000040e240 <BloombergLP::balb::Sequence4::~Sequence4()>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

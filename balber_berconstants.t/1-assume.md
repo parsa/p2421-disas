@@ -1,6 +1,6 @@
 # 1.assume.s
 
-```asm
+```x86asm
 00000000004061e0 <BloombergLP::balber::operator<<(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::balber::BerConstants::TagClass)>:
 0000000000000000: 03	roll	$26, %esi
 0000000000000003: 07	jmpq	*4266568(,%rsi,8)

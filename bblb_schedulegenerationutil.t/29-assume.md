@@ -1,6 +1,6 @@
 # 29.assume.s
 
-```asm
+```x86asm
 000000000041e7b0 <BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::isEqualImp(BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned> const&) const>:
 0000000000000000: 04	movq	8(%rdi), %rcx
 0000000000000004: 03	movl	16(%rdi), %edx

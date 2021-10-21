@@ -1,6 +1,6 @@
 # 6.assume.s
 
-```asm
+```x86asm
 0000000000419980 <BloombergLP::ball::(anonymous namespace)::TimestampFormatter::format(BloombergLP::baljsn::SimpleFormatter*, BloombergLP::ball::Record const&)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

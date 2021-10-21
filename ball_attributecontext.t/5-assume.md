@@ -1,6 +1,6 @@
 # 5.assume.s
 
-```asm
+```x86asm
 00000000004059e0 <AttributeSet::insert(BloombergLP::ball::Attribute const&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

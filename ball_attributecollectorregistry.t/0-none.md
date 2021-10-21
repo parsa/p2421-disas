@@ -1,6 +1,6 @@
 # 0.none.s
 
-```asm
+```x86asm
 00000000004057a0 <u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

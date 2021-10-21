@@ -1,6 +1,6 @@
 # 1.assume.s
 
-```asm
+```x86asm
 00000000004050f0 <example1::main()>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 07	subq	$192, %rsp

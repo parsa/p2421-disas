@@ -1,6 +1,6 @@
 # 6.none.s
 
-```asm
+```x86asm
 0000000000405470 <Case_Allow_All::threadJobInit()>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r14

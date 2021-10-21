@@ -1,6 +1,6 @@
 # 5.assume.s
 
-```asm
+```x86asm
 0000000000408820 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<Case7_Driver>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, Case7_Driver const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

@@ -1,6 +1,6 @@
 # 6.none.s
 
-```asm
+```x86asm
 000000000041e530 <BloombergLP::bdlde::Utf8Util::numCodePointsRaw(char const*, unsigned long)>:
 0000000000000000: 03	testq	%rsi, %rsi
 0000000000000003: 02	jle	0x41e567 <BloombergLP::bdlde::Utf8Util::numCodePointsRaw(char const*, unsigned long)+0x37>

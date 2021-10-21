@@ -1,6 +1,6 @@
 # 1.assume.s
 
-```asm
+```x86asm
 000000000041a070 <void BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<long long, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlt::DatetimeTz, bsl::vector<char, bsl::allocator<char> > > >::doApply<BloombergLP::bdlb::Variant_CopyAssignVisitor&>(BloombergLP::bdlb::Variant_CopyAssignVisitor&, int) const>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

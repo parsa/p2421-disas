@@ -1,6 +1,6 @@
 # 24.none.s
 
-```asm
+```x86asm
 0000000000415670 <BloombergLP::balb::Choice1::~Choice1()>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

@@ -1,6 +1,6 @@
 # 19.none.s
 
-```asm
+```x86asm
 000000000040e2b0 <void BloombergLP::s_baltst::BasicSchemaUtil_ImplUtil::doRemoveAnnotations<BloombergLP::s_baltst::BasicSchemaEnumerationElement>(BloombergLP::s_baltst::BasicSchemaEnumerationElement*)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

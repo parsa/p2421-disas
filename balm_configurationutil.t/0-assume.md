@@ -1,6 +1,6 @@
 # 0.assume.s
 
-```asm
+```x86asm
 00000000004043f0 <ThresholdPublisher::publish(BloombergLP::balm::MetricSample const&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

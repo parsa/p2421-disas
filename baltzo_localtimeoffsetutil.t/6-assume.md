@@ -1,6 +1,6 @@
 # 6.assume.s
 
-```asm
+```x86asm
 0000000000413e50 <BloombergLP::baltzo::TimeZoneUtilImp::loadLocalTimePeriodForUtc(BloombergLP::baltzo::LocalTimePeriod*, char const*, BloombergLP::bdlt::Datetime const&, BloombergLP::baltzo::ZoneinfoCache*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

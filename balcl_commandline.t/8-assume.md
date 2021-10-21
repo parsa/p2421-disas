@@ -1,6 +1,6 @@
 # 8.assume.s
 
-```asm
+```x86asm
 0000000000465e70 <BloombergLP::balcl::OptionValue::type() const>:
 0000000000000000: 03	movl	64(%rdi), %eax
 0000000000000003: 01	retq	

@@ -1,6 +1,6 @@
 # 43.none.s
 
-```asm
+```x86asm
 0000000000472940 <int BloombergLP::balb::Sequence3::accessAttributes<BloombergLP::baljsn::Encoder_AttributeVisitor>(BloombergLP::baljsn::Encoder_AttributeVisitor&) const>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

@@ -1,6 +1,6 @@
 # 1.assume.s
 
-```asm
+```x86asm
 00000000004f2470 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 03	movq	%rdi, %rbx

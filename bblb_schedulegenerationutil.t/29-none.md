@@ -1,6 +1,6 @@
 # 29.none.s
 
-```asm
+```x86asm
 000000000041eb00 <BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::isEqualImp(BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned> const&) const>:
 0000000000000000: 03	movl	16(%rdi), %ecx
 0000000000000003: 02	movb	$1, %al

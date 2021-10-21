@@ -1,6 +1,6 @@
 # 1.none.s
 
-```asm
+```x86asm
 00000000004e8f10 <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

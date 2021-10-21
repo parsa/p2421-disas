@@ -1,6 +1,6 @@
 # 8.none.s
 
-```asm
+```x86asm
 00000000004122b0 <int BloombergLP::balxml::Decoder_ParseObject::executeImp<BloombergLP::s_baltst::BasicSchemaRestrictionElementChoice>(BloombergLP::s_baltst::BasicSchemaRestrictionElementChoice*, int, BloombergLP::bdlat_TypeCategory::Choice)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r14

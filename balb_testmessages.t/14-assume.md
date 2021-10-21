@@ -1,6 +1,6 @@
 # 14.assume.s
 
-```asm
+```x86asm
 0000000000404a70 <BloombergLP::balb::Choice4::makeSelection(int)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

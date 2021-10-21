@@ -1,6 +1,6 @@
 # 34.none.s
 
-```asm
+```x86asm
 00000000004b6840 <BloombergLP::s_baltst::MySequenceWithChoiceChoice::makeSelection(int)>:
 0000000000000000: 03	cmpl	$-1, %esi
 0000000000000003: 02	je	0x4b6864 <BloombergLP::s_baltst::MySequenceWithChoiceChoice::makeSelection(int)+0x24>

@@ -1,6 +1,6 @@
 # 0.none.s
 
-```asm
+```x86asm
 0000000000457750 <BloombergLP::bslx::MarshallingUtil::getArrayUint40(unsigned long long*, char const*, int)>:
 0000000000000000: 02	testl	%edx, %edx
 0000000000000002: 06	je	0x457810 <BloombergLP::bslx::MarshallingUtil::getArrayUint40(unsigned long long*, char const*, int)+0xc0>

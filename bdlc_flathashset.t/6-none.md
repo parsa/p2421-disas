@@ -1,6 +1,6 @@
 # 6.none.s
 
-```asm
+```x86asm
 000000000044d450 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, BloombergLP::bslh::FibonacciBadHashWrapper<bsl::hash<int> >, bsl::equal_to<int> >::indexOfKey(bool*, int const&, unsigned long)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

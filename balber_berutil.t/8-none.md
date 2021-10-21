@@ -1,6 +1,6 @@
 # 8.none.s
 
-```asm
+```x86asm
 0000000000476630 <BloombergLP::bdldfp::DecimalImpUtil::classify(BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128)>:
 0000000000000000: 01	pushq	%rax
 0000000000000001: 05	callq	0x4a2ad0 <__bid128_class>

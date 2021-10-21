@@ -1,6 +1,6 @@
 # 7.assume.s
 
-```asm
+```x86asm
 000000000041c5c0 <BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Signed>::replace(unsigned long, long)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

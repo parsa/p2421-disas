@@ -1,6 +1,6 @@
 # 8.none.s
 
-```asm
+```x86asm
 000000000044e390 <BloombergLP::bdld::DatumMapOwningKeysBuilder::append(BloombergLP::bdld::DatumMapEntry const*, unsigned long)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

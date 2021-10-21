@@ -1,6 +1,6 @@
 # 55.assume.s
 
-```asm
+```x86asm
 00000000004162e0 <void BloombergLP::bslim::Printer_Helper::print<BloombergLP::balb::Enumerated::Value const*>(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::balb::Enumerated::Value const* const&, BloombergLP::balb::Enumerated::Value const* const&, int, int)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

@@ -1,6 +1,6 @@
 # 0.assume.s
 
-```asm
+```x86asm
 0000000000400fb0 <abortSignalHandler>:
 0000000000000000: 01	pushq	%rax
 0000000000000001: 06	movb	2105797(%rip), %al  # 60317c <g_inTest>

@@ -1,6 +1,6 @@
 # 5.assume.s
 
-```asm
+```x86asm
 0000000000460b70 <BloombergLP::bdlsb::OverflowMemOutStreamBuf::seekoff(long long, std::__1::ios_base::seekdir, unsigned int)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

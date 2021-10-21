@@ -1,6 +1,6 @@
 # 12.none.s
 
-```asm
+```x86asm
 00000000004396c0 <BloombergLP::bdlt::FixUtil::generate(char*, int, BloombergLP::bdlt::Date const&, BloombergLP::bdlt::FixUtilConfiguration const&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r14

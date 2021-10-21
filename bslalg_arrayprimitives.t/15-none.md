@@ -1,6 +1,6 @@
 # 15.none.s
 
-```asm
+```x86asm
 00000000004be2e0 <void testCopyConstructWithIterators<char>(bool, bool, bool)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

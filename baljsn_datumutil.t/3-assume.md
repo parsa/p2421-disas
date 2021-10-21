@@ -1,6 +1,6 @@
 # 3.assume.s
 
-```asm
+```x86asm
 00000000004425b0 <BloombergLP::bdlb::BitStringUtil::assign(unsigned long*, unsigned long, bool, unsigned long)>:
 0000000000000000: 02	pushq	%r14
 0000000000000002: 01	pushq	%rbx

@@ -1,6 +1,6 @@
 # 24.assume.s
 
-```asm
+```x86asm
 000000000040d3a0 <BloombergLP::bdls::FilesystemUtil::visitPaths(char const*, bsl::function<void (char const*)> const&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r14

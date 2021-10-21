@@ -1,6 +1,6 @@
 # 52.assume.s
 
-```asm
+```x86asm
 000000000046b880 <BloombergLP::bdlt::Time::setMicrosecond(int)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r14

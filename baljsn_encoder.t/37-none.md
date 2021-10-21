@@ -1,6 +1,6 @@
 # 37.none.s
 
-```asm
+```x86asm
 0000000000483580 <int BloombergLP::baljsn::Encoder_ValueDispatcher::operator()<BloombergLP::bdlt::Datetime>(BloombergLP::bdlt::Datetime const&, BloombergLP::bdlat_TypeCategory::Simple)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

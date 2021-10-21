@@ -1,6 +1,6 @@
 # 12.none.s
 
-```asm
+```x86asm
 0000000000476860 <BloombergLP::bdldfp::DecimalImpUtil::decompose(int*, unsigned int*, int*, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType32)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

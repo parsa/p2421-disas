@@ -1,6 +1,6 @@
 # 29.none.s
 
-```asm
+```x86asm
 00000000004054e0 <BloombergLP::balb::SequenceWithAnonymityChoice1::makeSelection6()>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 03	movq	%rdi, %rbx

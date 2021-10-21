@@ -1,6 +1,6 @@
 # 5.none.s
 
-```asm
+```x86asm
 0000000000424a90 <BloombergLP::bdlb::HashUtil::hash0(char const*, int, int)>:
 0000000000000000: 03	movl	%edx, %r8d
 0000000000000003: 02	testl	%esi, %esi

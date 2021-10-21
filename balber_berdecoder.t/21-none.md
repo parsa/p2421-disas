@@ -1,6 +1,6 @@
 # 21.none.s
 
-```asm
+```x86asm
 000000000043c040 <int BloombergLP::balber::BerDecoder::decode<BloombergLP::bdlb::Variant2<BloombergLP::bdlt::Date, BloombergLP::bdlt::DateTz> >(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, BloombergLP::bdlb::Variant2<BloombergLP::bdlt::Date, BloombergLP::bdlt::DateTz>*)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

@@ -1,6 +1,6 @@
 # 12.none.s
 
-```asm
+```x86asm
 00000000004054b0 <BloombergLP::s_baltst::MyChoiceWithDefaultValues::makeSelection1()>:
 0000000000000000: 02	pushq	%r14
 0000000000000002: 01	pushq	%rbx

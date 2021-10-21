@@ -1,6 +1,6 @@
 # 0.none.s
 
-```asm
+```x86asm
 0000000000422b70 <BloombergLP::bdlma::ConcurrentPool::reserveCapacity(int)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

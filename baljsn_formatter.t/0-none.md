@@ -1,6 +1,6 @@
 # 0.none.s
 
-```asm
+```x86asm
 000000000041dcd0 <void testPutValue<BloombergLP::bdlt::Date>(int, int, int, int, BloombergLP::bdlt::Date const&, BloombergLP::baljsn::EncoderOptions const*, bool)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

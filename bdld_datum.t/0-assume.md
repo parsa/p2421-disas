@@ -1,6 +1,6 @@
 # 0.assume.s
 
-```asm
+```x86asm
 000000000045c2a0 <void BloombergLP::bdld::Datum::apply<Benchmark_Visitor>(Benchmark_Visitor&) const>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

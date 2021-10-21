@@ -1,6 +1,6 @@
 # 2.none.s
 
-```asm
+```x86asm
 000000000042add0 <int BloombergLP::bdlpcre::RegEx::matchImp<BloombergLP::bdlpcre::(anonymous namespace)::DataExtractor<bsl::pair<unsigned long, unsigned long> > >(BloombergLP::bdlpcre::(anonymous namespace)::DataExtractor<bsl::pair<unsigned long, unsigned long> > const&, char const*, unsigned long, unsigned long, bool) const>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

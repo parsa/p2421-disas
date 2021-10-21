@@ -1,6 +1,6 @@
 # 1.assume.s
 
-```asm
+```x86asm
 0000000000432ef0 <BloombergLP::bdlmt::MultiQueueThreadPool_Queue::waitWhilePausing()>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

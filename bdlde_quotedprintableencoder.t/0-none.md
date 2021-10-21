@@ -1,6 +1,6 @@
 # 0.none.s
 
-```asm
+```x86asm
 000000000041ef90 <BloombergLP::bdlde::QuotedPrintableEncoder::convert(char*, int*, int*, char const*, char const*, int)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

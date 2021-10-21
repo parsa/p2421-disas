@@ -1,6 +1,6 @@
 # 3.none.s
 
-```asm
+```x86asm
 0000000000404fe0 <BloombergLP::s_baltst::MyChoiceWithDefaultValues::operator=(BloombergLP::s_baltst::MyChoiceWithDefaultValues const&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 01	pushq	%rbx

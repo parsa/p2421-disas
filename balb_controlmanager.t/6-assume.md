@@ -1,6 +1,6 @@
 # 6.assume.s
 
-```asm
+```x86asm
 00000000004105a0 <BloombergLP::bslstl::Function_Rep::moveInit(BloombergLP::bslstl::Function_Rep*)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

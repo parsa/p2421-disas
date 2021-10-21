@@ -1,6 +1,6 @@
 # 22.assume.s
 
-```asm
+```x86asm
 0000000000413890 <BloombergLP::bdlt::PosixDateImpUtil::ydToSerial(int, int)>:
 0000000000000000: 03	leal	-1(%rdi), %eax
 0000000000000003: 06	imull	$365, %eax, %ecx

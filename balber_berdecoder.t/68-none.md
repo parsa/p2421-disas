@@ -1,6 +1,6 @@
 # 68.none.s
 
-```asm
+```x86asm
 000000000046aa70 <BloombergLP::bdlt::ProlepticDateImpUtil::numLeapYears(int, int)>:
 0000000000000000: 04	leal	3(%rsi), %r8d
 0000000000000004: 02	testl	%esi, %esi

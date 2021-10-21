@@ -1,6 +1,6 @@
 # 17.assume.s
 
-```asm
+```x86asm
 000000000040e640 <BloombergLP::bdlt::DayOfWeekSet_Iter::DayOfWeekSet_Iter(int, int)>:
 0000000000000000: 03	movb	%sil, (%rdi)
 0000000000000003: 03	movb	%dl, 1(%rdi)

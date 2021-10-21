@@ -1,6 +1,6 @@
 # 6.assume.s
 
-```asm
+```x86asm
 000000000042a810 <int BloombergLP::baljsn::SimpleFormatter::addValue<BloombergLP::bdlt::DateTz>(BloombergLP::bdlt::DateTz const&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

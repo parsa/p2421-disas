@@ -1,6 +1,6 @@
 # 3.assume.s
 
-```asm
+```x86asm
 0000000000405290 <Case_Allow_All::threadJobIf()>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r14

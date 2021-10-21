@@ -1,6 +1,6 @@
 # 21.none.s
 
-```asm
+```x86asm
 00000000004137d0 <BloombergLP::bdlt::PosixDateImpUtil::lastDayOfMonth(int, int)>:
 0000000000000000: 03	movslq	%esi, %rdx
 0000000000000003: 07	movl	4445632(,%rdx,4), %ecx

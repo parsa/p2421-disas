@@ -1,6 +1,6 @@
 # 21.assume.s
 
-```asm
+```x86asm
 000000000040b940 <BloombergLP::bblb::ScheduleGenerationUtil::generateFromBusinessDayOfMonth(bsl::vector<BloombergLP::bdlt::Date, bsl::allocator<BloombergLP::bdlt::Date> >*, BloombergLP::bdlt::Date const&, BloombergLP::bdlt::Date const&, int, int, int, BloombergLP::bdlt::Calendar const&, int)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

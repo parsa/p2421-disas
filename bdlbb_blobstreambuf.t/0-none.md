@@ -1,6 +1,6 @@
 # 0.none.s
 
-```asm
+```x86asm
 000000000040ca30 <BloombergLP::bdlbb::InBlobStreamBuf::underflow()>:
 0000000000000000: 04	movq	64(%rdi), %r11
 0000000000000004: 04	movl	36(%r11), %ecx

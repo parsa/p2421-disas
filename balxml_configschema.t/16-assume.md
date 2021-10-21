@@ -1,6 +1,6 @@
 # 16.assume.s
 
-```asm
+```x86asm
 0000000000417bc0 <int BloombergLP::balxml::Decoder_ParseObject::executeImp<BloombergLP::s_baltst::BasicSchemaComplexTypeElementChoice>(BloombergLP::s_baltst::BasicSchemaComplexTypeElementChoice*, int, BloombergLP::bdlat_TypeCategory::Choice)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

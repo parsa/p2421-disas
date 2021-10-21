@@ -1,6 +1,6 @@
 # 27.assume.s
 
-```asm
+```x86asm
 00000000004d14a0 <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::selectionName() const>:
 0000000000000000: 03	movl	48(%rdi), %eax
 0000000000000003: 02	testl	%eax, %eax

@@ -1,6 +1,6 @@
 # 1.assume.s
 
-```asm
+```x86asm
 0000000000446c30 <BloombergLP::bdlmt::Throttle::requestPermissionIfValid(bool*, int, BloombergLP::bsls::TimeInterval const&)>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 05	movl	$4294967295, %eax

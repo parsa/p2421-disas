@@ -1,6 +1,6 @@
 # 7.none.s
 
-```asm
+```x86asm
 000000000040bf00 <BloombergLP::ball::(anonymous namespace)::bslsLogMessage(BloombergLP::bsls::LogSeverity::Enum, char const*, int, char const*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

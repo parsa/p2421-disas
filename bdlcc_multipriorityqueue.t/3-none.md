@@ -1,6 +1,6 @@
 # 3.none.s
 
-```asm
+```x86asm
 000000000042ef30 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<MULTIPRIORITYQUEUE_TEST_CASE_9::ProducerThread>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, MULTIPRIORITYQUEUE_TEST_CASE_9::ProducerThread const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

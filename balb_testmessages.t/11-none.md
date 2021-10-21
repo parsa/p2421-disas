@@ -1,6 +1,6 @@
 # 11.none.s
 
-```asm
+```x86asm
 0000000000404790 <BloombergLP::balb::Choice4::operator=(BloombergLP::balb::Choice4 const&)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

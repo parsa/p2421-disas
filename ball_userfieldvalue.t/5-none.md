@@ -1,6 +1,6 @@
 # 5.none.s
 
-```asm
+```x86asm
 0000000000404ed0 <ggg(BloombergLP::ball::UserFieldValue*, char const*, bool)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

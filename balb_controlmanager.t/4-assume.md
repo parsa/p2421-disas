@@ -1,6 +1,6 @@
 # 4.assume.s
 
-```asm
+```x86asm
 000000000040d8a0 <BloombergLP::bdlb::String::upperCaseCmp(char const*, char const*, int)>:
 0000000000000000: 02	testl	%edx, %edx
 0000000000000002: 02	je	0x40d8d4 <BloombergLP::bdlb::String::upperCaseCmp(char const*, char const*, int)+0x34>

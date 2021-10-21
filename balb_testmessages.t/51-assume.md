@@ -1,6 +1,6 @@
 # 51.assume.s
 
-```asm
+```x86asm
 000000000040b710 <BloombergLP::balb::SequenceWithAnonymityChoice::makeSelection2()>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 03	movq	%rdi, %rbx

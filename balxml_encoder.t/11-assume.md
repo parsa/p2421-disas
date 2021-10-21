@@ -1,6 +1,6 @@
 # 11.assume.s
 
-```asm
+```x86asm
 00000000004ef7c0 <BloombergLP::bdlat_TypeName_Imp::xsdName(float const*, int)>:
 0000000000000000: 04	testb	$7, %sil
 0000000000000004: 05	movl	$5637811, %ecx

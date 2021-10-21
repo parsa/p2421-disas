@@ -1,6 +1,6 @@
 # 25.assume.s
 
-```asm
+```x86asm
 0000000000420180 <BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::operator[](unsigned long) const>:
 0000000000000000: 03	movl	16(%rdi), %eax
 0000000000000003: 02	decl	%eax

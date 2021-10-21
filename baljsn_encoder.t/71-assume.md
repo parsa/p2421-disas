@@ -1,6 +1,6 @@
 # 71.assume.s
 
-```asm
+```x86asm
 00000000004cfcc0 <BloombergLP::s_baltst::SequenceWithAnonymityChoice::makeSelection2(unsigned char)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 01	pushq	%rbx

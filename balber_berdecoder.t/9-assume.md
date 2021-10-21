@@ -1,6 +1,6 @@
 # 9.assume.s
 
-```asm
+```x86asm
 000000000043af90 <int BloombergLP::balber::BerDecoder::decode<BloombergLP::s_baltst::MyChoiceWithDefaultValues>(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, BloombergLP::s_baltst::MyChoiceWithDefaultValues*)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

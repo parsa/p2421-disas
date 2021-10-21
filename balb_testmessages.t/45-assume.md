@@ -1,6 +1,6 @@
 # 45.assume.s
 
-```asm
+```x86asm
 000000000041d9f0 <BloombergLP::bdlde::Utf8Util::advanceIfValid(int*, char const**, char const*, unsigned long, long)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r14

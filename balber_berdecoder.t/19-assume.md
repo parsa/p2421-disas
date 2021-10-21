@@ -1,6 +1,6 @@
 # 19.assume.s
 
-```asm
+```x86asm
 000000000045c970 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::operator=(BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice const&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 01	pushq	%rbx

@@ -1,6 +1,6 @@
 # 2.none.s
 
-```asm
+```x86asm
 000000000040ecb0 <BloombergLP::test::MixedSequence::MixedSequence(BloombergLP::bslma::Allocator*)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

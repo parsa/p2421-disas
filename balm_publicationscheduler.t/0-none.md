@@ -1,6 +1,6 @@
 # 0.none.s
 
-```asm
+```x86asm
 0000000000406510 <Action::typeString(Action::Type)>:
 0000000000000000: 03	cmpl	$1, %edi
 0000000000000003: 05	movl	$4601127, %eax

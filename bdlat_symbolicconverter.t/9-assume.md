@@ -1,6 +1,6 @@
 # 9.assume.s
 
-```asm
+```x86asm
 000000000040f440 <int BloombergLP::bdlat_SymbolicConverter::convert<BloombergLP::test::ChoiceA, BloombergLP::test::ChoiceB>(BloombergLP::test::ChoiceA*, BloombergLP::test::ChoiceB const&)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

@@ -1,6 +1,6 @@
 # 32.none.s
 
-```asm
+```x86asm
 00000000004c9b90 <BloombergLP::bslstl::Optional_DataImp<BloombergLP::s_baltst::Choice1>::reset()>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

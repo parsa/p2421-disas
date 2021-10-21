@@ -1,6 +1,6 @@
 # 4.assume.s
 
-```asm
+```x86asm
 000000000040f990 <BloombergLP::balb::Sequence1::~Sequence1()>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

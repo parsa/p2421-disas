@@ -1,6 +1,6 @@
 # 8.assume.s
 
-```asm
+```x86asm
 00000000006490e0 <BloombergLP::bdlcc::SkipList<BloombergLP::bsls::TimeInterval, bsl::function<void ()> >::allocateNode(int, BloombergLP::bsls::TimeInterval const&, bsl::function<void ()> const&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

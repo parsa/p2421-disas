@@ -1,6 +1,6 @@
 # 9.none.s
 
-```asm
+```x86asm
 0000000000456af0 <BloombergLP::balcl::CommandLine::parse(std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

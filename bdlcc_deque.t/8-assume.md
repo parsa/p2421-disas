@@ -1,6 +1,6 @@
 # 8.assume.s
 
-```asm
+```x86asm
 00000000004bb840 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<TEST_CASE_5::StraightHWMFunctorBack>(unsigned long*, TEST_CASE_5::StraightHWMFunctorBack const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

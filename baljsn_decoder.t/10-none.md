@@ -1,6 +1,6 @@
 # 10.none.s
 
-```asm
+```x86asm
 000000000048c300 <BloombergLP::bdlde::Utf8CheckingInStreamBufWrapper::seekoff(long long, std::__1::ios_base::seekdir, unsigned int)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

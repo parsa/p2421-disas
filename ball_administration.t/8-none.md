@@ -1,6 +1,6 @@
 # 8.none.s
 
-```asm
+```x86asm
 0000000000412d40 <BloombergLP::ball::Record::~Record()>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

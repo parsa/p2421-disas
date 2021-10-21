@@ -1,6 +1,6 @@
 # 2.none.s
 
-```asm
+```x86asm
 0000000000409800 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<PingPongReader<BloombergLP::bslmt::ReaderWriterLock> >(unsigned long*, PingPongReader<BloombergLP::bslmt::ReaderWriterLock> const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

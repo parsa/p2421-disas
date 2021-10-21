@@ -1,6 +1,6 @@
 # 15.none.s
 
-```asm
+```x86asm
 000000000041b550 <BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Signed>::replaceImp(unsigned long, long)>:
 0000000000000000: 03	movl	16(%rdi), %eax
 0000000000000003: 02	decl	%eax

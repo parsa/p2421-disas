@@ -1,6 +1,6 @@
 # 33.none.s
 
-```asm
+```x86asm
 000000000040c950 <BloombergLP::bdlt::Calendar::addHoliday(BloombergLP::bdlt::Date const&)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

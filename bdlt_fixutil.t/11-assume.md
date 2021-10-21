@@ -1,6 +1,6 @@
 # 11.assume.s
 
-```asm
+```x86asm
 0000000000439a80 <BloombergLP::bdlt::FixUtil::generateRaw(char*, BloombergLP::bdlt::Date const&, BloombergLP::bdlt::FixUtilConfiguration const&)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

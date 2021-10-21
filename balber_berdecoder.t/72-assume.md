@@ -1,6 +1,6 @@
 # 72.assume.s
 
-```asm
+```x86asm
 00000000004688d0 <BloombergLP::bdlt::Iso8601Util::parse(BloombergLP::bdlt::Time*, char const*, int)>:
 0000000000000000: 05	movl	$4294967295, %eax
 0000000000000005: 03	cmpl	$8, %edx

@@ -1,6 +1,6 @@
 # 69.none.s
 
-```asm
+```x86asm
 00000000004b9550 <BloombergLP::s_baltst::Choice3::makeSelection2(unsigned char)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 01	pushq	%rbx

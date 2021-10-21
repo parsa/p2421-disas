@@ -1,6 +1,6 @@
 # 51.assume.s
 
-```asm
+```x86asm
 00000000004b6700 <BloombergLP::s_baltst::MySequenceWithChoiceChoice::selectionName() const>:
 0000000000000000: 04	cmpl	$0, 4(%rdi)
 0000000000000004: 02	je	0x4b670c <BloombergLP::s_baltst::MySequenceWithChoiceChoice::selectionName() const+0xc>

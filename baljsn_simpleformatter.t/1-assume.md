@@ -1,6 +1,6 @@
 # 1.assume.s
 
-```asm
+```x86asm
 0000000000425540 <void testPutValue<BloombergLP::bdlt::DateTz>(int, int, int, int, int, BloombergLP::bdlt::DateTz const&, BloombergLP::baljsn::EncoderOptions const*, bool)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

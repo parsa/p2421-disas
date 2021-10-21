@@ -1,6 +1,6 @@
 # 16.assume.s
 
-```asm
+```x86asm
 0000000000429fa0 <void testCase04<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >()>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

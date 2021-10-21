@@ -1,6 +1,6 @@
 # 7.assume.s
 
-```asm
+```x86asm
 0000000000478d80 <BloombergLP::balxml::Decoder_PushParserContext<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::balxml::Base64Parser<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::addCharacters(char const*, unsigned long, BloombergLP::balxml::Decoder*)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

@@ -1,6 +1,6 @@
 # 0.none.s
 
-```asm
+```x86asm
 0000000000434b40 <BloombergLP::bdlmt::MultiQueueThreadPool::pauseQueue(int)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

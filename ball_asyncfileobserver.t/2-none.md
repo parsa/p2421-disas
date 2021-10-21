@@ -1,6 +1,6 @@
 # 2.none.s
 
-```asm
+```x86asm
 000000000042e420 <BloombergLP::ball::AsyncFileObserver::startPublicationThread()>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r14

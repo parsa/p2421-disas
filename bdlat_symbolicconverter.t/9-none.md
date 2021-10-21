@@ -1,6 +1,6 @@
 # 9.none.s
 
-```asm
+```x86asm
 000000000040f4a0 <int BloombergLP::bdlat_SymbolicConverter::convert<BloombergLP::test::ChoiceA, BloombergLP::test::ChoiceB>(BloombergLP::test::ChoiceA*, BloombergLP::test::ChoiceB const&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r14

@@ -1,6 +1,6 @@
 # 2.assume.s
 
-```asm
+```x86asm
 0000000000649be0 <BloombergLP::bdlcc::SkipList_Control::incrementRefCount()>:
 0000000000000000: 02	movl	(%rdi), %esi
 0000000000000002: 03	leal	1(%rsi), %ecx

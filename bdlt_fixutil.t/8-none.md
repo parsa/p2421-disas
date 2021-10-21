@@ -1,6 +1,6 @@
 # 8.none.s
 
-```asm
+```x86asm
 000000000043b3d0 <BloombergLP::bdlt::FixUtil::generate(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >*, BloombergLP::bdlt::Date const&, BloombergLP::bdlt::FixUtilConfiguration const&)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

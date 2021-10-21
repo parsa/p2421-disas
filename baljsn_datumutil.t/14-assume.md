@@ -1,6 +1,6 @@
 # 14.assume.s
 
-```asm
+```x86asm
 0000000000443490 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

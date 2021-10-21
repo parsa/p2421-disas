@@ -1,6 +1,6 @@
 # 5.assume.s
 
-```asm
+```x86asm
 000000000042aeb0 <int BloombergLP::bdlpcre::RegEx::matchImp<BloombergLP::bdlpcre::(anonymous namespace)::DataExtractor<std::__1::basic_string_view<char, std::__1::char_traits<char> > > >(BloombergLP::bdlpcre::(anonymous namespace)::DataExtractor<std::__1::basic_string_view<char, std::__1::char_traits<char> > > const&, char const*, unsigned long, unsigned long, bool) const>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

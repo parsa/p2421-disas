@@ -1,6 +1,6 @@
 # 5.none.s
 
-```asm
+```x86asm
 0000000000410470 <BloombergLP::bslstl::Function_Rep::allocateBuf(unsigned long)>:
 0000000000000000: 04	cmpq	$49, %rsi
 0000000000000004: 02	jb	0x410497 <BloombergLP::bslstl::Function_Rep::allocateBuf(unsigned long)+0x27>

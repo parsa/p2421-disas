@@ -1,6 +1,6 @@
 # 46.none.s
 
-```asm
+```x86asm
 0000000000415270 <bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::~vector()>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

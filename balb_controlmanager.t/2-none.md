@@ -1,6 +1,6 @@
 # 2.none.s
 
-```asm
+```x86asm
 000000000040d090 <BloombergLP::bdlb::String::lowerCaseCmp(char const*, char const*, int)>:
 0000000000000000: 02	testl	%edx, %edx
 0000000000000002: 02	jle	0x40d0c4 <BloombergLP::bdlb::String::lowerCaseCmp(char const*, char const*, int)+0x34>

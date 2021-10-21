@@ -1,6 +1,6 @@
 # 60.assume.s
 
-```asm
+```x86asm
 00000000004bb610 <BloombergLP::s_baltst::Sequence1::operator=(BloombergLP::s_baltst::Sequence1&&)>:
 0000000000000000: 02	pushq	%r14
 0000000000000002: 01	pushq	%rbx

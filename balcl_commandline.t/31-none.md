@@ -1,6 +1,6 @@
 # 31.none.s
 
-```asm
+```x86asm
 000000000046fa40 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<BloombergLP::bdlt::Time, bsl::function<bool (BloombergLP::bdlt::Time const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 17>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

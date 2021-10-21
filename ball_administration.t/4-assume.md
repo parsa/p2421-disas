@@ -1,6 +1,6 @@
 # 4.assume.s
 
-```asm
+```x86asm
 0000000000414810 <BloombergLP::ball::Observer::publish(BloombergLP::ball::Record const&, BloombergLP::ball::Context const&)>:
 0000000000000000: 03	movq	(%rsi), %rsi
 0000000000000003: 03	movq	(%rdi), %rax

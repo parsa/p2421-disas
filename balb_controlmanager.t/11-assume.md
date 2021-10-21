@@ -1,6 +1,6 @@
 # 11.assume.s
 
-```asm
+```x86asm
 000000000040d320 <BloombergLP::bdlb::String::rtrim(char const*, int*)>:
 0000000000000000: 02	movl	(%rsi), %eax
 0000000000000002: 03	testq	%rax, %rax

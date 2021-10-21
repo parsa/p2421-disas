@@ -1,6 +1,6 @@
 # 2.assume.s
 
-```asm
+```x86asm
 0000000000412030 <bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >::push_back(BloombergLP::ball::ManagedAttribute&&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

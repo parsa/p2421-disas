@@ -1,6 +1,6 @@
 # 5.assume.s
 
-```asm
+```x86asm
 000000000040f5f0 <BloombergLP::balb::Sequence1::Sequence1(BloombergLP::balb::Sequence1 const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

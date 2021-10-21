@@ -1,6 +1,6 @@
 # 36.none.s
 
-```asm
+```x86asm
 0000000000473000 <BloombergLP::bdlb::TokenizerIterator::TokenizerIterator(char const*, char const*, BloombergLP::bdlb::Tokenizer_Data const*)>:
 0000000000000000: 03	movq	%rcx, (%rdi)
 0000000000000003: 04	movq	%rsi, 8(%rdi)

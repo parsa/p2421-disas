@@ -1,6 +1,6 @@
 # 0.assume.s
 
-```asm
+```x86asm
 000000000042b180 <localForkExec(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

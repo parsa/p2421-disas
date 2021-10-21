@@ -1,6 +1,6 @@
 # 0.assume.s
 
-```asm
+```x86asm
 0000000000451390 <int loadWeekendDaysTransition<BloombergLP::bdlt::Calendar>(char const**, BloombergLP::bdlt::Calendar*, BloombergLP::bdlt::Date const&)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

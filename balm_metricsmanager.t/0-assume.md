@@ -1,6 +1,6 @@
 # 0.assume.s
 
-```asm
+```x86asm
 000000000042b4a0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::MemFnInstance<void (LockAndModifyWorker::*)(), LockAndModifyWorker*> >(unsigned long*, BloombergLP::bdlf::MemFnInstance<void (LockAndModifyWorker::*)(), LockAndModifyWorker*> const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

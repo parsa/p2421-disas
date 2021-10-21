@@ -1,6 +1,6 @@
 # 0.none.s
 
-```asm
+```x86asm
 0000000000412f50 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

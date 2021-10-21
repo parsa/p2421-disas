@@ -1,6 +1,6 @@
 # 11.none.s
 
-```asm
+```x86asm
 0000000000437540 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::SkipList<int, (anonymous namespace)::u::CountedDelete>*, int), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::SkipList<int, (anonymous namespace)::u::CountedDelete>*, int> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::SkipList<int, (anonymous namespace)::u::CountedDelete>*, int), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::SkipList<int, (anonymous namespace)::u::CountedDelete>*, int> > const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

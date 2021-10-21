@@ -1,6 +1,6 @@
 # 1.none.s
 
-```asm
+```x86asm
 0000000000408de0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<WaitTurnCallbackJob>(unsigned long*, WaitTurnCallbackJob const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

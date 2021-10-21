@@ -1,6 +1,6 @@
 # 1.assume.s
 
-```asm
+```x86asm
 000000000041cb70 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

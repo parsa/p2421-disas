@@ -1,6 +1,6 @@
 # 0.assume.s
 
-```asm
+```x86asm
 00000000004018e0 <find1AtMaxOracle(unsigned long)>:
 0000000000000000: 05	movl	$60, %eax
 0000000000000005: 10	nopw	%cs:(%rax,%rax)

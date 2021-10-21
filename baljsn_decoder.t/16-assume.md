@@ -1,6 +1,6 @@
 # 16.assume.s
 
-```asm
+```x86asm
 0000000000452a40 <int BloombergLP::balb::Choice1::manipulateSelection<BloombergLP::baljsn::Decoder_ElementVisitor>(BloombergLP::baljsn::Decoder_ElementVisitor&)>:
 0000000000000000: 02	pushq	%r14
 0000000000000002: 01	pushq	%rbx

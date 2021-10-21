@@ -1,6 +1,6 @@
 # 11.none.s
 
-```asm
+```x86asm
 000000000044bcb0 <BloombergLP::bdld::operator==(BloombergLP::bdld::Datum const&, BloombergLP::bdld::Datum const&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

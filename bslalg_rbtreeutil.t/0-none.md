@@ -1,6 +1,6 @@
 # 0.none.s
 
-```asm
+```x86asm
 000000000040ea40 <void gg<IntNode, void (*)(IntNode*, int)>(BloombergLP::bslalg::RbTreeAnchor*, Array<IntNode, bsl::allocator<IntNode> >*, char const*, void (* const&)(IntNode*, int))>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

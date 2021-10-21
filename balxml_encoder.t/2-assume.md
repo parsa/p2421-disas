@@ -1,6 +1,6 @@
 # 2.assume.s
 
-```asm
+```x86asm
 00000000004e13a0 <int BloombergLP::balxml::Encoder_EncodeValue::executeImp<BloombergLP::s_baltst::MySequenceWithAttributes>(BloombergLP::s_baltst::MySequenceWithAttributes const&, int, BloombergLP::bdlat_TypeCategory::Sequence)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

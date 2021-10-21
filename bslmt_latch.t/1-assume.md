@@ -1,6 +1,6 @@
 # 1.assume.s
 
-```asm
+```x86asm
 00000000004096b0 <int BloombergLP::bslmt::ChronoUtil::timedWait<BloombergLP::bslmt::Latch, AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > >(BloombergLP::bslmt::Latch*, std::__1::chrono::time_point<AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > > const&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

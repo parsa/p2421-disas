@@ -1,6 +1,6 @@
 # 6.none.s
 
-```asm
+```x86asm
 00000000004eff10 <BloombergLP::bdlat_TypeName_Imp::xsdName(short const*, int)>:
 0000000000000000: 03	andl	$7, %esi
 0000000000000003: 03	cmpl	$4, %esi

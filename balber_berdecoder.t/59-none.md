@@ -1,6 +1,6 @@
 # 59.none.s
 
-```asm
+```x86asm
 000000000044de50 <int BloombergLP::balber::BerUtil_IntegerImpUtil::putIntegerValue<long>(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, long)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

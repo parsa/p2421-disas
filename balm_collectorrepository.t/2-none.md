@@ -1,6 +1,6 @@
 # 2.none.s
 
-```asm
+```x86asm
 000000000041ba20 <BloombergLP::balm::MetricRegistry::setCurrentUserData(char const*, int, void const*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

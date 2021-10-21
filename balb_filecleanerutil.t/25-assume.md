@@ -1,6 +1,6 @@
 # 25.assume.s
 
-```asm
+```x86asm
 0000000000414570 <BloombergLP::bdlt::DatetimeInterval::printToBuffer(char*, int, int) const>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

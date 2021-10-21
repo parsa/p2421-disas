@@ -1,6 +1,6 @@
 # 0.none.s
 
-```asm
+```x86asm
 0000000000442310 <int BloombergLP::balber::BerEncoder::encode<unsigned int>(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, unsigned int const&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

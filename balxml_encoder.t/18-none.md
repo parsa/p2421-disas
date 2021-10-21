@@ -1,6 +1,6 @@
 # 18.none.s
 
-```asm
+```x86asm
 00000000004effc0 <BloombergLP::bdlat_TypeName_Imp::xsdName(bsl::vector<short, bsl::allocator<short> > const*, int)>:
 0000000000000000: 03	andl	$7, %esi
 0000000000000003: 02	xorl	%eax, %eax
