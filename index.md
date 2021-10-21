@@ -15,7 +15,7 @@
 | [`balcl_optionvalue.t`](balcl_optionvalue.t) | -12 | -32 |
 | [`balcl_typeinfo.t`](balcl_typeinfo.t) | -41 | -144 |
 | [`baljsn_datumencoderoptions.t`](baljsn_datumencoderoptions.t) | -2 | 0 |
-| [`baljsn_datumutil.t`](baljsn_datumutil.t) | -390 | -1328 |
+| [`baljsn_datumutil.t`](baljsn_datumutil.t) | -390 | -1,328 |
 | [`baljsn_decoder.t`](baljsn_decoder.t) | -73 | -192 |
 | [`baljsn_encoder.t`](baljsn_encoder.t) | -87 | 272 |
 | [`baljsn_formatter.t`](baljsn_formatter.t) | 24 | 96 |
@@ -24,8 +24,8 @@
 | [`ball_asyncfileobserver.t`](ball_asyncfileobserver.t) | 48 | 224 |
 | [`ball_attribute.t`](ball_attribute.t) | -3 | -32 |
 | [`ball_attributecollectorregistry.t`](ball_attributecollectorregistry.t) | -33 | -128 |
-| [`ball_attributecontainerlist.t`](ball_attributecontainerlist.t) | -276 | -1232 |
-| [`ball_attributecontext.t`](ball_attributecontext.t) | 1156 | 5136 |
+| [`ball_attributecontainerlist.t`](ball_attributecontainerlist.t) | -276 | -1,232 |
+| [`ball_attributecontext.t`](ball_attributecontext.t) | 1,156 | 5,136 |
 | [`ball_broadcastobserver.t`](ball_broadcastobserver.t) | -174 | -528 |
 | [`ball_defaultattributecontainer.t`](ball_defaultattributecontainer.t) | -136 | -608 |
 | [`ball_fileobserver2.t`](ball_fileobserver2.t) | -68 | -208 |
@@ -126,7 +126,7 @@
 | [`bslmt_semaphore.t`](bslmt_semaphore.t) | -7 | -32 |
 | [`bslmt_sluice.t`](bslmt_sluice.t) | -51 | -224 |
 | [`bslmt_threadgroup.t`](bslmt_threadgroup.t) | -15 | -48 |
-| [`bslmt_threadutil.t`](bslmt_threadutil.t) | -451 | -1216 |
+| [`bslmt_threadutil.t`](bslmt_threadutil.t) | -451 | -1,216 |
 | [`bslmt_timedsemaphoreimpl_posixadv.t`](bslmt_timedsemaphoreimpl_posixadv.t) | -19 | -48 |
 | [`bslmt_turnstile.t`](bslmt_turnstile.t) | -13 | -48 |
 | [`bsls_exceptionutil.t`](bsls_exceptionutil.t) | -3 | 0 |
