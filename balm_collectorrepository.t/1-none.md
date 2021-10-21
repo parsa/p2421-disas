@@ -2,200 +2,200 @@
 
 ```nasm
 000000000041cb80 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 02	pushq	%r13
-0000000000000007: 02	pushq	%r12
-0000000000000009: 01	pushq	%rbx
-000000000000000a: 04	subq	$88, %rsp
-000000000000000e: 05	movl	%r8d, 36(%rsp)
-0000000000000013: 05	movq	%rcx, 24(%rsp)
-0000000000000018: 03	movl	%edx, %r12d
-000000000000001b: 03	movq	%rsi, %rbp
-000000000000001e: 03	movq	%rdi, %r13
-0000000000000021: 07	leaq	336(%rdi), %r15
-0000000000000028: 03	movq	%r15, %rdi
-000000000000002b: 05	callq	0x4043f0 <pthread_rwlock_wrlock@plt>
-0000000000000030: 07	movq	2417249(%rip), %rax  # 66ae18 <BloombergLP::bslma::Default::s_defaultAllocator>
-0000000000000037: 03	testq	%rax, %rax
-000000000000003a: 02	jne	0x41cbc1 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x41>
-000000000000003c: 05	callq	0x424600 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-0000000000000041: 09	movq	$0, 40(%rsp)
-000000000000004a: 09	movq	$23, 72(%rsp)
-0000000000000053: 05	movq	%rax, 80(%rsp)
-0000000000000058: 03	movq	%rbp, %rdi
-000000000000005b: 05	callq	0x403fc0 <strlen@plt>
-0000000000000060: 09	movq	$0, 64(%rsp)
-0000000000000069: 05	leaq	40(%rsp), %rdi
-000000000000006e: 05	movl	$4510944, %ecx
-0000000000000073: 03	movq	%rbp, %rsi
-0000000000000076: 03	movq	%rax, %rdx
-0000000000000079: 05	callq	0x428760 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-000000000000007e: 04	leaq	32(%r13), %rbp
-0000000000000082: 05	leaq	20(%rsp), %rdi
-0000000000000087: 05	leaq	40(%rsp), %rcx
-000000000000008c: 03	movq	%rbp, %rsi
-000000000000008f: 03	movq	%r13, %rdx
-0000000000000092: 05	callq	0x41db00 <BloombergLP::bslalg::RbTreeNode* BloombergLP::bslalg::RbTreeUtil::findUniqueInsertLocation<BloombergLP::bslstl::SetComparator<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(int*, BloombergLP::bslalg::RbTreeAnchor*, BloombergLP::bslstl::SetComparator<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)>
-0000000000000097: 03	movq	%rax, %r14
-000000000000009a: 05	cmpl	$0, 20(%rsp)
-000000000000009f: 02	je	0x41cc49 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0xc9>
-00000000000000a1: 05	leaq	40(%rsp), %rsi
-00000000000000a6: 03	movq	%r13, %rdi
-00000000000000a9: 05	callq	0x41dc70 <BloombergLP::bslalg::RbTreeNode* BloombergLP::bslstl::TreeNodePool<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::allocator<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::emplaceIntoNewNode<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >&&)>
-00000000000000ae: 03	movq	%rax, %rbx
-00000000000000b1: 04	movl	20(%rsp), %edx
-00000000000000b5: 03	shrl	$31, %edx
-00000000000000b8: 03	movq	%rbp, %rdi
-00000000000000bb: 03	movq	%r14, %rsi
-00000000000000be: 03	movq	%rax, %rcx
-00000000000000c1: 05	callq	0x422ed0 <BloombergLP::bslalg::RbTreeUtil::insertAt(BloombergLP::bslalg::RbTreeAnchor*, BloombergLP::bslalg::RbTreeNode*, bool, BloombergLP::bslalg::RbTreeNode*)>
-00000000000000c6: 03	movq	%rbx, %r14
-00000000000000c9: 04	leaq	24(%r14), %rbx
-00000000000000cd: 05	cmpq	$23, 56(%r14)
-00000000000000d2: 02	je	0x41cc57 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0xd7>
-00000000000000d4: 03	movq	(%rbx), %rbx
-00000000000000d7: 06	cmpq	$23, 72(%rsp)
-00000000000000dd: 02	je	0x41cc6f <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0xef>
-00000000000000df: 05	movq	40(%rsp), %rsi
-00000000000000e4: 05	movq	80(%rsp), %rdi
-00000000000000e9: 03	movq	(%rdi), %rax
-00000000000000ec: 03	callq	*24(%rax)
-00000000000000ef: 05	movq	%rbx, 8(%rsp)
-00000000000000f4: 05	cmpb	$0, 36(%rsp)
-00000000000000f9: 06	je	0x41cd9c <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x21c>
-00000000000000ff: 07	leaq	264(%r13), %rdi
-0000000000000106: 05	leaq	8(%rsp), %rsi
-000000000000010b: 04	movq	%r15, (%rsp)
-000000000000010f: 05	callq	0x41d5e0 <bsl::map<char const*, bsl::vector<void const*, bsl::allocator<void const*> >, BloombergLP::bdlb::CStringLess, bsl::allocator<bsl::pair<char const* const, bsl::vector<void const*, bsl::allocator<void const*> > > > >::operator[](char const* const&)>
-0000000000000114: 03	movq	%rax, %rbp
-0000000000000117: 03	movq	(%rax), %rcx
-000000000000011a: 04	movq	8(%rax), %rax
-000000000000011e: 03	subq	%rcx, %rax
-0000000000000121: 04	sarq	$3, %rax
-0000000000000125: 03	movl	%r12d, %edx
-0000000000000128: 03	cmpq	%rdx, %rax
-000000000000012b: 02	ja	0x41cccf <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x14f>
-000000000000012d: 05	leal	1(%r12), %eax
-0000000000000132: 03	movslq	%eax, %rsi
-0000000000000135: 09	movq	$0, 40(%rsp)
-000000000000013e: 05	leaq	40(%rsp), %rdx
-0000000000000143: 03	movq	%rbp, %rdi
-0000000000000146: 05	callq	0x43e090 <bsl::vector<unsigned long, bsl::allocator<unsigned long> >::resize(unsigned long, unsigned long const&)>
-000000000000014b: 04	movq	(%rbp), %rcx
-000000000000014f: 03	movslq	%r12d, %rax
-0000000000000152: 05	movq	24(%rsp), %rdx
-0000000000000157: 04	movq	%rdx, (%rcx,%rax,8)
-000000000000015b: 04	leaq	96(%r13), %r14
-000000000000015f: 04	movq	104(%r13), %r15
-0000000000000163: 03	movq	%r14, %rbp
-0000000000000166: 03	testq	%r15, %r15
-0000000000000169: 02	je	0x41cd1f <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x19f>
-000000000000016b: 05	movq	8(%rsp), %rbx
-0000000000000170: 03	movq	%r14, %rbp
-0000000000000173: 10	nopw	%cs:(%rax,%rax)
-000000000000017d: 03	nopl	(%rax)
-0000000000000180: 04	movq	24(%r15), %rdi
-0000000000000184: 03	movq	%rbx, %rsi
-0000000000000187: 05	callq	0x4042b0 <strcmp@plt>
-000000000000018c: 02	testl	%eax, %eax
-000000000000018e: 04	cmovnsq	%r15, %rbp
-0000000000000192: 03	shrl	$31, %eax
-0000000000000195: 05	movq	8(%r15,%rax,8), %r15
-000000000000019a: 03	testq	%r15, %r15
-000000000000019d: 02	jne	0x41cd00 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x180>
-000000000000019f: 04	movq	(%rsp), %r15
-00000000000001a3: 10	nopw	%cs:(%rax,%rax)
-00000000000001ad: 03	nopl	(%rax)
-00000000000001b0: 03	cmpq	%r14, %rbp
-00000000000001b3: 06	je	0x41ce04 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x284>
-00000000000001b9: 05	movq	8(%rsp), %rax
-00000000000001be: 04	movq	24(%rbp), %rsi
-00000000000001c2: 02	movb	(%rax), %dl
-00000000000001c4: 02	testb	%dl, %dl
-00000000000001c6: 03	sete	%cl
-00000000000001c9: 02	je	0x41cd77 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x1f7>
-00000000000001cb: 02	cmpb	(%rsi), %dl
-00000000000001cd: 02	jne	0x41cd77 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x1f7>
-00000000000001cf: 05	movl	$1, %edx
-00000000000001d4: 10	nopw	%cs:(%rax,%rax)
-00000000000001de: 02	nop	
-00000000000001e0: 04	movzbl	(%rax,%rdx), %ebx
-00000000000001e4: 02	testb	%bl, %bl
-00000000000001e6: 03	sete	%cl
-00000000000001e9: 02	je	0x41cd77 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x1f7>
-00000000000001eb: 04	leaq	1(%rdx), %rdi
-00000000000001ef: 03	cmpb	(%rsi,%rdx), %bl
-00000000000001f2: 03	movq	%rdi, %rdx
-00000000000001f5: 02	je	0x41cd60 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x1e0>
-00000000000001f7: 02	testb	%cl, %cl
-00000000000001f9: 06	je	0x41ce04 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x284>
-00000000000001ff: 03	movq	%r13, %rdi
-0000000000000202: 03	movl	%r12d, %edx
-0000000000000205: 05	movq	24(%rsp), %rcx
-000000000000020a: 05	callq	0x41ba20 <BloombergLP::balm::MetricRegistry::setCurrentUserData(char const*, int, void const*)>
-000000000000020f: 03	movq	%rbp, %rdi
-0000000000000212: 05	callq	0x422e30 <BloombergLP::bslalg::RbTreeUtil::next(BloombergLP::bslalg::RbTreeNode const*)>
-0000000000000217: 03	movq	%rax, %rbp
-000000000000021a: 02	jmp	0x41cd30 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x1b0>
-000000000000021c: 07	leaq	200(%r13), %rdi
-0000000000000223: 05	leaq	8(%rsp), %rsi
-0000000000000228: 05	callq	0x41d5e0 <bsl::map<char const*, bsl::vector<void const*, bsl::allocator<void const*> >, BloombergLP::bdlb::CStringLess, bsl::allocator<bsl::pair<char const* const, bsl::vector<void const*, bsl::allocator<void const*> > > > >::operator[](char const* const&)>
-000000000000022d: 03	movq	%rax, %rbp
-0000000000000230: 03	movq	(%rax), %rsi
-0000000000000233: 04	movq	8(%rax), %rax
-0000000000000237: 03	subq	%rsi, %rax
-000000000000023a: 04	sarq	$3, %rax
-000000000000023e: 03	movl	%r12d, %edx
-0000000000000241: 03	cmpq	%rdx, %rax
-0000000000000244: 02	ja	0x41cde8 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x268>
-0000000000000246: 05	leal	1(%r12), %eax
-000000000000024b: 03	movslq	%eax, %rsi
-000000000000024e: 09	movq	$0, 40(%rsp)
-0000000000000257: 05	leaq	40(%rsp), %rdx
-000000000000025c: 03	movq	%rbp, %rdi
-000000000000025f: 05	callq	0x43e090 <bsl::vector<unsigned long, bsl::allocator<unsigned long> >::resize(unsigned long, unsigned long const&)>
-0000000000000264: 04	movq	(%rbp), %rsi
-0000000000000268: 03	movslq	%r12d, %rax
-000000000000026b: 05	movq	24(%rsp), %rcx
-0000000000000270: 04	movq	%rcx, (%rsi,%rax,8)
-0000000000000274: 05	movq	8(%rsp), %rsi
-0000000000000279: 03	movq	%r13, %rdi
-000000000000027c: 03	movl	%r12d, %edx
-000000000000027f: 05	callq	0x41ba20 <BloombergLP::balm::MetricRegistry::setCurrentUserData(char const*, int, void const*)>
-0000000000000284: 03	movq	%r15, %rdi
-0000000000000287: 05	callq	0x4044d0 <pthread_rwlock_unlock@plt>
-000000000000028c: 04	addq	$88, %rsp
-0000000000000290: 01	popq	%rbx
-0000000000000291: 02	popq	%r12
-0000000000000293: 02	popq	%r13
-0000000000000295: 02	popq	%r14
-0000000000000297: 02	popq	%r15
-0000000000000299: 01	popq	%rbp
-000000000000029a: 01	retq	
-000000000000029b: 02	jmp	0x41ce29 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x2a9>
-000000000000029d: 03	movq	%rax, %rdi
-00000000000002a0: 05	callq	0x413be0 <__clang_call_terminate>
-00000000000002a5: 02	jmp	0x41ce58 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x2d8>
-00000000000002a7: 02	jmp	0x41ce29 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x2a9>
-00000000000002a9: 04	movq	%r15, (%rsp)
-00000000000002ad: 02	jmp	0x41ce58 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x2d8>
-00000000000002af: 04	movq	%r15, (%rsp)
-00000000000002b3: 03	movq	%rax, %rbx
-00000000000002b6: 06	cmpq	$23, 72(%rsp)
-00000000000002bc: 02	je	0x41ce5b <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x2db>
-00000000000002be: 05	movq	40(%rsp), %rsi
-00000000000002c3: 05	movq	80(%rsp), %rdi
-00000000000002c8: 03	movq	(%rdi), %rax
-00000000000002cb: 03	callq	*24(%rax)
-00000000000002ce: 02	jmp	0x41ce5b <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x2db>
-00000000000002d0: 03	movq	%rax, %rdi
-00000000000002d3: 05	callq	0x413be0 <__clang_call_terminate>
-00000000000002d8: 03	movq	%rax, %rbx
-00000000000002db: 04	movq	(%rsp), %rdi
-00000000000002df: 05	callq	0x4044d0 <pthread_rwlock_unlock@plt>
-00000000000002e4: 03	movq	%rbx, %rdi
-00000000000002e7: 05	callq	0x404560 <_Unwind_Resume@plt>
-00000000000002ec: 04	nopl	(%rax)
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%r13	;  2 bytes
+M0000000000000007:	pushq	%r12	;  2 bytes
+M0000000000000009:	pushq	%rbx	;  1 bytes
+M000000000000000a:	subq	$88, %rsp	;  4 bytes
+M000000000000000e:	movl	%r8d, 36(%rsp)	;  5 bytes
+M0000000000000013:	movq	%rcx, 24(%rsp)	;  5 bytes
+M0000000000000018:	movl	%edx, %r12d	;  3 bytes
+M000000000000001b:	movq	%rsi, %rbp	;  3 bytes
+M000000000000001e:	movq	%rdi, %r13	;  3 bytes
+M0000000000000021:	leaq	336(%rdi), %r15	;  7 bytes
+M0000000000000028:	movq	%r15, %rdi	;  3 bytes
+M000000000000002b:	callq	0x4043f0 <pthread_rwlock_wrlock@plt>	;  5 bytes
+M0000000000000030:	movq	2417249(%rip), %rax  # 66ae18 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M0000000000000037:	testq	%rax, %rax	;  3 bytes
+M000000000000003a:	jne	0x41cbc1 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x41>	;  2 bytes
+M000000000000003c:	callq	0x424600 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M0000000000000041:	movq	$0, 40(%rsp)	;  9 bytes
+M000000000000004a:	movq	$23, 72(%rsp)	;  9 bytes
+M0000000000000053:	movq	%rax, 80(%rsp)	;  5 bytes
+M0000000000000058:	movq	%rbp, %rdi	;  3 bytes
+M000000000000005b:	callq	0x403fc0 <strlen@plt>	;  5 bytes
+M0000000000000060:	movq	$0, 64(%rsp)	;  9 bytes
+M0000000000000069:	leaq	40(%rsp), %rdi	;  5 bytes
+M000000000000006e:	movl	$4510944, %ecx	;  5 bytes
+M0000000000000073:	movq	%rbp, %rsi	;  3 bytes
+M0000000000000076:	movq	%rax, %rdx	;  3 bytes
+M0000000000000079:	callq	0x428760 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M000000000000007e:	leaq	32(%r13), %rbp	;  4 bytes
+M0000000000000082:	leaq	20(%rsp), %rdi	;  5 bytes
+M0000000000000087:	leaq	40(%rsp), %rcx	;  5 bytes
+M000000000000008c:	movq	%rbp, %rsi	;  3 bytes
+M000000000000008f:	movq	%r13, %rdx	;  3 bytes
+M0000000000000092:	callq	0x41db00 <BloombergLP::bslalg::RbTreeNode* BloombergLP::bslalg::RbTreeUtil::findUniqueInsertLocation<BloombergLP::bslstl::SetComparator<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(int*, BloombergLP::bslalg::RbTreeAnchor*, BloombergLP::bslstl::SetComparator<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)>	;  5 bytes
+M0000000000000097:	movq	%rax, %r14	;  3 bytes
+M000000000000009a:	cmpl	$0, 20(%rsp)	;  5 bytes
+M000000000000009f:	je	0x41cc49 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0xc9>	;  2 bytes
+M00000000000000a1:	leaq	40(%rsp), %rsi	;  5 bytes
+M00000000000000a6:	movq	%r13, %rdi	;  3 bytes
+M00000000000000a9:	callq	0x41dc70 <BloombergLP::bslalg::RbTreeNode* BloombergLP::bslstl::TreeNodePool<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::allocator<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::emplaceIntoNewNode<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >&&)>	;  5 bytes
+M00000000000000ae:	movq	%rax, %rbx	;  3 bytes
+M00000000000000b1:	movl	20(%rsp), %edx	;  4 bytes
+M00000000000000b5:	shrl	$31, %edx	;  3 bytes
+M00000000000000b8:	movq	%rbp, %rdi	;  3 bytes
+M00000000000000bb:	movq	%r14, %rsi	;  3 bytes
+M00000000000000be:	movq	%rax, %rcx	;  3 bytes
+M00000000000000c1:	callq	0x422ed0 <BloombergLP::bslalg::RbTreeUtil::insertAt(BloombergLP::bslalg::RbTreeAnchor*, BloombergLP::bslalg::RbTreeNode*, bool, BloombergLP::bslalg::RbTreeNode*)>	;  5 bytes
+M00000000000000c6:	movq	%rbx, %r14	;  3 bytes
+M00000000000000c9:	leaq	24(%r14), %rbx	;  4 bytes
+M00000000000000cd:	cmpq	$23, 56(%r14)	;  5 bytes
+M00000000000000d2:	je	0x41cc57 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0xd7>	;  2 bytes
+M00000000000000d4:	movq	(%rbx), %rbx	;  3 bytes
+M00000000000000d7:	cmpq	$23, 72(%rsp)	;  6 bytes
+M00000000000000dd:	je	0x41cc6f <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0xef>	;  2 bytes
+M00000000000000df:	movq	40(%rsp), %rsi	;  5 bytes
+M00000000000000e4:	movq	80(%rsp), %rdi	;  5 bytes
+M00000000000000e9:	movq	(%rdi), %rax	;  3 bytes
+M00000000000000ec:	callq	*24(%rax)	;  3 bytes
+M00000000000000ef:	movq	%rbx, 8(%rsp)	;  5 bytes
+M00000000000000f4:	cmpb	$0, 36(%rsp)	;  5 bytes
+M00000000000000f9:	je	0x41cd9c <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x21c>	;  6 bytes
+M00000000000000ff:	leaq	264(%r13), %rdi	;  7 bytes
+M0000000000000106:	leaq	8(%rsp), %rsi	;  5 bytes
+M000000000000010b:	movq	%r15, (%rsp)	;  4 bytes
+M000000000000010f:	callq	0x41d5e0 <bsl::map<char const*, bsl::vector<void const*, bsl::allocator<void const*> >, BloombergLP::bdlb::CStringLess, bsl::allocator<bsl::pair<char const* const, bsl::vector<void const*, bsl::allocator<void const*> > > > >::operator[](char const* const&)>	;  5 bytes
+M0000000000000114:	movq	%rax, %rbp	;  3 bytes
+M0000000000000117:	movq	(%rax), %rcx	;  3 bytes
+M000000000000011a:	movq	8(%rax), %rax	;  4 bytes
+M000000000000011e:	subq	%rcx, %rax	;  3 bytes
+M0000000000000121:	sarq	$3, %rax	;  4 bytes
+M0000000000000125:	movl	%r12d, %edx	;  3 bytes
+M0000000000000128:	cmpq	%rdx, %rax	;  3 bytes
+M000000000000012b:	ja	0x41cccf <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x14f>	;  2 bytes
+M000000000000012d:	leal	1(%r12), %eax	;  5 bytes
+M0000000000000132:	movslq	%eax, %rsi	;  3 bytes
+M0000000000000135:	movq	$0, 40(%rsp)	;  9 bytes
+M000000000000013e:	leaq	40(%rsp), %rdx	;  5 bytes
+M0000000000000143:	movq	%rbp, %rdi	;  3 bytes
+M0000000000000146:	callq	0x43e090 <bsl::vector<unsigned long, bsl::allocator<unsigned long> >::resize(unsigned long, unsigned long const&)>	;  5 bytes
+M000000000000014b:	movq	(%rbp), %rcx	;  4 bytes
+M000000000000014f:	movslq	%r12d, %rax	;  3 bytes
+M0000000000000152:	movq	24(%rsp), %rdx	;  5 bytes
+M0000000000000157:	movq	%rdx, (%rcx,%rax,8)	;  4 bytes
+M000000000000015b:	leaq	96(%r13), %r14	;  4 bytes
+M000000000000015f:	movq	104(%r13), %r15	;  4 bytes
+M0000000000000163:	movq	%r14, %rbp	;  3 bytes
+M0000000000000166:	testq	%r15, %r15	;  3 bytes
+M0000000000000169:	je	0x41cd1f <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x19f>	;  2 bytes
+M000000000000016b:	movq	8(%rsp), %rbx	;  5 bytes
+M0000000000000170:	movq	%r14, %rbp	;  3 bytes
+M0000000000000173:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000017d:	nopl	(%rax)	;  3 bytes
+M0000000000000180:	movq	24(%r15), %rdi	;  4 bytes
+M0000000000000184:	movq	%rbx, %rsi	;  3 bytes
+M0000000000000187:	callq	0x4042b0 <strcmp@plt>	;  5 bytes
+M000000000000018c:	testl	%eax, %eax	;  2 bytes
+M000000000000018e:	cmovnsq	%r15, %rbp	;  4 bytes
+M0000000000000192:	shrl	$31, %eax	;  3 bytes
+M0000000000000195:	movq	8(%r15,%rax,8), %r15	;  5 bytes
+M000000000000019a:	testq	%r15, %r15	;  3 bytes
+M000000000000019d:	jne	0x41cd00 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x180>	;  2 bytes
+M000000000000019f:	movq	(%rsp), %r15	;  4 bytes
+M00000000000001a3:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M00000000000001ad:	nopl	(%rax)	;  3 bytes
+M00000000000001b0:	cmpq	%r14, %rbp	;  3 bytes
+M00000000000001b3:	je	0x41ce04 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x284>	;  6 bytes
+M00000000000001b9:	movq	8(%rsp), %rax	;  5 bytes
+M00000000000001be:	movq	24(%rbp), %rsi	;  4 bytes
+M00000000000001c2:	movb	(%rax), %dl	;  2 bytes
+M00000000000001c4:	testb	%dl, %dl	;  2 bytes
+M00000000000001c6:	sete	%cl	;  3 bytes
+M00000000000001c9:	je	0x41cd77 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x1f7>	;  2 bytes
+M00000000000001cb:	cmpb	(%rsi), %dl	;  2 bytes
+M00000000000001cd:	jne	0x41cd77 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x1f7>	;  2 bytes
+M00000000000001cf:	movl	$1, %edx	;  5 bytes
+M00000000000001d4:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M00000000000001de:	nop		;  2 bytes
+M00000000000001e0:	movzbl	(%rax,%rdx), %ebx	;  4 bytes
+M00000000000001e4:	testb	%bl, %bl	;  2 bytes
+M00000000000001e6:	sete	%cl	;  3 bytes
+M00000000000001e9:	je	0x41cd77 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x1f7>	;  2 bytes
+M00000000000001eb:	leaq	1(%rdx), %rdi	;  4 bytes
+M00000000000001ef:	cmpb	(%rsi,%rdx), %bl	;  3 bytes
+M00000000000001f2:	movq	%rdi, %rdx	;  3 bytes
+M00000000000001f5:	je	0x41cd60 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x1e0>	;  2 bytes
+M00000000000001f7:	testb	%cl, %cl	;  2 bytes
+M00000000000001f9:	je	0x41ce04 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x284>	;  6 bytes
+M00000000000001ff:	movq	%r13, %rdi	;  3 bytes
+M0000000000000202:	movl	%r12d, %edx	;  3 bytes
+M0000000000000205:	movq	24(%rsp), %rcx	;  5 bytes
+M000000000000020a:	callq	0x41ba20 <BloombergLP::balm::MetricRegistry::setCurrentUserData(char const*, int, void const*)>	;  5 bytes
+M000000000000020f:	movq	%rbp, %rdi	;  3 bytes
+M0000000000000212:	callq	0x422e30 <BloombergLP::bslalg::RbTreeUtil::next(BloombergLP::bslalg::RbTreeNode const*)>	;  5 bytes
+M0000000000000217:	movq	%rax, %rbp	;  3 bytes
+M000000000000021a:	jmp	0x41cd30 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x1b0>	;  2 bytes
+M000000000000021c:	leaq	200(%r13), %rdi	;  7 bytes
+M0000000000000223:	leaq	8(%rsp), %rsi	;  5 bytes
+M0000000000000228:	callq	0x41d5e0 <bsl::map<char const*, bsl::vector<void const*, bsl::allocator<void const*> >, BloombergLP::bdlb::CStringLess, bsl::allocator<bsl::pair<char const* const, bsl::vector<void const*, bsl::allocator<void const*> > > > >::operator[](char const* const&)>	;  5 bytes
+M000000000000022d:	movq	%rax, %rbp	;  3 bytes
+M0000000000000230:	movq	(%rax), %rsi	;  3 bytes
+M0000000000000233:	movq	8(%rax), %rax	;  4 bytes
+M0000000000000237:	subq	%rsi, %rax	;  3 bytes
+M000000000000023a:	sarq	$3, %rax	;  4 bytes
+M000000000000023e:	movl	%r12d, %edx	;  3 bytes
+M0000000000000241:	cmpq	%rdx, %rax	;  3 bytes
+M0000000000000244:	ja	0x41cde8 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x268>	;  2 bytes
+M0000000000000246:	leal	1(%r12), %eax	;  5 bytes
+M000000000000024b:	movslq	%eax, %rsi	;  3 bytes
+M000000000000024e:	movq	$0, 40(%rsp)	;  9 bytes
+M0000000000000257:	leaq	40(%rsp), %rdx	;  5 bytes
+M000000000000025c:	movq	%rbp, %rdi	;  3 bytes
+M000000000000025f:	callq	0x43e090 <bsl::vector<unsigned long, bsl::allocator<unsigned long> >::resize(unsigned long, unsigned long const&)>	;  5 bytes
+M0000000000000264:	movq	(%rbp), %rsi	;  4 bytes
+M0000000000000268:	movslq	%r12d, %rax	;  3 bytes
+M000000000000026b:	movq	24(%rsp), %rcx	;  5 bytes
+M0000000000000270:	movq	%rcx, (%rsi,%rax,8)	;  4 bytes
+M0000000000000274:	movq	8(%rsp), %rsi	;  5 bytes
+M0000000000000279:	movq	%r13, %rdi	;  3 bytes
+M000000000000027c:	movl	%r12d, %edx	;  3 bytes
+M000000000000027f:	callq	0x41ba20 <BloombergLP::balm::MetricRegistry::setCurrentUserData(char const*, int, void const*)>	;  5 bytes
+M0000000000000284:	movq	%r15, %rdi	;  3 bytes
+M0000000000000287:	callq	0x4044d0 <pthread_rwlock_unlock@plt>	;  5 bytes
+M000000000000028c:	addq	$88, %rsp	;  4 bytes
+M0000000000000290:	popq	%rbx	;  1 bytes
+M0000000000000291:	popq	%r12	;  2 bytes
+M0000000000000293:	popq	%r13	;  2 bytes
+M0000000000000295:	popq	%r14	;  2 bytes
+M0000000000000297:	popq	%r15	;  2 bytes
+M0000000000000299:	popq	%rbp	;  1 bytes
+M000000000000029a:	retq		;  1 bytes
+M000000000000029b:	jmp	0x41ce29 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x2a9>	;  2 bytes
+M000000000000029d:	movq	%rax, %rdi	;  3 bytes
+M00000000000002a0:	callq	0x413be0 <__clang_call_terminate>	;  5 bytes
+M00000000000002a5:	jmp	0x41ce58 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x2d8>	;  2 bytes
+M00000000000002a7:	jmp	0x41ce29 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x2a9>	;  2 bytes
+M00000000000002a9:	movq	%r15, (%rsp)	;  4 bytes
+M00000000000002ad:	jmp	0x41ce58 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x2d8>	;  2 bytes
+M00000000000002af:	movq	%r15, (%rsp)	;  4 bytes
+M00000000000002b3:	movq	%rax, %rbx	;  3 bytes
+M00000000000002b6:	cmpq	$23, 72(%rsp)	;  6 bytes
+M00000000000002bc:	je	0x41ce5b <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x2db>	;  2 bytes
+M00000000000002be:	movq	40(%rsp), %rsi	;  5 bytes
+M00000000000002c3:	movq	80(%rsp), %rdi	;  5 bytes
+M00000000000002c8:	movq	(%rdi), %rax	;  3 bytes
+M00000000000002cb:	callq	*24(%rax)	;  3 bytes
+M00000000000002ce:	jmp	0x41ce5b <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)+0x2db>	;  2 bytes
+M00000000000002d0:	movq	%rax, %rdi	;  3 bytes
+M00000000000002d3:	callq	0x413be0 <__clang_call_terminate>	;  5 bytes
+M00000000000002d8:	movq	%rax, %rbx	;  3 bytes
+M00000000000002db:	movq	(%rsp), %rdi	;  4 bytes
+M00000000000002df:	callq	0x4044d0 <pthread_rwlock_unlock@plt>	;  5 bytes
+M00000000000002e4:	movq	%rbx, %rdi	;  3 bytes
+M00000000000002e7:	callq	0x404560 <_Unwind_Resume@plt>	;  5 bytes
+M00000000000002ec:	nopl	(%rax)	;  4 bytes
 ```

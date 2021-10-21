@@ -2,249 +2,249 @@
 
 ```nasm
 0000000000412f50 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 02	pushq	%r13
-0000000000000007: 02	pushq	%r12
-0000000000000009: 01	pushq	%rbx
-000000000000000a: 04	subq	$40, %rsp
-000000000000000e: 03	movq	%rsi, %r14
-0000000000000011: 03	movq	%rdi, %rbx
-0000000000000014: 05	callq	0x4165b0 <BloombergLP::balcl::OptionValue::type() const>
-0000000000000019: 03	addl	$-2, %eax
-000000000000001c: 03	cmpl	$15, %eax
-000000000000001f: 06	ja	0x4131f2 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2a2>
-0000000000000025: 07	jmpq	*4540976(,%rax,8)
-000000000000002c: 03	movq	(%rbx), %rdi
-000000000000002f: 04	movq	8(%rbx), %rax
-0000000000000033: 03	movq	%rax, %rdx
-0000000000000036: 03	subq	%rdi, %rdx
-0000000000000039: 03	movq	(%r14), %rsi
-000000000000003c: 04	movq	8(%r14), %rcx
-0000000000000040: 03	subq	%rsi, %rcx
-0000000000000043: 03	cmpq	%rcx, %rdx
-0000000000000046: 06	jne	0x4131f2 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2a2>
-000000000000004c: 03	cmpq	%rax, %rdi
-000000000000004f: 06	je	0x4131f7 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2a7>
-0000000000000055: 05	callq	0x403fd0 <bcmp@plt>
-000000000000005a: 02	testl	%eax, %eax
-000000000000005c: 05	jmp	0x41306d <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x11d>
-0000000000000061: 02	movl	(%rbx), %eax
-0000000000000063: 03	cmpl	(%r14), %eax
-0000000000000066: 05	jmp	0x41306d <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x11d>
-000000000000006b: 02	movb	(%rbx), %al
-000000000000006d: 03	cmpb	(%r14), %al
-0000000000000070: 05	jmp	0x41306d <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x11d>
-0000000000000075: 03	movq	(%rbx), %rax
-0000000000000078: 03	cmpq	(%r14), %rax
-000000000000007b: 05	jmp	0x41306d <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x11d>
-0000000000000080: 05	movsd	(%r14), %xmm0
-0000000000000085: 05	cmpeqsd	(%rbx), %xmm0
-000000000000008a: 05	movq	%xmm0, %r14
-000000000000008f: 04	andl	$1, %r14d
-0000000000000093: 05	jmp	0x4131fa <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2aa>
-0000000000000098: 04	movq	24(%rbx), %rdx
-000000000000009c: 04	cmpq	24(%r14), %rdx
-00000000000000a0: 06	jne	0x4131f2 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2a2>
-00000000000000a6: 03	testq	%rdx, %rdx
-00000000000000a9: 06	je	0x4131f7 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2a7>
-00000000000000af: 05	cmpq	$23, 32(%r14)
-00000000000000b4: 02	je	0x413009 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0xb9>
-00000000000000b6: 03	movq	(%r14), %r14
-00000000000000b9: 05	cmpq	$23, 32(%rbx)
-00000000000000be: 02	je	0x413013 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0xc3>
-00000000000000c0: 03	movq	(%rbx), %rbx
-00000000000000c3: 03	movq	%rbx, %rdi
-00000000000000c6: 03	movq	%r14, %rsi
-00000000000000c9: 02	jmp	0x412fa5 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x55>
-00000000000000cb: 03	movq	(%rbx), %rbp
-00000000000000ce: 03	testq	%rbp, %rbp
-00000000000000d1: 06	jns	0x413229 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2d9>
-00000000000000d7: 03	movq	(%r14), %rax
-00000000000000da: 03	testq	%rax, %rax
-00000000000000dd: 06	jns	0x413298 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x348>
-00000000000000e3: 03	cmpq	%rax, %rbp
-00000000000000e6: 02	jmp	0x41306d <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x11d>
-00000000000000e8: 10	movabsq	$-274877906945, %r12
-00000000000000f2: 10	movabsq	$274877906944, %rbp
-00000000000000fc: 03	movq	(%rbx), %r15
-00000000000000ff: 03	cmpq	%rbp, %r15
-0000000000000102: 06	jl	0x41320c <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2bc>
-0000000000000108: 03	andq	%r12, %r15
-000000000000010b: 03	movq	(%r14), %rax
-000000000000010e: 03	cmpq	%rbp, %rax
-0000000000000111: 06	jl	0x41321c <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2cc>
-0000000000000117: 03	andq	%r12, %rax
-000000000000011a: 03	cmpq	%rax, %r15
-000000000000011d: 04	sete	%r14b
-0000000000000121: 05	jmp	0x4131fa <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2aa>
-0000000000000126: 03	movq	(%rbx), %r15
-0000000000000129: 04	movq	8(%rbx), %rbx
-000000000000012d: 03	movq	%rbx, %rax
-0000000000000130: 03	subq	%r15, %rax
-0000000000000133: 03	movq	(%r14), %rbp
-0000000000000136: 04	movq	8(%r14), %rcx
-000000000000013a: 03	subq	%rbp, %rcx
-000000000000013d: 03	cmpq	%rcx, %rax
-0000000000000140: 06	jne	0x4131f2 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2a2>
-0000000000000146: 03	movb	$1, %r14b
-0000000000000149: 03	cmpq	%rbx, %r15
-000000000000014c: 02	jne	0x4130c1 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x171>
-000000000000014e: 05	jmp	0x4131fa <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2aa>
-0000000000000153: 05	callq	0x403fd0 <bcmp@plt>
-0000000000000158: 02	testl	%eax, %eax
-000000000000015a: 06	jne	0x4131f2 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2a2>
-0000000000000160: 04	addq	$48, %r15
-0000000000000164: 04	addq	$48, %rbp
-0000000000000168: 03	cmpq	%r15, %rbx
-000000000000016b: 06	je	0x4131fa <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2aa>
-0000000000000171: 04	movq	24(%r15), %rdx
-0000000000000175: 04	cmpq	24(%rbp), %rdx
-0000000000000179: 06	jne	0x4131f2 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2a2>
-000000000000017f: 03	testq	%rdx, %rdx
-0000000000000182: 02	je	0x4130b0 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x160>
-0000000000000184: 05	cmpq	$23, 32(%rbp)
-0000000000000189: 03	movq	%rbp, %rsi
-000000000000018c: 02	je	0x4130e2 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x192>
-000000000000018e: 04	movq	(%rbp), %rsi
-0000000000000192: 05	cmpq	$23, 32(%r15)
-0000000000000197: 03	movq	%r15, %rdi
-000000000000019a: 02	je	0x4130a3 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x153>
-000000000000019c: 03	movq	(%r15), %rdi
-000000000000019f: 02	jmp	0x4130a3 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x153>
-00000000000001a1: 03	movq	%rbx, %rdi
-00000000000001a4: 03	movq	%r14, %rsi
-00000000000001a7: 04	addq	$40, %rsp
-00000000000001ab: 01	popq	%rbx
-00000000000001ac: 02	popq	%r12
-00000000000001ae: 02	popq	%r13
-00000000000001b0: 02	popq	%r14
-00000000000001b2: 02	popq	%r15
-00000000000001b4: 01	popq	%rbp
-00000000000001b5: 05	jmp	0x4149b0 <bool bsl::operator==<BloombergLP::bdlt::Datetime, bsl::allocator<BloombergLP::bdlt::Datetime> >(bsl::vector<BloombergLP::bdlt::Datetime, bsl::allocator<BloombergLP::bdlt::Datetime> > const&, bsl::vector<BloombergLP::bdlt::Datetime, bsl::allocator<BloombergLP::bdlt::Datetime> > const&)>
-00000000000001ba: 03	movq	(%rbx), %rax
-00000000000001bd: 04	movq	8(%rbx), %rsi
-00000000000001c1: 03	movq	%rsi, %rcx
-00000000000001c4: 03	subq	%rax, %rcx
-00000000000001c7: 03	movq	(%r14), %rdx
-00000000000001ca: 04	movq	8(%r14), %rdi
-00000000000001ce: 03	subq	%rdx, %rdi
-00000000000001d1: 03	cmpq	%rdi, %rcx
-00000000000001d4: 06	jne	0x4131f2 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2a2>
-00000000000001da: 03	cmpq	%rsi, %rax
-00000000000001dd: 06	je	0x4131f7 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2a7>
-00000000000001e3: 02	xorl	%esi, %esi
-00000000000001e5: 10	nopw	%cs:(%rax,%rax)
-00000000000001ef: 01	nop	
-00000000000001f0: 03	movl	(%rax,%rsi), %edi
-00000000000001f3: 03	cmpl	(%rdx,%rsi), %edi
-00000000000001f6: 04	sete	%r14b
-00000000000001fa: 06	jne	0x4131fa <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2aa>
-0000000000000200: 04	addq	$4, %rsi
-0000000000000204: 03	cmpq	%rsi, %rcx
-0000000000000207: 02	jne	0x413140 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x1f0>
-0000000000000209: 05	jmp	0x4131fa <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2aa>
-000000000000020e: 03	movq	(%rbx), %r15
-0000000000000211: 04	movq	8(%rbx), %r13
-0000000000000215: 03	movq	%r13, %rax
-0000000000000218: 03	subq	%r15, %rax
-000000000000021b: 03	movq	(%r14), %r12
-000000000000021e: 04	movq	8(%r14), %rcx
-0000000000000222: 03	subq	%r12, %rcx
-0000000000000225: 03	cmpq	%rcx, %rax
-0000000000000228: 02	jne	0x4131f2 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2a2>
-000000000000022a: 03	cmpq	%r13, %r15
-000000000000022d: 02	je	0x4131f7 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2a7>
-000000000000022f: 10	movabsq	$-274877906945, %rcx
-0000000000000239: 10	movabsq	$274877906944, %rbp
-0000000000000243: 10	nopw	%cs:(%rax,%rax)
-000000000000024d: 03	nopl	(%rax)
-0000000000000250: 03	movq	(%r15), %rbx
-0000000000000253: 03	cmpq	%rbp, %rbx
-0000000000000256: 02	jl	0x4131cf <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x27f>
-0000000000000258: 03	andq	%rcx, %rbx
-000000000000025b: 04	movq	(%r12), %rax
-000000000000025f: 03	cmpq	%rbp, %rax
-0000000000000262: 02	jl	0x4131e2 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x292>
-0000000000000264: 03	andq	%rcx, %rax
-0000000000000267: 03	cmpq	%rax, %rbx
-000000000000026a: 04	sete	%r14b
-000000000000026e: 02	jne	0x4131fa <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2aa>
-0000000000000270: 04	addq	$8, %r15
-0000000000000274: 04	addq	$8, %r12
-0000000000000278: 03	cmpq	%r15, %r13
-000000000000027b: 02	jne	0x4131a0 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x250>
-000000000000027d: 02	jmp	0x4131fa <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2aa>
-000000000000027f: 03	movq	%r15, %rdi
-0000000000000282: 03	movq	%rcx, %rbx
-0000000000000285: 05	callq	0x429d50 <BloombergLP::bdlt::Time::invalidMicrosecondsFromMidnight() const>
-000000000000028a: 03	movq	%rbx, %rcx
-000000000000028d: 03	movq	%rax, %rbx
-0000000000000290: 02	jmp	0x4131ab <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x25b>
-0000000000000292: 03	movq	%r12, %rdi
-0000000000000295: 03	movq	%rcx, %r14
-0000000000000298: 05	callq	0x429d50 <BloombergLP::bdlt::Time::invalidMicrosecondsFromMidnight() const>
-000000000000029d: 03	movq	%r14, %rcx
-00000000000002a0: 02	jmp	0x4131b7 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x267>
-00000000000002a2: 03	xorl	%r14d, %r14d
-00000000000002a5: 02	jmp	0x4131fa <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2aa>
-00000000000002a7: 03	movb	$1, %r14b
-00000000000002aa: 03	movl	%r14d, %eax
-00000000000002ad: 04	addq	$40, %rsp
-00000000000002b1: 01	popq	%rbx
-00000000000002b2: 02	popq	%r12
-00000000000002b4: 02	popq	%r13
-00000000000002b6: 02	popq	%r14
-00000000000002b8: 02	popq	%r15
-00000000000002ba: 01	popq	%rbp
-00000000000002bb: 01	retq	
-00000000000002bc: 03	movq	%rbx, %rdi
-00000000000002bf: 05	callq	0x429d50 <BloombergLP::bdlt::Time::invalidMicrosecondsFromMidnight() const>
-00000000000002c4: 03	movq	%rax, %r15
-00000000000002c7: 05	jmp	0x41305b <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x10b>
-00000000000002cc: 03	movq	%r14, %rdi
-00000000000002cf: 05	callq	0x429d50 <BloombergLP::bdlt::Time::invalidMicrosecondsFromMidnight() const>
-00000000000002d4: 05	jmp	0x41306a <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x11a>
-00000000000002d9: 05	movl	$6907384, %edi
-00000000000002de: 05	callq	0x42fa40 <BloombergLP::bsls::Review::updateCount(BloombergLP::bsls::Atomic_TypeTraits<BloombergLP::bsls::AtomicOperations_ALL_ALL_ClangIntrinsics>::Int*)>
-00000000000002e3: 08	movq	$4548910, (%rsp)
-00000000000002eb: 09	movq	$4548964, 8(%rsp)
-00000000000002f4: 08	movl	$1126, 16(%rsp)
-00000000000002fc: 09	movq	$4673882, 24(%rsp)
-0000000000000305: 04	movl	%eax, 32(%rsp)
-0000000000000309: 03	movq	%rsp, %rdi
-000000000000030c: 05	callq	0x42fa60 <BloombergLP::bsls::Review::invokeHandler(BloombergLP::bsls::ReviewViolation const&)>
-0000000000000311: 03	movq	(%rbx), %rax
-0000000000000314: 03	movq	%rax, %rcx
-0000000000000317: 04	shrq	$32, %rcx
-000000000000031b: 04	shlq	$37, %rax
-000000000000031f: 10	movabsq	$9223371899415822336, %rdx
-0000000000000329: 03	addq	%rax, %rdx
-000000000000032c: 07	imulq	$1000, %rcx, %rax
-0000000000000333: 10	movabsq	$-9223372036854775808, %rbp
-000000000000033d: 03	orq	%rdx, %rbp
-0000000000000340: 03	orq	%rax, %rbp
-0000000000000343: 05	jmp	0x413027 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0xd7>
-0000000000000348: 05	movl	$6907384, %edi
-000000000000034d: 05	callq	0x42fa40 <BloombergLP::bsls::Review::updateCount(BloombergLP::bsls::Atomic_TypeTraits<BloombergLP::bsls::AtomicOperations_ALL_ALL_ClangIntrinsics>::Int*)>
-0000000000000352: 08	movq	$4548910, (%rsp)
-000000000000035a: 09	movq	$4548964, 8(%rsp)
-0000000000000363: 08	movl	$1126, 16(%rsp)
-000000000000036b: 09	movq	$4673882, 24(%rsp)
-0000000000000374: 04	movl	%eax, 32(%rsp)
-0000000000000378: 03	movq	%rsp, %rdi
-000000000000037b: 05	callq	0x42fa60 <BloombergLP::bsls::Review::invokeHandler(BloombergLP::bsls::ReviewViolation const&)>
-0000000000000380: 03	movq	(%r14), %rax
-0000000000000383: 03	movq	%rax, %rcx
-0000000000000386: 04	shrq	$32, %rcx
-000000000000038a: 04	shlq	$37, %rax
-000000000000038e: 10	movabsq	$9223371899415822336, %rdx
-0000000000000398: 03	addq	%rax, %rdx
-000000000000039b: 07	imulq	$1000, %rcx, %rcx
-00000000000003a2: 10	movabsq	$-9223372036854775808, %rax
-00000000000003ac: 03	orq	%rdx, %rax
-00000000000003af: 03	orq	%rcx, %rax
-00000000000003b2: 05	jmp	0x413033 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0xe3>
-00000000000003b7: 09	nopw	(%rax,%rax)
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%r13	;  2 bytes
+M0000000000000007:	pushq	%r12	;  2 bytes
+M0000000000000009:	pushq	%rbx	;  1 bytes
+M000000000000000a:	subq	$40, %rsp	;  4 bytes
+M000000000000000e:	movq	%rsi, %r14	;  3 bytes
+M0000000000000011:	movq	%rdi, %rbx	;  3 bytes
+M0000000000000014:	callq	0x4165b0 <BloombergLP::balcl::OptionValue::type() const>	;  5 bytes
+M0000000000000019:	addl	$-2, %eax	;  3 bytes
+M000000000000001c:	cmpl	$15, %eax	;  3 bytes
+M000000000000001f:	ja	0x4131f2 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2a2>	;  6 bytes
+M0000000000000025:	jmpq	*4540976(,%rax,8)	;  7 bytes
+M000000000000002c:	movq	(%rbx), %rdi	;  3 bytes
+M000000000000002f:	movq	8(%rbx), %rax	;  4 bytes
+M0000000000000033:	movq	%rax, %rdx	;  3 bytes
+M0000000000000036:	subq	%rdi, %rdx	;  3 bytes
+M0000000000000039:	movq	(%r14), %rsi	;  3 bytes
+M000000000000003c:	movq	8(%r14), %rcx	;  4 bytes
+M0000000000000040:	subq	%rsi, %rcx	;  3 bytes
+M0000000000000043:	cmpq	%rcx, %rdx	;  3 bytes
+M0000000000000046:	jne	0x4131f2 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2a2>	;  6 bytes
+M000000000000004c:	cmpq	%rax, %rdi	;  3 bytes
+M000000000000004f:	je	0x4131f7 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2a7>	;  6 bytes
+M0000000000000055:	callq	0x403fd0 <bcmp@plt>	;  5 bytes
+M000000000000005a:	testl	%eax, %eax	;  2 bytes
+M000000000000005c:	jmp	0x41306d <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x11d>	;  5 bytes
+M0000000000000061:	movl	(%rbx), %eax	;  2 bytes
+M0000000000000063:	cmpl	(%r14), %eax	;  3 bytes
+M0000000000000066:	jmp	0x41306d <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x11d>	;  5 bytes
+M000000000000006b:	movb	(%rbx), %al	;  2 bytes
+M000000000000006d:	cmpb	(%r14), %al	;  3 bytes
+M0000000000000070:	jmp	0x41306d <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x11d>	;  5 bytes
+M0000000000000075:	movq	(%rbx), %rax	;  3 bytes
+M0000000000000078:	cmpq	(%r14), %rax	;  3 bytes
+M000000000000007b:	jmp	0x41306d <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x11d>	;  5 bytes
+M0000000000000080:	movsd	(%r14), %xmm0	;  5 bytes
+M0000000000000085:	cmpeqsd	(%rbx), %xmm0	;  5 bytes
+M000000000000008a:	movq	%xmm0, %r14	;  5 bytes
+M000000000000008f:	andl	$1, %r14d	;  4 bytes
+M0000000000000093:	jmp	0x4131fa <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2aa>	;  5 bytes
+M0000000000000098:	movq	24(%rbx), %rdx	;  4 bytes
+M000000000000009c:	cmpq	24(%r14), %rdx	;  4 bytes
+M00000000000000a0:	jne	0x4131f2 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2a2>	;  6 bytes
+M00000000000000a6:	testq	%rdx, %rdx	;  3 bytes
+M00000000000000a9:	je	0x4131f7 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2a7>	;  6 bytes
+M00000000000000af:	cmpq	$23, 32(%r14)	;  5 bytes
+M00000000000000b4:	je	0x413009 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0xb9>	;  2 bytes
+M00000000000000b6:	movq	(%r14), %r14	;  3 bytes
+M00000000000000b9:	cmpq	$23, 32(%rbx)	;  5 bytes
+M00000000000000be:	je	0x413013 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0xc3>	;  2 bytes
+M00000000000000c0:	movq	(%rbx), %rbx	;  3 bytes
+M00000000000000c3:	movq	%rbx, %rdi	;  3 bytes
+M00000000000000c6:	movq	%r14, %rsi	;  3 bytes
+M00000000000000c9:	jmp	0x412fa5 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x55>	;  2 bytes
+M00000000000000cb:	movq	(%rbx), %rbp	;  3 bytes
+M00000000000000ce:	testq	%rbp, %rbp	;  3 bytes
+M00000000000000d1:	jns	0x413229 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2d9>	;  6 bytes
+M00000000000000d7:	movq	(%r14), %rax	;  3 bytes
+M00000000000000da:	testq	%rax, %rax	;  3 bytes
+M00000000000000dd:	jns	0x413298 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x348>	;  6 bytes
+M00000000000000e3:	cmpq	%rax, %rbp	;  3 bytes
+M00000000000000e6:	jmp	0x41306d <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x11d>	;  2 bytes
+M00000000000000e8:	movabsq	$-274877906945, %r12	; 10 bytes
+M00000000000000f2:	movabsq	$274877906944, %rbp	; 10 bytes
+M00000000000000fc:	movq	(%rbx), %r15	;  3 bytes
+M00000000000000ff:	cmpq	%rbp, %r15	;  3 bytes
+M0000000000000102:	jl	0x41320c <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2bc>	;  6 bytes
+M0000000000000108:	andq	%r12, %r15	;  3 bytes
+M000000000000010b:	movq	(%r14), %rax	;  3 bytes
+M000000000000010e:	cmpq	%rbp, %rax	;  3 bytes
+M0000000000000111:	jl	0x41321c <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2cc>	;  6 bytes
+M0000000000000117:	andq	%r12, %rax	;  3 bytes
+M000000000000011a:	cmpq	%rax, %r15	;  3 bytes
+M000000000000011d:	sete	%r14b	;  4 bytes
+M0000000000000121:	jmp	0x4131fa <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2aa>	;  5 bytes
+M0000000000000126:	movq	(%rbx), %r15	;  3 bytes
+M0000000000000129:	movq	8(%rbx), %rbx	;  4 bytes
+M000000000000012d:	movq	%rbx, %rax	;  3 bytes
+M0000000000000130:	subq	%r15, %rax	;  3 bytes
+M0000000000000133:	movq	(%r14), %rbp	;  3 bytes
+M0000000000000136:	movq	8(%r14), %rcx	;  4 bytes
+M000000000000013a:	subq	%rbp, %rcx	;  3 bytes
+M000000000000013d:	cmpq	%rcx, %rax	;  3 bytes
+M0000000000000140:	jne	0x4131f2 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2a2>	;  6 bytes
+M0000000000000146:	movb	$1, %r14b	;  3 bytes
+M0000000000000149:	cmpq	%rbx, %r15	;  3 bytes
+M000000000000014c:	jne	0x4130c1 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x171>	;  2 bytes
+M000000000000014e:	jmp	0x4131fa <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2aa>	;  5 bytes
+M0000000000000153:	callq	0x403fd0 <bcmp@plt>	;  5 bytes
+M0000000000000158:	testl	%eax, %eax	;  2 bytes
+M000000000000015a:	jne	0x4131f2 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2a2>	;  6 bytes
+M0000000000000160:	addq	$48, %r15	;  4 bytes
+M0000000000000164:	addq	$48, %rbp	;  4 bytes
+M0000000000000168:	cmpq	%r15, %rbx	;  3 bytes
+M000000000000016b:	je	0x4131fa <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2aa>	;  6 bytes
+M0000000000000171:	movq	24(%r15), %rdx	;  4 bytes
+M0000000000000175:	cmpq	24(%rbp), %rdx	;  4 bytes
+M0000000000000179:	jne	0x4131f2 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2a2>	;  6 bytes
+M000000000000017f:	testq	%rdx, %rdx	;  3 bytes
+M0000000000000182:	je	0x4130b0 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x160>	;  2 bytes
+M0000000000000184:	cmpq	$23, 32(%rbp)	;  5 bytes
+M0000000000000189:	movq	%rbp, %rsi	;  3 bytes
+M000000000000018c:	je	0x4130e2 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x192>	;  2 bytes
+M000000000000018e:	movq	(%rbp), %rsi	;  4 bytes
+M0000000000000192:	cmpq	$23, 32(%r15)	;  5 bytes
+M0000000000000197:	movq	%r15, %rdi	;  3 bytes
+M000000000000019a:	je	0x4130a3 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x153>	;  2 bytes
+M000000000000019c:	movq	(%r15), %rdi	;  3 bytes
+M000000000000019f:	jmp	0x4130a3 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x153>	;  2 bytes
+M00000000000001a1:	movq	%rbx, %rdi	;  3 bytes
+M00000000000001a4:	movq	%r14, %rsi	;  3 bytes
+M00000000000001a7:	addq	$40, %rsp	;  4 bytes
+M00000000000001ab:	popq	%rbx	;  1 bytes
+M00000000000001ac:	popq	%r12	;  2 bytes
+M00000000000001ae:	popq	%r13	;  2 bytes
+M00000000000001b0:	popq	%r14	;  2 bytes
+M00000000000001b2:	popq	%r15	;  2 bytes
+M00000000000001b4:	popq	%rbp	;  1 bytes
+M00000000000001b5:	jmp	0x4149b0 <bool bsl::operator==<BloombergLP::bdlt::Datetime, bsl::allocator<BloombergLP::bdlt::Datetime> >(bsl::vector<BloombergLP::bdlt::Datetime, bsl::allocator<BloombergLP::bdlt::Datetime> > const&, bsl::vector<BloombergLP::bdlt::Datetime, bsl::allocator<BloombergLP::bdlt::Datetime> > const&)>	;  5 bytes
+M00000000000001ba:	movq	(%rbx), %rax	;  3 bytes
+M00000000000001bd:	movq	8(%rbx), %rsi	;  4 bytes
+M00000000000001c1:	movq	%rsi, %rcx	;  3 bytes
+M00000000000001c4:	subq	%rax, %rcx	;  3 bytes
+M00000000000001c7:	movq	(%r14), %rdx	;  3 bytes
+M00000000000001ca:	movq	8(%r14), %rdi	;  4 bytes
+M00000000000001ce:	subq	%rdx, %rdi	;  3 bytes
+M00000000000001d1:	cmpq	%rdi, %rcx	;  3 bytes
+M00000000000001d4:	jne	0x4131f2 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2a2>	;  6 bytes
+M00000000000001da:	cmpq	%rsi, %rax	;  3 bytes
+M00000000000001dd:	je	0x4131f7 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2a7>	;  6 bytes
+M00000000000001e3:	xorl	%esi, %esi	;  2 bytes
+M00000000000001e5:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M00000000000001ef:	nop		;  1 bytes
+M00000000000001f0:	movl	(%rax,%rsi), %edi	;  3 bytes
+M00000000000001f3:	cmpl	(%rdx,%rsi), %edi	;  3 bytes
+M00000000000001f6:	sete	%r14b	;  4 bytes
+M00000000000001fa:	jne	0x4131fa <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2aa>	;  6 bytes
+M0000000000000200:	addq	$4, %rsi	;  4 bytes
+M0000000000000204:	cmpq	%rsi, %rcx	;  3 bytes
+M0000000000000207:	jne	0x413140 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x1f0>	;  2 bytes
+M0000000000000209:	jmp	0x4131fa <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2aa>	;  5 bytes
+M000000000000020e:	movq	(%rbx), %r15	;  3 bytes
+M0000000000000211:	movq	8(%rbx), %r13	;  4 bytes
+M0000000000000215:	movq	%r13, %rax	;  3 bytes
+M0000000000000218:	subq	%r15, %rax	;  3 bytes
+M000000000000021b:	movq	(%r14), %r12	;  3 bytes
+M000000000000021e:	movq	8(%r14), %rcx	;  4 bytes
+M0000000000000222:	subq	%r12, %rcx	;  3 bytes
+M0000000000000225:	cmpq	%rcx, %rax	;  3 bytes
+M0000000000000228:	jne	0x4131f2 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2a2>	;  2 bytes
+M000000000000022a:	cmpq	%r13, %r15	;  3 bytes
+M000000000000022d:	je	0x4131f7 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2a7>	;  2 bytes
+M000000000000022f:	movabsq	$-274877906945, %rcx	; 10 bytes
+M0000000000000239:	movabsq	$274877906944, %rbp	; 10 bytes
+M0000000000000243:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000024d:	nopl	(%rax)	;  3 bytes
+M0000000000000250:	movq	(%r15), %rbx	;  3 bytes
+M0000000000000253:	cmpq	%rbp, %rbx	;  3 bytes
+M0000000000000256:	jl	0x4131cf <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x27f>	;  2 bytes
+M0000000000000258:	andq	%rcx, %rbx	;  3 bytes
+M000000000000025b:	movq	(%r12), %rax	;  4 bytes
+M000000000000025f:	cmpq	%rbp, %rax	;  3 bytes
+M0000000000000262:	jl	0x4131e2 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x292>	;  2 bytes
+M0000000000000264:	andq	%rcx, %rax	;  3 bytes
+M0000000000000267:	cmpq	%rax, %rbx	;  3 bytes
+M000000000000026a:	sete	%r14b	;  4 bytes
+M000000000000026e:	jne	0x4131fa <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2aa>	;  2 bytes
+M0000000000000270:	addq	$8, %r15	;  4 bytes
+M0000000000000274:	addq	$8, %r12	;  4 bytes
+M0000000000000278:	cmpq	%r15, %r13	;  3 bytes
+M000000000000027b:	jne	0x4131a0 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x250>	;  2 bytes
+M000000000000027d:	jmp	0x4131fa <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2aa>	;  2 bytes
+M000000000000027f:	movq	%r15, %rdi	;  3 bytes
+M0000000000000282:	movq	%rcx, %rbx	;  3 bytes
+M0000000000000285:	callq	0x429d50 <BloombergLP::bdlt::Time::invalidMicrosecondsFromMidnight() const>	;  5 bytes
+M000000000000028a:	movq	%rbx, %rcx	;  3 bytes
+M000000000000028d:	movq	%rax, %rbx	;  3 bytes
+M0000000000000290:	jmp	0x4131ab <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x25b>	;  2 bytes
+M0000000000000292:	movq	%r12, %rdi	;  3 bytes
+M0000000000000295:	movq	%rcx, %r14	;  3 bytes
+M0000000000000298:	callq	0x429d50 <BloombergLP::bdlt::Time::invalidMicrosecondsFromMidnight() const>	;  5 bytes
+M000000000000029d:	movq	%r14, %rcx	;  3 bytes
+M00000000000002a0:	jmp	0x4131b7 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x267>	;  2 bytes
+M00000000000002a2:	xorl	%r14d, %r14d	;  3 bytes
+M00000000000002a5:	jmp	0x4131fa <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x2aa>	;  2 bytes
+M00000000000002a7:	movb	$1, %r14b	;  3 bytes
+M00000000000002aa:	movl	%r14d, %eax	;  3 bytes
+M00000000000002ad:	addq	$40, %rsp	;  4 bytes
+M00000000000002b1:	popq	%rbx	;  1 bytes
+M00000000000002b2:	popq	%r12	;  2 bytes
+M00000000000002b4:	popq	%r13	;  2 bytes
+M00000000000002b6:	popq	%r14	;  2 bytes
+M00000000000002b8:	popq	%r15	;  2 bytes
+M00000000000002ba:	popq	%rbp	;  1 bytes
+M00000000000002bb:	retq		;  1 bytes
+M00000000000002bc:	movq	%rbx, %rdi	;  3 bytes
+M00000000000002bf:	callq	0x429d50 <BloombergLP::bdlt::Time::invalidMicrosecondsFromMidnight() const>	;  5 bytes
+M00000000000002c4:	movq	%rax, %r15	;  3 bytes
+M00000000000002c7:	jmp	0x41305b <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x10b>	;  5 bytes
+M00000000000002cc:	movq	%r14, %rdi	;  3 bytes
+M00000000000002cf:	callq	0x429d50 <BloombergLP::bdlt::Time::invalidMicrosecondsFromMidnight() const>	;  5 bytes
+M00000000000002d4:	jmp	0x41306a <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0x11a>	;  5 bytes
+M00000000000002d9:	movl	$6907384, %edi	;  5 bytes
+M00000000000002de:	callq	0x42fa40 <BloombergLP::bsls::Review::updateCount(BloombergLP::bsls::Atomic_TypeTraits<BloombergLP::bsls::AtomicOperations_ALL_ALL_ClangIntrinsics>::Int*)>	;  5 bytes
+M00000000000002e3:	movq	$4548910, (%rsp)	;  8 bytes
+M00000000000002eb:	movq	$4548964, 8(%rsp)	;  9 bytes
+M00000000000002f4:	movl	$1126, 16(%rsp)	;  8 bytes
+M00000000000002fc:	movq	$4673882, 24(%rsp)	;  9 bytes
+M0000000000000305:	movl	%eax, 32(%rsp)	;  4 bytes
+M0000000000000309:	movq	%rsp, %rdi	;  3 bytes
+M000000000000030c:	callq	0x42fa60 <BloombergLP::bsls::Review::invokeHandler(BloombergLP::bsls::ReviewViolation const&)>	;  5 bytes
+M0000000000000311:	movq	(%rbx), %rax	;  3 bytes
+M0000000000000314:	movq	%rax, %rcx	;  3 bytes
+M0000000000000317:	shrq	$32, %rcx	;  4 bytes
+M000000000000031b:	shlq	$37, %rax	;  4 bytes
+M000000000000031f:	movabsq	$9223371899415822336, %rdx	; 10 bytes
+M0000000000000329:	addq	%rax, %rdx	;  3 bytes
+M000000000000032c:	imulq	$1000, %rcx, %rax	;  7 bytes
+M0000000000000333:	movabsq	$-9223372036854775808, %rbp	; 10 bytes
+M000000000000033d:	orq	%rdx, %rbp	;  3 bytes
+M0000000000000340:	orq	%rax, %rbp	;  3 bytes
+M0000000000000343:	jmp	0x413027 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0xd7>	;  5 bytes
+M0000000000000348:	movl	$6907384, %edi	;  5 bytes
+M000000000000034d:	callq	0x42fa40 <BloombergLP::bsls::Review::updateCount(BloombergLP::bsls::Atomic_TypeTraits<BloombergLP::bsls::AtomicOperations_ALL_ALL_ClangIntrinsics>::Int*)>	;  5 bytes
+M0000000000000352:	movq	$4548910, (%rsp)	;  8 bytes
+M000000000000035a:	movq	$4548964, 8(%rsp)	;  9 bytes
+M0000000000000363:	movl	$1126, 16(%rsp)	;  8 bytes
+M000000000000036b:	movq	$4673882, 24(%rsp)	;  9 bytes
+M0000000000000374:	movl	%eax, 32(%rsp)	;  4 bytes
+M0000000000000378:	movq	%rsp, %rdi	;  3 bytes
+M000000000000037b:	callq	0x42fa60 <BloombergLP::bsls::Review::invokeHandler(BloombergLP::bsls::ReviewViolation const&)>	;  5 bytes
+M0000000000000380:	movq	(%r14), %rax	;  3 bytes
+M0000000000000383:	movq	%rax, %rcx	;  3 bytes
+M0000000000000386:	shrq	$32, %rcx	;  4 bytes
+M000000000000038a:	shlq	$37, %rax	;  4 bytes
+M000000000000038e:	movabsq	$9223371899415822336, %rdx	; 10 bytes
+M0000000000000398:	addq	%rax, %rdx	;  3 bytes
+M000000000000039b:	imulq	$1000, %rcx, %rcx	;  7 bytes
+M00000000000003a2:	movabsq	$-9223372036854775808, %rax	; 10 bytes
+M00000000000003ac:	orq	%rdx, %rax	;  3 bytes
+M00000000000003af:	orq	%rcx, %rax	;  3 bytes
+M00000000000003b2:	jmp	0x413033 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)+0xe3>	;  5 bytes
+M00000000000003b7:	nopw	(%rax,%rax)	;  9 bytes
 ```

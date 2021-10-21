@@ -2,280 +2,280 @@
 
 ```nasm
 0000000000479110 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 02	pushq	%r13
-0000000000000007: 02	pushq	%r12
-0000000000000009: 01	pushq	%rbx
-000000000000000a: 04	subq	$88, %rsp
-000000000000000e: 03	movq	%r8, %r14
-0000000000000011: 03	movq	%rcx, %r15
-0000000000000014: 03	movq	%rdx, %rbp
-0000000000000017: 02	movl	%esi, %ebx
-0000000000000019: 05	movq	%rdi, 16(%rsp)
-000000000000001e: 10	movabsq	$6917529027641081856, %r12
-0000000000000028: 03	movq	%rdx, %rdi
-000000000000002b: 03	movq	%rcx, %rsi
-000000000000002e: 05	callq	0x4a2490 <__bid128_class>
-0000000000000033: 03	movq	%r15, %rax
-0000000000000036: 03	andq	%r12, %rax
-0000000000000039: 03	cmpq	%r12, %rax
-000000000000003c: 05	movq	%r14, 8(%rsp)
-0000000000000041: 04	movl	%ebx, 28(%rsp)
-0000000000000045: 02	jne	0x479181 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x71>
-0000000000000047: 10	movabsq	$140737488355327, %rax
-0000000000000051: 03	andq	%r15, %rax
-0000000000000054: 10	movabsq	$9007199254740992, %r10
-000000000000005e: 03	orq	%rax, %r10
-0000000000000061: 03	movq	%r15, %r11
-0000000000000064: 04	shrq	$47, %r11
-0000000000000068: 07	andl	$16383, %r11d
-000000000000006f: 02	jmp	0x4791a3 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x93>
-0000000000000071: 03	movq	%r15, %r11
-0000000000000074: 04	shrq	$49, %r11
-0000000000000078: 07	andl	$16383, %r11d
-000000000000007f: 07	addl	$4294961120, %r11d
-0000000000000086: 10	movabsq	$562949953421311, %r10
-0000000000000090: 03	andq	%r15, %r10
-0000000000000093: 10	movabsq	$1844674407370955161, %r12
-000000000000009d: 03	movq	%r10, %rax
-00000000000000a0: 03	orq	%rbp, %rax
-00000000000000a3: 10	movabsq	$-3689348814741910323, %r14
-00000000000000ad: 06	je	0x4792e4 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x1d4>
-00000000000000b3: 06	movl	$4294967295, %r8d
-00000000000000b9: 03	movq	%rbp, %rsi
-00000000000000bc: 03	movq	%r10, %rdi
-00000000000000bf: 01	nop	
-00000000000000c0: 03	movq	%rdi, %r9
-00000000000000c3: 03	movq	%rdi, %rax
-00000000000000c6: 03	mulq	%r14
-00000000000000c9: 03	movq	%rdx, %rdi
-00000000000000cc: 04	shrq	$3, %rdi
-00000000000000d0: 04	leaq	(%rdi,%rdi), %rax
-00000000000000d4: 04	leaq	(%rax,%rax,4), %rax
-00000000000000d8: 03	movq	%r9, %rbx
-00000000000000db: 03	subq	%rax, %rbx
-00000000000000de: 03	movq	%rsi, %rax
-00000000000000e1: 03	mulq	%r14
-00000000000000e4: 04	shrq	$3, %rdx
-00000000000000e8: 03	leal	(%rdx,%rdx), %eax
-00000000000000eb: 03	leal	(%rax,%rax,4), %eax
-00000000000000ee: 02	subl	%eax, %esi
-00000000000000f0: 03	leal	(%rbx,%rbx,2), %eax
-00000000000000f3: 04	imulq	%r12, %rbx
-00000000000000f7: 03	addq	%rdx, %rbx
-00000000000000fa: 03	leal	(%rsi,%rax,2), %eax
-00000000000000fd: 06	imull	$205, %eax, %eax
-0000000000000103: 03	movzwl	%ax, %esi
-0000000000000106: 04	shrq	$11, %rsi
-000000000000010a: 03	addq	%rbx, %rsi
-000000000000010d: 03	incl	%r8d
-0000000000000110: 04	cmpq	$9, %r9
-0000000000000114: 02	ja	0x4791d0 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0xc0>
-0000000000000116: 03	testq	%rsi, %rsi
-0000000000000119: 02	jne	0x4791d0 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0xc0>
-000000000000011b: 05	movq	8(%rsp), %rax
-0000000000000120: 03	movl	(%rax), %r13d
-0000000000000123: 03	subl	%r8d, %r13d
-0000000000000126: 06	jge	0x479312 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x202>
-000000000000012c: 05	movq	%r11, 72(%rsp)
-0000000000000131: 03	movl	%r11d, %edx
-0000000000000134: 02	negl	%edx
-0000000000000136: 08	movl	$0, 32(%rsp)
-000000000000013e: 05	leaq	32(%rsp), %rcx
-0000000000000143: 03	movq	%rbp, %rdi
-0000000000000146: 03	movq	%r15, %rsi
-0000000000000149: 05	callq	0x4a60f0 <__bid128_scalbn>
-000000000000014e: 03	movq	%rax, %rbx
-0000000000000151: 03	movq	%rdx, %rbp
-0000000000000154: 04	movl	32(%rsp), %eax
-0000000000000158: 02	testb	$1, %al
-000000000000015a: 02	je	0x47927b <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x16b>
-000000000000015c: 05	callq	0x404a00 <__errno_location@plt>
-0000000000000161: 06	movl	$33, (%rax)
-0000000000000167: 04	movl	32(%rsp), %eax
-000000000000016b: 02	testb	$8, %al
-000000000000016d: 02	je	0x47928a <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x17a>
-000000000000016f: 05	callq	0x404a00 <__errno_location@plt>
-0000000000000174: 06	movl	$34, (%rax)
-000000000000017a: 03	movq	%rbx, %rdi
-000000000000017d: 03	movq	%rbp, %rsi
-0000000000000180: 03	movl	%r13d, %edx
-0000000000000183: 05	callq	0x477460 <BloombergLP::bdldfp::DecimalImpUtil::round(BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, unsigned int)>
-0000000000000188: 03	movq	%rax, %rbp
-000000000000018b: 03	movq	%rdx, %rbx
-000000000000018e: 03	movq	%rax, %rdi
-0000000000000191: 03	movq	%rdx, %rsi
-0000000000000194: 05	callq	0x4a2490 <__bid128_class>
-0000000000000199: 03	movq	%rbx, %rax
-000000000000019c: 10	movabsq	$6917529027641081856, %rcx
-00000000000001a6: 03	andq	%rcx, %rax
-00000000000001a9: 03	cmpq	%rcx, %rax
-00000000000001ac: 02	jne	0x4792eb <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x1db>
-00000000000001ae: 10	movabsq	$140737488355327, %rax
-00000000000001b8: 03	andq	%rbx, %rax
-00000000000001bb: 10	movabsq	$9007199254740992, %r10
-00000000000001c5: 03	orq	%rax, %r10
-00000000000001c8: 04	shrq	$47, %rbx
-00000000000001cc: 06	andl	$16383, %ebx
-00000000000001d2: 02	jmp	0x479308 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x1f8>
-00000000000001d4: 03	xorl	%r10d, %r10d
-00000000000001d7: 02	xorl	%ebp, %ebp
-00000000000001d9: 02	jmp	0x479312 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x202>
-00000000000001db: 10	movabsq	$562949953421311, %r10
-00000000000001e5: 03	andq	%rbx, %r10
-00000000000001e8: 04	shrq	$49, %rbx
-00000000000001ec: 06	andl	$16383, %ebx
-00000000000001f2: 06	addl	$4294961120, %ebx
-00000000000001f8: 05	movq	72(%rsp), %rax
-00000000000001fd: 02	addl	%eax, %ebx
-00000000000001ff: 03	movl	%ebx, %r11d
-0000000000000202: 03	xorps	%xmm0, %xmm0
-0000000000000205: 05	movaps	%xmm0, 48(%rsp)
-000000000000020a: 05	movaps	%xmm0, 32(%rsp)
-000000000000020f: 07	movw	$0, 64(%rsp)
-0000000000000216: 05	leaq	65(%rsp), %r8
-000000000000021b: 02	xorl	%edi, %edi
-000000000000021d: 05	leaq	32(%rsp), %r9
-0000000000000222: 10	nopw	%cs:(%rax,%rax)
-000000000000022c: 04	nopl	(%rax)
-0000000000000230: 03	movq	%r10, %rcx
-0000000000000233: 03	movq	%r10, %rax
-0000000000000236: 03	mulq	%r14
-0000000000000239: 03	movq	%rdx, %r10
-000000000000023c: 04	shrq	$3, %r10
-0000000000000240: 04	leaq	(%r10,%r10), %rax
-0000000000000244: 04	leaq	(%rax,%rax,4), %rax
-0000000000000248: 03	movq	%rcx, %rsi
-000000000000024b: 03	subq	%rax, %rsi
-000000000000024e: 03	movq	%rbp, %rax
-0000000000000251: 03	mulq	%r14
-0000000000000254: 04	shrq	$3, %rdx
-0000000000000258: 04	leaq	(%rdx,%rdx), %rax
-000000000000025c: 04	leaq	(%rax,%rax,4), %rax
-0000000000000260: 03	subq	%rax, %rbp
-0000000000000263: 04	leaq	(%rsi,%rsi,2), %rax
-0000000000000267: 04	imulq	%r12, %rsi
-000000000000026b: 03	addq	%rdx, %rsi
-000000000000026e: 05	leaq	(%rbp,%rax,2), %rbx
-0000000000000273: 06	imull	$205, %ebx, %eax
-0000000000000279: 03	movzwl	%ax, %ebp
-000000000000027c: 03	shrl	$11, %ebp
-000000000000027f: 02	movl	%ebp, %eax
-0000000000000281: 02	addl	%eax, %eax
-0000000000000283: 03	leal	(%rax,%rax,4), %eax
-0000000000000286: 02	subb	%al, %bl
-0000000000000288: 03	orb	$48, %bl
-000000000000028b: 04	leaq	(%r8,%rdi), %rax
-000000000000028f: 04	cmpq	$9, %rcx
-0000000000000293: 03	seta	%dl
-0000000000000296: 03	addq	%rsi, %rbp
-0000000000000299: 04	movb	%bl, 65(%rsp,%rdi)
-000000000000029d: 03	setne	%bl
-00000000000002a0: 03	decq	%rdi
-00000000000002a3: 03	cmpq	%r9, %rax
-00000000000002a6: 02	jbe	0x4793bc <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x2ac>
-00000000000002a8: 02	orb	%bl, %dl
-00000000000002aa: 02	jne	0x479340 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x230>
-00000000000002ac: 03	movq	%rdi, %rbp
-00000000000002af: 03	negq	%rbp
-00000000000002b2: 03	cmpq	%r9, %rax
-00000000000002b5: 05	movq	8(%rsp), %rbx
-00000000000002ba: 02	jbe	0x4793ed <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x2dd>
-00000000000002bc: 03	testq	%rdi, %rdi
-00000000000002bf: 02	je	0x4793eb <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x2db>
-00000000000002c1: 05	leaq	66(%rsp,%rdi), %rsi
-00000000000002c6: 05	leaq	32(%rsp), %rdi
-00000000000002cb: 03	movq	%rbp, %rdx
-00000000000002ce: 03	movq	%r11, %r14
-00000000000002d1: 05	callq	0x404970 <memmove@plt>
-00000000000002d6: 03	movq	%r14, %r11
-00000000000002d9: 02	jmp	0x4793ed <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x2dd>
-00000000000002db: 02	xorl	%ebp, %ebp
-00000000000002dd: 05	leal	-1(%r11,%rbp), %ecx
-00000000000002e2: 03	movl	44(%rbx), %edx
-00000000000002e5: 05	leaq	82(%rsp), %rdi
-00000000000002ea: 05	movl	$5284324, %esi
-00000000000002ef: 02	xorl	%eax, %eax
-00000000000002f1: 05	callq	0x404800 <sprintf@plt>
-00000000000002f6: 04	cmpb	$1, 42(%rbx)
-00000000000002fa: 02	movl	(%rbx), %ecx
-00000000000002fc: 05	movl	$2, %edx
-0000000000000301: 03	sbbl	$0, %edx
-0000000000000304: 05	movl	$2, %esi
-0000000000000309: 02	testl	%ecx, %ecx
-000000000000030b: 03	cmovgl	%esi, %edx
-000000000000030e: 02	addl	%eax, %ecx
-0000000000000310: 05	leal	1(%rdx,%rcx), %r14d
-0000000000000315: 05	cmpl	28(%rsp), %r14d
-000000000000031a: 05	movq	16(%rsp), %rdi
-000000000000031f: 06	jg	0x4794f1 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x3e1>
-0000000000000325: 03	movl	%eax, %r13d
-0000000000000328: 04	movb	32(%rsp), %al
-000000000000032c: 02	movb	%al, (%rdi)
-000000000000032e: 03	cmpl	$0, (%rbx)
-0000000000000331: 02	jne	0x479451 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x341>
-0000000000000333: 04	cmpb	$0, 42(%rbx)
-0000000000000337: 02	jne	0x479451 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x341>
-0000000000000339: 03	incq	%rdi
-000000000000033c: 05	jmp	0x4794d7 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x3c7>
-0000000000000341: 03	movb	40(%rbx), %al
-0000000000000344: 03	movb	%al, 1(%rdi)
-0000000000000347: 04	addq	$2, %rdi
-000000000000034b: 03	movslq	(%rbx), %r12
-000000000000034e: 03	testq	%r12, %r12
-0000000000000351: 02	je	0x4794d7 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x3c7>
-0000000000000353: 03	movslq	%ebp, %rax
-0000000000000356: 05	leaq	32(%rsp,%rax), %rbx
-000000000000035b: 05	leaq	33(%rsp), %r15
-0000000000000360: 03	addq	%r15, %r12
-0000000000000363: 03	cmpq	%r12, %rbx
-0000000000000366: 03	movq	%r12, %rbp
-0000000000000369: 04	cmovbq	%rbx, %rbp
-000000000000036d: 03	cmpq	%rbp, %r15
-0000000000000370: 02	ja	0x4794d2 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x3c2>
-0000000000000372: 03	subq	%r15, %rbp
-0000000000000375: 02	je	0x4794a1 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x391>
-0000000000000377: 05	movq	%rdi, 16(%rsp)
-000000000000037c: 05	movq	16(%rsp), %rdi
-0000000000000381: 03	movq	%r15, %rsi
-0000000000000384: 03	movq	%rbp, %rdx
-0000000000000387: 05	callq	0x404cb0 <memcpy@plt>
-000000000000038c: 05	movq	16(%rsp), %rdi
-0000000000000391: 03	addq	%rbp, %rdi
-0000000000000394: 03	cmpq	%r12, %rbx
-0000000000000397: 02	ja	0x4794d2 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x3c2>
-0000000000000399: 05	movq	8(%rsp), %rax
-000000000000039e: 03	movslq	(%rax), %rax
-00000000000003a1: 03	addq	%rax, %r15
-00000000000003a4: 03	subq	%rbx, %r15
-00000000000003a7: 03	testq	%r15, %r15
-00000000000003aa: 02	jle	0x4794cf <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x3bf>
-00000000000003ac: 03	movq	%rdi, %rbp
-00000000000003af: 05	movl	$48, %esi
-00000000000003b4: 03	movq	%r15, %rdx
-00000000000003b7: 05	callq	0x4044e0 <memset@plt>
-00000000000003bc: 03	movq	%rbp, %rdi
-00000000000003bf: 03	addq	%r15, %rdi
-00000000000003c2: 05	movq	8(%rsp), %rbx
-00000000000003c7: 03	movb	41(%rbx), %al
-00000000000003ca: 02	movb	%al, (%rdi)
-00000000000003cc: 03	testl	%r13d, %r13d
-00000000000003cf: 02	je	0x4794f1 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x3e1>
-00000000000003d1: 03	movslq	%r13d, %rdx
-00000000000003d4: 03	incq	%rdi
-00000000000003d7: 05	leaq	82(%rsp), %rsi
-00000000000003dc: 05	callq	0x404970 <memmove@plt>
-00000000000003e1: 03	movl	%r14d, %eax
-00000000000003e4: 04	addq	$88, %rsp
-00000000000003e8: 01	popq	%rbx
-00000000000003e9: 02	popq	%r12
-00000000000003eb: 02	popq	%r13
-00000000000003ed: 02	popq	%r14
-00000000000003ef: 02	popq	%r15
-00000000000003f1: 01	popq	%rbp
-00000000000003f2: 01	retq	
-00000000000003f3: 10	nopw	%cs:(%rax,%rax)
-00000000000003fd: 03	nopl	(%rax)
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%r13	;  2 bytes
+M0000000000000007:	pushq	%r12	;  2 bytes
+M0000000000000009:	pushq	%rbx	;  1 bytes
+M000000000000000a:	subq	$88, %rsp	;  4 bytes
+M000000000000000e:	movq	%r8, %r14	;  3 bytes
+M0000000000000011:	movq	%rcx, %r15	;  3 bytes
+M0000000000000014:	movq	%rdx, %rbp	;  3 bytes
+M0000000000000017:	movl	%esi, %ebx	;  2 bytes
+M0000000000000019:	movq	%rdi, 16(%rsp)	;  5 bytes
+M000000000000001e:	movabsq	$6917529027641081856, %r12	; 10 bytes
+M0000000000000028:	movq	%rdx, %rdi	;  3 bytes
+M000000000000002b:	movq	%rcx, %rsi	;  3 bytes
+M000000000000002e:	callq	0x4a2490 <__bid128_class>	;  5 bytes
+M0000000000000033:	movq	%r15, %rax	;  3 bytes
+M0000000000000036:	andq	%r12, %rax	;  3 bytes
+M0000000000000039:	cmpq	%r12, %rax	;  3 bytes
+M000000000000003c:	movq	%r14, 8(%rsp)	;  5 bytes
+M0000000000000041:	movl	%ebx, 28(%rsp)	;  4 bytes
+M0000000000000045:	jne	0x479181 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x71>	;  2 bytes
+M0000000000000047:	movabsq	$140737488355327, %rax	; 10 bytes
+M0000000000000051:	andq	%r15, %rax	;  3 bytes
+M0000000000000054:	movabsq	$9007199254740992, %r10	; 10 bytes
+M000000000000005e:	orq	%rax, %r10	;  3 bytes
+M0000000000000061:	movq	%r15, %r11	;  3 bytes
+M0000000000000064:	shrq	$47, %r11	;  4 bytes
+M0000000000000068:	andl	$16383, %r11d	;  7 bytes
+M000000000000006f:	jmp	0x4791a3 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x93>	;  2 bytes
+M0000000000000071:	movq	%r15, %r11	;  3 bytes
+M0000000000000074:	shrq	$49, %r11	;  4 bytes
+M0000000000000078:	andl	$16383, %r11d	;  7 bytes
+M000000000000007f:	addl	$4294961120, %r11d	;  7 bytes
+M0000000000000086:	movabsq	$562949953421311, %r10	; 10 bytes
+M0000000000000090:	andq	%r15, %r10	;  3 bytes
+M0000000000000093:	movabsq	$1844674407370955161, %r12	; 10 bytes
+M000000000000009d:	movq	%r10, %rax	;  3 bytes
+M00000000000000a0:	orq	%rbp, %rax	;  3 bytes
+M00000000000000a3:	movabsq	$-3689348814741910323, %r14	; 10 bytes
+M00000000000000ad:	je	0x4792e4 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x1d4>	;  6 bytes
+M00000000000000b3:	movl	$4294967295, %r8d	;  6 bytes
+M00000000000000b9:	movq	%rbp, %rsi	;  3 bytes
+M00000000000000bc:	movq	%r10, %rdi	;  3 bytes
+M00000000000000bf:	nop		;  1 bytes
+M00000000000000c0:	movq	%rdi, %r9	;  3 bytes
+M00000000000000c3:	movq	%rdi, %rax	;  3 bytes
+M00000000000000c6:	mulq	%r14	;  3 bytes
+M00000000000000c9:	movq	%rdx, %rdi	;  3 bytes
+M00000000000000cc:	shrq	$3, %rdi	;  4 bytes
+M00000000000000d0:	leaq	(%rdi,%rdi), %rax	;  4 bytes
+M00000000000000d4:	leaq	(%rax,%rax,4), %rax	;  4 bytes
+M00000000000000d8:	movq	%r9, %rbx	;  3 bytes
+M00000000000000db:	subq	%rax, %rbx	;  3 bytes
+M00000000000000de:	movq	%rsi, %rax	;  3 bytes
+M00000000000000e1:	mulq	%r14	;  3 bytes
+M00000000000000e4:	shrq	$3, %rdx	;  4 bytes
+M00000000000000e8:	leal	(%rdx,%rdx), %eax	;  3 bytes
+M00000000000000eb:	leal	(%rax,%rax,4), %eax	;  3 bytes
+M00000000000000ee:	subl	%eax, %esi	;  2 bytes
+M00000000000000f0:	leal	(%rbx,%rbx,2), %eax	;  3 bytes
+M00000000000000f3:	imulq	%r12, %rbx	;  4 bytes
+M00000000000000f7:	addq	%rdx, %rbx	;  3 bytes
+M00000000000000fa:	leal	(%rsi,%rax,2), %eax	;  3 bytes
+M00000000000000fd:	imull	$205, %eax, %eax	;  6 bytes
+M0000000000000103:	movzwl	%ax, %esi	;  3 bytes
+M0000000000000106:	shrq	$11, %rsi	;  4 bytes
+M000000000000010a:	addq	%rbx, %rsi	;  3 bytes
+M000000000000010d:	incl	%r8d	;  3 bytes
+M0000000000000110:	cmpq	$9, %r9	;  4 bytes
+M0000000000000114:	ja	0x4791d0 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0xc0>	;  2 bytes
+M0000000000000116:	testq	%rsi, %rsi	;  3 bytes
+M0000000000000119:	jne	0x4791d0 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0xc0>	;  2 bytes
+M000000000000011b:	movq	8(%rsp), %rax	;  5 bytes
+M0000000000000120:	movl	(%rax), %r13d	;  3 bytes
+M0000000000000123:	subl	%r8d, %r13d	;  3 bytes
+M0000000000000126:	jge	0x479312 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x202>	;  6 bytes
+M000000000000012c:	movq	%r11, 72(%rsp)	;  5 bytes
+M0000000000000131:	movl	%r11d, %edx	;  3 bytes
+M0000000000000134:	negl	%edx	;  2 bytes
+M0000000000000136:	movl	$0, 32(%rsp)	;  8 bytes
+M000000000000013e:	leaq	32(%rsp), %rcx	;  5 bytes
+M0000000000000143:	movq	%rbp, %rdi	;  3 bytes
+M0000000000000146:	movq	%r15, %rsi	;  3 bytes
+M0000000000000149:	callq	0x4a60f0 <__bid128_scalbn>	;  5 bytes
+M000000000000014e:	movq	%rax, %rbx	;  3 bytes
+M0000000000000151:	movq	%rdx, %rbp	;  3 bytes
+M0000000000000154:	movl	32(%rsp), %eax	;  4 bytes
+M0000000000000158:	testb	$1, %al	;  2 bytes
+M000000000000015a:	je	0x47927b <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x16b>	;  2 bytes
+M000000000000015c:	callq	0x404a00 <__errno_location@plt>	;  5 bytes
+M0000000000000161:	movl	$33, (%rax)	;  6 bytes
+M0000000000000167:	movl	32(%rsp), %eax	;  4 bytes
+M000000000000016b:	testb	$8, %al	;  2 bytes
+M000000000000016d:	je	0x47928a <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x17a>	;  2 bytes
+M000000000000016f:	callq	0x404a00 <__errno_location@plt>	;  5 bytes
+M0000000000000174:	movl	$34, (%rax)	;  6 bytes
+M000000000000017a:	movq	%rbx, %rdi	;  3 bytes
+M000000000000017d:	movq	%rbp, %rsi	;  3 bytes
+M0000000000000180:	movl	%r13d, %edx	;  3 bytes
+M0000000000000183:	callq	0x477460 <BloombergLP::bdldfp::DecimalImpUtil::round(BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, unsigned int)>	;  5 bytes
+M0000000000000188:	movq	%rax, %rbp	;  3 bytes
+M000000000000018b:	movq	%rdx, %rbx	;  3 bytes
+M000000000000018e:	movq	%rax, %rdi	;  3 bytes
+M0000000000000191:	movq	%rdx, %rsi	;  3 bytes
+M0000000000000194:	callq	0x4a2490 <__bid128_class>	;  5 bytes
+M0000000000000199:	movq	%rbx, %rax	;  3 bytes
+M000000000000019c:	movabsq	$6917529027641081856, %rcx	; 10 bytes
+M00000000000001a6:	andq	%rcx, %rax	;  3 bytes
+M00000000000001a9:	cmpq	%rcx, %rax	;  3 bytes
+M00000000000001ac:	jne	0x4792eb <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x1db>	;  2 bytes
+M00000000000001ae:	movabsq	$140737488355327, %rax	; 10 bytes
+M00000000000001b8:	andq	%rbx, %rax	;  3 bytes
+M00000000000001bb:	movabsq	$9007199254740992, %r10	; 10 bytes
+M00000000000001c5:	orq	%rax, %r10	;  3 bytes
+M00000000000001c8:	shrq	$47, %rbx	;  4 bytes
+M00000000000001cc:	andl	$16383, %ebx	;  6 bytes
+M00000000000001d2:	jmp	0x479308 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x1f8>	;  2 bytes
+M00000000000001d4:	xorl	%r10d, %r10d	;  3 bytes
+M00000000000001d7:	xorl	%ebp, %ebp	;  2 bytes
+M00000000000001d9:	jmp	0x479312 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x202>	;  2 bytes
+M00000000000001db:	movabsq	$562949953421311, %r10	; 10 bytes
+M00000000000001e5:	andq	%rbx, %r10	;  3 bytes
+M00000000000001e8:	shrq	$49, %rbx	;  4 bytes
+M00000000000001ec:	andl	$16383, %ebx	;  6 bytes
+M00000000000001f2:	addl	$4294961120, %ebx	;  6 bytes
+M00000000000001f8:	movq	72(%rsp), %rax	;  5 bytes
+M00000000000001fd:	addl	%eax, %ebx	;  2 bytes
+M00000000000001ff:	movl	%ebx, %r11d	;  3 bytes
+M0000000000000202:	xorps	%xmm0, %xmm0	;  3 bytes
+M0000000000000205:	movaps	%xmm0, 48(%rsp)	;  5 bytes
+M000000000000020a:	movaps	%xmm0, 32(%rsp)	;  5 bytes
+M000000000000020f:	movw	$0, 64(%rsp)	;  7 bytes
+M0000000000000216:	leaq	65(%rsp), %r8	;  5 bytes
+M000000000000021b:	xorl	%edi, %edi	;  2 bytes
+M000000000000021d:	leaq	32(%rsp), %r9	;  5 bytes
+M0000000000000222:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000022c:	nopl	(%rax)	;  4 bytes
+M0000000000000230:	movq	%r10, %rcx	;  3 bytes
+M0000000000000233:	movq	%r10, %rax	;  3 bytes
+M0000000000000236:	mulq	%r14	;  3 bytes
+M0000000000000239:	movq	%rdx, %r10	;  3 bytes
+M000000000000023c:	shrq	$3, %r10	;  4 bytes
+M0000000000000240:	leaq	(%r10,%r10), %rax	;  4 bytes
+M0000000000000244:	leaq	(%rax,%rax,4), %rax	;  4 bytes
+M0000000000000248:	movq	%rcx, %rsi	;  3 bytes
+M000000000000024b:	subq	%rax, %rsi	;  3 bytes
+M000000000000024e:	movq	%rbp, %rax	;  3 bytes
+M0000000000000251:	mulq	%r14	;  3 bytes
+M0000000000000254:	shrq	$3, %rdx	;  4 bytes
+M0000000000000258:	leaq	(%rdx,%rdx), %rax	;  4 bytes
+M000000000000025c:	leaq	(%rax,%rax,4), %rax	;  4 bytes
+M0000000000000260:	subq	%rax, %rbp	;  3 bytes
+M0000000000000263:	leaq	(%rsi,%rsi,2), %rax	;  4 bytes
+M0000000000000267:	imulq	%r12, %rsi	;  4 bytes
+M000000000000026b:	addq	%rdx, %rsi	;  3 bytes
+M000000000000026e:	leaq	(%rbp,%rax,2), %rbx	;  5 bytes
+M0000000000000273:	imull	$205, %ebx, %eax	;  6 bytes
+M0000000000000279:	movzwl	%ax, %ebp	;  3 bytes
+M000000000000027c:	shrl	$11, %ebp	;  3 bytes
+M000000000000027f:	movl	%ebp, %eax	;  2 bytes
+M0000000000000281:	addl	%eax, %eax	;  2 bytes
+M0000000000000283:	leal	(%rax,%rax,4), %eax	;  3 bytes
+M0000000000000286:	subb	%al, %bl	;  2 bytes
+M0000000000000288:	orb	$48, %bl	;  3 bytes
+M000000000000028b:	leaq	(%r8,%rdi), %rax	;  4 bytes
+M000000000000028f:	cmpq	$9, %rcx	;  4 bytes
+M0000000000000293:	seta	%dl	;  3 bytes
+M0000000000000296:	addq	%rsi, %rbp	;  3 bytes
+M0000000000000299:	movb	%bl, 65(%rsp,%rdi)	;  4 bytes
+M000000000000029d:	setne	%bl	;  3 bytes
+M00000000000002a0:	decq	%rdi	;  3 bytes
+M00000000000002a3:	cmpq	%r9, %rax	;  3 bytes
+M00000000000002a6:	jbe	0x4793bc <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x2ac>	;  2 bytes
+M00000000000002a8:	orb	%bl, %dl	;  2 bytes
+M00000000000002aa:	jne	0x479340 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x230>	;  2 bytes
+M00000000000002ac:	movq	%rdi, %rbp	;  3 bytes
+M00000000000002af:	negq	%rbp	;  3 bytes
+M00000000000002b2:	cmpq	%r9, %rax	;  3 bytes
+M00000000000002b5:	movq	8(%rsp), %rbx	;  5 bytes
+M00000000000002ba:	jbe	0x4793ed <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x2dd>	;  2 bytes
+M00000000000002bc:	testq	%rdi, %rdi	;  3 bytes
+M00000000000002bf:	je	0x4793eb <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x2db>	;  2 bytes
+M00000000000002c1:	leaq	66(%rsp,%rdi), %rsi	;  5 bytes
+M00000000000002c6:	leaq	32(%rsp), %rdi	;  5 bytes
+M00000000000002cb:	movq	%rbp, %rdx	;  3 bytes
+M00000000000002ce:	movq	%r11, %r14	;  3 bytes
+M00000000000002d1:	callq	0x404970 <memmove@plt>	;  5 bytes
+M00000000000002d6:	movq	%r14, %r11	;  3 bytes
+M00000000000002d9:	jmp	0x4793ed <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x2dd>	;  2 bytes
+M00000000000002db:	xorl	%ebp, %ebp	;  2 bytes
+M00000000000002dd:	leal	-1(%r11,%rbp), %ecx	;  5 bytes
+M00000000000002e2:	movl	44(%rbx), %edx	;  3 bytes
+M00000000000002e5:	leaq	82(%rsp), %rdi	;  5 bytes
+M00000000000002ea:	movl	$5284324, %esi	;  5 bytes
+M00000000000002ef:	xorl	%eax, %eax	;  2 bytes
+M00000000000002f1:	callq	0x404800 <sprintf@plt>	;  5 bytes
+M00000000000002f6:	cmpb	$1, 42(%rbx)	;  4 bytes
+M00000000000002fa:	movl	(%rbx), %ecx	;  2 bytes
+M00000000000002fc:	movl	$2, %edx	;  5 bytes
+M0000000000000301:	sbbl	$0, %edx	;  3 bytes
+M0000000000000304:	movl	$2, %esi	;  5 bytes
+M0000000000000309:	testl	%ecx, %ecx	;  2 bytes
+M000000000000030b:	cmovgl	%esi, %edx	;  3 bytes
+M000000000000030e:	addl	%eax, %ecx	;  2 bytes
+M0000000000000310:	leal	1(%rdx,%rcx), %r14d	;  5 bytes
+M0000000000000315:	cmpl	28(%rsp), %r14d	;  5 bytes
+M000000000000031a:	movq	16(%rsp), %rdi	;  5 bytes
+M000000000000031f:	jg	0x4794f1 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x3e1>	;  6 bytes
+M0000000000000325:	movl	%eax, %r13d	;  3 bytes
+M0000000000000328:	movb	32(%rsp), %al	;  4 bytes
+M000000000000032c:	movb	%al, (%rdi)	;  2 bytes
+M000000000000032e:	cmpl	$0, (%rbx)	;  3 bytes
+M0000000000000331:	jne	0x479451 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x341>	;  2 bytes
+M0000000000000333:	cmpb	$0, 42(%rbx)	;  4 bytes
+M0000000000000337:	jne	0x479451 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x341>	;  2 bytes
+M0000000000000339:	incq	%rdi	;  3 bytes
+M000000000000033c:	jmp	0x4794d7 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x3c7>	;  5 bytes
+M0000000000000341:	movb	40(%rbx), %al	;  3 bytes
+M0000000000000344:	movb	%al, 1(%rdi)	;  3 bytes
+M0000000000000347:	addq	$2, %rdi	;  4 bytes
+M000000000000034b:	movslq	(%rbx), %r12	;  3 bytes
+M000000000000034e:	testq	%r12, %r12	;  3 bytes
+M0000000000000351:	je	0x4794d7 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x3c7>	;  2 bytes
+M0000000000000353:	movslq	%ebp, %rax	;  3 bytes
+M0000000000000356:	leaq	32(%rsp,%rax), %rbx	;  5 bytes
+M000000000000035b:	leaq	33(%rsp), %r15	;  5 bytes
+M0000000000000360:	addq	%r15, %r12	;  3 bytes
+M0000000000000363:	cmpq	%r12, %rbx	;  3 bytes
+M0000000000000366:	movq	%r12, %rbp	;  3 bytes
+M0000000000000369:	cmovbq	%rbx, %rbp	;  4 bytes
+M000000000000036d:	cmpq	%rbp, %r15	;  3 bytes
+M0000000000000370:	ja	0x4794d2 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x3c2>	;  2 bytes
+M0000000000000372:	subq	%r15, %rbp	;  3 bytes
+M0000000000000375:	je	0x4794a1 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x391>	;  2 bytes
+M0000000000000377:	movq	%rdi, 16(%rsp)	;  5 bytes
+M000000000000037c:	movq	16(%rsp), %rdi	;  5 bytes
+M0000000000000381:	movq	%r15, %rsi	;  3 bytes
+M0000000000000384:	movq	%rbp, %rdx	;  3 bytes
+M0000000000000387:	callq	0x404cb0 <memcpy@plt>	;  5 bytes
+M000000000000038c:	movq	16(%rsp), %rdi	;  5 bytes
+M0000000000000391:	addq	%rbp, %rdi	;  3 bytes
+M0000000000000394:	cmpq	%r12, %rbx	;  3 bytes
+M0000000000000397:	ja	0x4794d2 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x3c2>	;  2 bytes
+M0000000000000399:	movq	8(%rsp), %rax	;  5 bytes
+M000000000000039e:	movslq	(%rax), %rax	;  3 bytes
+M00000000000003a1:	addq	%rax, %r15	;  3 bytes
+M00000000000003a4:	subq	%rbx, %r15	;  3 bytes
+M00000000000003a7:	testq	%r15, %r15	;  3 bytes
+M00000000000003aa:	jle	0x4794cf <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x3bf>	;  2 bytes
+M00000000000003ac:	movq	%rdi, %rbp	;  3 bytes
+M00000000000003af:	movl	$48, %esi	;  5 bytes
+M00000000000003b4:	movq	%r15, %rdx	;  3 bytes
+M00000000000003b7:	callq	0x4044e0 <memset@plt>	;  5 bytes
+M00000000000003bc:	movq	%rbp, %rdi	;  3 bytes
+M00000000000003bf:	addq	%r15, %rdi	;  3 bytes
+M00000000000003c2:	movq	8(%rsp), %rbx	;  5 bytes
+M00000000000003c7:	movb	41(%rbx), %al	;  3 bytes
+M00000000000003ca:	movb	%al, (%rdi)	;  2 bytes
+M00000000000003cc:	testl	%r13d, %r13d	;  3 bytes
+M00000000000003cf:	je	0x4794f1 <int BloombergLP::bdldfp::(anonymous namespace)::formatScientific<BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128>(char*, int, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128, BloombergLP::bdldfp::DecimalFormatConfig const&)+0x3e1>	;  2 bytes
+M00000000000003d1:	movslq	%r13d, %rdx	;  3 bytes
+M00000000000003d4:	incq	%rdi	;  3 bytes
+M00000000000003d7:	leaq	82(%rsp), %rsi	;  5 bytes
+M00000000000003dc:	callq	0x404970 <memmove@plt>	;  5 bytes
+M00000000000003e1:	movl	%r14d, %eax	;  3 bytes
+M00000000000003e4:	addq	$88, %rsp	;  4 bytes
+M00000000000003e8:	popq	%rbx	;  1 bytes
+M00000000000003e9:	popq	%r12	;  2 bytes
+M00000000000003eb:	popq	%r13	;  2 bytes
+M00000000000003ed:	popq	%r14	;  2 bytes
+M00000000000003ef:	popq	%r15	;  2 bytes
+M00000000000003f1:	popq	%rbp	;  1 bytes
+M00000000000003f2:	retq		;  1 bytes
+M00000000000003f3:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M00000000000003fd:	nopl	(%rax)	;  3 bytes
 ```

@@ -2,56 +2,56 @@
 
 ```nasm
 000000000045afd0 <BloombergLP::s_baltst::MyChoice::operator=(BloombergLP::s_baltst::MyChoice&&)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 01	pushq	%rbx
-0000000000000002: 01	pushq	%rax
-0000000000000003: 03	movq	%rdi, %rbx
-0000000000000006: 03	cmpq	%rsi, %rdi
-0000000000000009: 02	je	0x45b053 <BloombergLP::s_baltst::MyChoice::operator=(BloombergLP::s_baltst::MyChoice&&)+0x83>
-000000000000000b: 03	movl	48(%rsi), %eax
-000000000000000e: 03	cmpl	$1, %eax
-0000000000000011: 02	je	0x45aff9 <BloombergLP::s_baltst::MyChoice::operator=(BloombergLP::s_baltst::MyChoice&&)+0x29>
-0000000000000013: 02	testl	%eax, %eax
-0000000000000015: 02	jne	0x45b003 <BloombergLP::s_baltst::MyChoice::operator=(BloombergLP::s_baltst::MyChoice&&)+0x33>
-0000000000000017: 02	movl	(%rsi), %ebp
-0000000000000019: 03	movl	48(%rbx), %eax
-000000000000001c: 03	cmpl	$1, %eax
-000000000000001f: 02	je	0x45b02e <BloombergLP::s_baltst::MyChoice::operator=(BloombergLP::s_baltst::MyChoice&&)+0x5e>
-0000000000000021: 02	testl	%eax, %eax
-0000000000000023: 02	jne	0x45b04a <BloombergLP::s_baltst::MyChoice::operator=(BloombergLP::s_baltst::MyChoice&&)+0x7a>
-0000000000000025: 02	movl	%ebp, (%rbx)
-0000000000000027: 02	jmp	0x45b053 <BloombergLP::s_baltst::MyChoice::operator=(BloombergLP::s_baltst::MyChoice&&)+0x83>
-0000000000000029: 03	movq	%rbx, %rdi
-000000000000002c: 05	callq	0x45b070 <BloombergLP::s_baltst::MyChoice::makeSelection2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >&&)>
-0000000000000031: 02	jmp	0x45b053 <BloombergLP::s_baltst::MyChoice::operator=(BloombergLP::s_baltst::MyChoice&&)+0x83>
-0000000000000033: 04	cmpl	$1, 48(%rbx)
-0000000000000037: 02	jne	0x45b025 <BloombergLP::s_baltst::MyChoice::operator=(BloombergLP::s_baltst::MyChoice&&)+0x55>
-0000000000000039: 05	cmpq	$23, 32(%rbx)
-000000000000003e: 02	je	0x45b01d <BloombergLP::s_baltst::MyChoice::operator=(BloombergLP::s_baltst::MyChoice&&)+0x4d>
-0000000000000040: 03	movq	(%rbx), %rsi
-0000000000000043: 04	movq	40(%rbx), %rdi
-0000000000000047: 03	movq	(%rdi), %rax
-000000000000004a: 03	callq	*24(%rax)
-000000000000004d: 08	movq	$-1, 24(%rbx)
-0000000000000055: 07	movl	$4294967295, 48(%rbx)
-000000000000005c: 02	jmp	0x45b053 <BloombergLP::s_baltst::MyChoice::operator=(BloombergLP::s_baltst::MyChoice&&)+0x83>
-000000000000005e: 05	cmpq	$23, 32(%rbx)
-0000000000000063: 02	je	0x45b042 <BloombergLP::s_baltst::MyChoice::operator=(BloombergLP::s_baltst::MyChoice&&)+0x72>
-0000000000000065: 03	movq	(%rbx), %rsi
-0000000000000068: 04	movq	40(%rbx), %rdi
-000000000000006c: 03	movq	(%rdi), %rax
-000000000000006f: 03	callq	*24(%rax)
-0000000000000072: 08	movq	$-1, 24(%rbx)
-000000000000007a: 02	movl	%ebp, (%rbx)
-000000000000007c: 07	movl	$0, 48(%rbx)
-0000000000000083: 03	movq	%rbx, %rax
-0000000000000086: 04	addq	$8, %rsp
-000000000000008a: 01	popq	%rbx
-000000000000008b: 01	popq	%rbp
-000000000000008c: 01	retq	
-000000000000008d: 03	movq	%rax, %rdi
-0000000000000090: 05	callq	0x444ad0 <__clang_call_terminate>
-0000000000000095: 03	movq	%rax, %rdi
-0000000000000098: 05	callq	0x444ad0 <__clang_call_terminate>
-000000000000009d: 03	nopl	(%rax)
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%rbx	;  1 bytes
+M0000000000000002:	pushq	%rax	;  1 bytes
+M0000000000000003:	movq	%rdi, %rbx	;  3 bytes
+M0000000000000006:	cmpq	%rsi, %rdi	;  3 bytes
+M0000000000000009:	je	0x45b053 <BloombergLP::s_baltst::MyChoice::operator=(BloombergLP::s_baltst::MyChoice&&)+0x83>	;  2 bytes
+M000000000000000b:	movl	48(%rsi), %eax	;  3 bytes
+M000000000000000e:	cmpl	$1, %eax	;  3 bytes
+M0000000000000011:	je	0x45aff9 <BloombergLP::s_baltst::MyChoice::operator=(BloombergLP::s_baltst::MyChoice&&)+0x29>	;  2 bytes
+M0000000000000013:	testl	%eax, %eax	;  2 bytes
+M0000000000000015:	jne	0x45b003 <BloombergLP::s_baltst::MyChoice::operator=(BloombergLP::s_baltst::MyChoice&&)+0x33>	;  2 bytes
+M0000000000000017:	movl	(%rsi), %ebp	;  2 bytes
+M0000000000000019:	movl	48(%rbx), %eax	;  3 bytes
+M000000000000001c:	cmpl	$1, %eax	;  3 bytes
+M000000000000001f:	je	0x45b02e <BloombergLP::s_baltst::MyChoice::operator=(BloombergLP::s_baltst::MyChoice&&)+0x5e>	;  2 bytes
+M0000000000000021:	testl	%eax, %eax	;  2 bytes
+M0000000000000023:	jne	0x45b04a <BloombergLP::s_baltst::MyChoice::operator=(BloombergLP::s_baltst::MyChoice&&)+0x7a>	;  2 bytes
+M0000000000000025:	movl	%ebp, (%rbx)	;  2 bytes
+M0000000000000027:	jmp	0x45b053 <BloombergLP::s_baltst::MyChoice::operator=(BloombergLP::s_baltst::MyChoice&&)+0x83>	;  2 bytes
+M0000000000000029:	movq	%rbx, %rdi	;  3 bytes
+M000000000000002c:	callq	0x45b070 <BloombergLP::s_baltst::MyChoice::makeSelection2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >&&)>	;  5 bytes
+M0000000000000031:	jmp	0x45b053 <BloombergLP::s_baltst::MyChoice::operator=(BloombergLP::s_baltst::MyChoice&&)+0x83>	;  2 bytes
+M0000000000000033:	cmpl	$1, 48(%rbx)	;  4 bytes
+M0000000000000037:	jne	0x45b025 <BloombergLP::s_baltst::MyChoice::operator=(BloombergLP::s_baltst::MyChoice&&)+0x55>	;  2 bytes
+M0000000000000039:	cmpq	$23, 32(%rbx)	;  5 bytes
+M000000000000003e:	je	0x45b01d <BloombergLP::s_baltst::MyChoice::operator=(BloombergLP::s_baltst::MyChoice&&)+0x4d>	;  2 bytes
+M0000000000000040:	movq	(%rbx), %rsi	;  3 bytes
+M0000000000000043:	movq	40(%rbx), %rdi	;  4 bytes
+M0000000000000047:	movq	(%rdi), %rax	;  3 bytes
+M000000000000004a:	callq	*24(%rax)	;  3 bytes
+M000000000000004d:	movq	$-1, 24(%rbx)	;  8 bytes
+M0000000000000055:	movl	$4294967295, 48(%rbx)	;  7 bytes
+M000000000000005c:	jmp	0x45b053 <BloombergLP::s_baltst::MyChoice::operator=(BloombergLP::s_baltst::MyChoice&&)+0x83>	;  2 bytes
+M000000000000005e:	cmpq	$23, 32(%rbx)	;  5 bytes
+M0000000000000063:	je	0x45b042 <BloombergLP::s_baltst::MyChoice::operator=(BloombergLP::s_baltst::MyChoice&&)+0x72>	;  2 bytes
+M0000000000000065:	movq	(%rbx), %rsi	;  3 bytes
+M0000000000000068:	movq	40(%rbx), %rdi	;  4 bytes
+M000000000000006c:	movq	(%rdi), %rax	;  3 bytes
+M000000000000006f:	callq	*24(%rax)	;  3 bytes
+M0000000000000072:	movq	$-1, 24(%rbx)	;  8 bytes
+M000000000000007a:	movl	%ebp, (%rbx)	;  2 bytes
+M000000000000007c:	movl	$0, 48(%rbx)	;  7 bytes
+M0000000000000083:	movq	%rbx, %rax	;  3 bytes
+M0000000000000086:	addq	$8, %rsp	;  4 bytes
+M000000000000008a:	popq	%rbx	;  1 bytes
+M000000000000008b:	popq	%rbp	;  1 bytes
+M000000000000008c:	retq		;  1 bytes
+M000000000000008d:	movq	%rax, %rdi	;  3 bytes
+M0000000000000090:	callq	0x444ad0 <__clang_call_terminate>	;  5 bytes
+M0000000000000095:	movq	%rax, %rdi	;  3 bytes
+M0000000000000098:	callq	0x444ad0 <__clang_call_terminate>	;  5 bytes
+M000000000000009d:	nopl	(%rax)	;  3 bytes
 ```

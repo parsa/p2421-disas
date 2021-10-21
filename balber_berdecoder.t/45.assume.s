@@ -1,77 +1,77 @@
 000000000045ca70 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::makeMyChoice2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)>:
-0000000000000000: 02	pushq	%r15
-0000000000000002: 02	pushq	%r14
-0000000000000004: 01	pushq	%rbx
-0000000000000005: 03	movq	%rsi, %r14
-0000000000000008: 03	movq	%rdi, %rbx
-000000000000000b: 03	movl	48(%rdi), %eax
-000000000000000e: 02	testl	%eax, %eax
-0000000000000010: 02	je	0x45cabf <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::makeMyChoice2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)+0x4f>
-0000000000000012: 03	cmpl	$1, %eax
-0000000000000015: 02	jne	0x45cabf <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::makeMyChoice2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)+0x4f>
-0000000000000017: 03	cmpq	%r14, %rbx
-000000000000001a: 06	je	0x45cb66 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::makeMyChoice2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)+0xf6>
-0000000000000020: 04	movq	24(%r14), %rdx
-0000000000000024: 05	cmpq	$23, 32(%r14)
-0000000000000029: 02	je	0x45ca9e <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::makeMyChoice2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)+0x2e>
-000000000000002b: 03	movq	(%r14), %r14
-000000000000002e: 04	movq	24(%rbx), %r15
-0000000000000032: 08	movq	$0, 24(%rbx)
-000000000000003a: 05	movl	$4826672, %ecx
-000000000000003f: 03	movq	%rbx, %rdi
-0000000000000042: 03	movq	%r14, %rsi
-0000000000000045: 05	callq	0x471870 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-000000000000004a: 05	jmp	0x45cb66 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::makeMyChoice2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)+0xf6>
-000000000000004f: 07	movl	$4294967295, 48(%rbx)
-0000000000000056: 04	movq	56(%rbx), %rdi
-000000000000005a: 03	testq	%rdi, %rdi
-000000000000005d: 02	jne	0x45cae3 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::makeMyChoice2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)+0x73>
-000000000000005f: 07	movq	2730266(%rip), %rdi  # 6f73f0 <BloombergLP::bslma::Default::s_defaultAllocator>
-0000000000000066: 03	testq	%rdi, %rdi
-0000000000000069: 02	jne	0x45cae3 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::makeMyChoice2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)+0x73>
-000000000000006b: 05	callq	0x46d200 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-0000000000000070: 03	movq	%rax, %rdi
-0000000000000073: 04	movq	32(%r14), %rax
-0000000000000077: 04	movq	%rax, 32(%rbx)
-000000000000007b: 04	movups	(%r14), %xmm0
-000000000000007f: 05	movups	16(%r14), %xmm1
-0000000000000084: 04	movups	%xmm1, 16(%rbx)
-0000000000000088: 03	movups	%xmm0, (%rbx)
-000000000000008b: 04	movq	%rdi, 40(%rbx)
-000000000000008f: 04	cmpq	$23, %rax
-0000000000000093: 02	je	0x45cb5f <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::makeMyChoice2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)+0xef>
-0000000000000095: 04	movq	24(%r14), %rax
-0000000000000099: 04	cmpq	$23, %rax
-000000000000009d: 05	movl	$23, %esi
-00000000000000a2: 04	cmovaq	%rax, %rsi
-00000000000000a6: 07	movq	$0, (%rbx)
-00000000000000ad: 04	movq	%rax, 24(%rbx)
-00000000000000b1: 04	movq	%rsi, 32(%rbx)
-00000000000000b5: 04	cmpq	$24, %rax
-00000000000000b9: 02	jb	0x45cb3e <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::makeMyChoice2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)+0xce>
-00000000000000bb: 03	incq	%rsi
-00000000000000be: 03	movq	(%rdi), %rax
-00000000000000c1: 03	callq	*16(%rax)
-00000000000000c4: 03	movq	%rax, (%rbx)
-00000000000000c7: 05	cmpq	$23, 32(%rbx)
-00000000000000cc: 02	jne	0x45cb41 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::makeMyChoice2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)+0xd1>
-00000000000000ce: 03	movq	%rbx, %rax
-00000000000000d1: 04	movq	24(%rbx), %rdx
-00000000000000d5: 03	incq	%rdx
-00000000000000d8: 02	je	0x45cb5f <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::makeMyChoice2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)+0xef>
-00000000000000da: 05	cmpq	$23, 32(%r14)
-00000000000000df: 02	je	0x45cb54 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::makeMyChoice2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)+0xe4>
-00000000000000e1: 03	movq	(%r14), %r14
-00000000000000e4: 03	movq	%rax, %rdi
-00000000000000e7: 03	movq	%r14, %rsi
-00000000000000ea: 05	callq	0x404980 <memcpy@plt>
-00000000000000ef: 07	movl	$1, 48(%rbx)
-00000000000000f6: 03	movq	%rbx, %rax
-00000000000000f9: 01	popq	%rbx
-00000000000000fa: 02	popq	%r14
-00000000000000fc: 02	popq	%r15
-00000000000000fe: 01	retq	
-00000000000000ff: 04	movq	%r15, 24(%rbx)
-0000000000000103: 03	movq	%rax, %rdi
-0000000000000106: 05	callq	0x404910 <_Unwind_Resume@plt>
-000000000000010b: 05	nopl	(%rax,%rax)
+M0000000000000000:	pushq	%r15	;  2 bytes
+M0000000000000002:	pushq	%r14	;  2 bytes
+M0000000000000004:	pushq	%rbx	;  1 bytes
+M0000000000000005:	movq	%rsi, %r14	;  3 bytes
+M0000000000000008:	movq	%rdi, %rbx	;  3 bytes
+M000000000000000b:	movl	48(%rdi), %eax	;  3 bytes
+M000000000000000e:	testl	%eax, %eax	;  2 bytes
+M0000000000000010:	je	0x45cabf <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::makeMyChoice2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)+0x4f>	;  2 bytes
+M0000000000000012:	cmpl	$1, %eax	;  3 bytes
+M0000000000000015:	jne	0x45cabf <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::makeMyChoice2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)+0x4f>	;  2 bytes
+M0000000000000017:	cmpq	%r14, %rbx	;  3 bytes
+M000000000000001a:	je	0x45cb66 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::makeMyChoice2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)+0xf6>	;  6 bytes
+M0000000000000020:	movq	24(%r14), %rdx	;  4 bytes
+M0000000000000024:	cmpq	$23, 32(%r14)	;  5 bytes
+M0000000000000029:	je	0x45ca9e <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::makeMyChoice2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)+0x2e>	;  2 bytes
+M000000000000002b:	movq	(%r14), %r14	;  3 bytes
+M000000000000002e:	movq	24(%rbx), %r15	;  4 bytes
+M0000000000000032:	movq	$0, 24(%rbx)	;  8 bytes
+M000000000000003a:	movl	$4826672, %ecx	;  5 bytes
+M000000000000003f:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000042:	movq	%r14, %rsi	;  3 bytes
+M0000000000000045:	callq	0x471870 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M000000000000004a:	jmp	0x45cb66 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::makeMyChoice2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)+0xf6>	;  5 bytes
+M000000000000004f:	movl	$4294967295, 48(%rbx)	;  7 bytes
+M0000000000000056:	movq	56(%rbx), %rdi	;  4 bytes
+M000000000000005a:	testq	%rdi, %rdi	;  3 bytes
+M000000000000005d:	jne	0x45cae3 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::makeMyChoice2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)+0x73>	;  2 bytes
+M000000000000005f:	movq	2730266(%rip), %rdi  # 6f73f0 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M0000000000000066:	testq	%rdi, %rdi	;  3 bytes
+M0000000000000069:	jne	0x45cae3 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::makeMyChoice2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)+0x73>	;  2 bytes
+M000000000000006b:	callq	0x46d200 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M0000000000000070:	movq	%rax, %rdi	;  3 bytes
+M0000000000000073:	movq	32(%r14), %rax	;  4 bytes
+M0000000000000077:	movq	%rax, 32(%rbx)	;  4 bytes
+M000000000000007b:	movups	(%r14), %xmm0	;  4 bytes
+M000000000000007f:	movups	16(%r14), %xmm1	;  5 bytes
+M0000000000000084:	movups	%xmm1, 16(%rbx)	;  4 bytes
+M0000000000000088:	movups	%xmm0, (%rbx)	;  3 bytes
+M000000000000008b:	movq	%rdi, 40(%rbx)	;  4 bytes
+M000000000000008f:	cmpq	$23, %rax	;  4 bytes
+M0000000000000093:	je	0x45cb5f <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::makeMyChoice2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)+0xef>	;  2 bytes
+M0000000000000095:	movq	24(%r14), %rax	;  4 bytes
+M0000000000000099:	cmpq	$23, %rax	;  4 bytes
+M000000000000009d:	movl	$23, %esi	;  5 bytes
+M00000000000000a2:	cmovaq	%rax, %rsi	;  4 bytes
+M00000000000000a6:	movq	$0, (%rbx)	;  7 bytes
+M00000000000000ad:	movq	%rax, 24(%rbx)	;  4 bytes
+M00000000000000b1:	movq	%rsi, 32(%rbx)	;  4 bytes
+M00000000000000b5:	cmpq	$24, %rax	;  4 bytes
+M00000000000000b9:	jb	0x45cb3e <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::makeMyChoice2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)+0xce>	;  2 bytes
+M00000000000000bb:	incq	%rsi	;  3 bytes
+M00000000000000be:	movq	(%rdi), %rax	;  3 bytes
+M00000000000000c1:	callq	*16(%rax)	;  3 bytes
+M00000000000000c4:	movq	%rax, (%rbx)	;  3 bytes
+M00000000000000c7:	cmpq	$23, 32(%rbx)	;  5 bytes
+M00000000000000cc:	jne	0x45cb41 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::makeMyChoice2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)+0xd1>	;  2 bytes
+M00000000000000ce:	movq	%rbx, %rax	;  3 bytes
+M00000000000000d1:	movq	24(%rbx), %rdx	;  4 bytes
+M00000000000000d5:	incq	%rdx	;  3 bytes
+M00000000000000d8:	je	0x45cb5f <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::makeMyChoice2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)+0xef>	;  2 bytes
+M00000000000000da:	cmpq	$23, 32(%r14)	;  5 bytes
+M00000000000000df:	je	0x45cb54 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::makeMyChoice2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)+0xe4>	;  2 bytes
+M00000000000000e1:	movq	(%r14), %r14	;  3 bytes
+M00000000000000e4:	movq	%rax, %rdi	;  3 bytes
+M00000000000000e7:	movq	%r14, %rsi	;  3 bytes
+M00000000000000ea:	callq	0x404980 <memcpy@plt>	;  5 bytes
+M00000000000000ef:	movl	$1, 48(%rbx)	;  7 bytes
+M00000000000000f6:	movq	%rbx, %rax	;  3 bytes
+M00000000000000f9:	popq	%rbx	;  1 bytes
+M00000000000000fa:	popq	%r14	;  2 bytes
+M00000000000000fc:	popq	%r15	;  2 bytes
+M00000000000000fe:	retq		;  1 bytes
+M00000000000000ff:	movq	%r15, 24(%rbx)	;  4 bytes
+M0000000000000103:	movq	%rax, %rdi	;  3 bytes
+M0000000000000106:	callq	0x404910 <_Unwind_Resume@plt>	;  5 bytes
+M000000000000010b:	nopl	(%rax,%rax)	;  5 bytes

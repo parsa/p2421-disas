@@ -1,18 +1,18 @@
 00000000004b67b0 <BloombergLP::s_baltst::MySequenceWithChoice::operator=(BloombergLP::s_baltst::MySequenceWithChoice&&)>:
-0000000000000000: 03	movq	%rdi, %rax
-0000000000000003: 03	cmpq	%rsi, %rdi
-0000000000000006: 02	je	0x4b67c9 <BloombergLP::s_baltst::MySequenceWithChoice::operator=(BloombergLP::s_baltst::MySequenceWithChoice&&)+0x19>
-0000000000000008: 04	cmpl	$0, 4(%rsi)
-000000000000000c: 02	je	0x4b67ca <BloombergLP::s_baltst::MySequenceWithChoice::operator=(BloombergLP::s_baltst::MySequenceWithChoice&&)+0x1a>
-000000000000000e: 04	cmpl	$0, 4(%rax)
-0000000000000012: 07	movl	$4294967295, 4(%rax)
-0000000000000019: 01	retq	
-000000000000001a: 02	movl	(%rsi), %ecx
-000000000000001c: 04	cmpl	$0, 4(%rax)
-0000000000000020: 02	je	0x4b67dc <BloombergLP::s_baltst::MySequenceWithChoice::operator=(BloombergLP::s_baltst::MySequenceWithChoice&&)+0x2c>
-0000000000000022: 02	movl	%ecx, (%rax)
-0000000000000024: 07	movl	$0, 4(%rax)
-000000000000002b: 01	retq	
-000000000000002c: 02	movl	%ecx, (%rax)
-000000000000002e: 01	retq	
-000000000000002f: 01	nop	
+M0000000000000000:	movq	%rdi, %rax	;  3 bytes
+M0000000000000003:	cmpq	%rsi, %rdi	;  3 bytes
+M0000000000000006:	je	0x4b67c9 <BloombergLP::s_baltst::MySequenceWithChoice::operator=(BloombergLP::s_baltst::MySequenceWithChoice&&)+0x19>	;  2 bytes
+M0000000000000008:	cmpl	$0, 4(%rsi)	;  4 bytes
+M000000000000000c:	je	0x4b67ca <BloombergLP::s_baltst::MySequenceWithChoice::operator=(BloombergLP::s_baltst::MySequenceWithChoice&&)+0x1a>	;  2 bytes
+M000000000000000e:	cmpl	$0, 4(%rax)	;  4 bytes
+M0000000000000012:	movl	$4294967295, 4(%rax)	;  7 bytes
+M0000000000000019:	retq		;  1 bytes
+M000000000000001a:	movl	(%rsi), %ecx	;  2 bytes
+M000000000000001c:	cmpl	$0, 4(%rax)	;  4 bytes
+M0000000000000020:	je	0x4b67dc <BloombergLP::s_baltst::MySequenceWithChoice::operator=(BloombergLP::s_baltst::MySequenceWithChoice&&)+0x2c>	;  2 bytes
+M0000000000000022:	movl	%ecx, (%rax)	;  2 bytes
+M0000000000000024:	movl	$0, 4(%rax)	;  7 bytes
+M000000000000002b:	retq		;  1 bytes
+M000000000000002c:	movl	%ecx, (%rax)	;  2 bytes
+M000000000000002e:	retq		;  1 bytes
+M000000000000002f:	nop		;  1 bytes

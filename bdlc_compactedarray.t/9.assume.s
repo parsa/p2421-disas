@@ -1,154 +1,154 @@
 0000000000432420 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 02	pushq	%r13
-0000000000000007: 02	pushq	%r12
-0000000000000009: 01	pushq	%rbx
-000000000000000a: 01	pushq	%rax
-000000000000000b: 03	movq	%rdx, %r14
-000000000000000e: 03	movq	%rdi, %r12
-0000000000000011: 03	cmpq	%rsi, %rdi
-0000000000000014: 06	jae	0x43254b <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0x12b>
-000000000000001a: 03	movq	%rsi, %r15
-000000000000001d: 04	leaq	-56(%rsi), %rbx
-0000000000000021: 03	movq	(%rcx), %rdi
-0000000000000024: 04	movq	-8(%rsi), %rax
-0000000000000028: 04	movq	%rax, 48(%rsi)
-000000000000002c: 04	movups	-56(%rsi), %xmm0
-0000000000000030: 04	movups	-40(%rsi), %xmm1
-0000000000000034: 03	movups	%xmm0, (%rsi)
-0000000000000037: 04	movups	%xmm1, 16(%rsi)
-000000000000003b: 04	movq	-24(%rsi), %rax
-000000000000003f: 04	movq	%rax, 32(%rsi)
-0000000000000043: 04	movq	%rdi, 40(%rsi)
-0000000000000047: 04	cmpq	$23, %rax
-000000000000004b: 02	je	0x4324c8 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0xa8>
-000000000000004d: 04	movq	-32(%r15), %rax
-0000000000000051: 04	cmpq	$23, %rax
-0000000000000055: 05	movl	$23, %esi
-000000000000005a: 04	cmovaq	%rax, %rsi
-000000000000005e: 07	movq	$0, (%r15)
-0000000000000065: 04	movq	%rax, 24(%r15)
-0000000000000069: 04	movq	%rsi, 32(%r15)
-000000000000006d: 04	cmpq	$24, %rax
-0000000000000071: 02	jb	0x4324a6 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0x86>
-0000000000000073: 03	incq	%rsi
-0000000000000076: 03	movq	(%rdi), %rax
-0000000000000079: 03	callq	*16(%rax)
-000000000000007c: 03	movq	%rax, (%r15)
-000000000000007f: 05	cmpq	$23, 32(%r15)
-0000000000000084: 02	jne	0x4324a9 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0x89>
-0000000000000086: 03	movq	%r15, %rax
-0000000000000089: 04	movq	24(%r15), %rdx
-000000000000008d: 03	incq	%rdx
-0000000000000090: 02	je	0x4324c8 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0xa8>
-0000000000000092: 05	cmpq	$23, -24(%r15)
-0000000000000097: 03	movq	%rbx, %rsi
-000000000000009a: 02	je	0x4324c0 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0xa0>
-000000000000009c: 04	movq	-56(%r15), %rsi
-00000000000000a0: 03	movq	%rax, %rdi
-00000000000000a3: 05	callq	0x403ea0 <memcpy@plt>
-00000000000000a8: 03	cmpq	%r12, %rbx
-00000000000000ab: 02	je	0x43250f <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0xef>
-00000000000000ad: 03	nopl	(%rax)
-00000000000000b0: 04	leaq	-56(%rbx), %r13
-00000000000000b4: 05	cmpq	$23, -24(%rbx)
-00000000000000b9: 03	movq	%r13, %rsi
-00000000000000bc: 02	je	0x4324e2 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0xc2>
-00000000000000be: 04	movq	-56(%rbx), %rsi
-00000000000000c2: 04	movq	-32(%rbx), %rdx
-00000000000000c6: 04	movq	24(%rbx), %rbp
-00000000000000ca: 08	movq	$0, 24(%rbx)
-00000000000000d2: 05	movl	$4626239, %ecx
-00000000000000d7: 03	movq	%rbx, %rdi
-00000000000000da: 05	callq	0x441770 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-00000000000000df: 04	movq	-8(%rbx), %rax
-00000000000000e3: 04	movq	%rax, 48(%rbx)
-00000000000000e7: 03	movq	%r13, %rbx
-00000000000000ea: 03	cmpq	%r13, %r12
-00000000000000ed: 02	jne	0x4324d0 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0xb0>
-00000000000000ef: 03	cmpq	%r14, %r12
-00000000000000f2: 02	je	0x432540 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0x120>
-00000000000000f4: 04	movq	24(%r14), %rdx
-00000000000000f8: 05	cmpq	$23, 32(%r14)
-00000000000000fd: 03	movq	%r14, %rsi
-0000000000000100: 02	je	0x432525 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0x105>
-0000000000000102: 03	movq	(%r14), %rsi
-0000000000000105: 05	movq	24(%r12), %rbx
-000000000000010a: 09	movq	$0, 24(%r12)
-0000000000000113: 05	movl	$4626239, %ecx
-0000000000000118: 03	movq	%r12, %rdi
-000000000000011b: 05	callq	0x441770 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-0000000000000120: 04	movq	48(%r14), %rax
-0000000000000124: 05	movq	%rax, 48(%r12)
-0000000000000129: 02	jmp	0x4325ca <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0x1aa>
-000000000000012b: 03	movq	(%rcx), %rdi
-000000000000012e: 04	movq	48(%r14), %rax
-0000000000000132: 05	movq	%rax, 48(%r12)
-0000000000000137: 04	movups	(%r14), %xmm0
-000000000000013b: 05	movups	16(%r14), %xmm1
-0000000000000140: 05	movups	%xmm0, (%r12)
-0000000000000145: 06	movups	%xmm1, 16(%r12)
-000000000000014b: 04	movq	32(%r14), %rax
-000000000000014f: 05	movq	%rax, 32(%r12)
-0000000000000154: 05	movq	%rdi, 40(%r12)
-0000000000000159: 04	cmpq	$23, %rax
-000000000000015d: 02	je	0x4325ca <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0x1aa>
-000000000000015f: 04	movq	24(%r14), %rax
-0000000000000163: 04	cmpq	$23, %rax
-0000000000000167: 05	movl	$23, %esi
-000000000000016c: 04	cmovaq	%rax, %rsi
-0000000000000170: 08	movq	$0, (%r12)
-0000000000000178: 05	movq	%rax, 24(%r12)
-000000000000017d: 05	movq	%rsi, 32(%r12)
-0000000000000182: 04	cmpq	$24, %rax
-0000000000000186: 02	jb	0x4325bd <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0x19d>
-0000000000000188: 03	incq	%rsi
-000000000000018b: 03	movq	(%rdi), %rax
-000000000000018e: 03	callq	*16(%rax)
-0000000000000191: 04	movq	%rax, (%r12)
-0000000000000195: 06	cmpq	$23, 32(%r12)
-000000000000019b: 02	jne	0x4325c0 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0x1a0>
-000000000000019d: 03	movq	%r12, %rax
-00000000000001a0: 05	movq	24(%r12), %rdx
-00000000000001a5: 03	incq	%rdx
-00000000000001a8: 02	jne	0x4325d9 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0x1b9>
-00000000000001aa: 04	addq	$8, %rsp
-00000000000001ae: 01	popq	%rbx
-00000000000001af: 02	popq	%r12
-00000000000001b1: 02	popq	%r13
-00000000000001b3: 02	popq	%r14
-00000000000001b5: 02	popq	%r15
-00000000000001b7: 01	popq	%rbp
-00000000000001b8: 01	retq	
-00000000000001b9: 05	cmpq	$23, 32(%r14)
-00000000000001be: 02	je	0x4325e3 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0x1c3>
-00000000000001c0: 03	movq	(%r14), %r14
-00000000000001c3: 03	movq	%rax, %rdi
-00000000000001c6: 03	movq	%r14, %rsi
-00000000000001c9: 04	addq	$8, %rsp
-00000000000001cd: 01	popq	%rbx
-00000000000001ce: 02	popq	%r12
-00000000000001d0: 02	popq	%r13
-00000000000001d2: 02	popq	%r14
-00000000000001d4: 02	popq	%r15
-00000000000001d6: 01	popq	%rbp
-00000000000001d7: 05	jmp	0x403ea0 <memcpy@plt>
-00000000000001dc: 03	movq	%rax, %r14
-00000000000001df: 05	movq	%rbx, 24(%r12)
-00000000000001e4: 02	jmp	0x43260d <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0x1ed>
-00000000000001e6: 03	movq	%rax, %r14
-00000000000001e9: 04	movq	%rbp, 24(%rbx)
-00000000000001ed: 05	cmpq	$23, 32(%r15)
-00000000000001f2: 02	je	0x432621 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0x201>
-00000000000001f4: 03	movq	(%r15), %rsi
-00000000000001f7: 04	movq	40(%r15), %rdi
-00000000000001fb: 03	movq	(%rdi), %rax
-00000000000001fe: 03	callq	*24(%rax)
-0000000000000201: 08	movq	$-1, 24(%r15)
-0000000000000209: 03	movq	%r14, %rdi
-000000000000020c: 05	callq	0x403e50 <_Unwind_Resume@plt>
-0000000000000211: 03	movq	%rax, %rdi
-0000000000000214: 05	callq	0x42f650 <__clang_call_terminate>
-0000000000000219: 07	nopl	(%rax)
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%r13	;  2 bytes
+M0000000000000007:	pushq	%r12	;  2 bytes
+M0000000000000009:	pushq	%rbx	;  1 bytes
+M000000000000000a:	pushq	%rax	;  1 bytes
+M000000000000000b:	movq	%rdx, %r14	;  3 bytes
+M000000000000000e:	movq	%rdi, %r12	;  3 bytes
+M0000000000000011:	cmpq	%rsi, %rdi	;  3 bytes
+M0000000000000014:	jae	0x43254b <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0x12b>	;  6 bytes
+M000000000000001a:	movq	%rsi, %r15	;  3 bytes
+M000000000000001d:	leaq	-56(%rsi), %rbx	;  4 bytes
+M0000000000000021:	movq	(%rcx), %rdi	;  3 bytes
+M0000000000000024:	movq	-8(%rsi), %rax	;  4 bytes
+M0000000000000028:	movq	%rax, 48(%rsi)	;  4 bytes
+M000000000000002c:	movups	-56(%rsi), %xmm0	;  4 bytes
+M0000000000000030:	movups	-40(%rsi), %xmm1	;  4 bytes
+M0000000000000034:	movups	%xmm0, (%rsi)	;  3 bytes
+M0000000000000037:	movups	%xmm1, 16(%rsi)	;  4 bytes
+M000000000000003b:	movq	-24(%rsi), %rax	;  4 bytes
+M000000000000003f:	movq	%rax, 32(%rsi)	;  4 bytes
+M0000000000000043:	movq	%rdi, 40(%rsi)	;  4 bytes
+M0000000000000047:	cmpq	$23, %rax	;  4 bytes
+M000000000000004b:	je	0x4324c8 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0xa8>	;  2 bytes
+M000000000000004d:	movq	-32(%r15), %rax	;  4 bytes
+M0000000000000051:	cmpq	$23, %rax	;  4 bytes
+M0000000000000055:	movl	$23, %esi	;  5 bytes
+M000000000000005a:	cmovaq	%rax, %rsi	;  4 bytes
+M000000000000005e:	movq	$0, (%r15)	;  7 bytes
+M0000000000000065:	movq	%rax, 24(%r15)	;  4 bytes
+M0000000000000069:	movq	%rsi, 32(%r15)	;  4 bytes
+M000000000000006d:	cmpq	$24, %rax	;  4 bytes
+M0000000000000071:	jb	0x4324a6 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0x86>	;  2 bytes
+M0000000000000073:	incq	%rsi	;  3 bytes
+M0000000000000076:	movq	(%rdi), %rax	;  3 bytes
+M0000000000000079:	callq	*16(%rax)	;  3 bytes
+M000000000000007c:	movq	%rax, (%r15)	;  3 bytes
+M000000000000007f:	cmpq	$23, 32(%r15)	;  5 bytes
+M0000000000000084:	jne	0x4324a9 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0x89>	;  2 bytes
+M0000000000000086:	movq	%r15, %rax	;  3 bytes
+M0000000000000089:	movq	24(%r15), %rdx	;  4 bytes
+M000000000000008d:	incq	%rdx	;  3 bytes
+M0000000000000090:	je	0x4324c8 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0xa8>	;  2 bytes
+M0000000000000092:	cmpq	$23, -24(%r15)	;  5 bytes
+M0000000000000097:	movq	%rbx, %rsi	;  3 bytes
+M000000000000009a:	je	0x4324c0 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0xa0>	;  2 bytes
+M000000000000009c:	movq	-56(%r15), %rsi	;  4 bytes
+M00000000000000a0:	movq	%rax, %rdi	;  3 bytes
+M00000000000000a3:	callq	0x403ea0 <memcpy@plt>	;  5 bytes
+M00000000000000a8:	cmpq	%r12, %rbx	;  3 bytes
+M00000000000000ab:	je	0x43250f <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0xef>	;  2 bytes
+M00000000000000ad:	nopl	(%rax)	;  3 bytes
+M00000000000000b0:	leaq	-56(%rbx), %r13	;  4 bytes
+M00000000000000b4:	cmpq	$23, -24(%rbx)	;  5 bytes
+M00000000000000b9:	movq	%r13, %rsi	;  3 bytes
+M00000000000000bc:	je	0x4324e2 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0xc2>	;  2 bytes
+M00000000000000be:	movq	-56(%rbx), %rsi	;  4 bytes
+M00000000000000c2:	movq	-32(%rbx), %rdx	;  4 bytes
+M00000000000000c6:	movq	24(%rbx), %rbp	;  4 bytes
+M00000000000000ca:	movq	$0, 24(%rbx)	;  8 bytes
+M00000000000000d2:	movl	$4626239, %ecx	;  5 bytes
+M00000000000000d7:	movq	%rbx, %rdi	;  3 bytes
+M00000000000000da:	callq	0x441770 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M00000000000000df:	movq	-8(%rbx), %rax	;  4 bytes
+M00000000000000e3:	movq	%rax, 48(%rbx)	;  4 bytes
+M00000000000000e7:	movq	%r13, %rbx	;  3 bytes
+M00000000000000ea:	cmpq	%r13, %r12	;  3 bytes
+M00000000000000ed:	jne	0x4324d0 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0xb0>	;  2 bytes
+M00000000000000ef:	cmpq	%r14, %r12	;  3 bytes
+M00000000000000f2:	je	0x432540 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0x120>	;  2 bytes
+M00000000000000f4:	movq	24(%r14), %rdx	;  4 bytes
+M00000000000000f8:	cmpq	$23, 32(%r14)	;  5 bytes
+M00000000000000fd:	movq	%r14, %rsi	;  3 bytes
+M0000000000000100:	je	0x432525 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0x105>	;  2 bytes
+M0000000000000102:	movq	(%r14), %rsi	;  3 bytes
+M0000000000000105:	movq	24(%r12), %rbx	;  5 bytes
+M000000000000010a:	movq	$0, 24(%r12)	;  9 bytes
+M0000000000000113:	movl	$4626239, %ecx	;  5 bytes
+M0000000000000118:	movq	%r12, %rdi	;  3 bytes
+M000000000000011b:	callq	0x441770 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M0000000000000120:	movq	48(%r14), %rax	;  4 bytes
+M0000000000000124:	movq	%rax, 48(%r12)	;  5 bytes
+M0000000000000129:	jmp	0x4325ca <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0x1aa>	;  2 bytes
+M000000000000012b:	movq	(%rcx), %rdi	;  3 bytes
+M000000000000012e:	movq	48(%r14), %rax	;  4 bytes
+M0000000000000132:	movq	%rax, 48(%r12)	;  5 bytes
+M0000000000000137:	movups	(%r14), %xmm0	;  4 bytes
+M000000000000013b:	movups	16(%r14), %xmm1	;  5 bytes
+M0000000000000140:	movups	%xmm0, (%r12)	;  5 bytes
+M0000000000000145:	movups	%xmm1, 16(%r12)	;  6 bytes
+M000000000000014b:	movq	32(%r14), %rax	;  4 bytes
+M000000000000014f:	movq	%rax, 32(%r12)	;  5 bytes
+M0000000000000154:	movq	%rdi, 40(%r12)	;  5 bytes
+M0000000000000159:	cmpq	$23, %rax	;  4 bytes
+M000000000000015d:	je	0x4325ca <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0x1aa>	;  2 bytes
+M000000000000015f:	movq	24(%r14), %rax	;  4 bytes
+M0000000000000163:	cmpq	$23, %rax	;  4 bytes
+M0000000000000167:	movl	$23, %esi	;  5 bytes
+M000000000000016c:	cmovaq	%rax, %rsi	;  4 bytes
+M0000000000000170:	movq	$0, (%r12)	;  8 bytes
+M0000000000000178:	movq	%rax, 24(%r12)	;  5 bytes
+M000000000000017d:	movq	%rsi, 32(%r12)	;  5 bytes
+M0000000000000182:	cmpq	$24, %rax	;  4 bytes
+M0000000000000186:	jb	0x4325bd <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0x19d>	;  2 bytes
+M0000000000000188:	incq	%rsi	;  3 bytes
+M000000000000018b:	movq	(%rdi), %rax	;  3 bytes
+M000000000000018e:	callq	*16(%rax)	;  3 bytes
+M0000000000000191:	movq	%rax, (%r12)	;  4 bytes
+M0000000000000195:	cmpq	$23, 32(%r12)	;  6 bytes
+M000000000000019b:	jne	0x4325c0 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0x1a0>	;  2 bytes
+M000000000000019d:	movq	%r12, %rax	;  3 bytes
+M00000000000001a0:	movq	24(%r12), %rdx	;  5 bytes
+M00000000000001a5:	incq	%rdx	;  3 bytes
+M00000000000001a8:	jne	0x4325d9 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0x1b9>	;  2 bytes
+M00000000000001aa:	addq	$8, %rsp	;  4 bytes
+M00000000000001ae:	popq	%rbx	;  1 bytes
+M00000000000001af:	popq	%r12	;  2 bytes
+M00000000000001b1:	popq	%r13	;  2 bytes
+M00000000000001b3:	popq	%r14	;  2 bytes
+M00000000000001b5:	popq	%r15	;  2 bytes
+M00000000000001b7:	popq	%rbp	;  1 bytes
+M00000000000001b8:	retq		;  1 bytes
+M00000000000001b9:	cmpq	$23, 32(%r14)	;  5 bytes
+M00000000000001be:	je	0x4325e3 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0x1c3>	;  2 bytes
+M00000000000001c0:	movq	(%r14), %r14	;  3 bytes
+M00000000000001c3:	movq	%rax, %rdi	;  3 bytes
+M00000000000001c6:	movq	%r14, %rsi	;  3 bytes
+M00000000000001c9:	addq	$8, %rsp	;  4 bytes
+M00000000000001cd:	popq	%rbx	;  1 bytes
+M00000000000001ce:	popq	%r12	;  2 bytes
+M00000000000001d0:	popq	%r13	;  2 bytes
+M00000000000001d2:	popq	%r14	;  2 bytes
+M00000000000001d4:	popq	%r15	;  2 bytes
+M00000000000001d6:	popq	%rbp	;  1 bytes
+M00000000000001d7:	jmp	0x403ea0 <memcpy@plt>	;  5 bytes
+M00000000000001dc:	movq	%rax, %r14	;  3 bytes
+M00000000000001df:	movq	%rbx, 24(%r12)	;  5 bytes
+M00000000000001e4:	jmp	0x43260d <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0x1ed>	;  2 bytes
+M00000000000001e6:	movq	%rax, %r14	;  3 bytes
+M00000000000001e9:	movq	%rbp, 24(%rbx)	;  4 bytes
+M00000000000001ed:	cmpq	$23, 32(%r15)	;  5 bytes
+M00000000000001f2:	je	0x432621 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > >(BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >*, BloombergLP::bslmf::MovableRef_Helper<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::type, bsl::allocator<BloombergLP::bdlc::CompactedArray_CountedValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >, BloombergLP::bslmf::MetaInt<0>*)+0x201>	;  2 bytes
+M00000000000001f4:	movq	(%r15), %rsi	;  3 bytes
+M00000000000001f7:	movq	40(%r15), %rdi	;  4 bytes
+M00000000000001fb:	movq	(%rdi), %rax	;  3 bytes
+M00000000000001fe:	callq	*24(%rax)	;  3 bytes
+M0000000000000201:	movq	$-1, 24(%r15)	;  8 bytes
+M0000000000000209:	movq	%r14, %rdi	;  3 bytes
+M000000000000020c:	callq	0x403e50 <_Unwind_Resume@plt>	;  5 bytes
+M0000000000000211:	movq	%rax, %rdi	;  3 bytes
+M0000000000000214:	callq	0x42f650 <__clang_call_terminate>	;  5 bytes
+M0000000000000219:	nopl	(%rax)	;  7 bytes

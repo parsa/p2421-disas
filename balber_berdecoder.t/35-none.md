@@ -2,49 +2,49 @@
 
 ```nasm
 0000000000454d30 <BloombergLP::balber::BerUtil_Iso8601ImpUtil::putDateTzValue(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, BloombergLP::bdlt::DateTz const&, BloombergLP::balber::BerEncoderOptions const*)>:
-0000000000000000: 02	pushq	%r15
-0000000000000002: 02	pushq	%r14
-0000000000000004: 01	pushq	%rbx
-0000000000000005: 04	subq	$64, %rsp
-0000000000000009: 03	movq	%rsi, %r15
-000000000000000c: 03	movq	%rdi, %r14
-000000000000000f: 08	movl	$3, 8(%rsp)
-0000000000000017: 03	testq	%rdx, %rdx
-000000000000001a: 02	je	0x454d50 <BloombergLP::balber::BerUtil_Iso8601ImpUtil::putDateTzValue(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, BloombergLP::bdlt::DateTz const&, BloombergLP::balber::BerEncoderOptions const*)+0x20>
-000000000000001c: 02	movl	(%rdx), %esi
-000000000000001e: 02	jmp	0x454d55 <BloombergLP::balber::BerUtil_Iso8601ImpUtil::putDateTzValue(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, BloombergLP::bdlt::DateTz const&, BloombergLP::balber::BerEncoderOptions const*)+0x25>
-0000000000000020: 05	movl	$6, %esi
-0000000000000025: 05	leaq	8(%rsp), %rbx
-000000000000002a: 03	movq	%rbx, %rdi
-000000000000002d: 05	callq	0x469bc0 <BloombergLP::bdlt::Iso8601UtilConfiguration::setFractionalSecondPrecision(int)>
-0000000000000032: 05	leaq	16(%rsp), %rdi
-0000000000000037: 05	movl	$38, %esi
-000000000000003c: 03	movq	%r15, %rdx
-000000000000003f: 03	movq	%rbx, %rcx
-0000000000000042: 05	callq	0x467720 <BloombergLP::bdlt::Iso8601Util::generate(char*, int, BloombergLP::bdlt::DateTz const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)>
-0000000000000047: 02	movl	%eax, %ebx
-0000000000000049: 03	movq	%r14, %rdi
-000000000000004c: 02	movl	%eax, %esi
-000000000000004e: 05	callq	0x453da0 <BloombergLP::balber::BerUtil_LengthImpUtil::putLength(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, int)>
-0000000000000053: 02	movl	%eax, %ecx
-0000000000000055: 05	movl	$4294967295, %eax
-000000000000005a: 02	testl	%ecx, %ecx
-000000000000005c: 02	jne	0x454daf <BloombergLP::balber::BerUtil_Iso8601ImpUtil::putDateTzValue(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, BloombergLP::bdlt::DateTz const&, BloombergLP::balber::BerEncoderOptions const*)+0x7f>
-000000000000005e: 03	movslq	%ebx, %rbx
-0000000000000061: 03	movq	(%r14), %rax
-0000000000000064: 05	leaq	16(%rsp), %rsi
-0000000000000069: 03	movq	%r14, %rdi
-000000000000006c: 03	movq	%rbx, %rdx
-000000000000006f: 03	callq	*96(%rax)
-0000000000000072: 03	movq	%rax, %rcx
-0000000000000075: 02	xorl	%eax, %eax
-0000000000000077: 03	cmpq	%rbx, %rcx
-000000000000007a: 03	setne	%al
-000000000000007d: 02	negl	%eax
-000000000000007f: 04	addq	$64, %rsp
-0000000000000083: 01	popq	%rbx
-0000000000000084: 02	popq	%r14
-0000000000000086: 02	popq	%r15
-0000000000000088: 01	retq	
-0000000000000089: 07	nopl	(%rax)
+M0000000000000000:	pushq	%r15	;  2 bytes
+M0000000000000002:	pushq	%r14	;  2 bytes
+M0000000000000004:	pushq	%rbx	;  1 bytes
+M0000000000000005:	subq	$64, %rsp	;  4 bytes
+M0000000000000009:	movq	%rsi, %r15	;  3 bytes
+M000000000000000c:	movq	%rdi, %r14	;  3 bytes
+M000000000000000f:	movl	$3, 8(%rsp)	;  8 bytes
+M0000000000000017:	testq	%rdx, %rdx	;  3 bytes
+M000000000000001a:	je	0x454d50 <BloombergLP::balber::BerUtil_Iso8601ImpUtil::putDateTzValue(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, BloombergLP::bdlt::DateTz const&, BloombergLP::balber::BerEncoderOptions const*)+0x20>	;  2 bytes
+M000000000000001c:	movl	(%rdx), %esi	;  2 bytes
+M000000000000001e:	jmp	0x454d55 <BloombergLP::balber::BerUtil_Iso8601ImpUtil::putDateTzValue(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, BloombergLP::bdlt::DateTz const&, BloombergLP::balber::BerEncoderOptions const*)+0x25>	;  2 bytes
+M0000000000000020:	movl	$6, %esi	;  5 bytes
+M0000000000000025:	leaq	8(%rsp), %rbx	;  5 bytes
+M000000000000002a:	movq	%rbx, %rdi	;  3 bytes
+M000000000000002d:	callq	0x469bc0 <BloombergLP::bdlt::Iso8601UtilConfiguration::setFractionalSecondPrecision(int)>	;  5 bytes
+M0000000000000032:	leaq	16(%rsp), %rdi	;  5 bytes
+M0000000000000037:	movl	$38, %esi	;  5 bytes
+M000000000000003c:	movq	%r15, %rdx	;  3 bytes
+M000000000000003f:	movq	%rbx, %rcx	;  3 bytes
+M0000000000000042:	callq	0x467720 <BloombergLP::bdlt::Iso8601Util::generate(char*, int, BloombergLP::bdlt::DateTz const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)>	;  5 bytes
+M0000000000000047:	movl	%eax, %ebx	;  2 bytes
+M0000000000000049:	movq	%r14, %rdi	;  3 bytes
+M000000000000004c:	movl	%eax, %esi	;  2 bytes
+M000000000000004e:	callq	0x453da0 <BloombergLP::balber::BerUtil_LengthImpUtil::putLength(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, int)>	;  5 bytes
+M0000000000000053:	movl	%eax, %ecx	;  2 bytes
+M0000000000000055:	movl	$4294967295, %eax	;  5 bytes
+M000000000000005a:	testl	%ecx, %ecx	;  2 bytes
+M000000000000005c:	jne	0x454daf <BloombergLP::balber::BerUtil_Iso8601ImpUtil::putDateTzValue(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, BloombergLP::bdlt::DateTz const&, BloombergLP::balber::BerEncoderOptions const*)+0x7f>	;  2 bytes
+M000000000000005e:	movslq	%ebx, %rbx	;  3 bytes
+M0000000000000061:	movq	(%r14), %rax	;  3 bytes
+M0000000000000064:	leaq	16(%rsp), %rsi	;  5 bytes
+M0000000000000069:	movq	%r14, %rdi	;  3 bytes
+M000000000000006c:	movq	%rbx, %rdx	;  3 bytes
+M000000000000006f:	callq	*96(%rax)	;  3 bytes
+M0000000000000072:	movq	%rax, %rcx	;  3 bytes
+M0000000000000075:	xorl	%eax, %eax	;  2 bytes
+M0000000000000077:	cmpq	%rbx, %rcx	;  3 bytes
+M000000000000007a:	setne	%al	;  3 bytes
+M000000000000007d:	negl	%eax	;  2 bytes
+M000000000000007f:	addq	$64, %rsp	;  4 bytes
+M0000000000000083:	popq	%rbx	;  1 bytes
+M0000000000000084:	popq	%r14	;  2 bytes
+M0000000000000086:	popq	%r15	;  2 bytes
+M0000000000000088:	retq		;  1 bytes
+M0000000000000089:	nopl	(%rax)	;  7 bytes
 ```

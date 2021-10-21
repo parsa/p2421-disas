@@ -1,56 +1,56 @@
 00000000004d0d10 <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::operator=(BloombergLP::s_baltst::SequenceWithAnonymityChoice1 const&)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 01	pushq	%rbx
-0000000000000002: 01	pushq	%rax
-0000000000000003: 03	movq	%rdi, %rbx
-0000000000000006: 03	cmpq	%rsi, %rdi
-0000000000000009: 06	je	0x4d0da0 <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::operator=(BloombergLP::s_baltst::SequenceWithAnonymityChoice1 const&)+0x90>
-000000000000000f: 03	movl	48(%rsi), %eax
-0000000000000012: 03	cmpl	$1, %eax
-0000000000000015: 02	je	0x4d0d3f <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::operator=(BloombergLP::s_baltst::SequenceWithAnonymityChoice1 const&)+0x2f>
-0000000000000017: 02	testl	%eax, %eax
-0000000000000019: 02	jne	0x4d0d49 <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::operator=(BloombergLP::s_baltst::SequenceWithAnonymityChoice1 const&)+0x39>
-000000000000001b: 03	movb	(%rsi), %bpl
-000000000000001e: 03	movl	48(%rbx), %eax
-0000000000000021: 03	cmpl	$1, %eax
-0000000000000024: 02	je	0x4d0d7a <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::operator=(BloombergLP::s_baltst::SequenceWithAnonymityChoice1 const&)+0x6a>
-0000000000000026: 02	testl	%eax, %eax
-0000000000000028: 02	jne	0x4d0d96 <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::operator=(BloombergLP::s_baltst::SequenceWithAnonymityChoice1 const&)+0x86>
-000000000000002a: 03	movb	%bpl, (%rbx)
-000000000000002d: 02	jmp	0x4d0da0 <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::operator=(BloombergLP::s_baltst::SequenceWithAnonymityChoice1 const&)+0x90>
-000000000000002f: 03	movq	%rbx, %rdi
-0000000000000032: 05	callq	0x4d0e20 <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::makeSelection6(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)>
-0000000000000037: 02	jmp	0x4d0da0 <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::operator=(BloombergLP::s_baltst::SequenceWithAnonymityChoice1 const&)+0x90>
-0000000000000039: 03	movl	48(%rbx), %eax
-000000000000003c: 02	testl	%eax, %eax
-000000000000003e: 02	je	0x4d0d71 <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::operator=(BloombergLP::s_baltst::SequenceWithAnonymityChoice1 const&)+0x61>
-0000000000000040: 03	cmpl	$1, %eax
-0000000000000043: 02	jne	0x4d0d71 <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::operator=(BloombergLP::s_baltst::SequenceWithAnonymityChoice1 const&)+0x61>
-0000000000000045: 05	cmpq	$23, 32(%rbx)
-000000000000004a: 02	je	0x4d0d69 <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::operator=(BloombergLP::s_baltst::SequenceWithAnonymityChoice1 const&)+0x59>
-000000000000004c: 03	movq	(%rbx), %rsi
-000000000000004f: 04	movq	40(%rbx), %rdi
-0000000000000053: 03	movq	(%rdi), %rax
-0000000000000056: 03	callq	*24(%rax)
-0000000000000059: 08	movq	$-1, 24(%rbx)
-0000000000000061: 07	movl	$4294967295, 48(%rbx)
-0000000000000068: 02	jmp	0x4d0da0 <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::operator=(BloombergLP::s_baltst::SequenceWithAnonymityChoice1 const&)+0x90>
-000000000000006a: 05	cmpq	$23, 32(%rbx)
-000000000000006f: 02	je	0x4d0d8e <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::operator=(BloombergLP::s_baltst::SequenceWithAnonymityChoice1 const&)+0x7e>
-0000000000000071: 03	movq	(%rbx), %rsi
-0000000000000074: 04	movq	40(%rbx), %rdi
-0000000000000078: 03	movq	(%rdi), %rax
-000000000000007b: 03	callq	*24(%rax)
-000000000000007e: 08	movq	$-1, 24(%rbx)
-0000000000000086: 03	movb	%bpl, (%rbx)
-0000000000000089: 07	movl	$0, 48(%rbx)
-0000000000000090: 03	movq	%rbx, %rax
-0000000000000093: 04	addq	$8, %rsp
-0000000000000097: 01	popq	%rbx
-0000000000000098: 01	popq	%rbp
-0000000000000099: 01	retq	
-000000000000009a: 03	movq	%rax, %rdi
-000000000000009d: 05	callq	0x428650 <__clang_call_terminate>
-00000000000000a2: 03	movq	%rax, %rdi
-00000000000000a5: 05	callq	0x428650 <__clang_call_terminate>
-00000000000000aa: 06	nopw	(%rax,%rax)
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%rbx	;  1 bytes
+M0000000000000002:	pushq	%rax	;  1 bytes
+M0000000000000003:	movq	%rdi, %rbx	;  3 bytes
+M0000000000000006:	cmpq	%rsi, %rdi	;  3 bytes
+M0000000000000009:	je	0x4d0da0 <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::operator=(BloombergLP::s_baltst::SequenceWithAnonymityChoice1 const&)+0x90>	;  6 bytes
+M000000000000000f:	movl	48(%rsi), %eax	;  3 bytes
+M0000000000000012:	cmpl	$1, %eax	;  3 bytes
+M0000000000000015:	je	0x4d0d3f <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::operator=(BloombergLP::s_baltst::SequenceWithAnonymityChoice1 const&)+0x2f>	;  2 bytes
+M0000000000000017:	testl	%eax, %eax	;  2 bytes
+M0000000000000019:	jne	0x4d0d49 <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::operator=(BloombergLP::s_baltst::SequenceWithAnonymityChoice1 const&)+0x39>	;  2 bytes
+M000000000000001b:	movb	(%rsi), %bpl	;  3 bytes
+M000000000000001e:	movl	48(%rbx), %eax	;  3 bytes
+M0000000000000021:	cmpl	$1, %eax	;  3 bytes
+M0000000000000024:	je	0x4d0d7a <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::operator=(BloombergLP::s_baltst::SequenceWithAnonymityChoice1 const&)+0x6a>	;  2 bytes
+M0000000000000026:	testl	%eax, %eax	;  2 bytes
+M0000000000000028:	jne	0x4d0d96 <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::operator=(BloombergLP::s_baltst::SequenceWithAnonymityChoice1 const&)+0x86>	;  2 bytes
+M000000000000002a:	movb	%bpl, (%rbx)	;  3 bytes
+M000000000000002d:	jmp	0x4d0da0 <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::operator=(BloombergLP::s_baltst::SequenceWithAnonymityChoice1 const&)+0x90>	;  2 bytes
+M000000000000002f:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000032:	callq	0x4d0e20 <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::makeSelection6(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)>	;  5 bytes
+M0000000000000037:	jmp	0x4d0da0 <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::operator=(BloombergLP::s_baltst::SequenceWithAnonymityChoice1 const&)+0x90>	;  2 bytes
+M0000000000000039:	movl	48(%rbx), %eax	;  3 bytes
+M000000000000003c:	testl	%eax, %eax	;  2 bytes
+M000000000000003e:	je	0x4d0d71 <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::operator=(BloombergLP::s_baltst::SequenceWithAnonymityChoice1 const&)+0x61>	;  2 bytes
+M0000000000000040:	cmpl	$1, %eax	;  3 bytes
+M0000000000000043:	jne	0x4d0d71 <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::operator=(BloombergLP::s_baltst::SequenceWithAnonymityChoice1 const&)+0x61>	;  2 bytes
+M0000000000000045:	cmpq	$23, 32(%rbx)	;  5 bytes
+M000000000000004a:	je	0x4d0d69 <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::operator=(BloombergLP::s_baltst::SequenceWithAnonymityChoice1 const&)+0x59>	;  2 bytes
+M000000000000004c:	movq	(%rbx), %rsi	;  3 bytes
+M000000000000004f:	movq	40(%rbx), %rdi	;  4 bytes
+M0000000000000053:	movq	(%rdi), %rax	;  3 bytes
+M0000000000000056:	callq	*24(%rax)	;  3 bytes
+M0000000000000059:	movq	$-1, 24(%rbx)	;  8 bytes
+M0000000000000061:	movl	$4294967295, 48(%rbx)	;  7 bytes
+M0000000000000068:	jmp	0x4d0da0 <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::operator=(BloombergLP::s_baltst::SequenceWithAnonymityChoice1 const&)+0x90>	;  2 bytes
+M000000000000006a:	cmpq	$23, 32(%rbx)	;  5 bytes
+M000000000000006f:	je	0x4d0d8e <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::operator=(BloombergLP::s_baltst::SequenceWithAnonymityChoice1 const&)+0x7e>	;  2 bytes
+M0000000000000071:	movq	(%rbx), %rsi	;  3 bytes
+M0000000000000074:	movq	40(%rbx), %rdi	;  4 bytes
+M0000000000000078:	movq	(%rdi), %rax	;  3 bytes
+M000000000000007b:	callq	*24(%rax)	;  3 bytes
+M000000000000007e:	movq	$-1, 24(%rbx)	;  8 bytes
+M0000000000000086:	movb	%bpl, (%rbx)	;  3 bytes
+M0000000000000089:	movl	$0, 48(%rbx)	;  7 bytes
+M0000000000000090:	movq	%rbx, %rax	;  3 bytes
+M0000000000000093:	addq	$8, %rsp	;  4 bytes
+M0000000000000097:	popq	%rbx	;  1 bytes
+M0000000000000098:	popq	%rbp	;  1 bytes
+M0000000000000099:	retq		;  1 bytes
+M000000000000009a:	movq	%rax, %rdi	;  3 bytes
+M000000000000009d:	callq	0x428650 <__clang_call_terminate>	;  5 bytes
+M00000000000000a2:	movq	%rax, %rdi	;  3 bytes
+M00000000000000a5:	callq	0x428650 <__clang_call_terminate>	;  5 bytes
+M00000000000000aa:	nopw	(%rax,%rax)	;  6 bytes

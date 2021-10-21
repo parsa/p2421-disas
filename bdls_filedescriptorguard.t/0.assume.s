@@ -1,14 +1,14 @@
 0000000000406ab0 <BloombergLP::bdls::FileDescriptorGuard::closeAndRelease()>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 01	pushq	%rbx
-0000000000000002: 01	pushq	%rax
-0000000000000003: 03	movq	%rdi, %rbx
-0000000000000006: 06	movl	188788(%rip), %ebp  # 434c30 <BloombergLP::bdls::FilesystemUtil::k_INVALID_FD>
-000000000000000c: 02	movl	(%rdi), %edi
-000000000000000e: 05	callq	0x406b80 <BloombergLP::bdls::FilesystemUtil::close(int)>
-0000000000000013: 02	movl	%ebp, (%rbx)
-0000000000000015: 04	addq	$8, %rsp
-0000000000000019: 01	popq	%rbx
-000000000000001a: 01	popq	%rbp
-000000000000001b: 01	retq	
-000000000000001c: 04	nopl	(%rax)
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%rbx	;  1 bytes
+M0000000000000002:	pushq	%rax	;  1 bytes
+M0000000000000003:	movq	%rdi, %rbx	;  3 bytes
+M0000000000000006:	movl	188788(%rip), %ebp  # 434c30 <BloombergLP::bdls::FilesystemUtil::k_INVALID_FD>	;  6 bytes
+M000000000000000c:	movl	(%rdi), %edi	;  2 bytes
+M000000000000000e:	callq	0x406b80 <BloombergLP::bdls::FilesystemUtil::close(int)>	;  5 bytes
+M0000000000000013:	movl	%ebp, (%rbx)	;  2 bytes
+M0000000000000015:	addq	$8, %rsp	;  4 bytes
+M0000000000000019:	popq	%rbx	;  1 bytes
+M000000000000001a:	popq	%rbp	;  1 bytes
+M000000000000001b:	retq		;  1 bytes
+M000000000000001c:	nopl	(%rax)	;  4 bytes

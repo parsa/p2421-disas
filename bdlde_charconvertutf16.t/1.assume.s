@@ -1,169 +1,169 @@
 000000000042dd20 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 02	pushq	%r13
-0000000000000007: 02	pushq	%r12
-0000000000000009: 01	pushq	%rbx
-000000000000000a: 01	pushq	%rax
-000000000000000b: 03	movl	%ecx, %r12d
-000000000000000e: 03	movq	%rdx, %r14
-0000000000000011: 03	movq	%rsi, %r15
-0000000000000014: 03	movq	%rdi, %r13
-0000000000000017: 03	movzwl	(%rsi), %eax
-000000000000001a: 02	xorl	%ebp, %ebp
-000000000000001c: 03	testl	%r8d, %r8d
-000000000000001f: 06	je	0x42ddf3 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0xd3>
-0000000000000025: 03	testw	%ax, %ax
-0000000000000028: 02	je	0x42ddc4 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0xa4>
-000000000000002a: 03	movq	%r15, %rcx
-000000000000002d: 02	jmp	0x42dd68 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x48>
-000000000000002f: 01	nop	
-0000000000000030: 05	cmpl	$2048, %eax
-0000000000000035: 04	sbbq	$0, %rbp
-0000000000000039: 04	addq	$3, %rbp
-000000000000003d: 03	movzwl	(%rdx), %eax
-0000000000000040: 03	movq	%rdx, %rcx
-0000000000000043: 03	testw	%ax, %ax
-0000000000000046: 02	je	0x42ddc4 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0xa4>
-0000000000000048: 04	rolw	$8, %ax
-000000000000004c: 04	cmpw	$127, %ax
-0000000000000050: 02	ja	0x42dd80 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x60>
-0000000000000052: 04	addq	$2, %rcx
-0000000000000056: 03	incq	%rbp
-0000000000000059: 03	movq	%rcx, %rdx
-000000000000005c: 02	jmp	0x42dd5d <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x3d>
-000000000000005e: 02	nop	
-0000000000000060: 03	movzwl	%ax, %eax
-0000000000000063: 02	movl	%eax, %esi
-0000000000000065: 06	andl	$63488, %esi
-000000000000006b: 04	leaq	2(%rcx), %rdx
-000000000000006f: 06	cmpl	$55296, %esi
-0000000000000075: 02	jne	0x42dd50 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x30>
-0000000000000077: 05	andl	$64512, %eax
-000000000000007c: 05	cmpl	$55296, %eax
-0000000000000081: 02	jne	0x42ddbf <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x9f>
-0000000000000083: 03	movzwl	(%rdx), %eax
-0000000000000086: 05	andl	$252, %eax
-000000000000008b: 03	movzwl	%ax, %eax
-000000000000008e: 05	cmpl	$220, %eax
-0000000000000093: 02	jne	0x42ddbf <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x9f>
-0000000000000095: 04	addq	$4, %rcx
-0000000000000099: 04	addq	$4, %rbp
-000000000000009d: 02	jmp	0x42dd79 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x59>
-000000000000009f: 03	incq	%rbp
-00000000000000a2: 02	jmp	0x42dd5d <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x3d>
-00000000000000a4: 03	incq	%rbp
-00000000000000a7: 04	movb	(%r13), %al
-00000000000000ab: 02	testb	$1, %al
-00000000000000ad: 06	jne	0x42dea2 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x182>
-00000000000000b3: 03	movzbl	%al, %ecx
-00000000000000b6: 03	shrq	%rcx
-00000000000000b9: 03	cmpq	%rcx, %rbp
-00000000000000bc: 06	ja	0x42deaf <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x18f>
-00000000000000c2: 02	testb	$1, %al
-00000000000000c4: 06	jne	0x42dec8 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x1a8>
-00000000000000ca: 04	leaq	1(%r13), %rdi
-00000000000000ce: 05	jmp	0x42decc <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x1ac>
-00000000000000d3: 03	testw	%ax, %ax
-00000000000000d6: 06	je	0x42de8a <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x16a>
-00000000000000dc: 03	movq	%r15, %rcx
-00000000000000df: 02	jmp	0x42de28 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x108>
-00000000000000e1: 10	nopw	%cs:(%rax,%rax)
-00000000000000eb: 05	nopl	(%rax,%rax)
-00000000000000f0: 05	cmpl	$2048, %eax
-00000000000000f5: 04	sbbq	$0, %rbp
-00000000000000f9: 04	addq	$3, %rbp
-00000000000000fd: 03	movzwl	(%rdx), %eax
-0000000000000100: 03	movq	%rdx, %rcx
-0000000000000103: 03	testw	%ax, %ax
-0000000000000106: 02	je	0x42de8a <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x16a>
-0000000000000108: 04	cmpw	$127, %ax
-000000000000010c: 02	ja	0x42de40 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x120>
-000000000000010e: 04	addq	$2, %rcx
-0000000000000112: 03	incq	%rbp
-0000000000000115: 02	jmp	0x42de80 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x160>
-0000000000000117: 09	nopw	(%rax,%rax)
-0000000000000120: 03	movzwl	%ax, %eax
-0000000000000123: 02	movl	%eax, %esi
-0000000000000125: 06	andl	$63488, %esi
-000000000000012b: 04	leaq	2(%rcx), %rdx
-000000000000012f: 06	cmpl	$55296, %esi
-0000000000000135: 02	jne	0x42de10 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0xf0>
-0000000000000137: 05	andl	$64512, %eax
-000000000000013c: 05	cmpl	$55296, %eax
-0000000000000141: 02	jne	0x42de85 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x165>
-0000000000000143: 03	movzwl	(%rdx), %eax
-0000000000000146: 05	andl	$64512, %eax
-000000000000014b: 03	movzwl	%ax, %eax
-000000000000014e: 05	cmpl	$56320, %eax
-0000000000000153: 02	jne	0x42de85 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x165>
-0000000000000155: 04	addq	$4, %rcx
-0000000000000159: 04	addq	$4, %rbp
-000000000000015d: 03	nopl	(%rax)
-0000000000000160: 03	movq	%rcx, %rdx
-0000000000000163: 02	jmp	0x42de1d <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0xfd>
-0000000000000165: 03	incq	%rbp
-0000000000000168: 02	jmp	0x42de1d <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0xfd>
-000000000000016a: 03	incq	%rbp
-000000000000016d: 04	movb	(%r13), %al
-0000000000000171: 02	testb	$1, %al
-0000000000000173: 02	jne	0x42dee0 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x1c0>
-0000000000000175: 03	movzbl	%al, %ecx
-0000000000000178: 03	shrq	%rcx
-000000000000017b: 03	cmpq	%rcx, %rbp
-000000000000017e: 02	ja	0x42dee9 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x1c9>
-0000000000000180: 02	jmp	0x42defa <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x1da>
-0000000000000182: 04	movq	8(%r13), %rcx
-0000000000000186: 03	cmpq	%rcx, %rbp
-0000000000000189: 06	jbe	0x42dde2 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0xc2>
-000000000000018f: 03	movq	%r13, %rdi
-0000000000000192: 03	movq	%rbp, %rsi
-0000000000000195: 02	xorl	%edx, %edx
-0000000000000197: 05	callq	0x403a30 <_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6resizeEmc@plt>
-000000000000019c: 04	movb	(%r13), %al
-00000000000001a0: 02	testb	$1, %al
-00000000000001a2: 06	je	0x42ddea <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0xca>
-00000000000001a8: 04	movq	16(%r13), %rdi
-00000000000001ac: 04	movsbl	%r12b, %r8d
-00000000000001b0: 03	movq	%rsp, %rcx
-00000000000001b3: 03	movq	%r15, %rsi
-00000000000001b6: 03	movq	%r14, %rdx
-00000000000001b9: 05	callq	0x432f50 <int (anonymous namespace)::localUtf16ToUtf8<unsigned short, (anonymous namespace)::NoOpCapacity, (anonymous namespace)::Utf16::ZeroBasedEnd<unsigned short>, (anonymous namespace)::Swapper<unsigned short> >(char*, (anonymous namespace)::NoOpCapacity, unsigned short const*, (anonymous namespace)::Utf16::ZeroBasedEnd<unsigned short>, (anonymous namespace)::Swapper<unsigned short>, unsigned long*, unsigned long*, char)>
-00000000000001be: 02	jmp	0x42df1a <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x1fa>
-00000000000001c0: 04	movq	8(%r13), %rcx
-00000000000001c4: 03	cmpq	%rcx, %rbp
-00000000000001c7: 02	jbe	0x42defa <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x1da>
-00000000000001c9: 03	movq	%r13, %rdi
-00000000000001cc: 03	movq	%rbp, %rsi
-00000000000001cf: 02	xorl	%edx, %edx
-00000000000001d1: 05	callq	0x403a30 <_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6resizeEmc@plt>
-00000000000001d6: 04	movb	(%r13), %al
-00000000000001da: 02	testb	$1, %al
-00000000000001dc: 02	jne	0x42df04 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x1e4>
-00000000000001de: 04	leaq	1(%r13), %rdi
-00000000000001e2: 02	jmp	0x42df08 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x1e8>
-00000000000001e4: 04	movq	16(%r13), %rdi
-00000000000001e8: 04	movsbl	%r12b, %r8d
-00000000000001ec: 03	movq	%rsp, %rcx
-00000000000001ef: 03	movq	%r15, %rsi
-00000000000001f2: 03	movq	%r14, %rdx
-00000000000001f5: 05	callq	0x432dc0 <int (anonymous namespace)::localUtf16ToUtf8<unsigned short, (anonymous namespace)::NoOpCapacity, (anonymous namespace)::Utf16::ZeroBasedEnd<unsigned short>, (anonymous namespace)::NoOpSwapper<unsigned short> >(char*, (anonymous namespace)::NoOpCapacity, unsigned short const*, (anonymous namespace)::Utf16::ZeroBasedEnd<unsigned short>, (anonymous namespace)::NoOpSwapper<unsigned short>, unsigned long*, unsigned long*, char)>
-00000000000001fa: 02	movl	%eax, %ebx
-00000000000001fc: 04	movq	(%rsp), %rsi
-0000000000000200: 03	cmpq	%rbp, %rsi
-0000000000000203: 03	decq	%rsi
-0000000000000206: 03	movq	%r13, %rdi
-0000000000000209: 02	xorl	%edx, %edx
-000000000000020b: 05	callq	0x403a30 <_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6resizeEmc@plt>
-0000000000000210: 02	movl	%ebx, %eax
-0000000000000212: 04	addq	$8, %rsp
-0000000000000216: 01	popq	%rbx
-0000000000000217: 02	popq	%r12
-0000000000000219: 02	popq	%r13
-000000000000021b: 02	popq	%r14
-000000000000021d: 02	popq	%r15
-000000000000021f: 01	popq	%rbp
-0000000000000220: 01	retq	
-0000000000000221: 10	nopw	%cs:(%rax,%rax)
-000000000000022b: 05	nopl	(%rax,%rax)
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%r13	;  2 bytes
+M0000000000000007:	pushq	%r12	;  2 bytes
+M0000000000000009:	pushq	%rbx	;  1 bytes
+M000000000000000a:	pushq	%rax	;  1 bytes
+M000000000000000b:	movl	%ecx, %r12d	;  3 bytes
+M000000000000000e:	movq	%rdx, %r14	;  3 bytes
+M0000000000000011:	movq	%rsi, %r15	;  3 bytes
+M0000000000000014:	movq	%rdi, %r13	;  3 bytes
+M0000000000000017:	movzwl	(%rsi), %eax	;  3 bytes
+M000000000000001a:	xorl	%ebp, %ebp	;  2 bytes
+M000000000000001c:	testl	%r8d, %r8d	;  3 bytes
+M000000000000001f:	je	0x42ddf3 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0xd3>	;  6 bytes
+M0000000000000025:	testw	%ax, %ax	;  3 bytes
+M0000000000000028:	je	0x42ddc4 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0xa4>	;  2 bytes
+M000000000000002a:	movq	%r15, %rcx	;  3 bytes
+M000000000000002d:	jmp	0x42dd68 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x48>	;  2 bytes
+M000000000000002f:	nop		;  1 bytes
+M0000000000000030:	cmpl	$2048, %eax	;  5 bytes
+M0000000000000035:	sbbq	$0, %rbp	;  4 bytes
+M0000000000000039:	addq	$3, %rbp	;  4 bytes
+M000000000000003d:	movzwl	(%rdx), %eax	;  3 bytes
+M0000000000000040:	movq	%rdx, %rcx	;  3 bytes
+M0000000000000043:	testw	%ax, %ax	;  3 bytes
+M0000000000000046:	je	0x42ddc4 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0xa4>	;  2 bytes
+M0000000000000048:	rolw	$8, %ax	;  4 bytes
+M000000000000004c:	cmpw	$127, %ax	;  4 bytes
+M0000000000000050:	ja	0x42dd80 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x60>	;  2 bytes
+M0000000000000052:	addq	$2, %rcx	;  4 bytes
+M0000000000000056:	incq	%rbp	;  3 bytes
+M0000000000000059:	movq	%rcx, %rdx	;  3 bytes
+M000000000000005c:	jmp	0x42dd5d <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x3d>	;  2 bytes
+M000000000000005e:	nop		;  2 bytes
+M0000000000000060:	movzwl	%ax, %eax	;  3 bytes
+M0000000000000063:	movl	%eax, %esi	;  2 bytes
+M0000000000000065:	andl	$63488, %esi	;  6 bytes
+M000000000000006b:	leaq	2(%rcx), %rdx	;  4 bytes
+M000000000000006f:	cmpl	$55296, %esi	;  6 bytes
+M0000000000000075:	jne	0x42dd50 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x30>	;  2 bytes
+M0000000000000077:	andl	$64512, %eax	;  5 bytes
+M000000000000007c:	cmpl	$55296, %eax	;  5 bytes
+M0000000000000081:	jne	0x42ddbf <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x9f>	;  2 bytes
+M0000000000000083:	movzwl	(%rdx), %eax	;  3 bytes
+M0000000000000086:	andl	$252, %eax	;  5 bytes
+M000000000000008b:	movzwl	%ax, %eax	;  3 bytes
+M000000000000008e:	cmpl	$220, %eax	;  5 bytes
+M0000000000000093:	jne	0x42ddbf <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x9f>	;  2 bytes
+M0000000000000095:	addq	$4, %rcx	;  4 bytes
+M0000000000000099:	addq	$4, %rbp	;  4 bytes
+M000000000000009d:	jmp	0x42dd79 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x59>	;  2 bytes
+M000000000000009f:	incq	%rbp	;  3 bytes
+M00000000000000a2:	jmp	0x42dd5d <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x3d>	;  2 bytes
+M00000000000000a4:	incq	%rbp	;  3 bytes
+M00000000000000a7:	movb	(%r13), %al	;  4 bytes
+M00000000000000ab:	testb	$1, %al	;  2 bytes
+M00000000000000ad:	jne	0x42dea2 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x182>	;  6 bytes
+M00000000000000b3:	movzbl	%al, %ecx	;  3 bytes
+M00000000000000b6:	shrq	%rcx	;  3 bytes
+M00000000000000b9:	cmpq	%rcx, %rbp	;  3 bytes
+M00000000000000bc:	ja	0x42deaf <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x18f>	;  6 bytes
+M00000000000000c2:	testb	$1, %al	;  2 bytes
+M00000000000000c4:	jne	0x42dec8 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x1a8>	;  6 bytes
+M00000000000000ca:	leaq	1(%r13), %rdi	;  4 bytes
+M00000000000000ce:	jmp	0x42decc <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x1ac>	;  5 bytes
+M00000000000000d3:	testw	%ax, %ax	;  3 bytes
+M00000000000000d6:	je	0x42de8a <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x16a>	;  6 bytes
+M00000000000000dc:	movq	%r15, %rcx	;  3 bytes
+M00000000000000df:	jmp	0x42de28 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x108>	;  2 bytes
+M00000000000000e1:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M00000000000000eb:	nopl	(%rax,%rax)	;  5 bytes
+M00000000000000f0:	cmpl	$2048, %eax	;  5 bytes
+M00000000000000f5:	sbbq	$0, %rbp	;  4 bytes
+M00000000000000f9:	addq	$3, %rbp	;  4 bytes
+M00000000000000fd:	movzwl	(%rdx), %eax	;  3 bytes
+M0000000000000100:	movq	%rdx, %rcx	;  3 bytes
+M0000000000000103:	testw	%ax, %ax	;  3 bytes
+M0000000000000106:	je	0x42de8a <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x16a>	;  2 bytes
+M0000000000000108:	cmpw	$127, %ax	;  4 bytes
+M000000000000010c:	ja	0x42de40 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x120>	;  2 bytes
+M000000000000010e:	addq	$2, %rcx	;  4 bytes
+M0000000000000112:	incq	%rbp	;  3 bytes
+M0000000000000115:	jmp	0x42de80 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x160>	;  2 bytes
+M0000000000000117:	nopw	(%rax,%rax)	;  9 bytes
+M0000000000000120:	movzwl	%ax, %eax	;  3 bytes
+M0000000000000123:	movl	%eax, %esi	;  2 bytes
+M0000000000000125:	andl	$63488, %esi	;  6 bytes
+M000000000000012b:	leaq	2(%rcx), %rdx	;  4 bytes
+M000000000000012f:	cmpl	$55296, %esi	;  6 bytes
+M0000000000000135:	jne	0x42de10 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0xf0>	;  2 bytes
+M0000000000000137:	andl	$64512, %eax	;  5 bytes
+M000000000000013c:	cmpl	$55296, %eax	;  5 bytes
+M0000000000000141:	jne	0x42de85 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x165>	;  2 bytes
+M0000000000000143:	movzwl	(%rdx), %eax	;  3 bytes
+M0000000000000146:	andl	$64512, %eax	;  5 bytes
+M000000000000014b:	movzwl	%ax, %eax	;  3 bytes
+M000000000000014e:	cmpl	$56320, %eax	;  5 bytes
+M0000000000000153:	jne	0x42de85 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x165>	;  2 bytes
+M0000000000000155:	addq	$4, %rcx	;  4 bytes
+M0000000000000159:	addq	$4, %rbp	;  4 bytes
+M000000000000015d:	nopl	(%rax)	;  3 bytes
+M0000000000000160:	movq	%rcx, %rdx	;  3 bytes
+M0000000000000163:	jmp	0x42de1d <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0xfd>	;  2 bytes
+M0000000000000165:	incq	%rbp	;  3 bytes
+M0000000000000168:	jmp	0x42de1d <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0xfd>	;  2 bytes
+M000000000000016a:	incq	%rbp	;  3 bytes
+M000000000000016d:	movb	(%r13), %al	;  4 bytes
+M0000000000000171:	testb	$1, %al	;  2 bytes
+M0000000000000173:	jne	0x42dee0 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x1c0>	;  2 bytes
+M0000000000000175:	movzbl	%al, %ecx	;  3 bytes
+M0000000000000178:	shrq	%rcx	;  3 bytes
+M000000000000017b:	cmpq	%rcx, %rbp	;  3 bytes
+M000000000000017e:	ja	0x42dee9 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x1c9>	;  2 bytes
+M0000000000000180:	jmp	0x42defa <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x1da>	;  2 bytes
+M0000000000000182:	movq	8(%r13), %rcx	;  4 bytes
+M0000000000000186:	cmpq	%rcx, %rbp	;  3 bytes
+M0000000000000189:	jbe	0x42dde2 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0xc2>	;  6 bytes
+M000000000000018f:	movq	%r13, %rdi	;  3 bytes
+M0000000000000192:	movq	%rbp, %rsi	;  3 bytes
+M0000000000000195:	xorl	%edx, %edx	;  2 bytes
+M0000000000000197:	callq	0x403a30 <_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6resizeEmc@plt>	;  5 bytes
+M000000000000019c:	movb	(%r13), %al	;  4 bytes
+M00000000000001a0:	testb	$1, %al	;  2 bytes
+M00000000000001a2:	je	0x42ddea <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0xca>	;  6 bytes
+M00000000000001a8:	movq	16(%r13), %rdi	;  4 bytes
+M00000000000001ac:	movsbl	%r12b, %r8d	;  4 bytes
+M00000000000001b0:	movq	%rsp, %rcx	;  3 bytes
+M00000000000001b3:	movq	%r15, %rsi	;  3 bytes
+M00000000000001b6:	movq	%r14, %rdx	;  3 bytes
+M00000000000001b9:	callq	0x432f50 <int (anonymous namespace)::localUtf16ToUtf8<unsigned short, (anonymous namespace)::NoOpCapacity, (anonymous namespace)::Utf16::ZeroBasedEnd<unsigned short>, (anonymous namespace)::Swapper<unsigned short> >(char*, (anonymous namespace)::NoOpCapacity, unsigned short const*, (anonymous namespace)::Utf16::ZeroBasedEnd<unsigned short>, (anonymous namespace)::Swapper<unsigned short>, unsigned long*, unsigned long*, char)>	;  5 bytes
+M00000000000001be:	jmp	0x42df1a <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x1fa>	;  2 bytes
+M00000000000001c0:	movq	8(%r13), %rcx	;  4 bytes
+M00000000000001c4:	cmpq	%rcx, %rbp	;  3 bytes
+M00000000000001c7:	jbe	0x42defa <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x1da>	;  2 bytes
+M00000000000001c9:	movq	%r13, %rdi	;  3 bytes
+M00000000000001cc:	movq	%rbp, %rsi	;  3 bytes
+M00000000000001cf:	xorl	%edx, %edx	;  2 bytes
+M00000000000001d1:	callq	0x403a30 <_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6resizeEmc@plt>	;  5 bytes
+M00000000000001d6:	movb	(%r13), %al	;  4 bytes
+M00000000000001da:	testb	$1, %al	;  2 bytes
+M00000000000001dc:	jne	0x42df04 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x1e4>	;  2 bytes
+M00000000000001de:	leaq	1(%r13), %rdi	;  4 bytes
+M00000000000001e2:	jmp	0x42df08 <BloombergLP::bdlde::CharConvertUtf16::utf16ToUtf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned short const*, unsigned long*, char, BloombergLP::bdlde::ByteOrder::Enum)+0x1e8>	;  2 bytes
+M00000000000001e4:	movq	16(%r13), %rdi	;  4 bytes
+M00000000000001e8:	movsbl	%r12b, %r8d	;  4 bytes
+M00000000000001ec:	movq	%rsp, %rcx	;  3 bytes
+M00000000000001ef:	movq	%r15, %rsi	;  3 bytes
+M00000000000001f2:	movq	%r14, %rdx	;  3 bytes
+M00000000000001f5:	callq	0x432dc0 <int (anonymous namespace)::localUtf16ToUtf8<unsigned short, (anonymous namespace)::NoOpCapacity, (anonymous namespace)::Utf16::ZeroBasedEnd<unsigned short>, (anonymous namespace)::NoOpSwapper<unsigned short> >(char*, (anonymous namespace)::NoOpCapacity, unsigned short const*, (anonymous namespace)::Utf16::ZeroBasedEnd<unsigned short>, (anonymous namespace)::NoOpSwapper<unsigned short>, unsigned long*, unsigned long*, char)>	;  5 bytes
+M00000000000001fa:	movl	%eax, %ebx	;  2 bytes
+M00000000000001fc:	movq	(%rsp), %rsi	;  4 bytes
+M0000000000000200:	cmpq	%rbp, %rsi	;  3 bytes
+M0000000000000203:	decq	%rsi	;  3 bytes
+M0000000000000206:	movq	%r13, %rdi	;  3 bytes
+M0000000000000209:	xorl	%edx, %edx	;  2 bytes
+M000000000000020b:	callq	0x403a30 <_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6resizeEmc@plt>	;  5 bytes
+M0000000000000210:	movl	%ebx, %eax	;  2 bytes
+M0000000000000212:	addq	$8, %rsp	;  4 bytes
+M0000000000000216:	popq	%rbx	;  1 bytes
+M0000000000000217:	popq	%r12	;  2 bytes
+M0000000000000219:	popq	%r13	;  2 bytes
+M000000000000021b:	popq	%r14	;  2 bytes
+M000000000000021d:	popq	%r15	;  2 bytes
+M000000000000021f:	popq	%rbp	;  1 bytes
+M0000000000000220:	retq		;  1 bytes
+M0000000000000221:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000022b:	nopl	(%rax,%rax)	;  5 bytes

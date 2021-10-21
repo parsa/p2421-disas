@@ -2,53 +2,53 @@
 
 ```nasm
 00000000004fa350 <int BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::manipulateSelection<BloombergLP::balxml::Decoder_ParseObject>(BloombergLP::balxml::Decoder_ParseObject&)>:
-0000000000000000: 02	pushq	%r14
-0000000000000002: 01	pushq	%rbx
-0000000000000003: 04	subq	$72, %rsp
-0000000000000007: 03	movq	%rsi, %r14
-000000000000000a: 03	movq	%rdi, %rsi
-000000000000000d: 03	movl	48(%rdi), %eax
-0000000000000010: 03	cmpl	$1, %eax
-0000000000000013: 02	je	0x4fa39c <int BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::manipulateSelection<BloombergLP::balxml::Decoder_ParseObject>(BloombergLP::balxml::Decoder_ParseObject&)+0x4c>
-0000000000000015: 05	movl	$4294967295, %ebx
-000000000000001a: 02	testl	%eax, %eax
-000000000000001c: 02	jne	0x4fa3c2 <int BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::manipulateSelection<BloombergLP::balxml::Decoder_ParseObject>(BloombergLP::balxml::Decoder_ParseObject&)+0x72>
-000000000000001e: 06	movl	1108204(%rip), %eax  # 608c60 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::SELECTION_INFO_ARRAY+0x20>
-0000000000000024: 08	movq	$6318480, (%rsp)
-000000000000002c: 04	movl	%eax, 8(%rsp)
-0000000000000030: 05	movq	%rsi, 16(%rsp)
-0000000000000035: 03	movq	(%r14), %rsi
-0000000000000038: 03	movq	%rsp, %rdi
-000000000000003b: 05	callq	0x4fea40 <BloombergLP::balxml::Decoder_ElementContext::beginParse(BloombergLP::balxml::Decoder*)>
-0000000000000040: 02	movl	%eax, %ebx
-0000000000000042: 03	movq	%rsp, %rdi
-0000000000000045: 05	callq	0x500340 <BloombergLP::balxml::Decoder_ElementContext::~Decoder_ElementContext()>
-000000000000004a: 02	jmp	0x4fa3c2 <int BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::manipulateSelection<BloombergLP::balxml::Decoder_ParseObject>(BloombergLP::balxml::Decoder_ParseObject&)+0x72>
-000000000000004c: 06	movl	1108198(%rip), %edx  # 608c88 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::SELECTION_INFO_ARRAY+0x48>
-0000000000000052: 03	movq	%rsp, %rbx
-0000000000000055: 03	movq	%rbx, %rdi
-0000000000000058: 05	callq	0x4fff70 <BloombergLP::balxml::Decoder_StdStringContext::Decoder_StdStringContext(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >*, int)>
-000000000000005d: 03	movq	(%r14), %rsi
-0000000000000060: 03	movq	%rbx, %rdi
-0000000000000063: 05	callq	0x4fea40 <BloombergLP::balxml::Decoder_ElementContext::beginParse(BloombergLP::balxml::Decoder*)>
-0000000000000068: 02	movl	%eax, %ebx
-000000000000006a: 03	movq	%rsp, %rdi
-000000000000006d: 05	callq	0x4ffff0 <BloombergLP::balxml::Decoder_StdStringContext::~Decoder_StdStringContext()>
-0000000000000072: 02	movl	%ebx, %eax
-0000000000000074: 04	addq	$72, %rsp
-0000000000000078: 01	popq	%rbx
-0000000000000079: 02	popq	%r14
-000000000000007b: 01	retq	
-000000000000007c: 03	movq	%rax, %rbx
-000000000000007f: 03	movq	%rsp, %rdi
-0000000000000082: 05	callq	0x4ffff0 <BloombergLP::balxml::Decoder_StdStringContext::~Decoder_StdStringContext()>
-0000000000000087: 03	movq	%rbx, %rdi
-000000000000008a: 05	callq	0x406a80 <_Unwind_Resume@plt>
-000000000000008f: 03	movq	%rax, %rbx
-0000000000000092: 03	movq	%rsp, %rdi
-0000000000000095: 05	callq	0x500340 <BloombergLP::balxml::Decoder_ElementContext::~Decoder_ElementContext()>
-000000000000009a: 03	movq	%rbx, %rdi
-000000000000009d: 05	callq	0x406a80 <_Unwind_Resume@plt>
-00000000000000a2: 10	nopw	%cs:(%rax,%rax)
-00000000000000ac: 04	nopl	(%rax)
+M0000000000000000:	pushq	%r14	;  2 bytes
+M0000000000000002:	pushq	%rbx	;  1 bytes
+M0000000000000003:	subq	$72, %rsp	;  4 bytes
+M0000000000000007:	movq	%rsi, %r14	;  3 bytes
+M000000000000000a:	movq	%rdi, %rsi	;  3 bytes
+M000000000000000d:	movl	48(%rdi), %eax	;  3 bytes
+M0000000000000010:	cmpl	$1, %eax	;  3 bytes
+M0000000000000013:	je	0x4fa39c <int BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::manipulateSelection<BloombergLP::balxml::Decoder_ParseObject>(BloombergLP::balxml::Decoder_ParseObject&)+0x4c>	;  2 bytes
+M0000000000000015:	movl	$4294967295, %ebx	;  5 bytes
+M000000000000001a:	testl	%eax, %eax	;  2 bytes
+M000000000000001c:	jne	0x4fa3c2 <int BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::manipulateSelection<BloombergLP::balxml::Decoder_ParseObject>(BloombergLP::balxml::Decoder_ParseObject&)+0x72>	;  2 bytes
+M000000000000001e:	movl	1108204(%rip), %eax  # 608c60 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::SELECTION_INFO_ARRAY+0x20>	;  6 bytes
+M0000000000000024:	movq	$6318480, (%rsp)	;  8 bytes
+M000000000000002c:	movl	%eax, 8(%rsp)	;  4 bytes
+M0000000000000030:	movq	%rsi, 16(%rsp)	;  5 bytes
+M0000000000000035:	movq	(%r14), %rsi	;  3 bytes
+M0000000000000038:	movq	%rsp, %rdi	;  3 bytes
+M000000000000003b:	callq	0x4fea40 <BloombergLP::balxml::Decoder_ElementContext::beginParse(BloombergLP::balxml::Decoder*)>	;  5 bytes
+M0000000000000040:	movl	%eax, %ebx	;  2 bytes
+M0000000000000042:	movq	%rsp, %rdi	;  3 bytes
+M0000000000000045:	callq	0x500340 <BloombergLP::balxml::Decoder_ElementContext::~Decoder_ElementContext()>	;  5 bytes
+M000000000000004a:	jmp	0x4fa3c2 <int BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::manipulateSelection<BloombergLP::balxml::Decoder_ParseObject>(BloombergLP::balxml::Decoder_ParseObject&)+0x72>	;  2 bytes
+M000000000000004c:	movl	1108198(%rip), %edx  # 608c88 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::SELECTION_INFO_ARRAY+0x48>	;  6 bytes
+M0000000000000052:	movq	%rsp, %rbx	;  3 bytes
+M0000000000000055:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000058:	callq	0x4fff70 <BloombergLP::balxml::Decoder_StdStringContext::Decoder_StdStringContext(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >*, int)>	;  5 bytes
+M000000000000005d:	movq	(%r14), %rsi	;  3 bytes
+M0000000000000060:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000063:	callq	0x4fea40 <BloombergLP::balxml::Decoder_ElementContext::beginParse(BloombergLP::balxml::Decoder*)>	;  5 bytes
+M0000000000000068:	movl	%eax, %ebx	;  2 bytes
+M000000000000006a:	movq	%rsp, %rdi	;  3 bytes
+M000000000000006d:	callq	0x4ffff0 <BloombergLP::balxml::Decoder_StdStringContext::~Decoder_StdStringContext()>	;  5 bytes
+M0000000000000072:	movl	%ebx, %eax	;  2 bytes
+M0000000000000074:	addq	$72, %rsp	;  4 bytes
+M0000000000000078:	popq	%rbx	;  1 bytes
+M0000000000000079:	popq	%r14	;  2 bytes
+M000000000000007b:	retq		;  1 bytes
+M000000000000007c:	movq	%rax, %rbx	;  3 bytes
+M000000000000007f:	movq	%rsp, %rdi	;  3 bytes
+M0000000000000082:	callq	0x4ffff0 <BloombergLP::balxml::Decoder_StdStringContext::~Decoder_StdStringContext()>	;  5 bytes
+M0000000000000087:	movq	%rbx, %rdi	;  3 bytes
+M000000000000008a:	callq	0x406a80 <_Unwind_Resume@plt>	;  5 bytes
+M000000000000008f:	movq	%rax, %rbx	;  3 bytes
+M0000000000000092:	movq	%rsp, %rdi	;  3 bytes
+M0000000000000095:	callq	0x500340 <BloombergLP::balxml::Decoder_ElementContext::~Decoder_ElementContext()>	;  5 bytes
+M000000000000009a:	movq	%rbx, %rdi	;  3 bytes
+M000000000000009d:	callq	0x406a80 <_Unwind_Resume@plt>	;  5 bytes
+M00000000000000a2:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M00000000000000ac:	nopl	(%rax)	;  4 bytes
 ```

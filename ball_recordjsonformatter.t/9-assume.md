@@ -2,347 +2,347 @@
 
 ```nasm
 0000000000418520 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 02	pushq	%r13
-0000000000000007: 02	pushq	%r12
-0000000000000009: 01	pushq	%rbx
-000000000000000a: 07	subq	$248, %rsp
-0000000000000011: 05	cmpq	$0, 8(%rsi)
-0000000000000016: 06	je	0x418664 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x144>
-000000000000001c: 03	movq	%rsi, %r15
-000000000000001f: 03	movq	%rdi, %r14
-0000000000000022: 10	movabsq	$562949953421312, %rax
-000000000000002c: 08	movq	%rax, 184(%rsp)
-0000000000000034: 07	movq	2962885(%rip), %rax  # 6ebb20 <BloombergLP::bslma::Default::s_defaultAllocator>
-000000000000003b: 03	testq	%rax, %rax
-000000000000003e: 02	jne	0x418565 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x45>
-0000000000000040: 05	callq	0x4712e0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-0000000000000045: 08	movq	%rax, 192(%rsp)
-000000000000004d: 05	leaq	32(%rsp), %rdi
-0000000000000052: 05	callq	0x41c6b0 <BloombergLP::baljsn::DatumDecoderOptions::DatumDecoderOptions()>
-0000000000000057: 03	movq	(%r15), %rbx
-000000000000005a: 04	movq	8(%r15), %rbp
-000000000000005e: 05	leaq	64(%rsp), %rdi
-0000000000000063: 05	callq	0x404890 <_ZNSt3__115basic_streambufIcNS_11char_traitsIcEEEC2Ev@plt>
-0000000000000068: 09	movq	$4842512, 64(%rsp)
-0000000000000071: 08	movq	%rbx, 128(%rsp)
-0000000000000079: 08	movq	%rbp, 136(%rsp)
-0000000000000081: 03	addq	%rbx, %rbp
-0000000000000084: 05	movq	%rbx, 80(%rsp)
-0000000000000089: 05	movq	%rbx, 88(%rsp)
-000000000000008e: 05	movq	%rbp, 96(%rsp)
-0000000000000093: 08	leaq	176(%rsp), %rdi
-000000000000009b: 05	leaq	64(%rsp), %rdx
-00000000000000a0: 05	leaq	32(%rsp), %rcx
-00000000000000a5: 02	xorl	%esi, %esi
-00000000000000a7: 05	callq	0x41c7d0 <BloombergLP::baljsn::DatumUtil::decode(BloombergLP::bdld::ManagedDatum*, std::__1::basic_ostream<char, std::__1::char_traits<char> >*, std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, BloombergLP::baljsn::DatumDecoderOptions const&)>
-00000000000000ac: 02	movl	%eax, %ebx
-00000000000000ae: 05	leaq	64(%rsp), %rdi
-00000000000000b3: 05	callq	0x4045b0 <_ZNSt3__115basic_streambufIcNS_11char_traitsIcEEED2Ev@plt>
-00000000000000b8: 05	leaq	32(%rsp), %rdi
-00000000000000bd: 05	callq	0x41c6d0 <BloombergLP::baljsn::DatumDecoderOptions::~DatumDecoderOptions()>
-00000000000000c2: 02	testl	%ebx, %ebx
-00000000000000c4: 06	jne	0x418963 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x443>
-00000000000000ca: 03	xorps	%xmm0, %xmm0
-00000000000000cd: 08	movaps	%xmm0, 144(%rsp)
-00000000000000d5: 04	movq	40(%r14), %r13
-00000000000000d9: 08	movq	%r13, 160(%rsp)
-00000000000000e1: 05	movaps	%xmm0, 64(%rsp)
-00000000000000e6: 09	movq	$0, 80(%rsp)
-00000000000000ef: 05	movq	%r13, 88(%rsp)
-00000000000000f4: 09	movswq	190(%rsp), %rax
-00000000000000fd: 02	movl	%eax, %ecx
-00000000000000ff: 03	andl	$-3, %ecx
-0000000000000102: 08	movl	$4294967295, 28(%rsp)
-000000000000010a: 03	cmpl	$13, %ecx
-000000000000010d: 06	jne	0x4188e5 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x3c5>
-0000000000000113: 08	movq	%r15, 224(%rsp)
-000000000000011b: 08	movq	176(%rsp), %r12
-0000000000000123: 04	cmpw	$13, %ax
-0000000000000127: 02	jne	0x41866e <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x14e>
-0000000000000129: 03	testq	%r12, %r12
-000000000000012c: 06	je	0x4188a4 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x384>
-0000000000000132: 04	movq	(%r12), %rcx
-0000000000000136: 04	addq	$16, %r12
-000000000000013a: 03	testq	%rcx, %rcx
-000000000000013d: 02	jne	0x41867f <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x15f>
-000000000000013f: 05	jmp	0x4188a4 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x384>
-0000000000000144: 05	movl	$4294967295, %ebx
-0000000000000149: 05	jmp	0x418978 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x458>
-000000000000014e: 08	movslq	184(%rsp), %rcx
-0000000000000156: 03	testq	%rcx, %rcx
-0000000000000159: 06	je	0x4188a4 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x384>
-000000000000015f: 08	movq	%r14, 216(%rsp)
-0000000000000167: 03	movq	%rcx, %rax
-000000000000016a: 03	negq	%rax
-000000000000016d: 08	movq	%rax, 232(%rsp)
-0000000000000175: 02	movb	$1, %al
-0000000000000177: 06	movl	$1, %r14d
-000000000000017d: 08	movq	%rcx, 240(%rsp)
-0000000000000185: 02	jmp	0x4186d9 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x1b9>
-0000000000000187: 09	nopw	(%rax,%rax)
-0000000000000190: 08	cmpq	240(%rsp), %r14
-0000000000000198: 03	setb	%al
-000000000000019b: 04	addq	$16, %r12
-000000000000019f: 08	movq	232(%rsp), %rcx
-00000000000001a7: 05	leaq	1(%rcx,%r14), %rcx
-00000000000001ac: 03	incq	%r14
-00000000000001af: 04	cmpq	$1, %rcx
-00000000000001b3: 06	je	0x418898 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x378>
-00000000000001b9: 06	movswq	14(%r12), %rcx
-00000000000001bf: 05	movl	$16432, %edx
-00000000000001c4: 04	btq	%rcx, %rdx
-00000000000001c8: 06	jb	0x4187b0 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x290>
-00000000000001ce: 02	movl	%ecx, %ecx
-00000000000001d0: 04	addq	$-17, %rcx
-00000000000001d4: 04	cmpq	$1, %rcx
-00000000000001d8: 06	ja	0x418898 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x378>
-00000000000001de: 04	movq	(%r12), %rbp
-00000000000001e2: 03	testq	%rbp, %rbp
-00000000000001e5: 06	je	0x418860 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x340>
-00000000000001eb: 05	cmpq	$1, (%rbp)
-00000000000001f0: 06	jne	0x418860 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x340>
-00000000000001f6: 05	movswq	62(%rbp), %rax
-00000000000001fb: 02	movl	%eax, %eax
-00000000000001fd: 04	addq	$-17, %rax
-0000000000000201: 04	cmpq	$1, %rax
-0000000000000205: 06	ja	0x418860 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x340>
-000000000000020b: 04	leaq	32(%rbp), %rsi
-000000000000020f: 08	leaq	144(%rsp), %rdi
-0000000000000217: 05	callq	0x418c80 <BloombergLP::ball::(anonymous namespace)::DatumParser::make(BloombergLP::bslstl::StringRefImp<char> const&)>
-000000000000021c: 03	movq	%rax, %rbx
-000000000000021f: 08	movq	160(%rsp), %r13
-0000000000000227: 03	movq	%r13, %rax
-000000000000022a: 03	testq	%rbx, %rbx
-000000000000022d: 04	cmoveq	%rbx, %rax
-0000000000000231: 05	movq	%rax, 56(%rsp)
-0000000000000236: 06	movl	$4305968, %r15d
-000000000000023c: 04	cmoveq	%rbx, %r15
-0000000000000240: 06	je	0x418860 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x340>
-0000000000000246: 04	movq	48(%rbp), %rax
-000000000000024a: 03	testq	%rax, %rax
-000000000000024d: 06	je	0x418816 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x2f6>
-0000000000000253: 04	leaq	32(%rax), %rcx
-0000000000000257: 03	movq	(%rax), %rdx
-000000000000025a: 04	movzbl	8(%rax), %esi
-000000000000025e: 04	movzbl	9(%rax), %eax
-0000000000000262: 05	movq	%rcx, 32(%rsp)
-0000000000000267: 05	movq	%rdx, 40(%rsp)
-000000000000026c: 05	movb	%sil, 48(%rsp)
-0000000000000271: 03	testq	%rdx, %rdx
-0000000000000274: 05	movl	$0, %ecx
-0000000000000279: 03	cmovel	%ecx, %eax
-000000000000027c: 04	movb	%al, 49(%rsp)
-0000000000000280: 05	jmp	0x418825 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x305>
-0000000000000285: 10	nopw	%cs:(%rax,%rax)
-000000000000028f: 01	nop	
-0000000000000290: 03	cmpl	$14, %ecx
-0000000000000293: 02	je	0x4187ba <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x29a>
-0000000000000295: 03	cmpl	$5, %ecx
-0000000000000298: 02	jne	0x4187c5 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x2a5>
-000000000000029a: 04	movq	(%r12), %rax
-000000000000029e: 05	movslq	8(%r12), %rcx
-00000000000002a3: 02	jmp	0x4187cf <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x2af>
-00000000000002a5: 05	leaq	1(%r12), %rax
-00000000000002aa: 05	movsbq	(%r12), %rcx
-00000000000002af: 05	movq	%rax, 32(%rsp)
-00000000000002b4: 05	movq	%rcx, 40(%rsp)
-00000000000002b9: 08	leaq	144(%rsp), %rdi
-00000000000002c1: 05	leaq	32(%rsp), %rsi
-00000000000002c6: 05	callq	0x418c80 <BloombergLP::ball::(anonymous namespace)::DatumParser::make(BloombergLP::bslstl::StringRefImp<char> const&)>
-00000000000002cb: 03	movq	%rax, %rbx
-00000000000002ce: 08	movq	160(%rsp), %r13
-00000000000002d6: 03	testq	%rax, %rax
-00000000000002d9: 03	movq	%r13, %rbp
-00000000000002dc: 04	cmoveq	%rax, %rbp
-00000000000002e0: 03	movq	%rax, %r15
-00000000000002e3: 05	movl	$4305968, %eax
-00000000000002e8: 04	cmovneq	%rax, %r15
-00000000000002ec: 03	testq	%rbx, %rbx
-00000000000002ef: 02	jne	0x41887f <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x35f>
-00000000000002f1: 05	jmp	0x4186b0 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x190>
-00000000000002f6: 03	xorps	%xmm0, %xmm0
-00000000000002f9: 05	movaps	%xmm0, 32(%rsp)
-00000000000002fe: 07	movw	$0, 48(%rsp)
-0000000000000305: 03	movq	(%rbx), %rax
-0000000000000308: 04	movq	24(%rax), %rax
-000000000000030c: 05	movq	48(%rsp), %rcx
-0000000000000311: 05	movq	%rcx, 16(%rsp)
-0000000000000316: 05	movaps	32(%rsp), %xmm0
-000000000000031b: 04	movups	%xmm0, (%rsp)
-000000000000031f: 03	movq	%rbx, %rdi
-0000000000000322: 02	callq	*%rax
-0000000000000324: 02	testl	%eax, %eax
-0000000000000326: 02	je	0x418862 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x342>
-0000000000000328: 03	movq	%rbx, %rdi
-000000000000032b: 05	movq	56(%rsp), %rsi
-0000000000000330: 03	callq	*%r15
-0000000000000333: 10	nopw	%cs:(%rax,%rax)
-000000000000033d: 03	nopl	(%rax)
-0000000000000340: 02	xorl	%ebx, %ebx
-0000000000000342: 03	testq	%rbx, %rbx
-0000000000000345: 03	movq	%r13, %rbp
-0000000000000348: 04	cmoveq	%rbx, %rbp
-000000000000034c: 06	movl	$4305968, %r15d
-0000000000000352: 04	cmoveq	%rbx, %r15
-0000000000000356: 03	testq	%rbx, %rbx
-0000000000000359: 06	je	0x4186b0 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x190>
-000000000000035f: 05	movq	%rbx, 32(%rsp)
-0000000000000364: 05	leaq	64(%rsp), %rdi
-0000000000000369: 05	leaq	32(%rsp), %rsi
-000000000000036e: 05	callq	0x41c2f0 <unsigned long& bsl::vector<unsigned long, bsl::allocator<unsigned long> >::emplace_back<unsigned long>(unsigned long&&)>
-0000000000000373: 05	jmp	0x4186b0 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x190>
-0000000000000378: 02	testb	$1, %al
-000000000000037a: 08	movq	216(%rsp), %r14
-0000000000000382: 02	jne	0x4188e5 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x3c5>
-0000000000000384: 08	movq	224(%rsp), %rax
-000000000000038c: 03	movq	(%rax), %rsi
-000000000000038f: 04	movq	8(%rax), %rdx
-0000000000000393: 04	movq	24(%r14), %rbx
-0000000000000397: 08	movq	$0, 24(%r14)
-000000000000039f: 05	movl	$4826164, %ecx
-00000000000003a4: 03	movq	%r14, %rdi
-00000000000003a7: 05	callq	0x4753c0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-00000000000003ac: 04	addq	$48, %r14
-00000000000003b0: 08	movl	$0, 28(%rsp)
-00000000000003b8: 05	leaq	64(%rsp), %rsi
-00000000000003bd: 03	movq	%r14, %rdi
-00000000000003c0: 05	callq	0x48b240 <bsl::vector<unsigned long, bsl::allocator<unsigned long> >::swap(bsl::vector<unsigned long, bsl::allocator<unsigned long> >&)>
-00000000000003c5: 05	movq	64(%rsp), %rbx
-00000000000003ca: 05	movq	72(%rsp), %rcx
-00000000000003cf: 03	cmpq	%rcx, %rbx
-00000000000003d2: 02	jne	0x41890e <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x3ee>
-00000000000003d4: 03	testq	%rbx, %rbx
-00000000000003d7: 02	jne	0x41893f <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x41f>
-00000000000003d9: 02	jmp	0x41894d <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x42d>
-00000000000003db: 05	nopl	(%rax,%rax)
-00000000000003e0: 05	movq	72(%rsp), %rcx
-00000000000003e5: 04	addq	$8, %rbx
-00000000000003e9: 03	cmpq	%rcx, %rbx
-00000000000003ec: 02	je	0x418935 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x415>
-00000000000003ee: 03	movq	(%rbx), %rdi
-00000000000003f1: 03	testq	%rdi, %rdi
-00000000000003f4: 02	je	0x418905 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x3e5>
-00000000000003f6: 05	movq	88(%rsp), %r14
-00000000000003fb: 03	movq	(%rdi), %rax
-00000000000003fe: 04	movq	-16(%rax), %rbp
-0000000000000402: 03	addq	%rdi, %rbp
-0000000000000405: 02	callq	*(%rax)
-0000000000000407: 03	movq	(%r14), %rax
-000000000000040a: 03	movq	%r14, %rdi
-000000000000040d: 03	movq	%rbp, %rsi
-0000000000000410: 03	callq	*24(%rax)
-0000000000000413: 02	jmp	0x418900 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x3e0>
-0000000000000415: 05	movq	64(%rsp), %rbx
-000000000000041a: 03	testq	%rbx, %rbx
-000000000000041d: 02	je	0x41894d <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x42d>
-000000000000041f: 05	movq	88(%rsp), %rdi
-0000000000000424: 03	movq	(%rdi), %rax
-0000000000000427: 03	movq	%rbx, %rsi
-000000000000042a: 03	callq	*24(%rax)
-000000000000042d: 08	movq	152(%rsp), %rdi
-0000000000000435: 03	testq	%rdi, %rdi
-0000000000000438: 04	movl	28(%rsp), %ebx
-000000000000043c: 02	je	0x418963 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x443>
-000000000000043e: 05	callq	0x471c00 <BloombergLP::bslma::SharedPtrRep::releaseRef()>
-0000000000000443: 08	movq	192(%rsp), %rsi
-000000000000044b: 08	leaq	176(%rsp), %rdi
-0000000000000453: 05	callq	0x42a130 <BloombergLP::bdld::Datum::destroy(BloombergLP::bdld::Datum const&, BloombergLP::bslma::Allocator*)>
-0000000000000458: 02	movl	%ebx, %eax
-000000000000045a: 07	addq	$248, %rsp
-0000000000000461: 01	popq	%rbx
-0000000000000462: 02	popq	%r12
-0000000000000464: 02	popq	%r13
-0000000000000466: 02	popq	%r14
-0000000000000468: 02	popq	%r15
-000000000000046a: 01	popq	%rbp
-000000000000046b: 01	retq	
-000000000000046c: 02	jmp	0x4189f0 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x4d0>
-000000000000046e: 03	movq	%rax, %r13
-0000000000000471: 04	movq	%rbx, 24(%r14)
-0000000000000475: 02	jmp	0x418a01 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x4e1>
-0000000000000477: 03	movq	%rax, %r13
-000000000000047a: 03	movq	%rbx, %rdi
-000000000000047d: 05	movq	56(%rsp), %rsi
-0000000000000482: 03	callq	*%r15
-0000000000000485: 02	jmp	0x418a01 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x4e1>
-0000000000000487: 03	movq	%rax, %rdi
-000000000000048a: 05	callq	0x413ee0 <__clang_call_terminate>
-000000000000048f: 03	movq	%rax, %rdi
-0000000000000492: 05	callq	0x413ee0 <__clang_call_terminate>
-0000000000000497: 03	movq	%rax, %rdi
-000000000000049a: 05	callq	0x413ee0 <__clang_call_terminate>
-000000000000049f: 03	movq	%rax, %rdi
-00000000000004a2: 05	callq	0x413ee0 <__clang_call_terminate>
-00000000000004a7: 03	movq	%rax, %r13
-00000000000004aa: 05	leaq	64(%rsp), %rdi
-00000000000004af: 05	callq	0x4045b0 <_ZNSt3__115basic_streambufIcNS_11char_traitsIcEEED2Ev@plt>
-00000000000004b4: 02	jmp	0x4189d9 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x4b9>
-00000000000004b6: 03	movq	%rax, %r13
-00000000000004b9: 05	leaq	32(%rsp), %rdi
-00000000000004be: 05	callq	0x41c6d0 <BloombergLP::baljsn::DatumDecoderOptions::~DatumDecoderOptions()>
-00000000000004c3: 05	jmp	0x418a80 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x560>
-00000000000004c8: 03	movq	%rax, %r13
-00000000000004cb: 05	jmp	0x418a80 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x560>
-00000000000004d0: 03	movq	%rax, %r13
-00000000000004d3: 02	jmp	0x418a01 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x4e1>
-00000000000004d5: 03	movq	%rax, %r13
-00000000000004d8: 03	movq	%rbx, %rdi
-00000000000004db: 03	movq	%rbp, %rsi
-00000000000004de: 03	callq	*%r15
-00000000000004e1: 05	movq	64(%rsp), %rbp
-00000000000004e6: 05	movq	72(%rsp), %rcx
-00000000000004eb: 03	cmpq	%rcx, %rbp
-00000000000004ee: 02	jne	0x418a29 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x509>
-00000000000004f0: 02	jmp	0x418a5b <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x53b>
-00000000000004f2: 10	nopw	%cs:(%rax,%rax)
-00000000000004fc: 04	nopl	(%rax)
-0000000000000500: 04	addq	$8, %rbp
-0000000000000504: 03	cmpq	%rcx, %rbp
-0000000000000507: 02	je	0x418a56 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x536>
-0000000000000509: 04	movq	(%rbp), %rdi
-000000000000050d: 03	testq	%rdi, %rdi
-0000000000000510: 02	je	0x418a20 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x500>
-0000000000000512: 05	movq	88(%rsp), %r14
-0000000000000517: 03	movq	(%rdi), %rax
-000000000000051a: 04	movq	-16(%rax), %rbx
-000000000000051e: 03	addq	%rdi, %rbx
-0000000000000521: 02	callq	*(%rax)
-0000000000000523: 03	movq	(%r14), %rax
-0000000000000526: 03	movq	%r14, %rdi
-0000000000000529: 03	movq	%rbx, %rsi
-000000000000052c: 03	callq	*24(%rax)
-000000000000052f: 05	movq	72(%rsp), %rcx
-0000000000000534: 02	jmp	0x418a20 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x500>
-0000000000000536: 05	movq	64(%rsp), %rbp
-000000000000053b: 03	testq	%rbp, %rbp
-000000000000053e: 02	je	0x418a6e <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x54e>
-0000000000000540: 05	movq	88(%rsp), %rdi
-0000000000000545: 03	movq	(%rdi), %rax
-0000000000000548: 03	movq	%rbp, %rsi
-000000000000054b: 03	callq	*24(%rax)
-000000000000054e: 08	movq	152(%rsp), %rdi
-0000000000000556: 03	testq	%rdi, %rdi
-0000000000000559: 02	je	0x418a80 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x560>
-000000000000055b: 05	callq	0x471c00 <BloombergLP::bslma::SharedPtrRep::releaseRef()>
-0000000000000560: 08	movq	192(%rsp), %rsi
-0000000000000568: 08	leaq	176(%rsp), %rdi
-0000000000000570: 05	callq	0x42a130 <BloombergLP::bdld::Datum::destroy(BloombergLP::bdld::Datum const&, BloombergLP::bslma::Allocator*)>
-0000000000000575: 03	movq	%r13, %rdi
-0000000000000578: 05	callq	0x404c30 <_Unwind_Resume@plt>
-000000000000057d: 03	movq	%rax, %rdi
-0000000000000580: 05	callq	0x413ee0 <__clang_call_terminate>
-0000000000000585: 03	movq	%rax, %rdi
-0000000000000588: 05	callq	0x413ee0 <__clang_call_terminate>
-000000000000058d: 03	movq	%rax, %rdi
-0000000000000590: 05	callq	0x413ee0 <__clang_call_terminate>
-0000000000000595: 03	movq	%rax, %rdi
-0000000000000598: 05	callq	0x413ee0 <__clang_call_terminate>
-000000000000059d: 03	movq	%rax, %rdi
-00000000000005a0: 05	callq	0x413ee0 <__clang_call_terminate>
-00000000000005a5: 03	movq	%rax, %rdi
-00000000000005a8: 05	callq	0x413ee0 <__clang_call_terminate>
-00000000000005ad: 03	nopl	(%rax)
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%r13	;  2 bytes
+M0000000000000007:	pushq	%r12	;  2 bytes
+M0000000000000009:	pushq	%rbx	;  1 bytes
+M000000000000000a:	subq	$248, %rsp	;  7 bytes
+M0000000000000011:	cmpq	$0, 8(%rsi)	;  5 bytes
+M0000000000000016:	je	0x418664 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x144>	;  6 bytes
+M000000000000001c:	movq	%rsi, %r15	;  3 bytes
+M000000000000001f:	movq	%rdi, %r14	;  3 bytes
+M0000000000000022:	movabsq	$562949953421312, %rax	; 10 bytes
+M000000000000002c:	movq	%rax, 184(%rsp)	;  8 bytes
+M0000000000000034:	movq	2962885(%rip), %rax  # 6ebb20 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M000000000000003b:	testq	%rax, %rax	;  3 bytes
+M000000000000003e:	jne	0x418565 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x45>	;  2 bytes
+M0000000000000040:	callq	0x4712e0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M0000000000000045:	movq	%rax, 192(%rsp)	;  8 bytes
+M000000000000004d:	leaq	32(%rsp), %rdi	;  5 bytes
+M0000000000000052:	callq	0x41c6b0 <BloombergLP::baljsn::DatumDecoderOptions::DatumDecoderOptions()>	;  5 bytes
+M0000000000000057:	movq	(%r15), %rbx	;  3 bytes
+M000000000000005a:	movq	8(%r15), %rbp	;  4 bytes
+M000000000000005e:	leaq	64(%rsp), %rdi	;  5 bytes
+M0000000000000063:	callq	0x404890 <_ZNSt3__115basic_streambufIcNS_11char_traitsIcEEEC2Ev@plt>	;  5 bytes
+M0000000000000068:	movq	$4842512, 64(%rsp)	;  9 bytes
+M0000000000000071:	movq	%rbx, 128(%rsp)	;  8 bytes
+M0000000000000079:	movq	%rbp, 136(%rsp)	;  8 bytes
+M0000000000000081:	addq	%rbx, %rbp	;  3 bytes
+M0000000000000084:	movq	%rbx, 80(%rsp)	;  5 bytes
+M0000000000000089:	movq	%rbx, 88(%rsp)	;  5 bytes
+M000000000000008e:	movq	%rbp, 96(%rsp)	;  5 bytes
+M0000000000000093:	leaq	176(%rsp), %rdi	;  8 bytes
+M000000000000009b:	leaq	64(%rsp), %rdx	;  5 bytes
+M00000000000000a0:	leaq	32(%rsp), %rcx	;  5 bytes
+M00000000000000a5:	xorl	%esi, %esi	;  2 bytes
+M00000000000000a7:	callq	0x41c7d0 <BloombergLP::baljsn::DatumUtil::decode(BloombergLP::bdld::ManagedDatum*, std::__1::basic_ostream<char, std::__1::char_traits<char> >*, std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, BloombergLP::baljsn::DatumDecoderOptions const&)>	;  5 bytes
+M00000000000000ac:	movl	%eax, %ebx	;  2 bytes
+M00000000000000ae:	leaq	64(%rsp), %rdi	;  5 bytes
+M00000000000000b3:	callq	0x4045b0 <_ZNSt3__115basic_streambufIcNS_11char_traitsIcEEED2Ev@plt>	;  5 bytes
+M00000000000000b8:	leaq	32(%rsp), %rdi	;  5 bytes
+M00000000000000bd:	callq	0x41c6d0 <BloombergLP::baljsn::DatumDecoderOptions::~DatumDecoderOptions()>	;  5 bytes
+M00000000000000c2:	testl	%ebx, %ebx	;  2 bytes
+M00000000000000c4:	jne	0x418963 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x443>	;  6 bytes
+M00000000000000ca:	xorps	%xmm0, %xmm0	;  3 bytes
+M00000000000000cd:	movaps	%xmm0, 144(%rsp)	;  8 bytes
+M00000000000000d5:	movq	40(%r14), %r13	;  4 bytes
+M00000000000000d9:	movq	%r13, 160(%rsp)	;  8 bytes
+M00000000000000e1:	movaps	%xmm0, 64(%rsp)	;  5 bytes
+M00000000000000e6:	movq	$0, 80(%rsp)	;  9 bytes
+M00000000000000ef:	movq	%r13, 88(%rsp)	;  5 bytes
+M00000000000000f4:	movswq	190(%rsp), %rax	;  9 bytes
+M00000000000000fd:	movl	%eax, %ecx	;  2 bytes
+M00000000000000ff:	andl	$-3, %ecx	;  3 bytes
+M0000000000000102:	movl	$4294967295, 28(%rsp)	;  8 bytes
+M000000000000010a:	cmpl	$13, %ecx	;  3 bytes
+M000000000000010d:	jne	0x4188e5 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x3c5>	;  6 bytes
+M0000000000000113:	movq	%r15, 224(%rsp)	;  8 bytes
+M000000000000011b:	movq	176(%rsp), %r12	;  8 bytes
+M0000000000000123:	cmpw	$13, %ax	;  4 bytes
+M0000000000000127:	jne	0x41866e <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x14e>	;  2 bytes
+M0000000000000129:	testq	%r12, %r12	;  3 bytes
+M000000000000012c:	je	0x4188a4 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x384>	;  6 bytes
+M0000000000000132:	movq	(%r12), %rcx	;  4 bytes
+M0000000000000136:	addq	$16, %r12	;  4 bytes
+M000000000000013a:	testq	%rcx, %rcx	;  3 bytes
+M000000000000013d:	jne	0x41867f <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x15f>	;  2 bytes
+M000000000000013f:	jmp	0x4188a4 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x384>	;  5 bytes
+M0000000000000144:	movl	$4294967295, %ebx	;  5 bytes
+M0000000000000149:	jmp	0x418978 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x458>	;  5 bytes
+M000000000000014e:	movslq	184(%rsp), %rcx	;  8 bytes
+M0000000000000156:	testq	%rcx, %rcx	;  3 bytes
+M0000000000000159:	je	0x4188a4 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x384>	;  6 bytes
+M000000000000015f:	movq	%r14, 216(%rsp)	;  8 bytes
+M0000000000000167:	movq	%rcx, %rax	;  3 bytes
+M000000000000016a:	negq	%rax	;  3 bytes
+M000000000000016d:	movq	%rax, 232(%rsp)	;  8 bytes
+M0000000000000175:	movb	$1, %al	;  2 bytes
+M0000000000000177:	movl	$1, %r14d	;  6 bytes
+M000000000000017d:	movq	%rcx, 240(%rsp)	;  8 bytes
+M0000000000000185:	jmp	0x4186d9 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x1b9>	;  2 bytes
+M0000000000000187:	nopw	(%rax,%rax)	;  9 bytes
+M0000000000000190:	cmpq	240(%rsp), %r14	;  8 bytes
+M0000000000000198:	setb	%al	;  3 bytes
+M000000000000019b:	addq	$16, %r12	;  4 bytes
+M000000000000019f:	movq	232(%rsp), %rcx	;  8 bytes
+M00000000000001a7:	leaq	1(%rcx,%r14), %rcx	;  5 bytes
+M00000000000001ac:	incq	%r14	;  3 bytes
+M00000000000001af:	cmpq	$1, %rcx	;  4 bytes
+M00000000000001b3:	je	0x418898 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x378>	;  6 bytes
+M00000000000001b9:	movswq	14(%r12), %rcx	;  6 bytes
+M00000000000001bf:	movl	$16432, %edx	;  5 bytes
+M00000000000001c4:	btq	%rcx, %rdx	;  4 bytes
+M00000000000001c8:	jb	0x4187b0 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x290>	;  6 bytes
+M00000000000001ce:	movl	%ecx, %ecx	;  2 bytes
+M00000000000001d0:	addq	$-17, %rcx	;  4 bytes
+M00000000000001d4:	cmpq	$1, %rcx	;  4 bytes
+M00000000000001d8:	ja	0x418898 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x378>	;  6 bytes
+M00000000000001de:	movq	(%r12), %rbp	;  4 bytes
+M00000000000001e2:	testq	%rbp, %rbp	;  3 bytes
+M00000000000001e5:	je	0x418860 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x340>	;  6 bytes
+M00000000000001eb:	cmpq	$1, (%rbp)	;  5 bytes
+M00000000000001f0:	jne	0x418860 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x340>	;  6 bytes
+M00000000000001f6:	movswq	62(%rbp), %rax	;  5 bytes
+M00000000000001fb:	movl	%eax, %eax	;  2 bytes
+M00000000000001fd:	addq	$-17, %rax	;  4 bytes
+M0000000000000201:	cmpq	$1, %rax	;  4 bytes
+M0000000000000205:	ja	0x418860 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x340>	;  6 bytes
+M000000000000020b:	leaq	32(%rbp), %rsi	;  4 bytes
+M000000000000020f:	leaq	144(%rsp), %rdi	;  8 bytes
+M0000000000000217:	callq	0x418c80 <BloombergLP::ball::(anonymous namespace)::DatumParser::make(BloombergLP::bslstl::StringRefImp<char> const&)>	;  5 bytes
+M000000000000021c:	movq	%rax, %rbx	;  3 bytes
+M000000000000021f:	movq	160(%rsp), %r13	;  8 bytes
+M0000000000000227:	movq	%r13, %rax	;  3 bytes
+M000000000000022a:	testq	%rbx, %rbx	;  3 bytes
+M000000000000022d:	cmoveq	%rbx, %rax	;  4 bytes
+M0000000000000231:	movq	%rax, 56(%rsp)	;  5 bytes
+M0000000000000236:	movl	$4305968, %r15d	;  6 bytes
+M000000000000023c:	cmoveq	%rbx, %r15	;  4 bytes
+M0000000000000240:	je	0x418860 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x340>	;  6 bytes
+M0000000000000246:	movq	48(%rbp), %rax	;  4 bytes
+M000000000000024a:	testq	%rax, %rax	;  3 bytes
+M000000000000024d:	je	0x418816 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x2f6>	;  6 bytes
+M0000000000000253:	leaq	32(%rax), %rcx	;  4 bytes
+M0000000000000257:	movq	(%rax), %rdx	;  3 bytes
+M000000000000025a:	movzbl	8(%rax), %esi	;  4 bytes
+M000000000000025e:	movzbl	9(%rax), %eax	;  4 bytes
+M0000000000000262:	movq	%rcx, 32(%rsp)	;  5 bytes
+M0000000000000267:	movq	%rdx, 40(%rsp)	;  5 bytes
+M000000000000026c:	movb	%sil, 48(%rsp)	;  5 bytes
+M0000000000000271:	testq	%rdx, %rdx	;  3 bytes
+M0000000000000274:	movl	$0, %ecx	;  5 bytes
+M0000000000000279:	cmovel	%ecx, %eax	;  3 bytes
+M000000000000027c:	movb	%al, 49(%rsp)	;  4 bytes
+M0000000000000280:	jmp	0x418825 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x305>	;  5 bytes
+M0000000000000285:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000028f:	nop		;  1 bytes
+M0000000000000290:	cmpl	$14, %ecx	;  3 bytes
+M0000000000000293:	je	0x4187ba <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x29a>	;  2 bytes
+M0000000000000295:	cmpl	$5, %ecx	;  3 bytes
+M0000000000000298:	jne	0x4187c5 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x2a5>	;  2 bytes
+M000000000000029a:	movq	(%r12), %rax	;  4 bytes
+M000000000000029e:	movslq	8(%r12), %rcx	;  5 bytes
+M00000000000002a3:	jmp	0x4187cf <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x2af>	;  2 bytes
+M00000000000002a5:	leaq	1(%r12), %rax	;  5 bytes
+M00000000000002aa:	movsbq	(%r12), %rcx	;  5 bytes
+M00000000000002af:	movq	%rax, 32(%rsp)	;  5 bytes
+M00000000000002b4:	movq	%rcx, 40(%rsp)	;  5 bytes
+M00000000000002b9:	leaq	144(%rsp), %rdi	;  8 bytes
+M00000000000002c1:	leaq	32(%rsp), %rsi	;  5 bytes
+M00000000000002c6:	callq	0x418c80 <BloombergLP::ball::(anonymous namespace)::DatumParser::make(BloombergLP::bslstl::StringRefImp<char> const&)>	;  5 bytes
+M00000000000002cb:	movq	%rax, %rbx	;  3 bytes
+M00000000000002ce:	movq	160(%rsp), %r13	;  8 bytes
+M00000000000002d6:	testq	%rax, %rax	;  3 bytes
+M00000000000002d9:	movq	%r13, %rbp	;  3 bytes
+M00000000000002dc:	cmoveq	%rax, %rbp	;  4 bytes
+M00000000000002e0:	movq	%rax, %r15	;  3 bytes
+M00000000000002e3:	movl	$4305968, %eax	;  5 bytes
+M00000000000002e8:	cmovneq	%rax, %r15	;  4 bytes
+M00000000000002ec:	testq	%rbx, %rbx	;  3 bytes
+M00000000000002ef:	jne	0x41887f <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x35f>	;  2 bytes
+M00000000000002f1:	jmp	0x4186b0 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x190>	;  5 bytes
+M00000000000002f6:	xorps	%xmm0, %xmm0	;  3 bytes
+M00000000000002f9:	movaps	%xmm0, 32(%rsp)	;  5 bytes
+M00000000000002fe:	movw	$0, 48(%rsp)	;  7 bytes
+M0000000000000305:	movq	(%rbx), %rax	;  3 bytes
+M0000000000000308:	movq	24(%rax), %rax	;  4 bytes
+M000000000000030c:	movq	48(%rsp), %rcx	;  5 bytes
+M0000000000000311:	movq	%rcx, 16(%rsp)	;  5 bytes
+M0000000000000316:	movaps	32(%rsp), %xmm0	;  5 bytes
+M000000000000031b:	movups	%xmm0, (%rsp)	;  4 bytes
+M000000000000031f:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000322:	callq	*%rax	;  2 bytes
+M0000000000000324:	testl	%eax, %eax	;  2 bytes
+M0000000000000326:	je	0x418862 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x342>	;  2 bytes
+M0000000000000328:	movq	%rbx, %rdi	;  3 bytes
+M000000000000032b:	movq	56(%rsp), %rsi	;  5 bytes
+M0000000000000330:	callq	*%r15	;  3 bytes
+M0000000000000333:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000033d:	nopl	(%rax)	;  3 bytes
+M0000000000000340:	xorl	%ebx, %ebx	;  2 bytes
+M0000000000000342:	testq	%rbx, %rbx	;  3 bytes
+M0000000000000345:	movq	%r13, %rbp	;  3 bytes
+M0000000000000348:	cmoveq	%rbx, %rbp	;  4 bytes
+M000000000000034c:	movl	$4305968, %r15d	;  6 bytes
+M0000000000000352:	cmoveq	%rbx, %r15	;  4 bytes
+M0000000000000356:	testq	%rbx, %rbx	;  3 bytes
+M0000000000000359:	je	0x4186b0 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x190>	;  6 bytes
+M000000000000035f:	movq	%rbx, 32(%rsp)	;  5 bytes
+M0000000000000364:	leaq	64(%rsp), %rdi	;  5 bytes
+M0000000000000369:	leaq	32(%rsp), %rsi	;  5 bytes
+M000000000000036e:	callq	0x41c2f0 <unsigned long& bsl::vector<unsigned long, bsl::allocator<unsigned long> >::emplace_back<unsigned long>(unsigned long&&)>	;  5 bytes
+M0000000000000373:	jmp	0x4186b0 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x190>	;  5 bytes
+M0000000000000378:	testb	$1, %al	;  2 bytes
+M000000000000037a:	movq	216(%rsp), %r14	;  8 bytes
+M0000000000000382:	jne	0x4188e5 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x3c5>	;  2 bytes
+M0000000000000384:	movq	224(%rsp), %rax	;  8 bytes
+M000000000000038c:	movq	(%rax), %rsi	;  3 bytes
+M000000000000038f:	movq	8(%rax), %rdx	;  4 bytes
+M0000000000000393:	movq	24(%r14), %rbx	;  4 bytes
+M0000000000000397:	movq	$0, 24(%r14)	;  8 bytes
+M000000000000039f:	movl	$4826164, %ecx	;  5 bytes
+M00000000000003a4:	movq	%r14, %rdi	;  3 bytes
+M00000000000003a7:	callq	0x4753c0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M00000000000003ac:	addq	$48, %r14	;  4 bytes
+M00000000000003b0:	movl	$0, 28(%rsp)	;  8 bytes
+M00000000000003b8:	leaq	64(%rsp), %rsi	;  5 bytes
+M00000000000003bd:	movq	%r14, %rdi	;  3 bytes
+M00000000000003c0:	callq	0x48b240 <bsl::vector<unsigned long, bsl::allocator<unsigned long> >::swap(bsl::vector<unsigned long, bsl::allocator<unsigned long> >&)>	;  5 bytes
+M00000000000003c5:	movq	64(%rsp), %rbx	;  5 bytes
+M00000000000003ca:	movq	72(%rsp), %rcx	;  5 bytes
+M00000000000003cf:	cmpq	%rcx, %rbx	;  3 bytes
+M00000000000003d2:	jne	0x41890e <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x3ee>	;  2 bytes
+M00000000000003d4:	testq	%rbx, %rbx	;  3 bytes
+M00000000000003d7:	jne	0x41893f <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x41f>	;  2 bytes
+M00000000000003d9:	jmp	0x41894d <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x42d>	;  2 bytes
+M00000000000003db:	nopl	(%rax,%rax)	;  5 bytes
+M00000000000003e0:	movq	72(%rsp), %rcx	;  5 bytes
+M00000000000003e5:	addq	$8, %rbx	;  4 bytes
+M00000000000003e9:	cmpq	%rcx, %rbx	;  3 bytes
+M00000000000003ec:	je	0x418935 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x415>	;  2 bytes
+M00000000000003ee:	movq	(%rbx), %rdi	;  3 bytes
+M00000000000003f1:	testq	%rdi, %rdi	;  3 bytes
+M00000000000003f4:	je	0x418905 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x3e5>	;  2 bytes
+M00000000000003f6:	movq	88(%rsp), %r14	;  5 bytes
+M00000000000003fb:	movq	(%rdi), %rax	;  3 bytes
+M00000000000003fe:	movq	-16(%rax), %rbp	;  4 bytes
+M0000000000000402:	addq	%rdi, %rbp	;  3 bytes
+M0000000000000405:	callq	*(%rax)	;  2 bytes
+M0000000000000407:	movq	(%r14), %rax	;  3 bytes
+M000000000000040a:	movq	%r14, %rdi	;  3 bytes
+M000000000000040d:	movq	%rbp, %rsi	;  3 bytes
+M0000000000000410:	callq	*24(%rax)	;  3 bytes
+M0000000000000413:	jmp	0x418900 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x3e0>	;  2 bytes
+M0000000000000415:	movq	64(%rsp), %rbx	;  5 bytes
+M000000000000041a:	testq	%rbx, %rbx	;  3 bytes
+M000000000000041d:	je	0x41894d <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x42d>	;  2 bytes
+M000000000000041f:	movq	88(%rsp), %rdi	;  5 bytes
+M0000000000000424:	movq	(%rdi), %rax	;  3 bytes
+M0000000000000427:	movq	%rbx, %rsi	;  3 bytes
+M000000000000042a:	callq	*24(%rax)	;  3 bytes
+M000000000000042d:	movq	152(%rsp), %rdi	;  8 bytes
+M0000000000000435:	testq	%rdi, %rdi	;  3 bytes
+M0000000000000438:	movl	28(%rsp), %ebx	;  4 bytes
+M000000000000043c:	je	0x418963 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x443>	;  2 bytes
+M000000000000043e:	callq	0x471c00 <BloombergLP::bslma::SharedPtrRep::releaseRef()>	;  5 bytes
+M0000000000000443:	movq	192(%rsp), %rsi	;  8 bytes
+M000000000000044b:	leaq	176(%rsp), %rdi	;  8 bytes
+M0000000000000453:	callq	0x42a130 <BloombergLP::bdld::Datum::destroy(BloombergLP::bdld::Datum const&, BloombergLP::bslma::Allocator*)>	;  5 bytes
+M0000000000000458:	movl	%ebx, %eax	;  2 bytes
+M000000000000045a:	addq	$248, %rsp	;  7 bytes
+M0000000000000461:	popq	%rbx	;  1 bytes
+M0000000000000462:	popq	%r12	;  2 bytes
+M0000000000000464:	popq	%r13	;  2 bytes
+M0000000000000466:	popq	%r14	;  2 bytes
+M0000000000000468:	popq	%r15	;  2 bytes
+M000000000000046a:	popq	%rbp	;  1 bytes
+M000000000000046b:	retq		;  1 bytes
+M000000000000046c:	jmp	0x4189f0 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x4d0>	;  2 bytes
+M000000000000046e:	movq	%rax, %r13	;  3 bytes
+M0000000000000471:	movq	%rbx, 24(%r14)	;  4 bytes
+M0000000000000475:	jmp	0x418a01 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x4e1>	;  2 bytes
+M0000000000000477:	movq	%rax, %r13	;  3 bytes
+M000000000000047a:	movq	%rbx, %rdi	;  3 bytes
+M000000000000047d:	movq	56(%rsp), %rsi	;  5 bytes
+M0000000000000482:	callq	*%r15	;  3 bytes
+M0000000000000485:	jmp	0x418a01 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x4e1>	;  2 bytes
+M0000000000000487:	movq	%rax, %rdi	;  3 bytes
+M000000000000048a:	callq	0x413ee0 <__clang_call_terminate>	;  5 bytes
+M000000000000048f:	movq	%rax, %rdi	;  3 bytes
+M0000000000000492:	callq	0x413ee0 <__clang_call_terminate>	;  5 bytes
+M0000000000000497:	movq	%rax, %rdi	;  3 bytes
+M000000000000049a:	callq	0x413ee0 <__clang_call_terminate>	;  5 bytes
+M000000000000049f:	movq	%rax, %rdi	;  3 bytes
+M00000000000004a2:	callq	0x413ee0 <__clang_call_terminate>	;  5 bytes
+M00000000000004a7:	movq	%rax, %r13	;  3 bytes
+M00000000000004aa:	leaq	64(%rsp), %rdi	;  5 bytes
+M00000000000004af:	callq	0x4045b0 <_ZNSt3__115basic_streambufIcNS_11char_traitsIcEEED2Ev@plt>	;  5 bytes
+M00000000000004b4:	jmp	0x4189d9 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x4b9>	;  2 bytes
+M00000000000004b6:	movq	%rax, %r13	;  3 bytes
+M00000000000004b9:	leaq	32(%rsp), %rdi	;  5 bytes
+M00000000000004be:	callq	0x41c6d0 <BloombergLP::baljsn::DatumDecoderOptions::~DatumDecoderOptions()>	;  5 bytes
+M00000000000004c3:	jmp	0x418a80 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x560>	;  5 bytes
+M00000000000004c8:	movq	%rax, %r13	;  3 bytes
+M00000000000004cb:	jmp	0x418a80 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x560>	;  5 bytes
+M00000000000004d0:	movq	%rax, %r13	;  3 bytes
+M00000000000004d3:	jmp	0x418a01 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x4e1>	;  2 bytes
+M00000000000004d5:	movq	%rax, %r13	;  3 bytes
+M00000000000004d8:	movq	%rbx, %rdi	;  3 bytes
+M00000000000004db:	movq	%rbp, %rsi	;  3 bytes
+M00000000000004de:	callq	*%r15	;  3 bytes
+M00000000000004e1:	movq	64(%rsp), %rbp	;  5 bytes
+M00000000000004e6:	movq	72(%rsp), %rcx	;  5 bytes
+M00000000000004eb:	cmpq	%rcx, %rbp	;  3 bytes
+M00000000000004ee:	jne	0x418a29 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x509>	;  2 bytes
+M00000000000004f0:	jmp	0x418a5b <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x53b>	;  2 bytes
+M00000000000004f2:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M00000000000004fc:	nopl	(%rax)	;  4 bytes
+M0000000000000500:	addq	$8, %rbp	;  4 bytes
+M0000000000000504:	cmpq	%rcx, %rbp	;  3 bytes
+M0000000000000507:	je	0x418a56 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x536>	;  2 bytes
+M0000000000000509:	movq	(%rbp), %rdi	;  4 bytes
+M000000000000050d:	testq	%rdi, %rdi	;  3 bytes
+M0000000000000510:	je	0x418a20 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x500>	;  2 bytes
+M0000000000000512:	movq	88(%rsp), %r14	;  5 bytes
+M0000000000000517:	movq	(%rdi), %rax	;  3 bytes
+M000000000000051a:	movq	-16(%rax), %rbx	;  4 bytes
+M000000000000051e:	addq	%rdi, %rbx	;  3 bytes
+M0000000000000521:	callq	*(%rax)	;  2 bytes
+M0000000000000523:	movq	(%r14), %rax	;  3 bytes
+M0000000000000526:	movq	%r14, %rdi	;  3 bytes
+M0000000000000529:	movq	%rbx, %rsi	;  3 bytes
+M000000000000052c:	callq	*24(%rax)	;  3 bytes
+M000000000000052f:	movq	72(%rsp), %rcx	;  5 bytes
+M0000000000000534:	jmp	0x418a20 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x500>	;  2 bytes
+M0000000000000536:	movq	64(%rsp), %rbp	;  5 bytes
+M000000000000053b:	testq	%rbp, %rbp	;  3 bytes
+M000000000000053e:	je	0x418a6e <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x54e>	;  2 bytes
+M0000000000000540:	movq	88(%rsp), %rdi	;  5 bytes
+M0000000000000545:	movq	(%rdi), %rax	;  3 bytes
+M0000000000000548:	movq	%rbp, %rsi	;  3 bytes
+M000000000000054b:	callq	*24(%rax)	;  3 bytes
+M000000000000054e:	movq	152(%rsp), %rdi	;  8 bytes
+M0000000000000556:	testq	%rdi, %rdi	;  3 bytes
+M0000000000000559:	je	0x418a80 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)+0x560>	;  2 bytes
+M000000000000055b:	callq	0x471c00 <BloombergLP::bslma::SharedPtrRep::releaseRef()>	;  5 bytes
+M0000000000000560:	movq	192(%rsp), %rsi	;  8 bytes
+M0000000000000568:	leaq	176(%rsp), %rdi	;  8 bytes
+M0000000000000570:	callq	0x42a130 <BloombergLP::bdld::Datum::destroy(BloombergLP::bdld::Datum const&, BloombergLP::bslma::Allocator*)>	;  5 bytes
+M0000000000000575:	movq	%r13, %rdi	;  3 bytes
+M0000000000000578:	callq	0x404c30 <_Unwind_Resume@plt>	;  5 bytes
+M000000000000057d:	movq	%rax, %rdi	;  3 bytes
+M0000000000000580:	callq	0x413ee0 <__clang_call_terminate>	;  5 bytes
+M0000000000000585:	movq	%rax, %rdi	;  3 bytes
+M0000000000000588:	callq	0x413ee0 <__clang_call_terminate>	;  5 bytes
+M000000000000058d:	movq	%rax, %rdi	;  3 bytes
+M0000000000000590:	callq	0x413ee0 <__clang_call_terminate>	;  5 bytes
+M0000000000000595:	movq	%rax, %rdi	;  3 bytes
+M0000000000000598:	callq	0x413ee0 <__clang_call_terminate>	;  5 bytes
+M000000000000059d:	movq	%rax, %rdi	;  3 bytes
+M00000000000005a0:	callq	0x413ee0 <__clang_call_terminate>	;  5 bytes
+M00000000000005a5:	movq	%rax, %rdi	;  3 bytes
+M00000000000005a8:	callq	0x413ee0 <__clang_call_terminate>	;  5 bytes
+M00000000000005ad:	nopl	(%rax)	;  3 bytes
 ```

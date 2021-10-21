@@ -2,349 +2,349 @@
 
 ```nasm
 0000000000445960 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 02	pushq	%r13
-0000000000000007: 02	pushq	%r12
-0000000000000009: 01	pushq	%rbx
-000000000000000a: 03	testq	%r8, %r8
-000000000000000d: 06	je	0x445d4e <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x3ee>
-0000000000000013: 03	movq	%rcx, %rax
-0000000000000016: 03	addq	%r8, %rsi
-0000000000000019: 03	movq	%rsi, %r15
-000000000000001c: 04	shrq	$6, %r15
-0000000000000020: 04	leaq	(%rdi,%r15,8), %r11
-0000000000000024: 03	andl	$63, %esi
-0000000000000027: 03	addq	%r8, %rax
-000000000000002a: 03	movq	%rax, %rbp
-000000000000002d: 04	shrq	$6, %rbp
-0000000000000031: 04	leaq	(%rdx,%rbp,8), %r10
-0000000000000035: 03	andl	$63, %eax
-0000000000000038: 06	je	0x445a58 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0xf8>
-000000000000003e: 03	movl	%eax, %r12d
-0000000000000041: 03	cmpq	%r8, %r12
-0000000000000044: 06	jae	0x445b17 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x1b7>
-000000000000004a: 03	leal	64(%rsi), %ecx
-000000000000004d: 02	cmpl	%eax, %esi
-000000000000004f: 03	cmovael	%esi, %ecx
-0000000000000052: 03	sbbq	%r14, %r14
-0000000000000055: 02	movl	%ecx, %esi
-0000000000000057: 02	subl	%eax, %esi
-0000000000000059: 04	leaq	(%r11,%r14,8), %r13
-000000000000005d: 03	movq	(%r10), %r9
-0000000000000060: 05	movl	$64, %ecx
-0000000000000065: 02	subl	%esi, %ecx
-0000000000000067: 02	subl	%ecx, %eax
-0000000000000069: 06	jbe	0x445baa <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x24a>
-000000000000006f: 05	movq	%rbp, -32(%rsp)
-0000000000000074: 05	movq	%r10, -24(%rsp)
-0000000000000079: 05	movq	%r11, -16(%rsp)
-000000000000007e: 07	movq	$-1, %r10
-0000000000000085: 03	shlq	%cl, %r10
-0000000000000088: 07	movq	$-1, %rbx
-000000000000008f: 02	movl	%ecx, %ecx
-0000000000000091: 05	movq	%rcx, -8(%rsp)
-0000000000000096: 07	movq	$-1, %r11
-000000000000009d: 02	testl	%esi, %esi
-000000000000009f: 02	je	0x445a07 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0xa7>
-00000000000000a1: 03	notq	%r10
-00000000000000a4: 03	movq	%r10, %r11
-00000000000000a7: 03	movq	%r9, %rbp
-00000000000000aa: 03	andq	%r11, %rbp
-00000000000000ad: 02	movl	%esi, %ecx
-00000000000000af: 03	shlq	%cl, %r11
-00000000000000b2: 03	notq	%r11
-00000000000000b5: 04	andq	(%r13), %r11
-00000000000000b9: 03	shlq	%cl, %rbp
-00000000000000bc: 05	movq	-8(%rsp), %rcx
-00000000000000c1: 03	shrq	%cl, %r9
-00000000000000c4: 02	movl	%eax, %ecx
-00000000000000c6: 03	shlq	%cl, %rbx
-00000000000000c9: 03	orq	%r11, %rbp
-00000000000000cc: 04	movq	%rbp, (%r13)
-00000000000000d0: 03	movq	%rbx, %rax
-00000000000000d3: 03	notq	%rax
-00000000000000d6: 03	andq	%r9, %rax
-00000000000000d9: 04	andq	8(%r13), %rbx
-00000000000000dd: 04	addq	$8, %r13
-00000000000000e1: 03	orq	%rax, %rbx
-00000000000000e4: 05	movq	-16(%rsp), %r11
-00000000000000e9: 05	movq	-24(%rsp), %r10
-00000000000000ee: 05	movq	-32(%rsp), %rbp
-00000000000000f3: 05	jmp	0x445bd2 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x272>
-00000000000000f8: 03	xorl	%r14d, %r14d
-00000000000000fb: 02	testl	%esi, %esi
-00000000000000fd: 06	je	0x445be1 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x281>
-0000000000000103: 04	cmpq	$64, %r8
-0000000000000107: 06	jb	0x445c5a <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x2fa>
-000000000000010d: 05	movq	%r10, -24(%rsp)
-0000000000000112: 05	movq	%r11, -16(%rsp)
-0000000000000117: 06	movl	$64, %r9d
-000000000000011d: 02	movl	%esi, %ecx
-000000000000011f: 02	negl	%ecx
-0000000000000121: 07	movq	$-1, %r13
-0000000000000128: 03	shlq	%cl, %r13
-000000000000012b: 03	subl	%esi, %r9d
-000000000000012e: 07	movq	$-1, %r12
-0000000000000135: 03	notq	%r13
-0000000000000138: 03	movl	%esi, %r10d
-000000000000013b: 02	movl	%esi, %ecx
-000000000000013d: 03	shlq	%cl, %r13
-0000000000000140: 03	notq	%r13
-0000000000000143: 03	shlq	%cl, %r12
-0000000000000146: 03	movq	%r12, %r11
-0000000000000149: 03	notq	%r11
-000000000000014c: 03	addq	%r14, %r15
-000000000000014f: 04	leaq	(%rdi,%r15,8), %rdi
-0000000000000153: 05	leaq	-8(%rdx,%rbp,8), %r15
-0000000000000158: 02	xorl	%ecx, %ecx
-000000000000015a: 06	nopw	(%rax,%rax)
-0000000000000160: 03	movq	%rcx, %rax
-0000000000000163: 04	movq	(%r15,%rcx,8), %rdx
-0000000000000167: 05	movq	-8(%rdi,%rcx,8), %rbx
-000000000000016c: 03	andq	%r13, %rbx
-000000000000016f: 03	movq	%rdx, %rbp
-0000000000000172: 03	movl	%r10d, %ecx
-0000000000000175: 03	shlq	%cl, %rbp
-0000000000000178: 03	orq	%rbx, %rbp
-000000000000017b: 05	movq	%rbp, -8(%rdi,%rax,8)
-0000000000000180: 03	movl	%r9d, %ecx
-0000000000000183: 03	shrq	%cl, %rdx
-0000000000000186: 03	andq	%r11, %rdx
-0000000000000189: 04	movq	(%rdi,%rax,8), %rcx
-000000000000018d: 03	andq	%r12, %rcx
-0000000000000190: 03	orq	%rdx, %rcx
-0000000000000193: 04	movq	%rcx, (%rdi,%rax,8)
-0000000000000197: 04	leaq	-1(%rax), %rcx
-000000000000019b: 04	addq	$-64, %r8
-000000000000019f: 04	cmpq	$63, %r8
-00000000000001a3: 02	ja	0x445ac0 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x160>
-00000000000001a5: 03	addq	%rcx, %r14
-00000000000001a8: 05	movq	-16(%rsp), %r11
-00000000000001ad: 05	movq	-24(%rsp), %r10
-00000000000001b2: 05	jmp	0x445c5c <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x2fc>
-00000000000001b7: 03	leal	64(%rsi), %edx
-00000000000001ba: 03	cmpl	%r8d, %esi
-00000000000001bd: 03	cmovael	%esi, %edx
-00000000000001c0: 03	sbbq	%r14, %r14
-00000000000001c3: 03	subl	%r8d, %eax
-00000000000001c6: 03	movq	(%r10), %rbx
-00000000000001c9: 02	movl	%eax, %ecx
-00000000000001cb: 03	shrq	%cl, %rbx
-00000000000001ce: 03	testl	%r8d, %r8d
-00000000000001d1: 06	je	0x445d4e <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x3ee>
-00000000000001d7: 03	subl	%r8d, %edx
-00000000000001da: 05	movl	$64, %eax
-00000000000001df: 02	subl	%edx, %eax
-00000000000001e1: 03	cmpl	%r8d, %eax
-00000000000001e4: 06	jae	0x445d25 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x3c5>
-00000000000001ea: 07	movq	$-1, %rdi
-00000000000001f1: 02	movl	%eax, %ecx
-00000000000001f3: 03	shlq	%cl, %rdi
-00000000000001f6: 07	movq	$-1, %rbp
-00000000000001fd: 03	movl	%eax, %r9d
-0000000000000200: 07	movq	$-1, %rsi
-0000000000000207: 02	testl	%edx, %edx
-0000000000000209: 02	je	0x445b71 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x211>
-000000000000020b: 03	notq	%rdi
-000000000000020e: 03	movq	%rdi, %rsi
-0000000000000211: 03	movq	%rbx, %rdi
-0000000000000214: 03	andq	%rsi, %rdi
-0000000000000217: 02	movl	%edx, %ecx
-0000000000000219: 03	shlq	%cl, %rsi
-000000000000021c: 03	notq	%rsi
-000000000000021f: 04	andq	(%r11,%r14,8), %rsi
-0000000000000223: 03	shlq	%cl, %rdi
-0000000000000226: 03	movl	%r9d, %ecx
-0000000000000229: 03	shrq	%cl, %rbx
-000000000000022c: 03	subl	%eax, %r8d
-000000000000022f: 03	movl	%r8d, %ecx
-0000000000000232: 03	shlq	%cl, %rbp
-0000000000000235: 03	orq	%rsi, %rdi
-0000000000000238: 04	movq	%rdi, (%r11,%r14,8)
-000000000000023c: 03	movq	%rbp, %rax
-000000000000023f: 03	notq	%rax
-0000000000000242: 03	andq	%rbx, %rax
-0000000000000245: 05	jmp	0x445ceb <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x38b>
-000000000000024a: 07	movq	$-1, %rax
-0000000000000251: 03	movl	%r12d, %ecx
-0000000000000254: 03	shlq	%cl, %rax
-0000000000000257: 03	notq	%rax
-000000000000025a: 03	andq	%rax, %r9
-000000000000025d: 02	movl	%esi, %ecx
-000000000000025f: 03	shlq	%cl, %rax
-0000000000000262: 03	notq	%rax
-0000000000000265: 04	andq	(%r13), %rax
-0000000000000269: 03	shlq	%cl, %r9
-000000000000026c: 03	orq	%rax, %r9
-000000000000026f: 03	movq	%r9, %rbx
-0000000000000272: 04	movq	%rbx, (%r13)
-0000000000000276: 03	subq	%r12, %r8
-0000000000000279: 02	testl	%esi, %esi
-000000000000027b: 06	jne	0x445a63 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x103>
-0000000000000281: 04	cmpq	$64, %r8
-0000000000000285: 02	jb	0x445c5a <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x2fa>
-0000000000000287: 03	movq	%r11, %r12
-000000000000028a: 04	leaq	-64(%r8), %r11
-000000000000028e: 07	cmpq	$192, %r11
-0000000000000295: 02	jb	0x445c2a <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x2ca>
-0000000000000297: 04	shrq	$6, %r11
-000000000000029b: 04	leaq	(%r14,%r15), %rbx
-000000000000029f: 03	movq	%r11, %rax
-00000000000002a2: 03	notq	%rax
-00000000000002a5: 04	leaq	(%rbx,%rax), %rcx
-00000000000002a9: 04	leaq	(%rdi,%rcx,8), %rcx
-00000000000002ad: 03	cmpq	%r10, %rcx
-00000000000002b0: 06	jae	0x445d59 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x3f9>
-00000000000002b6: 04	leaq	(%rdi,%rbx,8), %rcx
-00000000000002ba: 03	addq	%rbp, %rax
-00000000000002bd: 04	leaq	(%rdx,%rax,8), %rax
-00000000000002c1: 03	cmpq	%rcx, %rax
-00000000000002c4: 06	jae	0x445d59 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x3f9>
-00000000000002ca: 02	xorl	%ecx, %ecx
-00000000000002cc: 03	movq	%r12, %r11
-00000000000002cf: 05	leaq	-8(%rdi,%r15,8), %rax
-00000000000002d4: 05	leaq	-8(%rdx,%rbp,8), %rdx
-00000000000002d9: 07	nopl	(%rax)
-00000000000002e0: 04	movq	(%rdx,%rcx,8), %rdi
-00000000000002e4: 03	decq	%rcx
-00000000000002e7: 04	movq	%rdi, (%rax,%r14,8)
-00000000000002eb: 03	decq	%r14
-00000000000002ee: 04	addq	$-64, %r8
-00000000000002f2: 04	cmpq	$63, %r8
-00000000000002f6: 02	ja	0x445c40 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x2e0>
-00000000000002f8: 02	jmp	0x445c5c <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x2fc>
-00000000000002fa: 02	xorl	%ecx, %ecx
-00000000000002fc: 03	testl	%r8d, %r8d
-00000000000002ff: 06	je	0x445d4e <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x3ee>
-0000000000000305: 02	movl	%esi, %eax
-0000000000000307: 03	orl	$64, %eax
-000000000000030a: 03	cmpl	%r8d, %esi
-000000000000030d: 03	cmovael	%esi, %eax
-0000000000000310: 04	sbbq	$0, %r14
-0000000000000314: 05	movq	-8(%r10,%rcx,8), %rdi
-0000000000000319: 03	movl	%r8d, %ecx
-000000000000031c: 02	negb	%cl
-000000000000031e: 03	shrq	%cl, %rdi
-0000000000000321: 03	subl	%r8d, %eax
-0000000000000324: 05	movl	$64, %edx
-0000000000000329: 02	subl	%eax, %edx
-000000000000032b: 03	cmpl	%r8d, %edx
-000000000000032e: 02	jae	0x445cfa <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x39a>
-0000000000000330: 07	movq	$-1, %rsi
-0000000000000337: 02	movl	%edx, %ecx
-0000000000000339: 03	shlq	%cl, %rsi
-000000000000033c: 07	movq	$-1, %rbp
-0000000000000343: 03	movl	%edx, %r9d
-0000000000000346: 07	movq	$-1, %rbx
-000000000000034d: 02	testl	%eax, %eax
-000000000000034f: 02	je	0x445cb7 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x357>
-0000000000000351: 03	notq	%rsi
-0000000000000354: 03	movq	%rsi, %rbx
-0000000000000357: 03	movq	%rdi, %rsi
-000000000000035a: 03	andq	%rbx, %rsi
-000000000000035d: 02	movl	%eax, %ecx
-000000000000035f: 03	shlq	%cl, %rbx
-0000000000000362: 03	notq	%rbx
-0000000000000365: 04	andq	(%r11,%r14,8), %rbx
-0000000000000369: 03	shlq	%cl, %rsi
-000000000000036c: 03	movl	%r9d, %ecx
-000000000000036f: 03	shrq	%cl, %rdi
-0000000000000372: 03	subl	%edx, %r8d
-0000000000000375: 03	movl	%r8d, %ecx
-0000000000000378: 03	shlq	%cl, %rbp
-000000000000037b: 03	orq	%rbx, %rsi
-000000000000037e: 04	movq	%rsi, (%r11,%r14,8)
-0000000000000382: 03	movq	%rbp, %rax
-0000000000000385: 03	notq	%rax
-0000000000000388: 03	andq	%rdi, %rax
-000000000000038b: 05	andq	8(%r11,%r14,8), %rbp
-0000000000000390: 03	orq	%rax, %rbp
-0000000000000393: 05	movq	%rbp, 8(%r11,%r14,8)
-0000000000000398: 02	jmp	0x445d4e <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x3ee>
-000000000000039a: 07	movq	$-1, %rdx
-00000000000003a1: 03	movl	%r8d, %ecx
-00000000000003a4: 03	shlq	%cl, %rdx
-00000000000003a7: 03	notq	%rdx
-00000000000003aa: 03	andq	%rdx, %rdi
-00000000000003ad: 02	movl	%eax, %ecx
-00000000000003af: 03	shlq	%cl, %rdx
-00000000000003b2: 03	notq	%rdx
-00000000000003b5: 03	shlq	%cl, %rdi
-00000000000003b8: 04	andq	(%r11,%r14,8), %rdx
-00000000000003bc: 03	orq	%rdx, %rdi
-00000000000003bf: 04	movq	%rdi, (%r11,%r14,8)
-00000000000003c3: 02	jmp	0x445d4e <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x3ee>
-00000000000003c5: 07	movq	$-1, %rax
-00000000000003cc: 03	movl	%r8d, %ecx
-00000000000003cf: 03	shlq	%cl, %rax
-00000000000003d2: 03	notq	%rax
-00000000000003d5: 03	andq	%rax, %rbx
-00000000000003d8: 02	movl	%edx, %ecx
-00000000000003da: 03	shlq	%cl, %rax
-00000000000003dd: 03	notq	%rax
-00000000000003e0: 03	shlq	%cl, %rbx
-00000000000003e3: 04	andq	(%r11,%r14,8), %rax
-00000000000003e7: 03	orq	%rax, %rbx
-00000000000003ea: 04	movq	%rbx, (%r11,%r14,8)
-00000000000003ee: 01	popq	%rbx
-00000000000003ef: 02	popq	%r12
-00000000000003f1: 02	popq	%r13
-00000000000003f3: 02	popq	%r14
-00000000000003f5: 02	popq	%r15
-00000000000003f7: 01	popq	%rbp
-00000000000003f8: 01	retq	
-00000000000003f9: 05	movq	%rbp, -32(%rsp)
-00000000000003fe: 03	incq	%r11
-0000000000000401: 03	movq	%r11, %r9
-0000000000000404: 04	andq	$-4, %r9
-0000000000000408: 04	leaq	-4(%r9), %rax
-000000000000040c: 03	movq	%rax, %r13
-000000000000040f: 04	shrq	$2, %r13
-0000000000000413: 03	incq	%r13
-0000000000000416: 03	testq	%rax, %rax
-0000000000000419: 02	je	0x445dd6 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x476>
-000000000000041b: 05	movq	-32(%rsp), %rax
-0000000000000420: 05	leaq	-16(%rdx,%rax,8), %rbp
-0000000000000425: 05	leaq	-16(%rdi,%rbx,8), %rcx
-000000000000042a: 03	movq	%r13, %rax
-000000000000042d: 04	andq	$-2, %rax
-0000000000000431: 03	negq	%rax
-0000000000000434: 07	movq	$-2, %rbx
-000000000000043b: 05	nopl	(%rax,%rax)
-0000000000000440: 05	movups	(%rbp,%rbx,8), %xmm0
-0000000000000445: 05	movups	16(%rbp,%rbx,8), %xmm1
-000000000000044a: 05	movups	%xmm1, 16(%rcx,%rbx,8)
-000000000000044f: 04	movups	%xmm0, (%rcx,%rbx,8)
-0000000000000453: 05	movups	-32(%rbp,%rbx,8), %xmm0
-0000000000000458: 05	movups	-16(%rbp,%rbx,8), %xmm1
-000000000000045d: 05	movups	%xmm1, -16(%rcx,%rbx,8)
-0000000000000462: 05	movups	%xmm0, -32(%rcx,%rbx,8)
-0000000000000467: 04	addq	$-8, %rbx
-000000000000046b: 04	addq	$2, %rax
-000000000000046f: 02	jne	0x445da0 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x440>
-0000000000000471: 03	incq	%rbx
-0000000000000474: 02	jmp	0x445ddd <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x47d>
-0000000000000476: 07	movq	$-1, %rbx
-000000000000047d: 03	movq	%r9, %rax
-0000000000000480: 04	shlq	$6, %rax
-0000000000000484: 04	testb	$1, %r13b
-0000000000000488: 02	je	0x445e09 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x4a9>
-000000000000048a: 04	leaq	(%r14,%rbx), %rcx
-000000000000048e: 06	movups	-24(%r10,%rbx,8), %xmm0
-0000000000000494: 06	movups	-8(%r10,%rbx,8), %xmm1
-000000000000049a: 03	movq	%r12, %rbp
-000000000000049d: 06	movups	%xmm1, -8(%r12,%rcx,8)
-00000000000004a3: 06	movups	%xmm0, -24(%r12,%rcx,8)
-00000000000004a9: 03	subq	%r9, %r14
-00000000000004ac: 03	movq	%r9, %rcx
-00000000000004af: 03	negq	%rcx
-00000000000004b2: 03	subq	%rax, %r8
-00000000000004b5: 03	cmpq	%r9, %r11
-00000000000004b8: 03	movq	%r12, %r11
-00000000000004bb: 05	movq	-32(%rsp), %rbp
-00000000000004c0: 06	jne	0x445c2f <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x2cf>
-00000000000004c6: 05	jmp	0x445c5c <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x2fc>
-00000000000004cb: 05	nopl	(%rax,%rax)
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%r13	;  2 bytes
+M0000000000000007:	pushq	%r12	;  2 bytes
+M0000000000000009:	pushq	%rbx	;  1 bytes
+M000000000000000a:	testq	%r8, %r8	;  3 bytes
+M000000000000000d:	je	0x445d4e <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x3ee>	;  6 bytes
+M0000000000000013:	movq	%rcx, %rax	;  3 bytes
+M0000000000000016:	addq	%r8, %rsi	;  3 bytes
+M0000000000000019:	movq	%rsi, %r15	;  3 bytes
+M000000000000001c:	shrq	$6, %r15	;  4 bytes
+M0000000000000020:	leaq	(%rdi,%r15,8), %r11	;  4 bytes
+M0000000000000024:	andl	$63, %esi	;  3 bytes
+M0000000000000027:	addq	%r8, %rax	;  3 bytes
+M000000000000002a:	movq	%rax, %rbp	;  3 bytes
+M000000000000002d:	shrq	$6, %rbp	;  4 bytes
+M0000000000000031:	leaq	(%rdx,%rbp,8), %r10	;  4 bytes
+M0000000000000035:	andl	$63, %eax	;  3 bytes
+M0000000000000038:	je	0x445a58 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0xf8>	;  6 bytes
+M000000000000003e:	movl	%eax, %r12d	;  3 bytes
+M0000000000000041:	cmpq	%r8, %r12	;  3 bytes
+M0000000000000044:	jae	0x445b17 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x1b7>	;  6 bytes
+M000000000000004a:	leal	64(%rsi), %ecx	;  3 bytes
+M000000000000004d:	cmpl	%eax, %esi	;  2 bytes
+M000000000000004f:	cmovael	%esi, %ecx	;  3 bytes
+M0000000000000052:	sbbq	%r14, %r14	;  3 bytes
+M0000000000000055:	movl	%ecx, %esi	;  2 bytes
+M0000000000000057:	subl	%eax, %esi	;  2 bytes
+M0000000000000059:	leaq	(%r11,%r14,8), %r13	;  4 bytes
+M000000000000005d:	movq	(%r10), %r9	;  3 bytes
+M0000000000000060:	movl	$64, %ecx	;  5 bytes
+M0000000000000065:	subl	%esi, %ecx	;  2 bytes
+M0000000000000067:	subl	%ecx, %eax	;  2 bytes
+M0000000000000069:	jbe	0x445baa <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x24a>	;  6 bytes
+M000000000000006f:	movq	%rbp, -32(%rsp)	;  5 bytes
+M0000000000000074:	movq	%r10, -24(%rsp)	;  5 bytes
+M0000000000000079:	movq	%r11, -16(%rsp)	;  5 bytes
+M000000000000007e:	movq	$-1, %r10	;  7 bytes
+M0000000000000085:	shlq	%cl, %r10	;  3 bytes
+M0000000000000088:	movq	$-1, %rbx	;  7 bytes
+M000000000000008f:	movl	%ecx, %ecx	;  2 bytes
+M0000000000000091:	movq	%rcx, -8(%rsp)	;  5 bytes
+M0000000000000096:	movq	$-1, %r11	;  7 bytes
+M000000000000009d:	testl	%esi, %esi	;  2 bytes
+M000000000000009f:	je	0x445a07 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0xa7>	;  2 bytes
+M00000000000000a1:	notq	%r10	;  3 bytes
+M00000000000000a4:	movq	%r10, %r11	;  3 bytes
+M00000000000000a7:	movq	%r9, %rbp	;  3 bytes
+M00000000000000aa:	andq	%r11, %rbp	;  3 bytes
+M00000000000000ad:	movl	%esi, %ecx	;  2 bytes
+M00000000000000af:	shlq	%cl, %r11	;  3 bytes
+M00000000000000b2:	notq	%r11	;  3 bytes
+M00000000000000b5:	andq	(%r13), %r11	;  4 bytes
+M00000000000000b9:	shlq	%cl, %rbp	;  3 bytes
+M00000000000000bc:	movq	-8(%rsp), %rcx	;  5 bytes
+M00000000000000c1:	shrq	%cl, %r9	;  3 bytes
+M00000000000000c4:	movl	%eax, %ecx	;  2 bytes
+M00000000000000c6:	shlq	%cl, %rbx	;  3 bytes
+M00000000000000c9:	orq	%r11, %rbp	;  3 bytes
+M00000000000000cc:	movq	%rbp, (%r13)	;  4 bytes
+M00000000000000d0:	movq	%rbx, %rax	;  3 bytes
+M00000000000000d3:	notq	%rax	;  3 bytes
+M00000000000000d6:	andq	%r9, %rax	;  3 bytes
+M00000000000000d9:	andq	8(%r13), %rbx	;  4 bytes
+M00000000000000dd:	addq	$8, %r13	;  4 bytes
+M00000000000000e1:	orq	%rax, %rbx	;  3 bytes
+M00000000000000e4:	movq	-16(%rsp), %r11	;  5 bytes
+M00000000000000e9:	movq	-24(%rsp), %r10	;  5 bytes
+M00000000000000ee:	movq	-32(%rsp), %rbp	;  5 bytes
+M00000000000000f3:	jmp	0x445bd2 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x272>	;  5 bytes
+M00000000000000f8:	xorl	%r14d, %r14d	;  3 bytes
+M00000000000000fb:	testl	%esi, %esi	;  2 bytes
+M00000000000000fd:	je	0x445be1 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x281>	;  6 bytes
+M0000000000000103:	cmpq	$64, %r8	;  4 bytes
+M0000000000000107:	jb	0x445c5a <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x2fa>	;  6 bytes
+M000000000000010d:	movq	%r10, -24(%rsp)	;  5 bytes
+M0000000000000112:	movq	%r11, -16(%rsp)	;  5 bytes
+M0000000000000117:	movl	$64, %r9d	;  6 bytes
+M000000000000011d:	movl	%esi, %ecx	;  2 bytes
+M000000000000011f:	negl	%ecx	;  2 bytes
+M0000000000000121:	movq	$-1, %r13	;  7 bytes
+M0000000000000128:	shlq	%cl, %r13	;  3 bytes
+M000000000000012b:	subl	%esi, %r9d	;  3 bytes
+M000000000000012e:	movq	$-1, %r12	;  7 bytes
+M0000000000000135:	notq	%r13	;  3 bytes
+M0000000000000138:	movl	%esi, %r10d	;  3 bytes
+M000000000000013b:	movl	%esi, %ecx	;  2 bytes
+M000000000000013d:	shlq	%cl, %r13	;  3 bytes
+M0000000000000140:	notq	%r13	;  3 bytes
+M0000000000000143:	shlq	%cl, %r12	;  3 bytes
+M0000000000000146:	movq	%r12, %r11	;  3 bytes
+M0000000000000149:	notq	%r11	;  3 bytes
+M000000000000014c:	addq	%r14, %r15	;  3 bytes
+M000000000000014f:	leaq	(%rdi,%r15,8), %rdi	;  4 bytes
+M0000000000000153:	leaq	-8(%rdx,%rbp,8), %r15	;  5 bytes
+M0000000000000158:	xorl	%ecx, %ecx	;  2 bytes
+M000000000000015a:	nopw	(%rax,%rax)	;  6 bytes
+M0000000000000160:	movq	%rcx, %rax	;  3 bytes
+M0000000000000163:	movq	(%r15,%rcx,8), %rdx	;  4 bytes
+M0000000000000167:	movq	-8(%rdi,%rcx,8), %rbx	;  5 bytes
+M000000000000016c:	andq	%r13, %rbx	;  3 bytes
+M000000000000016f:	movq	%rdx, %rbp	;  3 bytes
+M0000000000000172:	movl	%r10d, %ecx	;  3 bytes
+M0000000000000175:	shlq	%cl, %rbp	;  3 bytes
+M0000000000000178:	orq	%rbx, %rbp	;  3 bytes
+M000000000000017b:	movq	%rbp, -8(%rdi,%rax,8)	;  5 bytes
+M0000000000000180:	movl	%r9d, %ecx	;  3 bytes
+M0000000000000183:	shrq	%cl, %rdx	;  3 bytes
+M0000000000000186:	andq	%r11, %rdx	;  3 bytes
+M0000000000000189:	movq	(%rdi,%rax,8), %rcx	;  4 bytes
+M000000000000018d:	andq	%r12, %rcx	;  3 bytes
+M0000000000000190:	orq	%rdx, %rcx	;  3 bytes
+M0000000000000193:	movq	%rcx, (%rdi,%rax,8)	;  4 bytes
+M0000000000000197:	leaq	-1(%rax), %rcx	;  4 bytes
+M000000000000019b:	addq	$-64, %r8	;  4 bytes
+M000000000000019f:	cmpq	$63, %r8	;  4 bytes
+M00000000000001a3:	ja	0x445ac0 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x160>	;  2 bytes
+M00000000000001a5:	addq	%rcx, %r14	;  3 bytes
+M00000000000001a8:	movq	-16(%rsp), %r11	;  5 bytes
+M00000000000001ad:	movq	-24(%rsp), %r10	;  5 bytes
+M00000000000001b2:	jmp	0x445c5c <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x2fc>	;  5 bytes
+M00000000000001b7:	leal	64(%rsi), %edx	;  3 bytes
+M00000000000001ba:	cmpl	%r8d, %esi	;  3 bytes
+M00000000000001bd:	cmovael	%esi, %edx	;  3 bytes
+M00000000000001c0:	sbbq	%r14, %r14	;  3 bytes
+M00000000000001c3:	subl	%r8d, %eax	;  3 bytes
+M00000000000001c6:	movq	(%r10), %rbx	;  3 bytes
+M00000000000001c9:	movl	%eax, %ecx	;  2 bytes
+M00000000000001cb:	shrq	%cl, %rbx	;  3 bytes
+M00000000000001ce:	testl	%r8d, %r8d	;  3 bytes
+M00000000000001d1:	je	0x445d4e <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x3ee>	;  6 bytes
+M00000000000001d7:	subl	%r8d, %edx	;  3 bytes
+M00000000000001da:	movl	$64, %eax	;  5 bytes
+M00000000000001df:	subl	%edx, %eax	;  2 bytes
+M00000000000001e1:	cmpl	%r8d, %eax	;  3 bytes
+M00000000000001e4:	jae	0x445d25 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x3c5>	;  6 bytes
+M00000000000001ea:	movq	$-1, %rdi	;  7 bytes
+M00000000000001f1:	movl	%eax, %ecx	;  2 bytes
+M00000000000001f3:	shlq	%cl, %rdi	;  3 bytes
+M00000000000001f6:	movq	$-1, %rbp	;  7 bytes
+M00000000000001fd:	movl	%eax, %r9d	;  3 bytes
+M0000000000000200:	movq	$-1, %rsi	;  7 bytes
+M0000000000000207:	testl	%edx, %edx	;  2 bytes
+M0000000000000209:	je	0x445b71 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x211>	;  2 bytes
+M000000000000020b:	notq	%rdi	;  3 bytes
+M000000000000020e:	movq	%rdi, %rsi	;  3 bytes
+M0000000000000211:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000214:	andq	%rsi, %rdi	;  3 bytes
+M0000000000000217:	movl	%edx, %ecx	;  2 bytes
+M0000000000000219:	shlq	%cl, %rsi	;  3 bytes
+M000000000000021c:	notq	%rsi	;  3 bytes
+M000000000000021f:	andq	(%r11,%r14,8), %rsi	;  4 bytes
+M0000000000000223:	shlq	%cl, %rdi	;  3 bytes
+M0000000000000226:	movl	%r9d, %ecx	;  3 bytes
+M0000000000000229:	shrq	%cl, %rbx	;  3 bytes
+M000000000000022c:	subl	%eax, %r8d	;  3 bytes
+M000000000000022f:	movl	%r8d, %ecx	;  3 bytes
+M0000000000000232:	shlq	%cl, %rbp	;  3 bytes
+M0000000000000235:	orq	%rsi, %rdi	;  3 bytes
+M0000000000000238:	movq	%rdi, (%r11,%r14,8)	;  4 bytes
+M000000000000023c:	movq	%rbp, %rax	;  3 bytes
+M000000000000023f:	notq	%rax	;  3 bytes
+M0000000000000242:	andq	%rbx, %rax	;  3 bytes
+M0000000000000245:	jmp	0x445ceb <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x38b>	;  5 bytes
+M000000000000024a:	movq	$-1, %rax	;  7 bytes
+M0000000000000251:	movl	%r12d, %ecx	;  3 bytes
+M0000000000000254:	shlq	%cl, %rax	;  3 bytes
+M0000000000000257:	notq	%rax	;  3 bytes
+M000000000000025a:	andq	%rax, %r9	;  3 bytes
+M000000000000025d:	movl	%esi, %ecx	;  2 bytes
+M000000000000025f:	shlq	%cl, %rax	;  3 bytes
+M0000000000000262:	notq	%rax	;  3 bytes
+M0000000000000265:	andq	(%r13), %rax	;  4 bytes
+M0000000000000269:	shlq	%cl, %r9	;  3 bytes
+M000000000000026c:	orq	%rax, %r9	;  3 bytes
+M000000000000026f:	movq	%r9, %rbx	;  3 bytes
+M0000000000000272:	movq	%rbx, (%r13)	;  4 bytes
+M0000000000000276:	subq	%r12, %r8	;  3 bytes
+M0000000000000279:	testl	%esi, %esi	;  2 bytes
+M000000000000027b:	jne	0x445a63 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x103>	;  6 bytes
+M0000000000000281:	cmpq	$64, %r8	;  4 bytes
+M0000000000000285:	jb	0x445c5a <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x2fa>	;  2 bytes
+M0000000000000287:	movq	%r11, %r12	;  3 bytes
+M000000000000028a:	leaq	-64(%r8), %r11	;  4 bytes
+M000000000000028e:	cmpq	$192, %r11	;  7 bytes
+M0000000000000295:	jb	0x445c2a <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x2ca>	;  2 bytes
+M0000000000000297:	shrq	$6, %r11	;  4 bytes
+M000000000000029b:	leaq	(%r14,%r15), %rbx	;  4 bytes
+M000000000000029f:	movq	%r11, %rax	;  3 bytes
+M00000000000002a2:	notq	%rax	;  3 bytes
+M00000000000002a5:	leaq	(%rbx,%rax), %rcx	;  4 bytes
+M00000000000002a9:	leaq	(%rdi,%rcx,8), %rcx	;  4 bytes
+M00000000000002ad:	cmpq	%r10, %rcx	;  3 bytes
+M00000000000002b0:	jae	0x445d59 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x3f9>	;  6 bytes
+M00000000000002b6:	leaq	(%rdi,%rbx,8), %rcx	;  4 bytes
+M00000000000002ba:	addq	%rbp, %rax	;  3 bytes
+M00000000000002bd:	leaq	(%rdx,%rax,8), %rax	;  4 bytes
+M00000000000002c1:	cmpq	%rcx, %rax	;  3 bytes
+M00000000000002c4:	jae	0x445d59 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x3f9>	;  6 bytes
+M00000000000002ca:	xorl	%ecx, %ecx	;  2 bytes
+M00000000000002cc:	movq	%r12, %r11	;  3 bytes
+M00000000000002cf:	leaq	-8(%rdi,%r15,8), %rax	;  5 bytes
+M00000000000002d4:	leaq	-8(%rdx,%rbp,8), %rdx	;  5 bytes
+M00000000000002d9:	nopl	(%rax)	;  7 bytes
+M00000000000002e0:	movq	(%rdx,%rcx,8), %rdi	;  4 bytes
+M00000000000002e4:	decq	%rcx	;  3 bytes
+M00000000000002e7:	movq	%rdi, (%rax,%r14,8)	;  4 bytes
+M00000000000002eb:	decq	%r14	;  3 bytes
+M00000000000002ee:	addq	$-64, %r8	;  4 bytes
+M00000000000002f2:	cmpq	$63, %r8	;  4 bytes
+M00000000000002f6:	ja	0x445c40 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x2e0>	;  2 bytes
+M00000000000002f8:	jmp	0x445c5c <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x2fc>	;  2 bytes
+M00000000000002fa:	xorl	%ecx, %ecx	;  2 bytes
+M00000000000002fc:	testl	%r8d, %r8d	;  3 bytes
+M00000000000002ff:	je	0x445d4e <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x3ee>	;  6 bytes
+M0000000000000305:	movl	%esi, %eax	;  2 bytes
+M0000000000000307:	orl	$64, %eax	;  3 bytes
+M000000000000030a:	cmpl	%r8d, %esi	;  3 bytes
+M000000000000030d:	cmovael	%esi, %eax	;  3 bytes
+M0000000000000310:	sbbq	$0, %r14	;  4 bytes
+M0000000000000314:	movq	-8(%r10,%rcx,8), %rdi	;  5 bytes
+M0000000000000319:	movl	%r8d, %ecx	;  3 bytes
+M000000000000031c:	negb	%cl	;  2 bytes
+M000000000000031e:	shrq	%cl, %rdi	;  3 bytes
+M0000000000000321:	subl	%r8d, %eax	;  3 bytes
+M0000000000000324:	movl	$64, %edx	;  5 bytes
+M0000000000000329:	subl	%eax, %edx	;  2 bytes
+M000000000000032b:	cmpl	%r8d, %edx	;  3 bytes
+M000000000000032e:	jae	0x445cfa <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x39a>	;  2 bytes
+M0000000000000330:	movq	$-1, %rsi	;  7 bytes
+M0000000000000337:	movl	%edx, %ecx	;  2 bytes
+M0000000000000339:	shlq	%cl, %rsi	;  3 bytes
+M000000000000033c:	movq	$-1, %rbp	;  7 bytes
+M0000000000000343:	movl	%edx, %r9d	;  3 bytes
+M0000000000000346:	movq	$-1, %rbx	;  7 bytes
+M000000000000034d:	testl	%eax, %eax	;  2 bytes
+M000000000000034f:	je	0x445cb7 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x357>	;  2 bytes
+M0000000000000351:	notq	%rsi	;  3 bytes
+M0000000000000354:	movq	%rsi, %rbx	;  3 bytes
+M0000000000000357:	movq	%rdi, %rsi	;  3 bytes
+M000000000000035a:	andq	%rbx, %rsi	;  3 bytes
+M000000000000035d:	movl	%eax, %ecx	;  2 bytes
+M000000000000035f:	shlq	%cl, %rbx	;  3 bytes
+M0000000000000362:	notq	%rbx	;  3 bytes
+M0000000000000365:	andq	(%r11,%r14,8), %rbx	;  4 bytes
+M0000000000000369:	shlq	%cl, %rsi	;  3 bytes
+M000000000000036c:	movl	%r9d, %ecx	;  3 bytes
+M000000000000036f:	shrq	%cl, %rdi	;  3 bytes
+M0000000000000372:	subl	%edx, %r8d	;  3 bytes
+M0000000000000375:	movl	%r8d, %ecx	;  3 bytes
+M0000000000000378:	shlq	%cl, %rbp	;  3 bytes
+M000000000000037b:	orq	%rbx, %rsi	;  3 bytes
+M000000000000037e:	movq	%rsi, (%r11,%r14,8)	;  4 bytes
+M0000000000000382:	movq	%rbp, %rax	;  3 bytes
+M0000000000000385:	notq	%rax	;  3 bytes
+M0000000000000388:	andq	%rdi, %rax	;  3 bytes
+M000000000000038b:	andq	8(%r11,%r14,8), %rbp	;  5 bytes
+M0000000000000390:	orq	%rax, %rbp	;  3 bytes
+M0000000000000393:	movq	%rbp, 8(%r11,%r14,8)	;  5 bytes
+M0000000000000398:	jmp	0x445d4e <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x3ee>	;  2 bytes
+M000000000000039a:	movq	$-1, %rdx	;  7 bytes
+M00000000000003a1:	movl	%r8d, %ecx	;  3 bytes
+M00000000000003a4:	shlq	%cl, %rdx	;  3 bytes
+M00000000000003a7:	notq	%rdx	;  3 bytes
+M00000000000003aa:	andq	%rdx, %rdi	;  3 bytes
+M00000000000003ad:	movl	%eax, %ecx	;  2 bytes
+M00000000000003af:	shlq	%cl, %rdx	;  3 bytes
+M00000000000003b2:	notq	%rdx	;  3 bytes
+M00000000000003b5:	shlq	%cl, %rdi	;  3 bytes
+M00000000000003b8:	andq	(%r11,%r14,8), %rdx	;  4 bytes
+M00000000000003bc:	orq	%rdx, %rdi	;  3 bytes
+M00000000000003bf:	movq	%rdi, (%r11,%r14,8)	;  4 bytes
+M00000000000003c3:	jmp	0x445d4e <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x3ee>	;  2 bytes
+M00000000000003c5:	movq	$-1, %rax	;  7 bytes
+M00000000000003cc:	movl	%r8d, %ecx	;  3 bytes
+M00000000000003cf:	shlq	%cl, %rax	;  3 bytes
+M00000000000003d2:	notq	%rax	;  3 bytes
+M00000000000003d5:	andq	%rax, %rbx	;  3 bytes
+M00000000000003d8:	movl	%edx, %ecx	;  2 bytes
+M00000000000003da:	shlq	%cl, %rax	;  3 bytes
+M00000000000003dd:	notq	%rax	;  3 bytes
+M00000000000003e0:	shlq	%cl, %rbx	;  3 bytes
+M00000000000003e3:	andq	(%r11,%r14,8), %rax	;  4 bytes
+M00000000000003e7:	orq	%rax, %rbx	;  3 bytes
+M00000000000003ea:	movq	%rbx, (%r11,%r14,8)	;  4 bytes
+M00000000000003ee:	popq	%rbx	;  1 bytes
+M00000000000003ef:	popq	%r12	;  2 bytes
+M00000000000003f1:	popq	%r13	;  2 bytes
+M00000000000003f3:	popq	%r14	;  2 bytes
+M00000000000003f5:	popq	%r15	;  2 bytes
+M00000000000003f7:	popq	%rbp	;  1 bytes
+M00000000000003f8:	retq		;  1 bytes
+M00000000000003f9:	movq	%rbp, -32(%rsp)	;  5 bytes
+M00000000000003fe:	incq	%r11	;  3 bytes
+M0000000000000401:	movq	%r11, %r9	;  3 bytes
+M0000000000000404:	andq	$-4, %r9	;  4 bytes
+M0000000000000408:	leaq	-4(%r9), %rax	;  4 bytes
+M000000000000040c:	movq	%rax, %r13	;  3 bytes
+M000000000000040f:	shrq	$2, %r13	;  4 bytes
+M0000000000000413:	incq	%r13	;  3 bytes
+M0000000000000416:	testq	%rax, %rax	;  3 bytes
+M0000000000000419:	je	0x445dd6 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x476>	;  2 bytes
+M000000000000041b:	movq	-32(%rsp), %rax	;  5 bytes
+M0000000000000420:	leaq	-16(%rdx,%rax,8), %rbp	;  5 bytes
+M0000000000000425:	leaq	-16(%rdi,%rbx,8), %rcx	;  5 bytes
+M000000000000042a:	movq	%r13, %rax	;  3 bytes
+M000000000000042d:	andq	$-2, %rax	;  4 bytes
+M0000000000000431:	negq	%rax	;  3 bytes
+M0000000000000434:	movq	$-2, %rbx	;  7 bytes
+M000000000000043b:	nopl	(%rax,%rax)	;  5 bytes
+M0000000000000440:	movups	(%rbp,%rbx,8), %xmm0	;  5 bytes
+M0000000000000445:	movups	16(%rbp,%rbx,8), %xmm1	;  5 bytes
+M000000000000044a:	movups	%xmm1, 16(%rcx,%rbx,8)	;  5 bytes
+M000000000000044f:	movups	%xmm0, (%rcx,%rbx,8)	;  4 bytes
+M0000000000000453:	movups	-32(%rbp,%rbx,8), %xmm0	;  5 bytes
+M0000000000000458:	movups	-16(%rbp,%rbx,8), %xmm1	;  5 bytes
+M000000000000045d:	movups	%xmm1, -16(%rcx,%rbx,8)	;  5 bytes
+M0000000000000462:	movups	%xmm0, -32(%rcx,%rbx,8)	;  5 bytes
+M0000000000000467:	addq	$-8, %rbx	;  4 bytes
+M000000000000046b:	addq	$2, %rax	;  4 bytes
+M000000000000046f:	jne	0x445da0 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x440>	;  2 bytes
+M0000000000000471:	incq	%rbx	;  3 bytes
+M0000000000000474:	jmp	0x445ddd <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x47d>	;  2 bytes
+M0000000000000476:	movq	$-1, %rbx	;  7 bytes
+M000000000000047d:	movq	%r9, %rax	;  3 bytes
+M0000000000000480:	shlq	$6, %rax	;  4 bytes
+M0000000000000484:	testb	$1, %r13b	;  4 bytes
+M0000000000000488:	je	0x445e09 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x4a9>	;  2 bytes
+M000000000000048a:	leaq	(%r14,%rbx), %rcx	;  4 bytes
+M000000000000048e:	movups	-24(%r10,%rbx,8), %xmm0	;  6 bytes
+M0000000000000494:	movups	-8(%r10,%rbx,8), %xmm1	;  6 bytes
+M000000000000049a:	movq	%r12, %rbp	;  3 bytes
+M000000000000049d:	movups	%xmm1, -8(%r12,%rcx,8)	;  6 bytes
+M00000000000004a3:	movups	%xmm0, -24(%r12,%rcx,8)	;  6 bytes
+M00000000000004a9:	subq	%r9, %r14	;  3 bytes
+M00000000000004ac:	movq	%r9, %rcx	;  3 bytes
+M00000000000004af:	negq	%rcx	;  3 bytes
+M00000000000004b2:	subq	%rax, %r8	;  3 bytes
+M00000000000004b5:	cmpq	%r9, %r11	;  3 bytes
+M00000000000004b8:	movq	%r12, %r11	;  3 bytes
+M00000000000004bb:	movq	-32(%rsp), %rbp	;  5 bytes
+M00000000000004c0:	jne	0x445c2f <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x2cf>	;  6 bytes
+M00000000000004c6:	jmp	0x445c5c <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x2fc>	;  5 bytes
+M00000000000004cb:	nopl	(%rax,%rax)	;  5 bytes
 ```

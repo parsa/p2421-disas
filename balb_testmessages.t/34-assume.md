@@ -2,34 +2,34 @@
 
 ```nasm
 000000000041dc00 <BloombergLP::bdlde::Utf8Util::advanceRaw(char const**, char const*, long)>:
-0000000000000000: 02	xorl	%eax, %eax
-0000000000000002: 03	testq	%rdx, %rdx
-0000000000000005: 02	jne	0x41dc2b <BloombergLP::bdlde::Utf8Util::advanceRaw(char const**, char const*, long)+0x2b>
-0000000000000007: 03	cmpq	%rdx, %rax
-000000000000000a: 03	movq	%rsi, (%rdi)
-000000000000000d: 01	retq	
-000000000000000e: 06	movl	$4, %r8d
-0000000000000014: 10	nopw	%cs:(%rax,%rax)
-000000000000001e: 02	nop	
-0000000000000020: 03	addq	%r8, %rsi
-0000000000000023: 03	incq	%rax
-0000000000000026: 03	cmpq	%rax, %rdx
-0000000000000029: 02	je	0x41dc5a <BloombergLP::bdlde::Utf8Util::advanceRaw(char const**, char const*, long)+0x5a>
-000000000000002b: 04	movzbl	(%rsi), %r9d
-000000000000002f: 06	movl	$1, %r8d
-0000000000000035: 03	movq	%r9, %rcx
-0000000000000038: 04	shrq	$4, %rcx
-000000000000003c: 07	jmpq	*4491624(,%rcx,8)
-0000000000000043: 06	movl	$2, %r8d
-0000000000000049: 02	jmp	0x41dc20 <BloombergLP::bdlde::Utf8Util::advanceRaw(char const**, char const*, long)+0x20>
-000000000000004b: 03	testb	%r9b, %r9b
-000000000000004e: 02	jne	0x41dc20 <BloombergLP::bdlde::Utf8Util::advanceRaw(char const**, char const*, long)+0x20>
-0000000000000050: 02	jmp	0x41dc07 <BloombergLP::bdlde::Utf8Util::advanceRaw(char const**, char const*, long)+0x7>
-0000000000000052: 06	movl	$3, %r8d
-0000000000000058: 02	jmp	0x41dc20 <BloombergLP::bdlde::Utf8Util::advanceRaw(char const**, char const*, long)+0x20>
-000000000000005a: 03	movq	%rdx, %rax
-000000000000005d: 03	movq	%rsi, (%rdi)
-0000000000000060: 01	retq	
-0000000000000061: 10	nopw	%cs:(%rax,%rax)
-000000000000006b: 05	nopl	(%rax,%rax)
+M0000000000000000:	xorl	%eax, %eax	;  2 bytes
+M0000000000000002:	testq	%rdx, %rdx	;  3 bytes
+M0000000000000005:	jne	0x41dc2b <BloombergLP::bdlde::Utf8Util::advanceRaw(char const**, char const*, long)+0x2b>	;  2 bytes
+M0000000000000007:	cmpq	%rdx, %rax	;  3 bytes
+M000000000000000a:	movq	%rsi, (%rdi)	;  3 bytes
+M000000000000000d:	retq		;  1 bytes
+M000000000000000e:	movl	$4, %r8d	;  6 bytes
+M0000000000000014:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000001e:	nop		;  2 bytes
+M0000000000000020:	addq	%r8, %rsi	;  3 bytes
+M0000000000000023:	incq	%rax	;  3 bytes
+M0000000000000026:	cmpq	%rax, %rdx	;  3 bytes
+M0000000000000029:	je	0x41dc5a <BloombergLP::bdlde::Utf8Util::advanceRaw(char const**, char const*, long)+0x5a>	;  2 bytes
+M000000000000002b:	movzbl	(%rsi), %r9d	;  4 bytes
+M000000000000002f:	movl	$1, %r8d	;  6 bytes
+M0000000000000035:	movq	%r9, %rcx	;  3 bytes
+M0000000000000038:	shrq	$4, %rcx	;  4 bytes
+M000000000000003c:	jmpq	*4491624(,%rcx,8)	;  7 bytes
+M0000000000000043:	movl	$2, %r8d	;  6 bytes
+M0000000000000049:	jmp	0x41dc20 <BloombergLP::bdlde::Utf8Util::advanceRaw(char const**, char const*, long)+0x20>	;  2 bytes
+M000000000000004b:	testb	%r9b, %r9b	;  3 bytes
+M000000000000004e:	jne	0x41dc20 <BloombergLP::bdlde::Utf8Util::advanceRaw(char const**, char const*, long)+0x20>	;  2 bytes
+M0000000000000050:	jmp	0x41dc07 <BloombergLP::bdlde::Utf8Util::advanceRaw(char const**, char const*, long)+0x7>	;  2 bytes
+M0000000000000052:	movl	$3, %r8d	;  6 bytes
+M0000000000000058:	jmp	0x41dc20 <BloombergLP::bdlde::Utf8Util::advanceRaw(char const**, char const*, long)+0x20>	;  2 bytes
+M000000000000005a:	movq	%rdx, %rax	;  3 bytes
+M000000000000005d:	movq	%rsi, (%rdi)	;  3 bytes
+M0000000000000060:	retq		;  1 bytes
+M0000000000000061:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000006b:	nopl	(%rax,%rax)	;  5 bytes
 ```

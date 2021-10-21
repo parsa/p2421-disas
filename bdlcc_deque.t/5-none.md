@@ -2,116 +2,116 @@
 
 ```nasm
 0000000000493740 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<USAGE_EXAMPLE_2::WorkerFunctor>(unsigned long*, USAGE_EXAMPLE_2::WorkerFunctor const&, BloombergLP::bslma::Allocator*)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 01	pushq	%rbx
-0000000000000006: 04	subq	$72, %rsp
-000000000000000a: 03	movq	%rdx, %r14
-000000000000000d: 03	movq	%rsi, %rbp
-0000000000000010: 03	movq	%rdi, %r15
-0000000000000013: 03	testq	%rdx, %rdx
-0000000000000016: 02	jne	0x49376c <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<USAGE_EXAMPLE_2::WorkerFunctor>(unsigned long*, USAGE_EXAMPLE_2::WorkerFunctor const&, BloombergLP::bslma::Allocator*)+0x2c>
-0000000000000018: 07	movq	2698689(%rip), %r14  # 726520 <BloombergLP::bslma::Default::s_defaultAllocator>
-000000000000001f: 03	testq	%r14, %r14
-0000000000000022: 02	jne	0x49376c <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<USAGE_EXAMPLE_2::WorkerFunctor>(unsigned long*, USAGE_EXAMPLE_2::WorkerFunctor const&, BloombergLP::bslma::Allocator*)+0x2c>
-0000000000000024: 05	callq	0x4bd7f0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-0000000000000029: 03	movq	%rax, %r14
-000000000000002c: 03	movq	(%r14), %rax
-000000000000002f: 05	movl	$80, %esi
-0000000000000034: 03	movq	%r14, %rdi
-0000000000000037: 03	callq	*16(%rax)
-000000000000003a: 03	movq	%rax, %rbx
-000000000000003d: 07	movq	$4798672, (%rax)
-0000000000000044: 04	movups	(%rbp), %xmm0
-0000000000000048: 04	movups	%xmm0, 8(%rax)
-000000000000004c: 04	movq	16(%rbp), %rax
-0000000000000050: 04	movq	%rax, 24(%rbx)
-0000000000000054: 04	leaq	32(%rbx), %rdi
-0000000000000058: 08	movq	$0, 32(%rbx)
-0000000000000060: 04	movq	%r14, 72(%rbx)
-0000000000000064: 07	movaps	340565(%rip), %xmm0  # 4e6a00 <MULTI_THREADED_TRY_PUSH::nullItem+0x150>
-000000000000006b: 04	movups	%xmm0, 56(%rbx)
-000000000000006f: 05	movl	$5150746, %ecx
-0000000000000074: 02	xorl	%esi, %esi
-0000000000000076: 02	xorl	%edx, %edx
-0000000000000078: 05	callq	0x4c35b0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-000000000000007d: 03	movq	%rsp, %rdi
-0000000000000080: 05	callq	0x4beeb0 <BloombergLP::bslmt::ThreadAttributes::ThreadAttributes()>
-0000000000000085: 03	movq	%rsp, %rsi
-0000000000000088: 05	movl	$4975120, %edx
-000000000000008d: 03	movq	%r15, %rdi
-0000000000000090: 03	movq	%rbx, %rcx
-0000000000000093: 05	callq	0x4bf3a0 <BloombergLP::bslmt::ThreadUtilImpl<BloombergLP::bslmt::Platform::PosixThreads>::create(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, void* (*)(void*), void*)>
-0000000000000098: 02	movl	%eax, %ebp
-000000000000009a: 06	cmpq	$23, 56(%rsp)
-00000000000000a0: 02	je	0x4937f2 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<USAGE_EXAMPLE_2::WorkerFunctor>(unsigned long*, USAGE_EXAMPLE_2::WorkerFunctor const&, BloombergLP::bslma::Allocator*)+0xb2>
-00000000000000a2: 05	movq	24(%rsp), %rsi
-00000000000000a7: 05	movq	64(%rsp), %rdi
-00000000000000ac: 03	movq	(%rdi), %rax
-00000000000000af: 03	callq	*24(%rax)
-00000000000000b2: 02	testl	%ebp, %ebp
-00000000000000b4: 02	je	0x49381f <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<USAGE_EXAMPLE_2::WorkerFunctor>(unsigned long*, USAGE_EXAMPLE_2::WorkerFunctor const&, BloombergLP::bslma::Allocator*)+0xdf>
-00000000000000b6: 05	cmpq	$23, 64(%rbx)
-00000000000000bb: 02	je	0x49380b <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<USAGE_EXAMPLE_2::WorkerFunctor>(unsigned long*, USAGE_EXAMPLE_2::WorkerFunctor const&, BloombergLP::bslma::Allocator*)+0xcb>
-00000000000000bd: 04	movq	32(%rbx), %rsi
-00000000000000c1: 04	movq	72(%rbx), %rdi
-00000000000000c5: 03	movq	(%rdi), %rax
-00000000000000c8: 03	callq	*24(%rax)
-00000000000000cb: 08	movq	$-1, 56(%rbx)
-00000000000000d3: 03	movq	(%r14), %rax
-00000000000000d6: 03	movq	%r14, %rdi
-00000000000000d9: 03	movq	%rbx, %rsi
-00000000000000dc: 03	callq	*24(%rax)
-00000000000000df: 02	movl	%ebp, %eax
-00000000000000e1: 04	addq	$72, %rsp
-00000000000000e5: 01	popq	%rbx
-00000000000000e6: 02	popq	%r14
-00000000000000e8: 02	popq	%r15
-00000000000000ea: 01	popq	%rbp
-00000000000000eb: 01	retq	
-00000000000000ec: 03	movq	%rax, %rdi
-00000000000000ef: 05	callq	0x433ef0 <__clang_call_terminate>
-00000000000000f4: 03	movq	%rax, %rdi
-00000000000000f7: 05	callq	0x433ef0 <__clang_call_terminate>
-00000000000000fc: 03	movq	%rax, %rdi
-00000000000000ff: 05	callq	0x433ef0 <__clang_call_terminate>
-0000000000000104: 03	movq	%rax, %r15
-0000000000000107: 06	cmpq	$23, 56(%rsp)
-000000000000010d: 02	je	0x49386c <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<USAGE_EXAMPLE_2::WorkerFunctor>(unsigned long*, USAGE_EXAMPLE_2::WorkerFunctor const&, BloombergLP::bslma::Allocator*)+0x12c>
-000000000000010f: 05	movq	24(%rsp), %rsi
-0000000000000114: 05	movq	64(%rsp), %rdi
-0000000000000119: 03	movq	(%rdi), %rax
-000000000000011c: 03	callq	*24(%rax)
-000000000000011f: 02	jmp	0x49386c <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<USAGE_EXAMPLE_2::WorkerFunctor>(unsigned long*, USAGE_EXAMPLE_2::WorkerFunctor const&, BloombergLP::bslma::Allocator*)+0x12c>
-0000000000000121: 03	movq	%rax, %rdi
-0000000000000124: 05	callq	0x433ef0 <__clang_call_terminate>
-0000000000000129: 03	movq	%rax, %r15
-000000000000012c: 05	cmpq	$23, 64(%rbx)
-0000000000000131: 02	je	0x493881 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<USAGE_EXAMPLE_2::WorkerFunctor>(unsigned long*, USAGE_EXAMPLE_2::WorkerFunctor const&, BloombergLP::bslma::Allocator*)+0x141>
-0000000000000133: 04	movq	32(%rbx), %rsi
-0000000000000137: 04	movq	72(%rbx), %rdi
-000000000000013b: 03	movq	(%rdi), %rax
-000000000000013e: 03	callq	*24(%rax)
-0000000000000141: 08	movq	$-1, 56(%rbx)
-0000000000000149: 03	movq	(%r14), %rax
-000000000000014c: 03	movq	%r14, %rdi
-000000000000014f: 03	movq	%rbx, %rsi
-0000000000000152: 03	callq	*24(%rax)
-0000000000000155: 02	jmp	0x4938be <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<USAGE_EXAMPLE_2::WorkerFunctor>(unsigned long*, USAGE_EXAMPLE_2::WorkerFunctor const&, BloombergLP::bslma::Allocator*)+0x17e>
-0000000000000157: 03	movq	%rax, %rdi
-000000000000015a: 05	callq	0x433ef0 <__clang_call_terminate>
-000000000000015f: 03	movq	%rax, %rdi
-0000000000000162: 05	callq	0x433ef0 <__clang_call_terminate>
-0000000000000167: 03	movq	%rax, %r15
-000000000000016a: 08	movq	$0, 56(%rbx)
-0000000000000172: 03	movq	(%r14), %rax
-0000000000000175: 03	movq	%r14, %rdi
-0000000000000178: 03	movq	%rbx, %rsi
-000000000000017b: 03	callq	*24(%rax)
-000000000000017e: 03	movq	%r15, %rdi
-0000000000000181: 05	callq	0x404850 <_Unwind_Resume@plt>
-0000000000000186: 03	movq	%rax, %rdi
-0000000000000189: 05	callq	0x433ef0 <__clang_call_terminate>
-000000000000018e: 02	nop	
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%rbx	;  1 bytes
+M0000000000000006:	subq	$72, %rsp	;  4 bytes
+M000000000000000a:	movq	%rdx, %r14	;  3 bytes
+M000000000000000d:	movq	%rsi, %rbp	;  3 bytes
+M0000000000000010:	movq	%rdi, %r15	;  3 bytes
+M0000000000000013:	testq	%rdx, %rdx	;  3 bytes
+M0000000000000016:	jne	0x49376c <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<USAGE_EXAMPLE_2::WorkerFunctor>(unsigned long*, USAGE_EXAMPLE_2::WorkerFunctor const&, BloombergLP::bslma::Allocator*)+0x2c>	;  2 bytes
+M0000000000000018:	movq	2698689(%rip), %r14  # 726520 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M000000000000001f:	testq	%r14, %r14	;  3 bytes
+M0000000000000022:	jne	0x49376c <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<USAGE_EXAMPLE_2::WorkerFunctor>(unsigned long*, USAGE_EXAMPLE_2::WorkerFunctor const&, BloombergLP::bslma::Allocator*)+0x2c>	;  2 bytes
+M0000000000000024:	callq	0x4bd7f0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M0000000000000029:	movq	%rax, %r14	;  3 bytes
+M000000000000002c:	movq	(%r14), %rax	;  3 bytes
+M000000000000002f:	movl	$80, %esi	;  5 bytes
+M0000000000000034:	movq	%r14, %rdi	;  3 bytes
+M0000000000000037:	callq	*16(%rax)	;  3 bytes
+M000000000000003a:	movq	%rax, %rbx	;  3 bytes
+M000000000000003d:	movq	$4798672, (%rax)	;  7 bytes
+M0000000000000044:	movups	(%rbp), %xmm0	;  4 bytes
+M0000000000000048:	movups	%xmm0, 8(%rax)	;  4 bytes
+M000000000000004c:	movq	16(%rbp), %rax	;  4 bytes
+M0000000000000050:	movq	%rax, 24(%rbx)	;  4 bytes
+M0000000000000054:	leaq	32(%rbx), %rdi	;  4 bytes
+M0000000000000058:	movq	$0, 32(%rbx)	;  8 bytes
+M0000000000000060:	movq	%r14, 72(%rbx)	;  4 bytes
+M0000000000000064:	movaps	340565(%rip), %xmm0  # 4e6a00 <MULTI_THREADED_TRY_PUSH::nullItem+0x150>	;  7 bytes
+M000000000000006b:	movups	%xmm0, 56(%rbx)	;  4 bytes
+M000000000000006f:	movl	$5150746, %ecx	;  5 bytes
+M0000000000000074:	xorl	%esi, %esi	;  2 bytes
+M0000000000000076:	xorl	%edx, %edx	;  2 bytes
+M0000000000000078:	callq	0x4c35b0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M000000000000007d:	movq	%rsp, %rdi	;  3 bytes
+M0000000000000080:	callq	0x4beeb0 <BloombergLP::bslmt::ThreadAttributes::ThreadAttributes()>	;  5 bytes
+M0000000000000085:	movq	%rsp, %rsi	;  3 bytes
+M0000000000000088:	movl	$4975120, %edx	;  5 bytes
+M000000000000008d:	movq	%r15, %rdi	;  3 bytes
+M0000000000000090:	movq	%rbx, %rcx	;  3 bytes
+M0000000000000093:	callq	0x4bf3a0 <BloombergLP::bslmt::ThreadUtilImpl<BloombergLP::bslmt::Platform::PosixThreads>::create(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, void* (*)(void*), void*)>	;  5 bytes
+M0000000000000098:	movl	%eax, %ebp	;  2 bytes
+M000000000000009a:	cmpq	$23, 56(%rsp)	;  6 bytes
+M00000000000000a0:	je	0x4937f2 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<USAGE_EXAMPLE_2::WorkerFunctor>(unsigned long*, USAGE_EXAMPLE_2::WorkerFunctor const&, BloombergLP::bslma::Allocator*)+0xb2>	;  2 bytes
+M00000000000000a2:	movq	24(%rsp), %rsi	;  5 bytes
+M00000000000000a7:	movq	64(%rsp), %rdi	;  5 bytes
+M00000000000000ac:	movq	(%rdi), %rax	;  3 bytes
+M00000000000000af:	callq	*24(%rax)	;  3 bytes
+M00000000000000b2:	testl	%ebp, %ebp	;  2 bytes
+M00000000000000b4:	je	0x49381f <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<USAGE_EXAMPLE_2::WorkerFunctor>(unsigned long*, USAGE_EXAMPLE_2::WorkerFunctor const&, BloombergLP::bslma::Allocator*)+0xdf>	;  2 bytes
+M00000000000000b6:	cmpq	$23, 64(%rbx)	;  5 bytes
+M00000000000000bb:	je	0x49380b <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<USAGE_EXAMPLE_2::WorkerFunctor>(unsigned long*, USAGE_EXAMPLE_2::WorkerFunctor const&, BloombergLP::bslma::Allocator*)+0xcb>	;  2 bytes
+M00000000000000bd:	movq	32(%rbx), %rsi	;  4 bytes
+M00000000000000c1:	movq	72(%rbx), %rdi	;  4 bytes
+M00000000000000c5:	movq	(%rdi), %rax	;  3 bytes
+M00000000000000c8:	callq	*24(%rax)	;  3 bytes
+M00000000000000cb:	movq	$-1, 56(%rbx)	;  8 bytes
+M00000000000000d3:	movq	(%r14), %rax	;  3 bytes
+M00000000000000d6:	movq	%r14, %rdi	;  3 bytes
+M00000000000000d9:	movq	%rbx, %rsi	;  3 bytes
+M00000000000000dc:	callq	*24(%rax)	;  3 bytes
+M00000000000000df:	movl	%ebp, %eax	;  2 bytes
+M00000000000000e1:	addq	$72, %rsp	;  4 bytes
+M00000000000000e5:	popq	%rbx	;  1 bytes
+M00000000000000e6:	popq	%r14	;  2 bytes
+M00000000000000e8:	popq	%r15	;  2 bytes
+M00000000000000ea:	popq	%rbp	;  1 bytes
+M00000000000000eb:	retq		;  1 bytes
+M00000000000000ec:	movq	%rax, %rdi	;  3 bytes
+M00000000000000ef:	callq	0x433ef0 <__clang_call_terminate>	;  5 bytes
+M00000000000000f4:	movq	%rax, %rdi	;  3 bytes
+M00000000000000f7:	callq	0x433ef0 <__clang_call_terminate>	;  5 bytes
+M00000000000000fc:	movq	%rax, %rdi	;  3 bytes
+M00000000000000ff:	callq	0x433ef0 <__clang_call_terminate>	;  5 bytes
+M0000000000000104:	movq	%rax, %r15	;  3 bytes
+M0000000000000107:	cmpq	$23, 56(%rsp)	;  6 bytes
+M000000000000010d:	je	0x49386c <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<USAGE_EXAMPLE_2::WorkerFunctor>(unsigned long*, USAGE_EXAMPLE_2::WorkerFunctor const&, BloombergLP::bslma::Allocator*)+0x12c>	;  2 bytes
+M000000000000010f:	movq	24(%rsp), %rsi	;  5 bytes
+M0000000000000114:	movq	64(%rsp), %rdi	;  5 bytes
+M0000000000000119:	movq	(%rdi), %rax	;  3 bytes
+M000000000000011c:	callq	*24(%rax)	;  3 bytes
+M000000000000011f:	jmp	0x49386c <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<USAGE_EXAMPLE_2::WorkerFunctor>(unsigned long*, USAGE_EXAMPLE_2::WorkerFunctor const&, BloombergLP::bslma::Allocator*)+0x12c>	;  2 bytes
+M0000000000000121:	movq	%rax, %rdi	;  3 bytes
+M0000000000000124:	callq	0x433ef0 <__clang_call_terminate>	;  5 bytes
+M0000000000000129:	movq	%rax, %r15	;  3 bytes
+M000000000000012c:	cmpq	$23, 64(%rbx)	;  5 bytes
+M0000000000000131:	je	0x493881 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<USAGE_EXAMPLE_2::WorkerFunctor>(unsigned long*, USAGE_EXAMPLE_2::WorkerFunctor const&, BloombergLP::bslma::Allocator*)+0x141>	;  2 bytes
+M0000000000000133:	movq	32(%rbx), %rsi	;  4 bytes
+M0000000000000137:	movq	72(%rbx), %rdi	;  4 bytes
+M000000000000013b:	movq	(%rdi), %rax	;  3 bytes
+M000000000000013e:	callq	*24(%rax)	;  3 bytes
+M0000000000000141:	movq	$-1, 56(%rbx)	;  8 bytes
+M0000000000000149:	movq	(%r14), %rax	;  3 bytes
+M000000000000014c:	movq	%r14, %rdi	;  3 bytes
+M000000000000014f:	movq	%rbx, %rsi	;  3 bytes
+M0000000000000152:	callq	*24(%rax)	;  3 bytes
+M0000000000000155:	jmp	0x4938be <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<USAGE_EXAMPLE_2::WorkerFunctor>(unsigned long*, USAGE_EXAMPLE_2::WorkerFunctor const&, BloombergLP::bslma::Allocator*)+0x17e>	;  2 bytes
+M0000000000000157:	movq	%rax, %rdi	;  3 bytes
+M000000000000015a:	callq	0x433ef0 <__clang_call_terminate>	;  5 bytes
+M000000000000015f:	movq	%rax, %rdi	;  3 bytes
+M0000000000000162:	callq	0x433ef0 <__clang_call_terminate>	;  5 bytes
+M0000000000000167:	movq	%rax, %r15	;  3 bytes
+M000000000000016a:	movq	$0, 56(%rbx)	;  8 bytes
+M0000000000000172:	movq	(%r14), %rax	;  3 bytes
+M0000000000000175:	movq	%r14, %rdi	;  3 bytes
+M0000000000000178:	movq	%rbx, %rsi	;  3 bytes
+M000000000000017b:	callq	*24(%rax)	;  3 bytes
+M000000000000017e:	movq	%r15, %rdi	;  3 bytes
+M0000000000000181:	callq	0x404850 <_Unwind_Resume@plt>	;  5 bytes
+M0000000000000186:	movq	%rax, %rdi	;  3 bytes
+M0000000000000189:	callq	0x433ef0 <__clang_call_terminate>	;  5 bytes
+M000000000000018e:	nop		;  2 bytes
 ```

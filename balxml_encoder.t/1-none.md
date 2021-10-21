@@ -2,147 +2,147 @@
 
 ```nasm
 00000000004e8f10 <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 02	pushq	%r13
-0000000000000007: 02	pushq	%r12
-0000000000000009: 01	pushq	%rbx
-000000000000000a: 01	pushq	%rax
-000000000000000b: 03	movq	%rdx, %r14
-000000000000000e: 03	movq	%rdi, %rbx
-0000000000000011: 04	movq	%rsi, (%rsp)
-0000000000000015: 02	movb	(%rdi), %al
-0000000000000017: 02	cmpb	$-1, %al
-0000000000000019: 02	je	0x4e8f6f <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0x5f>
-000000000000001b: 03	movl	%ecx, %r8d
-000000000000001e: 02	cmpb	$1, %al
-0000000000000020: 02	jne	0x4e8f83 <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0x73>
-0000000000000022: 03	movl	20(%rbx), %eax
-0000000000000025: 02	testl	%eax, %eax
-0000000000000027: 02	jne	0x4e8f86 <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0x76>
-0000000000000029: 03	movl	4(%rbx), %ecx
-000000000000002c: 03	movl	12(%rbx), %eax
-000000000000002f: 02	testl	%ecx, %ecx
-0000000000000031: 02	je	0x4e8f58 <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0x48>
-0000000000000033: 03	leal	2(%rcx), %esi
-0000000000000036: 01	cltd	
-0000000000000037: 02	idivl	%esi
-0000000000000039: 02	xorl	%esi, %esi
-000000000000003b: 02	cmpl	%ecx, %edx
-000000000000003d: 04	setg	%sil
-0000000000000041: 03	imull	%ecx, %eax
-0000000000000044: 02	addl	%edx, %eax
-0000000000000046: 02	subl	%esi, %eax
-0000000000000048: 02	testb	$3, %al
-000000000000004a: 02	je	0x4e8f6f <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0x5f>
-000000000000004c: 04	movl	12(%rbx), %r12d
-0000000000000050: 03	addl	%r12d, %r8d
-0000000000000053: 04	leaq	20(%rbx), %r13
-0000000000000057: 03	movl	%r8d, %ebp
-000000000000005a: 05	jmp	0x4e8ff7 <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0xe7>
-000000000000005f: 03	movb	$-1, (%rbx)
-0000000000000062: 07	movl	$0, (%r14)
-0000000000000069: 05	movl	$4294967295, %ecx
-000000000000006e: 05	jmp	0x4e907f <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0x16f>
-0000000000000073: 03	movl	20(%rbx), %eax
-0000000000000076: 04	movl	12(%rbx), %r12d
-000000000000007a: 03	movslq	%eax, %rdx
-000000000000007d: 07	imulq	$715827883, %rdx, %rcx
-0000000000000084: 03	movq	%rcx, %rsi
-0000000000000087: 04	shrq	$63, %rsi
-000000000000008b: 04	shrq	$32, %rcx
-000000000000008f: 02	addl	%esi, %ecx
-0000000000000091: 02	addl	%ecx, %ecx
-0000000000000093: 03	leal	(%rcx,%rcx,2), %ecx
-0000000000000096: 02	subl	%ecx, %edx
-0000000000000098: 02	je	0x4e8fb9 <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0xa9>
-000000000000009a: 05	movl	$6, %ecx
-000000000000009f: 02	subl	%edx, %ecx
-00000000000000a1: 03	shll	%cl, 16(%rbx)
-00000000000000a4: 02	addl	%ecx, %eax
-00000000000000a6: 03	movl	%eax, 20(%rbx)
-00000000000000a9: 04	leal	(%r12,%r8), %ebp
-00000000000000ad: 04	leaq	20(%rbx), %r13
-00000000000000b1: 03	cmpl	$6, %eax
-00000000000000b4: 02	jl	0x4e8fee <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0xde>
-00000000000000b6: 03	testl	%r8d, %r8d
-00000000000000b9: 02	je	0x4e8fea <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0xda>
-00000000000000bb: 03	movq	%rsp, %r15
-00000000000000be: 02	nop	
-00000000000000c0: 03	movq	%rbx, %rdi
-00000000000000c3: 03	movq	%r15, %rsi
-00000000000000c6: 02	movl	%ebp, %edx
-00000000000000c8: 05	callq	0x4e8e00 <void BloombergLP::bdlde::Base64Encoder::encode<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >*, int)>
-00000000000000cd: 03	movl	20(%rbx), %eax
-00000000000000d0: 03	cmpl	$6, %eax
-00000000000000d3: 02	jl	0x4e8fee <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0xde>
-00000000000000d5: 03	cmpl	%ebp, 12(%rbx)
-00000000000000d8: 02	jne	0x4e8fd0 <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0xc0>
-00000000000000da: 02	movl	%ebp, %ecx
-00000000000000dc: 02	jmp	0x4e9042 <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0x132>
-00000000000000de: 02	testl	%eax, %eax
-00000000000000e0: 02	je	0x4e8ff7 <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0xe7>
-00000000000000e2: 03	movl	12(%rbx), %ecx
-00000000000000e5: 02	jmp	0x4e9042 <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0x132>
-00000000000000e7: 03	movq	%rsp, %r15
-00000000000000ea: 06	nopw	(%rax,%rax)
-00000000000000f0: 03	movl	4(%rbx), %esi
-00000000000000f3: 03	movl	12(%rbx), %ecx
-00000000000000f6: 02	movl	%ecx, %eax
-00000000000000f8: 02	testl	%esi, %esi
-00000000000000fa: 02	je	0x4e9023 <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0x113>
-00000000000000fc: 03	leal	2(%rsi), %edi
-00000000000000ff: 02	movl	%ecx, %eax
-0000000000000101: 01	cltd	
-0000000000000102: 02	idivl	%edi
-0000000000000104: 02	xorl	%edi, %edi
-0000000000000106: 02	cmpl	%esi, %edx
-0000000000000108: 04	setg	%dil
-000000000000010c: 03	imull	%esi, %eax
-000000000000010f: 02	addl	%edx, %eax
-0000000000000111: 02	subl	%edi, %eax
-0000000000000113: 02	testb	$3, %al
-0000000000000115: 02	je	0x4e903f <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0x12f>
-0000000000000117: 02	cmpl	%ebp, %ecx
-0000000000000119: 02	je	0x4e8fea <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0xda>
-000000000000011b: 03	movq	%rbx, %rdi
-000000000000011e: 03	movq	%r15, %rsi
-0000000000000121: 05	movl	$61, %edx
-0000000000000126: 02	movl	%ebp, %ecx
-0000000000000128: 05	callq	0x4e9090 <void BloombergLP::bdlde::Base64Encoder::append<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >*, char, int)>
-000000000000012d: 02	jmp	0x4e9000 <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0xf0>
-000000000000012f: 03	movb	$1, (%rbx)
-0000000000000132: 03	subl	%r12d, %ecx
-0000000000000135: 03	movl	%ecx, (%r14)
-0000000000000138: 05	movl	$1, %ecx
-000000000000013d: 03	cmpb	$1, (%rbx)
-0000000000000140: 02	jne	0x4e907f <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0x16f>
-0000000000000142: 05	cmpl	$0, (%r13)
-0000000000000147: 02	jne	0x4e907f <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0x16f>
-0000000000000149: 03	movl	4(%rbx), %ecx
-000000000000014c: 03	movl	12(%rbx), %eax
-000000000000014f: 02	testl	%ecx, %ecx
-0000000000000151: 02	je	0x4e9078 <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0x168>
-0000000000000153: 03	leal	2(%rcx), %esi
-0000000000000156: 01	cltd	
-0000000000000157: 02	idivl	%esi
-0000000000000159: 02	xorl	%esi, %esi
-000000000000015b: 02	cmpl	%ecx, %edx
-000000000000015d: 04	setg	%sil
-0000000000000161: 03	imull	%ecx, %eax
-0000000000000164: 02	addl	%edx, %eax
-0000000000000166: 02	subl	%esi, %eax
-0000000000000168: 02	xorl	%ecx, %ecx
-000000000000016a: 02	testb	$3, %al
-000000000000016c: 03	setne	%cl
-000000000000016f: 02	movl	%ecx, %eax
-0000000000000171: 04	addq	$8, %rsp
-0000000000000175: 01	popq	%rbx
-0000000000000176: 02	popq	%r12
-0000000000000178: 02	popq	%r13
-000000000000017a: 02	popq	%r14
-000000000000017c: 02	popq	%r15
-000000000000017e: 01	popq	%rbp
-000000000000017f: 01	retq	
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%r13	;  2 bytes
+M0000000000000007:	pushq	%r12	;  2 bytes
+M0000000000000009:	pushq	%rbx	;  1 bytes
+M000000000000000a:	pushq	%rax	;  1 bytes
+M000000000000000b:	movq	%rdx, %r14	;  3 bytes
+M000000000000000e:	movq	%rdi, %rbx	;  3 bytes
+M0000000000000011:	movq	%rsi, (%rsp)	;  4 bytes
+M0000000000000015:	movb	(%rdi), %al	;  2 bytes
+M0000000000000017:	cmpb	$-1, %al	;  2 bytes
+M0000000000000019:	je	0x4e8f6f <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0x5f>	;  2 bytes
+M000000000000001b:	movl	%ecx, %r8d	;  3 bytes
+M000000000000001e:	cmpb	$1, %al	;  2 bytes
+M0000000000000020:	jne	0x4e8f83 <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0x73>	;  2 bytes
+M0000000000000022:	movl	20(%rbx), %eax	;  3 bytes
+M0000000000000025:	testl	%eax, %eax	;  2 bytes
+M0000000000000027:	jne	0x4e8f86 <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0x76>	;  2 bytes
+M0000000000000029:	movl	4(%rbx), %ecx	;  3 bytes
+M000000000000002c:	movl	12(%rbx), %eax	;  3 bytes
+M000000000000002f:	testl	%ecx, %ecx	;  2 bytes
+M0000000000000031:	je	0x4e8f58 <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0x48>	;  2 bytes
+M0000000000000033:	leal	2(%rcx), %esi	;  3 bytes
+M0000000000000036:	cltd		;  1 bytes
+M0000000000000037:	idivl	%esi	;  2 bytes
+M0000000000000039:	xorl	%esi, %esi	;  2 bytes
+M000000000000003b:	cmpl	%ecx, %edx	;  2 bytes
+M000000000000003d:	setg	%sil	;  4 bytes
+M0000000000000041:	imull	%ecx, %eax	;  3 bytes
+M0000000000000044:	addl	%edx, %eax	;  2 bytes
+M0000000000000046:	subl	%esi, %eax	;  2 bytes
+M0000000000000048:	testb	$3, %al	;  2 bytes
+M000000000000004a:	je	0x4e8f6f <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0x5f>	;  2 bytes
+M000000000000004c:	movl	12(%rbx), %r12d	;  4 bytes
+M0000000000000050:	addl	%r12d, %r8d	;  3 bytes
+M0000000000000053:	leaq	20(%rbx), %r13	;  4 bytes
+M0000000000000057:	movl	%r8d, %ebp	;  3 bytes
+M000000000000005a:	jmp	0x4e8ff7 <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0xe7>	;  5 bytes
+M000000000000005f:	movb	$-1, (%rbx)	;  3 bytes
+M0000000000000062:	movl	$0, (%r14)	;  7 bytes
+M0000000000000069:	movl	$4294967295, %ecx	;  5 bytes
+M000000000000006e:	jmp	0x4e907f <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0x16f>	;  5 bytes
+M0000000000000073:	movl	20(%rbx), %eax	;  3 bytes
+M0000000000000076:	movl	12(%rbx), %r12d	;  4 bytes
+M000000000000007a:	movslq	%eax, %rdx	;  3 bytes
+M000000000000007d:	imulq	$715827883, %rdx, %rcx	;  7 bytes
+M0000000000000084:	movq	%rcx, %rsi	;  3 bytes
+M0000000000000087:	shrq	$63, %rsi	;  4 bytes
+M000000000000008b:	shrq	$32, %rcx	;  4 bytes
+M000000000000008f:	addl	%esi, %ecx	;  2 bytes
+M0000000000000091:	addl	%ecx, %ecx	;  2 bytes
+M0000000000000093:	leal	(%rcx,%rcx,2), %ecx	;  3 bytes
+M0000000000000096:	subl	%ecx, %edx	;  2 bytes
+M0000000000000098:	je	0x4e8fb9 <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0xa9>	;  2 bytes
+M000000000000009a:	movl	$6, %ecx	;  5 bytes
+M000000000000009f:	subl	%edx, %ecx	;  2 bytes
+M00000000000000a1:	shll	%cl, 16(%rbx)	;  3 bytes
+M00000000000000a4:	addl	%ecx, %eax	;  2 bytes
+M00000000000000a6:	movl	%eax, 20(%rbx)	;  3 bytes
+M00000000000000a9:	leal	(%r12,%r8), %ebp	;  4 bytes
+M00000000000000ad:	leaq	20(%rbx), %r13	;  4 bytes
+M00000000000000b1:	cmpl	$6, %eax	;  3 bytes
+M00000000000000b4:	jl	0x4e8fee <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0xde>	;  2 bytes
+M00000000000000b6:	testl	%r8d, %r8d	;  3 bytes
+M00000000000000b9:	je	0x4e8fea <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0xda>	;  2 bytes
+M00000000000000bb:	movq	%rsp, %r15	;  3 bytes
+M00000000000000be:	nop		;  2 bytes
+M00000000000000c0:	movq	%rbx, %rdi	;  3 bytes
+M00000000000000c3:	movq	%r15, %rsi	;  3 bytes
+M00000000000000c6:	movl	%ebp, %edx	;  2 bytes
+M00000000000000c8:	callq	0x4e8e00 <void BloombergLP::bdlde::Base64Encoder::encode<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >*, int)>	;  5 bytes
+M00000000000000cd:	movl	20(%rbx), %eax	;  3 bytes
+M00000000000000d0:	cmpl	$6, %eax	;  3 bytes
+M00000000000000d3:	jl	0x4e8fee <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0xde>	;  2 bytes
+M00000000000000d5:	cmpl	%ebp, 12(%rbx)	;  3 bytes
+M00000000000000d8:	jne	0x4e8fd0 <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0xc0>	;  2 bytes
+M00000000000000da:	movl	%ebp, %ecx	;  2 bytes
+M00000000000000dc:	jmp	0x4e9042 <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0x132>	;  2 bytes
+M00000000000000de:	testl	%eax, %eax	;  2 bytes
+M00000000000000e0:	je	0x4e8ff7 <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0xe7>	;  2 bytes
+M00000000000000e2:	movl	12(%rbx), %ecx	;  3 bytes
+M00000000000000e5:	jmp	0x4e9042 <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0x132>	;  2 bytes
+M00000000000000e7:	movq	%rsp, %r15	;  3 bytes
+M00000000000000ea:	nopw	(%rax,%rax)	;  6 bytes
+M00000000000000f0:	movl	4(%rbx), %esi	;  3 bytes
+M00000000000000f3:	movl	12(%rbx), %ecx	;  3 bytes
+M00000000000000f6:	movl	%ecx, %eax	;  2 bytes
+M00000000000000f8:	testl	%esi, %esi	;  2 bytes
+M00000000000000fa:	je	0x4e9023 <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0x113>	;  2 bytes
+M00000000000000fc:	leal	2(%rsi), %edi	;  3 bytes
+M00000000000000ff:	movl	%ecx, %eax	;  2 bytes
+M0000000000000101:	cltd		;  1 bytes
+M0000000000000102:	idivl	%edi	;  2 bytes
+M0000000000000104:	xorl	%edi, %edi	;  2 bytes
+M0000000000000106:	cmpl	%esi, %edx	;  2 bytes
+M0000000000000108:	setg	%dil	;  4 bytes
+M000000000000010c:	imull	%esi, %eax	;  3 bytes
+M000000000000010f:	addl	%edx, %eax	;  2 bytes
+M0000000000000111:	subl	%edi, %eax	;  2 bytes
+M0000000000000113:	testb	$3, %al	;  2 bytes
+M0000000000000115:	je	0x4e903f <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0x12f>	;  2 bytes
+M0000000000000117:	cmpl	%ebp, %ecx	;  2 bytes
+M0000000000000119:	je	0x4e8fea <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0xda>	;  2 bytes
+M000000000000011b:	movq	%rbx, %rdi	;  3 bytes
+M000000000000011e:	movq	%r15, %rsi	;  3 bytes
+M0000000000000121:	movl	$61, %edx	;  5 bytes
+M0000000000000126:	movl	%ebp, %ecx	;  2 bytes
+M0000000000000128:	callq	0x4e9090 <void BloombergLP::bdlde::Base64Encoder::append<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >*, char, int)>	;  5 bytes
+M000000000000012d:	jmp	0x4e9000 <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0xf0>	;  2 bytes
+M000000000000012f:	movb	$1, (%rbx)	;  3 bytes
+M0000000000000132:	subl	%r12d, %ecx	;  3 bytes
+M0000000000000135:	movl	%ecx, (%r14)	;  3 bytes
+M0000000000000138:	movl	$1, %ecx	;  5 bytes
+M000000000000013d:	cmpb	$1, (%rbx)	;  3 bytes
+M0000000000000140:	jne	0x4e907f <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0x16f>	;  2 bytes
+M0000000000000142:	cmpl	$0, (%r13)	;  5 bytes
+M0000000000000147:	jne	0x4e907f <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0x16f>	;  2 bytes
+M0000000000000149:	movl	4(%rbx), %ecx	;  3 bytes
+M000000000000014c:	movl	12(%rbx), %eax	;  3 bytes
+M000000000000014f:	testl	%ecx, %ecx	;  2 bytes
+M0000000000000151:	je	0x4e9078 <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)+0x168>	;  2 bytes
+M0000000000000153:	leal	2(%rcx), %esi	;  3 bytes
+M0000000000000156:	cltd		;  1 bytes
+M0000000000000157:	idivl	%esi	;  2 bytes
+M0000000000000159:	xorl	%esi, %esi	;  2 bytes
+M000000000000015b:	cmpl	%ecx, %edx	;  2 bytes
+M000000000000015d:	setg	%sil	;  4 bytes
+M0000000000000161:	imull	%ecx, %eax	;  3 bytes
+M0000000000000164:	addl	%edx, %eax	;  2 bytes
+M0000000000000166:	subl	%esi, %eax	;  2 bytes
+M0000000000000168:	xorl	%ecx, %ecx	;  2 bytes
+M000000000000016a:	testb	$3, %al	;  2 bytes
+M000000000000016c:	setne	%cl	;  3 bytes
+M000000000000016f:	movl	%ecx, %eax	;  2 bytes
+M0000000000000171:	addq	$8, %rsp	;  4 bytes
+M0000000000000175:	popq	%rbx	;  1 bytes
+M0000000000000176:	popq	%r12	;  2 bytes
+M0000000000000178:	popq	%r13	;  2 bytes
+M000000000000017a:	popq	%r14	;  2 bytes
+M000000000000017c:	popq	%r15	;  2 bytes
+M000000000000017e:	popq	%rbp	;  1 bytes
+M000000000000017f:	retq		;  1 bytes
 ```

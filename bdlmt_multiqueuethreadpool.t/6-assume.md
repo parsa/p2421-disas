@@ -2,107 +2,107 @@
 
 ```nasm
 00000000004311d0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<Case27DrainThread>(unsigned long*, Case27DrainThread const&, BloombergLP::bslma::Allocator*)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 01	pushq	%rbx
-0000000000000006: 04	subq	$72, %rsp
-000000000000000a: 03	movq	%rdx, %r14
-000000000000000d: 03	movq	%rsi, %rbp
-0000000000000010: 03	movq	%rdi, %r15
-0000000000000013: 03	movq	(%rdx), %rax
-0000000000000016: 05	movl	$64, %esi
-000000000000001b: 03	movq	%rdx, %rdi
-000000000000001e: 03	callq	*16(%rax)
-0000000000000021: 03	movq	%rax, %rbx
-0000000000000024: 07	movq	$4395840, (%rax)
-000000000000002b: 04	movq	(%rbp), %rax
-000000000000002f: 04	movq	%rax, 8(%rbx)
-0000000000000033: 04	leaq	16(%rbx), %rdi
-0000000000000037: 08	movq	$0, 16(%rbx)
-000000000000003f: 04	movq	%r14, 56(%rbx)
-0000000000000043: 07	movaps	202790(%rip), %xmm0  # 462a40 <__dso_handle+0x48>
-000000000000004a: 04	movups	%xmm0, 40(%rbx)
-000000000000004e: 05	movl	$4611925, %ecx
-0000000000000053: 02	xorl	%esi, %esi
-0000000000000055: 02	xorl	%edx, %edx
-0000000000000057: 05	callq	0x43f270 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-000000000000005c: 03	movq	%rsp, %rdi
-000000000000005f: 05	callq	0x43aa00 <BloombergLP::bslmt::ThreadAttributes::ThreadAttributes()>
-0000000000000064: 03	movq	%rsp, %rsi
-0000000000000067: 05	movl	$4432560, %edx
-000000000000006c: 03	movq	%r15, %rdi
-000000000000006f: 03	movq	%rbx, %rcx
-0000000000000072: 05	callq	0x43b200 <BloombergLP::bslmt::ThreadUtilImpl<BloombergLP::bslmt::Platform::PosixThreads>::create(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, void* (*)(void*), void*)>
-0000000000000077: 02	movl	%eax, %ebp
-0000000000000079: 06	cmpq	$23, 56(%rsp)
-000000000000007f: 02	je	0x431261 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<Case27DrainThread>(unsigned long*, Case27DrainThread const&, BloombergLP::bslma::Allocator*)+0x91>
-0000000000000081: 05	movq	24(%rsp), %rsi
-0000000000000086: 05	movq	64(%rsp), %rdi
-000000000000008b: 03	movq	(%rdi), %rax
-000000000000008e: 03	callq	*24(%rax)
-0000000000000091: 02	testl	%ebp, %ebp
-0000000000000093: 02	je	0x43128e <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<Case27DrainThread>(unsigned long*, Case27DrainThread const&, BloombergLP::bslma::Allocator*)+0xbe>
-0000000000000095: 05	cmpq	$23, 48(%rbx)
-000000000000009a: 02	je	0x43127a <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<Case27DrainThread>(unsigned long*, Case27DrainThread const&, BloombergLP::bslma::Allocator*)+0xaa>
-000000000000009c: 04	movq	16(%rbx), %rsi
-00000000000000a0: 04	movq	56(%rbx), %rdi
-00000000000000a4: 03	movq	(%rdi), %rax
-00000000000000a7: 03	callq	*24(%rax)
-00000000000000aa: 08	movq	$-1, 40(%rbx)
-00000000000000b2: 03	movq	(%r14), %rax
-00000000000000b5: 03	movq	%r14, %rdi
-00000000000000b8: 03	movq	%rbx, %rsi
-00000000000000bb: 03	callq	*24(%rax)
-00000000000000be: 02	movl	%ebp, %eax
-00000000000000c0: 04	addq	$72, %rsp
-00000000000000c4: 01	popq	%rbx
-00000000000000c5: 02	popq	%r14
-00000000000000c7: 02	popq	%r15
-00000000000000c9: 01	popq	%rbp
-00000000000000ca: 01	retq	
-00000000000000cb: 03	movq	%rax, %rdi
-00000000000000ce: 05	callq	0x42e060 <__clang_call_terminate>
-00000000000000d3: 03	movq	%rax, %rdi
-00000000000000d6: 05	callq	0x42e060 <__clang_call_terminate>
-00000000000000db: 03	movq	%rax, %rdi
-00000000000000de: 05	callq	0x42e060 <__clang_call_terminate>
-00000000000000e3: 03	movq	%rax, %r15
-00000000000000e6: 06	cmpq	$23, 56(%rsp)
-00000000000000ec: 02	je	0x4312db <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<Case27DrainThread>(unsigned long*, Case27DrainThread const&, BloombergLP::bslma::Allocator*)+0x10b>
-00000000000000ee: 05	movq	24(%rsp), %rsi
-00000000000000f3: 05	movq	64(%rsp), %rdi
-00000000000000f8: 03	movq	(%rdi), %rax
-00000000000000fb: 03	callq	*24(%rax)
-00000000000000fe: 02	jmp	0x4312db <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<Case27DrainThread>(unsigned long*, Case27DrainThread const&, BloombergLP::bslma::Allocator*)+0x10b>
-0000000000000100: 03	movq	%rax, %rdi
-0000000000000103: 05	callq	0x42e060 <__clang_call_terminate>
-0000000000000108: 03	movq	%rax, %r15
-000000000000010b: 05	cmpq	$23, 48(%rbx)
-0000000000000110: 02	je	0x4312f0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<Case27DrainThread>(unsigned long*, Case27DrainThread const&, BloombergLP::bslma::Allocator*)+0x120>
-0000000000000112: 04	movq	16(%rbx), %rsi
-0000000000000116: 04	movq	56(%rbx), %rdi
-000000000000011a: 03	movq	(%rdi), %rax
-000000000000011d: 03	callq	*24(%rax)
-0000000000000120: 08	movq	$-1, 40(%rbx)
-0000000000000128: 03	movq	(%r14), %rax
-000000000000012b: 03	movq	%r14, %rdi
-000000000000012e: 03	movq	%rbx, %rsi
-0000000000000131: 03	callq	*24(%rax)
-0000000000000134: 02	jmp	0x43132d <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<Case27DrainThread>(unsigned long*, Case27DrainThread const&, BloombergLP::bslma::Allocator*)+0x15d>
-0000000000000136: 03	movq	%rax, %rdi
-0000000000000139: 05	callq	0x42e060 <__clang_call_terminate>
-000000000000013e: 03	movq	%rax, %rdi
-0000000000000141: 05	callq	0x42e060 <__clang_call_terminate>
-0000000000000146: 03	movq	%rax, %r15
-0000000000000149: 08	movq	$0, 40(%rbx)
-0000000000000151: 03	movq	(%r14), %rax
-0000000000000154: 03	movq	%r14, %rdi
-0000000000000157: 03	movq	%rbx, %rsi
-000000000000015a: 03	callq	*24(%rax)
-000000000000015d: 03	movq	%r15, %rdi
-0000000000000160: 05	callq	0x405c80 <_Unwind_Resume@plt>
-0000000000000165: 03	movq	%rax, %rdi
-0000000000000168: 05	callq	0x42e060 <__clang_call_terminate>
-000000000000016d: 03	nopl	(%rax)
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%rbx	;  1 bytes
+M0000000000000006:	subq	$72, %rsp	;  4 bytes
+M000000000000000a:	movq	%rdx, %r14	;  3 bytes
+M000000000000000d:	movq	%rsi, %rbp	;  3 bytes
+M0000000000000010:	movq	%rdi, %r15	;  3 bytes
+M0000000000000013:	movq	(%rdx), %rax	;  3 bytes
+M0000000000000016:	movl	$64, %esi	;  5 bytes
+M000000000000001b:	movq	%rdx, %rdi	;  3 bytes
+M000000000000001e:	callq	*16(%rax)	;  3 bytes
+M0000000000000021:	movq	%rax, %rbx	;  3 bytes
+M0000000000000024:	movq	$4395840, (%rax)	;  7 bytes
+M000000000000002b:	movq	(%rbp), %rax	;  4 bytes
+M000000000000002f:	movq	%rax, 8(%rbx)	;  4 bytes
+M0000000000000033:	leaq	16(%rbx), %rdi	;  4 bytes
+M0000000000000037:	movq	$0, 16(%rbx)	;  8 bytes
+M000000000000003f:	movq	%r14, 56(%rbx)	;  4 bytes
+M0000000000000043:	movaps	202790(%rip), %xmm0  # 462a40 <__dso_handle+0x48>	;  7 bytes
+M000000000000004a:	movups	%xmm0, 40(%rbx)	;  4 bytes
+M000000000000004e:	movl	$4611925, %ecx	;  5 bytes
+M0000000000000053:	xorl	%esi, %esi	;  2 bytes
+M0000000000000055:	xorl	%edx, %edx	;  2 bytes
+M0000000000000057:	callq	0x43f270 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M000000000000005c:	movq	%rsp, %rdi	;  3 bytes
+M000000000000005f:	callq	0x43aa00 <BloombergLP::bslmt::ThreadAttributes::ThreadAttributes()>	;  5 bytes
+M0000000000000064:	movq	%rsp, %rsi	;  3 bytes
+M0000000000000067:	movl	$4432560, %edx	;  5 bytes
+M000000000000006c:	movq	%r15, %rdi	;  3 bytes
+M000000000000006f:	movq	%rbx, %rcx	;  3 bytes
+M0000000000000072:	callq	0x43b200 <BloombergLP::bslmt::ThreadUtilImpl<BloombergLP::bslmt::Platform::PosixThreads>::create(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, void* (*)(void*), void*)>	;  5 bytes
+M0000000000000077:	movl	%eax, %ebp	;  2 bytes
+M0000000000000079:	cmpq	$23, 56(%rsp)	;  6 bytes
+M000000000000007f:	je	0x431261 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<Case27DrainThread>(unsigned long*, Case27DrainThread const&, BloombergLP::bslma::Allocator*)+0x91>	;  2 bytes
+M0000000000000081:	movq	24(%rsp), %rsi	;  5 bytes
+M0000000000000086:	movq	64(%rsp), %rdi	;  5 bytes
+M000000000000008b:	movq	(%rdi), %rax	;  3 bytes
+M000000000000008e:	callq	*24(%rax)	;  3 bytes
+M0000000000000091:	testl	%ebp, %ebp	;  2 bytes
+M0000000000000093:	je	0x43128e <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<Case27DrainThread>(unsigned long*, Case27DrainThread const&, BloombergLP::bslma::Allocator*)+0xbe>	;  2 bytes
+M0000000000000095:	cmpq	$23, 48(%rbx)	;  5 bytes
+M000000000000009a:	je	0x43127a <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<Case27DrainThread>(unsigned long*, Case27DrainThread const&, BloombergLP::bslma::Allocator*)+0xaa>	;  2 bytes
+M000000000000009c:	movq	16(%rbx), %rsi	;  4 bytes
+M00000000000000a0:	movq	56(%rbx), %rdi	;  4 bytes
+M00000000000000a4:	movq	(%rdi), %rax	;  3 bytes
+M00000000000000a7:	callq	*24(%rax)	;  3 bytes
+M00000000000000aa:	movq	$-1, 40(%rbx)	;  8 bytes
+M00000000000000b2:	movq	(%r14), %rax	;  3 bytes
+M00000000000000b5:	movq	%r14, %rdi	;  3 bytes
+M00000000000000b8:	movq	%rbx, %rsi	;  3 bytes
+M00000000000000bb:	callq	*24(%rax)	;  3 bytes
+M00000000000000be:	movl	%ebp, %eax	;  2 bytes
+M00000000000000c0:	addq	$72, %rsp	;  4 bytes
+M00000000000000c4:	popq	%rbx	;  1 bytes
+M00000000000000c5:	popq	%r14	;  2 bytes
+M00000000000000c7:	popq	%r15	;  2 bytes
+M00000000000000c9:	popq	%rbp	;  1 bytes
+M00000000000000ca:	retq		;  1 bytes
+M00000000000000cb:	movq	%rax, %rdi	;  3 bytes
+M00000000000000ce:	callq	0x42e060 <__clang_call_terminate>	;  5 bytes
+M00000000000000d3:	movq	%rax, %rdi	;  3 bytes
+M00000000000000d6:	callq	0x42e060 <__clang_call_terminate>	;  5 bytes
+M00000000000000db:	movq	%rax, %rdi	;  3 bytes
+M00000000000000de:	callq	0x42e060 <__clang_call_terminate>	;  5 bytes
+M00000000000000e3:	movq	%rax, %r15	;  3 bytes
+M00000000000000e6:	cmpq	$23, 56(%rsp)	;  6 bytes
+M00000000000000ec:	je	0x4312db <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<Case27DrainThread>(unsigned long*, Case27DrainThread const&, BloombergLP::bslma::Allocator*)+0x10b>	;  2 bytes
+M00000000000000ee:	movq	24(%rsp), %rsi	;  5 bytes
+M00000000000000f3:	movq	64(%rsp), %rdi	;  5 bytes
+M00000000000000f8:	movq	(%rdi), %rax	;  3 bytes
+M00000000000000fb:	callq	*24(%rax)	;  3 bytes
+M00000000000000fe:	jmp	0x4312db <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<Case27DrainThread>(unsigned long*, Case27DrainThread const&, BloombergLP::bslma::Allocator*)+0x10b>	;  2 bytes
+M0000000000000100:	movq	%rax, %rdi	;  3 bytes
+M0000000000000103:	callq	0x42e060 <__clang_call_terminate>	;  5 bytes
+M0000000000000108:	movq	%rax, %r15	;  3 bytes
+M000000000000010b:	cmpq	$23, 48(%rbx)	;  5 bytes
+M0000000000000110:	je	0x4312f0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<Case27DrainThread>(unsigned long*, Case27DrainThread const&, BloombergLP::bslma::Allocator*)+0x120>	;  2 bytes
+M0000000000000112:	movq	16(%rbx), %rsi	;  4 bytes
+M0000000000000116:	movq	56(%rbx), %rdi	;  4 bytes
+M000000000000011a:	movq	(%rdi), %rax	;  3 bytes
+M000000000000011d:	callq	*24(%rax)	;  3 bytes
+M0000000000000120:	movq	$-1, 40(%rbx)	;  8 bytes
+M0000000000000128:	movq	(%r14), %rax	;  3 bytes
+M000000000000012b:	movq	%r14, %rdi	;  3 bytes
+M000000000000012e:	movq	%rbx, %rsi	;  3 bytes
+M0000000000000131:	callq	*24(%rax)	;  3 bytes
+M0000000000000134:	jmp	0x43132d <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<Case27DrainThread>(unsigned long*, Case27DrainThread const&, BloombergLP::bslma::Allocator*)+0x15d>	;  2 bytes
+M0000000000000136:	movq	%rax, %rdi	;  3 bytes
+M0000000000000139:	callq	0x42e060 <__clang_call_terminate>	;  5 bytes
+M000000000000013e:	movq	%rax, %rdi	;  3 bytes
+M0000000000000141:	callq	0x42e060 <__clang_call_terminate>	;  5 bytes
+M0000000000000146:	movq	%rax, %r15	;  3 bytes
+M0000000000000149:	movq	$0, 40(%rbx)	;  8 bytes
+M0000000000000151:	movq	(%r14), %rax	;  3 bytes
+M0000000000000154:	movq	%r14, %rdi	;  3 bytes
+M0000000000000157:	movq	%rbx, %rsi	;  3 bytes
+M000000000000015a:	callq	*24(%rax)	;  3 bytes
+M000000000000015d:	movq	%r15, %rdi	;  3 bytes
+M0000000000000160:	callq	0x405c80 <_Unwind_Resume@plt>	;  5 bytes
+M0000000000000165:	movq	%rax, %rdi	;  3 bytes
+M0000000000000168:	callq	0x42e060 <__clang_call_terminate>	;  5 bytes
+M000000000000016d:	nopl	(%rax)	;  3 bytes
 ```

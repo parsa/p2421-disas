@@ -1,39 +1,39 @@
 000000000046aa70 <BloombergLP::bdlt::ProlepticDateImpUtil::numLeapYears(int, int)>:
-0000000000000000: 04	leal	3(%rsi), %r8d
-0000000000000004: 02	testl	%esi, %esi
-0000000000000006: 04	cmovnsl	%esi, %r8d
-000000000000000a: 04	sarl	$2, %r8d
-000000000000000e: 03	movslq	%esi, %rax
-0000000000000011: 07	imulq	$-1374389535, %rax, %rdx
-0000000000000018: 03	movq	%rdx, %rsi
-000000000000001b: 04	shrq	$63, %rsi
-000000000000001f: 04	sarq	$37, %rdx
-0000000000000023: 02	addl	%esi, %edx
-0000000000000025: 07	imulq	$1374389535, %rax, %rsi
-000000000000002c: 03	movq	%rsi, %rax
-000000000000002f: 04	shrq	$63, %rax
-0000000000000033: 04	sarq	$39, %rsi
-0000000000000037: 02	addl	%eax, %esi
-0000000000000039: 03	leal	-1(%rdi), %eax
-000000000000003c: 03	addl	$2, %edi
-000000000000003f: 02	testl	%eax, %eax
-0000000000000041: 03	cmovnsl	%eax, %edi
-0000000000000044: 03	sarl	$2, %edi
-0000000000000047: 03	movslq	%eax, %r9
-000000000000004a: 07	imulq	$1374389535, %r9, %rcx
-0000000000000051: 03	movq	%rcx, %rax
-0000000000000054: 04	shrq	$63, %rax
-0000000000000058: 04	sarq	$37, %rcx
-000000000000005c: 02	addl	%eax, %ecx
-000000000000005e: 02	subl	%edi, %ecx
-0000000000000060: 07	imulq	$-1374389535, %r9, %rax
-0000000000000067: 03	movq	%rax, %rdi
-000000000000006a: 04	shrq	$63, %rdi
-000000000000006e: 04	sarq	$39, %rax
-0000000000000072: 02	addl	%edi, %eax
-0000000000000074: 02	addl	%ecx, %eax
-0000000000000076: 03	addl	%r8d, %eax
-0000000000000079: 02	addl	%edx, %eax
-000000000000007b: 02	addl	%esi, %eax
-000000000000007d: 01	retq	
-000000000000007e: 02	nop	
+M0000000000000000:	leal	3(%rsi), %r8d	;  4 bytes
+M0000000000000004:	testl	%esi, %esi	;  2 bytes
+M0000000000000006:	cmovnsl	%esi, %r8d	;  4 bytes
+M000000000000000a:	sarl	$2, %r8d	;  4 bytes
+M000000000000000e:	movslq	%esi, %rax	;  3 bytes
+M0000000000000011:	imulq	$-1374389535, %rax, %rdx	;  7 bytes
+M0000000000000018:	movq	%rdx, %rsi	;  3 bytes
+M000000000000001b:	shrq	$63, %rsi	;  4 bytes
+M000000000000001f:	sarq	$37, %rdx	;  4 bytes
+M0000000000000023:	addl	%esi, %edx	;  2 bytes
+M0000000000000025:	imulq	$1374389535, %rax, %rsi	;  7 bytes
+M000000000000002c:	movq	%rsi, %rax	;  3 bytes
+M000000000000002f:	shrq	$63, %rax	;  4 bytes
+M0000000000000033:	sarq	$39, %rsi	;  4 bytes
+M0000000000000037:	addl	%eax, %esi	;  2 bytes
+M0000000000000039:	leal	-1(%rdi), %eax	;  3 bytes
+M000000000000003c:	addl	$2, %edi	;  3 bytes
+M000000000000003f:	testl	%eax, %eax	;  2 bytes
+M0000000000000041:	cmovnsl	%eax, %edi	;  3 bytes
+M0000000000000044:	sarl	$2, %edi	;  3 bytes
+M0000000000000047:	movslq	%eax, %r9	;  3 bytes
+M000000000000004a:	imulq	$1374389535, %r9, %rcx	;  7 bytes
+M0000000000000051:	movq	%rcx, %rax	;  3 bytes
+M0000000000000054:	shrq	$63, %rax	;  4 bytes
+M0000000000000058:	sarq	$37, %rcx	;  4 bytes
+M000000000000005c:	addl	%eax, %ecx	;  2 bytes
+M000000000000005e:	subl	%edi, %ecx	;  2 bytes
+M0000000000000060:	imulq	$-1374389535, %r9, %rax	;  7 bytes
+M0000000000000067:	movq	%rax, %rdi	;  3 bytes
+M000000000000006a:	shrq	$63, %rdi	;  4 bytes
+M000000000000006e:	sarq	$39, %rax	;  4 bytes
+M0000000000000072:	addl	%edi, %eax	;  2 bytes
+M0000000000000074:	addl	%ecx, %eax	;  2 bytes
+M0000000000000076:	addl	%r8d, %eax	;  3 bytes
+M0000000000000079:	addl	%edx, %eax	;  2 bytes
+M000000000000007b:	addl	%esi, %eax	;  2 bytes
+M000000000000007d:	retq		;  1 bytes
+M000000000000007e:	nop		;  2 bytes

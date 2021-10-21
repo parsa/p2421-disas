@@ -1,673 +1,673 @@
 0000000000443490 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 02	pushq	%r13
-0000000000000007: 02	pushq	%r12
-0000000000000009: 01	pushq	%rbx
-000000000000000a: 03	movq	%rcx, %r11
-000000000000000d: 03	movq	%rsi, %r15
-0000000000000010: 04	shrq	$6, %r15
-0000000000000014: 04	leaq	(%rdi,%r15,8), %r12
-0000000000000018: 03	movl	%esi, %r9d
-000000000000001b: 04	andl	$63, %r9d
-000000000000001f: 03	movq	%r12, %rbp
-0000000000000022: 04	shrq	$3, %rbp
-0000000000000026: 03	movq	%rcx, %r14
-0000000000000029: 04	shrq	$6, %r14
-000000000000002d: 04	leaq	(%rdx,%r14,8), %r13
-0000000000000031: 03	andl	$63, %ecx
-0000000000000034: 03	movq	%r13, %rbx
-0000000000000037: 04	shrq	$3, %rbx
-000000000000003b: 03	subq	%rbx, %rbp
-000000000000003e: 03	movl	%r9d, %ebx
-0000000000000041: 02	subl	%ecx, %ebx
-0000000000000043: 02	xorl	%eax, %eax
-0000000000000045: 03	cmpl	$63, %ebx
-0000000000000048: 03	seta	%al
-000000000000004b: 03	subq	%rax, %rbp
-000000000000004e: 03	testq	%rbp, %rbp
-0000000000000051: 02	jg	0x4434fd <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x6d>
-0000000000000053: 03	leal	64(%rbx), %eax
-0000000000000056: 03	cmpl	$64, %ebx
-0000000000000059: 03	cmovbl	%ebx, %eax
-000000000000005c: 02	testl	%eax, %eax
-000000000000005e: 06	je	0x44365b <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x1cb>
-0000000000000064: 03	testq	%rbp, %rbp
-0000000000000067: 06	jne	0x44365b <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x1cb>
-000000000000006d: 03	testq	%r8, %r8
-0000000000000070: 06	je	0x443df9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x969>
-0000000000000076: 03	addq	%r8, %rsi
-0000000000000079: 03	movq	%rsi, %r15
-000000000000007c: 04	shrq	$6, %r15
-0000000000000080: 04	leaq	(%rdi,%r15,8), %r10
-0000000000000084: 03	andl	$63, %esi
-0000000000000087: 03	addq	%r8, %r11
-000000000000008a: 03	movq	%r11, %r12
-000000000000008d: 04	shrq	$6, %r12
-0000000000000091: 04	leaq	(%rdx,%r12,8), %rbp
-0000000000000095: 04	andl	$63, %r11d
-0000000000000099: 06	je	0x4435be <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x12e>
-000000000000009f: 03	movl	%r11d, %r13d
-00000000000000a2: 03	cmpq	%r8, %r13
-00000000000000a5: 06	jae	0x4436e9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x259>
-00000000000000ab: 05	movq	%rdi, -40(%rsp)
-00000000000000b0: 05	movq	%rdx, -32(%rsp)
-00000000000000b5: 04	leal	64(%rsi), %r9d
-00000000000000b9: 03	cmpl	%r11d, %esi
-00000000000000bc: 04	cmovael	%esi, %r9d
-00000000000000c0: 03	sbbq	%r14, %r14
-00000000000000c3: 03	movl	%r9d, %esi
-00000000000000c6: 03	subl	%r11d, %esi
-00000000000000c9: 05	movq	%r10, -24(%rsp)
-00000000000000ce: 04	leaq	(%r10,%r14,8), %rdi
-00000000000000d2: 04	movq	(%rbp), %rdx
-00000000000000d6: 06	movl	$64, %r10d
-00000000000000dc: 03	subl	%esi, %r10d
-00000000000000df: 03	subl	%r10d, %r11d
-00000000000000e2: 06	jbe	0x443762 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x2d2>
-00000000000000e8: 07	movq	$-1, %rax
-00000000000000ef: 02	movl	%esi, %ecx
-00000000000000f1: 03	shlq	%cl, %rax
-00000000000000f4: 03	notq	%rax
-00000000000000f7: 03	movq	%rbp, %rbx
-00000000000000fa: 03	movq	%rdx, %rbp
-00000000000000fd: 03	notq	%rbp
-0000000000000100: 03	shlq	%cl, %rbp
-0000000000000103: 03	orq	%rax, %rbp
-0000000000000106: 03	andq	%rbp, (%rdi)
-0000000000000109: 03	movq	%rbx, %rbp
-000000000000010c: 03	movl	%r10d, %ecx
-000000000000010f: 03	shrq	%cl, %rdx
-0000000000000112: 07	movq	$-1, %rax
-0000000000000119: 03	movl	%r11d, %ecx
-000000000000011c: 03	shlq	%cl, %rax
-000000000000011f: 04	addq	$8, %rdi
-0000000000000123: 03	notq	%rdx
-0000000000000126: 03	orq	%rax, %rdx
-0000000000000129: 05	jmp	0x44379a <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x30a>
-000000000000012e: 03	xorl	%r14d, %r14d
-0000000000000131: 02	testl	%esi, %esi
-0000000000000133: 06	je	0x4437b7 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x327>
-0000000000000139: 04	cmpq	$64, %r8
-000000000000013d: 06	jb	0x44382d <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x39d>
-0000000000000143: 05	movq	%rbp, -32(%rsp)
-0000000000000148: 05	movq	%r10, -24(%rsp)
-000000000000014d: 06	movl	$64, %r10d
-0000000000000153: 03	subl	%esi, %r10d
-0000000000000156: 03	movl	%esi, %r9d
-0000000000000159: 07	movq	$-1, %r11
-0000000000000160: 02	movl	%esi, %ecx
-0000000000000162: 03	shlq	%cl, %r11
-0000000000000165: 03	movq	%r11, %r13
-0000000000000168: 03	notq	%r13
-000000000000016b: 03	addq	%r14, %r15
-000000000000016e: 04	leaq	(%rdi,%r15,8), %rdi
-0000000000000172: 05	leaq	-8(%rdx,%r12,8), %rdx
-0000000000000177: 02	xorl	%ecx, %ecx
-0000000000000179: 07	nopl	(%rax)
-0000000000000180: 03	movq	%rcx, %rax
-0000000000000183: 04	movq	(%rdx,%rcx,8), %rbp
-0000000000000187: 03	movq	%rbp, %rbx
-000000000000018a: 03	notq	%rbx
-000000000000018d: 03	movl	%r9d, %ecx
-0000000000000190: 03	shlq	%cl, %rbx
-0000000000000193: 03	orq	%r13, %rbx
-0000000000000196: 05	andq	%rbx, -8(%rdi,%rax,8)
-000000000000019b: 03	movl	%r10d, %ecx
-000000000000019e: 03	shrq	%cl, %rbp
-00000000000001a1: 03	notq	%rbp
-00000000000001a4: 03	orq	%r11, %rbp
-00000000000001a7: 04	andq	%rbp, (%rdi,%rax,8)
-00000000000001ab: 04	leaq	-1(%rax), %rcx
-00000000000001af: 04	addq	$-64, %r8
-00000000000001b3: 04	cmpq	$63, %r8
-00000000000001b7: 02	ja	0x443610 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x180>
-00000000000001b9: 03	addq	%rcx, %r14
-00000000000001bc: 05	movq	-24(%rsp), %r10
-00000000000001c1: 05	movq	-32(%rsp), %rbp
-00000000000001c6: 05	jmp	0x44382f <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x39f>
-00000000000001cb: 03	testq	%r8, %r8
-00000000000001ce: 06	je	0x443df9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x969>
-00000000000001d4: 02	testl	%ecx, %ecx
-00000000000001d6: 06	je	0x443921 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x491>
-00000000000001dc: 06	movl	$64, %r10d
-00000000000001e2: 05	movl	$64, %eax
-00000000000001e7: 02	subl	%ecx, %eax
-00000000000001e9: 04	movq	(%r13), %rsi
-00000000000001ed: 03	shrq	%cl, %rsi
-00000000000001f0: 03	cmpq	%r8, %rax
-00000000000001f3: 06	jae	0x443941 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x4b1>
-00000000000001f9: 03	movq	%rdx, %r11
-00000000000001fc: 03	cmpl	%ecx, %r9d
-00000000000001ff: 06	jbe	0x4439a0 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x510>
-0000000000000205: 03	subl	%r9d, %r10d
-0000000000000208: 07	movq	$-1, %rdx
-000000000000020f: 03	movl	%r9d, %ecx
-0000000000000212: 03	shlq	%cl, %rdx
-0000000000000215: 03	notq	%rdx
-0000000000000218: 03	movq	%rdi, %rbp
-000000000000021b: 03	movq	%rsi, %rdi
-000000000000021e: 03	notq	%rdi
-0000000000000221: 03	shlq	%cl, %rdi
-0000000000000224: 03	orq	%rdx, %rdi
-0000000000000227: 04	andq	%rdi, (%r12)
-000000000000022b: 03	movq	%rbp, %rdi
-000000000000022e: 07	movq	$-1, %rdx
-0000000000000235: 03	movl	%r10d, %ecx
-0000000000000238: 03	shrq	%cl, %rsi
-000000000000023b: 02	movl	%eax, %ecx
-000000000000023d: 03	subl	%r10d, %ecx
-0000000000000240: 03	shlq	%cl, %rdx
-0000000000000243: 03	notq	%rsi
-0000000000000246: 03	orq	%rdx, %rsi
-0000000000000249: 05	andq	%rsi, 8(%r12)
-000000000000024e: 03	addl	%eax, %r9d
-0000000000000251: 03	movl	%r9d, %ebx
-0000000000000254: 05	jmp	0x4439e4 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x554>
-0000000000000259: 03	leal	64(%rsi), %edx
-000000000000025c: 03	cmpl	%r8d, %esi
-000000000000025f: 03	cmovael	%esi, %edx
-0000000000000262: 03	sbbq	%r9, %r9
-0000000000000265: 03	subl	%r8d, %r11d
-0000000000000268: 04	movq	(%rbp), %rsi
-000000000000026c: 03	movl	%r11d, %ecx
-000000000000026f: 03	shrq	%cl, %rsi
-0000000000000272: 03	testl	%r8d, %r8d
-0000000000000275: 06	je	0x443df9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x969>
-000000000000027b: 02	movl	%edx, %ecx
-000000000000027d: 03	subl	%r8d, %ecx
-0000000000000280: 05	movl	$64, %eax
-0000000000000285: 02	subl	%ecx, %eax
-0000000000000287: 03	cmpl	%r8d, %eax
-000000000000028a: 06	jae	0x4438e6 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x456>
-0000000000000290: 07	movq	$-1, %rdx
-0000000000000297: 07	movq	$-1, %rbp
-000000000000029e: 03	shlq	%cl, %rbp
-00000000000002a1: 03	notq	%rbp
-00000000000002a4: 03	movq	%rsi, %rdi
-00000000000002a7: 03	notq	%rdi
-00000000000002aa: 03	shlq	%cl, %rdi
-00000000000002ad: 03	orq	%rbp, %rdi
-00000000000002b0: 04	andq	%rdi, (%r10,%r9,8)
-00000000000002b4: 02	movl	%eax, %ecx
-00000000000002b6: 03	shrq	%cl, %rsi
-00000000000002b9: 03	subl	%eax, %r8d
-00000000000002bc: 03	movl	%r8d, %ecx
-00000000000002bf: 03	shlq	%cl, %rdx
-00000000000002c2: 03	notq	%rsi
-00000000000002c5: 03	orq	%rdx, %rsi
-00000000000002c8: 05	andq	%rsi, 8(%r10,%r9,8)
-00000000000002cd: 05	jmp	0x443df9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x969>
-00000000000002d2: 03	movl	%esi, %r10d
-00000000000002d5: 07	movq	$-1, %rbx
-00000000000002dc: 07	movq	$-1, %rax
-00000000000002e3: 02	movl	%esi, %ecx
-00000000000002e5: 03	shlq	%cl, %rax
-00000000000002e8: 03	notq	%rax
-00000000000002eb: 03	movl	%r9d, %ecx
-00000000000002ee: 03	shlq	%cl, %rbx
-00000000000002f1: 04	cmpl	$64, %r9d
-00000000000002f5: 06	jae	0x443e0b <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x97b>
-00000000000002fb: 03	orq	%rax, %rbx
-00000000000002fe: 03	notq	%rdx
-0000000000000301: 03	movl	%r10d, %ecx
-0000000000000304: 03	shlq	%cl, %rdx
-0000000000000307: 03	orq	%rbx, %rdx
-000000000000030a: 03	andq	%rdx, (%rdi)
-000000000000030d: 03	subq	%r13, %r8
-0000000000000310: 05	movq	-32(%rsp), %rdx
-0000000000000315: 05	movq	-40(%rsp), %rdi
-000000000000031a: 05	movq	-24(%rsp), %r10
-000000000000031f: 02	testl	%esi, %esi
-0000000000000321: 06	jne	0x4435c9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x139>
-0000000000000327: 04	cmpq	$64, %r8
-000000000000032b: 02	jb	0x44382d <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x39d>
-000000000000032d: 03	movq	%r10, %r11
-0000000000000330: 04	leaq	-64(%r8), %r10
-0000000000000334: 07	cmpq	$192, %r10
-000000000000033b: 02	jb	0x443800 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x370>
-000000000000033d: 04	shrq	$6, %r10
-0000000000000341: 04	leaq	(%r14,%r15), %rbx
-0000000000000345: 03	movq	%r10, %rax
-0000000000000348: 03	notq	%rax
-000000000000034b: 04	leaq	(%rbx,%rax), %rcx
-000000000000034f: 04	leaq	(%rdi,%rcx,8), %rcx
-0000000000000353: 03	cmpq	%rbp, %rcx
-0000000000000356: 06	jae	0x443bf1 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x761>
-000000000000035c: 04	leaq	(%rdi,%rbx,8), %rcx
-0000000000000360: 03	addq	%r12, %rax
-0000000000000363: 04	leaq	(%rdx,%rax,8), %rax
-0000000000000367: 03	cmpq	%rcx, %rax
-000000000000036a: 06	jae	0x443bf1 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x761>
-0000000000000370: 02	xorl	%ecx, %ecx
-0000000000000372: 03	movq	%r11, %r10
-0000000000000375: 05	leaq	-8(%rdi,%r15,8), %rax
-000000000000037a: 05	leaq	-8(%rdx,%r12,8), %rdx
-000000000000037f: 01	nop	
-0000000000000380: 04	movq	(%rdx,%rcx,8), %rdi
-0000000000000384: 03	notq	%rdi
-0000000000000387: 04	andq	%rdi, (%rax,%r14,8)
-000000000000038b: 03	decq	%rcx
-000000000000038e: 03	decq	%r14
-0000000000000391: 04	addq	$-64, %r8
-0000000000000395: 04	cmpq	$63, %r8
-0000000000000399: 02	ja	0x443810 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x380>
-000000000000039b: 02	jmp	0x44382f <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x39f>
-000000000000039d: 02	xorl	%ecx, %ecx
-000000000000039f: 03	testl	%r8d, %r8d
-00000000000003a2: 06	je	0x443df9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x969>
-00000000000003a8: 02	movl	%esi, %eax
-00000000000003aa: 03	orl	$64, %eax
-00000000000003ad: 03	cmpl	%r8d, %esi
-00000000000003b0: 03	cmovael	%esi, %eax
-00000000000003b3: 04	sbbq	$0, %r14
-00000000000003b7: 02	movl	%eax, %edx
-00000000000003b9: 05	movq	-8(%rbp,%rcx,8), %rbx
-00000000000003be: 03	movl	%r8d, %ecx
-00000000000003c1: 02	negb	%cl
-00000000000003c3: 03	shrq	%cl, %rbx
-00000000000003c6: 03	subl	%r8d, %edx
-00000000000003c9: 05	movl	$64, %esi
-00000000000003ce: 02	subl	%edx, %esi
-00000000000003d0: 03	cmpl	%r8d, %esi
-00000000000003d3: 02	jae	0x4438a9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x419>
-00000000000003d5: 07	movq	$-1, %rax
-00000000000003dc: 07	movq	$-1, %rbp
-00000000000003e3: 02	movl	%edx, %ecx
-00000000000003e5: 03	shlq	%cl, %rbp
-00000000000003e8: 03	notq	%rbp
-00000000000003eb: 03	movq	%rbx, %rdi
-00000000000003ee: 03	notq	%rdi
-00000000000003f1: 03	shlq	%cl, %rdi
-00000000000003f4: 03	orq	%rbp, %rdi
-00000000000003f7: 04	andq	%rdi, (%r10,%r14,8)
-00000000000003fb: 02	movl	%esi, %ecx
-00000000000003fd: 03	shrq	%cl, %rbx
-0000000000000400: 03	subl	%esi, %r8d
-0000000000000403: 03	movl	%r8d, %ecx
-0000000000000406: 03	shlq	%cl, %rax
-0000000000000409: 03	notq	%rbx
-000000000000040c: 03	orq	%rax, %rbx
-000000000000040f: 05	andq	%rbx, 8(%r10,%r14,8)
-0000000000000414: 05	jmp	0x443df9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x969>
-0000000000000419: 02	movl	%edx, %esi
-000000000000041b: 07	movq	$-1, %rbp
-0000000000000422: 07	movq	$-1, %rdi
-0000000000000429: 02	movl	%edx, %ecx
-000000000000042b: 03	shlq	%cl, %rdi
-000000000000042e: 03	notq	%rdi
-0000000000000431: 02	movl	%eax, %ecx
-0000000000000433: 03	shlq	%cl, %rbp
-0000000000000436: 03	cmpl	$64, %eax
-0000000000000439: 06	jae	0x443e04 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x974>
-000000000000043f: 03	orq	%rdi, %rbp
-0000000000000442: 03	notq	%rbx
-0000000000000445: 02	movl	%esi, %ecx
-0000000000000447: 03	shlq	%cl, %rbx
-000000000000044a: 03	orq	%rbp, %rbx
-000000000000044d: 04	andq	%rbx, (%r10,%r14,8)
-0000000000000451: 05	jmp	0x443df9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x969>
-0000000000000456: 02	movl	%ecx, %eax
-0000000000000458: 07	movq	$-1, %rbp
-000000000000045f: 07	movq	$-1, %rbx
-0000000000000466: 03	shlq	%cl, %rbx
-0000000000000469: 03	notq	%rbx
-000000000000046c: 02	movl	%edx, %ecx
-000000000000046e: 03	shlq	%cl, %rbp
-0000000000000471: 03	cmpl	$64, %edx
-0000000000000474: 06	jae	0x443e12 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x982>
-000000000000047a: 03	orq	%rbx, %rbp
-000000000000047d: 03	notq	%rsi
-0000000000000480: 02	movl	%eax, %ecx
-0000000000000482: 03	shlq	%cl, %rsi
-0000000000000485: 03	orq	%rbp, %rsi
-0000000000000488: 04	andq	%rsi, (%r10,%r9,8)
-000000000000048c: 05	jmp	0x443df9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x969>
-0000000000000491: 02	xorl	%esi, %esi
-0000000000000493: 03	testl	%r9d, %r9d
-0000000000000496: 06	je	0x443a07 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x577>
-000000000000049c: 03	movl	%r9d, %ebx
-000000000000049f: 03	movq	%rsi, %rax
-00000000000004a2: 04	cmpq	$64, %r8
-00000000000004a6: 06	jae	0x443b35 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x6a5>
-00000000000004ac: 05	jmp	0x443d65 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x8d5>
-00000000000004b1: 03	testl	%r8d, %r8d
-00000000000004b4: 06	je	0x443df9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x969>
-00000000000004ba: 05	movl	$64, %eax
-00000000000004bf: 03	subl	%r9d, %eax
-00000000000004c2: 03	cmpl	%r8d, %eax
-00000000000004c5: 06	jae	0x443c67 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x7d7>
-00000000000004cb: 07	movq	$-1, %rdx
-00000000000004d2: 07	movq	$-1, %rdi
-00000000000004d9: 03	movl	%r9d, %ecx
-00000000000004dc: 03	shlq	%cl, %rdi
-00000000000004df: 03	notq	%rdi
-00000000000004e2: 03	movq	%rsi, %rbp
-00000000000004e5: 03	notq	%rbp
-00000000000004e8: 03	shlq	%cl, %rbp
-00000000000004eb: 03	orq	%rdi, %rbp
-00000000000004ee: 04	andq	%rbp, (%r12)
-00000000000004f2: 02	movl	%eax, %ecx
-00000000000004f4: 03	shrq	%cl, %rsi
-00000000000004f7: 03	subl	%eax, %r8d
-00000000000004fa: 03	movl	%r8d, %ecx
-00000000000004fd: 03	shlq	%cl, %rdx
-0000000000000500: 03	notq	%rsi
-0000000000000503: 03	orq	%rdx, %rsi
-0000000000000506: 05	andq	%rsi, 8(%r12)
-000000000000050b: 05	jmp	0x443df9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x969>
-0000000000000510: 03	movq	%r12, %rdx
-0000000000000513: 04	leal	(%rax,%r9), %ebx
-0000000000000517: 03	movl	%r9d, %r12d
-000000000000051a: 07	movq	$-1, %r10
-0000000000000521: 07	movq	$-1, %rbp
-0000000000000528: 03	movl	%r9d, %ecx
-000000000000052b: 03	shlq	%cl, %rbp
-000000000000052e: 03	notq	%rbp
-0000000000000531: 02	movl	%ebx, %ecx
-0000000000000533: 03	shlq	%cl, %r10
-0000000000000536: 03	cmpl	$64, %ebx
-0000000000000539: 06	jae	0x443e1d <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x98d>
-000000000000053f: 03	orq	%rbp, %r10
-0000000000000542: 03	notq	%rsi
-0000000000000545: 03	movl	%r12d, %ecx
-0000000000000548: 03	shlq	%cl, %rsi
-000000000000054b: 03	orq	%r10, %rsi
-000000000000054e: 03	movq	%rdx, %r12
-0000000000000551: 03	andq	%rsi, (%rdx)
-0000000000000554: 03	subq	%rax, %r8
-0000000000000557: 05	movl	$1, %esi
-000000000000055c: 03	cmpl	$64, %ebx
-000000000000055f: 03	movq	%r11, %rdx
-0000000000000562: 06	jb	0x443b29 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x699>
-0000000000000568: 03	addl	$-64, %ebx
-000000000000056b: 03	movl	%ebx, %r9d
-000000000000056e: 03	testl	%r9d, %r9d
-0000000000000571: 06	jne	0x44392c <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x49c>
-0000000000000577: 02	xorl	%ebx, %ebx
-0000000000000579: 04	cmpq	$64, %r8
-000000000000057d: 06	jb	0x443c5f <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x7cf>
-0000000000000583: 05	movq	%rdx, -32(%rsp)
-0000000000000588: 04	leaq	-64(%r8), %rdx
-000000000000058c: 03	movq	%rdx, %r10
-000000000000058f: 04	shrq	$6, %r10
-0000000000000593: 04	leaq	(%r10,%rsi), %r11
-0000000000000597: 05	movq	%rsi, -40(%rsp)
-000000000000059c: 03	movq	%rsi, %rax
-000000000000059f: 07	cmpq	$192, %rdx
-00000000000005a6: 06	jb	0x443cf7 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x867>
-00000000000005ac: 05	movq	-40(%rsp), %rax
-00000000000005b1: 04	leaq	(%rax,%r15), %rsi
-00000000000005b5: 04	leaq	(%rdi,%rsi,8), %rdx
-00000000000005b9: 04	leaq	(%rax,%r14), %rbp
-00000000000005bd: 03	movq	%rdi, %rax
-00000000000005c0: 05	leaq	(%rbp,%r10), %rdi
-00000000000005c5: 05	movq	-32(%rsp), %rcx
-00000000000005ca: 05	leaq	8(%rcx,%rdi,8), %rdi
-00000000000005cf: 03	cmpq	%rdi, %rdx
-00000000000005d2: 03	movq	%rax, %rdi
-00000000000005d5: 02	jae	0x443a86 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x5f6>
-00000000000005d7: 03	addq	%r10, %rsi
-00000000000005da: 05	leaq	8(%rdi,%rsi,8), %rdx
-00000000000005df: 05	movq	-32(%rsp), %rax
-00000000000005e4: 04	leaq	(%rax,%rbp,8), %rsi
-00000000000005e8: 05	movq	-40(%rsp), %rax
-00000000000005ed: 03	cmpq	%rdx, %rsi
-00000000000005f0: 06	jb	0x443cf7 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x867>
-00000000000005f6: 05	movq	%r13, -24(%rsp)
-00000000000005fb: 04	leaq	1(%r10), %rcx
-00000000000005ff: 03	movq	%rcx, %r13
-0000000000000602: 04	andq	$-4, %r13
-0000000000000606: 04	leaq	-4(%r13), %rdx
-000000000000060a: 03	movq	%rdx, %r9
-000000000000060d: 04	shrq	$2, %r9
-0000000000000611: 03	incq	%r9
-0000000000000614: 03	testq	%rdx, %rdx
-0000000000000617: 06	je	0x443cab <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x81b>
-000000000000061d: 03	movq	%r9, %rsi
-0000000000000620: 04	andq	$-2, %rsi
-0000000000000624: 03	negq	%rsi
-0000000000000627: 02	xorl	%ebp, %ebp
-0000000000000629: 05	movq	-24(%rsp), %rbx
-000000000000062e: 05	movq	-40(%rsp), %rax
-0000000000000633: 03	movq	%rax, %rdx
-0000000000000636: 03	orq	%rbp, %rdx
-0000000000000639: 04	movups	(%rbx,%rdx,8), %xmm0
-000000000000063d: 05	movups	16(%rbx,%rdx,8), %xmm1
-0000000000000642: 05	movups	(%r12,%rdx,8), %xmm2
-0000000000000647: 03	andnps	%xmm2, %xmm0
-000000000000064a: 06	movups	16(%r12,%rdx,8), %xmm2
-0000000000000650: 03	andnps	%xmm2, %xmm1
-0000000000000653: 05	movups	%xmm0, (%r12,%rdx,8)
-0000000000000658: 06	movups	%xmm1, 16(%r12,%rdx,8)
-000000000000065e: 04	leaq	4(%rbp), %rdx
-0000000000000662: 03	orq	%rax, %rdx
-0000000000000665: 04	movups	(%rbx,%rdx,8), %xmm0
-0000000000000669: 05	movups	16(%rbx,%rdx,8), %xmm1
-000000000000066e: 05	movups	(%r12,%rdx,8), %xmm2
-0000000000000673: 03	andnps	%xmm2, %xmm0
-0000000000000676: 06	movups	16(%r12,%rdx,8), %xmm2
-000000000000067c: 03	andnps	%xmm2, %xmm1
-000000000000067f: 05	movups	%xmm0, (%r12,%rdx,8)
-0000000000000684: 06	movups	%xmm1, 16(%r12,%rdx,8)
-000000000000068a: 04	addq	$8, %rbp
-000000000000068e: 04	addq	$2, %rsi
-0000000000000692: 02	jne	0x443ac3 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x633>
-0000000000000694: 05	jmp	0x443cad <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x81d>
-0000000000000699: 02	xorl	%eax, %eax
-000000000000069b: 04	cmpq	$64, %r8
-000000000000069f: 06	jb	0x443d65 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x8d5>
-00000000000006a5: 05	movq	%r13, -24(%rsp)
-00000000000006aa: 05	movq	%r12, -32(%rsp)
-00000000000006af: 06	movl	$64, %r11d
-00000000000006b5: 03	subl	%ebx, %r11d
-00000000000006b8: 07	movq	$-1, %r10
-00000000000006bf: 02	movl	%ebx, %ecx
-00000000000006c1: 03	shlq	%cl, %r10
-00000000000006c4: 04	movl	%ebx, -40(%rsp)
-00000000000006c8: 03	movl	%ebx, %r9d
-00000000000006cb: 03	movq	%r10, %rbp
-00000000000006ce: 03	notq	%rbp
-00000000000006d1: 04	leaq	-64(%r8), %r13
-00000000000006d5: 04	shrq	$6, %r13
-00000000000006d9: 05	leaq	(%r13,%rsi), %rcx
-00000000000006de: 05	movq	%rcx, -16(%rsp)
-00000000000006e3: 05	movq	%rax, -8(%rsp)
-00000000000006e8: 03	addq	%rax, %r15
-00000000000006eb: 04	movq	(%rdi,%r15,8), %r12
-00000000000006ef: 03	incq	%r13
-00000000000006f2: 03	addq	%rsi, %r14
-00000000000006f5: 04	leaq	(%rdx,%r14,8), %rbx
-00000000000006f9: 05	leaq	8(%rdi,%r15,8), %rdi
-00000000000006fe: 02	xorl	%edx, %edx
-0000000000000700: 04	movq	(%rbx,%rdx,8), %rsi
-0000000000000704: 03	movq	%rsi, %rax
-0000000000000707: 03	notq	%rax
-000000000000070a: 03	movl	%r9d, %ecx
-000000000000070d: 03	shlq	%cl, %rax
-0000000000000710: 03	orq	%rbp, %rax
-0000000000000713: 03	andq	%r12, %rax
-0000000000000716: 05	movq	%rax, -8(%rdi,%rdx,8)
-000000000000071b: 03	movl	%r11d, %ecx
-000000000000071e: 03	shrq	%cl, %rsi
-0000000000000721: 03	notq	%rsi
-0000000000000724: 03	orq	%r10, %rsi
-0000000000000727: 04	andq	(%rdi,%rdx,8), %rsi
-000000000000072b: 04	movq	%rsi, (%rdi,%rdx,8)
-000000000000072f: 03	incq	%rdx
-0000000000000732: 03	movq	%rsi, %r12
-0000000000000735: 03	cmpq	%rdx, %r13
-0000000000000738: 02	jne	0x443b90 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x700>
-000000000000073a: 05	movq	-16(%rsp), %rsi
-000000000000073f: 03	incq	%rsi
-0000000000000742: 04	andl	$63, %r8d
-0000000000000746: 05	movq	-8(%rsp), %rax
-000000000000074b: 03	addq	%rdx, %rax
-000000000000074e: 05	movq	-32(%rsp), %r12
-0000000000000753: 05	movq	-24(%rsp), %r13
-0000000000000758: 04	movl	-40(%rsp), %ebx
-000000000000075c: 05	jmp	0x443d65 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x8d5>
-0000000000000761: 03	movq	%rbp, %r13
-0000000000000764: 03	incq	%r10
-0000000000000767: 03	movq	%r10, %r9
-000000000000076a: 04	andq	$-4, %r9
-000000000000076e: 03	subq	%r9, %r14
-0000000000000771: 03	movq	%r9, %rcx
-0000000000000774: 03	negq	%rcx
-0000000000000777: 03	movq	%r9, %rax
-000000000000077a: 04	shlq	$6, %rax
-000000000000077e: 03	subq	%rax, %r8
-0000000000000781: 05	leaq	-16(%rdx,%r12,8), %rbp
-0000000000000786: 05	leaq	-16(%rdi,%rbx,8), %rbx
-000000000000078b: 02	xorl	%eax, %eax
-000000000000078d: 03	nopl	(%rax)
-0000000000000790: 05	movups	-16(%rbp,%rax,8), %xmm0
-0000000000000795: 05	movups	(%rbp,%rax,8), %xmm1
-000000000000079a: 05	movups	-16(%rbx,%rax,8), %xmm2
-000000000000079f: 03	andnps	%xmm2, %xmm0
-00000000000007a2: 04	movups	(%rbx,%rax,8), %xmm2
-00000000000007a6: 03	andnps	%xmm2, %xmm1
-00000000000007a9: 04	movups	%xmm1, (%rbx,%rax,8)
-00000000000007ad: 05	movups	%xmm0, -16(%rbx,%rax,8)
-00000000000007b2: 04	addq	$-4, %rax
-00000000000007b6: 03	cmpq	%rax, %rcx
-00000000000007b9: 02	jne	0x443c20 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x790>
-00000000000007bb: 03	cmpq	%r9, %r10
-00000000000007be: 03	movq	%r11, %r10
-00000000000007c1: 03	movq	%r13, %rbp
-00000000000007c4: 06	jne	0x443805 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x375>
-00000000000007ca: 05	jmp	0x44382f <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x39f>
-00000000000007cf: 03	movq	%rsi, %rax
-00000000000007d2: 05	jmp	0x443d65 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x8d5>
-00000000000007d7: 03	addl	%r9d, %r8d
-00000000000007da: 03	movl	%r9d, %eax
-00000000000007dd: 07	movq	$-1, %rdx
-00000000000007e4: 07	movq	$-1, %rdi
-00000000000007eb: 03	movl	%r9d, %ecx
-00000000000007ee: 03	shlq	%cl, %rdi
-00000000000007f1: 03	notq	%rdi
-00000000000007f4: 03	movl	%r8d, %ecx
-00000000000007f7: 03	shlq	%cl, %rdx
-00000000000007fa: 04	cmpl	$64, %r8d
-00000000000007fe: 06	jae	0x443e25 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x995>
-0000000000000804: 03	orq	%rdi, %rdx
-0000000000000807: 03	notq	%rsi
-000000000000080a: 02	movl	%eax, %ecx
-000000000000080c: 03	shlq	%cl, %rsi
-000000000000080f: 03	orq	%rdx, %rsi
-0000000000000812: 04	andq	%rsi, (%r12)
-0000000000000816: 05	jmp	0x443df9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x969>
-000000000000081b: 02	xorl	%ebp, %ebp
-000000000000081d: 04	testb	$1, %r9b
-0000000000000821: 05	movq	-40(%rsp), %rax
-0000000000000826: 02	je	0x443ce5 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x855>
-0000000000000828: 03	orq	%rax, %rbp
-000000000000082b: 05	movq	-24(%rsp), %rdx
-0000000000000830: 04	movups	(%rdx,%rbp,8), %xmm0
-0000000000000834: 05	movups	16(%rdx,%rbp,8), %xmm1
-0000000000000839: 05	movups	(%r12,%rbp,8), %xmm2
-000000000000083e: 03	andnps	%xmm2, %xmm0
-0000000000000841: 06	movups	16(%r12,%rbp,8), %xmm2
-0000000000000847: 03	andnps	%xmm2, %xmm1
-000000000000084a: 05	movups	%xmm0, (%r12,%rbp,8)
-000000000000084f: 06	movups	%xmm1, 16(%r12,%rbp,8)
-0000000000000855: 03	addq	%r13, %rax
-0000000000000858: 03	cmpq	%r13, %rcx
-000000000000085b: 05	movq	-24(%rsp), %r13
-0000000000000860: 05	movl	$0, %ebx
-0000000000000865: 02	je	0x443d5b <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x8cb>
-0000000000000867: 03	movl	%r11d, %edx
-000000000000086a: 02	subl	%eax, %edx
-000000000000086c: 02	incl	%edx
-000000000000086e: 03	movq	%rax, %rsi
-0000000000000871: 03	testb	$1, %dl
-0000000000000874: 02	je	0x443d16 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x886>
-0000000000000876: 04	leaq	1(%rax), %rsi
-000000000000087a: 05	movq	(%r13,%rax,8), %rdx
-000000000000087f: 03	notq	%rdx
-0000000000000882: 04	andq	%rdx, (%r12,%rax,8)
-0000000000000886: 03	cmpq	%rax, %r11
-0000000000000889: 03	movq	%rsi, %rax
-000000000000088c: 02	je	0x443d5b <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x8cb>
-000000000000088e: 05	movq	-32(%rsp), %rax
-0000000000000893: 05	leaq	8(%rax,%r14,8), %rdx
-0000000000000898: 05	leaq	8(%rdi,%r15,8), %rdi
-000000000000089d: 05	movq	-40(%rsp), %rax
-00000000000008a2: 05	leaq	1(%rax,%r10), %rcx
-00000000000008a7: 05	movq	-8(%rdx,%rsi,8), %rbp
-00000000000008ac: 03	notq	%rbp
-00000000000008af: 05	andq	%rbp, -8(%rdi,%rsi,8)
-00000000000008b4: 04	leaq	2(%rsi), %rax
-00000000000008b8: 04	movq	(%rdx,%rsi,8), %rbp
-00000000000008bc: 03	notq	%rbp
-00000000000008bf: 04	andq	%rbp, (%rdi,%rsi,8)
-00000000000008c3: 03	movq	%rax, %rsi
-00000000000008c6: 03	cmpq	%rax, %rcx
-00000000000008c9: 02	jne	0x443d37 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x8a7>
-00000000000008cb: 03	incq	%r11
-00000000000008ce: 04	andl	$63, %r8d
-00000000000008d2: 03	movq	%r11, %rsi
-00000000000008d5: 03	testq	%r8, %r8
-00000000000008d8: 06	je	0x443df9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x969>
-00000000000008de: 05	movq	(%r13,%rsi,8), %rbp
-00000000000008e3: 05	movl	$64, %esi
-00000000000008e8: 02	subl	%ebx, %esi
-00000000000008ea: 03	cmpl	%r8d, %esi
-00000000000008ed: 02	jae	0x443dc0 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x930>
-00000000000008ef: 07	movq	$-1, %r9
-00000000000008f6: 07	movq	$-1, %rdi
-00000000000008fd: 02	movl	%ebx, %ecx
-00000000000008ff: 03	shlq	%cl, %rdi
-0000000000000902: 03	notq	%rdi
-0000000000000905: 03	movq	%rbp, %rdx
-0000000000000908: 03	notq	%rdx
-000000000000090b: 03	shlq	%cl, %rdx
-000000000000090e: 03	orq	%rdi, %rdx
-0000000000000911: 04	andq	%rdx, (%r12,%rax,8)
-0000000000000915: 02	movl	%esi, %ecx
-0000000000000917: 03	shrq	%cl, %rbp
-000000000000091a: 03	subl	%esi, %r8d
-000000000000091d: 03	movl	%r8d, %ecx
-0000000000000920: 03	shlq	%cl, %r9
-0000000000000923: 03	notq	%rbp
-0000000000000926: 03	orq	%r9, %rbp
-0000000000000929: 05	andq	%rbp, 8(%r12,%rax,8)
-000000000000092e: 02	jmp	0x443df9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x969>
-0000000000000930: 03	addl	%ebx, %r8d
-0000000000000933: 02	movl	%ebx, %edx
-0000000000000935: 07	movq	$-1, %rsi
-000000000000093c: 07	movq	$-1, %rdi
-0000000000000943: 02	movl	%ebx, %ecx
-0000000000000945: 03	shlq	%cl, %rdi
-0000000000000948: 03	notq	%rdi
-000000000000094b: 03	movl	%r8d, %ecx
-000000000000094e: 03	shlq	%cl, %rsi
-0000000000000951: 04	cmpl	$64, %r8d
-0000000000000955: 02	jae	0x443e19 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x989>
-0000000000000957: 03	orq	%rdi, %rsi
-000000000000095a: 03	notq	%rbp
-000000000000095d: 02	movl	%edx, %ecx
-000000000000095f: 03	shlq	%cl, %rbp
-0000000000000962: 03	orq	%rsi, %rbp
-0000000000000965: 04	andq	%rbp, (%r12,%rax,8)
-0000000000000969: 01	popq	%rbx
-000000000000096a: 02	popq	%r12
-000000000000096c: 02	popq	%r13
-000000000000096e: 02	popq	%r14
-0000000000000970: 02	popq	%r15
-0000000000000972: 01	popq	%rbp
-0000000000000973: 01	retq	
-0000000000000974: 02	xorl	%ebp, %ebp
-0000000000000976: 05	jmp	0x4438cf <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x43f>
-000000000000097b: 02	xorl	%ebx, %ebx
-000000000000097d: 05	jmp	0x44378b <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x2fb>
-0000000000000982: 02	xorl	%ebp, %ebp
-0000000000000984: 05	jmp	0x44390a <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x47a>
-0000000000000989: 02	xorl	%esi, %esi
-000000000000098b: 02	jmp	0x443de7 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x957>
-000000000000098d: 03	xorl	%r10d, %r10d
-0000000000000990: 05	jmp	0x4439cf <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x53f>
-0000000000000995: 02	xorl	%edx, %edx
-0000000000000997: 05	jmp	0x443c94 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x804>
-000000000000099c: 04	nopl	(%rax)
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%r13	;  2 bytes
+M0000000000000007:	pushq	%r12	;  2 bytes
+M0000000000000009:	pushq	%rbx	;  1 bytes
+M000000000000000a:	movq	%rcx, %r11	;  3 bytes
+M000000000000000d:	movq	%rsi, %r15	;  3 bytes
+M0000000000000010:	shrq	$6, %r15	;  4 bytes
+M0000000000000014:	leaq	(%rdi,%r15,8), %r12	;  4 bytes
+M0000000000000018:	movl	%esi, %r9d	;  3 bytes
+M000000000000001b:	andl	$63, %r9d	;  4 bytes
+M000000000000001f:	movq	%r12, %rbp	;  3 bytes
+M0000000000000022:	shrq	$3, %rbp	;  4 bytes
+M0000000000000026:	movq	%rcx, %r14	;  3 bytes
+M0000000000000029:	shrq	$6, %r14	;  4 bytes
+M000000000000002d:	leaq	(%rdx,%r14,8), %r13	;  4 bytes
+M0000000000000031:	andl	$63, %ecx	;  3 bytes
+M0000000000000034:	movq	%r13, %rbx	;  3 bytes
+M0000000000000037:	shrq	$3, %rbx	;  4 bytes
+M000000000000003b:	subq	%rbx, %rbp	;  3 bytes
+M000000000000003e:	movl	%r9d, %ebx	;  3 bytes
+M0000000000000041:	subl	%ecx, %ebx	;  2 bytes
+M0000000000000043:	xorl	%eax, %eax	;  2 bytes
+M0000000000000045:	cmpl	$63, %ebx	;  3 bytes
+M0000000000000048:	seta	%al	;  3 bytes
+M000000000000004b:	subq	%rax, %rbp	;  3 bytes
+M000000000000004e:	testq	%rbp, %rbp	;  3 bytes
+M0000000000000051:	jg	0x4434fd <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x6d>	;  2 bytes
+M0000000000000053:	leal	64(%rbx), %eax	;  3 bytes
+M0000000000000056:	cmpl	$64, %ebx	;  3 bytes
+M0000000000000059:	cmovbl	%ebx, %eax	;  3 bytes
+M000000000000005c:	testl	%eax, %eax	;  2 bytes
+M000000000000005e:	je	0x44365b <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x1cb>	;  6 bytes
+M0000000000000064:	testq	%rbp, %rbp	;  3 bytes
+M0000000000000067:	jne	0x44365b <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x1cb>	;  6 bytes
+M000000000000006d:	testq	%r8, %r8	;  3 bytes
+M0000000000000070:	je	0x443df9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x969>	;  6 bytes
+M0000000000000076:	addq	%r8, %rsi	;  3 bytes
+M0000000000000079:	movq	%rsi, %r15	;  3 bytes
+M000000000000007c:	shrq	$6, %r15	;  4 bytes
+M0000000000000080:	leaq	(%rdi,%r15,8), %r10	;  4 bytes
+M0000000000000084:	andl	$63, %esi	;  3 bytes
+M0000000000000087:	addq	%r8, %r11	;  3 bytes
+M000000000000008a:	movq	%r11, %r12	;  3 bytes
+M000000000000008d:	shrq	$6, %r12	;  4 bytes
+M0000000000000091:	leaq	(%rdx,%r12,8), %rbp	;  4 bytes
+M0000000000000095:	andl	$63, %r11d	;  4 bytes
+M0000000000000099:	je	0x4435be <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x12e>	;  6 bytes
+M000000000000009f:	movl	%r11d, %r13d	;  3 bytes
+M00000000000000a2:	cmpq	%r8, %r13	;  3 bytes
+M00000000000000a5:	jae	0x4436e9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x259>	;  6 bytes
+M00000000000000ab:	movq	%rdi, -40(%rsp)	;  5 bytes
+M00000000000000b0:	movq	%rdx, -32(%rsp)	;  5 bytes
+M00000000000000b5:	leal	64(%rsi), %r9d	;  4 bytes
+M00000000000000b9:	cmpl	%r11d, %esi	;  3 bytes
+M00000000000000bc:	cmovael	%esi, %r9d	;  4 bytes
+M00000000000000c0:	sbbq	%r14, %r14	;  3 bytes
+M00000000000000c3:	movl	%r9d, %esi	;  3 bytes
+M00000000000000c6:	subl	%r11d, %esi	;  3 bytes
+M00000000000000c9:	movq	%r10, -24(%rsp)	;  5 bytes
+M00000000000000ce:	leaq	(%r10,%r14,8), %rdi	;  4 bytes
+M00000000000000d2:	movq	(%rbp), %rdx	;  4 bytes
+M00000000000000d6:	movl	$64, %r10d	;  6 bytes
+M00000000000000dc:	subl	%esi, %r10d	;  3 bytes
+M00000000000000df:	subl	%r10d, %r11d	;  3 bytes
+M00000000000000e2:	jbe	0x443762 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x2d2>	;  6 bytes
+M00000000000000e8:	movq	$-1, %rax	;  7 bytes
+M00000000000000ef:	movl	%esi, %ecx	;  2 bytes
+M00000000000000f1:	shlq	%cl, %rax	;  3 bytes
+M00000000000000f4:	notq	%rax	;  3 bytes
+M00000000000000f7:	movq	%rbp, %rbx	;  3 bytes
+M00000000000000fa:	movq	%rdx, %rbp	;  3 bytes
+M00000000000000fd:	notq	%rbp	;  3 bytes
+M0000000000000100:	shlq	%cl, %rbp	;  3 bytes
+M0000000000000103:	orq	%rax, %rbp	;  3 bytes
+M0000000000000106:	andq	%rbp, (%rdi)	;  3 bytes
+M0000000000000109:	movq	%rbx, %rbp	;  3 bytes
+M000000000000010c:	movl	%r10d, %ecx	;  3 bytes
+M000000000000010f:	shrq	%cl, %rdx	;  3 bytes
+M0000000000000112:	movq	$-1, %rax	;  7 bytes
+M0000000000000119:	movl	%r11d, %ecx	;  3 bytes
+M000000000000011c:	shlq	%cl, %rax	;  3 bytes
+M000000000000011f:	addq	$8, %rdi	;  4 bytes
+M0000000000000123:	notq	%rdx	;  3 bytes
+M0000000000000126:	orq	%rax, %rdx	;  3 bytes
+M0000000000000129:	jmp	0x44379a <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x30a>	;  5 bytes
+M000000000000012e:	xorl	%r14d, %r14d	;  3 bytes
+M0000000000000131:	testl	%esi, %esi	;  2 bytes
+M0000000000000133:	je	0x4437b7 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x327>	;  6 bytes
+M0000000000000139:	cmpq	$64, %r8	;  4 bytes
+M000000000000013d:	jb	0x44382d <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x39d>	;  6 bytes
+M0000000000000143:	movq	%rbp, -32(%rsp)	;  5 bytes
+M0000000000000148:	movq	%r10, -24(%rsp)	;  5 bytes
+M000000000000014d:	movl	$64, %r10d	;  6 bytes
+M0000000000000153:	subl	%esi, %r10d	;  3 bytes
+M0000000000000156:	movl	%esi, %r9d	;  3 bytes
+M0000000000000159:	movq	$-1, %r11	;  7 bytes
+M0000000000000160:	movl	%esi, %ecx	;  2 bytes
+M0000000000000162:	shlq	%cl, %r11	;  3 bytes
+M0000000000000165:	movq	%r11, %r13	;  3 bytes
+M0000000000000168:	notq	%r13	;  3 bytes
+M000000000000016b:	addq	%r14, %r15	;  3 bytes
+M000000000000016e:	leaq	(%rdi,%r15,8), %rdi	;  4 bytes
+M0000000000000172:	leaq	-8(%rdx,%r12,8), %rdx	;  5 bytes
+M0000000000000177:	xorl	%ecx, %ecx	;  2 bytes
+M0000000000000179:	nopl	(%rax)	;  7 bytes
+M0000000000000180:	movq	%rcx, %rax	;  3 bytes
+M0000000000000183:	movq	(%rdx,%rcx,8), %rbp	;  4 bytes
+M0000000000000187:	movq	%rbp, %rbx	;  3 bytes
+M000000000000018a:	notq	%rbx	;  3 bytes
+M000000000000018d:	movl	%r9d, %ecx	;  3 bytes
+M0000000000000190:	shlq	%cl, %rbx	;  3 bytes
+M0000000000000193:	orq	%r13, %rbx	;  3 bytes
+M0000000000000196:	andq	%rbx, -8(%rdi,%rax,8)	;  5 bytes
+M000000000000019b:	movl	%r10d, %ecx	;  3 bytes
+M000000000000019e:	shrq	%cl, %rbp	;  3 bytes
+M00000000000001a1:	notq	%rbp	;  3 bytes
+M00000000000001a4:	orq	%r11, %rbp	;  3 bytes
+M00000000000001a7:	andq	%rbp, (%rdi,%rax,8)	;  4 bytes
+M00000000000001ab:	leaq	-1(%rax), %rcx	;  4 bytes
+M00000000000001af:	addq	$-64, %r8	;  4 bytes
+M00000000000001b3:	cmpq	$63, %r8	;  4 bytes
+M00000000000001b7:	ja	0x443610 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x180>	;  2 bytes
+M00000000000001b9:	addq	%rcx, %r14	;  3 bytes
+M00000000000001bc:	movq	-24(%rsp), %r10	;  5 bytes
+M00000000000001c1:	movq	-32(%rsp), %rbp	;  5 bytes
+M00000000000001c6:	jmp	0x44382f <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x39f>	;  5 bytes
+M00000000000001cb:	testq	%r8, %r8	;  3 bytes
+M00000000000001ce:	je	0x443df9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x969>	;  6 bytes
+M00000000000001d4:	testl	%ecx, %ecx	;  2 bytes
+M00000000000001d6:	je	0x443921 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x491>	;  6 bytes
+M00000000000001dc:	movl	$64, %r10d	;  6 bytes
+M00000000000001e2:	movl	$64, %eax	;  5 bytes
+M00000000000001e7:	subl	%ecx, %eax	;  2 bytes
+M00000000000001e9:	movq	(%r13), %rsi	;  4 bytes
+M00000000000001ed:	shrq	%cl, %rsi	;  3 bytes
+M00000000000001f0:	cmpq	%r8, %rax	;  3 bytes
+M00000000000001f3:	jae	0x443941 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x4b1>	;  6 bytes
+M00000000000001f9:	movq	%rdx, %r11	;  3 bytes
+M00000000000001fc:	cmpl	%ecx, %r9d	;  3 bytes
+M00000000000001ff:	jbe	0x4439a0 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x510>	;  6 bytes
+M0000000000000205:	subl	%r9d, %r10d	;  3 bytes
+M0000000000000208:	movq	$-1, %rdx	;  7 bytes
+M000000000000020f:	movl	%r9d, %ecx	;  3 bytes
+M0000000000000212:	shlq	%cl, %rdx	;  3 bytes
+M0000000000000215:	notq	%rdx	;  3 bytes
+M0000000000000218:	movq	%rdi, %rbp	;  3 bytes
+M000000000000021b:	movq	%rsi, %rdi	;  3 bytes
+M000000000000021e:	notq	%rdi	;  3 bytes
+M0000000000000221:	shlq	%cl, %rdi	;  3 bytes
+M0000000000000224:	orq	%rdx, %rdi	;  3 bytes
+M0000000000000227:	andq	%rdi, (%r12)	;  4 bytes
+M000000000000022b:	movq	%rbp, %rdi	;  3 bytes
+M000000000000022e:	movq	$-1, %rdx	;  7 bytes
+M0000000000000235:	movl	%r10d, %ecx	;  3 bytes
+M0000000000000238:	shrq	%cl, %rsi	;  3 bytes
+M000000000000023b:	movl	%eax, %ecx	;  2 bytes
+M000000000000023d:	subl	%r10d, %ecx	;  3 bytes
+M0000000000000240:	shlq	%cl, %rdx	;  3 bytes
+M0000000000000243:	notq	%rsi	;  3 bytes
+M0000000000000246:	orq	%rdx, %rsi	;  3 bytes
+M0000000000000249:	andq	%rsi, 8(%r12)	;  5 bytes
+M000000000000024e:	addl	%eax, %r9d	;  3 bytes
+M0000000000000251:	movl	%r9d, %ebx	;  3 bytes
+M0000000000000254:	jmp	0x4439e4 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x554>	;  5 bytes
+M0000000000000259:	leal	64(%rsi), %edx	;  3 bytes
+M000000000000025c:	cmpl	%r8d, %esi	;  3 bytes
+M000000000000025f:	cmovael	%esi, %edx	;  3 bytes
+M0000000000000262:	sbbq	%r9, %r9	;  3 bytes
+M0000000000000265:	subl	%r8d, %r11d	;  3 bytes
+M0000000000000268:	movq	(%rbp), %rsi	;  4 bytes
+M000000000000026c:	movl	%r11d, %ecx	;  3 bytes
+M000000000000026f:	shrq	%cl, %rsi	;  3 bytes
+M0000000000000272:	testl	%r8d, %r8d	;  3 bytes
+M0000000000000275:	je	0x443df9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x969>	;  6 bytes
+M000000000000027b:	movl	%edx, %ecx	;  2 bytes
+M000000000000027d:	subl	%r8d, %ecx	;  3 bytes
+M0000000000000280:	movl	$64, %eax	;  5 bytes
+M0000000000000285:	subl	%ecx, %eax	;  2 bytes
+M0000000000000287:	cmpl	%r8d, %eax	;  3 bytes
+M000000000000028a:	jae	0x4438e6 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x456>	;  6 bytes
+M0000000000000290:	movq	$-1, %rdx	;  7 bytes
+M0000000000000297:	movq	$-1, %rbp	;  7 bytes
+M000000000000029e:	shlq	%cl, %rbp	;  3 bytes
+M00000000000002a1:	notq	%rbp	;  3 bytes
+M00000000000002a4:	movq	%rsi, %rdi	;  3 bytes
+M00000000000002a7:	notq	%rdi	;  3 bytes
+M00000000000002aa:	shlq	%cl, %rdi	;  3 bytes
+M00000000000002ad:	orq	%rbp, %rdi	;  3 bytes
+M00000000000002b0:	andq	%rdi, (%r10,%r9,8)	;  4 bytes
+M00000000000002b4:	movl	%eax, %ecx	;  2 bytes
+M00000000000002b6:	shrq	%cl, %rsi	;  3 bytes
+M00000000000002b9:	subl	%eax, %r8d	;  3 bytes
+M00000000000002bc:	movl	%r8d, %ecx	;  3 bytes
+M00000000000002bf:	shlq	%cl, %rdx	;  3 bytes
+M00000000000002c2:	notq	%rsi	;  3 bytes
+M00000000000002c5:	orq	%rdx, %rsi	;  3 bytes
+M00000000000002c8:	andq	%rsi, 8(%r10,%r9,8)	;  5 bytes
+M00000000000002cd:	jmp	0x443df9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x969>	;  5 bytes
+M00000000000002d2:	movl	%esi, %r10d	;  3 bytes
+M00000000000002d5:	movq	$-1, %rbx	;  7 bytes
+M00000000000002dc:	movq	$-1, %rax	;  7 bytes
+M00000000000002e3:	movl	%esi, %ecx	;  2 bytes
+M00000000000002e5:	shlq	%cl, %rax	;  3 bytes
+M00000000000002e8:	notq	%rax	;  3 bytes
+M00000000000002eb:	movl	%r9d, %ecx	;  3 bytes
+M00000000000002ee:	shlq	%cl, %rbx	;  3 bytes
+M00000000000002f1:	cmpl	$64, %r9d	;  4 bytes
+M00000000000002f5:	jae	0x443e0b <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x97b>	;  6 bytes
+M00000000000002fb:	orq	%rax, %rbx	;  3 bytes
+M00000000000002fe:	notq	%rdx	;  3 bytes
+M0000000000000301:	movl	%r10d, %ecx	;  3 bytes
+M0000000000000304:	shlq	%cl, %rdx	;  3 bytes
+M0000000000000307:	orq	%rbx, %rdx	;  3 bytes
+M000000000000030a:	andq	%rdx, (%rdi)	;  3 bytes
+M000000000000030d:	subq	%r13, %r8	;  3 bytes
+M0000000000000310:	movq	-32(%rsp), %rdx	;  5 bytes
+M0000000000000315:	movq	-40(%rsp), %rdi	;  5 bytes
+M000000000000031a:	movq	-24(%rsp), %r10	;  5 bytes
+M000000000000031f:	testl	%esi, %esi	;  2 bytes
+M0000000000000321:	jne	0x4435c9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x139>	;  6 bytes
+M0000000000000327:	cmpq	$64, %r8	;  4 bytes
+M000000000000032b:	jb	0x44382d <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x39d>	;  2 bytes
+M000000000000032d:	movq	%r10, %r11	;  3 bytes
+M0000000000000330:	leaq	-64(%r8), %r10	;  4 bytes
+M0000000000000334:	cmpq	$192, %r10	;  7 bytes
+M000000000000033b:	jb	0x443800 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x370>	;  2 bytes
+M000000000000033d:	shrq	$6, %r10	;  4 bytes
+M0000000000000341:	leaq	(%r14,%r15), %rbx	;  4 bytes
+M0000000000000345:	movq	%r10, %rax	;  3 bytes
+M0000000000000348:	notq	%rax	;  3 bytes
+M000000000000034b:	leaq	(%rbx,%rax), %rcx	;  4 bytes
+M000000000000034f:	leaq	(%rdi,%rcx,8), %rcx	;  4 bytes
+M0000000000000353:	cmpq	%rbp, %rcx	;  3 bytes
+M0000000000000356:	jae	0x443bf1 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x761>	;  6 bytes
+M000000000000035c:	leaq	(%rdi,%rbx,8), %rcx	;  4 bytes
+M0000000000000360:	addq	%r12, %rax	;  3 bytes
+M0000000000000363:	leaq	(%rdx,%rax,8), %rax	;  4 bytes
+M0000000000000367:	cmpq	%rcx, %rax	;  3 bytes
+M000000000000036a:	jae	0x443bf1 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x761>	;  6 bytes
+M0000000000000370:	xorl	%ecx, %ecx	;  2 bytes
+M0000000000000372:	movq	%r11, %r10	;  3 bytes
+M0000000000000375:	leaq	-8(%rdi,%r15,8), %rax	;  5 bytes
+M000000000000037a:	leaq	-8(%rdx,%r12,8), %rdx	;  5 bytes
+M000000000000037f:	nop		;  1 bytes
+M0000000000000380:	movq	(%rdx,%rcx,8), %rdi	;  4 bytes
+M0000000000000384:	notq	%rdi	;  3 bytes
+M0000000000000387:	andq	%rdi, (%rax,%r14,8)	;  4 bytes
+M000000000000038b:	decq	%rcx	;  3 bytes
+M000000000000038e:	decq	%r14	;  3 bytes
+M0000000000000391:	addq	$-64, %r8	;  4 bytes
+M0000000000000395:	cmpq	$63, %r8	;  4 bytes
+M0000000000000399:	ja	0x443810 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x380>	;  2 bytes
+M000000000000039b:	jmp	0x44382f <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x39f>	;  2 bytes
+M000000000000039d:	xorl	%ecx, %ecx	;  2 bytes
+M000000000000039f:	testl	%r8d, %r8d	;  3 bytes
+M00000000000003a2:	je	0x443df9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x969>	;  6 bytes
+M00000000000003a8:	movl	%esi, %eax	;  2 bytes
+M00000000000003aa:	orl	$64, %eax	;  3 bytes
+M00000000000003ad:	cmpl	%r8d, %esi	;  3 bytes
+M00000000000003b0:	cmovael	%esi, %eax	;  3 bytes
+M00000000000003b3:	sbbq	$0, %r14	;  4 bytes
+M00000000000003b7:	movl	%eax, %edx	;  2 bytes
+M00000000000003b9:	movq	-8(%rbp,%rcx,8), %rbx	;  5 bytes
+M00000000000003be:	movl	%r8d, %ecx	;  3 bytes
+M00000000000003c1:	negb	%cl	;  2 bytes
+M00000000000003c3:	shrq	%cl, %rbx	;  3 bytes
+M00000000000003c6:	subl	%r8d, %edx	;  3 bytes
+M00000000000003c9:	movl	$64, %esi	;  5 bytes
+M00000000000003ce:	subl	%edx, %esi	;  2 bytes
+M00000000000003d0:	cmpl	%r8d, %esi	;  3 bytes
+M00000000000003d3:	jae	0x4438a9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x419>	;  2 bytes
+M00000000000003d5:	movq	$-1, %rax	;  7 bytes
+M00000000000003dc:	movq	$-1, %rbp	;  7 bytes
+M00000000000003e3:	movl	%edx, %ecx	;  2 bytes
+M00000000000003e5:	shlq	%cl, %rbp	;  3 bytes
+M00000000000003e8:	notq	%rbp	;  3 bytes
+M00000000000003eb:	movq	%rbx, %rdi	;  3 bytes
+M00000000000003ee:	notq	%rdi	;  3 bytes
+M00000000000003f1:	shlq	%cl, %rdi	;  3 bytes
+M00000000000003f4:	orq	%rbp, %rdi	;  3 bytes
+M00000000000003f7:	andq	%rdi, (%r10,%r14,8)	;  4 bytes
+M00000000000003fb:	movl	%esi, %ecx	;  2 bytes
+M00000000000003fd:	shrq	%cl, %rbx	;  3 bytes
+M0000000000000400:	subl	%esi, %r8d	;  3 bytes
+M0000000000000403:	movl	%r8d, %ecx	;  3 bytes
+M0000000000000406:	shlq	%cl, %rax	;  3 bytes
+M0000000000000409:	notq	%rbx	;  3 bytes
+M000000000000040c:	orq	%rax, %rbx	;  3 bytes
+M000000000000040f:	andq	%rbx, 8(%r10,%r14,8)	;  5 bytes
+M0000000000000414:	jmp	0x443df9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x969>	;  5 bytes
+M0000000000000419:	movl	%edx, %esi	;  2 bytes
+M000000000000041b:	movq	$-1, %rbp	;  7 bytes
+M0000000000000422:	movq	$-1, %rdi	;  7 bytes
+M0000000000000429:	movl	%edx, %ecx	;  2 bytes
+M000000000000042b:	shlq	%cl, %rdi	;  3 bytes
+M000000000000042e:	notq	%rdi	;  3 bytes
+M0000000000000431:	movl	%eax, %ecx	;  2 bytes
+M0000000000000433:	shlq	%cl, %rbp	;  3 bytes
+M0000000000000436:	cmpl	$64, %eax	;  3 bytes
+M0000000000000439:	jae	0x443e04 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x974>	;  6 bytes
+M000000000000043f:	orq	%rdi, %rbp	;  3 bytes
+M0000000000000442:	notq	%rbx	;  3 bytes
+M0000000000000445:	movl	%esi, %ecx	;  2 bytes
+M0000000000000447:	shlq	%cl, %rbx	;  3 bytes
+M000000000000044a:	orq	%rbp, %rbx	;  3 bytes
+M000000000000044d:	andq	%rbx, (%r10,%r14,8)	;  4 bytes
+M0000000000000451:	jmp	0x443df9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x969>	;  5 bytes
+M0000000000000456:	movl	%ecx, %eax	;  2 bytes
+M0000000000000458:	movq	$-1, %rbp	;  7 bytes
+M000000000000045f:	movq	$-1, %rbx	;  7 bytes
+M0000000000000466:	shlq	%cl, %rbx	;  3 bytes
+M0000000000000469:	notq	%rbx	;  3 bytes
+M000000000000046c:	movl	%edx, %ecx	;  2 bytes
+M000000000000046e:	shlq	%cl, %rbp	;  3 bytes
+M0000000000000471:	cmpl	$64, %edx	;  3 bytes
+M0000000000000474:	jae	0x443e12 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x982>	;  6 bytes
+M000000000000047a:	orq	%rbx, %rbp	;  3 bytes
+M000000000000047d:	notq	%rsi	;  3 bytes
+M0000000000000480:	movl	%eax, %ecx	;  2 bytes
+M0000000000000482:	shlq	%cl, %rsi	;  3 bytes
+M0000000000000485:	orq	%rbp, %rsi	;  3 bytes
+M0000000000000488:	andq	%rsi, (%r10,%r9,8)	;  4 bytes
+M000000000000048c:	jmp	0x443df9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x969>	;  5 bytes
+M0000000000000491:	xorl	%esi, %esi	;  2 bytes
+M0000000000000493:	testl	%r9d, %r9d	;  3 bytes
+M0000000000000496:	je	0x443a07 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x577>	;  6 bytes
+M000000000000049c:	movl	%r9d, %ebx	;  3 bytes
+M000000000000049f:	movq	%rsi, %rax	;  3 bytes
+M00000000000004a2:	cmpq	$64, %r8	;  4 bytes
+M00000000000004a6:	jae	0x443b35 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x6a5>	;  6 bytes
+M00000000000004ac:	jmp	0x443d65 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x8d5>	;  5 bytes
+M00000000000004b1:	testl	%r8d, %r8d	;  3 bytes
+M00000000000004b4:	je	0x443df9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x969>	;  6 bytes
+M00000000000004ba:	movl	$64, %eax	;  5 bytes
+M00000000000004bf:	subl	%r9d, %eax	;  3 bytes
+M00000000000004c2:	cmpl	%r8d, %eax	;  3 bytes
+M00000000000004c5:	jae	0x443c67 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x7d7>	;  6 bytes
+M00000000000004cb:	movq	$-1, %rdx	;  7 bytes
+M00000000000004d2:	movq	$-1, %rdi	;  7 bytes
+M00000000000004d9:	movl	%r9d, %ecx	;  3 bytes
+M00000000000004dc:	shlq	%cl, %rdi	;  3 bytes
+M00000000000004df:	notq	%rdi	;  3 bytes
+M00000000000004e2:	movq	%rsi, %rbp	;  3 bytes
+M00000000000004e5:	notq	%rbp	;  3 bytes
+M00000000000004e8:	shlq	%cl, %rbp	;  3 bytes
+M00000000000004eb:	orq	%rdi, %rbp	;  3 bytes
+M00000000000004ee:	andq	%rbp, (%r12)	;  4 bytes
+M00000000000004f2:	movl	%eax, %ecx	;  2 bytes
+M00000000000004f4:	shrq	%cl, %rsi	;  3 bytes
+M00000000000004f7:	subl	%eax, %r8d	;  3 bytes
+M00000000000004fa:	movl	%r8d, %ecx	;  3 bytes
+M00000000000004fd:	shlq	%cl, %rdx	;  3 bytes
+M0000000000000500:	notq	%rsi	;  3 bytes
+M0000000000000503:	orq	%rdx, %rsi	;  3 bytes
+M0000000000000506:	andq	%rsi, 8(%r12)	;  5 bytes
+M000000000000050b:	jmp	0x443df9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x969>	;  5 bytes
+M0000000000000510:	movq	%r12, %rdx	;  3 bytes
+M0000000000000513:	leal	(%rax,%r9), %ebx	;  4 bytes
+M0000000000000517:	movl	%r9d, %r12d	;  3 bytes
+M000000000000051a:	movq	$-1, %r10	;  7 bytes
+M0000000000000521:	movq	$-1, %rbp	;  7 bytes
+M0000000000000528:	movl	%r9d, %ecx	;  3 bytes
+M000000000000052b:	shlq	%cl, %rbp	;  3 bytes
+M000000000000052e:	notq	%rbp	;  3 bytes
+M0000000000000531:	movl	%ebx, %ecx	;  2 bytes
+M0000000000000533:	shlq	%cl, %r10	;  3 bytes
+M0000000000000536:	cmpl	$64, %ebx	;  3 bytes
+M0000000000000539:	jae	0x443e1d <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x98d>	;  6 bytes
+M000000000000053f:	orq	%rbp, %r10	;  3 bytes
+M0000000000000542:	notq	%rsi	;  3 bytes
+M0000000000000545:	movl	%r12d, %ecx	;  3 bytes
+M0000000000000548:	shlq	%cl, %rsi	;  3 bytes
+M000000000000054b:	orq	%r10, %rsi	;  3 bytes
+M000000000000054e:	movq	%rdx, %r12	;  3 bytes
+M0000000000000551:	andq	%rsi, (%rdx)	;  3 bytes
+M0000000000000554:	subq	%rax, %r8	;  3 bytes
+M0000000000000557:	movl	$1, %esi	;  5 bytes
+M000000000000055c:	cmpl	$64, %ebx	;  3 bytes
+M000000000000055f:	movq	%r11, %rdx	;  3 bytes
+M0000000000000562:	jb	0x443b29 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x699>	;  6 bytes
+M0000000000000568:	addl	$-64, %ebx	;  3 bytes
+M000000000000056b:	movl	%ebx, %r9d	;  3 bytes
+M000000000000056e:	testl	%r9d, %r9d	;  3 bytes
+M0000000000000571:	jne	0x44392c <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x49c>	;  6 bytes
+M0000000000000577:	xorl	%ebx, %ebx	;  2 bytes
+M0000000000000579:	cmpq	$64, %r8	;  4 bytes
+M000000000000057d:	jb	0x443c5f <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x7cf>	;  6 bytes
+M0000000000000583:	movq	%rdx, -32(%rsp)	;  5 bytes
+M0000000000000588:	leaq	-64(%r8), %rdx	;  4 bytes
+M000000000000058c:	movq	%rdx, %r10	;  3 bytes
+M000000000000058f:	shrq	$6, %r10	;  4 bytes
+M0000000000000593:	leaq	(%r10,%rsi), %r11	;  4 bytes
+M0000000000000597:	movq	%rsi, -40(%rsp)	;  5 bytes
+M000000000000059c:	movq	%rsi, %rax	;  3 bytes
+M000000000000059f:	cmpq	$192, %rdx	;  7 bytes
+M00000000000005a6:	jb	0x443cf7 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x867>	;  6 bytes
+M00000000000005ac:	movq	-40(%rsp), %rax	;  5 bytes
+M00000000000005b1:	leaq	(%rax,%r15), %rsi	;  4 bytes
+M00000000000005b5:	leaq	(%rdi,%rsi,8), %rdx	;  4 bytes
+M00000000000005b9:	leaq	(%rax,%r14), %rbp	;  4 bytes
+M00000000000005bd:	movq	%rdi, %rax	;  3 bytes
+M00000000000005c0:	leaq	(%rbp,%r10), %rdi	;  5 bytes
+M00000000000005c5:	movq	-32(%rsp), %rcx	;  5 bytes
+M00000000000005ca:	leaq	8(%rcx,%rdi,8), %rdi	;  5 bytes
+M00000000000005cf:	cmpq	%rdi, %rdx	;  3 bytes
+M00000000000005d2:	movq	%rax, %rdi	;  3 bytes
+M00000000000005d5:	jae	0x443a86 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x5f6>	;  2 bytes
+M00000000000005d7:	addq	%r10, %rsi	;  3 bytes
+M00000000000005da:	leaq	8(%rdi,%rsi,8), %rdx	;  5 bytes
+M00000000000005df:	movq	-32(%rsp), %rax	;  5 bytes
+M00000000000005e4:	leaq	(%rax,%rbp,8), %rsi	;  4 bytes
+M00000000000005e8:	movq	-40(%rsp), %rax	;  5 bytes
+M00000000000005ed:	cmpq	%rdx, %rsi	;  3 bytes
+M00000000000005f0:	jb	0x443cf7 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x867>	;  6 bytes
+M00000000000005f6:	movq	%r13, -24(%rsp)	;  5 bytes
+M00000000000005fb:	leaq	1(%r10), %rcx	;  4 bytes
+M00000000000005ff:	movq	%rcx, %r13	;  3 bytes
+M0000000000000602:	andq	$-4, %r13	;  4 bytes
+M0000000000000606:	leaq	-4(%r13), %rdx	;  4 bytes
+M000000000000060a:	movq	%rdx, %r9	;  3 bytes
+M000000000000060d:	shrq	$2, %r9	;  4 bytes
+M0000000000000611:	incq	%r9	;  3 bytes
+M0000000000000614:	testq	%rdx, %rdx	;  3 bytes
+M0000000000000617:	je	0x443cab <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x81b>	;  6 bytes
+M000000000000061d:	movq	%r9, %rsi	;  3 bytes
+M0000000000000620:	andq	$-2, %rsi	;  4 bytes
+M0000000000000624:	negq	%rsi	;  3 bytes
+M0000000000000627:	xorl	%ebp, %ebp	;  2 bytes
+M0000000000000629:	movq	-24(%rsp), %rbx	;  5 bytes
+M000000000000062e:	movq	-40(%rsp), %rax	;  5 bytes
+M0000000000000633:	movq	%rax, %rdx	;  3 bytes
+M0000000000000636:	orq	%rbp, %rdx	;  3 bytes
+M0000000000000639:	movups	(%rbx,%rdx,8), %xmm0	;  4 bytes
+M000000000000063d:	movups	16(%rbx,%rdx,8), %xmm1	;  5 bytes
+M0000000000000642:	movups	(%r12,%rdx,8), %xmm2	;  5 bytes
+M0000000000000647:	andnps	%xmm2, %xmm0	;  3 bytes
+M000000000000064a:	movups	16(%r12,%rdx,8), %xmm2	;  6 bytes
+M0000000000000650:	andnps	%xmm2, %xmm1	;  3 bytes
+M0000000000000653:	movups	%xmm0, (%r12,%rdx,8)	;  5 bytes
+M0000000000000658:	movups	%xmm1, 16(%r12,%rdx,8)	;  6 bytes
+M000000000000065e:	leaq	4(%rbp), %rdx	;  4 bytes
+M0000000000000662:	orq	%rax, %rdx	;  3 bytes
+M0000000000000665:	movups	(%rbx,%rdx,8), %xmm0	;  4 bytes
+M0000000000000669:	movups	16(%rbx,%rdx,8), %xmm1	;  5 bytes
+M000000000000066e:	movups	(%r12,%rdx,8), %xmm2	;  5 bytes
+M0000000000000673:	andnps	%xmm2, %xmm0	;  3 bytes
+M0000000000000676:	movups	16(%r12,%rdx,8), %xmm2	;  6 bytes
+M000000000000067c:	andnps	%xmm2, %xmm1	;  3 bytes
+M000000000000067f:	movups	%xmm0, (%r12,%rdx,8)	;  5 bytes
+M0000000000000684:	movups	%xmm1, 16(%r12,%rdx,8)	;  6 bytes
+M000000000000068a:	addq	$8, %rbp	;  4 bytes
+M000000000000068e:	addq	$2, %rsi	;  4 bytes
+M0000000000000692:	jne	0x443ac3 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x633>	;  2 bytes
+M0000000000000694:	jmp	0x443cad <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x81d>	;  5 bytes
+M0000000000000699:	xorl	%eax, %eax	;  2 bytes
+M000000000000069b:	cmpq	$64, %r8	;  4 bytes
+M000000000000069f:	jb	0x443d65 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x8d5>	;  6 bytes
+M00000000000006a5:	movq	%r13, -24(%rsp)	;  5 bytes
+M00000000000006aa:	movq	%r12, -32(%rsp)	;  5 bytes
+M00000000000006af:	movl	$64, %r11d	;  6 bytes
+M00000000000006b5:	subl	%ebx, %r11d	;  3 bytes
+M00000000000006b8:	movq	$-1, %r10	;  7 bytes
+M00000000000006bf:	movl	%ebx, %ecx	;  2 bytes
+M00000000000006c1:	shlq	%cl, %r10	;  3 bytes
+M00000000000006c4:	movl	%ebx, -40(%rsp)	;  4 bytes
+M00000000000006c8:	movl	%ebx, %r9d	;  3 bytes
+M00000000000006cb:	movq	%r10, %rbp	;  3 bytes
+M00000000000006ce:	notq	%rbp	;  3 bytes
+M00000000000006d1:	leaq	-64(%r8), %r13	;  4 bytes
+M00000000000006d5:	shrq	$6, %r13	;  4 bytes
+M00000000000006d9:	leaq	(%r13,%rsi), %rcx	;  5 bytes
+M00000000000006de:	movq	%rcx, -16(%rsp)	;  5 bytes
+M00000000000006e3:	movq	%rax, -8(%rsp)	;  5 bytes
+M00000000000006e8:	addq	%rax, %r15	;  3 bytes
+M00000000000006eb:	movq	(%rdi,%r15,8), %r12	;  4 bytes
+M00000000000006ef:	incq	%r13	;  3 bytes
+M00000000000006f2:	addq	%rsi, %r14	;  3 bytes
+M00000000000006f5:	leaq	(%rdx,%r14,8), %rbx	;  4 bytes
+M00000000000006f9:	leaq	8(%rdi,%r15,8), %rdi	;  5 bytes
+M00000000000006fe:	xorl	%edx, %edx	;  2 bytes
+M0000000000000700:	movq	(%rbx,%rdx,8), %rsi	;  4 bytes
+M0000000000000704:	movq	%rsi, %rax	;  3 bytes
+M0000000000000707:	notq	%rax	;  3 bytes
+M000000000000070a:	movl	%r9d, %ecx	;  3 bytes
+M000000000000070d:	shlq	%cl, %rax	;  3 bytes
+M0000000000000710:	orq	%rbp, %rax	;  3 bytes
+M0000000000000713:	andq	%r12, %rax	;  3 bytes
+M0000000000000716:	movq	%rax, -8(%rdi,%rdx,8)	;  5 bytes
+M000000000000071b:	movl	%r11d, %ecx	;  3 bytes
+M000000000000071e:	shrq	%cl, %rsi	;  3 bytes
+M0000000000000721:	notq	%rsi	;  3 bytes
+M0000000000000724:	orq	%r10, %rsi	;  3 bytes
+M0000000000000727:	andq	(%rdi,%rdx,8), %rsi	;  4 bytes
+M000000000000072b:	movq	%rsi, (%rdi,%rdx,8)	;  4 bytes
+M000000000000072f:	incq	%rdx	;  3 bytes
+M0000000000000732:	movq	%rsi, %r12	;  3 bytes
+M0000000000000735:	cmpq	%rdx, %r13	;  3 bytes
+M0000000000000738:	jne	0x443b90 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x700>	;  2 bytes
+M000000000000073a:	movq	-16(%rsp), %rsi	;  5 bytes
+M000000000000073f:	incq	%rsi	;  3 bytes
+M0000000000000742:	andl	$63, %r8d	;  4 bytes
+M0000000000000746:	movq	-8(%rsp), %rax	;  5 bytes
+M000000000000074b:	addq	%rdx, %rax	;  3 bytes
+M000000000000074e:	movq	-32(%rsp), %r12	;  5 bytes
+M0000000000000753:	movq	-24(%rsp), %r13	;  5 bytes
+M0000000000000758:	movl	-40(%rsp), %ebx	;  4 bytes
+M000000000000075c:	jmp	0x443d65 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x8d5>	;  5 bytes
+M0000000000000761:	movq	%rbp, %r13	;  3 bytes
+M0000000000000764:	incq	%r10	;  3 bytes
+M0000000000000767:	movq	%r10, %r9	;  3 bytes
+M000000000000076a:	andq	$-4, %r9	;  4 bytes
+M000000000000076e:	subq	%r9, %r14	;  3 bytes
+M0000000000000771:	movq	%r9, %rcx	;  3 bytes
+M0000000000000774:	negq	%rcx	;  3 bytes
+M0000000000000777:	movq	%r9, %rax	;  3 bytes
+M000000000000077a:	shlq	$6, %rax	;  4 bytes
+M000000000000077e:	subq	%rax, %r8	;  3 bytes
+M0000000000000781:	leaq	-16(%rdx,%r12,8), %rbp	;  5 bytes
+M0000000000000786:	leaq	-16(%rdi,%rbx,8), %rbx	;  5 bytes
+M000000000000078b:	xorl	%eax, %eax	;  2 bytes
+M000000000000078d:	nopl	(%rax)	;  3 bytes
+M0000000000000790:	movups	-16(%rbp,%rax,8), %xmm0	;  5 bytes
+M0000000000000795:	movups	(%rbp,%rax,8), %xmm1	;  5 bytes
+M000000000000079a:	movups	-16(%rbx,%rax,8), %xmm2	;  5 bytes
+M000000000000079f:	andnps	%xmm2, %xmm0	;  3 bytes
+M00000000000007a2:	movups	(%rbx,%rax,8), %xmm2	;  4 bytes
+M00000000000007a6:	andnps	%xmm2, %xmm1	;  3 bytes
+M00000000000007a9:	movups	%xmm1, (%rbx,%rax,8)	;  4 bytes
+M00000000000007ad:	movups	%xmm0, -16(%rbx,%rax,8)	;  5 bytes
+M00000000000007b2:	addq	$-4, %rax	;  4 bytes
+M00000000000007b6:	cmpq	%rax, %rcx	;  3 bytes
+M00000000000007b9:	jne	0x443c20 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x790>	;  2 bytes
+M00000000000007bb:	cmpq	%r9, %r10	;  3 bytes
+M00000000000007be:	movq	%r11, %r10	;  3 bytes
+M00000000000007c1:	movq	%r13, %rbp	;  3 bytes
+M00000000000007c4:	jne	0x443805 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x375>	;  6 bytes
+M00000000000007ca:	jmp	0x44382f <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x39f>	;  5 bytes
+M00000000000007cf:	movq	%rsi, %rax	;  3 bytes
+M00000000000007d2:	jmp	0x443d65 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x8d5>	;  5 bytes
+M00000000000007d7:	addl	%r9d, %r8d	;  3 bytes
+M00000000000007da:	movl	%r9d, %eax	;  3 bytes
+M00000000000007dd:	movq	$-1, %rdx	;  7 bytes
+M00000000000007e4:	movq	$-1, %rdi	;  7 bytes
+M00000000000007eb:	movl	%r9d, %ecx	;  3 bytes
+M00000000000007ee:	shlq	%cl, %rdi	;  3 bytes
+M00000000000007f1:	notq	%rdi	;  3 bytes
+M00000000000007f4:	movl	%r8d, %ecx	;  3 bytes
+M00000000000007f7:	shlq	%cl, %rdx	;  3 bytes
+M00000000000007fa:	cmpl	$64, %r8d	;  4 bytes
+M00000000000007fe:	jae	0x443e25 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x995>	;  6 bytes
+M0000000000000804:	orq	%rdi, %rdx	;  3 bytes
+M0000000000000807:	notq	%rsi	;  3 bytes
+M000000000000080a:	movl	%eax, %ecx	;  2 bytes
+M000000000000080c:	shlq	%cl, %rsi	;  3 bytes
+M000000000000080f:	orq	%rdx, %rsi	;  3 bytes
+M0000000000000812:	andq	%rsi, (%r12)	;  4 bytes
+M0000000000000816:	jmp	0x443df9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x969>	;  5 bytes
+M000000000000081b:	xorl	%ebp, %ebp	;  2 bytes
+M000000000000081d:	testb	$1, %r9b	;  4 bytes
+M0000000000000821:	movq	-40(%rsp), %rax	;  5 bytes
+M0000000000000826:	je	0x443ce5 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x855>	;  2 bytes
+M0000000000000828:	orq	%rax, %rbp	;  3 bytes
+M000000000000082b:	movq	-24(%rsp), %rdx	;  5 bytes
+M0000000000000830:	movups	(%rdx,%rbp,8), %xmm0	;  4 bytes
+M0000000000000834:	movups	16(%rdx,%rbp,8), %xmm1	;  5 bytes
+M0000000000000839:	movups	(%r12,%rbp,8), %xmm2	;  5 bytes
+M000000000000083e:	andnps	%xmm2, %xmm0	;  3 bytes
+M0000000000000841:	movups	16(%r12,%rbp,8), %xmm2	;  6 bytes
+M0000000000000847:	andnps	%xmm2, %xmm1	;  3 bytes
+M000000000000084a:	movups	%xmm0, (%r12,%rbp,8)	;  5 bytes
+M000000000000084f:	movups	%xmm1, 16(%r12,%rbp,8)	;  6 bytes
+M0000000000000855:	addq	%r13, %rax	;  3 bytes
+M0000000000000858:	cmpq	%r13, %rcx	;  3 bytes
+M000000000000085b:	movq	-24(%rsp), %r13	;  5 bytes
+M0000000000000860:	movl	$0, %ebx	;  5 bytes
+M0000000000000865:	je	0x443d5b <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x8cb>	;  2 bytes
+M0000000000000867:	movl	%r11d, %edx	;  3 bytes
+M000000000000086a:	subl	%eax, %edx	;  2 bytes
+M000000000000086c:	incl	%edx	;  2 bytes
+M000000000000086e:	movq	%rax, %rsi	;  3 bytes
+M0000000000000871:	testb	$1, %dl	;  3 bytes
+M0000000000000874:	je	0x443d16 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x886>	;  2 bytes
+M0000000000000876:	leaq	1(%rax), %rsi	;  4 bytes
+M000000000000087a:	movq	(%r13,%rax,8), %rdx	;  5 bytes
+M000000000000087f:	notq	%rdx	;  3 bytes
+M0000000000000882:	andq	%rdx, (%r12,%rax,8)	;  4 bytes
+M0000000000000886:	cmpq	%rax, %r11	;  3 bytes
+M0000000000000889:	movq	%rsi, %rax	;  3 bytes
+M000000000000088c:	je	0x443d5b <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x8cb>	;  2 bytes
+M000000000000088e:	movq	-32(%rsp), %rax	;  5 bytes
+M0000000000000893:	leaq	8(%rax,%r14,8), %rdx	;  5 bytes
+M0000000000000898:	leaq	8(%rdi,%r15,8), %rdi	;  5 bytes
+M000000000000089d:	movq	-40(%rsp), %rax	;  5 bytes
+M00000000000008a2:	leaq	1(%rax,%r10), %rcx	;  5 bytes
+M00000000000008a7:	movq	-8(%rdx,%rsi,8), %rbp	;  5 bytes
+M00000000000008ac:	notq	%rbp	;  3 bytes
+M00000000000008af:	andq	%rbp, -8(%rdi,%rsi,8)	;  5 bytes
+M00000000000008b4:	leaq	2(%rsi), %rax	;  4 bytes
+M00000000000008b8:	movq	(%rdx,%rsi,8), %rbp	;  4 bytes
+M00000000000008bc:	notq	%rbp	;  3 bytes
+M00000000000008bf:	andq	%rbp, (%rdi,%rsi,8)	;  4 bytes
+M00000000000008c3:	movq	%rax, %rsi	;  3 bytes
+M00000000000008c6:	cmpq	%rax, %rcx	;  3 bytes
+M00000000000008c9:	jne	0x443d37 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x8a7>	;  2 bytes
+M00000000000008cb:	incq	%r11	;  3 bytes
+M00000000000008ce:	andl	$63, %r8d	;  4 bytes
+M00000000000008d2:	movq	%r11, %rsi	;  3 bytes
+M00000000000008d5:	testq	%r8, %r8	;  3 bytes
+M00000000000008d8:	je	0x443df9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x969>	;  6 bytes
+M00000000000008de:	movq	(%r13,%rsi,8), %rbp	;  5 bytes
+M00000000000008e3:	movl	$64, %esi	;  5 bytes
+M00000000000008e8:	subl	%ebx, %esi	;  2 bytes
+M00000000000008ea:	cmpl	%r8d, %esi	;  3 bytes
+M00000000000008ed:	jae	0x443dc0 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x930>	;  2 bytes
+M00000000000008ef:	movq	$-1, %r9	;  7 bytes
+M00000000000008f6:	movq	$-1, %rdi	;  7 bytes
+M00000000000008fd:	movl	%ebx, %ecx	;  2 bytes
+M00000000000008ff:	shlq	%cl, %rdi	;  3 bytes
+M0000000000000902:	notq	%rdi	;  3 bytes
+M0000000000000905:	movq	%rbp, %rdx	;  3 bytes
+M0000000000000908:	notq	%rdx	;  3 bytes
+M000000000000090b:	shlq	%cl, %rdx	;  3 bytes
+M000000000000090e:	orq	%rdi, %rdx	;  3 bytes
+M0000000000000911:	andq	%rdx, (%r12,%rax,8)	;  4 bytes
+M0000000000000915:	movl	%esi, %ecx	;  2 bytes
+M0000000000000917:	shrq	%cl, %rbp	;  3 bytes
+M000000000000091a:	subl	%esi, %r8d	;  3 bytes
+M000000000000091d:	movl	%r8d, %ecx	;  3 bytes
+M0000000000000920:	shlq	%cl, %r9	;  3 bytes
+M0000000000000923:	notq	%rbp	;  3 bytes
+M0000000000000926:	orq	%r9, %rbp	;  3 bytes
+M0000000000000929:	andq	%rbp, 8(%r12,%rax,8)	;  5 bytes
+M000000000000092e:	jmp	0x443df9 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x969>	;  2 bytes
+M0000000000000930:	addl	%ebx, %r8d	;  3 bytes
+M0000000000000933:	movl	%ebx, %edx	;  2 bytes
+M0000000000000935:	movq	$-1, %rsi	;  7 bytes
+M000000000000093c:	movq	$-1, %rdi	;  7 bytes
+M0000000000000943:	movl	%ebx, %ecx	;  2 bytes
+M0000000000000945:	shlq	%cl, %rdi	;  3 bytes
+M0000000000000948:	notq	%rdi	;  3 bytes
+M000000000000094b:	movl	%r8d, %ecx	;  3 bytes
+M000000000000094e:	shlq	%cl, %rsi	;  3 bytes
+M0000000000000951:	cmpl	$64, %r8d	;  4 bytes
+M0000000000000955:	jae	0x443e19 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x989>	;  2 bytes
+M0000000000000957:	orq	%rdi, %rsi	;  3 bytes
+M000000000000095a:	notq	%rbp	;  3 bytes
+M000000000000095d:	movl	%edx, %ecx	;  2 bytes
+M000000000000095f:	shlq	%cl, %rbp	;  3 bytes
+M0000000000000962:	orq	%rsi, %rbp	;  3 bytes
+M0000000000000965:	andq	%rbp, (%r12,%rax,8)	;  4 bytes
+M0000000000000969:	popq	%rbx	;  1 bytes
+M000000000000096a:	popq	%r12	;  2 bytes
+M000000000000096c:	popq	%r13	;  2 bytes
+M000000000000096e:	popq	%r14	;  2 bytes
+M0000000000000970:	popq	%r15	;  2 bytes
+M0000000000000972:	popq	%rbp	;  1 bytes
+M0000000000000973:	retq		;  1 bytes
+M0000000000000974:	xorl	%ebp, %ebp	;  2 bytes
+M0000000000000976:	jmp	0x4438cf <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x43f>	;  5 bytes
+M000000000000097b:	xorl	%ebx, %ebx	;  2 bytes
+M000000000000097d:	jmp	0x44378b <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x2fb>	;  5 bytes
+M0000000000000982:	xorl	%ebp, %ebp	;  2 bytes
+M0000000000000984:	jmp	0x44390a <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x47a>	;  5 bytes
+M0000000000000989:	xorl	%esi, %esi	;  2 bytes
+M000000000000098b:	jmp	0x443de7 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x957>	;  2 bytes
+M000000000000098d:	xorl	%r10d, %r10d	;  3 bytes
+M0000000000000990:	jmp	0x4439cf <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x53f>	;  5 bytes
+M0000000000000995:	xorl	%edx, %edx	;  2 bytes
+M0000000000000997:	jmp	0x443c94 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)+0x804>	;  5 bytes
+M000000000000099c:	nopl	(%rax)	;  4 bytes

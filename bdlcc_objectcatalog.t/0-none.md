@@ -2,18 +2,18 @@
 
 ```nasm
 00000000004062b0 <verifyStateThread>:
-0000000000000000: 01	pushq	%rbx
-0000000000000001: 05	movl	$7504256, %edi
-0000000000000006: 05	callq	0x4c2110 <BloombergLP::bslmt::Barrier::wait()>
-000000000000000b: 05	movl	$1000, %ebx
-0000000000000010: 05	movl	$7504200, %edi
-0000000000000015: 05	callq	0x404650 <pthread_rwlock_rdlock@plt>
-000000000000001a: 05	movl	$7504200, %edi
-000000000000001f: 05	callq	0x404790 <pthread_rwlock_unlock@plt>
-0000000000000024: 02	decl	%ebx
-0000000000000026: 02	jne	0x4062c0 <verifyStateThread+0x10>
-0000000000000028: 02	xorl	%eax, %eax
-000000000000002a: 01	popq	%rbx
-000000000000002b: 01	retq	
-000000000000002c: 04	nopl	(%rax)
+M0000000000000000:	pushq	%rbx	;  1 bytes
+M0000000000000001:	movl	$7504256, %edi	;  5 bytes
+M0000000000000006:	callq	0x4c2110 <BloombergLP::bslmt::Barrier::wait()>	;  5 bytes
+M000000000000000b:	movl	$1000, %ebx	;  5 bytes
+M0000000000000010:	movl	$7504200, %edi	;  5 bytes
+M0000000000000015:	callq	0x404650 <pthread_rwlock_rdlock@plt>	;  5 bytes
+M000000000000001a:	movl	$7504200, %edi	;  5 bytes
+M000000000000001f:	callq	0x404790 <pthread_rwlock_unlock@plt>	;  5 bytes
+M0000000000000024:	decl	%ebx	;  2 bytes
+M0000000000000026:	jne	0x4062c0 <verifyStateThread+0x10>	;  2 bytes
+M0000000000000028:	xorl	%eax, %eax	;  2 bytes
+M000000000000002a:	popq	%rbx	;  1 bytes
+M000000000000002b:	retq		;  1 bytes
+M000000000000002c:	nopl	(%rax)	;  4 bytes
 ```

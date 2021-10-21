@@ -1,28 +1,28 @@
 00000000004135e0 <BloombergLP::bdlt::PosixDateImpUtil::lastDayOfMonth(int, int)>:
-0000000000000000: 02	movl	%esi, %eax
-0000000000000002: 07	movl	4445072(,%rax,4), %ecx
-0000000000000009: 02	xorl	%eax, %eax
-000000000000000b: 03	cmpl	$2, %esi
-000000000000000e: 02	jne	0x413630 <BloombergLP::bdlt::PosixDateImpUtil::lastDayOfMonth(int, int)+0x50>
-0000000000000010: 02	movl	%edi, %edx
-0000000000000012: 03	andl	$3, %edx
-0000000000000015: 02	jne	0x413630 <BloombergLP::bdlt::PosixDateImpUtil::lastDayOfMonth(int, int)+0x50>
-0000000000000017: 06	imull	$23593, %edi, %eax
-000000000000001d: 02	movl	%eax, %edx
-000000000000001f: 04	rorw	$2, %dx
-0000000000000023: 03	movzwl	%dx, %edx
-0000000000000026: 06	cmpl	$655, %edx
-000000000000002c: 04	seta	%sil
-0000000000000030: 04	rorw	$4, %ax
-0000000000000034: 03	movzwl	%ax, %eax
-0000000000000037: 05	cmpl	$164, %eax
-000000000000003c: 03	setb	%al
-000000000000003f: 06	cmpl	$1753, %edi
-0000000000000045: 03	setb	%dl
-0000000000000048: 02	orb	%al, %dl
-000000000000004a: 03	orb	%sil, %dl
-000000000000004d: 03	movzbl	%dl, %eax
-0000000000000050: 02	addl	%ecx, %eax
-0000000000000052: 01	retq	
-0000000000000053: 10	nopw	%cs:(%rax,%rax)
-000000000000005d: 03	nopl	(%rax)
+M0000000000000000:	movl	%esi, %eax	;  2 bytes
+M0000000000000002:	movl	4445072(,%rax,4), %ecx	;  7 bytes
+M0000000000000009:	xorl	%eax, %eax	;  2 bytes
+M000000000000000b:	cmpl	$2, %esi	;  3 bytes
+M000000000000000e:	jne	0x413630 <BloombergLP::bdlt::PosixDateImpUtil::lastDayOfMonth(int, int)+0x50>	;  2 bytes
+M0000000000000010:	movl	%edi, %edx	;  2 bytes
+M0000000000000012:	andl	$3, %edx	;  3 bytes
+M0000000000000015:	jne	0x413630 <BloombergLP::bdlt::PosixDateImpUtil::lastDayOfMonth(int, int)+0x50>	;  2 bytes
+M0000000000000017:	imull	$23593, %edi, %eax	;  6 bytes
+M000000000000001d:	movl	%eax, %edx	;  2 bytes
+M000000000000001f:	rorw	$2, %dx	;  4 bytes
+M0000000000000023:	movzwl	%dx, %edx	;  3 bytes
+M0000000000000026:	cmpl	$655, %edx	;  6 bytes
+M000000000000002c:	seta	%sil	;  4 bytes
+M0000000000000030:	rorw	$4, %ax	;  4 bytes
+M0000000000000034:	movzwl	%ax, %eax	;  3 bytes
+M0000000000000037:	cmpl	$164, %eax	;  5 bytes
+M000000000000003c:	setb	%al	;  3 bytes
+M000000000000003f:	cmpl	$1753, %edi	;  6 bytes
+M0000000000000045:	setb	%dl	;  3 bytes
+M0000000000000048:	orb	%al, %dl	;  2 bytes
+M000000000000004a:	orb	%sil, %dl	;  3 bytes
+M000000000000004d:	movzbl	%dl, %eax	;  3 bytes
+M0000000000000050:	addl	%ecx, %eax	;  2 bytes
+M0000000000000052:	retq		;  1 bytes
+M0000000000000053:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000005d:	nopl	(%rax)	;  3 bytes

@@ -2,112 +2,112 @@
 
 ```nasm
 0000000000412480 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > const&, BloombergLP::bslma::Allocator*)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 02	pushq	%r13
-0000000000000007: 02	pushq	%r12
-0000000000000009: 01	pushq	%rbx
-000000000000000a: 01	pushq	%rax
-000000000000000b: 03	movq	%rcx, %r14
-000000000000000e: 03	movq	%rdx, %r12
-0000000000000011: 03	movq	%rsi, %r15
-0000000000000014: 04	movq	%rdi, (%rsp)
-0000000000000018: 05	cmpq	$23, 56(%rsi)
-000000000000001d: 02	je	0x4124a5 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > const&, BloombergLP::bslma::Allocator*)+0x25>
-000000000000001f: 04	movq	24(%r15), %r13
-0000000000000023: 02	jmp	0x4124a9 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > const&, BloombergLP::bslma::Allocator*)+0x29>
-0000000000000025: 04	leaq	24(%r15), %r13
-0000000000000029: 04	movq	48(%r15), %rbp
-000000000000002d: 03	testq	%r14, %r14
-0000000000000030: 02	jne	0x4124c6 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > const&, BloombergLP::bslma::Allocator*)+0x46>
-0000000000000032: 07	movq	2407479(%rip), %r14  # 65e0f0 <BloombergLP::bslma::Default::s_defaultAllocator>
-0000000000000039: 03	testq	%r14, %r14
-000000000000003c: 02	jne	0x4124c6 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > const&, BloombergLP::bslma::Allocator*)+0x46>
-000000000000003e: 05	callq	0x416aa0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-0000000000000043: 03	movq	%rax, %r14
-0000000000000046: 03	movq	(%r14), %rax
-0000000000000049: 05	movl	$88, %esi
-000000000000004e: 03	movq	%r14, %rdi
-0000000000000051: 03	callq	*16(%rax)
-0000000000000054: 03	movq	%rax, %rbx
-0000000000000057: 07	movq	$4269568, (%rax)
-000000000000005e: 04	movq	(%r12), %rax
-0000000000000062: 04	movq	%rax, 8(%rbx)
-0000000000000066: 05	movq	8(%r12), %rax
-000000000000006b: 04	movq	%rax, 16(%rbx)
-000000000000006f: 05	movq	16(%r12), %rax
-0000000000000074: 04	movq	%rax, 24(%rbx)
-0000000000000078: 05	movl	24(%r12), %eax
-000000000000007d: 03	movl	%eax, 32(%rbx)
-0000000000000080: 04	leaq	40(%rbx), %rdi
-0000000000000084: 08	movq	$0, 40(%rbx)
-000000000000008c: 04	movq	%r14, 80(%rbx)
-0000000000000090: 07	movaps	181257(%rip), %xmm0  # 43e920 <__dso_handle+0x18>
-0000000000000097: 04	movups	%xmm0, 64(%rbx)
-000000000000009b: 05	movl	$4462395, %ecx
-00000000000000a0: 03	movq	%r13, %rsi
-00000000000000a3: 03	movq	%rbp, %rdx
-00000000000000a6: 05	callq	0x41b140 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-00000000000000ab: 05	movl	$4291744, %edx
-00000000000000b0: 04	movq	(%rsp), %rdi
-00000000000000b4: 03	movq	%r15, %rsi
-00000000000000b7: 03	movq	%rbx, %rcx
-00000000000000ba: 05	callq	0x4186f0 <BloombergLP::bslmt::ThreadUtilImpl<BloombergLP::bslmt::Platform::PosixThreads>::create(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, void* (*)(void*), void*)>
-00000000000000bf: 02	movl	%eax, %ebp
-00000000000000c1: 02	testl	%eax, %eax
-00000000000000c3: 02	je	0x41256e <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > const&, BloombergLP::bslma::Allocator*)+0xee>
-00000000000000c5: 05	cmpq	$23, 72(%rbx)
-00000000000000ca: 02	je	0x41255a <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > const&, BloombergLP::bslma::Allocator*)+0xda>
-00000000000000cc: 04	movq	40(%rbx), %rsi
-00000000000000d0: 04	movq	80(%rbx), %rdi
-00000000000000d4: 03	movq	(%rdi), %rax
-00000000000000d7: 03	callq	*24(%rax)
-00000000000000da: 08	movq	$-1, 64(%rbx)
-00000000000000e2: 03	movq	(%r14), %rax
-00000000000000e5: 03	movq	%r14, %rdi
-00000000000000e8: 03	movq	%rbx, %rsi
-00000000000000eb: 03	callq	*24(%rax)
-00000000000000ee: 02	movl	%ebp, %eax
-00000000000000f0: 04	addq	$8, %rsp
-00000000000000f4: 01	popq	%rbx
-00000000000000f5: 02	popq	%r12
-00000000000000f7: 02	popq	%r13
-00000000000000f9: 02	popq	%r14
-00000000000000fb: 02	popq	%r15
-00000000000000fd: 01	popq	%rbp
-00000000000000fe: 01	retq	
-00000000000000ff: 03	movq	%rax, %rdi
-0000000000000102: 05	callq	0x413500 <__clang_call_terminate>
-0000000000000107: 03	movq	%rax, %rdi
-000000000000010a: 05	callq	0x413500 <__clang_call_terminate>
-000000000000010f: 03	movq	%rax, %rbp
-0000000000000112: 05	cmpq	$23, 72(%rbx)
-0000000000000117: 02	je	0x4125a7 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > const&, BloombergLP::bslma::Allocator*)+0x127>
-0000000000000119: 04	movq	40(%rbx), %rsi
-000000000000011d: 04	movq	80(%rbx), %rdi
-0000000000000121: 03	movq	(%rdi), %rax
-0000000000000124: 03	callq	*24(%rax)
-0000000000000127: 08	movq	$-1, 64(%rbx)
-000000000000012f: 03	movq	(%r14), %rax
-0000000000000132: 03	movq	%r14, %rdi
-0000000000000135: 03	movq	%rbx, %rsi
-0000000000000138: 03	callq	*24(%rax)
-000000000000013b: 02	jmp	0x4125e4 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > const&, BloombergLP::bslma::Allocator*)+0x164>
-000000000000013d: 03	movq	%rax, %rdi
-0000000000000140: 05	callq	0x413500 <__clang_call_terminate>
-0000000000000145: 03	movq	%rax, %rdi
-0000000000000148: 05	callq	0x413500 <__clang_call_terminate>
-000000000000014d: 03	movq	%rax, %rbp
-0000000000000150: 08	movq	$0, 64(%rbx)
-0000000000000158: 03	movq	(%r14), %rax
-000000000000015b: 03	movq	%r14, %rdi
-000000000000015e: 03	movq	%rbx, %rsi
-0000000000000161: 03	callq	*24(%rax)
-0000000000000164: 03	movq	%rbp, %rdi
-0000000000000167: 05	callq	0x404320 <_Unwind_Resume@plt>
-000000000000016c: 03	movq	%rax, %rdi
-000000000000016f: 05	callq	0x413500 <__clang_call_terminate>
-0000000000000174: 10	nopw	%cs:(%rax,%rax)
-000000000000017e: 02	nop	
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%r13	;  2 bytes
+M0000000000000007:	pushq	%r12	;  2 bytes
+M0000000000000009:	pushq	%rbx	;  1 bytes
+M000000000000000a:	pushq	%rax	;  1 bytes
+M000000000000000b:	movq	%rcx, %r14	;  3 bytes
+M000000000000000e:	movq	%rdx, %r12	;  3 bytes
+M0000000000000011:	movq	%rsi, %r15	;  3 bytes
+M0000000000000014:	movq	%rdi, (%rsp)	;  4 bytes
+M0000000000000018:	cmpq	$23, 56(%rsi)	;  5 bytes
+M000000000000001d:	je	0x4124a5 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > const&, BloombergLP::bslma::Allocator*)+0x25>	;  2 bytes
+M000000000000001f:	movq	24(%r15), %r13	;  4 bytes
+M0000000000000023:	jmp	0x4124a9 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > const&, BloombergLP::bslma::Allocator*)+0x29>	;  2 bytes
+M0000000000000025:	leaq	24(%r15), %r13	;  4 bytes
+M0000000000000029:	movq	48(%r15), %rbp	;  4 bytes
+M000000000000002d:	testq	%r14, %r14	;  3 bytes
+M0000000000000030:	jne	0x4124c6 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > const&, BloombergLP::bslma::Allocator*)+0x46>	;  2 bytes
+M0000000000000032:	movq	2407479(%rip), %r14  # 65e0f0 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M0000000000000039:	testq	%r14, %r14	;  3 bytes
+M000000000000003c:	jne	0x4124c6 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > const&, BloombergLP::bslma::Allocator*)+0x46>	;  2 bytes
+M000000000000003e:	callq	0x416aa0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M0000000000000043:	movq	%rax, %r14	;  3 bytes
+M0000000000000046:	movq	(%r14), %rax	;  3 bytes
+M0000000000000049:	movl	$88, %esi	;  5 bytes
+M000000000000004e:	movq	%r14, %rdi	;  3 bytes
+M0000000000000051:	callq	*16(%rax)	;  3 bytes
+M0000000000000054:	movq	%rax, %rbx	;  3 bytes
+M0000000000000057:	movq	$4269568, (%rax)	;  7 bytes
+M000000000000005e:	movq	(%r12), %rax	;  4 bytes
+M0000000000000062:	movq	%rax, 8(%rbx)	;  4 bytes
+M0000000000000066:	movq	8(%r12), %rax	;  5 bytes
+M000000000000006b:	movq	%rax, 16(%rbx)	;  4 bytes
+M000000000000006f:	movq	16(%r12), %rax	;  5 bytes
+M0000000000000074:	movq	%rax, 24(%rbx)	;  4 bytes
+M0000000000000078:	movl	24(%r12), %eax	;  5 bytes
+M000000000000007d:	movl	%eax, 32(%rbx)	;  3 bytes
+M0000000000000080:	leaq	40(%rbx), %rdi	;  4 bytes
+M0000000000000084:	movq	$0, 40(%rbx)	;  8 bytes
+M000000000000008c:	movq	%r14, 80(%rbx)	;  4 bytes
+M0000000000000090:	movaps	181257(%rip), %xmm0  # 43e920 <__dso_handle+0x18>	;  7 bytes
+M0000000000000097:	movups	%xmm0, 64(%rbx)	;  4 bytes
+M000000000000009b:	movl	$4462395, %ecx	;  5 bytes
+M00000000000000a0:	movq	%r13, %rsi	;  3 bytes
+M00000000000000a3:	movq	%rbp, %rdx	;  3 bytes
+M00000000000000a6:	callq	0x41b140 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M00000000000000ab:	movl	$4291744, %edx	;  5 bytes
+M00000000000000b0:	movq	(%rsp), %rdi	;  4 bytes
+M00000000000000b4:	movq	%r15, %rsi	;  3 bytes
+M00000000000000b7:	movq	%rbx, %rcx	;  3 bytes
+M00000000000000ba:	callq	0x4186f0 <BloombergLP::bslmt::ThreadUtilImpl<BloombergLP::bslmt::Platform::PosixThreads>::create(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, void* (*)(void*), void*)>	;  5 bytes
+M00000000000000bf:	movl	%eax, %ebp	;  2 bytes
+M00000000000000c1:	testl	%eax, %eax	;  2 bytes
+M00000000000000c3:	je	0x41256e <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > const&, BloombergLP::bslma::Allocator*)+0xee>	;  2 bytes
+M00000000000000c5:	cmpq	$23, 72(%rbx)	;  5 bytes
+M00000000000000ca:	je	0x41255a <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > const&, BloombergLP::bslma::Allocator*)+0xda>	;  2 bytes
+M00000000000000cc:	movq	40(%rbx), %rsi	;  4 bytes
+M00000000000000d0:	movq	80(%rbx), %rdi	;  4 bytes
+M00000000000000d4:	movq	(%rdi), %rax	;  3 bytes
+M00000000000000d7:	callq	*24(%rax)	;  3 bytes
+M00000000000000da:	movq	$-1, 64(%rbx)	;  8 bytes
+M00000000000000e2:	movq	(%r14), %rax	;  3 bytes
+M00000000000000e5:	movq	%r14, %rdi	;  3 bytes
+M00000000000000e8:	movq	%rbx, %rsi	;  3 bytes
+M00000000000000eb:	callq	*24(%rax)	;  3 bytes
+M00000000000000ee:	movl	%ebp, %eax	;  2 bytes
+M00000000000000f0:	addq	$8, %rsp	;  4 bytes
+M00000000000000f4:	popq	%rbx	;  1 bytes
+M00000000000000f5:	popq	%r12	;  2 bytes
+M00000000000000f7:	popq	%r13	;  2 bytes
+M00000000000000f9:	popq	%r14	;  2 bytes
+M00000000000000fb:	popq	%r15	;  2 bytes
+M00000000000000fd:	popq	%rbp	;  1 bytes
+M00000000000000fe:	retq		;  1 bytes
+M00000000000000ff:	movq	%rax, %rdi	;  3 bytes
+M0000000000000102:	callq	0x413500 <__clang_call_terminate>	;  5 bytes
+M0000000000000107:	movq	%rax, %rdi	;  3 bytes
+M000000000000010a:	callq	0x413500 <__clang_call_terminate>	;  5 bytes
+M000000000000010f:	movq	%rax, %rbp	;  3 bytes
+M0000000000000112:	cmpq	$23, 72(%rbx)	;  5 bytes
+M0000000000000117:	je	0x4125a7 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > const&, BloombergLP::bslma::Allocator*)+0x127>	;  2 bytes
+M0000000000000119:	movq	40(%rbx), %rsi	;  4 bytes
+M000000000000011d:	movq	80(%rbx), %rdi	;  4 bytes
+M0000000000000121:	movq	(%rdi), %rax	;  3 bytes
+M0000000000000124:	callq	*24(%rax)	;  3 bytes
+M0000000000000127:	movq	$-1, 64(%rbx)	;  8 bytes
+M000000000000012f:	movq	(%r14), %rax	;  3 bytes
+M0000000000000132:	movq	%r14, %rdi	;  3 bytes
+M0000000000000135:	movq	%rbx, %rsi	;  3 bytes
+M0000000000000138:	callq	*24(%rax)	;  3 bytes
+M000000000000013b:	jmp	0x4125e4 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::Case13Type, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::Case13Type> >*, BloombergLP::bdlcc::FixedQueue<(anonymous namespace)::Case13Type*>*, int> > const&, BloombergLP::bslma::Allocator*)+0x164>	;  2 bytes
+M000000000000013d:	movq	%rax, %rdi	;  3 bytes
+M0000000000000140:	callq	0x413500 <__clang_call_terminate>	;  5 bytes
+M0000000000000145:	movq	%rax, %rdi	;  3 bytes
+M0000000000000148:	callq	0x413500 <__clang_call_terminate>	;  5 bytes
+M000000000000014d:	movq	%rax, %rbp	;  3 bytes
+M0000000000000150:	movq	$0, 64(%rbx)	;  8 bytes
+M0000000000000158:	movq	(%r14), %rax	;  3 bytes
+M000000000000015b:	movq	%r14, %rdi	;  3 bytes
+M000000000000015e:	movq	%rbx, %rsi	;  3 bytes
+M0000000000000161:	callq	*24(%rax)	;  3 bytes
+M0000000000000164:	movq	%rbp, %rdi	;  3 bytes
+M0000000000000167:	callq	0x404320 <_Unwind_Resume@plt>	;  5 bytes
+M000000000000016c:	movq	%rax, %rdi	;  3 bytes
+M000000000000016f:	callq	0x413500 <__clang_call_terminate>	;  5 bytes
+M0000000000000174:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000017e:	nop		;  2 bytes
 ```

@@ -1,179 +1,179 @@
 000000000041b870 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 02	pushq	%r13
-0000000000000007: 02	pushq	%r12
-0000000000000009: 01	pushq	%rbx
-000000000000000a: 04	subq	$72, %rsp
-000000000000000e: 03	movq	%rdx, %r12
-0000000000000011: 03	movq	%rsi, %r8
-0000000000000014: 03	movq	%rdi, %r14
-0000000000000017: 10	movabsq	$48038396025285290, %rdx
-0000000000000021: 03	movq	%rcx, %rdi
-0000000000000024: 03	subq	%r12, %rdi
-0000000000000027: 03	movq	%rdi, %rbx
-000000000000002a: 04	sarq	$7, %rbx
-000000000000002e: 10	movabsq	$-6148914691236517205, %rax
-0000000000000038: 04	imulq	%rax, %rbx
-000000000000003c: 04	movq	8(%r14), %rsi
-0000000000000040: 03	movq	%rsi, %r13
-0000000000000043: 03	subq	(%r14), %r13
-0000000000000046: 04	sarq	$7, %r13
-000000000000004a: 04	imulq	%rax, %r13
-000000000000004e: 03	movq	%rdx, %rax
-0000000000000051: 03	subq	%r13, %rax
-0000000000000054: 03	cmpq	%rax, %rbx
-0000000000000057: 06	ja	0x41ba66 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x1f6>
-000000000000005d: 04	leaq	8(%r14), %rbp
-0000000000000061: 03	addq	%rbx, %r13
-0000000000000064: 04	movq	16(%r14), %rax
-0000000000000068: 03	cmpq	%rax, %r13
-000000000000006b: 06	jbe	0x41ba06 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x196>
-0000000000000071: 05	movq	%rbp, 40(%rsp)
-0000000000000076: 05	movq	%r8, 48(%rsp)
-000000000000007b: 05	movq	%rcx, 56(%rsp)
-0000000000000080: 03	movq	%r13, %rdi
-0000000000000083: 03	movq	%rax, %rsi
-0000000000000086: 05	callq	0x42acc0 <bsl::Vector_Util::computeNewCapacity(unsigned long, unsigned long, unsigned long)>
-000000000000008b: 03	movq	%rax, %r15
-000000000000008e: 04	movq	24(%r14), %rdi
-0000000000000092: 03	xorps	%xmm0, %xmm0
-0000000000000095: 04	movaps	%xmm0, (%rsp)
-0000000000000099: 09	movq	$0, 16(%rsp)
-00000000000000a2: 05	movq	%rdi, 24(%rsp)
-00000000000000a7: 04	shlq	$7, %rax
-00000000000000ab: 04	leaq	(%rax,%rax,2), %rsi
-00000000000000af: 03	movq	(%rdi), %rax
-00000000000000b2: 03	callq	*16(%rax)
-00000000000000b5: 03	movq	%rax, %rbp
-00000000000000b8: 05	movq	%rax, 8(%rsp)
-00000000000000bd: 04	movq	%rax, (%rsp)
-00000000000000c1: 05	movq	%r15, 16(%rsp)
-00000000000000c6: 03	movq	(%r14), %rdx
-00000000000000c9: 04	movq	8(%r14), %r8
-00000000000000cd: 04	movq	24(%r14), %rax
-00000000000000d1: 05	movq	%rax, 64(%rsp)
-00000000000000d6: 04	subq	$8, %rsp
-00000000000000da: 05	leaq	72(%rsp), %rax
-00000000000000df: 03	movq	%rbp, %rdi
-00000000000000e2: 05	movq	48(%rsp), %rsi
-00000000000000e7: 05	movq	56(%rsp), %rcx
-00000000000000ec: 03	movq	%r12, %r9
-00000000000000ef: 01	pushq	%rax
-00000000000000f0: 01	pushq	%rbx
-00000000000000f1: 04	pushq	80(%rsp)
-00000000000000f5: 05	callq	0x41bb10 <void BloombergLP::bslalg::ArrayPrimitives::destructiveMoveAndInsert<bsl::allocator<BloombergLP::balb::Choice3>, BloombergLP::balb::Choice3 const*>(bsl::allocator_traits<bsl::allocator<BloombergLP::balb::Choice3> >::pointer, bsl::allocator_traits<bsl::allocator<BloombergLP::balb::Choice3> >::pointer*, bsl::allocator_traits<bsl::allocator<BloombergLP::balb::Choice3> >::pointer, bsl::allocator_traits<bsl::allocator<BloombergLP::balb::Choice3> >::pointer, bsl::allocator_traits<bsl::allocator<BloombergLP::balb::Choice3> >::pointer, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, unsigned long, bsl::allocator<BloombergLP::balb::Choice3>)>
-00000000000000fa: 04	addq	$32, %rsp
-00000000000000fe: 05	leaq	(%r13,%r13,2), %rax
-0000000000000103: 04	shlq	$7, %rax
-0000000000000107: 03	addq	%rax, %rbp
-000000000000010a: 05	movq	%rbp, 8(%rsp)
-000000000000010f: 03	movq	%rsp, %rsi
-0000000000000112: 03	movq	%r14, %rdi
-0000000000000115: 05	callq	0x42acf0 <bsl::Vector_Util::swap(void*, void*)>
-000000000000011a: 04	movq	(%rsp), %rbx
-000000000000011e: 03	testq	%rbx, %rbx
-0000000000000121: 06	je	0x41ba57 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x1e7>
-0000000000000127: 05	movq	8(%rsp), %rbp
-000000000000012c: 03	cmpq	%rbp, %rbx
-000000000000012f: 02	jne	0x41b9ce <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x15e>
-0000000000000131: 05	jmp	0x41ba49 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x1d9>
-0000000000000136: 10	nopw	%cs:(%rax,%rax)
-0000000000000140: 08	movq	$-1, 24(%rbx)
-0000000000000148: 10	movl	$4294967295, 368(%rbx)
-0000000000000152: 07	addq	$384, %rbx
-0000000000000159: 03	cmpq	%rbx, %rbp
-000000000000015c: 02	je	0x41ba45 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x1d5>
-000000000000015e: 06	movl	368(%rbx), %eax
-0000000000000164: 03	cmpl	$2, %eax
-0000000000000167: 02	je	0x41b9f0 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x180>
-0000000000000169: 02	testl	%eax, %eax
-000000000000016b: 02	jne	0x41b9b8 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x148>
-000000000000016d: 03	movq	%rbx, %rdi
-0000000000000170: 05	callq	0x4093b0 <BloombergLP::balb::Sequence6::~Sequence6()>
-0000000000000175: 02	jmp	0x41b9b8 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x148>
-0000000000000177: 09	nopw	(%rax,%rax)
-0000000000000180: 05	cmpq	$23, 32(%rbx)
-0000000000000185: 02	je	0x41b9b0 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x140>
-0000000000000187: 03	movq	(%rbx), %rsi
-000000000000018a: 04	movq	40(%rbx), %rdi
-000000000000018e: 03	movq	(%rdi), %rax
-0000000000000191: 03	callq	*24(%rax)
-0000000000000194: 02	jmp	0x41b9b0 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x140>
-0000000000000196: 03	testq	%rdi, %rdi
-0000000000000199: 02	je	0x41ba34 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x1c4>
-000000000000019b: 04	movq	24(%r14), %rax
-000000000000019f: 04	movq	%rax, (%rsp)
-00000000000001a3: 04	subq	$8, %rsp
-00000000000001a7: 05	leaq	8(%rsp), %r9
-00000000000001ac: 03	movq	%r8, %rdi
-00000000000001af: 03	movq	%r12, %rdx
-00000000000001b2: 03	movq	%rbx, %r8
-00000000000001b5: 02	pushq	$0
-00000000000001b7: 05	callq	0x41bc50 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::balb::Choice3, BloombergLP::balb::Choice3 const*, bsl::allocator<BloombergLP::balb::Choice3> >(BloombergLP::balb::Choice3*, BloombergLP::balb::Choice3*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, unsigned long, bsl::allocator<BloombergLP::balb::Choice3>, BloombergLP::bslmf::MetaInt<1>*)>
-00000000000001bc: 04	addq	$16, %rsp
-00000000000001c0: 04	movq	(%rbp), %rsi
-00000000000001c4: 04	leaq	(%rbx,%rbx,2), %rax
-00000000000001c8: 04	shlq	$7, %rax
-00000000000001cc: 03	addq	%rsi, %rax
-00000000000001cf: 04	movq	%rax, (%rbp)
-00000000000001d3: 02	jmp	0x41ba57 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x1e7>
-00000000000001d5: 04	movq	(%rsp), %rbx
-00000000000001d9: 05	movq	24(%rsp), %rdi
-00000000000001de: 03	movq	(%rdi), %rax
-00000000000001e1: 03	movq	%rbx, %rsi
-00000000000001e4: 03	callq	*24(%rax)
-00000000000001e7: 04	addq	$72, %rsp
-00000000000001eb: 01	popq	%rbx
-00000000000001ec: 02	popq	%r12
-00000000000001ee: 02	popq	%r13
-00000000000001f0: 02	popq	%r14
-00000000000001f2: 02	popq	%r15
-00000000000001f4: 01	popq	%rbp
-00000000000001f5: 01	retq	
-00000000000001f6: 05	movl	$4488859, %edi
-00000000000001fb: 05	callq	0x420f10 <BloombergLP::bslstl::StdExceptUtil::throwLengthError(char const*)>
-0000000000000200: 03	movq	%rax, %rdi
-0000000000000203: 05	callq	0x4043c0 <__clang_call_terminate>
-0000000000000208: 03	movq	%rax, %rdi
-000000000000020b: 05	callq	0x4043c0 <__clang_call_terminate>
-0000000000000210: 03	movq	%rax, %r14
-0000000000000213: 04	movq	(%rsp), %rbp
-0000000000000217: 03	testq	%rbp, %rbp
-000000000000021a: 02	je	0x41baf8 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x288>
-000000000000021c: 05	movq	8(%rsp), %rbx
-0000000000000221: 03	cmpq	%rbx, %rbp
-0000000000000224: 02	jne	0x41bab6 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x246>
-0000000000000226: 02	jmp	0x41baea <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x27a>
-0000000000000228: 08	movq	$-1, 24(%rbp)
-0000000000000230: 10	movl	$4294967295, 368(%rbp)
-000000000000023a: 07	addq	$384, %rbp
-0000000000000241: 03	cmpq	%rbp, %rbx
-0000000000000244: 02	je	0x41bae6 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x276>
-0000000000000246: 06	movl	368(%rbp), %eax
-000000000000024c: 03	cmpl	$2, %eax
-000000000000024f: 02	je	0x41bacf <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x25f>
-0000000000000251: 02	testl	%eax, %eax
-0000000000000253: 02	jne	0x41baa0 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x230>
-0000000000000255: 03	movq	%rbp, %rdi
-0000000000000258: 05	callq	0x4093b0 <BloombergLP::balb::Sequence6::~Sequence6()>
-000000000000025d: 02	jmp	0x41baa0 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x230>
-000000000000025f: 05	cmpq	$23, 32(%rbp)
-0000000000000264: 02	je	0x41ba98 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x228>
-0000000000000266: 04	movq	(%rbp), %rsi
-000000000000026a: 04	movq	40(%rbp), %rdi
-000000000000026e: 03	movq	(%rdi), %rax
-0000000000000271: 03	callq	*24(%rax)
-0000000000000274: 02	jmp	0x41ba98 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x228>
-0000000000000276: 04	movq	(%rsp), %rbp
-000000000000027a: 05	movq	24(%rsp), %rdi
-000000000000027f: 03	movq	(%rdi), %rax
-0000000000000282: 03	movq	%rbp, %rsi
-0000000000000285: 03	callq	*24(%rax)
-0000000000000288: 03	movq	%r14, %rdi
-000000000000028b: 05	callq	0x4039f0 <_Unwind_Resume@plt>
-0000000000000290: 03	movq	%rax, %rdi
-0000000000000293: 05	callq	0x4043c0 <__clang_call_terminate>
-0000000000000298: 03	movq	%rax, %rdi
-000000000000029b: 05	callq	0x4043c0 <__clang_call_terminate>
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%r13	;  2 bytes
+M0000000000000007:	pushq	%r12	;  2 bytes
+M0000000000000009:	pushq	%rbx	;  1 bytes
+M000000000000000a:	subq	$72, %rsp	;  4 bytes
+M000000000000000e:	movq	%rdx, %r12	;  3 bytes
+M0000000000000011:	movq	%rsi, %r8	;  3 bytes
+M0000000000000014:	movq	%rdi, %r14	;  3 bytes
+M0000000000000017:	movabsq	$48038396025285290, %rdx	; 10 bytes
+M0000000000000021:	movq	%rcx, %rdi	;  3 bytes
+M0000000000000024:	subq	%r12, %rdi	;  3 bytes
+M0000000000000027:	movq	%rdi, %rbx	;  3 bytes
+M000000000000002a:	sarq	$7, %rbx	;  4 bytes
+M000000000000002e:	movabsq	$-6148914691236517205, %rax	; 10 bytes
+M0000000000000038:	imulq	%rax, %rbx	;  4 bytes
+M000000000000003c:	movq	8(%r14), %rsi	;  4 bytes
+M0000000000000040:	movq	%rsi, %r13	;  3 bytes
+M0000000000000043:	subq	(%r14), %r13	;  3 bytes
+M0000000000000046:	sarq	$7, %r13	;  4 bytes
+M000000000000004a:	imulq	%rax, %r13	;  4 bytes
+M000000000000004e:	movq	%rdx, %rax	;  3 bytes
+M0000000000000051:	subq	%r13, %rax	;  3 bytes
+M0000000000000054:	cmpq	%rax, %rbx	;  3 bytes
+M0000000000000057:	ja	0x41ba66 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x1f6>	;  6 bytes
+M000000000000005d:	leaq	8(%r14), %rbp	;  4 bytes
+M0000000000000061:	addq	%rbx, %r13	;  3 bytes
+M0000000000000064:	movq	16(%r14), %rax	;  4 bytes
+M0000000000000068:	cmpq	%rax, %r13	;  3 bytes
+M000000000000006b:	jbe	0x41ba06 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x196>	;  6 bytes
+M0000000000000071:	movq	%rbp, 40(%rsp)	;  5 bytes
+M0000000000000076:	movq	%r8, 48(%rsp)	;  5 bytes
+M000000000000007b:	movq	%rcx, 56(%rsp)	;  5 bytes
+M0000000000000080:	movq	%r13, %rdi	;  3 bytes
+M0000000000000083:	movq	%rax, %rsi	;  3 bytes
+M0000000000000086:	callq	0x42acc0 <bsl::Vector_Util::computeNewCapacity(unsigned long, unsigned long, unsigned long)>	;  5 bytes
+M000000000000008b:	movq	%rax, %r15	;  3 bytes
+M000000000000008e:	movq	24(%r14), %rdi	;  4 bytes
+M0000000000000092:	xorps	%xmm0, %xmm0	;  3 bytes
+M0000000000000095:	movaps	%xmm0, (%rsp)	;  4 bytes
+M0000000000000099:	movq	$0, 16(%rsp)	;  9 bytes
+M00000000000000a2:	movq	%rdi, 24(%rsp)	;  5 bytes
+M00000000000000a7:	shlq	$7, %rax	;  4 bytes
+M00000000000000ab:	leaq	(%rax,%rax,2), %rsi	;  4 bytes
+M00000000000000af:	movq	(%rdi), %rax	;  3 bytes
+M00000000000000b2:	callq	*16(%rax)	;  3 bytes
+M00000000000000b5:	movq	%rax, %rbp	;  3 bytes
+M00000000000000b8:	movq	%rax, 8(%rsp)	;  5 bytes
+M00000000000000bd:	movq	%rax, (%rsp)	;  4 bytes
+M00000000000000c1:	movq	%r15, 16(%rsp)	;  5 bytes
+M00000000000000c6:	movq	(%r14), %rdx	;  3 bytes
+M00000000000000c9:	movq	8(%r14), %r8	;  4 bytes
+M00000000000000cd:	movq	24(%r14), %rax	;  4 bytes
+M00000000000000d1:	movq	%rax, 64(%rsp)	;  5 bytes
+M00000000000000d6:	subq	$8, %rsp	;  4 bytes
+M00000000000000da:	leaq	72(%rsp), %rax	;  5 bytes
+M00000000000000df:	movq	%rbp, %rdi	;  3 bytes
+M00000000000000e2:	movq	48(%rsp), %rsi	;  5 bytes
+M00000000000000e7:	movq	56(%rsp), %rcx	;  5 bytes
+M00000000000000ec:	movq	%r12, %r9	;  3 bytes
+M00000000000000ef:	pushq	%rax	;  1 bytes
+M00000000000000f0:	pushq	%rbx	;  1 bytes
+M00000000000000f1:	pushq	80(%rsp)	;  4 bytes
+M00000000000000f5:	callq	0x41bb10 <void BloombergLP::bslalg::ArrayPrimitives::destructiveMoveAndInsert<bsl::allocator<BloombergLP::balb::Choice3>, BloombergLP::balb::Choice3 const*>(bsl::allocator_traits<bsl::allocator<BloombergLP::balb::Choice3> >::pointer, bsl::allocator_traits<bsl::allocator<BloombergLP::balb::Choice3> >::pointer*, bsl::allocator_traits<bsl::allocator<BloombergLP::balb::Choice3> >::pointer, bsl::allocator_traits<bsl::allocator<BloombergLP::balb::Choice3> >::pointer, bsl::allocator_traits<bsl::allocator<BloombergLP::balb::Choice3> >::pointer, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, unsigned long, bsl::allocator<BloombergLP::balb::Choice3>)>	;  5 bytes
+M00000000000000fa:	addq	$32, %rsp	;  4 bytes
+M00000000000000fe:	leaq	(%r13,%r13,2), %rax	;  5 bytes
+M0000000000000103:	shlq	$7, %rax	;  4 bytes
+M0000000000000107:	addq	%rax, %rbp	;  3 bytes
+M000000000000010a:	movq	%rbp, 8(%rsp)	;  5 bytes
+M000000000000010f:	movq	%rsp, %rsi	;  3 bytes
+M0000000000000112:	movq	%r14, %rdi	;  3 bytes
+M0000000000000115:	callq	0x42acf0 <bsl::Vector_Util::swap(void*, void*)>	;  5 bytes
+M000000000000011a:	movq	(%rsp), %rbx	;  4 bytes
+M000000000000011e:	testq	%rbx, %rbx	;  3 bytes
+M0000000000000121:	je	0x41ba57 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x1e7>	;  6 bytes
+M0000000000000127:	movq	8(%rsp), %rbp	;  5 bytes
+M000000000000012c:	cmpq	%rbp, %rbx	;  3 bytes
+M000000000000012f:	jne	0x41b9ce <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x15e>	;  2 bytes
+M0000000000000131:	jmp	0x41ba49 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x1d9>	;  5 bytes
+M0000000000000136:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M0000000000000140:	movq	$-1, 24(%rbx)	;  8 bytes
+M0000000000000148:	movl	$4294967295, 368(%rbx)	; 10 bytes
+M0000000000000152:	addq	$384, %rbx	;  7 bytes
+M0000000000000159:	cmpq	%rbx, %rbp	;  3 bytes
+M000000000000015c:	je	0x41ba45 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x1d5>	;  2 bytes
+M000000000000015e:	movl	368(%rbx), %eax	;  6 bytes
+M0000000000000164:	cmpl	$2, %eax	;  3 bytes
+M0000000000000167:	je	0x41b9f0 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x180>	;  2 bytes
+M0000000000000169:	testl	%eax, %eax	;  2 bytes
+M000000000000016b:	jne	0x41b9b8 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x148>	;  2 bytes
+M000000000000016d:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000170:	callq	0x4093b0 <BloombergLP::balb::Sequence6::~Sequence6()>	;  5 bytes
+M0000000000000175:	jmp	0x41b9b8 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x148>	;  2 bytes
+M0000000000000177:	nopw	(%rax,%rax)	;  9 bytes
+M0000000000000180:	cmpq	$23, 32(%rbx)	;  5 bytes
+M0000000000000185:	je	0x41b9b0 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x140>	;  2 bytes
+M0000000000000187:	movq	(%rbx), %rsi	;  3 bytes
+M000000000000018a:	movq	40(%rbx), %rdi	;  4 bytes
+M000000000000018e:	movq	(%rdi), %rax	;  3 bytes
+M0000000000000191:	callq	*24(%rax)	;  3 bytes
+M0000000000000194:	jmp	0x41b9b0 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x140>	;  2 bytes
+M0000000000000196:	testq	%rdi, %rdi	;  3 bytes
+M0000000000000199:	je	0x41ba34 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x1c4>	;  2 bytes
+M000000000000019b:	movq	24(%r14), %rax	;  4 bytes
+M000000000000019f:	movq	%rax, (%rsp)	;  4 bytes
+M00000000000001a3:	subq	$8, %rsp	;  4 bytes
+M00000000000001a7:	leaq	8(%rsp), %r9	;  5 bytes
+M00000000000001ac:	movq	%r8, %rdi	;  3 bytes
+M00000000000001af:	movq	%r12, %rdx	;  3 bytes
+M00000000000001b2:	movq	%rbx, %r8	;  3 bytes
+M00000000000001b5:	pushq	$0	;  2 bytes
+M00000000000001b7:	callq	0x41bc50 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::balb::Choice3, BloombergLP::balb::Choice3 const*, bsl::allocator<BloombergLP::balb::Choice3> >(BloombergLP::balb::Choice3*, BloombergLP::balb::Choice3*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, unsigned long, bsl::allocator<BloombergLP::balb::Choice3>, BloombergLP::bslmf::MetaInt<1>*)>	;  5 bytes
+M00000000000001bc:	addq	$16, %rsp	;  4 bytes
+M00000000000001c0:	movq	(%rbp), %rsi	;  4 bytes
+M00000000000001c4:	leaq	(%rbx,%rbx,2), %rax	;  4 bytes
+M00000000000001c8:	shlq	$7, %rax	;  4 bytes
+M00000000000001cc:	addq	%rsi, %rax	;  3 bytes
+M00000000000001cf:	movq	%rax, (%rbp)	;  4 bytes
+M00000000000001d3:	jmp	0x41ba57 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x1e7>	;  2 bytes
+M00000000000001d5:	movq	(%rsp), %rbx	;  4 bytes
+M00000000000001d9:	movq	24(%rsp), %rdi	;  5 bytes
+M00000000000001de:	movq	(%rdi), %rax	;  3 bytes
+M00000000000001e1:	movq	%rbx, %rsi	;  3 bytes
+M00000000000001e4:	callq	*24(%rax)	;  3 bytes
+M00000000000001e7:	addq	$72, %rsp	;  4 bytes
+M00000000000001eb:	popq	%rbx	;  1 bytes
+M00000000000001ec:	popq	%r12	;  2 bytes
+M00000000000001ee:	popq	%r13	;  2 bytes
+M00000000000001f0:	popq	%r14	;  2 bytes
+M00000000000001f2:	popq	%r15	;  2 bytes
+M00000000000001f4:	popq	%rbp	;  1 bytes
+M00000000000001f5:	retq		;  1 bytes
+M00000000000001f6:	movl	$4488859, %edi	;  5 bytes
+M00000000000001fb:	callq	0x420f10 <BloombergLP::bslstl::StdExceptUtil::throwLengthError(char const*)>	;  5 bytes
+M0000000000000200:	movq	%rax, %rdi	;  3 bytes
+M0000000000000203:	callq	0x4043c0 <__clang_call_terminate>	;  5 bytes
+M0000000000000208:	movq	%rax, %rdi	;  3 bytes
+M000000000000020b:	callq	0x4043c0 <__clang_call_terminate>	;  5 bytes
+M0000000000000210:	movq	%rax, %r14	;  3 bytes
+M0000000000000213:	movq	(%rsp), %rbp	;  4 bytes
+M0000000000000217:	testq	%rbp, %rbp	;  3 bytes
+M000000000000021a:	je	0x41baf8 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x288>	;  2 bytes
+M000000000000021c:	movq	8(%rsp), %rbx	;  5 bytes
+M0000000000000221:	cmpq	%rbx, %rbp	;  3 bytes
+M0000000000000224:	jne	0x41bab6 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x246>	;  2 bytes
+M0000000000000226:	jmp	0x41baea <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x27a>	;  2 bytes
+M0000000000000228:	movq	$-1, 24(%rbp)	;  8 bytes
+M0000000000000230:	movl	$4294967295, 368(%rbp)	; 10 bytes
+M000000000000023a:	addq	$384, %rbp	;  7 bytes
+M0000000000000241:	cmpq	%rbp, %rbx	;  3 bytes
+M0000000000000244:	je	0x41bae6 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x276>	;  2 bytes
+M0000000000000246:	movl	368(%rbp), %eax	;  6 bytes
+M000000000000024c:	cmpl	$2, %eax	;  3 bytes
+M000000000000024f:	je	0x41bacf <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x25f>	;  2 bytes
+M0000000000000251:	testl	%eax, %eax	;  2 bytes
+M0000000000000253:	jne	0x41baa0 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x230>	;  2 bytes
+M0000000000000255:	movq	%rbp, %rdi	;  3 bytes
+M0000000000000258:	callq	0x4093b0 <BloombergLP::balb::Sequence6::~Sequence6()>	;  5 bytes
+M000000000000025d:	jmp	0x41baa0 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x230>	;  2 bytes
+M000000000000025f:	cmpq	$23, 32(%rbp)	;  5 bytes
+M0000000000000264:	je	0x41ba98 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x228>	;  2 bytes
+M0000000000000266:	movq	(%rbp), %rsi	;  4 bytes
+M000000000000026a:	movq	40(%rbp), %rdi	;  4 bytes
+M000000000000026e:	movq	(%rdi), %rax	;  3 bytes
+M0000000000000271:	callq	*24(%rax)	;  3 bytes
+M0000000000000274:	jmp	0x41ba98 <void bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::privateInsert<BloombergLP::balb::Choice3 const*>(BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, std::__1::forward_iterator_tag const&)+0x228>	;  2 bytes
+M0000000000000276:	movq	(%rsp), %rbp	;  4 bytes
+M000000000000027a:	movq	24(%rsp), %rdi	;  5 bytes
+M000000000000027f:	movq	(%rdi), %rax	;  3 bytes
+M0000000000000282:	movq	%rbp, %rsi	;  3 bytes
+M0000000000000285:	callq	*24(%rax)	;  3 bytes
+M0000000000000288:	movq	%r14, %rdi	;  3 bytes
+M000000000000028b:	callq	0x4039f0 <_Unwind_Resume@plt>	;  5 bytes
+M0000000000000290:	movq	%rax, %rdi	;  3 bytes
+M0000000000000293:	callq	0x4043c0 <__clang_call_terminate>	;  5 bytes
+M0000000000000298:	movq	%rax, %rdi	;  3 bytes
+M000000000000029b:	callq	0x4043c0 <__clang_call_terminate>	;  5 bytes

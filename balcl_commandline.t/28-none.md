@@ -2,164 +2,164 @@
 
 ```nasm
 000000000046e570 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 02	pushq	%r13
-0000000000000007: 02	pushq	%r12
-0000000000000009: 01	pushq	%rbx
-000000000000000a: 04	subq	$56, %rsp
-000000000000000e: 03	movq	%rcx, %r13
-0000000000000011: 03	movq	%rdx, %r15
-0000000000000014: 03	movq	%rsi, %r14
-0000000000000017: 03	movq	%rdi, %r12
-000000000000001a: 03	movq	%rsi, %rdi
-000000000000001d: 05	callq	0x465850 <BloombergLP::balcl::OptionValue::type() const>
-0000000000000022: 03	leal	-8(%rax), %ecx
-0000000000000025: 02	xorl	%ebp, %ebp
-0000000000000027: 03	cmpl	$10, %eax
-000000000000002a: 03	cmovgel	%ecx, %ebp
-000000000000002d: 05	cmpq	$23, 32(%r13)
-0000000000000032: 03	movq	%r13, %rsi
-0000000000000035: 02	je	0x46e5ab <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x3b>
-0000000000000037: 04	movq	(%r13), %rsi
-000000000000003b: 05	leaq	8(%rsp), %rdi
-0000000000000040: 02	movl	%ebp, %edx
-0000000000000042: 05	callq	0x46ff90 <BloombergLP::balcl::(anonymous namespace)::u::parseValue(void*, char const*, BloombergLP::balcl::OptionType::Enum)>
-0000000000000047: 02	testb	%al, %al
-0000000000000049: 02	je	0x46e606 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x96>
-000000000000004b: 05	movq	80(%r12), %rax
-0000000000000050: 03	testq	%rax, %rax
-0000000000000053: 02	je	0x46e5de <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x6e>
-0000000000000055: 04	addq	$16, %r12
-0000000000000059: 05	leaq	8(%rsp), %rsi
-000000000000005e: 03	movq	%r12, %rdi
-0000000000000061: 03	movq	%r15, %rdx
-0000000000000064: 02	callq	*%rax
-0000000000000066: 02	testb	%al, %al
-0000000000000068: 06	je	0x46e682 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x112>
-000000000000006e: 04	movl	64(%r14), %eax
-0000000000000072: 02	decl	%eax
-0000000000000074: 03	cmpl	$19, %eax
-0000000000000077: 06	ja	0x46e774 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x204>
-000000000000007d: 07	jmpq	*4916912(,%rax,8)
-0000000000000084: 04	leaq	32(%r14), %rax
-0000000000000088: 03	cmpb	$0, (%rax)
-000000000000008b: 06	jne	0x46e756 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x1e6>
-0000000000000091: 05	jmp	0x46e6c3 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x153>
-0000000000000096: 03	addl	$-2, %ebp
-0000000000000099: 05	movl	$4931911, %ebx
-000000000000009e: 03	cmpl	$7, %ebp
-00000000000000a1: 02	ja	0x46e61e <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0xae>
-00000000000000a3: 03	movslq	%ebp, %rax
-00000000000000a6: 08	movq	4931624(,%rax,8), %rbx
-00000000000000ae: 03	movq	%rbx, %rdi
-00000000000000b1: 05	callq	0x4046c0 <strlen@plt>
-00000000000000b6: 03	movq	%r15, %rdi
-00000000000000b9: 03	movq	%rbx, %rsi
-00000000000000bc: 03	movq	%rax, %rdx
-00000000000000bf: 05	callq	0x455480 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>
-00000000000000c4: 05	movl	$4931773, %esi
-00000000000000c9: 05	movl	$33, %edx
-00000000000000ce: 03	movq	%rax, %rdi
-00000000000000d1: 05	callq	0x455480 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>
-00000000000000d6: 03	movq	%rax, %rdi
-00000000000000d9: 03	movq	%r13, %rsi
-00000000000000dc: 05	callq	0x44f6f0 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& bsl::operator<<<char, std::__1::char_traits<char>, bsl::allocator<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)>
-00000000000000e1: 05	movl	$4915277, %esi
-00000000000000e6: 05	movl	$1, %edx
-00000000000000eb: 03	movq	%rax, %rdi
-00000000000000ee: 05	callq	0x455480 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>
-00000000000000f3: 05	movb	$10, 16(%rsp)
-00000000000000f8: 05	leaq	16(%rsp), %rsi
-00000000000000fd: 05	movl	$1, %edx
-0000000000000102: 03	movq	%rax, %rdi
-0000000000000105: 05	callq	0x455480 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>
-000000000000010a: 03	movq	%rax, %rdi
-000000000000010d: 05	callq	0x404980 <_ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEE5flushEv@plt>
-0000000000000112: 02	xorl	%eax, %eax
-0000000000000114: 05	jmp	0x46e765 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x1f5>
-0000000000000119: 04	leaq	8(%r14), %rax
-000000000000011d: 03	cmpb	$0, (%rax)
-0000000000000120: 06	jne	0x46e756 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x1e6>
-0000000000000126: 02	jmp	0x46e6c3 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x153>
-0000000000000128: 04	leaq	1(%r14), %rax
-000000000000012c: 03	cmpb	$0, (%rax)
-000000000000012f: 06	jne	0x46e756 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x1e6>
-0000000000000135: 02	jmp	0x46e6c3 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x153>
-0000000000000137: 04	leaq	4(%r14), %rax
-000000000000013b: 03	cmpb	$0, (%rax)
-000000000000013e: 06	jne	0x46e756 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x1e6>
-0000000000000144: 02	jmp	0x46e6c3 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x153>
-0000000000000146: 04	leaq	48(%r14), %rax
-000000000000014a: 03	cmpb	$0, (%rax)
-000000000000014d: 06	jne	0x46e756 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x1e6>
-0000000000000153: 03	xorps	%xmm0, %xmm0
-0000000000000156: 05	movaps	%xmm0, 16(%rsp)
-000000000000015b: 09	movq	$0, 32(%rsp)
-0000000000000164: 07	movq	2717005(%rip), %rax  # 705c28 <BloombergLP::bslma::Default::s_defaultAllocator>
-000000000000016b: 03	testq	%rax, %rax
-000000000000016e: 02	jne	0x46e6e5 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x175>
-0000000000000170: 05	callq	0x47ce20 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-0000000000000175: 05	movq	%rax, 40(%rsp)
-000000000000017a: 04	movq	40(%r14), %rbx
-000000000000017e: 05	cmpb	$0, 32(%r14)
-0000000000000183: 02	je	0x46e70c <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x19c>
-0000000000000185: 05	movb	$0, 32(%r14)
-000000000000018a: 03	movq	(%r14), %rsi
-000000000000018d: 03	testq	%rsi, %rsi
-0000000000000190: 02	je	0x46e70c <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x19c>
-0000000000000192: 04	movq	24(%r14), %rdi
-0000000000000196: 03	movq	(%rdi), %rax
-0000000000000199: 03	callq	*24(%rax)
-000000000000019c: 03	testq	%rbx, %rbx
-000000000000019f: 02	jne	0x46e725 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x1b5>
-00000000000001a1: 07	movq	2716944(%rip), %rbx  # 705c28 <BloombergLP::bslma::Default::s_defaultAllocator>
-00000000000001a8: 03	testq	%rbx, %rbx
-00000000000001ab: 02	jne	0x46e725 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x1b5>
-00000000000001ad: 05	callq	0x47ce20 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-00000000000001b2: 03	movq	%rax, %rbx
-00000000000001b5: 05	movq	%rbx, 48(%rsp)
-00000000000001ba: 05	leaq	16(%rsp), %rsi
-00000000000001bf: 05	leaq	48(%rsp), %rdx
-00000000000001c4: 03	movq	%r14, %rdi
-00000000000001c7: 05	callq	0x49bef0 <bsl::vector<double, bsl::allocator<double> >::vector(bsl::vector<double, bsl::allocator<double> > const&, bsl::allocator<double> const&)>
-00000000000001cc: 05	movb	$1, 32(%r14)
-00000000000001d1: 05	movq	16(%rsp), %rsi
-00000000000001d6: 03	testq	%rsi, %rsi
-00000000000001d9: 02	je	0x46e756 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x1e6>
-00000000000001db: 05	movq	40(%rsp), %rdi
-00000000000001e0: 03	movq	(%rdi), %rax
-00000000000001e3: 03	callq	*24(%rax)
-00000000000001e6: 05	leaq	8(%rsp), %rsi
-00000000000001eb: 03	movq	%r14, %rdi
-00000000000001ee: 05	callq	0x49c880 <bsl::vector<double, bsl::allocator<double> >::push_back(double const&)>
-00000000000001f3: 02	movb	$1, %al
-00000000000001f5: 04	addq	$56, %rsp
-00000000000001f9: 01	popq	%rbx
-00000000000001fa: 02	popq	%r12
-00000000000001fc: 02	popq	%r13
-00000000000001fe: 02	popq	%r14
-0000000000000200: 02	popq	%r15
-0000000000000202: 01	popq	%rbp
-0000000000000203: 01	retq	
-0000000000000204: 02	ud2	
-0000000000000206: 03	movq	%rax, %rdi
-0000000000000209: 05	callq	0x450f10 <__clang_call_terminate>
-000000000000020e: 03	movq	%rax, %rdi
-0000000000000211: 05	callq	0x450f10 <__clang_call_terminate>
-0000000000000216: 03	movq	%rax, %rdi
-0000000000000219: 05	callq	0x450f10 <__clang_call_terminate>
-000000000000021e: 03	movq	%rax, %rbx
-0000000000000221: 05	movq	16(%rsp), %rsi
-0000000000000226: 03	testq	%rsi, %rsi
-0000000000000229: 02	je	0x46e7a6 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x236>
-000000000000022b: 05	movq	40(%rsp), %rdi
-0000000000000230: 03	movq	(%rdi), %rax
-0000000000000233: 03	callq	*24(%rax)
-0000000000000236: 03	movq	%rbx, %rdi
-0000000000000239: 05	callq	0x404c00 <_Unwind_Resume@plt>
-000000000000023e: 03	movq	%rax, %rdi
-0000000000000241: 05	callq	0x450f10 <__clang_call_terminate>
-0000000000000246: 10	nopw	%cs:(%rax,%rax)
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%r13	;  2 bytes
+M0000000000000007:	pushq	%r12	;  2 bytes
+M0000000000000009:	pushq	%rbx	;  1 bytes
+M000000000000000a:	subq	$56, %rsp	;  4 bytes
+M000000000000000e:	movq	%rcx, %r13	;  3 bytes
+M0000000000000011:	movq	%rdx, %r15	;  3 bytes
+M0000000000000014:	movq	%rsi, %r14	;  3 bytes
+M0000000000000017:	movq	%rdi, %r12	;  3 bytes
+M000000000000001a:	movq	%rsi, %rdi	;  3 bytes
+M000000000000001d:	callq	0x465850 <BloombergLP::balcl::OptionValue::type() const>	;  5 bytes
+M0000000000000022:	leal	-8(%rax), %ecx	;  3 bytes
+M0000000000000025:	xorl	%ebp, %ebp	;  2 bytes
+M0000000000000027:	cmpl	$10, %eax	;  3 bytes
+M000000000000002a:	cmovgel	%ecx, %ebp	;  3 bytes
+M000000000000002d:	cmpq	$23, 32(%r13)	;  5 bytes
+M0000000000000032:	movq	%r13, %rsi	;  3 bytes
+M0000000000000035:	je	0x46e5ab <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x3b>	;  2 bytes
+M0000000000000037:	movq	(%r13), %rsi	;  4 bytes
+M000000000000003b:	leaq	8(%rsp), %rdi	;  5 bytes
+M0000000000000040:	movl	%ebp, %edx	;  2 bytes
+M0000000000000042:	callq	0x46ff90 <BloombergLP::balcl::(anonymous namespace)::u::parseValue(void*, char const*, BloombergLP::balcl::OptionType::Enum)>	;  5 bytes
+M0000000000000047:	testb	%al, %al	;  2 bytes
+M0000000000000049:	je	0x46e606 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x96>	;  2 bytes
+M000000000000004b:	movq	80(%r12), %rax	;  5 bytes
+M0000000000000050:	testq	%rax, %rax	;  3 bytes
+M0000000000000053:	je	0x46e5de <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x6e>	;  2 bytes
+M0000000000000055:	addq	$16, %r12	;  4 bytes
+M0000000000000059:	leaq	8(%rsp), %rsi	;  5 bytes
+M000000000000005e:	movq	%r12, %rdi	;  3 bytes
+M0000000000000061:	movq	%r15, %rdx	;  3 bytes
+M0000000000000064:	callq	*%rax	;  2 bytes
+M0000000000000066:	testb	%al, %al	;  2 bytes
+M0000000000000068:	je	0x46e682 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x112>	;  6 bytes
+M000000000000006e:	movl	64(%r14), %eax	;  4 bytes
+M0000000000000072:	decl	%eax	;  2 bytes
+M0000000000000074:	cmpl	$19, %eax	;  3 bytes
+M0000000000000077:	ja	0x46e774 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x204>	;  6 bytes
+M000000000000007d:	jmpq	*4916912(,%rax,8)	;  7 bytes
+M0000000000000084:	leaq	32(%r14), %rax	;  4 bytes
+M0000000000000088:	cmpb	$0, (%rax)	;  3 bytes
+M000000000000008b:	jne	0x46e756 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x1e6>	;  6 bytes
+M0000000000000091:	jmp	0x46e6c3 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x153>	;  5 bytes
+M0000000000000096:	addl	$-2, %ebp	;  3 bytes
+M0000000000000099:	movl	$4931911, %ebx	;  5 bytes
+M000000000000009e:	cmpl	$7, %ebp	;  3 bytes
+M00000000000000a1:	ja	0x46e61e <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0xae>	;  2 bytes
+M00000000000000a3:	movslq	%ebp, %rax	;  3 bytes
+M00000000000000a6:	movq	4931624(,%rax,8), %rbx	;  8 bytes
+M00000000000000ae:	movq	%rbx, %rdi	;  3 bytes
+M00000000000000b1:	callq	0x4046c0 <strlen@plt>	;  5 bytes
+M00000000000000b6:	movq	%r15, %rdi	;  3 bytes
+M00000000000000b9:	movq	%rbx, %rsi	;  3 bytes
+M00000000000000bc:	movq	%rax, %rdx	;  3 bytes
+M00000000000000bf:	callq	0x455480 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>	;  5 bytes
+M00000000000000c4:	movl	$4931773, %esi	;  5 bytes
+M00000000000000c9:	movl	$33, %edx	;  5 bytes
+M00000000000000ce:	movq	%rax, %rdi	;  3 bytes
+M00000000000000d1:	callq	0x455480 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>	;  5 bytes
+M00000000000000d6:	movq	%rax, %rdi	;  3 bytes
+M00000000000000d9:	movq	%r13, %rsi	;  3 bytes
+M00000000000000dc:	callq	0x44f6f0 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& bsl::operator<<<char, std::__1::char_traits<char>, bsl::allocator<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)>	;  5 bytes
+M00000000000000e1:	movl	$4915277, %esi	;  5 bytes
+M00000000000000e6:	movl	$1, %edx	;  5 bytes
+M00000000000000eb:	movq	%rax, %rdi	;  3 bytes
+M00000000000000ee:	callq	0x455480 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>	;  5 bytes
+M00000000000000f3:	movb	$10, 16(%rsp)	;  5 bytes
+M00000000000000f8:	leaq	16(%rsp), %rsi	;  5 bytes
+M00000000000000fd:	movl	$1, %edx	;  5 bytes
+M0000000000000102:	movq	%rax, %rdi	;  3 bytes
+M0000000000000105:	callq	0x455480 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>	;  5 bytes
+M000000000000010a:	movq	%rax, %rdi	;  3 bytes
+M000000000000010d:	callq	0x404980 <_ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEE5flushEv@plt>	;  5 bytes
+M0000000000000112:	xorl	%eax, %eax	;  2 bytes
+M0000000000000114:	jmp	0x46e765 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x1f5>	;  5 bytes
+M0000000000000119:	leaq	8(%r14), %rax	;  4 bytes
+M000000000000011d:	cmpb	$0, (%rax)	;  3 bytes
+M0000000000000120:	jne	0x46e756 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x1e6>	;  6 bytes
+M0000000000000126:	jmp	0x46e6c3 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x153>	;  2 bytes
+M0000000000000128:	leaq	1(%r14), %rax	;  4 bytes
+M000000000000012c:	cmpb	$0, (%rax)	;  3 bytes
+M000000000000012f:	jne	0x46e756 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x1e6>	;  6 bytes
+M0000000000000135:	jmp	0x46e6c3 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x153>	;  2 bytes
+M0000000000000137:	leaq	4(%r14), %rax	;  4 bytes
+M000000000000013b:	cmpb	$0, (%rax)	;  3 bytes
+M000000000000013e:	jne	0x46e756 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x1e6>	;  6 bytes
+M0000000000000144:	jmp	0x46e6c3 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x153>	;  2 bytes
+M0000000000000146:	leaq	48(%r14), %rax	;  4 bytes
+M000000000000014a:	cmpb	$0, (%rax)	;  3 bytes
+M000000000000014d:	jne	0x46e756 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x1e6>	;  6 bytes
+M0000000000000153:	xorps	%xmm0, %xmm0	;  3 bytes
+M0000000000000156:	movaps	%xmm0, 16(%rsp)	;  5 bytes
+M000000000000015b:	movq	$0, 32(%rsp)	;  9 bytes
+M0000000000000164:	movq	2717005(%rip), %rax  # 705c28 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M000000000000016b:	testq	%rax, %rax	;  3 bytes
+M000000000000016e:	jne	0x46e6e5 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x175>	;  2 bytes
+M0000000000000170:	callq	0x47ce20 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M0000000000000175:	movq	%rax, 40(%rsp)	;  5 bytes
+M000000000000017a:	movq	40(%r14), %rbx	;  4 bytes
+M000000000000017e:	cmpb	$0, 32(%r14)	;  5 bytes
+M0000000000000183:	je	0x46e70c <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x19c>	;  2 bytes
+M0000000000000185:	movb	$0, 32(%r14)	;  5 bytes
+M000000000000018a:	movq	(%r14), %rsi	;  3 bytes
+M000000000000018d:	testq	%rsi, %rsi	;  3 bytes
+M0000000000000190:	je	0x46e70c <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x19c>	;  2 bytes
+M0000000000000192:	movq	24(%r14), %rdi	;  4 bytes
+M0000000000000196:	movq	(%rdi), %rax	;  3 bytes
+M0000000000000199:	callq	*24(%rax)	;  3 bytes
+M000000000000019c:	testq	%rbx, %rbx	;  3 bytes
+M000000000000019f:	jne	0x46e725 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x1b5>	;  2 bytes
+M00000000000001a1:	movq	2716944(%rip), %rbx  # 705c28 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M00000000000001a8:	testq	%rbx, %rbx	;  3 bytes
+M00000000000001ab:	jne	0x46e725 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x1b5>	;  2 bytes
+M00000000000001ad:	callq	0x47ce20 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M00000000000001b2:	movq	%rax, %rbx	;  3 bytes
+M00000000000001b5:	movq	%rbx, 48(%rsp)	;  5 bytes
+M00000000000001ba:	leaq	16(%rsp), %rsi	;  5 bytes
+M00000000000001bf:	leaq	48(%rsp), %rdx	;  5 bytes
+M00000000000001c4:	movq	%r14, %rdi	;  3 bytes
+M00000000000001c7:	callq	0x49bef0 <bsl::vector<double, bsl::allocator<double> >::vector(bsl::vector<double, bsl::allocator<double> > const&, bsl::allocator<double> const&)>	;  5 bytes
+M00000000000001cc:	movb	$1, 32(%r14)	;  5 bytes
+M00000000000001d1:	movq	16(%rsp), %rsi	;  5 bytes
+M00000000000001d6:	testq	%rsi, %rsi	;  3 bytes
+M00000000000001d9:	je	0x46e756 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x1e6>	;  2 bytes
+M00000000000001db:	movq	40(%rsp), %rdi	;  5 bytes
+M00000000000001e0:	movq	(%rdi), %rax	;  3 bytes
+M00000000000001e3:	callq	*24(%rax)	;  3 bytes
+M00000000000001e6:	leaq	8(%rsp), %rsi	;  5 bytes
+M00000000000001eb:	movq	%r14, %rdi	;  3 bytes
+M00000000000001ee:	callq	0x49c880 <bsl::vector<double, bsl::allocator<double> >::push_back(double const&)>	;  5 bytes
+M00000000000001f3:	movb	$1, %al	;  2 bytes
+M00000000000001f5:	addq	$56, %rsp	;  4 bytes
+M00000000000001f9:	popq	%rbx	;  1 bytes
+M00000000000001fa:	popq	%r12	;  2 bytes
+M00000000000001fc:	popq	%r13	;  2 bytes
+M00000000000001fe:	popq	%r14	;  2 bytes
+M0000000000000200:	popq	%r15	;  2 bytes
+M0000000000000202:	popq	%rbp	;  1 bytes
+M0000000000000203:	retq		;  1 bytes
+M0000000000000204:	ud2		;  2 bytes
+M0000000000000206:	movq	%rax, %rdi	;  3 bytes
+M0000000000000209:	callq	0x450f10 <__clang_call_terminate>	;  5 bytes
+M000000000000020e:	movq	%rax, %rdi	;  3 bytes
+M0000000000000211:	callq	0x450f10 <__clang_call_terminate>	;  5 bytes
+M0000000000000216:	movq	%rax, %rdi	;  3 bytes
+M0000000000000219:	callq	0x450f10 <__clang_call_terminate>	;  5 bytes
+M000000000000021e:	movq	%rax, %rbx	;  3 bytes
+M0000000000000221:	movq	16(%rsp), %rsi	;  5 bytes
+M0000000000000226:	testq	%rsi, %rsi	;  3 bytes
+M0000000000000229:	je	0x46e7a6 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<double, bsl::function<bool (double const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 13>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const+0x236>	;  2 bytes
+M000000000000022b:	movq	40(%rsp), %rdi	;  5 bytes
+M0000000000000230:	movq	(%rdi), %rax	;  3 bytes
+M0000000000000233:	callq	*24(%rax)	;  3 bytes
+M0000000000000236:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000239:	callq	0x404c00 <_Unwind_Resume@plt>	;  5 bytes
+M000000000000023e:	movq	%rax, %rdi	;  3 bytes
+M0000000000000241:	callq	0x450f10 <__clang_call_terminate>	;  5 bytes
+M0000000000000246:	nopw	%cs:(%rax,%rax)	; 10 bytes
 ```

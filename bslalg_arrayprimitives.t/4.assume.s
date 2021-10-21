@@ -1,684 +1,684 @@
 00000000004c44f0 <void testCopyConstructWithIterators<long long>(bool, bool, bool)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 02	pushq	%r13
-0000000000000007: 02	pushq	%r12
-0000000000000009: 01	pushq	%rbx
-000000000000000a: 04	subq	$104, %rsp
-000000000000000e: 04	movl	%edx, 84(%rsp)
-0000000000000012: 04	movl	%esi, 64(%rsp)
-0000000000000016: 07	cmpb	$0, 2442377(%rip)  # 718996 <verbose>
-000000000000001d: 02	je	0x4c4519 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x29>
-000000000000001f: 05	movl	$5203945, %edi
-0000000000000024: 05	callq	0x401710 <puts@plt>
-0000000000000029: 02	xorl	%eax, %eax
-000000000000002b: 02	jmp	0x4c454c <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x5c>
-000000000000002d: 03	nopl	(%rax)
-0000000000000030: 05	movl	$7664800, %edi
-0000000000000035: 03	movq	%rbp, %rsi
-0000000000000038: 05	callq	0x4e0590 <void verify<long long>(long long*, char const*)>
-000000000000003d: 05	movl	$7664800, %edi
-0000000000000042: 03	movq	%rbp, %rsi
-0000000000000045: 05	callq	0x4e07d0 <void cleanup<long long>(long long*, char const*)>
-000000000000004a: 05	movq	24(%rsp), %rax
-000000000000004f: 03	incq	%rax
-0000000000000052: 04	cmpq	$30, %rax
-0000000000000056: 06	je	0x4c4a89 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x599>
-000000000000005c: 05	movq	%rax, 24(%rsp)
-0000000000000061: 08	leaq	(,%rax,8), %rbp
-0000000000000069: 08	movq	5192456(%rbp,%rbp,4), %r12
-0000000000000071: 03	movq	%r12, %rdi
-0000000000000074: 05	callq	0x401790 <strlen@plt>
-0000000000000079: 03	cmpl	$17, %eax
-000000000000007c: 02	jl	0x4c4597 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xa7>
-000000000000007e: 05	movl	$5196920, %edi
-0000000000000083: 05	movl	$5194243, %edx
-0000000000000088: 05	movl	$4070, %esi
-000000000000008d: 02	xorl	%eax, %eax
-000000000000008f: 05	callq	0x401680 <printf@plt>
-0000000000000094: 06	movl	2442254(%rip), %eax  # 718998 <(anonymous namespace)::testStatus>
-000000000000009a: 03	cmpl	$100, %eax
-000000000000009d: 02	ja	0x4c4597 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xa7>
-000000000000009f: 02	incl	%eax
-00000000000000a1: 06	movl	%eax, 2442241(%rip)  # 718998 <(anonymous namespace)::testStatus>
-00000000000000a7: 08	movl	5192448(%rbp,%rbp,4), %r13d
-00000000000000af: 08	movslq	5192464(%rbp,%rbp,4), %r15
-00000000000000b7: 07	movl	5192468(%rbp,%rbp,4), %ebx
-00000000000000be: 08	movslq	5192472(%rbp,%rbp,4), %r14
-00000000000000c6: 08	movq	5192480(%rbp,%rbp,4), %rbp
-00000000000000ce: 07	cmpb	$0, 2442187(%rip)  # 718990 <veryVerbose>
-00000000000000d5: 02	je	0x4c45e6 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xf6>
-00000000000000d7: 04	movq	%rbp, (%rsp)
-00000000000000db: 05	movl	$5200567, %edi
-00000000000000e0: 03	movl	%r13d, %esi
-00000000000000e3: 03	movq	%r12, %rdx
-00000000000000e6: 03	movl	%r15d, %ecx
-00000000000000e9: 03	movl	%ebx, %r8d
-00000000000000ec: 03	movl	%r14d, %r9d
-00000000000000ef: 02	xorl	%eax, %eax
-00000000000000f1: 05	callq	0x401680 <printf@plt>
-00000000000000f6: 05	movq	%rbx, 72(%rsp)
-00000000000000fb: 05	movl	$7664800, %edi
-0000000000000100: 03	movq	%r12, %rsi
-0000000000000103: 05	callq	0x4e04b0 <long long& gg<long long>(long long*, char const*)>
-0000000000000108: 05	movl	$7664800, %edi
-000000000000010d: 03	movq	%r12, %rsi
-0000000000000110: 05	callq	0x4e0590 <void verify<long long>(long long*, char const*)>
-0000000000000115: 07	movl	2442136(%rip), %r12d  # 7189a4 <numCopyCtorCalls>
-000000000000011c: 06	movl	2442138(%rip), %eax  # 7189ac <numCharCtorCalls>
-0000000000000122: 04	movl	%eax, 20(%rsp)
-0000000000000126: 05	cmpb	$0, 84(%rsp)
-000000000000012b: 06	je	0x4c4700 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x210>
-0000000000000131: 07	cmpb	$0, 2442088(%rip)  # 718990 <veryVerbose>
-0000000000000138: 03	movl	%r13d, %ebx
-000000000000013b: 02	je	0x4c4640 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x150>
-000000000000013d: 07	cmpl	$0, 2441004(%rip)  # 718560 <void testCopyConstructWithIterators<long long>(bool, bool, bool)::firstTime>
-0000000000000144: 02	je	0x4c4640 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x150>
-0000000000000146: 05	movl	$5194330, %edi
-000000000000014b: 05	callq	0x401710 <puts@plt>
-0000000000000150: 10	movl	$0, 2440982(%rip)  # 718560 <void testCopyConstructWithIterators<long long>(bool, bool, bool)::firstTime>
-000000000000015a: 07	cmpb	$0, 2442052(%rip)  # 718995 <veryVeryVerbose>
-0000000000000161: 02	je	0x4c465d <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x16d>
-0000000000000163: 05	movl	$5194369, %edi
-0000000000000168: 05	callq	0x401710 <puts@plt>
-000000000000016d: 07	movq	2441660(%rip), %rax  # 718820 <Z>
-0000000000000174: 09	movq	$5204056, 32(%rsp)
-000000000000017d: 05	movq	%rax, 40(%rsp)
-0000000000000182: 08	movq	$0, 32(%rax)
-000000000000018a: 03	testq	%rax, %rax
-000000000000018d: 06	je	0x4c4769 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x279>
-0000000000000193: 08	leaq	7664800(,%r15,8), %rsi
-000000000000019b: 05	movq	72(%rsp), %rax
-00000000000001a0: 03	addl	%r15d, %eax
-00000000000001a3: 02	cltq	
-00000000000001a5: 08	leaq	7664800(,%rax,8), %rdx
-00000000000001ad: 03	subq	%rsi, %rdx
-00000000000001b0: 02	je	0x4c46af <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x1bf>
-00000000000001b2: 08	leaq	7664800(,%r14,8), %rdi
-00000000000001ba: 05	callq	0x401930 <memcpy@plt>
-00000000000001bf: 05	movq	32(%rsp), %rax
-00000000000001c4: 05	leaq	32(%rsp), %rdi
-00000000000001c9: 07	movq	$-1, %rsi
-00000000000001d0: 03	callq	*16(%rax)
-00000000000001d3: 07	cmpb	$0, 2441931(%rip)  # 718995 <veryVeryVerbose>
-00000000000001da: 02	je	0x4c46d6 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x1e6>
-00000000000001dc: 05	movl	$5194721, %edi
-00000000000001e1: 05	callq	0x401710 <puts@plt>
-00000000000001e6: 07	cmpb	$0, 2441907(%rip)  # 718990 <veryVerbose>
-00000000000001ed: 06	je	0x4c49ab <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x4bb>
-00000000000001f3: 05	movl	$10, %edi
-00000000000001f8: 05	callq	0x401720 <putchar@plt>
-00000000000001fd: 05	jmp	0x4c4981 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x491>
-0000000000000202: 10	nopw	%cs:(%rax,%rax)
-000000000000020c: 04	nopl	(%rax)
-0000000000000210: 08	cmpq	$0, 2441496(%rip)  # 718820 <Z>
-0000000000000218: 03	movl	%r13d, %ebx
-000000000000021b: 02	jne	0x4c471d <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x22d>
-000000000000021d: 07	movq	2673572(%rip), %rax  # 7512b8 <BloombergLP::bslma::Default::s_defaultAllocator>
-0000000000000224: 03	testq	%rax, %rax
-0000000000000227: 06	je	0x4c4823 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x333>
-000000000000022d: 06	cmpq	$6, 24(%rsp)
-0000000000000233: 06	jb	0x4c4981 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x491>
-0000000000000239: 08	leaq	7664800(,%r15,8), %rax
-0000000000000241: 08	leaq	7664800(,%r14,8), %rcx
-0000000000000249: 05	movq	72(%rsp), %rbx
-000000000000024e: 04	leal	(%rbx,%r15), %edx
-0000000000000252: 03	movslq	%edx, %r9
-0000000000000255: 04	shlq	$3, %r9
-0000000000000259: 08	leaq	(,%r15,8), %rdi
-0000000000000261: 03	movq	%r9, %r10
-0000000000000264: 03	subq	%rdi, %r10
-0000000000000267: 04	addq	$-8, %r10
-000000000000026b: 04	cmpq	$24, %r10
-000000000000026f: 02	jae	0x4c47dd <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x2ed>
-0000000000000271: 03	movl	%r13d, %ebx
-0000000000000274: 05	jmp	0x4c4960 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x470>
-0000000000000279: 06	movl	$1, %r13d
-000000000000027f: 07	movq	2673474(%rip), %rax  # 7512b8 <BloombergLP::bslma::Default::s_defaultAllocator>
-0000000000000286: 03	testq	%rax, %rax
-0000000000000289: 06	jne	0x4c4683 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x193>
-000000000000028f: 05	callq	0x4eec50 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-0000000000000294: 05	jmp	0x4c4683 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x193>
-0000000000000299: 03	cmpl	$1, %edx
-000000000000029c: 06	jne	0x4c512e <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xc3e>
-00000000000002a2: 03	movq	%rax, %rdi
-00000000000002a5: 05	callq	0x4016b0 <__cxa_begin_catch@plt>
-00000000000002aa: 07	cmpb	$0, 2441716(%rip)  # 718995 <veryVeryVerbose>
-00000000000002b1: 02	je	0x4c47b6 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x2c6>
-00000000000002b3: 03	movl	8(%rax), %edx
-00000000000002b6: 04	leal	-1(%r13), %esi
-00000000000002ba: 05	movl	$5194655, %edi
-00000000000002bf: 02	xorl	%eax, %eax
-00000000000002c1: 05	callq	0x401680 <printf@plt>
-00000000000002c6: 05	movq	32(%rsp), %rax
-00000000000002cb: 05	leaq	32(%rsp), %rdi
-00000000000002d0: 03	movq	%r13, %rsi
-00000000000002d3: 03	callq	*16(%rax)
-00000000000002d6: 05	callq	0x401850 <__cxa_end_catch@plt>
-00000000000002db: 03	incq	%r13
-00000000000002de: 08	cmpq	$0, 2441290(%rip)  # 718820 <Z>
-00000000000002e6: 02	je	0x4c476f <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x27f>
-00000000000002e8: 05	jmp	0x4c4683 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x193>
-00000000000002ed: 03	movq	%rbp, %r11
-00000000000002f0: 08	leaq	7664800(,%r14,8), %rsi
-00000000000002f8: 04	leal	(%rbx,%r15), %edx
-00000000000002fc: 03	movslq	%edx, %rdx
-00000000000002ff: 08	leaq	7664800(,%rdx,8), %rbp
-0000000000000307: 03	cmpq	%rbp, %rsi
-000000000000030a: 02	jae	0x4c4839 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x349>
-000000000000030c: 04	shlq	$3, %rdx
-0000000000000310: 03	subq	%rdi, %rdx
-0000000000000313: 08	leaq	7664800(%rdx,%r14,8), %rdx
-000000000000031b: 08	leaq	7664800(,%r15,8), %rsi
-0000000000000323: 03	cmpq	%rdx, %rsi
-0000000000000326: 02	jae	0x4c4839 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x349>
-0000000000000328: 03	movq	%r11, %rbp
-000000000000032b: 03	movl	%r13d, %ebx
-000000000000032e: 05	jmp	0x4c4960 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x470>
-0000000000000333: 05	callq	0x4eec50 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-0000000000000338: 06	cmpq	$6, 24(%rsp)
-000000000000033e: 06	jae	0x4c4729 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x239>
-0000000000000344: 05	jmp	0x4c4981 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x491>
-0000000000000349: 04	shrq	$3, %r10
-000000000000034d: 03	incq	%r10
-0000000000000350: 03	movq	%r10, %r8
-0000000000000353: 04	andq	$-4, %r8
-0000000000000357: 04	leaq	-4(%r8), %rsi
-000000000000035b: 03	movq	%rsi, %rbp
-000000000000035e: 04	shrq	$2, %rbp
-0000000000000362: 03	incq	%rbp
-0000000000000365: 02	movl	%ebp, %edx
-0000000000000367: 03	andl	$3, %edx
-000000000000036a: 04	cmpq	$12, %rsi
-000000000000036e: 02	jae	0x4c4867 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x377>
-0000000000000370: 02	xorl	%ebx, %ebx
-0000000000000372: 05	jmp	0x4c48f0 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x400>
-0000000000000377: 04	andq	$-4, %rbp
-000000000000037b: 03	negq	%rbp
-000000000000037e: 05	movl	$7664800, %esi
-0000000000000383: 02	xorl	%ebx, %ebx
-0000000000000385: 10	nopw	%cs:(%rax,%rax)
-000000000000038f: 01	nop	
-0000000000000390: 05	movups	(%rsi,%r15,8), %xmm0
-0000000000000395: 06	movups	16(%rsi,%r15,8), %xmm1
-000000000000039b: 05	movups	%xmm0, (%rsi,%r14,8)
-00000000000003a0: 06	movups	%xmm1, 16(%rsi,%r14,8)
-00000000000003a6: 06	movups	32(%rsi,%r15,8), %xmm0
-00000000000003ac: 06	movups	48(%rsi,%r15,8), %xmm1
-00000000000003b2: 06	movups	%xmm0, 32(%rsi,%r14,8)
-00000000000003b8: 06	movups	%xmm1, 48(%rsi,%r14,8)
-00000000000003be: 06	movups	64(%rsi,%r15,8), %xmm0
-00000000000003c4: 06	movups	80(%rsi,%r15,8), %xmm1
-00000000000003ca: 06	movups	%xmm0, 64(%rsi,%r14,8)
-00000000000003d0: 06	movups	%xmm1, 80(%rsi,%r14,8)
-00000000000003d6: 07	movdqu	96(%rsi,%r15,8), %xmm0
-00000000000003dd: 07	movdqu	112(%rsi,%r15,8), %xmm1
-00000000000003e4: 07	movdqu	%xmm0, 96(%rsi,%r14,8)
-00000000000003eb: 07	movdqu	%xmm1, 112(%rsi,%r14,8)
-00000000000003f2: 04	addq	$16, %rbx
-00000000000003f6: 04	subq	$-128, %rsi
-00000000000003fa: 04	addq	$4, %rbp
-00000000000003fe: 02	jne	0x4c4880 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x390>
-0000000000000400: 03	testq	%rdx, %rdx
-0000000000000403: 02	je	0x4c4943 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x453>
-0000000000000405: 04	shlq	$3, %r14
-0000000000000409: 08	leaq	7664800(,%rbx,8), %rsi
-0000000000000411: 03	negq	%rdx
-0000000000000414: 10	nopw	%cs:(%rax,%rax)
-000000000000041e: 02	nop	
-0000000000000420: 09	movdqu	7664800(%rdi,%rbx,8), %xmm0
-0000000000000429: 09	movdqu	7664816(%rdi,%rbx,8), %xmm1
-0000000000000432: 10	movdqu	%xmm0, 7664800(%r14,%rbx,8)
-000000000000043c: 10	movdqu	%xmm1, 7664816(%r14,%rbx,8)
-0000000000000446: 04	addq	$4, %rbx
-000000000000044a: 04	addq	$32, %rsi
-000000000000044e: 03	incq	%rdx
-0000000000000451: 02	jne	0x4c4910 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x420>
-0000000000000453: 03	cmpq	%r8, %r10
-0000000000000456: 03	movq	%r11, %rbp
-0000000000000459: 03	movl	%r13d, %ebx
-000000000000045c: 02	je	0x4c4981 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x491>
-000000000000045e: 04	leaq	(%rax,%r8,8), %rax
-0000000000000462: 04	leaq	(%rcx,%r8,8), %rcx
-0000000000000466: 10	nopw	%cs:(%rax,%rax)
-0000000000000470: 03	subq	%rax, %r9
-0000000000000473: 07	leaq	7664800(%r9), %rdx
-000000000000047a: 02	xorl	%esi, %esi
-000000000000047c: 04	nopl	(%rax)
-0000000000000480: 04	movq	(%rax,%rsi), %rdi
-0000000000000484: 04	movq	%rdi, (%rcx,%rsi)
-0000000000000488: 04	addq	$8, %rsi
-000000000000048c: 03	cmpq	%rsi, %rdx
-000000000000048f: 02	jne	0x4c4970 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x480>
-0000000000000491: 07	cmpb	$0, 2441224(%rip)  # 718990 <veryVerbose>
-0000000000000498: 02	je	0x4c49ab <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x4bb>
-000000000000049a: 06	movl	2441236(%rip), %edx  # 7189a4 <numCopyCtorCalls>
-00000000000004a0: 03	subl	%r12d, %edx
-00000000000004a3: 06	movl	2441235(%rip), %ecx  # 7189ac <numCharCtorCalls>
-00000000000004a9: 04	subl	20(%rsp), %ecx
-00000000000004ad: 05	movl	$5200938, %edi
-00000000000004b2: 02	movl	%ebx, %esi
-00000000000004b4: 02	xorl	%eax, %eax
-00000000000004b6: 05	callq	0x401680 <printf@plt>
-00000000000004bb: 05	cmpb	$0, 64(%rsp)
-00000000000004c0: 02	je	0x4c4a10 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x520>
-00000000000004c2: 07	cmpl	2441195(%rip), %r12d  # 7189a4 <numCopyCtorCalls>
-00000000000004c9: 02	je	0x4c49e4 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x4f4>
-00000000000004cb: 05	movl	$5196920, %edi
-00000000000004d0: 05	movl	$5197804, %edx
-00000000000004d5: 05	movl	$4101, %esi
-00000000000004da: 02	xorl	%eax, %eax
-00000000000004dc: 05	callq	0x401680 <printf@plt>
-00000000000004e1: 06	movl	2441153(%rip), %eax  # 718998 <(anonymous namespace)::testStatus>
-00000000000004e7: 03	cmpl	$100, %eax
-00000000000004ea: 02	ja	0x4c49e4 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x4f4>
-00000000000004ec: 02	incl	%eax
-00000000000004ee: 06	movl	%eax, 2441140(%rip)  # 718998 <(anonymous namespace)::testStatus>
-00000000000004f4: 04	movl	20(%rsp), %eax
-00000000000004f8: 06	cmpl	2441150(%rip), %eax  # 7189ac <numCharCtorCalls>
-00000000000004fe: 06	je	0x4c4520 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x30>
-0000000000000504: 05	movl	$5196920, %edi
-0000000000000509: 05	movl	$5200986, %edx
-000000000000050e: 05	movl	$4102, %esi
-0000000000000513: 02	jmp	0x4c4a66 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x576>
-0000000000000515: 10	nopw	%cs:(%rax,%rax)
-000000000000051f: 01	nop	
-0000000000000520: 05	addl	72(%rsp), %r12d
-0000000000000525: 07	cmpl	2441096(%rip), %r12d  # 7189a4 <numCopyCtorCalls>
-000000000000052c: 02	jle	0x4c4a47 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x557>
-000000000000052e: 05	movl	$5196920, %edi
-0000000000000533: 05	movl	$5201016, %edx
-0000000000000538: 05	movl	$4105, %esi
-000000000000053d: 02	xorl	%eax, %eax
-000000000000053f: 05	callq	0x401680 <printf@plt>
-0000000000000544: 06	movl	2441054(%rip), %eax  # 718998 <(anonymous namespace)::testStatus>
-000000000000054a: 03	cmpl	$100, %eax
-000000000000054d: 02	ja	0x4c4a47 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x557>
-000000000000054f: 02	incl	%eax
-0000000000000551: 06	movl	%eax, 2441041(%rip)  # 718998 <(anonymous namespace)::testStatus>
-0000000000000557: 04	movl	20(%rsp), %eax
-000000000000055b: 06	cmpl	2441051(%rip), %eax  # 7189ac <numCharCtorCalls>
-0000000000000561: 06	je	0x4c4520 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x30>
-0000000000000567: 05	movl	$5196920, %edi
-000000000000056c: 05	movl	$5200986, %edx
-0000000000000571: 05	movl	$4106, %esi
-0000000000000576: 02	xorl	%eax, %eax
-0000000000000578: 05	callq	0x401680 <printf@plt>
-000000000000057d: 06	movl	2440997(%rip), %eax  # 718998 <(anonymous namespace)::testStatus>
-0000000000000583: 03	cmpl	$100, %eax
-0000000000000586: 06	ja	0x4c4520 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x30>
-000000000000058c: 02	incl	%eax
-000000000000058e: 06	movl	%eax, 2440980(%rip)  # 718998 <(anonymous namespace)::testStatus>
-0000000000000594: 05	jmp	0x4c4520 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x30>
-0000000000000599: 07	cmpb	$0, 2440966(%rip)  # 718996 <verbose>
-00000000000005a0: 02	je	0x4c4a9c <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x5ac>
-00000000000005a2: 05	movl	$5203922, %edi
-00000000000005a7: 05	callq	0x401710 <puts@plt>
-00000000000005ac: 03	xorl	%r12d, %r12d
-00000000000005af: 02	jmp	0x4c4ad7 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x5e7>
-00000000000005b1: 10	nopw	%cs:(%rax,%rax)
-00000000000005bb: 05	nopl	(%rax,%rax)
-00000000000005c0: 05	movl	$7664800, %edi
-00000000000005c5: 03	movq	%rbx, %rsi
-00000000000005c8: 05	callq	0x4e0590 <void verify<long long>(long long*, char const*)>
-00000000000005cd: 05	movl	$7664800, %edi
-00000000000005d2: 03	movq	%rbx, %rsi
-00000000000005d5: 05	callq	0x4e07d0 <void cleanup<long long>(long long*, char const*)>
-00000000000005da: 03	incq	%r12
-00000000000005dd: 04	cmpq	$30, %r12
-00000000000005e1: 06	je	0x4c50fd <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xc0d>
-00000000000005e7: 08	leaq	(,%r12,8), %rbx
-00000000000005ef: 08	movq	5192456(%rbx,%rbx,4), %rbp
-00000000000005f7: 03	movq	%rbp, %rdi
-00000000000005fa: 05	callq	0x401790 <strlen@plt>
-00000000000005ff: 03	cmpl	$17, %eax
-0000000000000602: 02	jl	0x4c4b1d <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x62d>
-0000000000000604: 05	movl	$5196920, %edi
-0000000000000609: 05	movl	$5194243, %edx
-000000000000060e: 05	movl	$4121, %esi
-0000000000000613: 02	xorl	%eax, %eax
-0000000000000615: 05	callq	0x401680 <printf@plt>
-000000000000061a: 06	movl	2440840(%rip), %eax  # 718998 <(anonymous namespace)::testStatus>
-0000000000000620: 03	cmpl	$100, %eax
-0000000000000623: 02	ja	0x4c4b1d <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x62d>
-0000000000000625: 02	incl	%eax
-0000000000000627: 06	movl	%eax, 2440827(%rip)  # 718998 <(anonymous namespace)::testStatus>
-000000000000062d: 03	movq	%rbp, %rdi
-0000000000000630: 05	callq	0x401790 <strlen@plt>
-0000000000000635: 04	cmpq	$20, %rax
-0000000000000639: 02	jb	0x4c4b54 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x664>
-000000000000063b: 05	movl	$5196920, %edi
-0000000000000640: 05	movl	$5201052, %edx
-0000000000000645: 05	movl	$4124, %esi
-000000000000064a: 02	xorl	%eax, %eax
-000000000000064c: 05	callq	0x401680 <printf@plt>
-0000000000000651: 06	movl	2440785(%rip), %eax  # 718998 <(anonymous namespace)::testStatus>
-0000000000000657: 03	cmpl	$100, %eax
-000000000000065a: 02	ja	0x4c4b54 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x664>
-000000000000065c: 02	incl	%eax
-000000000000065e: 06	movl	%eax, 2440772(%rip)  # 718998 <(anonymous namespace)::testStatus>
-0000000000000664: 05	movq	%r12, 24(%rsp)
-0000000000000669: 04	pxor	%xmm0, %xmm0
-000000000000066d: 06	movdqa	%xmm0, 32(%rsp)
-0000000000000673: 08	movl	$0, 48(%rsp)
-000000000000067b: 03	movb	(%rbp), %al
-000000000000067e: 02	testb	%al, %al
-0000000000000680: 02	je	0x4c4b90 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x6a0>
-0000000000000682: 02	xorl	%ecx, %ecx
-0000000000000684: 10	nopw	%cs:(%rax,%rax)
-000000000000068e: 02	nop	
-0000000000000690: 04	movb	%al, 32(%rsp,%rcx)
-0000000000000694: 05	movzbl	1(%rbp,%rcx), %eax
-0000000000000699: 03	incq	%rcx
-000000000000069c: 02	testb	%al, %al
-000000000000069e: 02	jne	0x4c4b80 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x690>
-00000000000006a0: 08	movl	5192448(%rbx,%rbx,4), %r14d
-00000000000006a8: 08	movslq	5192464(%rbx,%rbx,4), %r13
-00000000000006b0: 08	movslq	5192468(%rbx,%rbx,4), %r12
-00000000000006b8: 08	movslq	5192472(%rbx,%rbx,4), %r15
-00000000000006c0: 08	movq	5192480(%rbx,%rbx,4), %rbx
-00000000000006c8: 07	cmpb	$0, 2440657(%rip)  # 718990 <veryVerbose>
-00000000000006cf: 02	je	0x4c4be0 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x6f0>
-00000000000006d1: 04	movq	%rbx, (%rsp)
-00000000000006d5: 05	movl	$5200567, %edi
-00000000000006da: 03	movl	%r14d, %esi
-00000000000006dd: 03	movq	%rbp, %rdx
-00000000000006e0: 03	movl	%r13d, %ecx
-00000000000006e3: 03	movl	%r12d, %r8d
-00000000000006e6: 03	movl	%r15d, %r9d
-00000000000006e9: 02	xorl	%eax, %eax
-00000000000006eb: 05	callq	0x401680 <printf@plt>
-00000000000006f0: 05	movl	$7664800, %edi
-00000000000006f5: 03	movq	%rbp, %rsi
-00000000000006f8: 05	callq	0x4e04b0 <long long& gg<long long>(long long*, char const*)>
-00000000000006fd: 05	movl	$7664800, %edi
-0000000000000702: 03	movq	%rbp, %rsi
-0000000000000705: 05	callq	0x4e0590 <void verify<long long>(long long*, char const*)>
-000000000000070a: 06	movl	2440612(%rip), %eax  # 7189a4 <numCopyCtorCalls>
-0000000000000710: 04	movl	%eax, 20(%rsp)
-0000000000000714: 06	movl	2440610(%rip), %eax  # 7189ac <numCharCtorCalls>
-000000000000071a: 04	movl	%eax, 72(%rsp)
-000000000000071e: 05	cmpb	$0, 84(%rsp)
-0000000000000723: 06	je	0x4c4ce0 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x7f0>
-0000000000000729: 07	cmpb	$0, 2440560(%rip)  # 718990 <veryVerbose>
-0000000000000730: 03	movl	%r14d, %ebp
-0000000000000733: 02	je	0x4c4c38 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x748>
-0000000000000735: 07	cmpl	$0, 2439480(%rip)  # 718564 <void testCopyConstructWithIterators<long long>(bool, bool, bool)::firstTime>
-000000000000073c: 02	je	0x4c4c38 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x748>
-000000000000073e: 05	movl	$5194330, %edi
-0000000000000743: 05	callq	0x401710 <puts@plt>
-0000000000000748: 10	movl	$0, 2439458(%rip)  # 718564 <void testCopyConstructWithIterators<long long>(bool, bool, bool)::firstTime>
-0000000000000752: 07	cmpb	$0, 2440524(%rip)  # 718995 <veryVeryVerbose>
-0000000000000759: 02	je	0x4c4c55 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x765>
-000000000000075b: 05	movl	$5194369, %edi
-0000000000000760: 05	callq	0x401710 <puts@plt>
-0000000000000765: 07	movq	2440132(%rip), %rax  # 718820 <Z>
-000000000000076c: 09	movq	$5204056, 88(%rsp)
-0000000000000775: 05	movq	%rax, 96(%rsp)
-000000000000077a: 08	movq	$0, 32(%rax)
-0000000000000782: 03	testq	%rax, %rax
-0000000000000785: 06	je	0x4c4d6d <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x87d>
-000000000000078b: 06	cmpq	$6, 24(%rsp)
-0000000000000791: 06	jb	0x4c5051 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xb61>
-0000000000000797: 05	leaq	32(%rsp,%r13), %rcx
-000000000000079c: 08	leaq	7664800(,%r15,8), %rsi
-00000000000007a4: 05	leal	(%r13,%r12), %eax
-00000000000007a9: 03	movslq	%eax, %r9
-00000000000007ac: 03	movq	%r9, %r10
-00000000000007af: 03	subq	%r13, %r10
-00000000000007b2: 04	cmpq	$4, %r10
-00000000000007b6: 06	jb	0x4c5036 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xb46>
-00000000000007bc: 03	movq	%rbx, %r11
-00000000000007bf: 03	movq	%r10, %r8
-00000000000007c2: 04	andq	$-4, %r8
-00000000000007c6: 04	leaq	-4(%r8), %rax
-00000000000007ca: 03	movq	%rax, %rbp
-00000000000007cd: 04	shrq	$2, %rbp
-00000000000007d1: 03	incq	%rbp
-00000000000007d4: 02	movl	%ebp, %edi
-00000000000007d6: 03	andl	$3, %edi
-00000000000007d9: 04	cmpq	$12, %rax
-00000000000007dd: 06	jae	0x4c4f26 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xa36>
-00000000000007e3: 02	xorl	%ebx, %ebx
-00000000000007e5: 05	jmp	0x4c4fd5 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xae5>
-00000000000007ea: 06	nopw	(%rax,%rax)
-00000000000007f0: 08	cmpq	$0, 2439992(%rip)  # 718820 <Z>
-00000000000007f8: 03	movl	%r14d, %ebp
-00000000000007fb: 03	movq	%r12, %r11
-00000000000007fe: 02	jne	0x4c4d10 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x820>
-0000000000000800: 07	movq	2672065(%rip), %rax  # 7512b8 <BloombergLP::bslma::Default::s_defaultAllocator>
-0000000000000807: 03	testq	%rax, %rax
-000000000000080a: 02	jne	0x4c4d10 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x820>
-000000000000080c: 05	callq	0x4eec50 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-0000000000000811: 03	movq	%r12, %r11
-0000000000000814: 10	nopw	%cs:(%rax,%rax)
-000000000000081e: 02	nop	
-0000000000000820: 05	movq	24(%rsp), %r12
-0000000000000825: 04	cmpq	$6, %r12
-0000000000000829: 06	jb	0x4c5090 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xba0>
-000000000000082f: 08	leaq	7664800(,%r15,8), %rax
-0000000000000837: 05	leaq	32(%rsp,%r13), %rcx
-000000000000083c: 03	addq	%r13, %r11
-000000000000083f: 03	movq	%r11, %r9
-0000000000000842: 03	subq	%r13, %r9
-0000000000000845: 04	cmpq	$4, %r9
-0000000000000849: 06	jb	0x4c4efa <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xa0a>
-000000000000084f: 03	movq	%rbx, %r10
-0000000000000852: 03	movq	%r9, %r8
-0000000000000855: 04	andq	$-4, %r8
-0000000000000859: 04	leaq	-4(%r8), %rsi
-000000000000085d: 03	movq	%rsi, %rdi
-0000000000000860: 04	shrq	$2, %rdi
-0000000000000864: 03	incq	%rdi
-0000000000000867: 02	movl	%edi, %ebp
-0000000000000869: 03	andl	$3, %ebp
-000000000000086c: 04	cmpq	$12, %rsi
-0000000000000870: 06	jae	0x4c4ded <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x8fd>
-0000000000000876: 02	xorl	%ebx, %ebx
-0000000000000878: 05	jmp	0x4c4e95 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x9a5>
-000000000000087d: 05	movl	$1, %eax
-0000000000000882: 05	movq	%rax, 64(%rsp)
-0000000000000887: 07	movq	2671930(%rip), %rax  # 7512b8 <BloombergLP::bslma::Default::s_defaultAllocator>
-000000000000088e: 03	testq	%rax, %rax
-0000000000000891: 06	jne	0x4c4c7b <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x78b>
-0000000000000897: 05	callq	0x4eec50 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-000000000000089c: 05	jmp	0x4c4c7b <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x78b>
-00000000000008a1: 03	cmpl	$1, %edx
-00000000000008a4: 06	jne	0x4c512e <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xc3e>
-00000000000008aa: 03	movq	%rax, %rdi
-00000000000008ad: 05	callq	0x4016b0 <__cxa_begin_catch@plt>
-00000000000008b2: 07	cmpb	$0, 2440172(%rip)  # 718995 <veryVeryVerbose>
-00000000000008b9: 02	je	0x4c4dc2 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x8d2>
-00000000000008bb: 03	movl	8(%rax), %edx
-00000000000008be: 05	movq	64(%rsp), %rax
-00000000000008c3: 03	leal	-1(%rax), %esi
-00000000000008c6: 05	movl	$5194655, %edi
-00000000000008cb: 02	xorl	%eax, %eax
-00000000000008cd: 05	callq	0x401680 <printf@plt>
-00000000000008d2: 05	movq	88(%rsp), %rax
-00000000000008d7: 05	leaq	88(%rsp), %rdi
-00000000000008dc: 05	movq	64(%rsp), %rsi
-00000000000008e1: 03	callq	*16(%rax)
-00000000000008e4: 05	callq	0x401850 <__cxa_end_catch@plt>
-00000000000008e9: 05	incq	64(%rsp)
-00000000000008ee: 08	cmpq	$0, 2439738(%rip)  # 718820 <Z>
-00000000000008f6: 02	je	0x4c4d77 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x887>
-00000000000008f8: 05	jmp	0x4c4c7b <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x78b>
-00000000000008fd: 05	leaq	46(%rsp), %rdx
-0000000000000902: 04	leaq	(%rdx,%r13), %rsi
-0000000000000906: 04	andq	$-4, %rdi
-000000000000090a: 03	negq	%rdi
-000000000000090d: 02	xorl	%ebx, %ebx
-000000000000090f: 01	nop	
-0000000000000910: 07	pmovsxbq	-14(%rsi,%rbx), %xmm0
-0000000000000917: 07	pmovsxbq	-12(%rsi,%rbx), %xmm1
-000000000000091e: 08	leaq	(,%r15,8), %rdx
-0000000000000926: 09	movdqu	%xmm0, 7664800(%rdx,%rbx,8)
-000000000000092f: 09	movdqu	%xmm1, 7664816(%rdx,%rbx,8)
-0000000000000938: 07	pmovsxbq	-10(%rsi,%rbx), %xmm0
-000000000000093f: 07	pmovsxbq	-8(%rsi,%rbx), %xmm1
-0000000000000946: 09	movdqu	%xmm0, 7664832(%rdx,%rbx,8)
-000000000000094f: 09	movdqu	%xmm1, 7664848(%rdx,%rbx,8)
-0000000000000958: 07	pmovsxbq	-6(%rsi,%rbx), %xmm0
-000000000000095f: 07	pmovsxbq	-4(%rsi,%rbx), %xmm1
-0000000000000966: 09	movdqu	%xmm0, 7664864(%rdx,%rbx,8)
-000000000000096f: 09	movdqu	%xmm1, 7664880(%rdx,%rbx,8)
-0000000000000978: 07	pmovsxbq	-2(%rsi,%rbx), %xmm0
-000000000000097f: 06	pmovsxbq	(%rsi,%rbx), %xmm1
-0000000000000985: 09	movdqu	%xmm0, 7664896(%rdx,%rbx,8)
-000000000000098e: 09	movdqu	%xmm1, 7664912(%rdx,%rbx,8)
-0000000000000997: 04	addq	$16, %rbx
-000000000000099b: 04	addq	$4, %rdi
-000000000000099f: 06	jne	0x4c4e00 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x910>
-00000000000009a5: 03	testq	%rbp, %rbp
-00000000000009a8: 02	je	0x4c4ee4 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x9f4>
-00000000000009aa: 03	addq	%rbx, %r13
-00000000000009ad: 05	leaq	34(%rsp), %rdx
-00000000000009b2: 03	addq	%rdx, %r13
-00000000000009b5: 04	shlq	$3, %r15
-00000000000009b9: 08	leaq	7664816(%r15,%rbx,8), %rsi
-00000000000009c1: 04	shlq	$2, %rbp
-00000000000009c5: 02	xorl	%edi, %edi
-00000000000009c7: 09	nopw	(%rax,%rax)
-00000000000009d0: 08	pmovsxbq	-2(%r13,%rdi), %xmm0
-00000000000009d8: 08	pmovsxbq	(%r13,%rdi), %xmm1
-00000000000009e0: 06	movdqu	%xmm0, -16(%rsi,%rdi,8)
-00000000000009e6: 05	movdqu	%xmm1, (%rsi,%rdi,8)
-00000000000009eb: 04	addq	$4, %rdi
-00000000000009ef: 03	cmpq	%rdi, %rbp
-00000000000009f2: 02	jne	0x4c4ec0 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x9d0>
-00000000000009f4: 03	cmpq	%r8, %r9
-00000000000009f7: 03	movq	%r10, %rbx
-00000000000009fa: 03	movl	%r14d, %ebp
-00000000000009fd: 06	je	0x4c5090 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xba0>
-0000000000000a03: 03	addq	%r8, %rcx
-0000000000000a06: 04	leaq	(%rax,%r8,8), %rax
-0000000000000a0a: 03	subq	%rcx, %r11
-0000000000000a0d: 05	leaq	32(%rsp,%r11), %rdx
-0000000000000a12: 02	xorl	%esi, %esi
-0000000000000a14: 10	nopw	%cs:(%rax,%rax)
-0000000000000a1e: 02	nop	
-0000000000000a20: 05	movsbq	(%rcx,%rsi), %rdi
-0000000000000a25: 04	movq	%rdi, (%rax,%rsi,8)
-0000000000000a29: 03	incq	%rsi
-0000000000000a2c: 03	cmpq	%rsi, %rdx
-0000000000000a2f: 02	jne	0x4c4f10 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xa20>
-0000000000000a31: 05	jmp	0x4c5090 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xba0>
-0000000000000a36: 05	leaq	46(%rsp), %rax
-0000000000000a3b: 03	addq	%r13, %rax
-0000000000000a3e: 04	andq	$-4, %rbp
-0000000000000a42: 03	negq	%rbp
-0000000000000a45: 02	xorl	%ebx, %ebx
-0000000000000a47: 09	nopw	(%rax,%rax)
-0000000000000a50: 07	pmovsxbq	-14(%rax,%rbx), %xmm0
-0000000000000a57: 07	pmovsxbq	-12(%rax,%rbx), %xmm1
-0000000000000a5e: 08	leaq	(,%r15,8), %rdx
-0000000000000a66: 09	movdqu	%xmm0, 7664800(%rdx,%rbx,8)
-0000000000000a6f: 09	movdqu	%xmm1, 7664816(%rdx,%rbx,8)
-0000000000000a78: 07	pmovsxbq	-10(%rax,%rbx), %xmm0
-0000000000000a7f: 07	pmovsxbq	-8(%rax,%rbx), %xmm1
-0000000000000a86: 09	movdqu	%xmm0, 7664832(%rdx,%rbx,8)
-0000000000000a8f: 09	movdqu	%xmm1, 7664848(%rdx,%rbx,8)
-0000000000000a98: 07	pmovsxbq	-6(%rax,%rbx), %xmm0
-0000000000000a9f: 07	pmovsxbq	-4(%rax,%rbx), %xmm1
-0000000000000aa6: 09	movdqu	%xmm0, 7664864(%rdx,%rbx,8)
-0000000000000aaf: 09	movdqu	%xmm1, 7664880(%rdx,%rbx,8)
-0000000000000ab8: 07	pmovsxbq	-2(%rax,%rbx), %xmm0
-0000000000000abf: 06	pmovsxbq	(%rax,%rbx), %xmm1
-0000000000000ac5: 09	movdqu	%xmm0, 7664896(%rdx,%rbx,8)
-0000000000000ace: 09	movdqu	%xmm1, 7664912(%rdx,%rbx,8)
-0000000000000ad7: 04	addq	$16, %rbx
-0000000000000adb: 04	addq	$4, %rbp
-0000000000000adf: 06	jne	0x4c4f40 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xa50>
-0000000000000ae5: 03	testq	%rdi, %rdi
-0000000000000ae8: 02	je	0x4c5024 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xb34>
-0000000000000aea: 03	addq	%rbx, %r13
-0000000000000aed: 05	leaq	34(%rsp), %rax
-0000000000000af2: 03	addq	%rax, %r13
-0000000000000af5: 04	shlq	$3, %r15
-0000000000000af9: 08	leaq	7664816(%r15,%rbx,8), %rax
-0000000000000b01: 04	shlq	$2, %rdi
-0000000000000b05: 02	xorl	%ebp, %ebp
-0000000000000b07: 09	nopw	(%rax,%rax)
-0000000000000b10: 08	pmovsxbq	-2(%r13,%rbp), %xmm0
-0000000000000b18: 08	pmovsxbq	(%r13,%rbp), %xmm1
-0000000000000b20: 06	movdqu	%xmm0, -16(%rax,%rbp,8)
-0000000000000b26: 05	movdqu	%xmm1, (%rax,%rbp,8)
-0000000000000b2b: 04	addq	$4, %rbp
-0000000000000b2f: 03	cmpq	%rbp, %rdi
-0000000000000b32: 02	jne	0x4c5000 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xb10>
-0000000000000b34: 03	cmpq	%r8, %r10
-0000000000000b37: 03	movq	%r11, %rbx
-0000000000000b3a: 03	movl	%r14d, %ebp
-0000000000000b3d: 02	je	0x4c5051 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xb61>
-0000000000000b3f: 03	addq	%r8, %rcx
-0000000000000b42: 04	leaq	(%rsi,%r8,8), %rsi
-0000000000000b46: 03	subq	%rcx, %r9
-0000000000000b49: 05	leaq	32(%rsp,%r9), %rax
-0000000000000b4e: 02	xorl	%edi, %edi
-0000000000000b50: 05	movsbq	(%rcx,%rdi), %rdx
-0000000000000b55: 04	movq	%rdx, (%rsi,%rdi,8)
-0000000000000b59: 03	incq	%rdi
-0000000000000b5c: 03	cmpq	%rdi, %rax
-0000000000000b5f: 02	jne	0x4c5040 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xb50>
-0000000000000b61: 05	movq	88(%rsp), %rax
-0000000000000b66: 05	leaq	88(%rsp), %rdi
-0000000000000b6b: 07	movq	$-1, %rsi
-0000000000000b72: 03	callq	*16(%rax)
-0000000000000b75: 07	cmpb	$0, 2439465(%rip)  # 718995 <veryVeryVerbose>
-0000000000000b7c: 05	movq	24(%rsp), %r12
-0000000000000b81: 02	je	0x4c507d <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xb8d>
-0000000000000b83: 05	movl	$5194721, %edi
-0000000000000b88: 05	callq	0x401710 <puts@plt>
-0000000000000b8d: 07	cmpb	$0, 2439436(%rip)  # 718990 <veryVerbose>
-0000000000000b94: 02	je	0x4c50bb <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xbcb>
-0000000000000b96: 05	movl	$10, %edi
-0000000000000b9b: 05	callq	0x401720 <putchar@plt>
-0000000000000ba0: 07	cmpb	$0, 2439417(%rip)  # 718990 <veryVerbose>
-0000000000000ba7: 02	je	0x4c50bb <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xbcb>
-0000000000000ba9: 06	movl	2439429(%rip), %edx  # 7189a4 <numCopyCtorCalls>
-0000000000000baf: 04	subl	20(%rsp), %edx
-0000000000000bb3: 06	movl	2439427(%rip), %ecx  # 7189ac <numCharCtorCalls>
-0000000000000bb9: 04	subl	72(%rsp), %ecx
-0000000000000bbd: 05	movl	$5200938, %edi
-0000000000000bc2: 02	movl	%ebp, %esi
-0000000000000bc4: 02	xorl	%eax, %eax
-0000000000000bc6: 05	callq	0x401680 <printf@plt>
-0000000000000bcb: 04	movl	20(%rsp), %eax
-0000000000000bcf: 06	cmpl	2439391(%rip), %eax  # 7189a4 <numCopyCtorCalls>
-0000000000000bd5: 06	je	0x4c4ab0 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x5c0>
-0000000000000bdb: 05	movl	$5196920, %edi
-0000000000000be0: 05	movl	$5197804, %edx
-0000000000000be5: 05	movl	$4159, %esi
-0000000000000bea: 02	xorl	%eax, %eax
-0000000000000bec: 05	callq	0x401680 <printf@plt>
-0000000000000bf1: 06	movl	2439345(%rip), %eax  # 718998 <(anonymous namespace)::testStatus>
-0000000000000bf7: 03	cmpl	$100, %eax
-0000000000000bfa: 06	ja	0x4c4ab0 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x5c0>
-0000000000000c00: 02	incl	%eax
-0000000000000c02: 06	movl	%eax, 2439328(%rip)  # 718998 <(anonymous namespace)::testStatus>
-0000000000000c08: 05	jmp	0x4c4ab0 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x5c0>
-0000000000000c0d: 04	addq	$104, %rsp
-0000000000000c11: 01	popq	%rbx
-0000000000000c12: 02	popq	%r12
-0000000000000c14: 02	popq	%r13
-0000000000000c16: 02	popq	%r14
-0000000000000c18: 02	popq	%r15
-0000000000000c1a: 01	popq	%rbp
-0000000000000c1b: 01	retq	
-0000000000000c1c: 02	jmp	0x4c512e <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xc3e>
-0000000000000c1e: 03	movq	%rax, %rbx
-0000000000000c21: 05	callq	0x401850 <__cxa_end_catch@plt>
-0000000000000c26: 02	jmp	0x4c5131 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xc41>
-0000000000000c28: 02	jmp	0x4c512e <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xc3e>
-0000000000000c2a: 03	movq	%rax, %rbx
-0000000000000c2d: 05	callq	0x401850 <__cxa_end_catch@plt>
-0000000000000c32: 02	jmp	0x4c5131 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xc41>
-0000000000000c34: 03	movq	%rax, %rdi
-0000000000000c37: 05	callq	0x40bf90 <__clang_call_terminate>
-0000000000000c3c: 02	jmp	0x4c512e <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xc3e>
-0000000000000c3e: 03	movq	%rax, %rbx
-0000000000000c41: 03	movq	%rbx, %rdi
-0000000000000c44: 05	callq	0x4018f0 <_Unwind_Resume@plt>
-0000000000000c49: 07	nopl	(%rax)
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%r13	;  2 bytes
+M0000000000000007:	pushq	%r12	;  2 bytes
+M0000000000000009:	pushq	%rbx	;  1 bytes
+M000000000000000a:	subq	$104, %rsp	;  4 bytes
+M000000000000000e:	movl	%edx, 84(%rsp)	;  4 bytes
+M0000000000000012:	movl	%esi, 64(%rsp)	;  4 bytes
+M0000000000000016:	cmpb	$0, 2442377(%rip)  # 718996 <verbose>	;  7 bytes
+M000000000000001d:	je	0x4c4519 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x29>	;  2 bytes
+M000000000000001f:	movl	$5203945, %edi	;  5 bytes
+M0000000000000024:	callq	0x401710 <puts@plt>	;  5 bytes
+M0000000000000029:	xorl	%eax, %eax	;  2 bytes
+M000000000000002b:	jmp	0x4c454c <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x5c>	;  2 bytes
+M000000000000002d:	nopl	(%rax)	;  3 bytes
+M0000000000000030:	movl	$7664800, %edi	;  5 bytes
+M0000000000000035:	movq	%rbp, %rsi	;  3 bytes
+M0000000000000038:	callq	0x4e0590 <void verify<long long>(long long*, char const*)>	;  5 bytes
+M000000000000003d:	movl	$7664800, %edi	;  5 bytes
+M0000000000000042:	movq	%rbp, %rsi	;  3 bytes
+M0000000000000045:	callq	0x4e07d0 <void cleanup<long long>(long long*, char const*)>	;  5 bytes
+M000000000000004a:	movq	24(%rsp), %rax	;  5 bytes
+M000000000000004f:	incq	%rax	;  3 bytes
+M0000000000000052:	cmpq	$30, %rax	;  4 bytes
+M0000000000000056:	je	0x4c4a89 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x599>	;  6 bytes
+M000000000000005c:	movq	%rax, 24(%rsp)	;  5 bytes
+M0000000000000061:	leaq	(,%rax,8), %rbp	;  8 bytes
+M0000000000000069:	movq	5192456(%rbp,%rbp,4), %r12	;  8 bytes
+M0000000000000071:	movq	%r12, %rdi	;  3 bytes
+M0000000000000074:	callq	0x401790 <strlen@plt>	;  5 bytes
+M0000000000000079:	cmpl	$17, %eax	;  3 bytes
+M000000000000007c:	jl	0x4c4597 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xa7>	;  2 bytes
+M000000000000007e:	movl	$5196920, %edi	;  5 bytes
+M0000000000000083:	movl	$5194243, %edx	;  5 bytes
+M0000000000000088:	movl	$4070, %esi	;  5 bytes
+M000000000000008d:	xorl	%eax, %eax	;  2 bytes
+M000000000000008f:	callq	0x401680 <printf@plt>	;  5 bytes
+M0000000000000094:	movl	2442254(%rip), %eax  # 718998 <(anonymous namespace)::testStatus>	;  6 bytes
+M000000000000009a:	cmpl	$100, %eax	;  3 bytes
+M000000000000009d:	ja	0x4c4597 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xa7>	;  2 bytes
+M000000000000009f:	incl	%eax	;  2 bytes
+M00000000000000a1:	movl	%eax, 2442241(%rip)  # 718998 <(anonymous namespace)::testStatus>	;  6 bytes
+M00000000000000a7:	movl	5192448(%rbp,%rbp,4), %r13d	;  8 bytes
+M00000000000000af:	movslq	5192464(%rbp,%rbp,4), %r15	;  8 bytes
+M00000000000000b7:	movl	5192468(%rbp,%rbp,4), %ebx	;  7 bytes
+M00000000000000be:	movslq	5192472(%rbp,%rbp,4), %r14	;  8 bytes
+M00000000000000c6:	movq	5192480(%rbp,%rbp,4), %rbp	;  8 bytes
+M00000000000000ce:	cmpb	$0, 2442187(%rip)  # 718990 <veryVerbose>	;  7 bytes
+M00000000000000d5:	je	0x4c45e6 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xf6>	;  2 bytes
+M00000000000000d7:	movq	%rbp, (%rsp)	;  4 bytes
+M00000000000000db:	movl	$5200567, %edi	;  5 bytes
+M00000000000000e0:	movl	%r13d, %esi	;  3 bytes
+M00000000000000e3:	movq	%r12, %rdx	;  3 bytes
+M00000000000000e6:	movl	%r15d, %ecx	;  3 bytes
+M00000000000000e9:	movl	%ebx, %r8d	;  3 bytes
+M00000000000000ec:	movl	%r14d, %r9d	;  3 bytes
+M00000000000000ef:	xorl	%eax, %eax	;  2 bytes
+M00000000000000f1:	callq	0x401680 <printf@plt>	;  5 bytes
+M00000000000000f6:	movq	%rbx, 72(%rsp)	;  5 bytes
+M00000000000000fb:	movl	$7664800, %edi	;  5 bytes
+M0000000000000100:	movq	%r12, %rsi	;  3 bytes
+M0000000000000103:	callq	0x4e04b0 <long long& gg<long long>(long long*, char const*)>	;  5 bytes
+M0000000000000108:	movl	$7664800, %edi	;  5 bytes
+M000000000000010d:	movq	%r12, %rsi	;  3 bytes
+M0000000000000110:	callq	0x4e0590 <void verify<long long>(long long*, char const*)>	;  5 bytes
+M0000000000000115:	movl	2442136(%rip), %r12d  # 7189a4 <numCopyCtorCalls>	;  7 bytes
+M000000000000011c:	movl	2442138(%rip), %eax  # 7189ac <numCharCtorCalls>	;  6 bytes
+M0000000000000122:	movl	%eax, 20(%rsp)	;  4 bytes
+M0000000000000126:	cmpb	$0, 84(%rsp)	;  5 bytes
+M000000000000012b:	je	0x4c4700 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x210>	;  6 bytes
+M0000000000000131:	cmpb	$0, 2442088(%rip)  # 718990 <veryVerbose>	;  7 bytes
+M0000000000000138:	movl	%r13d, %ebx	;  3 bytes
+M000000000000013b:	je	0x4c4640 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x150>	;  2 bytes
+M000000000000013d:	cmpl	$0, 2441004(%rip)  # 718560 <void testCopyConstructWithIterators<long long>(bool, bool, bool)::firstTime>	;  7 bytes
+M0000000000000144:	je	0x4c4640 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x150>	;  2 bytes
+M0000000000000146:	movl	$5194330, %edi	;  5 bytes
+M000000000000014b:	callq	0x401710 <puts@plt>	;  5 bytes
+M0000000000000150:	movl	$0, 2440982(%rip)  # 718560 <void testCopyConstructWithIterators<long long>(bool, bool, bool)::firstTime>	; 10 bytes
+M000000000000015a:	cmpb	$0, 2442052(%rip)  # 718995 <veryVeryVerbose>	;  7 bytes
+M0000000000000161:	je	0x4c465d <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x16d>	;  2 bytes
+M0000000000000163:	movl	$5194369, %edi	;  5 bytes
+M0000000000000168:	callq	0x401710 <puts@plt>	;  5 bytes
+M000000000000016d:	movq	2441660(%rip), %rax  # 718820 <Z>	;  7 bytes
+M0000000000000174:	movq	$5204056, 32(%rsp)	;  9 bytes
+M000000000000017d:	movq	%rax, 40(%rsp)	;  5 bytes
+M0000000000000182:	movq	$0, 32(%rax)	;  8 bytes
+M000000000000018a:	testq	%rax, %rax	;  3 bytes
+M000000000000018d:	je	0x4c4769 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x279>	;  6 bytes
+M0000000000000193:	leaq	7664800(,%r15,8), %rsi	;  8 bytes
+M000000000000019b:	movq	72(%rsp), %rax	;  5 bytes
+M00000000000001a0:	addl	%r15d, %eax	;  3 bytes
+M00000000000001a3:	cltq		;  2 bytes
+M00000000000001a5:	leaq	7664800(,%rax,8), %rdx	;  8 bytes
+M00000000000001ad:	subq	%rsi, %rdx	;  3 bytes
+M00000000000001b0:	je	0x4c46af <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x1bf>	;  2 bytes
+M00000000000001b2:	leaq	7664800(,%r14,8), %rdi	;  8 bytes
+M00000000000001ba:	callq	0x401930 <memcpy@plt>	;  5 bytes
+M00000000000001bf:	movq	32(%rsp), %rax	;  5 bytes
+M00000000000001c4:	leaq	32(%rsp), %rdi	;  5 bytes
+M00000000000001c9:	movq	$-1, %rsi	;  7 bytes
+M00000000000001d0:	callq	*16(%rax)	;  3 bytes
+M00000000000001d3:	cmpb	$0, 2441931(%rip)  # 718995 <veryVeryVerbose>	;  7 bytes
+M00000000000001da:	je	0x4c46d6 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x1e6>	;  2 bytes
+M00000000000001dc:	movl	$5194721, %edi	;  5 bytes
+M00000000000001e1:	callq	0x401710 <puts@plt>	;  5 bytes
+M00000000000001e6:	cmpb	$0, 2441907(%rip)  # 718990 <veryVerbose>	;  7 bytes
+M00000000000001ed:	je	0x4c49ab <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x4bb>	;  6 bytes
+M00000000000001f3:	movl	$10, %edi	;  5 bytes
+M00000000000001f8:	callq	0x401720 <putchar@plt>	;  5 bytes
+M00000000000001fd:	jmp	0x4c4981 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x491>	;  5 bytes
+M0000000000000202:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000020c:	nopl	(%rax)	;  4 bytes
+M0000000000000210:	cmpq	$0, 2441496(%rip)  # 718820 <Z>	;  8 bytes
+M0000000000000218:	movl	%r13d, %ebx	;  3 bytes
+M000000000000021b:	jne	0x4c471d <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x22d>	;  2 bytes
+M000000000000021d:	movq	2673572(%rip), %rax  # 7512b8 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M0000000000000224:	testq	%rax, %rax	;  3 bytes
+M0000000000000227:	je	0x4c4823 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x333>	;  6 bytes
+M000000000000022d:	cmpq	$6, 24(%rsp)	;  6 bytes
+M0000000000000233:	jb	0x4c4981 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x491>	;  6 bytes
+M0000000000000239:	leaq	7664800(,%r15,8), %rax	;  8 bytes
+M0000000000000241:	leaq	7664800(,%r14,8), %rcx	;  8 bytes
+M0000000000000249:	movq	72(%rsp), %rbx	;  5 bytes
+M000000000000024e:	leal	(%rbx,%r15), %edx	;  4 bytes
+M0000000000000252:	movslq	%edx, %r9	;  3 bytes
+M0000000000000255:	shlq	$3, %r9	;  4 bytes
+M0000000000000259:	leaq	(,%r15,8), %rdi	;  8 bytes
+M0000000000000261:	movq	%r9, %r10	;  3 bytes
+M0000000000000264:	subq	%rdi, %r10	;  3 bytes
+M0000000000000267:	addq	$-8, %r10	;  4 bytes
+M000000000000026b:	cmpq	$24, %r10	;  4 bytes
+M000000000000026f:	jae	0x4c47dd <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x2ed>	;  2 bytes
+M0000000000000271:	movl	%r13d, %ebx	;  3 bytes
+M0000000000000274:	jmp	0x4c4960 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x470>	;  5 bytes
+M0000000000000279:	movl	$1, %r13d	;  6 bytes
+M000000000000027f:	movq	2673474(%rip), %rax  # 7512b8 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M0000000000000286:	testq	%rax, %rax	;  3 bytes
+M0000000000000289:	jne	0x4c4683 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x193>	;  6 bytes
+M000000000000028f:	callq	0x4eec50 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M0000000000000294:	jmp	0x4c4683 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x193>	;  5 bytes
+M0000000000000299:	cmpl	$1, %edx	;  3 bytes
+M000000000000029c:	jne	0x4c512e <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xc3e>	;  6 bytes
+M00000000000002a2:	movq	%rax, %rdi	;  3 bytes
+M00000000000002a5:	callq	0x4016b0 <__cxa_begin_catch@plt>	;  5 bytes
+M00000000000002aa:	cmpb	$0, 2441716(%rip)  # 718995 <veryVeryVerbose>	;  7 bytes
+M00000000000002b1:	je	0x4c47b6 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x2c6>	;  2 bytes
+M00000000000002b3:	movl	8(%rax), %edx	;  3 bytes
+M00000000000002b6:	leal	-1(%r13), %esi	;  4 bytes
+M00000000000002ba:	movl	$5194655, %edi	;  5 bytes
+M00000000000002bf:	xorl	%eax, %eax	;  2 bytes
+M00000000000002c1:	callq	0x401680 <printf@plt>	;  5 bytes
+M00000000000002c6:	movq	32(%rsp), %rax	;  5 bytes
+M00000000000002cb:	leaq	32(%rsp), %rdi	;  5 bytes
+M00000000000002d0:	movq	%r13, %rsi	;  3 bytes
+M00000000000002d3:	callq	*16(%rax)	;  3 bytes
+M00000000000002d6:	callq	0x401850 <__cxa_end_catch@plt>	;  5 bytes
+M00000000000002db:	incq	%r13	;  3 bytes
+M00000000000002de:	cmpq	$0, 2441290(%rip)  # 718820 <Z>	;  8 bytes
+M00000000000002e6:	je	0x4c476f <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x27f>	;  2 bytes
+M00000000000002e8:	jmp	0x4c4683 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x193>	;  5 bytes
+M00000000000002ed:	movq	%rbp, %r11	;  3 bytes
+M00000000000002f0:	leaq	7664800(,%r14,8), %rsi	;  8 bytes
+M00000000000002f8:	leal	(%rbx,%r15), %edx	;  4 bytes
+M00000000000002fc:	movslq	%edx, %rdx	;  3 bytes
+M00000000000002ff:	leaq	7664800(,%rdx,8), %rbp	;  8 bytes
+M0000000000000307:	cmpq	%rbp, %rsi	;  3 bytes
+M000000000000030a:	jae	0x4c4839 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x349>	;  2 bytes
+M000000000000030c:	shlq	$3, %rdx	;  4 bytes
+M0000000000000310:	subq	%rdi, %rdx	;  3 bytes
+M0000000000000313:	leaq	7664800(%rdx,%r14,8), %rdx	;  8 bytes
+M000000000000031b:	leaq	7664800(,%r15,8), %rsi	;  8 bytes
+M0000000000000323:	cmpq	%rdx, %rsi	;  3 bytes
+M0000000000000326:	jae	0x4c4839 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x349>	;  2 bytes
+M0000000000000328:	movq	%r11, %rbp	;  3 bytes
+M000000000000032b:	movl	%r13d, %ebx	;  3 bytes
+M000000000000032e:	jmp	0x4c4960 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x470>	;  5 bytes
+M0000000000000333:	callq	0x4eec50 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M0000000000000338:	cmpq	$6, 24(%rsp)	;  6 bytes
+M000000000000033e:	jae	0x4c4729 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x239>	;  6 bytes
+M0000000000000344:	jmp	0x4c4981 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x491>	;  5 bytes
+M0000000000000349:	shrq	$3, %r10	;  4 bytes
+M000000000000034d:	incq	%r10	;  3 bytes
+M0000000000000350:	movq	%r10, %r8	;  3 bytes
+M0000000000000353:	andq	$-4, %r8	;  4 bytes
+M0000000000000357:	leaq	-4(%r8), %rsi	;  4 bytes
+M000000000000035b:	movq	%rsi, %rbp	;  3 bytes
+M000000000000035e:	shrq	$2, %rbp	;  4 bytes
+M0000000000000362:	incq	%rbp	;  3 bytes
+M0000000000000365:	movl	%ebp, %edx	;  2 bytes
+M0000000000000367:	andl	$3, %edx	;  3 bytes
+M000000000000036a:	cmpq	$12, %rsi	;  4 bytes
+M000000000000036e:	jae	0x4c4867 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x377>	;  2 bytes
+M0000000000000370:	xorl	%ebx, %ebx	;  2 bytes
+M0000000000000372:	jmp	0x4c48f0 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x400>	;  5 bytes
+M0000000000000377:	andq	$-4, %rbp	;  4 bytes
+M000000000000037b:	negq	%rbp	;  3 bytes
+M000000000000037e:	movl	$7664800, %esi	;  5 bytes
+M0000000000000383:	xorl	%ebx, %ebx	;  2 bytes
+M0000000000000385:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000038f:	nop		;  1 bytes
+M0000000000000390:	movups	(%rsi,%r15,8), %xmm0	;  5 bytes
+M0000000000000395:	movups	16(%rsi,%r15,8), %xmm1	;  6 bytes
+M000000000000039b:	movups	%xmm0, (%rsi,%r14,8)	;  5 bytes
+M00000000000003a0:	movups	%xmm1, 16(%rsi,%r14,8)	;  6 bytes
+M00000000000003a6:	movups	32(%rsi,%r15,8), %xmm0	;  6 bytes
+M00000000000003ac:	movups	48(%rsi,%r15,8), %xmm1	;  6 bytes
+M00000000000003b2:	movups	%xmm0, 32(%rsi,%r14,8)	;  6 bytes
+M00000000000003b8:	movups	%xmm1, 48(%rsi,%r14,8)	;  6 bytes
+M00000000000003be:	movups	64(%rsi,%r15,8), %xmm0	;  6 bytes
+M00000000000003c4:	movups	80(%rsi,%r15,8), %xmm1	;  6 bytes
+M00000000000003ca:	movups	%xmm0, 64(%rsi,%r14,8)	;  6 bytes
+M00000000000003d0:	movups	%xmm1, 80(%rsi,%r14,8)	;  6 bytes
+M00000000000003d6:	movdqu	96(%rsi,%r15,8), %xmm0	;  7 bytes
+M00000000000003dd:	movdqu	112(%rsi,%r15,8), %xmm1	;  7 bytes
+M00000000000003e4:	movdqu	%xmm0, 96(%rsi,%r14,8)	;  7 bytes
+M00000000000003eb:	movdqu	%xmm1, 112(%rsi,%r14,8)	;  7 bytes
+M00000000000003f2:	addq	$16, %rbx	;  4 bytes
+M00000000000003f6:	subq	$-128, %rsi	;  4 bytes
+M00000000000003fa:	addq	$4, %rbp	;  4 bytes
+M00000000000003fe:	jne	0x4c4880 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x390>	;  2 bytes
+M0000000000000400:	testq	%rdx, %rdx	;  3 bytes
+M0000000000000403:	je	0x4c4943 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x453>	;  2 bytes
+M0000000000000405:	shlq	$3, %r14	;  4 bytes
+M0000000000000409:	leaq	7664800(,%rbx,8), %rsi	;  8 bytes
+M0000000000000411:	negq	%rdx	;  3 bytes
+M0000000000000414:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000041e:	nop		;  2 bytes
+M0000000000000420:	movdqu	7664800(%rdi,%rbx,8), %xmm0	;  9 bytes
+M0000000000000429:	movdqu	7664816(%rdi,%rbx,8), %xmm1	;  9 bytes
+M0000000000000432:	movdqu	%xmm0, 7664800(%r14,%rbx,8)	; 10 bytes
+M000000000000043c:	movdqu	%xmm1, 7664816(%r14,%rbx,8)	; 10 bytes
+M0000000000000446:	addq	$4, %rbx	;  4 bytes
+M000000000000044a:	addq	$32, %rsi	;  4 bytes
+M000000000000044e:	incq	%rdx	;  3 bytes
+M0000000000000451:	jne	0x4c4910 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x420>	;  2 bytes
+M0000000000000453:	cmpq	%r8, %r10	;  3 bytes
+M0000000000000456:	movq	%r11, %rbp	;  3 bytes
+M0000000000000459:	movl	%r13d, %ebx	;  3 bytes
+M000000000000045c:	je	0x4c4981 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x491>	;  2 bytes
+M000000000000045e:	leaq	(%rax,%r8,8), %rax	;  4 bytes
+M0000000000000462:	leaq	(%rcx,%r8,8), %rcx	;  4 bytes
+M0000000000000466:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M0000000000000470:	subq	%rax, %r9	;  3 bytes
+M0000000000000473:	leaq	7664800(%r9), %rdx	;  7 bytes
+M000000000000047a:	xorl	%esi, %esi	;  2 bytes
+M000000000000047c:	nopl	(%rax)	;  4 bytes
+M0000000000000480:	movq	(%rax,%rsi), %rdi	;  4 bytes
+M0000000000000484:	movq	%rdi, (%rcx,%rsi)	;  4 bytes
+M0000000000000488:	addq	$8, %rsi	;  4 bytes
+M000000000000048c:	cmpq	%rsi, %rdx	;  3 bytes
+M000000000000048f:	jne	0x4c4970 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x480>	;  2 bytes
+M0000000000000491:	cmpb	$0, 2441224(%rip)  # 718990 <veryVerbose>	;  7 bytes
+M0000000000000498:	je	0x4c49ab <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x4bb>	;  2 bytes
+M000000000000049a:	movl	2441236(%rip), %edx  # 7189a4 <numCopyCtorCalls>	;  6 bytes
+M00000000000004a0:	subl	%r12d, %edx	;  3 bytes
+M00000000000004a3:	movl	2441235(%rip), %ecx  # 7189ac <numCharCtorCalls>	;  6 bytes
+M00000000000004a9:	subl	20(%rsp), %ecx	;  4 bytes
+M00000000000004ad:	movl	$5200938, %edi	;  5 bytes
+M00000000000004b2:	movl	%ebx, %esi	;  2 bytes
+M00000000000004b4:	xorl	%eax, %eax	;  2 bytes
+M00000000000004b6:	callq	0x401680 <printf@plt>	;  5 bytes
+M00000000000004bb:	cmpb	$0, 64(%rsp)	;  5 bytes
+M00000000000004c0:	je	0x4c4a10 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x520>	;  2 bytes
+M00000000000004c2:	cmpl	2441195(%rip), %r12d  # 7189a4 <numCopyCtorCalls>	;  7 bytes
+M00000000000004c9:	je	0x4c49e4 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x4f4>	;  2 bytes
+M00000000000004cb:	movl	$5196920, %edi	;  5 bytes
+M00000000000004d0:	movl	$5197804, %edx	;  5 bytes
+M00000000000004d5:	movl	$4101, %esi	;  5 bytes
+M00000000000004da:	xorl	%eax, %eax	;  2 bytes
+M00000000000004dc:	callq	0x401680 <printf@plt>	;  5 bytes
+M00000000000004e1:	movl	2441153(%rip), %eax  # 718998 <(anonymous namespace)::testStatus>	;  6 bytes
+M00000000000004e7:	cmpl	$100, %eax	;  3 bytes
+M00000000000004ea:	ja	0x4c49e4 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x4f4>	;  2 bytes
+M00000000000004ec:	incl	%eax	;  2 bytes
+M00000000000004ee:	movl	%eax, 2441140(%rip)  # 718998 <(anonymous namespace)::testStatus>	;  6 bytes
+M00000000000004f4:	movl	20(%rsp), %eax	;  4 bytes
+M00000000000004f8:	cmpl	2441150(%rip), %eax  # 7189ac <numCharCtorCalls>	;  6 bytes
+M00000000000004fe:	je	0x4c4520 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x30>	;  6 bytes
+M0000000000000504:	movl	$5196920, %edi	;  5 bytes
+M0000000000000509:	movl	$5200986, %edx	;  5 bytes
+M000000000000050e:	movl	$4102, %esi	;  5 bytes
+M0000000000000513:	jmp	0x4c4a66 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x576>	;  2 bytes
+M0000000000000515:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000051f:	nop		;  1 bytes
+M0000000000000520:	addl	72(%rsp), %r12d	;  5 bytes
+M0000000000000525:	cmpl	2441096(%rip), %r12d  # 7189a4 <numCopyCtorCalls>	;  7 bytes
+M000000000000052c:	jle	0x4c4a47 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x557>	;  2 bytes
+M000000000000052e:	movl	$5196920, %edi	;  5 bytes
+M0000000000000533:	movl	$5201016, %edx	;  5 bytes
+M0000000000000538:	movl	$4105, %esi	;  5 bytes
+M000000000000053d:	xorl	%eax, %eax	;  2 bytes
+M000000000000053f:	callq	0x401680 <printf@plt>	;  5 bytes
+M0000000000000544:	movl	2441054(%rip), %eax  # 718998 <(anonymous namespace)::testStatus>	;  6 bytes
+M000000000000054a:	cmpl	$100, %eax	;  3 bytes
+M000000000000054d:	ja	0x4c4a47 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x557>	;  2 bytes
+M000000000000054f:	incl	%eax	;  2 bytes
+M0000000000000551:	movl	%eax, 2441041(%rip)  # 718998 <(anonymous namespace)::testStatus>	;  6 bytes
+M0000000000000557:	movl	20(%rsp), %eax	;  4 bytes
+M000000000000055b:	cmpl	2441051(%rip), %eax  # 7189ac <numCharCtorCalls>	;  6 bytes
+M0000000000000561:	je	0x4c4520 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x30>	;  6 bytes
+M0000000000000567:	movl	$5196920, %edi	;  5 bytes
+M000000000000056c:	movl	$5200986, %edx	;  5 bytes
+M0000000000000571:	movl	$4106, %esi	;  5 bytes
+M0000000000000576:	xorl	%eax, %eax	;  2 bytes
+M0000000000000578:	callq	0x401680 <printf@plt>	;  5 bytes
+M000000000000057d:	movl	2440997(%rip), %eax  # 718998 <(anonymous namespace)::testStatus>	;  6 bytes
+M0000000000000583:	cmpl	$100, %eax	;  3 bytes
+M0000000000000586:	ja	0x4c4520 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x30>	;  6 bytes
+M000000000000058c:	incl	%eax	;  2 bytes
+M000000000000058e:	movl	%eax, 2440980(%rip)  # 718998 <(anonymous namespace)::testStatus>	;  6 bytes
+M0000000000000594:	jmp	0x4c4520 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x30>	;  5 bytes
+M0000000000000599:	cmpb	$0, 2440966(%rip)  # 718996 <verbose>	;  7 bytes
+M00000000000005a0:	je	0x4c4a9c <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x5ac>	;  2 bytes
+M00000000000005a2:	movl	$5203922, %edi	;  5 bytes
+M00000000000005a7:	callq	0x401710 <puts@plt>	;  5 bytes
+M00000000000005ac:	xorl	%r12d, %r12d	;  3 bytes
+M00000000000005af:	jmp	0x4c4ad7 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x5e7>	;  2 bytes
+M00000000000005b1:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M00000000000005bb:	nopl	(%rax,%rax)	;  5 bytes
+M00000000000005c0:	movl	$7664800, %edi	;  5 bytes
+M00000000000005c5:	movq	%rbx, %rsi	;  3 bytes
+M00000000000005c8:	callq	0x4e0590 <void verify<long long>(long long*, char const*)>	;  5 bytes
+M00000000000005cd:	movl	$7664800, %edi	;  5 bytes
+M00000000000005d2:	movq	%rbx, %rsi	;  3 bytes
+M00000000000005d5:	callq	0x4e07d0 <void cleanup<long long>(long long*, char const*)>	;  5 bytes
+M00000000000005da:	incq	%r12	;  3 bytes
+M00000000000005dd:	cmpq	$30, %r12	;  4 bytes
+M00000000000005e1:	je	0x4c50fd <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xc0d>	;  6 bytes
+M00000000000005e7:	leaq	(,%r12,8), %rbx	;  8 bytes
+M00000000000005ef:	movq	5192456(%rbx,%rbx,4), %rbp	;  8 bytes
+M00000000000005f7:	movq	%rbp, %rdi	;  3 bytes
+M00000000000005fa:	callq	0x401790 <strlen@plt>	;  5 bytes
+M00000000000005ff:	cmpl	$17, %eax	;  3 bytes
+M0000000000000602:	jl	0x4c4b1d <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x62d>	;  2 bytes
+M0000000000000604:	movl	$5196920, %edi	;  5 bytes
+M0000000000000609:	movl	$5194243, %edx	;  5 bytes
+M000000000000060e:	movl	$4121, %esi	;  5 bytes
+M0000000000000613:	xorl	%eax, %eax	;  2 bytes
+M0000000000000615:	callq	0x401680 <printf@plt>	;  5 bytes
+M000000000000061a:	movl	2440840(%rip), %eax  # 718998 <(anonymous namespace)::testStatus>	;  6 bytes
+M0000000000000620:	cmpl	$100, %eax	;  3 bytes
+M0000000000000623:	ja	0x4c4b1d <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x62d>	;  2 bytes
+M0000000000000625:	incl	%eax	;  2 bytes
+M0000000000000627:	movl	%eax, 2440827(%rip)  # 718998 <(anonymous namespace)::testStatus>	;  6 bytes
+M000000000000062d:	movq	%rbp, %rdi	;  3 bytes
+M0000000000000630:	callq	0x401790 <strlen@plt>	;  5 bytes
+M0000000000000635:	cmpq	$20, %rax	;  4 bytes
+M0000000000000639:	jb	0x4c4b54 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x664>	;  2 bytes
+M000000000000063b:	movl	$5196920, %edi	;  5 bytes
+M0000000000000640:	movl	$5201052, %edx	;  5 bytes
+M0000000000000645:	movl	$4124, %esi	;  5 bytes
+M000000000000064a:	xorl	%eax, %eax	;  2 bytes
+M000000000000064c:	callq	0x401680 <printf@plt>	;  5 bytes
+M0000000000000651:	movl	2440785(%rip), %eax  # 718998 <(anonymous namespace)::testStatus>	;  6 bytes
+M0000000000000657:	cmpl	$100, %eax	;  3 bytes
+M000000000000065a:	ja	0x4c4b54 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x664>	;  2 bytes
+M000000000000065c:	incl	%eax	;  2 bytes
+M000000000000065e:	movl	%eax, 2440772(%rip)  # 718998 <(anonymous namespace)::testStatus>	;  6 bytes
+M0000000000000664:	movq	%r12, 24(%rsp)	;  5 bytes
+M0000000000000669:	pxor	%xmm0, %xmm0	;  4 bytes
+M000000000000066d:	movdqa	%xmm0, 32(%rsp)	;  6 bytes
+M0000000000000673:	movl	$0, 48(%rsp)	;  8 bytes
+M000000000000067b:	movb	(%rbp), %al	;  3 bytes
+M000000000000067e:	testb	%al, %al	;  2 bytes
+M0000000000000680:	je	0x4c4b90 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x6a0>	;  2 bytes
+M0000000000000682:	xorl	%ecx, %ecx	;  2 bytes
+M0000000000000684:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000068e:	nop		;  2 bytes
+M0000000000000690:	movb	%al, 32(%rsp,%rcx)	;  4 bytes
+M0000000000000694:	movzbl	1(%rbp,%rcx), %eax	;  5 bytes
+M0000000000000699:	incq	%rcx	;  3 bytes
+M000000000000069c:	testb	%al, %al	;  2 bytes
+M000000000000069e:	jne	0x4c4b80 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x690>	;  2 bytes
+M00000000000006a0:	movl	5192448(%rbx,%rbx,4), %r14d	;  8 bytes
+M00000000000006a8:	movslq	5192464(%rbx,%rbx,4), %r13	;  8 bytes
+M00000000000006b0:	movslq	5192468(%rbx,%rbx,4), %r12	;  8 bytes
+M00000000000006b8:	movslq	5192472(%rbx,%rbx,4), %r15	;  8 bytes
+M00000000000006c0:	movq	5192480(%rbx,%rbx,4), %rbx	;  8 bytes
+M00000000000006c8:	cmpb	$0, 2440657(%rip)  # 718990 <veryVerbose>	;  7 bytes
+M00000000000006cf:	je	0x4c4be0 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x6f0>	;  2 bytes
+M00000000000006d1:	movq	%rbx, (%rsp)	;  4 bytes
+M00000000000006d5:	movl	$5200567, %edi	;  5 bytes
+M00000000000006da:	movl	%r14d, %esi	;  3 bytes
+M00000000000006dd:	movq	%rbp, %rdx	;  3 bytes
+M00000000000006e0:	movl	%r13d, %ecx	;  3 bytes
+M00000000000006e3:	movl	%r12d, %r8d	;  3 bytes
+M00000000000006e6:	movl	%r15d, %r9d	;  3 bytes
+M00000000000006e9:	xorl	%eax, %eax	;  2 bytes
+M00000000000006eb:	callq	0x401680 <printf@plt>	;  5 bytes
+M00000000000006f0:	movl	$7664800, %edi	;  5 bytes
+M00000000000006f5:	movq	%rbp, %rsi	;  3 bytes
+M00000000000006f8:	callq	0x4e04b0 <long long& gg<long long>(long long*, char const*)>	;  5 bytes
+M00000000000006fd:	movl	$7664800, %edi	;  5 bytes
+M0000000000000702:	movq	%rbp, %rsi	;  3 bytes
+M0000000000000705:	callq	0x4e0590 <void verify<long long>(long long*, char const*)>	;  5 bytes
+M000000000000070a:	movl	2440612(%rip), %eax  # 7189a4 <numCopyCtorCalls>	;  6 bytes
+M0000000000000710:	movl	%eax, 20(%rsp)	;  4 bytes
+M0000000000000714:	movl	2440610(%rip), %eax  # 7189ac <numCharCtorCalls>	;  6 bytes
+M000000000000071a:	movl	%eax, 72(%rsp)	;  4 bytes
+M000000000000071e:	cmpb	$0, 84(%rsp)	;  5 bytes
+M0000000000000723:	je	0x4c4ce0 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x7f0>	;  6 bytes
+M0000000000000729:	cmpb	$0, 2440560(%rip)  # 718990 <veryVerbose>	;  7 bytes
+M0000000000000730:	movl	%r14d, %ebp	;  3 bytes
+M0000000000000733:	je	0x4c4c38 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x748>	;  2 bytes
+M0000000000000735:	cmpl	$0, 2439480(%rip)  # 718564 <void testCopyConstructWithIterators<long long>(bool, bool, bool)::firstTime>	;  7 bytes
+M000000000000073c:	je	0x4c4c38 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x748>	;  2 bytes
+M000000000000073e:	movl	$5194330, %edi	;  5 bytes
+M0000000000000743:	callq	0x401710 <puts@plt>	;  5 bytes
+M0000000000000748:	movl	$0, 2439458(%rip)  # 718564 <void testCopyConstructWithIterators<long long>(bool, bool, bool)::firstTime>	; 10 bytes
+M0000000000000752:	cmpb	$0, 2440524(%rip)  # 718995 <veryVeryVerbose>	;  7 bytes
+M0000000000000759:	je	0x4c4c55 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x765>	;  2 bytes
+M000000000000075b:	movl	$5194369, %edi	;  5 bytes
+M0000000000000760:	callq	0x401710 <puts@plt>	;  5 bytes
+M0000000000000765:	movq	2440132(%rip), %rax  # 718820 <Z>	;  7 bytes
+M000000000000076c:	movq	$5204056, 88(%rsp)	;  9 bytes
+M0000000000000775:	movq	%rax, 96(%rsp)	;  5 bytes
+M000000000000077a:	movq	$0, 32(%rax)	;  8 bytes
+M0000000000000782:	testq	%rax, %rax	;  3 bytes
+M0000000000000785:	je	0x4c4d6d <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x87d>	;  6 bytes
+M000000000000078b:	cmpq	$6, 24(%rsp)	;  6 bytes
+M0000000000000791:	jb	0x4c5051 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xb61>	;  6 bytes
+M0000000000000797:	leaq	32(%rsp,%r13), %rcx	;  5 bytes
+M000000000000079c:	leaq	7664800(,%r15,8), %rsi	;  8 bytes
+M00000000000007a4:	leal	(%r13,%r12), %eax	;  5 bytes
+M00000000000007a9:	movslq	%eax, %r9	;  3 bytes
+M00000000000007ac:	movq	%r9, %r10	;  3 bytes
+M00000000000007af:	subq	%r13, %r10	;  3 bytes
+M00000000000007b2:	cmpq	$4, %r10	;  4 bytes
+M00000000000007b6:	jb	0x4c5036 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xb46>	;  6 bytes
+M00000000000007bc:	movq	%rbx, %r11	;  3 bytes
+M00000000000007bf:	movq	%r10, %r8	;  3 bytes
+M00000000000007c2:	andq	$-4, %r8	;  4 bytes
+M00000000000007c6:	leaq	-4(%r8), %rax	;  4 bytes
+M00000000000007ca:	movq	%rax, %rbp	;  3 bytes
+M00000000000007cd:	shrq	$2, %rbp	;  4 bytes
+M00000000000007d1:	incq	%rbp	;  3 bytes
+M00000000000007d4:	movl	%ebp, %edi	;  2 bytes
+M00000000000007d6:	andl	$3, %edi	;  3 bytes
+M00000000000007d9:	cmpq	$12, %rax	;  4 bytes
+M00000000000007dd:	jae	0x4c4f26 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xa36>	;  6 bytes
+M00000000000007e3:	xorl	%ebx, %ebx	;  2 bytes
+M00000000000007e5:	jmp	0x4c4fd5 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xae5>	;  5 bytes
+M00000000000007ea:	nopw	(%rax,%rax)	;  6 bytes
+M00000000000007f0:	cmpq	$0, 2439992(%rip)  # 718820 <Z>	;  8 bytes
+M00000000000007f8:	movl	%r14d, %ebp	;  3 bytes
+M00000000000007fb:	movq	%r12, %r11	;  3 bytes
+M00000000000007fe:	jne	0x4c4d10 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x820>	;  2 bytes
+M0000000000000800:	movq	2672065(%rip), %rax  # 7512b8 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M0000000000000807:	testq	%rax, %rax	;  3 bytes
+M000000000000080a:	jne	0x4c4d10 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x820>	;  2 bytes
+M000000000000080c:	callq	0x4eec50 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M0000000000000811:	movq	%r12, %r11	;  3 bytes
+M0000000000000814:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000081e:	nop		;  2 bytes
+M0000000000000820:	movq	24(%rsp), %r12	;  5 bytes
+M0000000000000825:	cmpq	$6, %r12	;  4 bytes
+M0000000000000829:	jb	0x4c5090 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xba0>	;  6 bytes
+M000000000000082f:	leaq	7664800(,%r15,8), %rax	;  8 bytes
+M0000000000000837:	leaq	32(%rsp,%r13), %rcx	;  5 bytes
+M000000000000083c:	addq	%r13, %r11	;  3 bytes
+M000000000000083f:	movq	%r11, %r9	;  3 bytes
+M0000000000000842:	subq	%r13, %r9	;  3 bytes
+M0000000000000845:	cmpq	$4, %r9	;  4 bytes
+M0000000000000849:	jb	0x4c4efa <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xa0a>	;  6 bytes
+M000000000000084f:	movq	%rbx, %r10	;  3 bytes
+M0000000000000852:	movq	%r9, %r8	;  3 bytes
+M0000000000000855:	andq	$-4, %r8	;  4 bytes
+M0000000000000859:	leaq	-4(%r8), %rsi	;  4 bytes
+M000000000000085d:	movq	%rsi, %rdi	;  3 bytes
+M0000000000000860:	shrq	$2, %rdi	;  4 bytes
+M0000000000000864:	incq	%rdi	;  3 bytes
+M0000000000000867:	movl	%edi, %ebp	;  2 bytes
+M0000000000000869:	andl	$3, %ebp	;  3 bytes
+M000000000000086c:	cmpq	$12, %rsi	;  4 bytes
+M0000000000000870:	jae	0x4c4ded <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x8fd>	;  6 bytes
+M0000000000000876:	xorl	%ebx, %ebx	;  2 bytes
+M0000000000000878:	jmp	0x4c4e95 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x9a5>	;  5 bytes
+M000000000000087d:	movl	$1, %eax	;  5 bytes
+M0000000000000882:	movq	%rax, 64(%rsp)	;  5 bytes
+M0000000000000887:	movq	2671930(%rip), %rax  # 7512b8 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M000000000000088e:	testq	%rax, %rax	;  3 bytes
+M0000000000000891:	jne	0x4c4c7b <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x78b>	;  6 bytes
+M0000000000000897:	callq	0x4eec50 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M000000000000089c:	jmp	0x4c4c7b <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x78b>	;  5 bytes
+M00000000000008a1:	cmpl	$1, %edx	;  3 bytes
+M00000000000008a4:	jne	0x4c512e <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xc3e>	;  6 bytes
+M00000000000008aa:	movq	%rax, %rdi	;  3 bytes
+M00000000000008ad:	callq	0x4016b0 <__cxa_begin_catch@plt>	;  5 bytes
+M00000000000008b2:	cmpb	$0, 2440172(%rip)  # 718995 <veryVeryVerbose>	;  7 bytes
+M00000000000008b9:	je	0x4c4dc2 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x8d2>	;  2 bytes
+M00000000000008bb:	movl	8(%rax), %edx	;  3 bytes
+M00000000000008be:	movq	64(%rsp), %rax	;  5 bytes
+M00000000000008c3:	leal	-1(%rax), %esi	;  3 bytes
+M00000000000008c6:	movl	$5194655, %edi	;  5 bytes
+M00000000000008cb:	xorl	%eax, %eax	;  2 bytes
+M00000000000008cd:	callq	0x401680 <printf@plt>	;  5 bytes
+M00000000000008d2:	movq	88(%rsp), %rax	;  5 bytes
+M00000000000008d7:	leaq	88(%rsp), %rdi	;  5 bytes
+M00000000000008dc:	movq	64(%rsp), %rsi	;  5 bytes
+M00000000000008e1:	callq	*16(%rax)	;  3 bytes
+M00000000000008e4:	callq	0x401850 <__cxa_end_catch@plt>	;  5 bytes
+M00000000000008e9:	incq	64(%rsp)	;  5 bytes
+M00000000000008ee:	cmpq	$0, 2439738(%rip)  # 718820 <Z>	;  8 bytes
+M00000000000008f6:	je	0x4c4d77 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x887>	;  2 bytes
+M00000000000008f8:	jmp	0x4c4c7b <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x78b>	;  5 bytes
+M00000000000008fd:	leaq	46(%rsp), %rdx	;  5 bytes
+M0000000000000902:	leaq	(%rdx,%r13), %rsi	;  4 bytes
+M0000000000000906:	andq	$-4, %rdi	;  4 bytes
+M000000000000090a:	negq	%rdi	;  3 bytes
+M000000000000090d:	xorl	%ebx, %ebx	;  2 bytes
+M000000000000090f:	nop		;  1 bytes
+M0000000000000910:	pmovsxbq	-14(%rsi,%rbx), %xmm0	;  7 bytes
+M0000000000000917:	pmovsxbq	-12(%rsi,%rbx), %xmm1	;  7 bytes
+M000000000000091e:	leaq	(,%r15,8), %rdx	;  8 bytes
+M0000000000000926:	movdqu	%xmm0, 7664800(%rdx,%rbx,8)	;  9 bytes
+M000000000000092f:	movdqu	%xmm1, 7664816(%rdx,%rbx,8)	;  9 bytes
+M0000000000000938:	pmovsxbq	-10(%rsi,%rbx), %xmm0	;  7 bytes
+M000000000000093f:	pmovsxbq	-8(%rsi,%rbx), %xmm1	;  7 bytes
+M0000000000000946:	movdqu	%xmm0, 7664832(%rdx,%rbx,8)	;  9 bytes
+M000000000000094f:	movdqu	%xmm1, 7664848(%rdx,%rbx,8)	;  9 bytes
+M0000000000000958:	pmovsxbq	-6(%rsi,%rbx), %xmm0	;  7 bytes
+M000000000000095f:	pmovsxbq	-4(%rsi,%rbx), %xmm1	;  7 bytes
+M0000000000000966:	movdqu	%xmm0, 7664864(%rdx,%rbx,8)	;  9 bytes
+M000000000000096f:	movdqu	%xmm1, 7664880(%rdx,%rbx,8)	;  9 bytes
+M0000000000000978:	pmovsxbq	-2(%rsi,%rbx), %xmm0	;  7 bytes
+M000000000000097f:	pmovsxbq	(%rsi,%rbx), %xmm1	;  6 bytes
+M0000000000000985:	movdqu	%xmm0, 7664896(%rdx,%rbx,8)	;  9 bytes
+M000000000000098e:	movdqu	%xmm1, 7664912(%rdx,%rbx,8)	;  9 bytes
+M0000000000000997:	addq	$16, %rbx	;  4 bytes
+M000000000000099b:	addq	$4, %rdi	;  4 bytes
+M000000000000099f:	jne	0x4c4e00 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x910>	;  6 bytes
+M00000000000009a5:	testq	%rbp, %rbp	;  3 bytes
+M00000000000009a8:	je	0x4c4ee4 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x9f4>	;  2 bytes
+M00000000000009aa:	addq	%rbx, %r13	;  3 bytes
+M00000000000009ad:	leaq	34(%rsp), %rdx	;  5 bytes
+M00000000000009b2:	addq	%rdx, %r13	;  3 bytes
+M00000000000009b5:	shlq	$3, %r15	;  4 bytes
+M00000000000009b9:	leaq	7664816(%r15,%rbx,8), %rsi	;  8 bytes
+M00000000000009c1:	shlq	$2, %rbp	;  4 bytes
+M00000000000009c5:	xorl	%edi, %edi	;  2 bytes
+M00000000000009c7:	nopw	(%rax,%rax)	;  9 bytes
+M00000000000009d0:	pmovsxbq	-2(%r13,%rdi), %xmm0	;  8 bytes
+M00000000000009d8:	pmovsxbq	(%r13,%rdi), %xmm1	;  8 bytes
+M00000000000009e0:	movdqu	%xmm0, -16(%rsi,%rdi,8)	;  6 bytes
+M00000000000009e6:	movdqu	%xmm1, (%rsi,%rdi,8)	;  5 bytes
+M00000000000009eb:	addq	$4, %rdi	;  4 bytes
+M00000000000009ef:	cmpq	%rdi, %rbp	;  3 bytes
+M00000000000009f2:	jne	0x4c4ec0 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x9d0>	;  2 bytes
+M00000000000009f4:	cmpq	%r8, %r9	;  3 bytes
+M00000000000009f7:	movq	%r10, %rbx	;  3 bytes
+M00000000000009fa:	movl	%r14d, %ebp	;  3 bytes
+M00000000000009fd:	je	0x4c5090 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xba0>	;  6 bytes
+M0000000000000a03:	addq	%r8, %rcx	;  3 bytes
+M0000000000000a06:	leaq	(%rax,%r8,8), %rax	;  4 bytes
+M0000000000000a0a:	subq	%rcx, %r11	;  3 bytes
+M0000000000000a0d:	leaq	32(%rsp,%r11), %rdx	;  5 bytes
+M0000000000000a12:	xorl	%esi, %esi	;  2 bytes
+M0000000000000a14:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M0000000000000a1e:	nop		;  2 bytes
+M0000000000000a20:	movsbq	(%rcx,%rsi), %rdi	;  5 bytes
+M0000000000000a25:	movq	%rdi, (%rax,%rsi,8)	;  4 bytes
+M0000000000000a29:	incq	%rsi	;  3 bytes
+M0000000000000a2c:	cmpq	%rsi, %rdx	;  3 bytes
+M0000000000000a2f:	jne	0x4c4f10 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xa20>	;  2 bytes
+M0000000000000a31:	jmp	0x4c5090 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xba0>	;  5 bytes
+M0000000000000a36:	leaq	46(%rsp), %rax	;  5 bytes
+M0000000000000a3b:	addq	%r13, %rax	;  3 bytes
+M0000000000000a3e:	andq	$-4, %rbp	;  4 bytes
+M0000000000000a42:	negq	%rbp	;  3 bytes
+M0000000000000a45:	xorl	%ebx, %ebx	;  2 bytes
+M0000000000000a47:	nopw	(%rax,%rax)	;  9 bytes
+M0000000000000a50:	pmovsxbq	-14(%rax,%rbx), %xmm0	;  7 bytes
+M0000000000000a57:	pmovsxbq	-12(%rax,%rbx), %xmm1	;  7 bytes
+M0000000000000a5e:	leaq	(,%r15,8), %rdx	;  8 bytes
+M0000000000000a66:	movdqu	%xmm0, 7664800(%rdx,%rbx,8)	;  9 bytes
+M0000000000000a6f:	movdqu	%xmm1, 7664816(%rdx,%rbx,8)	;  9 bytes
+M0000000000000a78:	pmovsxbq	-10(%rax,%rbx), %xmm0	;  7 bytes
+M0000000000000a7f:	pmovsxbq	-8(%rax,%rbx), %xmm1	;  7 bytes
+M0000000000000a86:	movdqu	%xmm0, 7664832(%rdx,%rbx,8)	;  9 bytes
+M0000000000000a8f:	movdqu	%xmm1, 7664848(%rdx,%rbx,8)	;  9 bytes
+M0000000000000a98:	pmovsxbq	-6(%rax,%rbx), %xmm0	;  7 bytes
+M0000000000000a9f:	pmovsxbq	-4(%rax,%rbx), %xmm1	;  7 bytes
+M0000000000000aa6:	movdqu	%xmm0, 7664864(%rdx,%rbx,8)	;  9 bytes
+M0000000000000aaf:	movdqu	%xmm1, 7664880(%rdx,%rbx,8)	;  9 bytes
+M0000000000000ab8:	pmovsxbq	-2(%rax,%rbx), %xmm0	;  7 bytes
+M0000000000000abf:	pmovsxbq	(%rax,%rbx), %xmm1	;  6 bytes
+M0000000000000ac5:	movdqu	%xmm0, 7664896(%rdx,%rbx,8)	;  9 bytes
+M0000000000000ace:	movdqu	%xmm1, 7664912(%rdx,%rbx,8)	;  9 bytes
+M0000000000000ad7:	addq	$16, %rbx	;  4 bytes
+M0000000000000adb:	addq	$4, %rbp	;  4 bytes
+M0000000000000adf:	jne	0x4c4f40 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xa50>	;  6 bytes
+M0000000000000ae5:	testq	%rdi, %rdi	;  3 bytes
+M0000000000000ae8:	je	0x4c5024 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xb34>	;  2 bytes
+M0000000000000aea:	addq	%rbx, %r13	;  3 bytes
+M0000000000000aed:	leaq	34(%rsp), %rax	;  5 bytes
+M0000000000000af2:	addq	%rax, %r13	;  3 bytes
+M0000000000000af5:	shlq	$3, %r15	;  4 bytes
+M0000000000000af9:	leaq	7664816(%r15,%rbx,8), %rax	;  8 bytes
+M0000000000000b01:	shlq	$2, %rdi	;  4 bytes
+M0000000000000b05:	xorl	%ebp, %ebp	;  2 bytes
+M0000000000000b07:	nopw	(%rax,%rax)	;  9 bytes
+M0000000000000b10:	pmovsxbq	-2(%r13,%rbp), %xmm0	;  8 bytes
+M0000000000000b18:	pmovsxbq	(%r13,%rbp), %xmm1	;  8 bytes
+M0000000000000b20:	movdqu	%xmm0, -16(%rax,%rbp,8)	;  6 bytes
+M0000000000000b26:	movdqu	%xmm1, (%rax,%rbp,8)	;  5 bytes
+M0000000000000b2b:	addq	$4, %rbp	;  4 bytes
+M0000000000000b2f:	cmpq	%rbp, %rdi	;  3 bytes
+M0000000000000b32:	jne	0x4c5000 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xb10>	;  2 bytes
+M0000000000000b34:	cmpq	%r8, %r10	;  3 bytes
+M0000000000000b37:	movq	%r11, %rbx	;  3 bytes
+M0000000000000b3a:	movl	%r14d, %ebp	;  3 bytes
+M0000000000000b3d:	je	0x4c5051 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xb61>	;  2 bytes
+M0000000000000b3f:	addq	%r8, %rcx	;  3 bytes
+M0000000000000b42:	leaq	(%rsi,%r8,8), %rsi	;  4 bytes
+M0000000000000b46:	subq	%rcx, %r9	;  3 bytes
+M0000000000000b49:	leaq	32(%rsp,%r9), %rax	;  5 bytes
+M0000000000000b4e:	xorl	%edi, %edi	;  2 bytes
+M0000000000000b50:	movsbq	(%rcx,%rdi), %rdx	;  5 bytes
+M0000000000000b55:	movq	%rdx, (%rsi,%rdi,8)	;  4 bytes
+M0000000000000b59:	incq	%rdi	;  3 bytes
+M0000000000000b5c:	cmpq	%rdi, %rax	;  3 bytes
+M0000000000000b5f:	jne	0x4c5040 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xb50>	;  2 bytes
+M0000000000000b61:	movq	88(%rsp), %rax	;  5 bytes
+M0000000000000b66:	leaq	88(%rsp), %rdi	;  5 bytes
+M0000000000000b6b:	movq	$-1, %rsi	;  7 bytes
+M0000000000000b72:	callq	*16(%rax)	;  3 bytes
+M0000000000000b75:	cmpb	$0, 2439465(%rip)  # 718995 <veryVeryVerbose>	;  7 bytes
+M0000000000000b7c:	movq	24(%rsp), %r12	;  5 bytes
+M0000000000000b81:	je	0x4c507d <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xb8d>	;  2 bytes
+M0000000000000b83:	movl	$5194721, %edi	;  5 bytes
+M0000000000000b88:	callq	0x401710 <puts@plt>	;  5 bytes
+M0000000000000b8d:	cmpb	$0, 2439436(%rip)  # 718990 <veryVerbose>	;  7 bytes
+M0000000000000b94:	je	0x4c50bb <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xbcb>	;  2 bytes
+M0000000000000b96:	movl	$10, %edi	;  5 bytes
+M0000000000000b9b:	callq	0x401720 <putchar@plt>	;  5 bytes
+M0000000000000ba0:	cmpb	$0, 2439417(%rip)  # 718990 <veryVerbose>	;  7 bytes
+M0000000000000ba7:	je	0x4c50bb <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xbcb>	;  2 bytes
+M0000000000000ba9:	movl	2439429(%rip), %edx  # 7189a4 <numCopyCtorCalls>	;  6 bytes
+M0000000000000baf:	subl	20(%rsp), %edx	;  4 bytes
+M0000000000000bb3:	movl	2439427(%rip), %ecx  # 7189ac <numCharCtorCalls>	;  6 bytes
+M0000000000000bb9:	subl	72(%rsp), %ecx	;  4 bytes
+M0000000000000bbd:	movl	$5200938, %edi	;  5 bytes
+M0000000000000bc2:	movl	%ebp, %esi	;  2 bytes
+M0000000000000bc4:	xorl	%eax, %eax	;  2 bytes
+M0000000000000bc6:	callq	0x401680 <printf@plt>	;  5 bytes
+M0000000000000bcb:	movl	20(%rsp), %eax	;  4 bytes
+M0000000000000bcf:	cmpl	2439391(%rip), %eax  # 7189a4 <numCopyCtorCalls>	;  6 bytes
+M0000000000000bd5:	je	0x4c4ab0 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x5c0>	;  6 bytes
+M0000000000000bdb:	movl	$5196920, %edi	;  5 bytes
+M0000000000000be0:	movl	$5197804, %edx	;  5 bytes
+M0000000000000be5:	movl	$4159, %esi	;  5 bytes
+M0000000000000bea:	xorl	%eax, %eax	;  2 bytes
+M0000000000000bec:	callq	0x401680 <printf@plt>	;  5 bytes
+M0000000000000bf1:	movl	2439345(%rip), %eax  # 718998 <(anonymous namespace)::testStatus>	;  6 bytes
+M0000000000000bf7:	cmpl	$100, %eax	;  3 bytes
+M0000000000000bfa:	ja	0x4c4ab0 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x5c0>	;  6 bytes
+M0000000000000c00:	incl	%eax	;  2 bytes
+M0000000000000c02:	movl	%eax, 2439328(%rip)  # 718998 <(anonymous namespace)::testStatus>	;  6 bytes
+M0000000000000c08:	jmp	0x4c4ab0 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0x5c0>	;  5 bytes
+M0000000000000c0d:	addq	$104, %rsp	;  4 bytes
+M0000000000000c11:	popq	%rbx	;  1 bytes
+M0000000000000c12:	popq	%r12	;  2 bytes
+M0000000000000c14:	popq	%r13	;  2 bytes
+M0000000000000c16:	popq	%r14	;  2 bytes
+M0000000000000c18:	popq	%r15	;  2 bytes
+M0000000000000c1a:	popq	%rbp	;  1 bytes
+M0000000000000c1b:	retq		;  1 bytes
+M0000000000000c1c:	jmp	0x4c512e <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xc3e>	;  2 bytes
+M0000000000000c1e:	movq	%rax, %rbx	;  3 bytes
+M0000000000000c21:	callq	0x401850 <__cxa_end_catch@plt>	;  5 bytes
+M0000000000000c26:	jmp	0x4c5131 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xc41>	;  2 bytes
+M0000000000000c28:	jmp	0x4c512e <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xc3e>	;  2 bytes
+M0000000000000c2a:	movq	%rax, %rbx	;  3 bytes
+M0000000000000c2d:	callq	0x401850 <__cxa_end_catch@plt>	;  5 bytes
+M0000000000000c32:	jmp	0x4c5131 <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xc41>	;  2 bytes
+M0000000000000c34:	movq	%rax, %rdi	;  3 bytes
+M0000000000000c37:	callq	0x40bf90 <__clang_call_terminate>	;  5 bytes
+M0000000000000c3c:	jmp	0x4c512e <void testCopyConstructWithIterators<long long>(bool, bool, bool)+0xc3e>	;  2 bytes
+M0000000000000c3e:	movq	%rax, %rbx	;  3 bytes
+M0000000000000c41:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000c44:	callq	0x4018f0 <_Unwind_Resume@plt>	;  5 bytes
+M0000000000000c49:	nopl	(%rax)	;  7 bytes

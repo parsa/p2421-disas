@@ -1,129 +1,129 @@
 00000000004301b0 <BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::insert(unsigned long, BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > const&)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 02	pushq	%r13
-0000000000000007: 02	pushq	%r12
-0000000000000009: 01	pushq	%rbx
-000000000000000a: 01	pushq	%rax
-000000000000000b: 03	movq	%rdx, %rbx
-000000000000000e: 03	movq	%rsi, %r14
-0000000000000011: 03	cmpq	%rdi, %rdx
-0000000000000014: 06	je	0x430286 <BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::insert(unsigned long, BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > const&)+0xd6>
-000000000000001a: 03	movq	%rdi, %r15
-000000000000001d: 04	movq	8(%rbx), %rdi
-0000000000000021: 04	movq	40(%rbx), %r13
-0000000000000025: 04	addq	40(%r15), %r13
-0000000000000029: 04	movq	8(%r15), %rax
-000000000000002d: 03	subq	(%r15), %rax
-0000000000000030: 04	sarq	$3, %rax
-0000000000000034: 10	movabsq	$7905747460161236407, %rcx
-000000000000003e: 04	imulq	%rcx, %rax
-0000000000000042: 03	subq	(%rbx), %rdi
-0000000000000045: 04	sarq	$3, %rdi
-0000000000000049: 04	imulq	%rcx, %rdi
-000000000000004d: 03	addq	%rax, %rdi
-0000000000000050: 04	movl	48(%r15), %ebp
-0000000000000054: 05	callq	0x434590 <BloombergLP::bdlc::PackedIntArrayImp_Unsigned::requiredBytesPerElement(unsigned long)>
-0000000000000059: 04	leaq	32(%r15), %r12
-000000000000005d: 02	cmpl	%ebp, %eax
-000000000000005f: 03	cmovgl	%eax, %ebp
-0000000000000062: 03	movslq	%ebp, %rax
-0000000000000065: 04	imulq	%rax, %r13
-0000000000000069: 04	cmpq	56(%r15), %r13
-000000000000006d: 02	jbe	0x43022a <BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::insert(unsigned long, BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > const&)+0x7a>
-000000000000006f: 03	movq	%r12, %rdi
-0000000000000072: 03	movq	%r13, %rsi
-0000000000000075: 05	callq	0x439a40 <BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::reserveCapacityImp(unsigned long)>
-000000000000007a: 05	cmpq	$0, 40(%rbx)
-000000000000007f: 02	je	0x430277 <BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::insert(unsigned long, BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > const&)+0xc7>
-0000000000000081: 04	leaq	32(%rbx), %r13
-0000000000000085: 02	xorl	%ebp, %ebp
-0000000000000087: 09	nopw	(%rax,%rax)
-0000000000000090: 03	movq	%r13, %rdi
-0000000000000093: 03	movq	%rbp, %rsi
-0000000000000096: 05	callq	0x43aae0 <BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::operator[](unsigned long) const>
-000000000000009b: 04	imulq	$56, %rax, %rsi
-000000000000009f: 03	addq	(%rbx), %rsi
-00000000000000a2: 05	movl	$1, %edx
-00000000000000a7: 03	movq	%r15, %rdi
-00000000000000aa: 05	callq	0x4317b0 <BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::increment(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&, unsigned long)>
-00000000000000af: 04	leaq	(%r14,%rbp), %rsi
-00000000000000b3: 03	movq	%r12, %rdi
-00000000000000b6: 03	movq	%rax, %rdx
-00000000000000b9: 05	callq	0x439d60 <BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::insert(unsigned long, unsigned long)>
-00000000000000be: 03	incq	%rbp
-00000000000000c1: 04	cmpq	40(%rbx), %rbp
-00000000000000c5: 02	jb	0x430240 <BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::insert(unsigned long, BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > const&)+0x90>
-00000000000000c7: 04	addq	$8, %rsp
-00000000000000cb: 01	popq	%rbx
-00000000000000cc: 02	popq	%r12
-00000000000000ce: 02	popq	%r13
-00000000000000d0: 02	popq	%r14
-00000000000000d2: 02	popq	%r15
-00000000000000d4: 01	popq	%rbp
-00000000000000d5: 01	retq	
-00000000000000d6: 04	leaq	32(%rbx), %r15
-00000000000000da: 04	movq	40(%rbx), %rsi
-00000000000000de: 04	shlq	$4, %rsi
-00000000000000e2: 03	movq	%r15, %rdi
-00000000000000e5: 05	callq	0x439a40 <BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::reserveCapacityImp(unsigned long)>
-00000000000000ea: 03	movq	(%rbx), %rax
-00000000000000ed: 04	cmpq	%rax, 8(%rbx)
-00000000000000f1: 02	je	0x4302e2 <BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::insert(unsigned long, BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > const&)+0x132>
-00000000000000f3: 05	movl	$48, %ecx
-00000000000000f8: 02	xorl	%edx, %edx
-00000000000000fa: 10	movabsq	$7905747460161236407, %rsi
-0000000000000104: 10	nopw	%cs:(%rax,%rax)
-000000000000010e: 02	nop	
-0000000000000110: 04	shlq	(%rax,%rcx)
-0000000000000114: 03	incq	%rdx
-0000000000000117: 03	movq	(%rbx), %rax
-000000000000011a: 04	movq	8(%rbx), %rdi
-000000000000011e: 03	subq	%rax, %rdi
-0000000000000121: 04	sarq	$3, %rdi
-0000000000000125: 04	imulq	%rsi, %rdi
-0000000000000129: 04	addq	$56, %rcx
-000000000000012d: 03	cmpq	%rdi, %rdx
-0000000000000130: 02	jb	0x4302c0 <BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::insert(unsigned long, BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > const&)+0x110>
-0000000000000132: 04	movq	40(%rbx), %r8
-0000000000000136: 03	movq	%r15, %rdi
-0000000000000139: 03	movq	%r14, %rsi
-000000000000013c: 03	movq	%r15, %rdx
-000000000000013f: 02	xorl	%ecx, %ecx
-0000000000000141: 04	addq	$8, %rsp
-0000000000000145: 01	popq	%rbx
-0000000000000146: 02	popq	%r12
-0000000000000148: 02	popq	%r13
-000000000000014a: 02	popq	%r14
-000000000000014c: 02	popq	%r15
-000000000000014e: 01	popq	%rbp
-000000000000014f: 05	jmp	0x439f90 <BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::insert(unsigned long, BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned> const&, unsigned long, unsigned long)>
-0000000000000154: 02	jmp	0x430306 <BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::insert(unsigned long, BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > const&)+0x156>
-0000000000000156: 03	movq	%rax, %r14
-0000000000000159: 03	movq	(%r15), %rbp
-000000000000015c: 04	movq	8(%r15), %rbx
-0000000000000160: 03	cmpq	%rbp, %rbx
-0000000000000163: 02	jne	0x430331 <BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::insert(unsigned long, BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > const&)+0x181>
-0000000000000165: 02	jmp	0x43034f <BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::insert(unsigned long, BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > const&)+0x19f>
-0000000000000167: 09	nopw	(%rax,%rax)
-0000000000000170: 08	movq	$-1, 24(%rbp)
-0000000000000178: 04	addq	$56, %rbp
-000000000000017c: 03	cmpq	%rbp, %rbx
-000000000000017f: 02	je	0x430348 <BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::insert(unsigned long, BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > const&)+0x198>
-0000000000000181: 05	cmpq	$23, 32(%rbp)
-0000000000000186: 02	je	0x430320 <BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::insert(unsigned long, BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > const&)+0x170>
-0000000000000188: 04	movq	(%rbp), %rsi
-000000000000018c: 04	movq	40(%rbp), %rdi
-0000000000000190: 03	movq	(%rdi), %rax
-0000000000000193: 03	callq	*24(%rax)
-0000000000000196: 02	jmp	0x430320 <BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::insert(unsigned long, BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > const&)+0x170>
-0000000000000198: 03	movq	(%r15), %rax
-000000000000019b: 04	movq	%rax, 8(%r15)
-000000000000019f: 08	movq	$0, 40(%r15)
-00000000000001a7: 08	movl	$1, 48(%r15)
-00000000000001af: 03	movq	%r14, %rdi
-00000000000001b2: 05	callq	0x403e50 <_Unwind_Resume@plt>
-00000000000001b7: 03	movq	%rax, %rdi
-00000000000001ba: 05	callq	0x42f650 <__clang_call_terminate>
-00000000000001bf: 01	nop	
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%r13	;  2 bytes
+M0000000000000007:	pushq	%r12	;  2 bytes
+M0000000000000009:	pushq	%rbx	;  1 bytes
+M000000000000000a:	pushq	%rax	;  1 bytes
+M000000000000000b:	movq	%rdx, %rbx	;  3 bytes
+M000000000000000e:	movq	%rsi, %r14	;  3 bytes
+M0000000000000011:	cmpq	%rdi, %rdx	;  3 bytes
+M0000000000000014:	je	0x430286 <BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::insert(unsigned long, BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > const&)+0xd6>	;  6 bytes
+M000000000000001a:	movq	%rdi, %r15	;  3 bytes
+M000000000000001d:	movq	8(%rbx), %rdi	;  4 bytes
+M0000000000000021:	movq	40(%rbx), %r13	;  4 bytes
+M0000000000000025:	addq	40(%r15), %r13	;  4 bytes
+M0000000000000029:	movq	8(%r15), %rax	;  4 bytes
+M000000000000002d:	subq	(%r15), %rax	;  3 bytes
+M0000000000000030:	sarq	$3, %rax	;  4 bytes
+M0000000000000034:	movabsq	$7905747460161236407, %rcx	; 10 bytes
+M000000000000003e:	imulq	%rcx, %rax	;  4 bytes
+M0000000000000042:	subq	(%rbx), %rdi	;  3 bytes
+M0000000000000045:	sarq	$3, %rdi	;  4 bytes
+M0000000000000049:	imulq	%rcx, %rdi	;  4 bytes
+M000000000000004d:	addq	%rax, %rdi	;  3 bytes
+M0000000000000050:	movl	48(%r15), %ebp	;  4 bytes
+M0000000000000054:	callq	0x434590 <BloombergLP::bdlc::PackedIntArrayImp_Unsigned::requiredBytesPerElement(unsigned long)>	;  5 bytes
+M0000000000000059:	leaq	32(%r15), %r12	;  4 bytes
+M000000000000005d:	cmpl	%ebp, %eax	;  2 bytes
+M000000000000005f:	cmovgl	%eax, %ebp	;  3 bytes
+M0000000000000062:	movslq	%ebp, %rax	;  3 bytes
+M0000000000000065:	imulq	%rax, %r13	;  4 bytes
+M0000000000000069:	cmpq	56(%r15), %r13	;  4 bytes
+M000000000000006d:	jbe	0x43022a <BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::insert(unsigned long, BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > const&)+0x7a>	;  2 bytes
+M000000000000006f:	movq	%r12, %rdi	;  3 bytes
+M0000000000000072:	movq	%r13, %rsi	;  3 bytes
+M0000000000000075:	callq	0x439a40 <BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::reserveCapacityImp(unsigned long)>	;  5 bytes
+M000000000000007a:	cmpq	$0, 40(%rbx)	;  5 bytes
+M000000000000007f:	je	0x430277 <BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::insert(unsigned long, BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > const&)+0xc7>	;  2 bytes
+M0000000000000081:	leaq	32(%rbx), %r13	;  4 bytes
+M0000000000000085:	xorl	%ebp, %ebp	;  2 bytes
+M0000000000000087:	nopw	(%rax,%rax)	;  9 bytes
+M0000000000000090:	movq	%r13, %rdi	;  3 bytes
+M0000000000000093:	movq	%rbp, %rsi	;  3 bytes
+M0000000000000096:	callq	0x43aae0 <BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::operator[](unsigned long) const>	;  5 bytes
+M000000000000009b:	imulq	$56, %rax, %rsi	;  4 bytes
+M000000000000009f:	addq	(%rbx), %rsi	;  3 bytes
+M00000000000000a2:	movl	$1, %edx	;  5 bytes
+M00000000000000a7:	movq	%r15, %rdi	;  3 bytes
+M00000000000000aa:	callq	0x4317b0 <BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::increment(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&, unsigned long)>	;  5 bytes
+M00000000000000af:	leaq	(%r14,%rbp), %rsi	;  4 bytes
+M00000000000000b3:	movq	%r12, %rdi	;  3 bytes
+M00000000000000b6:	movq	%rax, %rdx	;  3 bytes
+M00000000000000b9:	callq	0x439d60 <BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::insert(unsigned long, unsigned long)>	;  5 bytes
+M00000000000000be:	incq	%rbp	;  3 bytes
+M00000000000000c1:	cmpq	40(%rbx), %rbp	;  4 bytes
+M00000000000000c5:	jb	0x430240 <BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::insert(unsigned long, BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > const&)+0x90>	;  2 bytes
+M00000000000000c7:	addq	$8, %rsp	;  4 bytes
+M00000000000000cb:	popq	%rbx	;  1 bytes
+M00000000000000cc:	popq	%r12	;  2 bytes
+M00000000000000ce:	popq	%r13	;  2 bytes
+M00000000000000d0:	popq	%r14	;  2 bytes
+M00000000000000d2:	popq	%r15	;  2 bytes
+M00000000000000d4:	popq	%rbp	;  1 bytes
+M00000000000000d5:	retq		;  1 bytes
+M00000000000000d6:	leaq	32(%rbx), %r15	;  4 bytes
+M00000000000000da:	movq	40(%rbx), %rsi	;  4 bytes
+M00000000000000de:	shlq	$4, %rsi	;  4 bytes
+M00000000000000e2:	movq	%r15, %rdi	;  3 bytes
+M00000000000000e5:	callq	0x439a40 <BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::reserveCapacityImp(unsigned long)>	;  5 bytes
+M00000000000000ea:	movq	(%rbx), %rax	;  3 bytes
+M00000000000000ed:	cmpq	%rax, 8(%rbx)	;  4 bytes
+M00000000000000f1:	je	0x4302e2 <BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::insert(unsigned long, BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > const&)+0x132>	;  2 bytes
+M00000000000000f3:	movl	$48, %ecx	;  5 bytes
+M00000000000000f8:	xorl	%edx, %edx	;  2 bytes
+M00000000000000fa:	movabsq	$7905747460161236407, %rsi	; 10 bytes
+M0000000000000104:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000010e:	nop		;  2 bytes
+M0000000000000110:	shlq	(%rax,%rcx)	;  4 bytes
+M0000000000000114:	incq	%rdx	;  3 bytes
+M0000000000000117:	movq	(%rbx), %rax	;  3 bytes
+M000000000000011a:	movq	8(%rbx), %rdi	;  4 bytes
+M000000000000011e:	subq	%rax, %rdi	;  3 bytes
+M0000000000000121:	sarq	$3, %rdi	;  4 bytes
+M0000000000000125:	imulq	%rsi, %rdi	;  4 bytes
+M0000000000000129:	addq	$56, %rcx	;  4 bytes
+M000000000000012d:	cmpq	%rdi, %rdx	;  3 bytes
+M0000000000000130:	jb	0x4302c0 <BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::insert(unsigned long, BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > const&)+0x110>	;  2 bytes
+M0000000000000132:	movq	40(%rbx), %r8	;  4 bytes
+M0000000000000136:	movq	%r15, %rdi	;  3 bytes
+M0000000000000139:	movq	%r14, %rsi	;  3 bytes
+M000000000000013c:	movq	%r15, %rdx	;  3 bytes
+M000000000000013f:	xorl	%ecx, %ecx	;  2 bytes
+M0000000000000141:	addq	$8, %rsp	;  4 bytes
+M0000000000000145:	popq	%rbx	;  1 bytes
+M0000000000000146:	popq	%r12	;  2 bytes
+M0000000000000148:	popq	%r13	;  2 bytes
+M000000000000014a:	popq	%r14	;  2 bytes
+M000000000000014c:	popq	%r15	;  2 bytes
+M000000000000014e:	popq	%rbp	;  1 bytes
+M000000000000014f:	jmp	0x439f90 <BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::insert(unsigned long, BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned> const&, unsigned long, unsigned long)>	;  5 bytes
+M0000000000000154:	jmp	0x430306 <BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::insert(unsigned long, BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > const&)+0x156>	;  2 bytes
+M0000000000000156:	movq	%rax, %r14	;  3 bytes
+M0000000000000159:	movq	(%r15), %rbp	;  3 bytes
+M000000000000015c:	movq	8(%r15), %rbx	;  4 bytes
+M0000000000000160:	cmpq	%rbp, %rbx	;  3 bytes
+M0000000000000163:	jne	0x430331 <BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::insert(unsigned long, BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > const&)+0x181>	;  2 bytes
+M0000000000000165:	jmp	0x43034f <BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::insert(unsigned long, BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > const&)+0x19f>	;  2 bytes
+M0000000000000167:	nopw	(%rax,%rax)	;  9 bytes
+M0000000000000170:	movq	$-1, 24(%rbp)	;  8 bytes
+M0000000000000178:	addq	$56, %rbp	;  4 bytes
+M000000000000017c:	cmpq	%rbp, %rbx	;  3 bytes
+M000000000000017f:	je	0x430348 <BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::insert(unsigned long, BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > const&)+0x198>	;  2 bytes
+M0000000000000181:	cmpq	$23, 32(%rbp)	;  5 bytes
+M0000000000000186:	je	0x430320 <BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::insert(unsigned long, BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > const&)+0x170>	;  2 bytes
+M0000000000000188:	movq	(%rbp), %rsi	;  4 bytes
+M000000000000018c:	movq	40(%rbp), %rdi	;  4 bytes
+M0000000000000190:	movq	(%rdi), %rax	;  3 bytes
+M0000000000000193:	callq	*24(%rax)	;  3 bytes
+M0000000000000196:	jmp	0x430320 <BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::insert(unsigned long, BloombergLP::bdlc::CompactedArray<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > const&)+0x170>	;  2 bytes
+M0000000000000198:	movq	(%r15), %rax	;  3 bytes
+M000000000000019b:	movq	%rax, 8(%r15)	;  4 bytes
+M000000000000019f:	movq	$0, 40(%r15)	;  8 bytes
+M00000000000001a7:	movl	$1, 48(%r15)	;  8 bytes
+M00000000000001af:	movq	%r14, %rdi	;  3 bytes
+M00000000000001b2:	callq	0x403e50 <_Unwind_Resume@plt>	;  5 bytes
+M00000000000001b7:	movq	%rax, %rdi	;  3 bytes
+M00000000000001ba:	callq	0x42f650 <__clang_call_terminate>	;  5 bytes
+M00000000000001bf:	nop		;  1 bytes

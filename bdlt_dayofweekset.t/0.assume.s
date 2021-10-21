@@ -1,23 +1,23 @@
 00000000004040e0 <g(char const*)>:
-0000000000000000: 01	pushq	%rbx
-0000000000000001: 04	subq	$16, %rsp
-0000000000000005: 03	movq	%rdi, %rbx
-0000000000000008: 05	movb	$0, 8(%rsp)
-000000000000000d: 05	leaq	8(%rsp), %rdi
-0000000000000012: 05	movl	$1, %edx
-0000000000000017: 05	callq	0x403e40 <ggg(BloombergLP::bdlt::DayOfWeekSet*, char const*, int)>
-000000000000001c: 02	notl	%eax
-000000000000001e: 03	shrl	$31, %eax
-0000000000000021: 05	movl	$4498364, %esi
-0000000000000026: 02	movl	%eax, %edi
-0000000000000028: 05	movl	$368, %edx
-000000000000002d: 05	callq	0x403ff0 <(anonymous namespace)::aSsErT(bool, char const*, int)>
-0000000000000032: 04	movb	8(%rsp), %al
-0000000000000036: 02	movb	%al, (%rbx)
-0000000000000038: 03	movq	%rbx, %rax
-000000000000003b: 04	addq	$16, %rsp
-000000000000003f: 01	popq	%rbx
-0000000000000040: 01	retq	
-0000000000000041: 03	movq	%rax, %rdi
-0000000000000044: 05	callq	0x403ca0 <_Unwind_Resume@plt>
-0000000000000049: 07	nopl	(%rax)
+M0000000000000000:	pushq	%rbx	;  1 bytes
+M0000000000000001:	subq	$16, %rsp	;  4 bytes
+M0000000000000005:	movq	%rdi, %rbx	;  3 bytes
+M0000000000000008:	movb	$0, 8(%rsp)	;  5 bytes
+M000000000000000d:	leaq	8(%rsp), %rdi	;  5 bytes
+M0000000000000012:	movl	$1, %edx	;  5 bytes
+M0000000000000017:	callq	0x403e40 <ggg(BloombergLP::bdlt::DayOfWeekSet*, char const*, int)>	;  5 bytes
+M000000000000001c:	notl	%eax	;  2 bytes
+M000000000000001e:	shrl	$31, %eax	;  3 bytes
+M0000000000000021:	movl	$4498364, %esi	;  5 bytes
+M0000000000000026:	movl	%eax, %edi	;  2 bytes
+M0000000000000028:	movl	$368, %edx	;  5 bytes
+M000000000000002d:	callq	0x403ff0 <(anonymous namespace)::aSsErT(bool, char const*, int)>	;  5 bytes
+M0000000000000032:	movb	8(%rsp), %al	;  4 bytes
+M0000000000000036:	movb	%al, (%rbx)	;  2 bytes
+M0000000000000038:	movq	%rbx, %rax	;  3 bytes
+M000000000000003b:	addq	$16, %rsp	;  4 bytes
+M000000000000003f:	popq	%rbx	;  1 bytes
+M0000000000000040:	retq		;  1 bytes
+M0000000000000041:	movq	%rax, %rdi	;  3 bytes
+M0000000000000044:	callq	0x403ca0 <_Unwind_Resume@plt>	;  5 bytes
+M0000000000000049:	nopl	(%rax)	;  7 bytes

@@ -1,333 +1,333 @@
 00000000004350a0 <BloombergLP::bslh::SpookyHashAlgorithmImp::update(void const*, unsigned long)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 02	pushq	%r13
-0000000000000007: 02	pushq	%r12
-0000000000000009: 01	pushq	%rbx
-000000000000000a: 04	subq	$104, %rsp
-000000000000000e: 03	movq	%rdx, %rbp
-0000000000000011: 05	movq	%rdi, 8(%rsp)
-0000000000000016: 07	movzbl	296(%rdi), %ecx
-000000000000001d: 04	leaq	(%rcx,%rdx), %rbx
-0000000000000021: 07	cmpq	$191, %rbx
-0000000000000028: 02	ja	0x4350f0 <BloombergLP::bslh::SpookyHashAlgorithmImp::update(void const*, unsigned long)+0x50>
-000000000000002a: 05	movq	8(%rsp), %r14
-000000000000002f: 03	addq	%r14, %rcx
-0000000000000032: 03	movq	%rcx, %rdi
-0000000000000035: 03	movq	%rbp, %rdx
-0000000000000038: 05	callq	0x404af0 <memcpy@plt>
-000000000000003d: 07	addq	%rbp, 288(%r14)
-0000000000000044: 07	movb	%bl, 296(%r14)
-000000000000004b: 05	jmp	0x4355cf <BloombergLP::bslh::SpookyHashAlgorithmImp::update(void const*, unsigned long)+0x52f>
-0000000000000050: 05	movq	8(%rsp), %rdx
-0000000000000055: 07	movq	288(%rdx), %rax
-000000000000005c: 07	movq	192(%rdx), %r8
-0000000000000063: 07	movq	200(%rdx), %r9
-000000000000006a: 06	cmpq	$192, %rax
-0000000000000070: 05	movq	%rbp, 24(%rsp)
-0000000000000075: 05	movq	%rcx, 88(%rsp)
-000000000000007a: 02	jae	0x435143 <BloombergLP::bslh::SpookyHashAlgorithmImp::update(void const*, unsigned long)+0xa3>
-000000000000007c: 10	movabsq	$-2401053088876216593, %r11
-0000000000000086: 03	movq	%r8, %r10
-0000000000000089: 03	movq	%r9, %rbx
-000000000000008c: 03	movq	%r11, %rbp
-000000000000008f: 03	movq	%r8, %rcx
-0000000000000092: 03	movq	%r9, %rdx
-0000000000000095: 03	movq	%r11, %r12
-0000000000000098: 03	movq	%r8, %r13
-000000000000009b: 03	movq	%r9, %r14
-000000000000009e: 03	movq	%r11, %r15
-00000000000000a1: 02	jmp	0x43518e <BloombergLP::bslh::SpookyHashAlgorithmImp::update(void const*, unsigned long)+0xee>
-00000000000000a3: 05	movq	8(%rsp), %rdi
-00000000000000a8: 07	movq	208(%rdi), %r11
-00000000000000af: 07	movq	216(%rdi), %r10
-00000000000000b6: 07	movq	224(%rdi), %rbx
-00000000000000bd: 07	movq	232(%rdi), %rbp
-00000000000000c4: 07	movq	240(%rdi), %rcx
-00000000000000cb: 07	movq	248(%rdi), %rdx
-00000000000000d2: 07	movq	256(%rdi), %r12
-00000000000000d9: 07	movq	264(%rdi), %r13
-00000000000000e0: 07	movq	272(%rdi), %r14
-00000000000000e7: 07	movq	280(%rdi), %r15
-00000000000000ee: 05	movq	%rdx, 16(%rsp)
-00000000000000f3: 05	addq	24(%rsp), %rax
-00000000000000f8: 05	movq	8(%rsp), %rdx
-00000000000000fd: 07	movq	%rax, 288(%rdx)
-0000000000000104: 05	movq	88(%rsp), %rdx
-0000000000000109: 02	testb	%dl, %dl
-000000000000010b: 05	movq	%rsi, 40(%rsp)
-0000000000000110: 06	je	0x4353f9 <BloombergLP::bslh::SpookyHashAlgorithmImp::update(void const*, unsigned long)+0x359>
-0000000000000116: 05	movl	$192, %eax
-000000000000011b: 03	subq	%rdx, %rax
-000000000000011e: 05	movq	%rax, 80(%rsp)
-0000000000000123: 05	movq	8(%rsp), %rax
-0000000000000128: 04	leaq	(%rax,%rdx), %rdi
-000000000000012c: 05	movq	80(%rsp), %rdx
-0000000000000131: 05	movq	%r9, 72(%rsp)
-0000000000000136: 05	movq	%r8, 64(%rsp)
-000000000000013b: 05	movq	%r11, 96(%rsp)
-0000000000000140: 05	movq	%r10, 32(%rsp)
-0000000000000145: 05	movq	%rbx, 56(%rsp)
-000000000000014a: 05	movq	%rcx, 48(%rsp)
-000000000000014f: 05	callq	0x404af0 <memcpy@plt>
-0000000000000154: 05	movq	48(%rsp), %rcx
-0000000000000159: 05	movq	56(%rsp), %rbx
-000000000000015e: 05	movq	32(%rsp), %r10
-0000000000000163: 05	movq	96(%rsp), %r11
-0000000000000168: 05	movq	64(%rsp), %r8
-000000000000016d: 05	movq	72(%rsp), %r9
-0000000000000172: 05	movq	8(%rsp), %rdi
-0000000000000177: 03	addq	(%rdi), %r8
-000000000000017a: 03	xorq	%r8, %r15
-000000000000017d: 04	rolq	$11, %r8
-0000000000000181: 03	addq	%r9, %r15
-0000000000000184: 04	addq	8(%rdi), %r9
-0000000000000188: 03	xorq	%r9, %r8
-000000000000018b: 04	rolq	$32, %r9
-000000000000018f: 03	xorq	%r14, %r11
-0000000000000192: 03	addq	%r11, %r8
-0000000000000195: 04	addq	16(%rdi), %r11
-0000000000000199: 03	xorq	%r11, %r9
-000000000000019c: 04	rolq	$43, %r11
-00000000000001a0: 03	xorq	%r15, %r10
-00000000000001a3: 03	addq	%r10, %r9
-00000000000001a6: 04	addq	24(%rdi), %r10
-00000000000001aa: 03	xorq	%r10, %r11
-00000000000001ad: 04	rolq	$31, %r10
-00000000000001b1: 03	xorq	%r8, %rbx
-00000000000001b4: 03	addq	%rbx, %r11
-00000000000001b7: 04	addq	32(%rdi), %rbx
-00000000000001bb: 03	xorq	%rbx, %r10
-00000000000001be: 04	rolq	$17, %rbx
-00000000000001c2: 03	xorq	%r9, %rbp
-00000000000001c5: 03	addq	%rbp, %r10
-00000000000001c8: 04	addq	40(%rdi), %rbp
-00000000000001cc: 03	xorq	%rbp, %rbx
-00000000000001cf: 04	rolq	$28, %rbp
-00000000000001d3: 03	xorq	%r11, %rcx
-00000000000001d6: 03	addq	%rcx, %rbx
-00000000000001d9: 04	addq	48(%rdi), %rcx
-00000000000001dd: 03	xorq	%rcx, %rbp
-00000000000001e0: 04	rolq	$39, %rcx
-00000000000001e4: 05	movq	16(%rsp), %rax
-00000000000001e9: 03	xorq	%r10, %rax
-00000000000001ec: 03	addq	%rax, %rbp
-00000000000001ef: 04	addq	56(%rdi), %rax
-00000000000001f3: 03	xorq	%rax, %rcx
-00000000000001f6: 04	rolq	$57, %rax
-00000000000001fa: 03	xorq	%rbx, %r12
-00000000000001fd: 03	addq	%r12, %rcx
-0000000000000200: 04	addq	64(%rdi), %r12
-0000000000000204: 03	xorq	%r12, %rax
-0000000000000207: 04	rolq	$55, %r12
-000000000000020b: 03	xorq	%rbp, %r13
-000000000000020e: 03	addq	%r13, %rax
-0000000000000211: 04	addq	72(%rdi), %r13
-0000000000000215: 03	xorq	%r13, %r12
-0000000000000218: 04	rolq	$54, %r13
-000000000000021c: 03	xorq	%rcx, %r14
-000000000000021f: 03	addq	%r14, %r12
-0000000000000222: 04	addq	80(%rdi), %r14
-0000000000000226: 03	xorq	%r14, %r13
-0000000000000229: 04	rolq	$22, %r14
-000000000000022d: 03	xorq	%rax, %r15
-0000000000000230: 03	addq	%r15, %r13
-0000000000000233: 04	addq	88(%rdi), %r15
-0000000000000237: 03	xorq	%r15, %r14
-000000000000023a: 04	rolq	$46, %r15
-000000000000023e: 03	xorq	%r12, %r8
-0000000000000241: 03	addq	%r8, %r14
-0000000000000244: 04	addq	96(%rdi), %r8
-0000000000000248: 03	xorq	%r8, %r15
-000000000000024b: 04	rolq	$11, %r8
-000000000000024f: 03	xorq	%r13, %r9
-0000000000000252: 03	addq	%r9, %r15
-0000000000000255: 04	addq	104(%rdi), %r9
-0000000000000259: 03	xorq	%r9, %r8
-000000000000025c: 04	rolq	$32, %r9
-0000000000000260: 03	xorq	%r14, %r11
-0000000000000263: 03	addq	%r11, %r8
-0000000000000266: 04	addq	112(%rdi), %r11
-000000000000026a: 03	xorq	%r11, %r9
-000000000000026d: 04	rolq	$43, %r11
-0000000000000271: 03	xorq	%r15, %r10
-0000000000000274: 03	addq	%r10, %r9
-0000000000000277: 04	addq	120(%rdi), %r10
-000000000000027b: 03	xorq	%r10, %r11
-000000000000027e: 04	rolq	$31, %r10
-0000000000000282: 03	xorq	%r8, %rbx
-0000000000000285: 03	addq	%rbx, %r11
-0000000000000288: 07	addq	128(%rdi), %rbx
-000000000000028f: 03	xorq	%rbx, %r10
-0000000000000292: 04	rolq	$17, %rbx
-0000000000000296: 03	xorq	%r9, %rbp
-0000000000000299: 03	addq	%rbp, %r10
-000000000000029c: 07	addq	136(%rdi), %rbp
-00000000000002a3: 03	xorq	%rbp, %rbx
-00000000000002a6: 04	rolq	$28, %rbp
-00000000000002aa: 03	xorq	%r11, %rcx
-00000000000002ad: 03	addq	%rcx, %rbx
-00000000000002b0: 07	addq	144(%rdi), %rcx
-00000000000002b7: 03	xorq	%r10, %rax
-00000000000002ba: 03	xorq	%rcx, %rbp
-00000000000002bd: 04	rolq	$39, %rcx
-00000000000002c1: 03	addq	%rax, %rbp
-00000000000002c4: 07	addq	152(%rdi), %rax
-00000000000002cb: 05	movq	88(%rsp), %rsi
-00000000000002d0: 03	negq	%rsi
-00000000000002d3: 05	movq	40(%rsp), %rdx
-00000000000002d8: 08	leaq	192(%rdx,%rsi), %rdx
-00000000000002e0: 05	movq	%rdx, 40(%rsp)
-00000000000002e5: 03	xorq	%rax, %rcx
-00000000000002e8: 04	rolq	$57, %rax
-00000000000002ec: 03	xorq	%rbx, %r12
-00000000000002ef: 03	addq	%r12, %rcx
-00000000000002f2: 07	addq	160(%rdi), %r12
-00000000000002f9: 05	movq	24(%rsp), %rsi
-00000000000002fe: 05	subq	80(%rsp), %rsi
-0000000000000303: 03	xorq	%r12, %rax
-0000000000000306: 04	rolq	$55, %r12
-000000000000030a: 03	xorq	%rbp, %r13
-000000000000030d: 03	addq	%r13, %rax
-0000000000000310: 07	addq	168(%rdi), %r13
-0000000000000317: 03	xorq	%rcx, %r14
-000000000000031a: 03	xorq	%r13, %r12
-000000000000031d: 04	rolq	$54, %r13
-0000000000000321: 05	movq	%rax, 16(%rsp)
-0000000000000326: 03	xorq	%rax, %r15
-0000000000000329: 03	addq	%r14, %r12
-000000000000032c: 07	addq	176(%rdi), %r14
-0000000000000333: 03	xorq	%r12, %r8
-0000000000000336: 03	xorq	%r14, %r13
-0000000000000339: 04	rolq	$22, %r14
-000000000000033d: 03	addq	%r15, %r13
-0000000000000340: 07	addq	184(%rdi), %r15
-0000000000000347: 03	xorq	%r13, %r9
-000000000000034a: 03	xorq	%r15, %r14
-000000000000034d: 04	rolq	$46, %r15
-0000000000000351: 03	addq	%r8, %r14
-0000000000000354: 03	movq	%rsi, %rdi
-0000000000000357: 02	jmp	0x4353fe <BloombergLP::bslh::SpookyHashAlgorithmImp::update(void const*, unsigned long)+0x35e>
-0000000000000359: 05	movq	24(%rsp), %rdi
-000000000000035e: 10	movabsq	$-6148914691236517205, %rdx
-0000000000000368: 03	movq	%rdi, %rax
-000000000000036b: 03	mulq	%rdx
-000000000000036e: 04	shrq	$6, %rdx
-0000000000000372: 04	leaq	(%rdx,%rdx,2), %rsi
-0000000000000376: 04	shlq	$5, %rsi
-000000000000037a: 05	movq	40(%rsp), %rax
-000000000000037f: 03	addq	%rax, %rsi
-0000000000000382: 03	movq	%rax, %rdx
-0000000000000385: 03	subq	%rsi, %rdx
-0000000000000388: 03	addq	%rdi, %rdx
-000000000000038b: 05	movq	%rdx, 24(%rsp)
-0000000000000390: 03	cmpq	%rsi, %rax
-0000000000000393: 06	jae	0x43551a <BloombergLP::bslh::SpookyHashAlgorithmImp::update(void const*, unsigned long)+0x47a>
-0000000000000399: 05	movq	16(%rsp), %rdx
-000000000000039e: 02	nop	
-00000000000003a0: 03	addq	(%rax), %r8
-00000000000003a3: 03	xorq	%r8, %r15
-00000000000003a6: 04	rolq	$11, %r8
-00000000000003aa: 03	addq	%r9, %r15
-00000000000003ad: 04	addq	8(%rax), %r9
-00000000000003b1: 03	xorq	%r9, %r8
-00000000000003b4: 04	rolq	$32, %r9
-00000000000003b8: 03	xorq	%r14, %r11
-00000000000003bb: 03	addq	%r11, %r8
-00000000000003be: 04	addq	16(%rax), %r11
-00000000000003c2: 03	xorq	%r11, %r9
-00000000000003c5: 04	rolq	$43, %r11
-00000000000003c9: 03	xorq	%r15, %r10
-00000000000003cc: 03	addq	%r10, %r9
-00000000000003cf: 04	addq	24(%rax), %r10
-00000000000003d3: 03	xorq	%r10, %r11
-00000000000003d6: 04	rolq	$31, %r10
-00000000000003da: 03	xorq	%r8, %rbx
-00000000000003dd: 03	addq	%rbx, %r11
-00000000000003e0: 04	addq	32(%rax), %rbx
-00000000000003e4: 03	xorq	%rbx, %r10
-00000000000003e7: 04	rolq	$17, %rbx
-00000000000003eb: 03	xorq	%r9, %rbp
-00000000000003ee: 03	addq	%rbp, %r10
-00000000000003f1: 04	addq	40(%rax), %rbp
-00000000000003f5: 03	xorq	%rbp, %rbx
-00000000000003f8: 04	rolq	$28, %rbp
-00000000000003fc: 03	xorq	%r11, %rcx
-00000000000003ff: 03	addq	%rcx, %rbx
-0000000000000402: 04	addq	48(%rax), %rcx
-0000000000000406: 03	xorq	%rcx, %rbp
-0000000000000409: 04	rolq	$39, %rcx
-000000000000040d: 03	xorq	%r10, %rdx
-0000000000000410: 03	addq	%rdx, %rbp
-0000000000000413: 04	addq	56(%rax), %rdx
-0000000000000417: 03	xorq	%rdx, %rcx
-000000000000041a: 04	rolq	$57, %rdx
-000000000000041e: 03	xorq	%rbx, %r12
-0000000000000421: 03	addq	%r12, %rcx
-0000000000000424: 04	addq	64(%rax), %r12
-0000000000000428: 03	xorq	%r12, %rdx
-000000000000042b: 04	rolq	$55, %r12
-000000000000042f: 03	xorq	%rbp, %r13
-0000000000000432: 03	addq	%r13, %rdx
-0000000000000435: 04	addq	72(%rax), %r13
-0000000000000439: 03	xorq	%r13, %r12
-000000000000043c: 04	rolq	$54, %r13
-0000000000000440: 03	xorq	%rcx, %r14
-0000000000000443: 03	addq	%r14, %r12
-0000000000000446: 04	addq	80(%rax), %r14
-000000000000044a: 03	xorq	%r14, %r13
-000000000000044d: 04	rolq	$22, %r14
-0000000000000451: 03	xorq	%rdx, %r15
-0000000000000454: 03	addq	%r15, %r13
-0000000000000457: 04	addq	88(%rax), %r15
-000000000000045b: 03	xorq	%r12, %r8
-000000000000045e: 03	xorq	%r15, %r14
-0000000000000461: 04	rolq	$46, %r15
-0000000000000465: 03	xorq	%r13, %r9
-0000000000000468: 03	addq	%r8, %r14
-000000000000046b: 04	addq	$96, %rax
-000000000000046f: 03	cmpq	%rax, %rsi
-0000000000000472: 06	ja	0x435440 <BloombergLP::bslh::SpookyHashAlgorithmImp::update(void const*, unsigned long)+0x3a0>
-0000000000000478: 02	jmp	0x43551f <BloombergLP::bslh::SpookyHashAlgorithmImp::update(void const*, unsigned long)+0x47f>
-000000000000047a: 05	movq	16(%rsp), %rdx
-000000000000047f: 05	movq	%r8, 64(%rsp)
-0000000000000484: 05	movq	%r9, 72(%rsp)
-0000000000000489: 05	movq	%r10, 32(%rsp)
-000000000000048e: 05	movq	%rbx, 56(%rsp)
-0000000000000493: 05	movq	%rcx, 48(%rsp)
-0000000000000498: 05	movq	%rdx, 16(%rsp)
-000000000000049d: 05	movq	24(%rsp), %rax
-00000000000004a2: 05	movq	8(%rsp), %rdi
-00000000000004a7: 06	movb	%al, 296(%rdi)
-00000000000004ad: 03	movzbl	%al, %edx
-00000000000004b0: 03	movq	%r11, %rbx
-00000000000004b3: 05	callq	0x404af0 <memcpy@plt>
-00000000000004b8: 05	movq	8(%rsp), %rax
-00000000000004bd: 05	movq	64(%rsp), %rcx
-00000000000004c2: 07	movq	%rcx, 192(%rax)
-00000000000004c9: 05	movq	72(%rsp), %rcx
-00000000000004ce: 07	movq	%rcx, 200(%rax)
-00000000000004d5: 07	movq	%rbx, 208(%rax)
-00000000000004dc: 05	movq	32(%rsp), %rcx
-00000000000004e1: 07	movq	%rcx, 216(%rax)
-00000000000004e8: 05	movq	56(%rsp), %rcx
-00000000000004ed: 07	movq	%rcx, 224(%rax)
-00000000000004f4: 07	movq	%rbp, 232(%rax)
-00000000000004fb: 05	movq	48(%rsp), %rcx
-0000000000000500: 07	movq	%rcx, 240(%rax)
-0000000000000507: 05	movq	16(%rsp), %rcx
-000000000000050c: 07	movq	%rcx, 248(%rax)
-0000000000000513: 07	movq	%r12, 256(%rax)
-000000000000051a: 07	movq	%r13, 264(%rax)
-0000000000000521: 07	movq	%r14, 272(%rax)
-0000000000000528: 07	movq	%r15, 280(%rax)
-000000000000052f: 04	addq	$104, %rsp
-0000000000000533: 01	popq	%rbx
-0000000000000534: 02	popq	%r12
-0000000000000536: 02	popq	%r13
-0000000000000538: 02	popq	%r14
-000000000000053a: 02	popq	%r15
-000000000000053c: 01	popq	%rbp
-000000000000053d: 01	retq	
-000000000000053e: 02	nop	
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%r13	;  2 bytes
+M0000000000000007:	pushq	%r12	;  2 bytes
+M0000000000000009:	pushq	%rbx	;  1 bytes
+M000000000000000a:	subq	$104, %rsp	;  4 bytes
+M000000000000000e:	movq	%rdx, %rbp	;  3 bytes
+M0000000000000011:	movq	%rdi, 8(%rsp)	;  5 bytes
+M0000000000000016:	movzbl	296(%rdi), %ecx	;  7 bytes
+M000000000000001d:	leaq	(%rcx,%rdx), %rbx	;  4 bytes
+M0000000000000021:	cmpq	$191, %rbx	;  7 bytes
+M0000000000000028:	ja	0x4350f0 <BloombergLP::bslh::SpookyHashAlgorithmImp::update(void const*, unsigned long)+0x50>	;  2 bytes
+M000000000000002a:	movq	8(%rsp), %r14	;  5 bytes
+M000000000000002f:	addq	%r14, %rcx	;  3 bytes
+M0000000000000032:	movq	%rcx, %rdi	;  3 bytes
+M0000000000000035:	movq	%rbp, %rdx	;  3 bytes
+M0000000000000038:	callq	0x404af0 <memcpy@plt>	;  5 bytes
+M000000000000003d:	addq	%rbp, 288(%r14)	;  7 bytes
+M0000000000000044:	movb	%bl, 296(%r14)	;  7 bytes
+M000000000000004b:	jmp	0x4355cf <BloombergLP::bslh::SpookyHashAlgorithmImp::update(void const*, unsigned long)+0x52f>	;  5 bytes
+M0000000000000050:	movq	8(%rsp), %rdx	;  5 bytes
+M0000000000000055:	movq	288(%rdx), %rax	;  7 bytes
+M000000000000005c:	movq	192(%rdx), %r8	;  7 bytes
+M0000000000000063:	movq	200(%rdx), %r9	;  7 bytes
+M000000000000006a:	cmpq	$192, %rax	;  6 bytes
+M0000000000000070:	movq	%rbp, 24(%rsp)	;  5 bytes
+M0000000000000075:	movq	%rcx, 88(%rsp)	;  5 bytes
+M000000000000007a:	jae	0x435143 <BloombergLP::bslh::SpookyHashAlgorithmImp::update(void const*, unsigned long)+0xa3>	;  2 bytes
+M000000000000007c:	movabsq	$-2401053088876216593, %r11	; 10 bytes
+M0000000000000086:	movq	%r8, %r10	;  3 bytes
+M0000000000000089:	movq	%r9, %rbx	;  3 bytes
+M000000000000008c:	movq	%r11, %rbp	;  3 bytes
+M000000000000008f:	movq	%r8, %rcx	;  3 bytes
+M0000000000000092:	movq	%r9, %rdx	;  3 bytes
+M0000000000000095:	movq	%r11, %r12	;  3 bytes
+M0000000000000098:	movq	%r8, %r13	;  3 bytes
+M000000000000009b:	movq	%r9, %r14	;  3 bytes
+M000000000000009e:	movq	%r11, %r15	;  3 bytes
+M00000000000000a1:	jmp	0x43518e <BloombergLP::bslh::SpookyHashAlgorithmImp::update(void const*, unsigned long)+0xee>	;  2 bytes
+M00000000000000a3:	movq	8(%rsp), %rdi	;  5 bytes
+M00000000000000a8:	movq	208(%rdi), %r11	;  7 bytes
+M00000000000000af:	movq	216(%rdi), %r10	;  7 bytes
+M00000000000000b6:	movq	224(%rdi), %rbx	;  7 bytes
+M00000000000000bd:	movq	232(%rdi), %rbp	;  7 bytes
+M00000000000000c4:	movq	240(%rdi), %rcx	;  7 bytes
+M00000000000000cb:	movq	248(%rdi), %rdx	;  7 bytes
+M00000000000000d2:	movq	256(%rdi), %r12	;  7 bytes
+M00000000000000d9:	movq	264(%rdi), %r13	;  7 bytes
+M00000000000000e0:	movq	272(%rdi), %r14	;  7 bytes
+M00000000000000e7:	movq	280(%rdi), %r15	;  7 bytes
+M00000000000000ee:	movq	%rdx, 16(%rsp)	;  5 bytes
+M00000000000000f3:	addq	24(%rsp), %rax	;  5 bytes
+M00000000000000f8:	movq	8(%rsp), %rdx	;  5 bytes
+M00000000000000fd:	movq	%rax, 288(%rdx)	;  7 bytes
+M0000000000000104:	movq	88(%rsp), %rdx	;  5 bytes
+M0000000000000109:	testb	%dl, %dl	;  2 bytes
+M000000000000010b:	movq	%rsi, 40(%rsp)	;  5 bytes
+M0000000000000110:	je	0x4353f9 <BloombergLP::bslh::SpookyHashAlgorithmImp::update(void const*, unsigned long)+0x359>	;  6 bytes
+M0000000000000116:	movl	$192, %eax	;  5 bytes
+M000000000000011b:	subq	%rdx, %rax	;  3 bytes
+M000000000000011e:	movq	%rax, 80(%rsp)	;  5 bytes
+M0000000000000123:	movq	8(%rsp), %rax	;  5 bytes
+M0000000000000128:	leaq	(%rax,%rdx), %rdi	;  4 bytes
+M000000000000012c:	movq	80(%rsp), %rdx	;  5 bytes
+M0000000000000131:	movq	%r9, 72(%rsp)	;  5 bytes
+M0000000000000136:	movq	%r8, 64(%rsp)	;  5 bytes
+M000000000000013b:	movq	%r11, 96(%rsp)	;  5 bytes
+M0000000000000140:	movq	%r10, 32(%rsp)	;  5 bytes
+M0000000000000145:	movq	%rbx, 56(%rsp)	;  5 bytes
+M000000000000014a:	movq	%rcx, 48(%rsp)	;  5 bytes
+M000000000000014f:	callq	0x404af0 <memcpy@plt>	;  5 bytes
+M0000000000000154:	movq	48(%rsp), %rcx	;  5 bytes
+M0000000000000159:	movq	56(%rsp), %rbx	;  5 bytes
+M000000000000015e:	movq	32(%rsp), %r10	;  5 bytes
+M0000000000000163:	movq	96(%rsp), %r11	;  5 bytes
+M0000000000000168:	movq	64(%rsp), %r8	;  5 bytes
+M000000000000016d:	movq	72(%rsp), %r9	;  5 bytes
+M0000000000000172:	movq	8(%rsp), %rdi	;  5 bytes
+M0000000000000177:	addq	(%rdi), %r8	;  3 bytes
+M000000000000017a:	xorq	%r8, %r15	;  3 bytes
+M000000000000017d:	rolq	$11, %r8	;  4 bytes
+M0000000000000181:	addq	%r9, %r15	;  3 bytes
+M0000000000000184:	addq	8(%rdi), %r9	;  4 bytes
+M0000000000000188:	xorq	%r9, %r8	;  3 bytes
+M000000000000018b:	rolq	$32, %r9	;  4 bytes
+M000000000000018f:	xorq	%r14, %r11	;  3 bytes
+M0000000000000192:	addq	%r11, %r8	;  3 bytes
+M0000000000000195:	addq	16(%rdi), %r11	;  4 bytes
+M0000000000000199:	xorq	%r11, %r9	;  3 bytes
+M000000000000019c:	rolq	$43, %r11	;  4 bytes
+M00000000000001a0:	xorq	%r15, %r10	;  3 bytes
+M00000000000001a3:	addq	%r10, %r9	;  3 bytes
+M00000000000001a6:	addq	24(%rdi), %r10	;  4 bytes
+M00000000000001aa:	xorq	%r10, %r11	;  3 bytes
+M00000000000001ad:	rolq	$31, %r10	;  4 bytes
+M00000000000001b1:	xorq	%r8, %rbx	;  3 bytes
+M00000000000001b4:	addq	%rbx, %r11	;  3 bytes
+M00000000000001b7:	addq	32(%rdi), %rbx	;  4 bytes
+M00000000000001bb:	xorq	%rbx, %r10	;  3 bytes
+M00000000000001be:	rolq	$17, %rbx	;  4 bytes
+M00000000000001c2:	xorq	%r9, %rbp	;  3 bytes
+M00000000000001c5:	addq	%rbp, %r10	;  3 bytes
+M00000000000001c8:	addq	40(%rdi), %rbp	;  4 bytes
+M00000000000001cc:	xorq	%rbp, %rbx	;  3 bytes
+M00000000000001cf:	rolq	$28, %rbp	;  4 bytes
+M00000000000001d3:	xorq	%r11, %rcx	;  3 bytes
+M00000000000001d6:	addq	%rcx, %rbx	;  3 bytes
+M00000000000001d9:	addq	48(%rdi), %rcx	;  4 bytes
+M00000000000001dd:	xorq	%rcx, %rbp	;  3 bytes
+M00000000000001e0:	rolq	$39, %rcx	;  4 bytes
+M00000000000001e4:	movq	16(%rsp), %rax	;  5 bytes
+M00000000000001e9:	xorq	%r10, %rax	;  3 bytes
+M00000000000001ec:	addq	%rax, %rbp	;  3 bytes
+M00000000000001ef:	addq	56(%rdi), %rax	;  4 bytes
+M00000000000001f3:	xorq	%rax, %rcx	;  3 bytes
+M00000000000001f6:	rolq	$57, %rax	;  4 bytes
+M00000000000001fa:	xorq	%rbx, %r12	;  3 bytes
+M00000000000001fd:	addq	%r12, %rcx	;  3 bytes
+M0000000000000200:	addq	64(%rdi), %r12	;  4 bytes
+M0000000000000204:	xorq	%r12, %rax	;  3 bytes
+M0000000000000207:	rolq	$55, %r12	;  4 bytes
+M000000000000020b:	xorq	%rbp, %r13	;  3 bytes
+M000000000000020e:	addq	%r13, %rax	;  3 bytes
+M0000000000000211:	addq	72(%rdi), %r13	;  4 bytes
+M0000000000000215:	xorq	%r13, %r12	;  3 bytes
+M0000000000000218:	rolq	$54, %r13	;  4 bytes
+M000000000000021c:	xorq	%rcx, %r14	;  3 bytes
+M000000000000021f:	addq	%r14, %r12	;  3 bytes
+M0000000000000222:	addq	80(%rdi), %r14	;  4 bytes
+M0000000000000226:	xorq	%r14, %r13	;  3 bytes
+M0000000000000229:	rolq	$22, %r14	;  4 bytes
+M000000000000022d:	xorq	%rax, %r15	;  3 bytes
+M0000000000000230:	addq	%r15, %r13	;  3 bytes
+M0000000000000233:	addq	88(%rdi), %r15	;  4 bytes
+M0000000000000237:	xorq	%r15, %r14	;  3 bytes
+M000000000000023a:	rolq	$46, %r15	;  4 bytes
+M000000000000023e:	xorq	%r12, %r8	;  3 bytes
+M0000000000000241:	addq	%r8, %r14	;  3 bytes
+M0000000000000244:	addq	96(%rdi), %r8	;  4 bytes
+M0000000000000248:	xorq	%r8, %r15	;  3 bytes
+M000000000000024b:	rolq	$11, %r8	;  4 bytes
+M000000000000024f:	xorq	%r13, %r9	;  3 bytes
+M0000000000000252:	addq	%r9, %r15	;  3 bytes
+M0000000000000255:	addq	104(%rdi), %r9	;  4 bytes
+M0000000000000259:	xorq	%r9, %r8	;  3 bytes
+M000000000000025c:	rolq	$32, %r9	;  4 bytes
+M0000000000000260:	xorq	%r14, %r11	;  3 bytes
+M0000000000000263:	addq	%r11, %r8	;  3 bytes
+M0000000000000266:	addq	112(%rdi), %r11	;  4 bytes
+M000000000000026a:	xorq	%r11, %r9	;  3 bytes
+M000000000000026d:	rolq	$43, %r11	;  4 bytes
+M0000000000000271:	xorq	%r15, %r10	;  3 bytes
+M0000000000000274:	addq	%r10, %r9	;  3 bytes
+M0000000000000277:	addq	120(%rdi), %r10	;  4 bytes
+M000000000000027b:	xorq	%r10, %r11	;  3 bytes
+M000000000000027e:	rolq	$31, %r10	;  4 bytes
+M0000000000000282:	xorq	%r8, %rbx	;  3 bytes
+M0000000000000285:	addq	%rbx, %r11	;  3 bytes
+M0000000000000288:	addq	128(%rdi), %rbx	;  7 bytes
+M000000000000028f:	xorq	%rbx, %r10	;  3 bytes
+M0000000000000292:	rolq	$17, %rbx	;  4 bytes
+M0000000000000296:	xorq	%r9, %rbp	;  3 bytes
+M0000000000000299:	addq	%rbp, %r10	;  3 bytes
+M000000000000029c:	addq	136(%rdi), %rbp	;  7 bytes
+M00000000000002a3:	xorq	%rbp, %rbx	;  3 bytes
+M00000000000002a6:	rolq	$28, %rbp	;  4 bytes
+M00000000000002aa:	xorq	%r11, %rcx	;  3 bytes
+M00000000000002ad:	addq	%rcx, %rbx	;  3 bytes
+M00000000000002b0:	addq	144(%rdi), %rcx	;  7 bytes
+M00000000000002b7:	xorq	%r10, %rax	;  3 bytes
+M00000000000002ba:	xorq	%rcx, %rbp	;  3 bytes
+M00000000000002bd:	rolq	$39, %rcx	;  4 bytes
+M00000000000002c1:	addq	%rax, %rbp	;  3 bytes
+M00000000000002c4:	addq	152(%rdi), %rax	;  7 bytes
+M00000000000002cb:	movq	88(%rsp), %rsi	;  5 bytes
+M00000000000002d0:	negq	%rsi	;  3 bytes
+M00000000000002d3:	movq	40(%rsp), %rdx	;  5 bytes
+M00000000000002d8:	leaq	192(%rdx,%rsi), %rdx	;  8 bytes
+M00000000000002e0:	movq	%rdx, 40(%rsp)	;  5 bytes
+M00000000000002e5:	xorq	%rax, %rcx	;  3 bytes
+M00000000000002e8:	rolq	$57, %rax	;  4 bytes
+M00000000000002ec:	xorq	%rbx, %r12	;  3 bytes
+M00000000000002ef:	addq	%r12, %rcx	;  3 bytes
+M00000000000002f2:	addq	160(%rdi), %r12	;  7 bytes
+M00000000000002f9:	movq	24(%rsp), %rsi	;  5 bytes
+M00000000000002fe:	subq	80(%rsp), %rsi	;  5 bytes
+M0000000000000303:	xorq	%r12, %rax	;  3 bytes
+M0000000000000306:	rolq	$55, %r12	;  4 bytes
+M000000000000030a:	xorq	%rbp, %r13	;  3 bytes
+M000000000000030d:	addq	%r13, %rax	;  3 bytes
+M0000000000000310:	addq	168(%rdi), %r13	;  7 bytes
+M0000000000000317:	xorq	%rcx, %r14	;  3 bytes
+M000000000000031a:	xorq	%r13, %r12	;  3 bytes
+M000000000000031d:	rolq	$54, %r13	;  4 bytes
+M0000000000000321:	movq	%rax, 16(%rsp)	;  5 bytes
+M0000000000000326:	xorq	%rax, %r15	;  3 bytes
+M0000000000000329:	addq	%r14, %r12	;  3 bytes
+M000000000000032c:	addq	176(%rdi), %r14	;  7 bytes
+M0000000000000333:	xorq	%r12, %r8	;  3 bytes
+M0000000000000336:	xorq	%r14, %r13	;  3 bytes
+M0000000000000339:	rolq	$22, %r14	;  4 bytes
+M000000000000033d:	addq	%r15, %r13	;  3 bytes
+M0000000000000340:	addq	184(%rdi), %r15	;  7 bytes
+M0000000000000347:	xorq	%r13, %r9	;  3 bytes
+M000000000000034a:	xorq	%r15, %r14	;  3 bytes
+M000000000000034d:	rolq	$46, %r15	;  4 bytes
+M0000000000000351:	addq	%r8, %r14	;  3 bytes
+M0000000000000354:	movq	%rsi, %rdi	;  3 bytes
+M0000000000000357:	jmp	0x4353fe <BloombergLP::bslh::SpookyHashAlgorithmImp::update(void const*, unsigned long)+0x35e>	;  2 bytes
+M0000000000000359:	movq	24(%rsp), %rdi	;  5 bytes
+M000000000000035e:	movabsq	$-6148914691236517205, %rdx	; 10 bytes
+M0000000000000368:	movq	%rdi, %rax	;  3 bytes
+M000000000000036b:	mulq	%rdx	;  3 bytes
+M000000000000036e:	shrq	$6, %rdx	;  4 bytes
+M0000000000000372:	leaq	(%rdx,%rdx,2), %rsi	;  4 bytes
+M0000000000000376:	shlq	$5, %rsi	;  4 bytes
+M000000000000037a:	movq	40(%rsp), %rax	;  5 bytes
+M000000000000037f:	addq	%rax, %rsi	;  3 bytes
+M0000000000000382:	movq	%rax, %rdx	;  3 bytes
+M0000000000000385:	subq	%rsi, %rdx	;  3 bytes
+M0000000000000388:	addq	%rdi, %rdx	;  3 bytes
+M000000000000038b:	movq	%rdx, 24(%rsp)	;  5 bytes
+M0000000000000390:	cmpq	%rsi, %rax	;  3 bytes
+M0000000000000393:	jae	0x43551a <BloombergLP::bslh::SpookyHashAlgorithmImp::update(void const*, unsigned long)+0x47a>	;  6 bytes
+M0000000000000399:	movq	16(%rsp), %rdx	;  5 bytes
+M000000000000039e:	nop		;  2 bytes
+M00000000000003a0:	addq	(%rax), %r8	;  3 bytes
+M00000000000003a3:	xorq	%r8, %r15	;  3 bytes
+M00000000000003a6:	rolq	$11, %r8	;  4 bytes
+M00000000000003aa:	addq	%r9, %r15	;  3 bytes
+M00000000000003ad:	addq	8(%rax), %r9	;  4 bytes
+M00000000000003b1:	xorq	%r9, %r8	;  3 bytes
+M00000000000003b4:	rolq	$32, %r9	;  4 bytes
+M00000000000003b8:	xorq	%r14, %r11	;  3 bytes
+M00000000000003bb:	addq	%r11, %r8	;  3 bytes
+M00000000000003be:	addq	16(%rax), %r11	;  4 bytes
+M00000000000003c2:	xorq	%r11, %r9	;  3 bytes
+M00000000000003c5:	rolq	$43, %r11	;  4 bytes
+M00000000000003c9:	xorq	%r15, %r10	;  3 bytes
+M00000000000003cc:	addq	%r10, %r9	;  3 bytes
+M00000000000003cf:	addq	24(%rax), %r10	;  4 bytes
+M00000000000003d3:	xorq	%r10, %r11	;  3 bytes
+M00000000000003d6:	rolq	$31, %r10	;  4 bytes
+M00000000000003da:	xorq	%r8, %rbx	;  3 bytes
+M00000000000003dd:	addq	%rbx, %r11	;  3 bytes
+M00000000000003e0:	addq	32(%rax), %rbx	;  4 bytes
+M00000000000003e4:	xorq	%rbx, %r10	;  3 bytes
+M00000000000003e7:	rolq	$17, %rbx	;  4 bytes
+M00000000000003eb:	xorq	%r9, %rbp	;  3 bytes
+M00000000000003ee:	addq	%rbp, %r10	;  3 bytes
+M00000000000003f1:	addq	40(%rax), %rbp	;  4 bytes
+M00000000000003f5:	xorq	%rbp, %rbx	;  3 bytes
+M00000000000003f8:	rolq	$28, %rbp	;  4 bytes
+M00000000000003fc:	xorq	%r11, %rcx	;  3 bytes
+M00000000000003ff:	addq	%rcx, %rbx	;  3 bytes
+M0000000000000402:	addq	48(%rax), %rcx	;  4 bytes
+M0000000000000406:	xorq	%rcx, %rbp	;  3 bytes
+M0000000000000409:	rolq	$39, %rcx	;  4 bytes
+M000000000000040d:	xorq	%r10, %rdx	;  3 bytes
+M0000000000000410:	addq	%rdx, %rbp	;  3 bytes
+M0000000000000413:	addq	56(%rax), %rdx	;  4 bytes
+M0000000000000417:	xorq	%rdx, %rcx	;  3 bytes
+M000000000000041a:	rolq	$57, %rdx	;  4 bytes
+M000000000000041e:	xorq	%rbx, %r12	;  3 bytes
+M0000000000000421:	addq	%r12, %rcx	;  3 bytes
+M0000000000000424:	addq	64(%rax), %r12	;  4 bytes
+M0000000000000428:	xorq	%r12, %rdx	;  3 bytes
+M000000000000042b:	rolq	$55, %r12	;  4 bytes
+M000000000000042f:	xorq	%rbp, %r13	;  3 bytes
+M0000000000000432:	addq	%r13, %rdx	;  3 bytes
+M0000000000000435:	addq	72(%rax), %r13	;  4 bytes
+M0000000000000439:	xorq	%r13, %r12	;  3 bytes
+M000000000000043c:	rolq	$54, %r13	;  4 bytes
+M0000000000000440:	xorq	%rcx, %r14	;  3 bytes
+M0000000000000443:	addq	%r14, %r12	;  3 bytes
+M0000000000000446:	addq	80(%rax), %r14	;  4 bytes
+M000000000000044a:	xorq	%r14, %r13	;  3 bytes
+M000000000000044d:	rolq	$22, %r14	;  4 bytes
+M0000000000000451:	xorq	%rdx, %r15	;  3 bytes
+M0000000000000454:	addq	%r15, %r13	;  3 bytes
+M0000000000000457:	addq	88(%rax), %r15	;  4 bytes
+M000000000000045b:	xorq	%r12, %r8	;  3 bytes
+M000000000000045e:	xorq	%r15, %r14	;  3 bytes
+M0000000000000461:	rolq	$46, %r15	;  4 bytes
+M0000000000000465:	xorq	%r13, %r9	;  3 bytes
+M0000000000000468:	addq	%r8, %r14	;  3 bytes
+M000000000000046b:	addq	$96, %rax	;  4 bytes
+M000000000000046f:	cmpq	%rax, %rsi	;  3 bytes
+M0000000000000472:	ja	0x435440 <BloombergLP::bslh::SpookyHashAlgorithmImp::update(void const*, unsigned long)+0x3a0>	;  6 bytes
+M0000000000000478:	jmp	0x43551f <BloombergLP::bslh::SpookyHashAlgorithmImp::update(void const*, unsigned long)+0x47f>	;  2 bytes
+M000000000000047a:	movq	16(%rsp), %rdx	;  5 bytes
+M000000000000047f:	movq	%r8, 64(%rsp)	;  5 bytes
+M0000000000000484:	movq	%r9, 72(%rsp)	;  5 bytes
+M0000000000000489:	movq	%r10, 32(%rsp)	;  5 bytes
+M000000000000048e:	movq	%rbx, 56(%rsp)	;  5 bytes
+M0000000000000493:	movq	%rcx, 48(%rsp)	;  5 bytes
+M0000000000000498:	movq	%rdx, 16(%rsp)	;  5 bytes
+M000000000000049d:	movq	24(%rsp), %rax	;  5 bytes
+M00000000000004a2:	movq	8(%rsp), %rdi	;  5 bytes
+M00000000000004a7:	movb	%al, 296(%rdi)	;  6 bytes
+M00000000000004ad:	movzbl	%al, %edx	;  3 bytes
+M00000000000004b0:	movq	%r11, %rbx	;  3 bytes
+M00000000000004b3:	callq	0x404af0 <memcpy@plt>	;  5 bytes
+M00000000000004b8:	movq	8(%rsp), %rax	;  5 bytes
+M00000000000004bd:	movq	64(%rsp), %rcx	;  5 bytes
+M00000000000004c2:	movq	%rcx, 192(%rax)	;  7 bytes
+M00000000000004c9:	movq	72(%rsp), %rcx	;  5 bytes
+M00000000000004ce:	movq	%rcx, 200(%rax)	;  7 bytes
+M00000000000004d5:	movq	%rbx, 208(%rax)	;  7 bytes
+M00000000000004dc:	movq	32(%rsp), %rcx	;  5 bytes
+M00000000000004e1:	movq	%rcx, 216(%rax)	;  7 bytes
+M00000000000004e8:	movq	56(%rsp), %rcx	;  5 bytes
+M00000000000004ed:	movq	%rcx, 224(%rax)	;  7 bytes
+M00000000000004f4:	movq	%rbp, 232(%rax)	;  7 bytes
+M00000000000004fb:	movq	48(%rsp), %rcx	;  5 bytes
+M0000000000000500:	movq	%rcx, 240(%rax)	;  7 bytes
+M0000000000000507:	movq	16(%rsp), %rcx	;  5 bytes
+M000000000000050c:	movq	%rcx, 248(%rax)	;  7 bytes
+M0000000000000513:	movq	%r12, 256(%rax)	;  7 bytes
+M000000000000051a:	movq	%r13, 264(%rax)	;  7 bytes
+M0000000000000521:	movq	%r14, 272(%rax)	;  7 bytes
+M0000000000000528:	movq	%r15, 280(%rax)	;  7 bytes
+M000000000000052f:	addq	$104, %rsp	;  4 bytes
+M0000000000000533:	popq	%rbx	;  1 bytes
+M0000000000000534:	popq	%r12	;  2 bytes
+M0000000000000536:	popq	%r13	;  2 bytes
+M0000000000000538:	popq	%r14	;  2 bytes
+M000000000000053a:	popq	%r15	;  2 bytes
+M000000000000053c:	popq	%rbp	;  1 bytes
+M000000000000053d:	retq		;  1 bytes
+M000000000000053e:	nop		;  2 bytes

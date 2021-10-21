@@ -1,13 +1,13 @@
 00000000004043f0 <DoubleStack::pop()>:
-0000000000000000: 01	pushq	%rbx
-0000000000000001: 03	movq	%rdi, %rbx
-0000000000000004: 03	movq	(%rdi), %rax
-0000000000000007: 04	movq	16(%rdi), %rdi
-000000000000000b: 04	movslq	12(%rbx), %rcx
-000000000000000f: 05	movq	-8(%rax,%rcx,8), %rsi
-0000000000000014: 03	movq	(%rdi), %rax
-0000000000000017: 03	callq	*24(%rax)
-000000000000001a: 03	decl	12(%rbx)
-000000000000001d: 01	popq	%rbx
-000000000000001e: 01	retq	
-000000000000001f: 01	nop	
+M0000000000000000:	pushq	%rbx	;  1 bytes
+M0000000000000001:	movq	%rdi, %rbx	;  3 bytes
+M0000000000000004:	movq	(%rdi), %rax	;  3 bytes
+M0000000000000007:	movq	16(%rdi), %rdi	;  4 bytes
+M000000000000000b:	movslq	12(%rbx), %rcx	;  4 bytes
+M000000000000000f:	movq	-8(%rax,%rcx,8), %rsi	;  5 bytes
+M0000000000000014:	movq	(%rdi), %rax	;  3 bytes
+M0000000000000017:	callq	*24(%rax)	;  3 bytes
+M000000000000001a:	decl	12(%rbx)	;  3 bytes
+M000000000000001d:	popq	%rbx	;  1 bytes
+M000000000000001e:	retq		;  1 bytes
+M000000000000001f:	nop		;  1 bytes

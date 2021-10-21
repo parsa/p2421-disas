@@ -2,156 +2,156 @@
 
 ```nasm
 0000000000404640 <gg(bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >*, char const*, bsl::vector<BloombergLP::balm::MetricRecord, bsl::allocator<BloombergLP::balm::MetricRecord> > const&)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 02	pushq	%r13
-0000000000000007: 02	pushq	%r12
-0000000000000009: 01	pushq	%rbx
-000000000000000a: 04	subq	$56, %rsp
-000000000000000e: 05	movq	%rdi, 16(%rsp)
-0000000000000013: 02	movb	(%rsi), %al
-0000000000000015: 02	testb	%al, %al
-0000000000000017: 06	je	0x4047c3 <gg(bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >*, char const*, bsl::vector<BloombergLP::balm::MetricRecord, bsl::allocator<BloombergLP::balm::MetricRecord> > const&)+0x183>
-000000000000001d: 03	movq	%rsi, %r14
-0000000000000020: 05	movq	%rdx, 8(%rsp)
-0000000000000025: 03	movq	(%rdx), %r12
-0000000000000028: 03	xorl	%r13d, %r13d
-000000000000002b: 03	movq	%rsi, %r15
-000000000000002e: 04	movq	%r12, (%rsp)
-0000000000000032: 10	nopw	%cs:(%rax,%rax)
-000000000000003c: 04	nopl	(%rax)
-0000000000000040: 03	leal	3(%rax), %ecx
-0000000000000043: 03	cmpb	$2, %cl
-0000000000000046: 02	jb	0x404693 <gg(bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >*, char const*, bsl::vector<BloombergLP::balm::MetricRecord, bsl::allocator<BloombergLP::balm::MetricRecord> > const&)+0x53>
-0000000000000048: 05	cmpb	$0, 1(%r15)
-000000000000004d: 06	jne	0x404720 <gg(bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >*, char const*, bsl::vector<BloombergLP::balm::MetricRecord, bsl::allocator<BloombergLP::balm::MetricRecord> > const&)+0xe0>
-0000000000000053: 05	movl	$6761512, %edi
-0000000000000058: 05	movl	$4453807, %esi
-000000000000005d: 05	movl	$39, %edx
-0000000000000062: 05	callq	0x4128d0 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>
-0000000000000067: 03	movq	%rax, %rbx
-000000000000006a: 03	movq	%r14, %rdi
-000000000000006d: 05	callq	0x403de0 <strlen@plt>
-0000000000000072: 03	movq	%rbx, %rdi
-0000000000000075: 03	movq	%r14, %rbp
-0000000000000078: 03	movq	%r14, %rsi
-000000000000007b: 03	movq	%rax, %rdx
-000000000000007e: 05	callq	0x4128d0 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>
-0000000000000083: 03	movq	%rax, %rbx
-0000000000000086: 03	movq	(%rax), %rax
-0000000000000089: 04	movq	-24(%rax), %rsi
-000000000000008d: 03	addq	%rbx, %rsi
-0000000000000090: 05	leaq	24(%rsp), %r14
-0000000000000095: 03	movq	%r14, %rdi
-0000000000000098: 05	callq	0x404050 <_ZNKSt3__18ios_base6getlocEv@plt>
-000000000000009d: 05	movl	$6761328, %esi
-00000000000000a2: 03	movq	%r14, %rdi
-00000000000000a5: 05	callq	0x4040e0 <_ZNKSt3__16locale9use_facetERNS0_2idE@plt>
-00000000000000aa: 03	movq	(%rax), %rcx
-00000000000000ad: 03	movq	%rax, %rdi
-00000000000000b0: 05	movl	$10, %esi
-00000000000000b5: 03	callq	*56(%rcx)
-00000000000000b8: 03	movl	%eax, %r14d
-00000000000000bb: 05	leaq	24(%rsp), %rdi
-00000000000000c0: 05	callq	0x404160 <_ZNSt3__16localeD1Ev@plt>
-00000000000000c5: 04	movsbl	%r14b, %esi
-00000000000000c9: 03	movq	%rbx, %rdi
-00000000000000cc: 05	callq	0x403e80 <_ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEE3putEc@plt>
-00000000000000d1: 03	movq	%rbx, %rdi
-00000000000000d4: 05	callq	0x404010 <_ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEE5flushEv@plt>
-00000000000000d9: 04	movzbl	(%r15), %eax
-00000000000000dd: 03	movq	%rbp, %r14
-00000000000000e0: 02	cmpb	$82, %al
-00000000000000e2: 06	jne	0x4047d8 <gg(bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >*, char const*, bsl::vector<BloombergLP::balm::MetricRecord, bsl::allocator<BloombergLP::balm::MetricRecord> > const&)+0x198>
-00000000000000e8: 05	movsbq	1(%r15), %rbx
-00000000000000ed: 03	leal	-48(%rbx), %eax
-00000000000000f0: 02	cmpb	$10, %al
-00000000000000f2: 06	jae	0x4047f9 <gg(bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >*, char const*, bsl::vector<BloombergLP::balm::MetricRecord, bsl::allocator<BloombergLP::balm::MetricRecord> > const&)+0x1b9>
-00000000000000f8: 05	cmpb	$69, 2(%r15)
-00000000000000fd: 06	jne	0x404805 <gg(bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >*, char const*, bsl::vector<BloombergLP::balm::MetricRecord, bsl::allocator<BloombergLP::balm::MetricRecord> > const&)+0x1c5>
-0000000000000103: 05	movzbl	3(%r15), %eax
-0000000000000108: 03	leal	-48(%rax), %ecx
-000000000000010b: 03	cmpb	$10, %cl
-000000000000010e: 06	jae	0x404826 <gg(bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >*, char const*, bsl::vector<BloombergLP::balm::MetricRecord, bsl::allocator<BloombergLP::balm::MetricRecord> > const&)+0x1e6>
-0000000000000114: 04	addq	$-48, %rbx
-0000000000000118: 05	movq	8(%rsp), %rdx
-000000000000011d: 04	movq	8(%rdx), %rcx
-0000000000000121: 03	subq	(%rdx), %rcx
-0000000000000124: 04	addq	$-48, %rax
-0000000000000128: 04	movq	(%rsp), %rsi
-000000000000012c: 03	addq	%rsi, %rcx
-000000000000012f: 03	movq	%rbx, %rdx
-0000000000000132: 04	shlq	$3, %rdx
-0000000000000136: 04	leaq	(%rdx,%rdx,4), %rbp
-000000000000013a: 04	leaq	(%r12,%rbp), %rdx
-000000000000013e: 03	cmpq	%rdx, %rcx
-0000000000000141: 04	cmovbq	%rsi, %r12
-0000000000000145: 05	movq	%r12, 24(%rsp)
-000000000000014a: 04	movl	%ebx, 32(%rsp)
-000000000000014e: 05	movq	%rax, 40(%rsp)
-0000000000000153: 08	movl	$0, 48(%rsp)
-000000000000015b: 05	movq	16(%rsp), %rdi
-0000000000000160: 05	leaq	24(%rsp), %rsi
-0000000000000165: 05	callq	0x411730 <bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >::push_back(BloombergLP::balm::MetricSampleGroup&&)>
-000000000000016a: 03	addq	%rbp, %r12
-000000000000016d: 03	addl	%ebx, %r13d
-0000000000000170: 05	movzbl	4(%r15), %eax
-0000000000000175: 04	addq	$4, %r15
-0000000000000179: 02	testb	%al, %al
-000000000000017b: 06	jne	0x404680 <gg(bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >*, char const*, bsl::vector<BloombergLP::balm::MetricRecord, bsl::allocator<BloombergLP::balm::MetricRecord> > const&)+0x40>
-0000000000000181: 02	jmp	0x4047c6 <gg(bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >*, char const*, bsl::vector<BloombergLP::balm::MetricRecord, bsl::allocator<BloombergLP::balm::MetricRecord> > const&)+0x186>
-0000000000000183: 03	xorl	%r13d, %r13d
-0000000000000186: 03	movl	%r13d, %eax
-0000000000000189: 04	addq	$56, %rsp
-000000000000018d: 01	popq	%rbx
-000000000000018e: 02	popq	%r12
-0000000000000190: 02	popq	%r13
-0000000000000192: 02	popq	%r14
-0000000000000194: 02	popq	%r15
-0000000000000196: 01	popq	%rbp
-0000000000000197: 01	retq	
-0000000000000198: 05	movl	$6761512, %edi
-000000000000019d: 05	movl	$4453847, %esi
-00000000000001a2: 05	callq	0x411660 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<<<std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*)>
-00000000000001a7: 03	movq	%rax, %rdi
-00000000000001aa: 03	movq	%r14, %rsi
-00000000000001ad: 05	callq	0x411660 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<<<std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*)>
-00000000000001b2: 05	movl	$4453882, %esi
-00000000000001b7: 02	jmp	0x404845 <gg(bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >*, char const*, bsl::vector<BloombergLP::balm::MetricRecord, bsl::allocator<BloombergLP::balm::MetricRecord> > const&)+0x205>
-00000000000001b9: 05	movl	$6761512, %edi
-00000000000001be: 05	movl	$4453910, %esi
-00000000000001c3: 02	jmp	0x404830 <gg(bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >*, char const*, bsl::vector<BloombergLP::balm::MetricRecord, bsl::allocator<BloombergLP::balm::MetricRecord> > const&)+0x1f0>
-00000000000001c5: 05	movl	$6761512, %edi
-00000000000001ca: 05	movl	$4453847, %esi
-00000000000001cf: 05	callq	0x411660 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<<<std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*)>
-00000000000001d4: 03	movq	%rax, %rdi
-00000000000001d7: 03	movq	%r14, %rsi
-00000000000001da: 05	callq	0x411660 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<<<std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*)>
-00000000000001df: 05	movl	$4453955, %esi
-00000000000001e4: 02	jmp	0x404845 <gg(bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >*, char const*, bsl::vector<BloombergLP::balm::MetricRecord, bsl::allocator<BloombergLP::balm::MetricRecord> > const&)+0x205>
-00000000000001e6: 05	movl	$6761512, %edi
-00000000000001eb: 05	movl	$4453983, %esi
-00000000000001f0: 05	callq	0x411660 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<<<std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*)>
-00000000000001f5: 03	movq	%rax, %rdi
-00000000000001f8: 03	movq	%r14, %rsi
-00000000000001fb: 05	callq	0x411660 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<<<std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*)>
-0000000000000200: 05	movl	$4453972, %esi
-0000000000000205: 03	movq	%rax, %rdi
-0000000000000208: 05	callq	0x411660 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<<<std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*)>
-000000000000020d: 04	movsbl	(%r15), %esi
-0000000000000211: 03	movq	%rax, %rdi
-0000000000000214: 05	callq	0x411690 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<<<std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char)>
-0000000000000219: 05	movl	$4453981, %esi
-000000000000021e: 03	movq	%rax, %rdi
-0000000000000221: 05	callq	0x411660 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<<<std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*)>
-0000000000000226: 03	movq	%rax, %rdi
-0000000000000229: 05	callq	0x4116b0 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::endl<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>
-000000000000022e: 03	movq	%rax, %rbx
-0000000000000231: 05	leaq	24(%rsp), %rdi
-0000000000000236: 05	callq	0x404160 <_ZNSt3__16localeD1Ev@plt>
-000000000000023b: 03	movq	%rbx, %rdi
-000000000000023e: 05	callq	0x404220 <_Unwind_Resume@plt>
-0000000000000243: 10	nopw	%cs:(%rax,%rax)
-000000000000024d: 03	nopl	(%rax)
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%r13	;  2 bytes
+M0000000000000007:	pushq	%r12	;  2 bytes
+M0000000000000009:	pushq	%rbx	;  1 bytes
+M000000000000000a:	subq	$56, %rsp	;  4 bytes
+M000000000000000e:	movq	%rdi, 16(%rsp)	;  5 bytes
+M0000000000000013:	movb	(%rsi), %al	;  2 bytes
+M0000000000000015:	testb	%al, %al	;  2 bytes
+M0000000000000017:	je	0x4047c3 <gg(bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >*, char const*, bsl::vector<BloombergLP::balm::MetricRecord, bsl::allocator<BloombergLP::balm::MetricRecord> > const&)+0x183>	;  6 bytes
+M000000000000001d:	movq	%rsi, %r14	;  3 bytes
+M0000000000000020:	movq	%rdx, 8(%rsp)	;  5 bytes
+M0000000000000025:	movq	(%rdx), %r12	;  3 bytes
+M0000000000000028:	xorl	%r13d, %r13d	;  3 bytes
+M000000000000002b:	movq	%rsi, %r15	;  3 bytes
+M000000000000002e:	movq	%r12, (%rsp)	;  4 bytes
+M0000000000000032:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000003c:	nopl	(%rax)	;  4 bytes
+M0000000000000040:	leal	3(%rax), %ecx	;  3 bytes
+M0000000000000043:	cmpb	$2, %cl	;  3 bytes
+M0000000000000046:	jb	0x404693 <gg(bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >*, char const*, bsl::vector<BloombergLP::balm::MetricRecord, bsl::allocator<BloombergLP::balm::MetricRecord> > const&)+0x53>	;  2 bytes
+M0000000000000048:	cmpb	$0, 1(%r15)	;  5 bytes
+M000000000000004d:	jne	0x404720 <gg(bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >*, char const*, bsl::vector<BloombergLP::balm::MetricRecord, bsl::allocator<BloombergLP::balm::MetricRecord> > const&)+0xe0>	;  6 bytes
+M0000000000000053:	movl	$6761512, %edi	;  5 bytes
+M0000000000000058:	movl	$4453807, %esi	;  5 bytes
+M000000000000005d:	movl	$39, %edx	;  5 bytes
+M0000000000000062:	callq	0x4128d0 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>	;  5 bytes
+M0000000000000067:	movq	%rax, %rbx	;  3 bytes
+M000000000000006a:	movq	%r14, %rdi	;  3 bytes
+M000000000000006d:	callq	0x403de0 <strlen@plt>	;  5 bytes
+M0000000000000072:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000075:	movq	%r14, %rbp	;  3 bytes
+M0000000000000078:	movq	%r14, %rsi	;  3 bytes
+M000000000000007b:	movq	%rax, %rdx	;  3 bytes
+M000000000000007e:	callq	0x4128d0 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>	;  5 bytes
+M0000000000000083:	movq	%rax, %rbx	;  3 bytes
+M0000000000000086:	movq	(%rax), %rax	;  3 bytes
+M0000000000000089:	movq	-24(%rax), %rsi	;  4 bytes
+M000000000000008d:	addq	%rbx, %rsi	;  3 bytes
+M0000000000000090:	leaq	24(%rsp), %r14	;  5 bytes
+M0000000000000095:	movq	%r14, %rdi	;  3 bytes
+M0000000000000098:	callq	0x404050 <_ZNKSt3__18ios_base6getlocEv@plt>	;  5 bytes
+M000000000000009d:	movl	$6761328, %esi	;  5 bytes
+M00000000000000a2:	movq	%r14, %rdi	;  3 bytes
+M00000000000000a5:	callq	0x4040e0 <_ZNKSt3__16locale9use_facetERNS0_2idE@plt>	;  5 bytes
+M00000000000000aa:	movq	(%rax), %rcx	;  3 bytes
+M00000000000000ad:	movq	%rax, %rdi	;  3 bytes
+M00000000000000b0:	movl	$10, %esi	;  5 bytes
+M00000000000000b5:	callq	*56(%rcx)	;  3 bytes
+M00000000000000b8:	movl	%eax, %r14d	;  3 bytes
+M00000000000000bb:	leaq	24(%rsp), %rdi	;  5 bytes
+M00000000000000c0:	callq	0x404160 <_ZNSt3__16localeD1Ev@plt>	;  5 bytes
+M00000000000000c5:	movsbl	%r14b, %esi	;  4 bytes
+M00000000000000c9:	movq	%rbx, %rdi	;  3 bytes
+M00000000000000cc:	callq	0x403e80 <_ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEE3putEc@plt>	;  5 bytes
+M00000000000000d1:	movq	%rbx, %rdi	;  3 bytes
+M00000000000000d4:	callq	0x404010 <_ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEE5flushEv@plt>	;  5 bytes
+M00000000000000d9:	movzbl	(%r15), %eax	;  4 bytes
+M00000000000000dd:	movq	%rbp, %r14	;  3 bytes
+M00000000000000e0:	cmpb	$82, %al	;  2 bytes
+M00000000000000e2:	jne	0x4047d8 <gg(bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >*, char const*, bsl::vector<BloombergLP::balm::MetricRecord, bsl::allocator<BloombergLP::balm::MetricRecord> > const&)+0x198>	;  6 bytes
+M00000000000000e8:	movsbq	1(%r15), %rbx	;  5 bytes
+M00000000000000ed:	leal	-48(%rbx), %eax	;  3 bytes
+M00000000000000f0:	cmpb	$10, %al	;  2 bytes
+M00000000000000f2:	jae	0x4047f9 <gg(bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >*, char const*, bsl::vector<BloombergLP::balm::MetricRecord, bsl::allocator<BloombergLP::balm::MetricRecord> > const&)+0x1b9>	;  6 bytes
+M00000000000000f8:	cmpb	$69, 2(%r15)	;  5 bytes
+M00000000000000fd:	jne	0x404805 <gg(bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >*, char const*, bsl::vector<BloombergLP::balm::MetricRecord, bsl::allocator<BloombergLP::balm::MetricRecord> > const&)+0x1c5>	;  6 bytes
+M0000000000000103:	movzbl	3(%r15), %eax	;  5 bytes
+M0000000000000108:	leal	-48(%rax), %ecx	;  3 bytes
+M000000000000010b:	cmpb	$10, %cl	;  3 bytes
+M000000000000010e:	jae	0x404826 <gg(bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >*, char const*, bsl::vector<BloombergLP::balm::MetricRecord, bsl::allocator<BloombergLP::balm::MetricRecord> > const&)+0x1e6>	;  6 bytes
+M0000000000000114:	addq	$-48, %rbx	;  4 bytes
+M0000000000000118:	movq	8(%rsp), %rdx	;  5 bytes
+M000000000000011d:	movq	8(%rdx), %rcx	;  4 bytes
+M0000000000000121:	subq	(%rdx), %rcx	;  3 bytes
+M0000000000000124:	addq	$-48, %rax	;  4 bytes
+M0000000000000128:	movq	(%rsp), %rsi	;  4 bytes
+M000000000000012c:	addq	%rsi, %rcx	;  3 bytes
+M000000000000012f:	movq	%rbx, %rdx	;  3 bytes
+M0000000000000132:	shlq	$3, %rdx	;  4 bytes
+M0000000000000136:	leaq	(%rdx,%rdx,4), %rbp	;  4 bytes
+M000000000000013a:	leaq	(%r12,%rbp), %rdx	;  4 bytes
+M000000000000013e:	cmpq	%rdx, %rcx	;  3 bytes
+M0000000000000141:	cmovbq	%rsi, %r12	;  4 bytes
+M0000000000000145:	movq	%r12, 24(%rsp)	;  5 bytes
+M000000000000014a:	movl	%ebx, 32(%rsp)	;  4 bytes
+M000000000000014e:	movq	%rax, 40(%rsp)	;  5 bytes
+M0000000000000153:	movl	$0, 48(%rsp)	;  8 bytes
+M000000000000015b:	movq	16(%rsp), %rdi	;  5 bytes
+M0000000000000160:	leaq	24(%rsp), %rsi	;  5 bytes
+M0000000000000165:	callq	0x411730 <bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >::push_back(BloombergLP::balm::MetricSampleGroup&&)>	;  5 bytes
+M000000000000016a:	addq	%rbp, %r12	;  3 bytes
+M000000000000016d:	addl	%ebx, %r13d	;  3 bytes
+M0000000000000170:	movzbl	4(%r15), %eax	;  5 bytes
+M0000000000000175:	addq	$4, %r15	;  4 bytes
+M0000000000000179:	testb	%al, %al	;  2 bytes
+M000000000000017b:	jne	0x404680 <gg(bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >*, char const*, bsl::vector<BloombergLP::balm::MetricRecord, bsl::allocator<BloombergLP::balm::MetricRecord> > const&)+0x40>	;  6 bytes
+M0000000000000181:	jmp	0x4047c6 <gg(bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >*, char const*, bsl::vector<BloombergLP::balm::MetricRecord, bsl::allocator<BloombergLP::balm::MetricRecord> > const&)+0x186>	;  2 bytes
+M0000000000000183:	xorl	%r13d, %r13d	;  3 bytes
+M0000000000000186:	movl	%r13d, %eax	;  3 bytes
+M0000000000000189:	addq	$56, %rsp	;  4 bytes
+M000000000000018d:	popq	%rbx	;  1 bytes
+M000000000000018e:	popq	%r12	;  2 bytes
+M0000000000000190:	popq	%r13	;  2 bytes
+M0000000000000192:	popq	%r14	;  2 bytes
+M0000000000000194:	popq	%r15	;  2 bytes
+M0000000000000196:	popq	%rbp	;  1 bytes
+M0000000000000197:	retq		;  1 bytes
+M0000000000000198:	movl	$6761512, %edi	;  5 bytes
+M000000000000019d:	movl	$4453847, %esi	;  5 bytes
+M00000000000001a2:	callq	0x411660 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<<<std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*)>	;  5 bytes
+M00000000000001a7:	movq	%rax, %rdi	;  3 bytes
+M00000000000001aa:	movq	%r14, %rsi	;  3 bytes
+M00000000000001ad:	callq	0x411660 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<<<std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*)>	;  5 bytes
+M00000000000001b2:	movl	$4453882, %esi	;  5 bytes
+M00000000000001b7:	jmp	0x404845 <gg(bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >*, char const*, bsl::vector<BloombergLP::balm::MetricRecord, bsl::allocator<BloombergLP::balm::MetricRecord> > const&)+0x205>	;  2 bytes
+M00000000000001b9:	movl	$6761512, %edi	;  5 bytes
+M00000000000001be:	movl	$4453910, %esi	;  5 bytes
+M00000000000001c3:	jmp	0x404830 <gg(bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >*, char const*, bsl::vector<BloombergLP::balm::MetricRecord, bsl::allocator<BloombergLP::balm::MetricRecord> > const&)+0x1f0>	;  2 bytes
+M00000000000001c5:	movl	$6761512, %edi	;  5 bytes
+M00000000000001ca:	movl	$4453847, %esi	;  5 bytes
+M00000000000001cf:	callq	0x411660 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<<<std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*)>	;  5 bytes
+M00000000000001d4:	movq	%rax, %rdi	;  3 bytes
+M00000000000001d7:	movq	%r14, %rsi	;  3 bytes
+M00000000000001da:	callq	0x411660 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<<<std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*)>	;  5 bytes
+M00000000000001df:	movl	$4453955, %esi	;  5 bytes
+M00000000000001e4:	jmp	0x404845 <gg(bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >*, char const*, bsl::vector<BloombergLP::balm::MetricRecord, bsl::allocator<BloombergLP::balm::MetricRecord> > const&)+0x205>	;  2 bytes
+M00000000000001e6:	movl	$6761512, %edi	;  5 bytes
+M00000000000001eb:	movl	$4453983, %esi	;  5 bytes
+M00000000000001f0:	callq	0x411660 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<<<std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*)>	;  5 bytes
+M00000000000001f5:	movq	%rax, %rdi	;  3 bytes
+M00000000000001f8:	movq	%r14, %rsi	;  3 bytes
+M00000000000001fb:	callq	0x411660 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<<<std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*)>	;  5 bytes
+M0000000000000200:	movl	$4453972, %esi	;  5 bytes
+M0000000000000205:	movq	%rax, %rdi	;  3 bytes
+M0000000000000208:	callq	0x411660 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<<<std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*)>	;  5 bytes
+M000000000000020d:	movsbl	(%r15), %esi	;  4 bytes
+M0000000000000211:	movq	%rax, %rdi	;  3 bytes
+M0000000000000214:	callq	0x411690 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<<<std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char)>	;  5 bytes
+M0000000000000219:	movl	$4453981, %esi	;  5 bytes
+M000000000000021e:	movq	%rax, %rdi	;  3 bytes
+M0000000000000221:	callq	0x411660 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<<<std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*)>	;  5 bytes
+M0000000000000226:	movq	%rax, %rdi	;  3 bytes
+M0000000000000229:	callq	0x4116b0 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::endl<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>	;  5 bytes
+M000000000000022e:	movq	%rax, %rbx	;  3 bytes
+M0000000000000231:	leaq	24(%rsp), %rdi	;  5 bytes
+M0000000000000236:	callq	0x404160 <_ZNSt3__16localeD1Ev@plt>	;  5 bytes
+M000000000000023b:	movq	%rbx, %rdi	;  3 bytes
+M000000000000023e:	callq	0x404220 <_Unwind_Resume@plt>	;  5 bytes
+M0000000000000243:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000024d:	nopl	(%rax)	;  3 bytes
 ```

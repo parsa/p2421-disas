@@ -2,79 +2,79 @@
 
 ```nasm
 0000000000442310 <int BloombergLP::balber::BerEncoder::encode<unsigned int>(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, unsigned int const&)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 01	pushq	%rbx
-0000000000000006: 04	subq	$40, %rsp
-000000000000000a: 03	movq	%rdx, %r15
-000000000000000d: 03	movq	%rsi, %r14
-0000000000000010: 03	movq	%rdi, %rbx
-0000000000000013: 07	movq	%rsi, 264(%rdi)
-000000000000001a: 10	movl	$0, 256(%rdi)
-0000000000000024: 07	movq	248(%rdi), %rbp
-000000000000002b: 03	testq	%rbp, %rbp
-000000000000002e: 02	je	0x44235d <int BloombergLP::balber::BerEncoder::encode<unsigned int>(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, unsigned int const&)+0x4d>
-0000000000000030: 04	movq	48(%rbp), %rsi
-0000000000000034: 04	movq	72(%rbp), %rdi
-0000000000000038: 03	movq	(%rdi), %rax
-000000000000003b: 03	callq	*24(%rax)
-000000000000003e: 03	xorps	%xmm0, %xmm0
-0000000000000041: 04	movups	%xmm0, 48(%rbp)
-0000000000000045: 08	movq	$0, 64(%rbp)
-000000000000004d: 10	movl	$0, 272(%rbx)
-0000000000000057: 04	cmpq	$0, (%rbx)
-000000000000005b: 02	je	0x4423a2 <int BloombergLP::balber::BerEncoder::encode<unsigned int>(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, unsigned int const&)+0x92>
-000000000000005d: 04	movq	%rbx, (%rsp)
-0000000000000061: 08	movl	$0, 8(%rsp)
-0000000000000069: 05	movq	%rbx, 16(%rsp)
-000000000000006e: 10	movl	$1, 272(%rbx)
-0000000000000078: 03	movq	%rsp, %rdi
-000000000000007b: 03	movq	%r15, %rsi
-000000000000007e: 05	callq	0x44d6d0 <int BloombergLP::balber::BerEncoder_UniversalElementVisitor::operator()<unsigned int>(unsigned int const&)>
-0000000000000083: 02	movl	%eax, %ebp
-0000000000000085: 05	movq	16(%rsp), %rax
-000000000000008a: 06	decl	272(%rax)
-0000000000000090: 02	jmp	0x4423f2 <int BloombergLP::balber::BerEncoder::encode<unsigned int>(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, unsigned int const&)+0xe2>
-0000000000000092: 05	leaq	24(%rsp), %rbp
-0000000000000097: 03	movq	%rbp, %rdi
-000000000000009a: 05	callq	0x453210 <BloombergLP::balber::BerEncoderOptions::BerEncoderOptions()>
-000000000000009f: 03	movq	%rbp, (%rbx)
-00000000000000a2: 04	movq	%rbx, (%rsp)
-00000000000000a6: 08	movl	$0, 8(%rsp)
-00000000000000ae: 05	movq	%rbx, 16(%rsp)
-00000000000000b3: 06	incl	272(%rbx)
-00000000000000b9: 03	movq	%rsp, %rdi
-00000000000000bc: 03	movq	%r15, %rsi
-00000000000000bf: 05	callq	0x44d6d0 <int BloombergLP::balber::BerEncoder_UniversalElementVisitor::operator()<unsigned int>(unsigned int const&)>
-00000000000000c4: 02	movl	%eax, %ebp
-00000000000000c6: 07	movq	$0, (%rbx)
-00000000000000cd: 05	movq	16(%rsp), %rax
-00000000000000d2: 06	decl	272(%rax)
-00000000000000d8: 05	leaq	24(%rsp), %rdi
-00000000000000dd: 05	callq	0x453260 <BloombergLP::balber::BerEncoderOptions::~BerEncoderOptions()>
-00000000000000e2: 11	movq	$0, 264(%rbx)
-00000000000000ed: 03	movq	(%r14), %rax
-00000000000000f0: 03	movq	%r14, %rdi
-00000000000000f3: 03	callq	*48(%rax)
-00000000000000f6: 02	movl	%ebp, %eax
-00000000000000f8: 04	addq	$40, %rsp
-00000000000000fc: 01	popq	%rbx
-00000000000000fd: 02	popq	%r14
-00000000000000ff: 02	popq	%r15
-0000000000000101: 01	popq	%rbp
-0000000000000102: 01	retq	
-0000000000000103: 03	movq	%rax, %rbx
-0000000000000106: 05	movq	16(%rsp), %rax
-000000000000010b: 06	decl	272(%rax)
-0000000000000111: 05	leaq	24(%rsp), %rdi
-0000000000000116: 05	callq	0x453260 <BloombergLP::balber::BerEncoderOptions::~BerEncoderOptions()>
-000000000000011b: 03	movq	%rbx, %rdi
-000000000000011e: 05	callq	0x404910 <_Unwind_Resume@plt>
-0000000000000123: 03	movq	%rax, %rbx
-0000000000000126: 05	movq	16(%rsp), %rax
-000000000000012b: 06	decl	272(%rax)
-0000000000000131: 03	movq	%rbx, %rdi
-0000000000000134: 05	callq	0x404910 <_Unwind_Resume@plt>
-0000000000000139: 07	nopl	(%rax)
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%rbx	;  1 bytes
+M0000000000000006:	subq	$40, %rsp	;  4 bytes
+M000000000000000a:	movq	%rdx, %r15	;  3 bytes
+M000000000000000d:	movq	%rsi, %r14	;  3 bytes
+M0000000000000010:	movq	%rdi, %rbx	;  3 bytes
+M0000000000000013:	movq	%rsi, 264(%rdi)	;  7 bytes
+M000000000000001a:	movl	$0, 256(%rdi)	; 10 bytes
+M0000000000000024:	movq	248(%rdi), %rbp	;  7 bytes
+M000000000000002b:	testq	%rbp, %rbp	;  3 bytes
+M000000000000002e:	je	0x44235d <int BloombergLP::balber::BerEncoder::encode<unsigned int>(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, unsigned int const&)+0x4d>	;  2 bytes
+M0000000000000030:	movq	48(%rbp), %rsi	;  4 bytes
+M0000000000000034:	movq	72(%rbp), %rdi	;  4 bytes
+M0000000000000038:	movq	(%rdi), %rax	;  3 bytes
+M000000000000003b:	callq	*24(%rax)	;  3 bytes
+M000000000000003e:	xorps	%xmm0, %xmm0	;  3 bytes
+M0000000000000041:	movups	%xmm0, 48(%rbp)	;  4 bytes
+M0000000000000045:	movq	$0, 64(%rbp)	;  8 bytes
+M000000000000004d:	movl	$0, 272(%rbx)	; 10 bytes
+M0000000000000057:	cmpq	$0, (%rbx)	;  4 bytes
+M000000000000005b:	je	0x4423a2 <int BloombergLP::balber::BerEncoder::encode<unsigned int>(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, unsigned int const&)+0x92>	;  2 bytes
+M000000000000005d:	movq	%rbx, (%rsp)	;  4 bytes
+M0000000000000061:	movl	$0, 8(%rsp)	;  8 bytes
+M0000000000000069:	movq	%rbx, 16(%rsp)	;  5 bytes
+M000000000000006e:	movl	$1, 272(%rbx)	; 10 bytes
+M0000000000000078:	movq	%rsp, %rdi	;  3 bytes
+M000000000000007b:	movq	%r15, %rsi	;  3 bytes
+M000000000000007e:	callq	0x44d6d0 <int BloombergLP::balber::BerEncoder_UniversalElementVisitor::operator()<unsigned int>(unsigned int const&)>	;  5 bytes
+M0000000000000083:	movl	%eax, %ebp	;  2 bytes
+M0000000000000085:	movq	16(%rsp), %rax	;  5 bytes
+M000000000000008a:	decl	272(%rax)	;  6 bytes
+M0000000000000090:	jmp	0x4423f2 <int BloombergLP::balber::BerEncoder::encode<unsigned int>(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, unsigned int const&)+0xe2>	;  2 bytes
+M0000000000000092:	leaq	24(%rsp), %rbp	;  5 bytes
+M0000000000000097:	movq	%rbp, %rdi	;  3 bytes
+M000000000000009a:	callq	0x453210 <BloombergLP::balber::BerEncoderOptions::BerEncoderOptions()>	;  5 bytes
+M000000000000009f:	movq	%rbp, (%rbx)	;  3 bytes
+M00000000000000a2:	movq	%rbx, (%rsp)	;  4 bytes
+M00000000000000a6:	movl	$0, 8(%rsp)	;  8 bytes
+M00000000000000ae:	movq	%rbx, 16(%rsp)	;  5 bytes
+M00000000000000b3:	incl	272(%rbx)	;  6 bytes
+M00000000000000b9:	movq	%rsp, %rdi	;  3 bytes
+M00000000000000bc:	movq	%r15, %rsi	;  3 bytes
+M00000000000000bf:	callq	0x44d6d0 <int BloombergLP::balber::BerEncoder_UniversalElementVisitor::operator()<unsigned int>(unsigned int const&)>	;  5 bytes
+M00000000000000c4:	movl	%eax, %ebp	;  2 bytes
+M00000000000000c6:	movq	$0, (%rbx)	;  7 bytes
+M00000000000000cd:	movq	16(%rsp), %rax	;  5 bytes
+M00000000000000d2:	decl	272(%rax)	;  6 bytes
+M00000000000000d8:	leaq	24(%rsp), %rdi	;  5 bytes
+M00000000000000dd:	callq	0x453260 <BloombergLP::balber::BerEncoderOptions::~BerEncoderOptions()>	;  5 bytes
+M00000000000000e2:	movq	$0, 264(%rbx)	; 11 bytes
+M00000000000000ed:	movq	(%r14), %rax	;  3 bytes
+M00000000000000f0:	movq	%r14, %rdi	;  3 bytes
+M00000000000000f3:	callq	*48(%rax)	;  3 bytes
+M00000000000000f6:	movl	%ebp, %eax	;  2 bytes
+M00000000000000f8:	addq	$40, %rsp	;  4 bytes
+M00000000000000fc:	popq	%rbx	;  1 bytes
+M00000000000000fd:	popq	%r14	;  2 bytes
+M00000000000000ff:	popq	%r15	;  2 bytes
+M0000000000000101:	popq	%rbp	;  1 bytes
+M0000000000000102:	retq		;  1 bytes
+M0000000000000103:	movq	%rax, %rbx	;  3 bytes
+M0000000000000106:	movq	16(%rsp), %rax	;  5 bytes
+M000000000000010b:	decl	272(%rax)	;  6 bytes
+M0000000000000111:	leaq	24(%rsp), %rdi	;  5 bytes
+M0000000000000116:	callq	0x453260 <BloombergLP::balber::BerEncoderOptions::~BerEncoderOptions()>	;  5 bytes
+M000000000000011b:	movq	%rbx, %rdi	;  3 bytes
+M000000000000011e:	callq	0x404910 <_Unwind_Resume@plt>	;  5 bytes
+M0000000000000123:	movq	%rax, %rbx	;  3 bytes
+M0000000000000126:	movq	16(%rsp), %rax	;  5 bytes
+M000000000000012b:	decl	272(%rax)	;  6 bytes
+M0000000000000131:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000134:	callq	0x404910 <_Unwind_Resume@plt>	;  5 bytes
+M0000000000000139:	nopl	(%rax)	;  7 bytes
 ```

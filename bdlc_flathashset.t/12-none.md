@@ -2,246 +2,246 @@
 
 ```nasm
 000000000044fa10 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 02	pushq	%r13
-0000000000000007: 02	pushq	%r12
-0000000000000009: 01	pushq	%rbx
-000000000000000a: 04	subq	$40, %rsp
-000000000000000e: 03	movq	%rsi, %rbx
-0000000000000011: 03	movq	%rdi, %r14
-0000000000000014: 04	movq	40(%rdi), %r13
-0000000000000018: 04	movq	56(%rdi), %rbp
-000000000000001c: 03	testq	%rbp, %rbp
-000000000000001f: 02	jne	0x44fa45 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x35>
-0000000000000021: 07	movq	2437200(%rip), %rbp  # 6a2a88 <BloombergLP::bslma::Default::s_defaultAllocator>
-0000000000000028: 03	testq	%rbp, %rbp
-000000000000002b: 02	jne	0x44fa45 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x35>
-000000000000002d: 05	callq	0x457f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-0000000000000032: 03	movq	%rax, %rbp
-0000000000000035: 03	testq	%rbx, %rbx
-0000000000000038: 05	movq	%rbp, 8(%rsp)
-000000000000003d: 06	je	0x44fae2 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0xd2>
-0000000000000043: 06	movl	$32, %r12d
-0000000000000049: 04	cmpq	$33, %rbx
-000000000000004d: 02	jb	0x44fa84 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x74>
-000000000000004f: 03	decq	%rbx
-0000000000000052: 04	orq	$1, %rbx
-0000000000000056: 04	bsrq	%rbx, %rax
-000000000000005a: 04	xorq	$63, %rax
-000000000000005e: 02	movl	%eax, %ecx
-0000000000000060: 02	negb	%cl
-0000000000000062: 06	movl	$1, %r12d
-0000000000000068: 03	shlq	%cl, %r12
-000000000000006b: 03	testq	%rax, %rax
-000000000000006e: 06	je	0x44fc77 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x267>
-0000000000000074: 03	movq	%r12, %rax
-0000000000000077: 04	shlq	$4, %rax
-000000000000007b: 04	leaq	(%rax,%rax,2), %rsi
-000000000000007f: 04	movq	(%rbp), %rax
-0000000000000083: 03	movq	%rbp, %rdi
-0000000000000086: 03	callq	*16(%rax)
-0000000000000089: 03	movq	%rax, %r15
-000000000000008c: 04	movq	(%rbp), %rax
-0000000000000090: 03	movq	%rbp, %rdi
-0000000000000093: 03	movq	%r12, %rsi
-0000000000000096: 03	callq	*16(%rax)
-0000000000000099: 03	movq	%rax, %rbx
-000000000000009c: 03	movq	%r12, %rax
-000000000000009f: 04	shrq	$4, %rax
-00000000000000a3: 03	decq	%rax
-00000000000000a6: 03	movq	%rax, %rcx
-00000000000000a9: 04	orq	$1, %rcx
-00000000000000ad: 04	bsrq	%rcx, %rcx
-00000000000000b1: 03	xorl	$63, %ecx
-00000000000000b4: 04	cmpq	$1, %rax
-00000000000000b8: 03	adcl	$0, %ecx
-00000000000000bb: 05	movq	%rcx, 16(%rsp)
-00000000000000c0: 03	movq	%rbx, %rdi
-00000000000000c3: 05	movl	$128, %esi
-00000000000000c8: 03	movq	%r12, %rdx
-00000000000000cb: 05	callq	0x403820 <memset@plt>
-00000000000000d0: 02	jmp	0x44faf1 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0xe1>
-00000000000000d2: 02	xorl	%eax, %eax
-00000000000000d4: 05	movq	%rax, 16(%rsp)
-00000000000000d9: 03	xorl	%r12d, %r12d
-00000000000000dc: 02	xorl	%ebx, %ebx
-00000000000000de: 03	xorl	%r15d, %r15d
-00000000000000e1: 04	movq	24(%r14), %rax
-00000000000000e5: 03	testq	%rax, %rax
-00000000000000e8: 06	je	0x44fc32 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x222>
-00000000000000ee: 03	movq	%r13, %rdx
-00000000000000f1: 05	movq	16(%rsp), %rcx
-00000000000000f6: 03	shrq	%cl, %rdx
-00000000000000f9: 04	shlq	$4, %rdx
-00000000000000fd: 05	movq	%rdx, 24(%rsp)
-0000000000000102: 05	leaq	-1(%r12), %rdx
-0000000000000107: 04	andb	$127, %r13b
-000000000000010b: 05	movq	%r13, 32(%rsp)
-0000000000000110: 02	xorl	%esi, %esi
-0000000000000112: 03	xorl	%r13d, %r13d
-0000000000000115: 02	jmp	0x44fb45 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x135>
-0000000000000117: 09	nopw	(%rax,%rax)
-0000000000000120: 04	movq	24(%r14), %rax
-0000000000000124: 04	movq	(%rsp), %rsi
-0000000000000128: 04	addq	$16, %rsi
-000000000000012c: 03	cmpq	%rax, %rsi
-000000000000012f: 06	jae	0x44fc35 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x225>
-0000000000000135: 04	movq	8(%r14), %r10
-0000000000000139: 06	movdqu	(%r10,%rsi), %xmm0
-000000000000013f: 04	pmovmskb	%xmm0, %ecx
-0000000000000143: 04	cmpw	$-1, %cx
-0000000000000147: 02	je	0x44fb38 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x128>
-0000000000000149: 03	addq	%rsi, %r10
-000000000000014c: 04	movq	%rsi, (%rsp)
-0000000000000150: 04	leaq	(%rsi,%rsi,2), %r11
-0000000000000154: 04	shlq	$4, %r11
-0000000000000158: 03	addq	(%r14), %r11
-000000000000015b: 02	notl	%ecx
-000000000000015d: 03	movzwl	%cx, %eax
-0000000000000160: 02	jmp	0x44fbc3 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x1b3>
-0000000000000162: 10	nopw	%cs:(%rax,%rax)
-000000000000016c: 04	nopl	(%rax)
-0000000000000170: 02	xorl	%esi, %esi
-0000000000000172: 04	leaq	(%rsi,%rsi,2), %rbp
-0000000000000176: 04	shlq	$4, %rbp
-000000000000017a: 04	movdqu	(%rdi), %xmm0
-000000000000017e: 04	movups	16(%rdi), %xmm1
-0000000000000182: 04	movups	32(%rdi), %xmm2
-0000000000000186: 06	movups	%xmm2, 32(%r15,%rbp)
-000000000000018c: 06	movups	%xmm1, 16(%r15,%rbp)
-0000000000000192: 06	movdqu	%xmm0, (%r15,%rbp)
-0000000000000198: 05	movq	32(%rsp), %rdi
-000000000000019d: 04	movb	%dil, (%rbx,%rsi)
-00000000000001a1: 03	incq	%r13
-00000000000001a4: 05	movl	$4294967294, %esi
-00000000000001a9: 02	roll	%cl, %esi
-00000000000001ab: 02	andl	%esi, %eax
-00000000000001ad: 06	je	0x44fb30 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x120>
-00000000000001b3: 03	bsfl	%eax, %ecx
-00000000000001b6: 04	leaq	(%rcx,%rcx,2), %rdi
-00000000000001ba: 04	shlq	$4, %rdi
-00000000000001be: 03	addq	%r11, %rdi
-00000000000001c1: 05	movb	$-64, (%r10,%rcx)
-00000000000001c6: 04	decq	16(%r14)
-00000000000001ca: 03	testq	%r12, %r12
-00000000000001cd: 02	je	0x44fb80 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x170>
-00000000000001cf: 03	movq	%r14, %r9
-00000000000001d2: 05	movq	24(%rsp), %rsi
-00000000000001d7: 03	xorl	%r8d, %r8d
-00000000000001da: 06	nopw	(%rax,%rax)
-00000000000001e0: 05	movdqu	(%rbx,%rsi), %xmm0
-00000000000001e5: 05	pmovmskb	%xmm0, %r14d
-00000000000001ea: 04	testw	%r14w, %r14w
-00000000000001ee: 02	jne	0x44fc20 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x210>
-00000000000001f0: 04	addq	$16, %rsi
-00000000000001f4: 03	andq	%rdx, %rsi
-00000000000001f7: 04	addq	$16, %r8
-00000000000001fb: 03	cmpq	%r12, %r8
-00000000000001fe: 02	jb	0x44fbf0 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x1e0>
-0000000000000200: 03	movq	%r12, %rsi
-0000000000000203: 02	jmp	0x44fc2a <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x21a>
-0000000000000205: 10	nopw	%cs:(%rax,%rax)
-000000000000020f: 01	nop	
-0000000000000210: 04	movzwl	%r14w, %ebp
-0000000000000214: 03	bsfl	%ebp, %ebp
-0000000000000217: 03	addq	%rbp, %rsi
-000000000000021a: 03	movq	%r9, %r14
-000000000000021d: 05	jmp	0x44fb82 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x172>
-0000000000000222: 03	xorl	%r13d, %r13d
-0000000000000225: 03	movq	(%r14), %rsi
-0000000000000228: 04	movq	56(%r14), %rdi
-000000000000022c: 03	movq	(%rdi), %rax
-000000000000022f: 03	callq	*24(%rax)
-0000000000000232: 04	movq	8(%r14), %rsi
-0000000000000236: 04	movq	56(%r14), %rdi
-000000000000023a: 03	movq	(%rdi), %rax
-000000000000023d: 03	callq	*24(%rax)
-0000000000000240: 03	movq	%r15, (%r14)
-0000000000000243: 04	movq	%rbx, 8(%r14)
-0000000000000247: 04	movq	%r13, 16(%r14)
-000000000000024b: 04	movq	%r12, 24(%r14)
-000000000000024f: 05	movq	16(%rsp), %rax
-0000000000000254: 04	movl	%eax, 32(%r14)
-0000000000000258: 04	addq	$40, %rsp
-000000000000025c: 01	popq	%rbx
-000000000000025d: 02	popq	%r12
-000000000000025f: 02	popq	%r13
-0000000000000261: 02	popq	%r14
-0000000000000263: 02	popq	%r15
-0000000000000265: 01	popq	%rbp
-0000000000000266: 01	retq	
-0000000000000267: 03	xorl	%r12d, %r12d
-000000000000026a: 05	jmp	0x44fa84 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x74>
-000000000000026f: 04	movq	%rax, (%rsp)
-0000000000000273: 03	testq	%r15, %r15
-0000000000000276: 02	je	0x44fca9 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x299>
-0000000000000278: 05	movq	8(%rsp), %rdi
-000000000000027d: 03	movq	(%rdi), %rax
-0000000000000280: 03	movq	%r15, %rsi
-0000000000000283: 03	callq	*24(%rax)
-0000000000000286: 02	jmp	0x44fca9 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x299>
-0000000000000288: 03	movq	%rax, %rdi
-000000000000028b: 05	callq	0x430490 <__clang_call_terminate>
-0000000000000290: 04	movq	%rax, (%rsp)
-0000000000000294: 03	testq	%r15, %r15
-0000000000000297: 02	jne	0x44fcb2 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x2a2>
-0000000000000299: 04	movq	(%rsp), %rdi
-000000000000029d: 05	callq	0x403e30 <_Unwind_Resume@plt>
-00000000000002a2: 03	testq	%r12, %r12
-00000000000002a5: 02	jne	0x44fcd5 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x2c5>
-00000000000002a7: 05	movq	8(%rsp), %rdi
-00000000000002ac: 03	movq	(%rdi), %rax
-00000000000002af: 03	movq	%r15, %rsi
-00000000000002b2: 03	callq	*24(%rax)
-00000000000002b5: 05	movq	8(%rsp), %rdi
-00000000000002ba: 03	movq	(%rdi), %rax
-00000000000002bd: 03	movq	%rbx, %rsi
-00000000000002c0: 03	callq	*24(%rax)
-00000000000002c3: 02	jmp	0x44fca9 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x299>
-00000000000002c5: 02	xorl	%ecx, %ecx
-00000000000002c7: 02	jmp	0x44fce7 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x2d7>
-00000000000002c9: 05	movq	24(%rsp), %rcx
-00000000000002ce: 04	addq	$16, %rcx
-00000000000002d2: 03	cmpq	%r12, %rcx
-00000000000002d5: 02	jae	0x44fcb7 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x2a7>
-00000000000002d7: 05	movdqu	(%rbx,%rcx), %xmm0
-00000000000002dc: 04	pmovmskb	%xmm0, %eax
-00000000000002e0: 04	cmpw	$-1, %ax
-00000000000002e4: 02	je	0x44fcde <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x2ce>
-00000000000002e6: 05	movq	%rcx, 24(%rsp)
-00000000000002eb: 04	leaq	(%rcx,%rcx,2), %rbp
-00000000000002ef: 04	shlq	$4, %rbp
-00000000000002f3: 03	addq	%r15, %rbp
-00000000000002f6: 02	notl	%eax
-00000000000002f8: 04	movzwl	%ax, %r14d
-00000000000002fc: 05	movq	%rbp, 32(%rsp)
-0000000000000301: 02	jmp	0x44fd34 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x324>
-0000000000000303: 10	nopw	%cs:(%rax,%rax)
-000000000000030d: 03	nopl	(%rax)
-0000000000000310: 08	movq	$-1, 24(%r13)
-0000000000000318: 05	movl	$4294967294, %eax
-000000000000031d: 02	roll	%cl, %eax
-000000000000031f: 03	andl	%eax, %r14d
-0000000000000322: 02	je	0x44fcd9 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x2c9>
-0000000000000324: 04	bsfl	%r14d, %ecx
-0000000000000328: 04	leaq	(%rcx,%rcx,2), %rax
-000000000000032c: 04	shlq	$4, %rax
-0000000000000330: 05	leaq	(%rbp,%rax), %r13
-0000000000000335: 06	cmpq	$23, 32(%rbp,%rax)
-000000000000033b: 02	je	0x44fd20 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x310>
-000000000000033d: 04	movq	(%r13), %rsi
-0000000000000341: 04	movq	40(%r13), %rdi
-0000000000000345: 03	movq	(%rdi), %rax
-0000000000000348: 03	movq	%rcx, %rbp
-000000000000034b: 03	callq	*24(%rax)
-000000000000034e: 03	movq	%rbp, %rcx
-0000000000000351: 05	movq	32(%rsp), %rbp
-0000000000000356: 02	jmp	0x44fd20 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x310>
-0000000000000358: 03	movq	%rax, %rdi
-000000000000035b: 05	callq	0x430490 <__clang_call_terminate>
-0000000000000360: 03	movq	%rax, %rdi
-0000000000000363: 05	callq	0x430490 <__clang_call_terminate>
-0000000000000368: 08	nopl	(%rax,%rax)
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%r13	;  2 bytes
+M0000000000000007:	pushq	%r12	;  2 bytes
+M0000000000000009:	pushq	%rbx	;  1 bytes
+M000000000000000a:	subq	$40, %rsp	;  4 bytes
+M000000000000000e:	movq	%rsi, %rbx	;  3 bytes
+M0000000000000011:	movq	%rdi, %r14	;  3 bytes
+M0000000000000014:	movq	40(%rdi), %r13	;  4 bytes
+M0000000000000018:	movq	56(%rdi), %rbp	;  4 bytes
+M000000000000001c:	testq	%rbp, %rbp	;  3 bytes
+M000000000000001f:	jne	0x44fa45 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x35>	;  2 bytes
+M0000000000000021:	movq	2437200(%rip), %rbp  # 6a2a88 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M0000000000000028:	testq	%rbp, %rbp	;  3 bytes
+M000000000000002b:	jne	0x44fa45 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x35>	;  2 bytes
+M000000000000002d:	callq	0x457f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M0000000000000032:	movq	%rax, %rbp	;  3 bytes
+M0000000000000035:	testq	%rbx, %rbx	;  3 bytes
+M0000000000000038:	movq	%rbp, 8(%rsp)	;  5 bytes
+M000000000000003d:	je	0x44fae2 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0xd2>	;  6 bytes
+M0000000000000043:	movl	$32, %r12d	;  6 bytes
+M0000000000000049:	cmpq	$33, %rbx	;  4 bytes
+M000000000000004d:	jb	0x44fa84 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x74>	;  2 bytes
+M000000000000004f:	decq	%rbx	;  3 bytes
+M0000000000000052:	orq	$1, %rbx	;  4 bytes
+M0000000000000056:	bsrq	%rbx, %rax	;  4 bytes
+M000000000000005a:	xorq	$63, %rax	;  4 bytes
+M000000000000005e:	movl	%eax, %ecx	;  2 bytes
+M0000000000000060:	negb	%cl	;  2 bytes
+M0000000000000062:	movl	$1, %r12d	;  6 bytes
+M0000000000000068:	shlq	%cl, %r12	;  3 bytes
+M000000000000006b:	testq	%rax, %rax	;  3 bytes
+M000000000000006e:	je	0x44fc77 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x267>	;  6 bytes
+M0000000000000074:	movq	%r12, %rax	;  3 bytes
+M0000000000000077:	shlq	$4, %rax	;  4 bytes
+M000000000000007b:	leaq	(%rax,%rax,2), %rsi	;  4 bytes
+M000000000000007f:	movq	(%rbp), %rax	;  4 bytes
+M0000000000000083:	movq	%rbp, %rdi	;  3 bytes
+M0000000000000086:	callq	*16(%rax)	;  3 bytes
+M0000000000000089:	movq	%rax, %r15	;  3 bytes
+M000000000000008c:	movq	(%rbp), %rax	;  4 bytes
+M0000000000000090:	movq	%rbp, %rdi	;  3 bytes
+M0000000000000093:	movq	%r12, %rsi	;  3 bytes
+M0000000000000096:	callq	*16(%rax)	;  3 bytes
+M0000000000000099:	movq	%rax, %rbx	;  3 bytes
+M000000000000009c:	movq	%r12, %rax	;  3 bytes
+M000000000000009f:	shrq	$4, %rax	;  4 bytes
+M00000000000000a3:	decq	%rax	;  3 bytes
+M00000000000000a6:	movq	%rax, %rcx	;  3 bytes
+M00000000000000a9:	orq	$1, %rcx	;  4 bytes
+M00000000000000ad:	bsrq	%rcx, %rcx	;  4 bytes
+M00000000000000b1:	xorl	$63, %ecx	;  3 bytes
+M00000000000000b4:	cmpq	$1, %rax	;  4 bytes
+M00000000000000b8:	adcl	$0, %ecx	;  3 bytes
+M00000000000000bb:	movq	%rcx, 16(%rsp)	;  5 bytes
+M00000000000000c0:	movq	%rbx, %rdi	;  3 bytes
+M00000000000000c3:	movl	$128, %esi	;  5 bytes
+M00000000000000c8:	movq	%r12, %rdx	;  3 bytes
+M00000000000000cb:	callq	0x403820 <memset@plt>	;  5 bytes
+M00000000000000d0:	jmp	0x44faf1 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0xe1>	;  2 bytes
+M00000000000000d2:	xorl	%eax, %eax	;  2 bytes
+M00000000000000d4:	movq	%rax, 16(%rsp)	;  5 bytes
+M00000000000000d9:	xorl	%r12d, %r12d	;  3 bytes
+M00000000000000dc:	xorl	%ebx, %ebx	;  2 bytes
+M00000000000000de:	xorl	%r15d, %r15d	;  3 bytes
+M00000000000000e1:	movq	24(%r14), %rax	;  4 bytes
+M00000000000000e5:	testq	%rax, %rax	;  3 bytes
+M00000000000000e8:	je	0x44fc32 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x222>	;  6 bytes
+M00000000000000ee:	movq	%r13, %rdx	;  3 bytes
+M00000000000000f1:	movq	16(%rsp), %rcx	;  5 bytes
+M00000000000000f6:	shrq	%cl, %rdx	;  3 bytes
+M00000000000000f9:	shlq	$4, %rdx	;  4 bytes
+M00000000000000fd:	movq	%rdx, 24(%rsp)	;  5 bytes
+M0000000000000102:	leaq	-1(%r12), %rdx	;  5 bytes
+M0000000000000107:	andb	$127, %r13b	;  4 bytes
+M000000000000010b:	movq	%r13, 32(%rsp)	;  5 bytes
+M0000000000000110:	xorl	%esi, %esi	;  2 bytes
+M0000000000000112:	xorl	%r13d, %r13d	;  3 bytes
+M0000000000000115:	jmp	0x44fb45 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x135>	;  2 bytes
+M0000000000000117:	nopw	(%rax,%rax)	;  9 bytes
+M0000000000000120:	movq	24(%r14), %rax	;  4 bytes
+M0000000000000124:	movq	(%rsp), %rsi	;  4 bytes
+M0000000000000128:	addq	$16, %rsi	;  4 bytes
+M000000000000012c:	cmpq	%rax, %rsi	;  3 bytes
+M000000000000012f:	jae	0x44fc35 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x225>	;  6 bytes
+M0000000000000135:	movq	8(%r14), %r10	;  4 bytes
+M0000000000000139:	movdqu	(%r10,%rsi), %xmm0	;  6 bytes
+M000000000000013f:	pmovmskb	%xmm0, %ecx	;  4 bytes
+M0000000000000143:	cmpw	$-1, %cx	;  4 bytes
+M0000000000000147:	je	0x44fb38 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x128>	;  2 bytes
+M0000000000000149:	addq	%rsi, %r10	;  3 bytes
+M000000000000014c:	movq	%rsi, (%rsp)	;  4 bytes
+M0000000000000150:	leaq	(%rsi,%rsi,2), %r11	;  4 bytes
+M0000000000000154:	shlq	$4, %r11	;  4 bytes
+M0000000000000158:	addq	(%r14), %r11	;  3 bytes
+M000000000000015b:	notl	%ecx	;  2 bytes
+M000000000000015d:	movzwl	%cx, %eax	;  3 bytes
+M0000000000000160:	jmp	0x44fbc3 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x1b3>	;  2 bytes
+M0000000000000162:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000016c:	nopl	(%rax)	;  4 bytes
+M0000000000000170:	xorl	%esi, %esi	;  2 bytes
+M0000000000000172:	leaq	(%rsi,%rsi,2), %rbp	;  4 bytes
+M0000000000000176:	shlq	$4, %rbp	;  4 bytes
+M000000000000017a:	movdqu	(%rdi), %xmm0	;  4 bytes
+M000000000000017e:	movups	16(%rdi), %xmm1	;  4 bytes
+M0000000000000182:	movups	32(%rdi), %xmm2	;  4 bytes
+M0000000000000186:	movups	%xmm2, 32(%r15,%rbp)	;  6 bytes
+M000000000000018c:	movups	%xmm1, 16(%r15,%rbp)	;  6 bytes
+M0000000000000192:	movdqu	%xmm0, (%r15,%rbp)	;  6 bytes
+M0000000000000198:	movq	32(%rsp), %rdi	;  5 bytes
+M000000000000019d:	movb	%dil, (%rbx,%rsi)	;  4 bytes
+M00000000000001a1:	incq	%r13	;  3 bytes
+M00000000000001a4:	movl	$4294967294, %esi	;  5 bytes
+M00000000000001a9:	roll	%cl, %esi	;  2 bytes
+M00000000000001ab:	andl	%esi, %eax	;  2 bytes
+M00000000000001ad:	je	0x44fb30 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x120>	;  6 bytes
+M00000000000001b3:	bsfl	%eax, %ecx	;  3 bytes
+M00000000000001b6:	leaq	(%rcx,%rcx,2), %rdi	;  4 bytes
+M00000000000001ba:	shlq	$4, %rdi	;  4 bytes
+M00000000000001be:	addq	%r11, %rdi	;  3 bytes
+M00000000000001c1:	movb	$-64, (%r10,%rcx)	;  5 bytes
+M00000000000001c6:	decq	16(%r14)	;  4 bytes
+M00000000000001ca:	testq	%r12, %r12	;  3 bytes
+M00000000000001cd:	je	0x44fb80 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x170>	;  2 bytes
+M00000000000001cf:	movq	%r14, %r9	;  3 bytes
+M00000000000001d2:	movq	24(%rsp), %rsi	;  5 bytes
+M00000000000001d7:	xorl	%r8d, %r8d	;  3 bytes
+M00000000000001da:	nopw	(%rax,%rax)	;  6 bytes
+M00000000000001e0:	movdqu	(%rbx,%rsi), %xmm0	;  5 bytes
+M00000000000001e5:	pmovmskb	%xmm0, %r14d	;  5 bytes
+M00000000000001ea:	testw	%r14w, %r14w	;  4 bytes
+M00000000000001ee:	jne	0x44fc20 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x210>	;  2 bytes
+M00000000000001f0:	addq	$16, %rsi	;  4 bytes
+M00000000000001f4:	andq	%rdx, %rsi	;  3 bytes
+M00000000000001f7:	addq	$16, %r8	;  4 bytes
+M00000000000001fb:	cmpq	%r12, %r8	;  3 bytes
+M00000000000001fe:	jb	0x44fbf0 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x1e0>	;  2 bytes
+M0000000000000200:	movq	%r12, %rsi	;  3 bytes
+M0000000000000203:	jmp	0x44fc2a <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x21a>	;  2 bytes
+M0000000000000205:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000020f:	nop		;  1 bytes
+M0000000000000210:	movzwl	%r14w, %ebp	;  4 bytes
+M0000000000000214:	bsfl	%ebp, %ebp	;  3 bytes
+M0000000000000217:	addq	%rbp, %rsi	;  3 bytes
+M000000000000021a:	movq	%r9, %r14	;  3 bytes
+M000000000000021d:	jmp	0x44fb82 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x172>	;  5 bytes
+M0000000000000222:	xorl	%r13d, %r13d	;  3 bytes
+M0000000000000225:	movq	(%r14), %rsi	;  3 bytes
+M0000000000000228:	movq	56(%r14), %rdi	;  4 bytes
+M000000000000022c:	movq	(%rdi), %rax	;  3 bytes
+M000000000000022f:	callq	*24(%rax)	;  3 bytes
+M0000000000000232:	movq	8(%r14), %rsi	;  4 bytes
+M0000000000000236:	movq	56(%r14), %rdi	;  4 bytes
+M000000000000023a:	movq	(%rdi), %rax	;  3 bytes
+M000000000000023d:	callq	*24(%rax)	;  3 bytes
+M0000000000000240:	movq	%r15, (%r14)	;  3 bytes
+M0000000000000243:	movq	%rbx, 8(%r14)	;  4 bytes
+M0000000000000247:	movq	%r13, 16(%r14)	;  4 bytes
+M000000000000024b:	movq	%r12, 24(%r14)	;  4 bytes
+M000000000000024f:	movq	16(%rsp), %rax	;  5 bytes
+M0000000000000254:	movl	%eax, 32(%r14)	;  4 bytes
+M0000000000000258:	addq	$40, %rsp	;  4 bytes
+M000000000000025c:	popq	%rbx	;  1 bytes
+M000000000000025d:	popq	%r12	;  2 bytes
+M000000000000025f:	popq	%r13	;  2 bytes
+M0000000000000261:	popq	%r14	;  2 bytes
+M0000000000000263:	popq	%r15	;  2 bytes
+M0000000000000265:	popq	%rbp	;  1 bytes
+M0000000000000266:	retq		;  1 bytes
+M0000000000000267:	xorl	%r12d, %r12d	;  3 bytes
+M000000000000026a:	jmp	0x44fa84 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x74>	;  5 bytes
+M000000000000026f:	movq	%rax, (%rsp)	;  4 bytes
+M0000000000000273:	testq	%r15, %r15	;  3 bytes
+M0000000000000276:	je	0x44fca9 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x299>	;  2 bytes
+M0000000000000278:	movq	8(%rsp), %rdi	;  5 bytes
+M000000000000027d:	movq	(%rdi), %rax	;  3 bytes
+M0000000000000280:	movq	%r15, %rsi	;  3 bytes
+M0000000000000283:	callq	*24(%rax)	;  3 bytes
+M0000000000000286:	jmp	0x44fca9 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x299>	;  2 bytes
+M0000000000000288:	movq	%rax, %rdi	;  3 bytes
+M000000000000028b:	callq	0x430490 <__clang_call_terminate>	;  5 bytes
+M0000000000000290:	movq	%rax, (%rsp)	;  4 bytes
+M0000000000000294:	testq	%r15, %r15	;  3 bytes
+M0000000000000297:	jne	0x44fcb2 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x2a2>	;  2 bytes
+M0000000000000299:	movq	(%rsp), %rdi	;  4 bytes
+M000000000000029d:	callq	0x403e30 <_Unwind_Resume@plt>	;  5 bytes
+M00000000000002a2:	testq	%r12, %r12	;  3 bytes
+M00000000000002a5:	jne	0x44fcd5 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x2c5>	;  2 bytes
+M00000000000002a7:	movq	8(%rsp), %rdi	;  5 bytes
+M00000000000002ac:	movq	(%rdi), %rax	;  3 bytes
+M00000000000002af:	movq	%r15, %rsi	;  3 bytes
+M00000000000002b2:	callq	*24(%rax)	;  3 bytes
+M00000000000002b5:	movq	8(%rsp), %rdi	;  5 bytes
+M00000000000002ba:	movq	(%rdi), %rax	;  3 bytes
+M00000000000002bd:	movq	%rbx, %rsi	;  3 bytes
+M00000000000002c0:	callq	*24(%rax)	;  3 bytes
+M00000000000002c3:	jmp	0x44fca9 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x299>	;  2 bytes
+M00000000000002c5:	xorl	%ecx, %ecx	;  2 bytes
+M00000000000002c7:	jmp	0x44fce7 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x2d7>	;  2 bytes
+M00000000000002c9:	movq	24(%rsp), %rcx	;  5 bytes
+M00000000000002ce:	addq	$16, %rcx	;  4 bytes
+M00000000000002d2:	cmpq	%r12, %rcx	;  3 bytes
+M00000000000002d5:	jae	0x44fcb7 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x2a7>	;  2 bytes
+M00000000000002d7:	movdqu	(%rbx,%rcx), %xmm0	;  5 bytes
+M00000000000002dc:	pmovmskb	%xmm0, %eax	;  4 bytes
+M00000000000002e0:	cmpw	$-1, %ax	;  4 bytes
+M00000000000002e4:	je	0x44fcde <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x2ce>	;  2 bytes
+M00000000000002e6:	movq	%rcx, 24(%rsp)	;  5 bytes
+M00000000000002eb:	leaq	(%rcx,%rcx,2), %rbp	;  4 bytes
+M00000000000002ef:	shlq	$4, %rbp	;  4 bytes
+M00000000000002f3:	addq	%r15, %rbp	;  3 bytes
+M00000000000002f6:	notl	%eax	;  2 bytes
+M00000000000002f8:	movzwl	%ax, %r14d	;  4 bytes
+M00000000000002fc:	movq	%rbp, 32(%rsp)	;  5 bytes
+M0000000000000301:	jmp	0x44fd34 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x324>	;  2 bytes
+M0000000000000303:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000030d:	nopl	(%rax)	;  3 bytes
+M0000000000000310:	movq	$-1, 24(%r13)	;  8 bytes
+M0000000000000318:	movl	$4294967294, %eax	;  5 bytes
+M000000000000031d:	roll	%cl, %eax	;  2 bytes
+M000000000000031f:	andl	%eax, %r14d	;  3 bytes
+M0000000000000322:	je	0x44fcd9 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x2c9>	;  2 bytes
+M0000000000000324:	bsfl	%r14d, %ecx	;  4 bytes
+M0000000000000328:	leaq	(%rcx,%rcx,2), %rax	;  4 bytes
+M000000000000032c:	shlq	$4, %rax	;  4 bytes
+M0000000000000330:	leaq	(%rbp,%rax), %r13	;  5 bytes
+M0000000000000335:	cmpq	$23, 32(%rbp,%rax)	;  6 bytes
+M000000000000033b:	je	0x44fd20 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x310>	;  2 bytes
+M000000000000033d:	movq	(%r13), %rsi	;  4 bytes
+M0000000000000341:	movq	40(%r13), %rdi	;  4 bytes
+M0000000000000345:	movq	(%rdi), %rax	;  3 bytes
+M0000000000000348:	movq	%rcx, %rbp	;  3 bytes
+M000000000000034b:	callq	*24(%rax)	;  3 bytes
+M000000000000034e:	movq	%rbp, %rcx	;  3 bytes
+M0000000000000351:	movq	32(%rsp), %rbp	;  5 bytes
+M0000000000000356:	jmp	0x44fd20 <BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, SeedIsHash<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >, std::__1::less<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::rehashRaw(unsigned long)+0x310>	;  2 bytes
+M0000000000000358:	movq	%rax, %rdi	;  3 bytes
+M000000000000035b:	callq	0x430490 <__clang_call_terminate>	;  5 bytes
+M0000000000000360:	movq	%rax, %rdi	;  3 bytes
+M0000000000000363:	callq	0x430490 <__clang_call_terminate>	;  5 bytes
+M0000000000000368:	nopl	(%rax,%rax)	;  8 bytes
 ```

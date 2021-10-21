@@ -2,51 +2,51 @@
 
 ```nasm
 0000000000415270 <bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::~vector()>:
-0000000000000000: 02	pushq	%r15
-0000000000000002: 02	pushq	%r14
-0000000000000004: 01	pushq	%rbx
-0000000000000005: 03	movq	(%rdi), %rbx
-0000000000000008: 03	testq	%rbx, %rbx
-000000000000000b: 02	je	0x4152f6 <bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::~vector()+0x86>
-000000000000000d: 03	movq	%rdi, %r14
-0000000000000010: 04	movq	8(%rdi), %r15
-0000000000000014: 03	cmpq	%r15, %rbx
-0000000000000017: 02	jne	0x4152ae <bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::~vector()+0x3e>
-0000000000000019: 02	jmp	0x4152e9 <bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::~vector()+0x79>
-000000000000001b: 05	nopl	(%rax,%rax)
-0000000000000020: 08	movq	$-1, 24(%rbx)
-0000000000000028: 10	movl	$4294967295, 368(%rbx)
-0000000000000032: 07	addq	$384, %rbx
-0000000000000039: 03	cmpq	%rbx, %r15
-000000000000003c: 02	je	0x4152e6 <bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::~vector()+0x76>
-000000000000003e: 06	movl	368(%rbx), %eax
-0000000000000044: 03	cmpl	$2, %eax
-0000000000000047: 02	je	0x4152d0 <bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::~vector()+0x60>
-0000000000000049: 02	testl	%eax, %eax
-000000000000004b: 02	jne	0x415298 <bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::~vector()+0x28>
-000000000000004d: 03	movq	%rbx, %rdi
-0000000000000050: 05	callq	0x4093b0 <BloombergLP::balb::Sequence6::~Sequence6()>
-0000000000000055: 02	jmp	0x415298 <bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::~vector()+0x28>
-0000000000000057: 09	nopw	(%rax,%rax)
-0000000000000060: 05	cmpq	$23, 32(%rbx)
-0000000000000065: 02	je	0x415290 <bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::~vector()+0x20>
-0000000000000067: 03	movq	(%rbx), %rsi
-000000000000006a: 04	movq	40(%rbx), %rdi
-000000000000006e: 03	movq	(%rdi), %rax
-0000000000000071: 03	callq	*24(%rax)
-0000000000000074: 02	jmp	0x415290 <bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::~vector()+0x20>
-0000000000000076: 03	movq	(%r14), %rbx
-0000000000000079: 04	movq	24(%r14), %rdi
-000000000000007d: 03	movq	(%rdi), %rax
-0000000000000080: 03	movq	%rbx, %rsi
-0000000000000083: 03	callq	*24(%rax)
-0000000000000086: 01	popq	%rbx
-0000000000000087: 02	popq	%r14
-0000000000000089: 02	popq	%r15
-000000000000008b: 01	retq	
-000000000000008c: 03	movq	%rax, %rdi
-000000000000008f: 05	callq	0x4043c0 <__clang_call_terminate>
-0000000000000094: 03	movq	%rax, %rdi
-0000000000000097: 05	callq	0x4043c0 <__clang_call_terminate>
-000000000000009c: 04	nopl	(%rax)
+M0000000000000000:	pushq	%r15	;  2 bytes
+M0000000000000002:	pushq	%r14	;  2 bytes
+M0000000000000004:	pushq	%rbx	;  1 bytes
+M0000000000000005:	movq	(%rdi), %rbx	;  3 bytes
+M0000000000000008:	testq	%rbx, %rbx	;  3 bytes
+M000000000000000b:	je	0x4152f6 <bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::~vector()+0x86>	;  2 bytes
+M000000000000000d:	movq	%rdi, %r14	;  3 bytes
+M0000000000000010:	movq	8(%rdi), %r15	;  4 bytes
+M0000000000000014:	cmpq	%r15, %rbx	;  3 bytes
+M0000000000000017:	jne	0x4152ae <bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::~vector()+0x3e>	;  2 bytes
+M0000000000000019:	jmp	0x4152e9 <bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::~vector()+0x79>	;  2 bytes
+M000000000000001b:	nopl	(%rax,%rax)	;  5 bytes
+M0000000000000020:	movq	$-1, 24(%rbx)	;  8 bytes
+M0000000000000028:	movl	$4294967295, 368(%rbx)	; 10 bytes
+M0000000000000032:	addq	$384, %rbx	;  7 bytes
+M0000000000000039:	cmpq	%rbx, %r15	;  3 bytes
+M000000000000003c:	je	0x4152e6 <bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::~vector()+0x76>	;  2 bytes
+M000000000000003e:	movl	368(%rbx), %eax	;  6 bytes
+M0000000000000044:	cmpl	$2, %eax	;  3 bytes
+M0000000000000047:	je	0x4152d0 <bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::~vector()+0x60>	;  2 bytes
+M0000000000000049:	testl	%eax, %eax	;  2 bytes
+M000000000000004b:	jne	0x415298 <bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::~vector()+0x28>	;  2 bytes
+M000000000000004d:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000050:	callq	0x4093b0 <BloombergLP::balb::Sequence6::~Sequence6()>	;  5 bytes
+M0000000000000055:	jmp	0x415298 <bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::~vector()+0x28>	;  2 bytes
+M0000000000000057:	nopw	(%rax,%rax)	;  9 bytes
+M0000000000000060:	cmpq	$23, 32(%rbx)	;  5 bytes
+M0000000000000065:	je	0x415290 <bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::~vector()+0x20>	;  2 bytes
+M0000000000000067:	movq	(%rbx), %rsi	;  3 bytes
+M000000000000006a:	movq	40(%rbx), %rdi	;  4 bytes
+M000000000000006e:	movq	(%rdi), %rax	;  3 bytes
+M0000000000000071:	callq	*24(%rax)	;  3 bytes
+M0000000000000074:	jmp	0x415290 <bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::~vector()+0x20>	;  2 bytes
+M0000000000000076:	movq	(%r14), %rbx	;  3 bytes
+M0000000000000079:	movq	24(%r14), %rdi	;  4 bytes
+M000000000000007d:	movq	(%rdi), %rax	;  3 bytes
+M0000000000000080:	movq	%rbx, %rsi	;  3 bytes
+M0000000000000083:	callq	*24(%rax)	;  3 bytes
+M0000000000000086:	popq	%rbx	;  1 bytes
+M0000000000000087:	popq	%r14	;  2 bytes
+M0000000000000089:	popq	%r15	;  2 bytes
+M000000000000008b:	retq		;  1 bytes
+M000000000000008c:	movq	%rax, %rdi	;  3 bytes
+M000000000000008f:	callq	0x4043c0 <__clang_call_terminate>	;  5 bytes
+M0000000000000094:	movq	%rax, %rdi	;  3 bytes
+M0000000000000097:	callq	0x4043c0 <__clang_call_terminate>	;  5 bytes
+M000000000000009c:	nopl	(%rax)	;  4 bytes
 ```

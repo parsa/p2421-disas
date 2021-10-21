@@ -2,10 +2,10 @@
 
 ```nasm
 0000000000448720 <BloombergLP::ball::UserFieldValue::type() const>:
-0000000000000000: 03	movl	48(%rdi), %ecx
-0000000000000003: 03	cmpl	$6, %ecx
-0000000000000006: 05	movl	$1, %eax
-000000000000000b: 03	cmovbl	%ecx, %eax
-000000000000000e: 01	retq	
-000000000000000f: 01	nop	
+M0000000000000000:	movl	48(%rdi), %ecx	;  3 bytes
+M0000000000000003:	cmpl	$6, %ecx	;  3 bytes
+M0000000000000006:	movl	$1, %eax	;  5 bytes
+M000000000000000b:	cmovbl	%ecx, %eax	;  3 bytes
+M000000000000000e:	retq		;  1 bytes
+M000000000000000f:	nop		;  1 bytes
 ```

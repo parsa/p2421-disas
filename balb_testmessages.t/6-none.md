@@ -2,25 +2,25 @@
 
 ```nasm
 000000000041e530 <BloombergLP::bdlde::Utf8Util::numCodePointsRaw(char const*, unsigned long)>:
-0000000000000000: 03	testq	%rsi, %rsi
-0000000000000003: 02	jle	0x41e567 <BloombergLP::bdlde::Utf8Util::numCodePointsRaw(char const*, unsigned long)+0x37>
-0000000000000005: 03	addq	%rdi, %rsi
-0000000000000008: 02	xorl	%eax, %eax
-000000000000000a: 02	jmp	0x41e54b <BloombergLP::bdlde::Utf8Util::numCodePointsRaw(char const*, unsigned long)+0x1b>
-000000000000000c: 04	nopl	(%rax)
-0000000000000010: 03	addq	%rdx, %rdi
-0000000000000013: 03	incq	%rax
-0000000000000016: 03	cmpq	%rsi, %rdi
-0000000000000019: 02	jae	0x41e566 <BloombergLP::bdlde::Utf8Util::numCodePointsRaw(char const*, unsigned long)+0x36>
-000000000000001b: 03	movzbl	(%rdi), %ecx
-000000000000001e: 04	shrq	$4, %rcx
-0000000000000022: 05	movl	$4, %edx
-0000000000000027: 03	cmpb	$15, %cl
-000000000000002a: 02	je	0x41e540 <BloombergLP::bdlde::Utf8Util::numCodePointsRaw(char const*, unsigned long)+0x10>
-000000000000002c: 08	movq	4490512(,%rcx,8), %rdx
-0000000000000034: 02	jmp	0x41e540 <BloombergLP::bdlde::Utf8Util::numCodePointsRaw(char const*, unsigned long)+0x10>
-0000000000000036: 01	retq	
-0000000000000037: 02	xorl	%eax, %eax
-0000000000000039: 01	retq	
-000000000000003a: 06	nopw	(%rax,%rax)
+M0000000000000000:	testq	%rsi, %rsi	;  3 bytes
+M0000000000000003:	jle	0x41e567 <BloombergLP::bdlde::Utf8Util::numCodePointsRaw(char const*, unsigned long)+0x37>	;  2 bytes
+M0000000000000005:	addq	%rdi, %rsi	;  3 bytes
+M0000000000000008:	xorl	%eax, %eax	;  2 bytes
+M000000000000000a:	jmp	0x41e54b <BloombergLP::bdlde::Utf8Util::numCodePointsRaw(char const*, unsigned long)+0x1b>	;  2 bytes
+M000000000000000c:	nopl	(%rax)	;  4 bytes
+M0000000000000010:	addq	%rdx, %rdi	;  3 bytes
+M0000000000000013:	incq	%rax	;  3 bytes
+M0000000000000016:	cmpq	%rsi, %rdi	;  3 bytes
+M0000000000000019:	jae	0x41e566 <BloombergLP::bdlde::Utf8Util::numCodePointsRaw(char const*, unsigned long)+0x36>	;  2 bytes
+M000000000000001b:	movzbl	(%rdi), %ecx	;  3 bytes
+M000000000000001e:	shrq	$4, %rcx	;  4 bytes
+M0000000000000022:	movl	$4, %edx	;  5 bytes
+M0000000000000027:	cmpb	$15, %cl	;  3 bytes
+M000000000000002a:	je	0x41e540 <BloombergLP::bdlde::Utf8Util::numCodePointsRaw(char const*, unsigned long)+0x10>	;  2 bytes
+M000000000000002c:	movq	4490512(,%rcx,8), %rdx	;  8 bytes
+M0000000000000034:	jmp	0x41e540 <BloombergLP::bdlde::Utf8Util::numCodePointsRaw(char const*, unsigned long)+0x10>	;  2 bytes
+M0000000000000036:	retq		;  1 bytes
+M0000000000000037:	xorl	%eax, %eax	;  2 bytes
+M0000000000000039:	retq		;  1 bytes
+M000000000000003a:	nopw	(%rax,%rax)	;  6 bytes
 ```

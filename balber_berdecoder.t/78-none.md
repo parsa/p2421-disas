@@ -2,121 +2,121 @@
 
 ```nasm
 0000000000466600 <BloombergLP::bdlt::Iso8601Util::generateRaw(char*, BloombergLP::bdlt::Date const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)>:
-0000000000000000: 02	pushq	%r14
-0000000000000002: 01	pushq	%rbx
-0000000000000003: 01	pushq	%rax
-0000000000000004: 03	movq	%rsi, %r14
-0000000000000007: 03	movq	%rdi, %rbx
-000000000000000a: 02	movl	(%rsi), %edi
-000000000000000c: 05	callq	0x46a6a0 <BloombergLP::bdlt::PosixDateImpUtil::serialToYear(int)>
-0000000000000011: 03	movslq	%eax, %rcx
-0000000000000014: 07	imulq	$1717986919, %rcx, %rax
-000000000000001b: 03	movq	%rax, %rdx
-000000000000001e: 04	shrq	$63, %rdx
-0000000000000022: 04	sarq	$34, %rax
-0000000000000026: 02	addl	%edx, %eax
-0000000000000028: 03	leal	(%rax,%rax), %edx
-000000000000002b: 03	leal	(%rdx,%rdx,4), %edx
-000000000000002e: 07	imulq	$1374389535, %rcx, %rsi
-0000000000000035: 07	imulq	$274877907, %rcx, %rdi
-000000000000003c: 02	subl	%edx, %ecx
-000000000000003e: 03	addb	$48, %cl
-0000000000000041: 03	movb	%cl, 3(%rbx)
-0000000000000044: 02	cltq	
-0000000000000046: 07	imulq	$1717986919, %rax, %rcx
-000000000000004d: 03	movq	%rcx, %rdx
-0000000000000050: 04	shrq	$63, %rdx
-0000000000000054: 04	shrq	$34, %rcx
-0000000000000058: 02	addl	%edx, %ecx
-000000000000005a: 02	addl	%ecx, %ecx
-000000000000005c: 03	leal	(%rcx,%rcx,4), %ecx
-000000000000005f: 02	subl	%ecx, %eax
-0000000000000061: 02	addb	$48, %al
-0000000000000063: 03	movb	%al, 2(%rbx)
-0000000000000066: 03	movq	%rsi, %rax
-0000000000000069: 04	shrq	$63, %rax
-000000000000006d: 04	sarq	$37, %rsi
-0000000000000071: 02	addl	%eax, %esi
-0000000000000073: 03	movslq	%esi, %rax
-0000000000000076: 07	imulq	$1717986919, %rax, %rcx
-000000000000007d: 03	movq	%rcx, %rdx
-0000000000000080: 04	shrq	$63, %rdx
-0000000000000084: 04	shrq	$34, %rcx
-0000000000000088: 02	addl	%edx, %ecx
-000000000000008a: 02	addl	%ecx, %ecx
-000000000000008c: 03	leal	(%rcx,%rcx,4), %ecx
-000000000000008f: 02	subl	%ecx, %eax
-0000000000000091: 02	addb	$48, %al
-0000000000000093: 03	movb	%al, 1(%rbx)
-0000000000000096: 03	movq	%rdi, %rax
-0000000000000099: 04	shrq	$63, %rax
-000000000000009d: 04	sarq	$38, %rdi
-00000000000000a1: 02	addl	%eax, %edi
-00000000000000a3: 03	movslq	%edi, %rax
-00000000000000a6: 07	imulq	$1717986919, %rax, %rcx
-00000000000000ad: 03	movq	%rcx, %rdx
-00000000000000b0: 04	shrq	$63, %rdx
-00000000000000b4: 04	shrq	$34, %rcx
-00000000000000b8: 02	addl	%edx, %ecx
-00000000000000ba: 02	addl	%ecx, %ecx
-00000000000000bc: 03	leal	(%rcx,%rcx,4), %ecx
-00000000000000bf: 02	subl	%ecx, %eax
-00000000000000c1: 02	addb	$48, %al
-00000000000000c3: 02	movb	%al, (%rbx)
-00000000000000c5: 04	movb	$45, 4(%rbx)
-00000000000000c9: 03	movl	(%r14), %edi
-00000000000000cc: 05	callq	0x46a660 <BloombergLP::bdlt::PosixDateImpUtil::serialToMonth(int)>
-00000000000000d1: 02	cltq	
-00000000000000d3: 07	imulq	$1717986919, %rax, %rcx
-00000000000000da: 03	movq	%rcx, %rdx
-00000000000000dd: 04	shrq	$63, %rdx
-00000000000000e1: 04	sarq	$34, %rcx
-00000000000000e5: 02	addl	%edx, %ecx
-00000000000000e7: 03	leal	(%rcx,%rcx), %edx
-00000000000000ea: 03	leal	(%rdx,%rdx,4), %edx
-00000000000000ed: 02	subl	%edx, %eax
-00000000000000ef: 02	addb	$48, %al
-00000000000000f1: 03	movb	%al, 6(%rbx)
-00000000000000f4: 03	movslq	%ecx, %rax
-00000000000000f7: 07	imulq	$1717986919, %rax, %rcx
-00000000000000fe: 03	movq	%rcx, %rdx
-0000000000000101: 04	shrq	$63, %rdx
-0000000000000105: 04	shrq	$34, %rcx
-0000000000000109: 02	addl	%edx, %ecx
-000000000000010b: 02	addl	%ecx, %ecx
-000000000000010d: 03	leal	(%rcx,%rcx,4), %ecx
-0000000000000110: 02	subl	%ecx, %eax
-0000000000000112: 02	addb	$48, %al
-0000000000000114: 03	movb	%al, 5(%rbx)
-0000000000000117: 04	movb	$45, 7(%rbx)
-000000000000011b: 03	movl	(%r14), %edi
-000000000000011e: 05	callq	0x46a620 <BloombergLP::bdlt::PosixDateImpUtil::serialToDay(int)>
-0000000000000123: 02	cltq	
-0000000000000125: 07	imulq	$1717986919, %rax, %rcx
-000000000000012c: 03	movq	%rcx, %rdx
-000000000000012f: 04	shrq	$63, %rdx
-0000000000000133: 04	sarq	$34, %rcx
-0000000000000137: 02	addl	%edx, %ecx
-0000000000000139: 03	leal	(%rcx,%rcx), %edx
-000000000000013c: 03	leal	(%rdx,%rdx,4), %edx
-000000000000013f: 02	subl	%edx, %eax
-0000000000000141: 02	addb	$48, %al
-0000000000000143: 03	movb	%al, 9(%rbx)
-0000000000000146: 03	movslq	%ecx, %rax
-0000000000000149: 07	imulq	$1717986919, %rax, %rcx
-0000000000000150: 03	movq	%rcx, %rdx
-0000000000000153: 04	shrq	$63, %rdx
-0000000000000157: 04	shrq	$34, %rcx
-000000000000015b: 02	addl	%edx, %ecx
-000000000000015d: 02	addl	%ecx, %ecx
-000000000000015f: 03	leal	(%rcx,%rcx,4), %ecx
-0000000000000162: 02	subl	%ecx, %eax
-0000000000000164: 02	addb	$48, %al
-0000000000000166: 03	movb	%al, 8(%rbx)
-0000000000000169: 05	movl	$10, %eax
-000000000000016e: 04	addq	$8, %rsp
-0000000000000172: 01	popq	%rbx
-0000000000000173: 02	popq	%r14
-0000000000000175: 01	retq	
-0000000000000176: 10	nopw	%cs:(%rax,%rax)
+M0000000000000000:	pushq	%r14	;  2 bytes
+M0000000000000002:	pushq	%rbx	;  1 bytes
+M0000000000000003:	pushq	%rax	;  1 bytes
+M0000000000000004:	movq	%rsi, %r14	;  3 bytes
+M0000000000000007:	movq	%rdi, %rbx	;  3 bytes
+M000000000000000a:	movl	(%rsi), %edi	;  2 bytes
+M000000000000000c:	callq	0x46a6a0 <BloombergLP::bdlt::PosixDateImpUtil::serialToYear(int)>	;  5 bytes
+M0000000000000011:	movslq	%eax, %rcx	;  3 bytes
+M0000000000000014:	imulq	$1717986919, %rcx, %rax	;  7 bytes
+M000000000000001b:	movq	%rax, %rdx	;  3 bytes
+M000000000000001e:	shrq	$63, %rdx	;  4 bytes
+M0000000000000022:	sarq	$34, %rax	;  4 bytes
+M0000000000000026:	addl	%edx, %eax	;  2 bytes
+M0000000000000028:	leal	(%rax,%rax), %edx	;  3 bytes
+M000000000000002b:	leal	(%rdx,%rdx,4), %edx	;  3 bytes
+M000000000000002e:	imulq	$1374389535, %rcx, %rsi	;  7 bytes
+M0000000000000035:	imulq	$274877907, %rcx, %rdi	;  7 bytes
+M000000000000003c:	subl	%edx, %ecx	;  2 bytes
+M000000000000003e:	addb	$48, %cl	;  3 bytes
+M0000000000000041:	movb	%cl, 3(%rbx)	;  3 bytes
+M0000000000000044:	cltq		;  2 bytes
+M0000000000000046:	imulq	$1717986919, %rax, %rcx	;  7 bytes
+M000000000000004d:	movq	%rcx, %rdx	;  3 bytes
+M0000000000000050:	shrq	$63, %rdx	;  4 bytes
+M0000000000000054:	shrq	$34, %rcx	;  4 bytes
+M0000000000000058:	addl	%edx, %ecx	;  2 bytes
+M000000000000005a:	addl	%ecx, %ecx	;  2 bytes
+M000000000000005c:	leal	(%rcx,%rcx,4), %ecx	;  3 bytes
+M000000000000005f:	subl	%ecx, %eax	;  2 bytes
+M0000000000000061:	addb	$48, %al	;  2 bytes
+M0000000000000063:	movb	%al, 2(%rbx)	;  3 bytes
+M0000000000000066:	movq	%rsi, %rax	;  3 bytes
+M0000000000000069:	shrq	$63, %rax	;  4 bytes
+M000000000000006d:	sarq	$37, %rsi	;  4 bytes
+M0000000000000071:	addl	%eax, %esi	;  2 bytes
+M0000000000000073:	movslq	%esi, %rax	;  3 bytes
+M0000000000000076:	imulq	$1717986919, %rax, %rcx	;  7 bytes
+M000000000000007d:	movq	%rcx, %rdx	;  3 bytes
+M0000000000000080:	shrq	$63, %rdx	;  4 bytes
+M0000000000000084:	shrq	$34, %rcx	;  4 bytes
+M0000000000000088:	addl	%edx, %ecx	;  2 bytes
+M000000000000008a:	addl	%ecx, %ecx	;  2 bytes
+M000000000000008c:	leal	(%rcx,%rcx,4), %ecx	;  3 bytes
+M000000000000008f:	subl	%ecx, %eax	;  2 bytes
+M0000000000000091:	addb	$48, %al	;  2 bytes
+M0000000000000093:	movb	%al, 1(%rbx)	;  3 bytes
+M0000000000000096:	movq	%rdi, %rax	;  3 bytes
+M0000000000000099:	shrq	$63, %rax	;  4 bytes
+M000000000000009d:	sarq	$38, %rdi	;  4 bytes
+M00000000000000a1:	addl	%eax, %edi	;  2 bytes
+M00000000000000a3:	movslq	%edi, %rax	;  3 bytes
+M00000000000000a6:	imulq	$1717986919, %rax, %rcx	;  7 bytes
+M00000000000000ad:	movq	%rcx, %rdx	;  3 bytes
+M00000000000000b0:	shrq	$63, %rdx	;  4 bytes
+M00000000000000b4:	shrq	$34, %rcx	;  4 bytes
+M00000000000000b8:	addl	%edx, %ecx	;  2 bytes
+M00000000000000ba:	addl	%ecx, %ecx	;  2 bytes
+M00000000000000bc:	leal	(%rcx,%rcx,4), %ecx	;  3 bytes
+M00000000000000bf:	subl	%ecx, %eax	;  2 bytes
+M00000000000000c1:	addb	$48, %al	;  2 bytes
+M00000000000000c3:	movb	%al, (%rbx)	;  2 bytes
+M00000000000000c5:	movb	$45, 4(%rbx)	;  4 bytes
+M00000000000000c9:	movl	(%r14), %edi	;  3 bytes
+M00000000000000cc:	callq	0x46a660 <BloombergLP::bdlt::PosixDateImpUtil::serialToMonth(int)>	;  5 bytes
+M00000000000000d1:	cltq		;  2 bytes
+M00000000000000d3:	imulq	$1717986919, %rax, %rcx	;  7 bytes
+M00000000000000da:	movq	%rcx, %rdx	;  3 bytes
+M00000000000000dd:	shrq	$63, %rdx	;  4 bytes
+M00000000000000e1:	sarq	$34, %rcx	;  4 bytes
+M00000000000000e5:	addl	%edx, %ecx	;  2 bytes
+M00000000000000e7:	leal	(%rcx,%rcx), %edx	;  3 bytes
+M00000000000000ea:	leal	(%rdx,%rdx,4), %edx	;  3 bytes
+M00000000000000ed:	subl	%edx, %eax	;  2 bytes
+M00000000000000ef:	addb	$48, %al	;  2 bytes
+M00000000000000f1:	movb	%al, 6(%rbx)	;  3 bytes
+M00000000000000f4:	movslq	%ecx, %rax	;  3 bytes
+M00000000000000f7:	imulq	$1717986919, %rax, %rcx	;  7 bytes
+M00000000000000fe:	movq	%rcx, %rdx	;  3 bytes
+M0000000000000101:	shrq	$63, %rdx	;  4 bytes
+M0000000000000105:	shrq	$34, %rcx	;  4 bytes
+M0000000000000109:	addl	%edx, %ecx	;  2 bytes
+M000000000000010b:	addl	%ecx, %ecx	;  2 bytes
+M000000000000010d:	leal	(%rcx,%rcx,4), %ecx	;  3 bytes
+M0000000000000110:	subl	%ecx, %eax	;  2 bytes
+M0000000000000112:	addb	$48, %al	;  2 bytes
+M0000000000000114:	movb	%al, 5(%rbx)	;  3 bytes
+M0000000000000117:	movb	$45, 7(%rbx)	;  4 bytes
+M000000000000011b:	movl	(%r14), %edi	;  3 bytes
+M000000000000011e:	callq	0x46a620 <BloombergLP::bdlt::PosixDateImpUtil::serialToDay(int)>	;  5 bytes
+M0000000000000123:	cltq		;  2 bytes
+M0000000000000125:	imulq	$1717986919, %rax, %rcx	;  7 bytes
+M000000000000012c:	movq	%rcx, %rdx	;  3 bytes
+M000000000000012f:	shrq	$63, %rdx	;  4 bytes
+M0000000000000133:	sarq	$34, %rcx	;  4 bytes
+M0000000000000137:	addl	%edx, %ecx	;  2 bytes
+M0000000000000139:	leal	(%rcx,%rcx), %edx	;  3 bytes
+M000000000000013c:	leal	(%rdx,%rdx,4), %edx	;  3 bytes
+M000000000000013f:	subl	%edx, %eax	;  2 bytes
+M0000000000000141:	addb	$48, %al	;  2 bytes
+M0000000000000143:	movb	%al, 9(%rbx)	;  3 bytes
+M0000000000000146:	movslq	%ecx, %rax	;  3 bytes
+M0000000000000149:	imulq	$1717986919, %rax, %rcx	;  7 bytes
+M0000000000000150:	movq	%rcx, %rdx	;  3 bytes
+M0000000000000153:	shrq	$63, %rdx	;  4 bytes
+M0000000000000157:	shrq	$34, %rcx	;  4 bytes
+M000000000000015b:	addl	%edx, %ecx	;  2 bytes
+M000000000000015d:	addl	%ecx, %ecx	;  2 bytes
+M000000000000015f:	leal	(%rcx,%rcx,4), %ecx	;  3 bytes
+M0000000000000162:	subl	%ecx, %eax	;  2 bytes
+M0000000000000164:	addb	$48, %al	;  2 bytes
+M0000000000000166:	movb	%al, 8(%rbx)	;  3 bytes
+M0000000000000169:	movl	$10, %eax	;  5 bytes
+M000000000000016e:	addq	$8, %rsp	;  4 bytes
+M0000000000000172:	popq	%rbx	;  1 bytes
+M0000000000000173:	popq	%r14	;  2 bytes
+M0000000000000175:	retq		;  1 bytes
+M0000000000000176:	nopw	%cs:(%rax,%rax)	; 10 bytes
 ```

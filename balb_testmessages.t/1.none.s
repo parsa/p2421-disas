@@ -1,393 +1,393 @@
 000000000040d320 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 02	pushq	%r13
-0000000000000007: 02	pushq	%r12
-0000000000000009: 01	pushq	%rbx
-000000000000000a: 04	subq	$104, %rsp
-000000000000000e: 03	movq	%rsi, %r14
-0000000000000011: 03	movq	%rdi, %rbx
-0000000000000014: 07	movq	$0, (%rdi)
-000000000000001b: 04	leaq	8(%rdi), %r12
-000000000000001f: 03	testq	%rsi, %rsi
-0000000000000022: 06	je	0x40d4b3 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x193>
-0000000000000028: 03	xorps	%xmm0, %xmm0
-000000000000002b: 05	movups	%xmm0, (%r12)
-0000000000000030: 09	movq	$0, 16(%r12)
-0000000000000039: 04	leaq	32(%rbx), %rax
-000000000000003d: 05	movq	%rax, 88(%rsp)
-0000000000000042: 04	movq	%r14, 32(%rbx)
-0000000000000046: 04	leaq	40(%rbx), %rax
-000000000000004a: 05	movq	%rax, 96(%rsp)
-000000000000004f: 04	movups	%xmm0, 40(%rbx)
-0000000000000053: 08	movq	$0, 56(%rbx)
-000000000000005b: 04	leaq	64(%rbx), %rax
-000000000000005f: 05	movq	%rax, 72(%rsp)
-0000000000000064: 04	movq	%r14, 64(%rbx)
-0000000000000068: 04	leaq	72(%rbx), %rax
-000000000000006c: 05	movq	%rax, 80(%rsp)
-0000000000000071: 04	movups	%xmm0, 72(%rbx)
-0000000000000075: 08	movq	$0, 88(%rbx)
-000000000000007d: 04	leaq	96(%rbx), %rax
-0000000000000081: 05	movq	%rax, 64(%rsp)
-0000000000000086: 04	movq	%r14, 96(%rbx)
-000000000000008a: 04	leaq	104(%rbx), %rax
-000000000000008e: 04	movq	%rax, (%rsp)
-0000000000000092: 04	movups	%xmm0, 104(%rbx)
-0000000000000096: 08	movq	$0, 120(%rbx)
-000000000000009e: 07	leaq	128(%rbx), %rax
-00000000000000a5: 05	movq	%rax, 48(%rsp)
-00000000000000aa: 07	movq	%r14, 128(%rbx)
-00000000000000b1: 07	leaq	136(%rbx), %rax
-00000000000000b8: 05	movq	%rax, 56(%rsp)
-00000000000000bd: 07	movups	%xmm0, 136(%rbx)
-00000000000000c4: 11	movq	$0, 152(%rbx)
-00000000000000cf: 07	leaq	160(%rbx), %rax
-00000000000000d6: 05	movq	%rax, 32(%rsp)
-00000000000000db: 07	movq	%r14, 160(%rbx)
-00000000000000e2: 07	leaq	168(%rbx), %rax
-00000000000000e9: 05	movq	%rax, 40(%rsp)
-00000000000000ee: 07	movups	%xmm0, 168(%rbx)
-00000000000000f5: 11	movq	$0, 184(%rbx)
-0000000000000100: 07	leaq	192(%rbx), %rax
-0000000000000107: 05	movq	%rax, 24(%rsp)
-000000000000010c: 07	movq	%r14, 192(%rbx)
-0000000000000113: 07	leaq	200(%rbx), %r13
-000000000000011a: 07	movups	%xmm0, 200(%rbx)
-0000000000000121: 11	movq	$0, 216(%rbx)
-000000000000012c: 07	leaq	224(%rbx), %rax
-0000000000000133: 05	movq	%rax, 16(%rsp)
-0000000000000138: 07	movq	%r14, 224(%rbx)
-000000000000013f: 07	leaq	232(%rbx), %rbp
-0000000000000146: 07	movups	%xmm0, 232(%rbx)
-000000000000014d: 11	movq	$0, 248(%rbx)
-0000000000000158: 07	leaq	256(%rbx), %rax
-000000000000015f: 05	movq	%rax, 8(%rsp)
-0000000000000164: 07	movq	%r14, 256(%rbx)
-000000000000016b: 07	movups	%xmm0, 264(%rbx)
-0000000000000172: 11	movq	$0, 280(%rbx)
-000000000000017d: 07	movq	%r14, 288(%rbx)
-0000000000000184: 07	leaq	264(%rbx), %r15
-000000000000018b: 03	movq	%r14, %rax
-000000000000018e: 05	jmp	0x40d6b7 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x397>
-0000000000000193: 07	movq	2561686(%rip), %rax  # 67eb50 <BloombergLP::bslma::Default::s_defaultAllocator>
-000000000000019a: 03	testq	%rax, %rax
-000000000000019d: 02	jne	0x40d4c4 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x1a4>
-000000000000019f: 05	callq	0x4207c0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-00000000000001a4: 03	xorps	%xmm0, %xmm0
-00000000000001a7: 05	movups	%xmm0, (%r12)
-00000000000001ac: 09	movq	$0, 16(%r12)
-00000000000001b5: 04	leaq	32(%rbx), %r15
-00000000000001b9: 04	movq	%rax, 32(%rbx)
-00000000000001bd: 07	movq	2561644(%rip), %rax  # 67eb50 <BloombergLP::bslma::Default::s_defaultAllocator>
-00000000000001c4: 03	testq	%rax, %rax
-00000000000001c7: 05	movq	%r15, 88(%rsp)
-00000000000001cc: 02	jne	0x40d4f3 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x1d3>
-00000000000001ce: 05	callq	0x4207c0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-00000000000001d3: 04	leaq	40(%rbx), %rbp
-00000000000001d7: 03	xorps	%xmm0, %xmm0
-00000000000001da: 04	movups	%xmm0, (%rbp)
-00000000000001de: 08	movq	$0, 16(%rbp)
-00000000000001e6: 04	leaq	64(%rbx), %r13
-00000000000001ea: 04	movq	%rax, 64(%rbx)
-00000000000001ee: 07	movq	2561595(%rip), %rax  # 67eb50 <BloombergLP::bslma::Default::s_defaultAllocator>
-00000000000001f5: 03	testq	%rax, %rax
-00000000000001f8: 05	movq	%rbp, 96(%rsp)
-00000000000001fd: 05	movq	%r13, 72(%rsp)
-0000000000000202: 02	jne	0x40d529 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x209>
-0000000000000204: 05	callq	0x4207c0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-0000000000000209: 04	leaq	72(%rbx), %rcx
-000000000000020d: 03	xorps	%xmm0, %xmm0
-0000000000000210: 03	movups	%xmm0, (%rcx)
-0000000000000213: 05	movq	%rcx, 80(%rsp)
-0000000000000218: 08	movq	$0, 16(%rcx)
-0000000000000220: 04	leaq	96(%rbx), %rcx
-0000000000000224: 05	movq	%rcx, 64(%rsp)
-0000000000000229: 04	movq	%rax, 96(%rbx)
-000000000000022d: 07	movq	2561532(%rip), %rax  # 67eb50 <BloombergLP::bslma::Default::s_defaultAllocator>
-0000000000000234: 03	testq	%rax, %rax
-0000000000000237: 02	jne	0x40d55e <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x23e>
-0000000000000239: 05	callq	0x4207c0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-000000000000023e: 04	leaq	104(%rbx), %rcx
-0000000000000242: 03	xorps	%xmm0, %xmm0
-0000000000000245: 03	movups	%xmm0, (%rcx)
-0000000000000248: 04	movq	%rcx, (%rsp)
-000000000000024c: 08	movq	$0, 16(%rcx)
-0000000000000254: 07	leaq	128(%rbx), %rcx
-000000000000025b: 05	movq	%rcx, 48(%rsp)
-0000000000000260: 07	movq	%rax, 128(%rbx)
-0000000000000267: 07	movq	2561474(%rip), %rax  # 67eb50 <BloombergLP::bslma::Default::s_defaultAllocator>
-000000000000026e: 03	testq	%rax, %rax
-0000000000000271: 02	jne	0x40d598 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x278>
-0000000000000273: 05	callq	0x4207c0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-0000000000000278: 07	leaq	136(%rbx), %rcx
-000000000000027f: 03	xorps	%xmm0, %xmm0
-0000000000000282: 03	movups	%xmm0, (%rcx)
-0000000000000285: 05	movq	%rcx, 56(%rsp)
-000000000000028a: 08	movq	$0, 16(%rcx)
-0000000000000292: 07	leaq	160(%rbx), %rcx
-0000000000000299: 05	movq	%rcx, 32(%rsp)
-000000000000029e: 07	movq	%rax, 160(%rbx)
-00000000000002a5: 07	movq	2561412(%rip), %rax  # 67eb50 <BloombergLP::bslma::Default::s_defaultAllocator>
-00000000000002ac: 03	testq	%rax, %rax
-00000000000002af: 02	jne	0x40d5d6 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x2b6>
-00000000000002b1: 05	callq	0x4207c0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-00000000000002b6: 07	leaq	168(%rbx), %rcx
-00000000000002bd: 03	xorps	%xmm0, %xmm0
-00000000000002c0: 03	movups	%xmm0, (%rcx)
-00000000000002c3: 05	movq	%rcx, 40(%rsp)
-00000000000002c8: 08	movq	$0, 16(%rcx)
-00000000000002d0: 07	leaq	192(%rbx), %rcx
-00000000000002d7: 05	movq	%rcx, 24(%rsp)
-00000000000002dc: 07	movq	%rax, 192(%rbx)
-00000000000002e3: 07	movq	2561350(%rip), %rax  # 67eb50 <BloombergLP::bslma::Default::s_defaultAllocator>
-00000000000002ea: 03	testq	%rax, %rax
-00000000000002ed: 02	jne	0x40d614 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x2f4>
-00000000000002ef: 05	callq	0x4207c0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-00000000000002f4: 07	leaq	200(%rbx), %r13
-00000000000002fb: 03	xorps	%xmm0, %xmm0
-00000000000002fe: 05	movups	%xmm0, (%r13)
-0000000000000303: 08	movq	$0, 16(%r13)
-000000000000030b: 07	leaq	224(%rbx), %rcx
-0000000000000312: 05	movq	%rcx, 16(%rsp)
-0000000000000317: 07	movq	%rax, 224(%rbx)
-000000000000031e: 07	movq	2561291(%rip), %rax  # 67eb50 <BloombergLP::bslma::Default::s_defaultAllocator>
-0000000000000325: 03	testq	%rax, %rax
-0000000000000328: 02	jne	0x40d64f <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x32f>
-000000000000032a: 05	callq	0x4207c0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-000000000000032f: 07	leaq	232(%rbx), %rbp
-0000000000000336: 03	xorps	%xmm0, %xmm0
-0000000000000339: 04	movups	%xmm0, (%rbp)
-000000000000033d: 08	movq	$0, 16(%rbp)
-0000000000000345: 07	leaq	256(%rbx), %rcx
-000000000000034c: 05	movq	%rcx, 8(%rsp)
-0000000000000351: 07	movq	%rax, 256(%rbx)
-0000000000000358: 07	movq	2561233(%rip), %rax  # 67eb50 <BloombergLP::bslma::Default::s_defaultAllocator>
-000000000000035f: 03	testq	%rax, %rax
-0000000000000362: 02	jne	0x40d689 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x369>
-0000000000000364: 05	callq	0x4207c0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-0000000000000369: 07	leaq	264(%rbx), %r15
-0000000000000370: 03	xorps	%xmm0, %xmm0
-0000000000000373: 04	movups	%xmm0, (%r15)
-0000000000000377: 08	movq	$0, 16(%r15)
-000000000000037f: 07	movq	%rax, 288(%rbx)
-0000000000000386: 07	movq	2561187(%rip), %rax  # 67eb50 <BloombergLP::bslma::Default::s_defaultAllocator>
-000000000000038d: 03	testq	%rax, %rax
-0000000000000390: 02	jne	0x40d6b7 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x397>
-0000000000000392: 05	callq	0x4207c0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-0000000000000397: 11	movq	$0, 296(%rbx)
-00000000000003a2: 07	movaps	231767(%rip), %xmm0  # 446020 <__dso_handle+0x8>
-00000000000003a9: 07	movups	%xmm0, 320(%rbx)
-00000000000003b0: 07	movq	%rax, 336(%rbx)
-00000000000003b7: 07	movb	$0, 296(%rbx)
-00000000000003be: 03	testq	%r14, %r14
-00000000000003c1: 02	je	0x40d701 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x3e1>
-00000000000003c3: 07	movb	$0, 376(%rbx)
-00000000000003ca: 07	movq	%r14, 384(%rbx)
-00000000000003d1: 07	movb	$0, 392(%rbx)
-00000000000003d8: 07	movb	$0, 408(%rbx)
-00000000000003df: 02	jmp	0x40d742 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x422>
-00000000000003e1: 07	movq	2561096(%rip), %rax  # 67eb50 <BloombergLP::bslma::Default::s_defaultAllocator>
-00000000000003e8: 03	testq	%rax, %rax
-00000000000003eb: 02	jne	0x40d712 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x3f2>
-00000000000003ed: 05	callq	0x4207c0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-00000000000003f2: 07	movb	$0, 376(%rbx)
-00000000000003f9: 07	movq	%rax, 384(%rbx)
-0000000000000400: 07	movb	$0, 392(%rbx)
-0000000000000407: 07	movb	$0, 408(%rbx)
-000000000000040e: 07	movq	2561051(%rip), %r14  # 67eb50 <BloombergLP::bslma::Default::s_defaultAllocator>
-0000000000000415: 03	testq	%r14, %r14
-0000000000000418: 02	jne	0x40d742 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x422>
-000000000000041a: 05	callq	0x4207c0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-000000000000041f: 03	movq	%rax, %r14
-0000000000000422: 07	movb	$0, 464(%rbx)
-0000000000000429: 07	movq	%r14, 472(%rbx)
-0000000000000430: 10	movl	$0, 480(%rbx)
-000000000000043a: 07	movb	$0, 484(%rbx)
-0000000000000441: 07	movb	$0, 488(%rbx)
-0000000000000448: 07	movb	$0, 492(%rbx)
-000000000000044f: 07	movb	$0, 496(%rbx)
-0000000000000456: 10	movl	$0, 500(%rbx)
-0000000000000460: 07	movb	$0, 504(%rbx)
-0000000000000467: 04	addq	$104, %rsp
-000000000000046b: 01	popq	%rbx
-000000000000046c: 02	popq	%r12
-000000000000046e: 02	popq	%r13
-0000000000000470: 02	popq	%r14
-0000000000000472: 02	popq	%r15
-0000000000000474: 01	popq	%rbp
-0000000000000475: 01	retq	
-0000000000000476: 03	movq	%rax, %r14
-0000000000000479: 07	cmpb	$0, 376(%rbx)
-0000000000000480: 02	je	0x40d7e9 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x4c9>
-0000000000000482: 07	movb	$0, 376(%rbx)
-0000000000000489: 07	movq	344(%rbx), %rsi
-0000000000000490: 03	testq	%rsi, %rsi
-0000000000000493: 02	je	0x40d7e9 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x4c9>
-0000000000000495: 07	movq	368(%rbx), %rdi
-000000000000049c: 03	movq	(%rdi), %rax
-000000000000049f: 03	callq	*24(%rax)
-00000000000004a2: 02	jmp	0x40d7e9 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x4c9>
-00000000000004a4: 03	movq	%rax, %rdi
-00000000000004a7: 05	callq	0x4043c0 <__clang_call_terminate>
-00000000000004ac: 03	movq	%rax, %r14
-00000000000004af: 02	jmp	0x40d812 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x4f2>
-00000000000004b1: 03	movq	%rax, %r14
-00000000000004b4: 02	jmp	0x40d81a <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x4fa>
-00000000000004b6: 03	movq	%rax, %r14
-00000000000004b9: 05	jmp	0x40d86a <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x54a>
-00000000000004be: 03	movq	%rax, %r14
-00000000000004c1: 05	jmp	0x40d8a5 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x585>
-00000000000004c6: 03	movq	%rax, %r14
-00000000000004c9: 08	cmpq	$23, 328(%rbx)
-00000000000004d1: 02	je	0x40d807 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x4e7>
-00000000000004d3: 07	movq	296(%rbx), %rsi
-00000000000004da: 07	movq	336(%rbx), %rdi
-00000000000004e1: 03	movq	(%rdi), %rax
-00000000000004e4: 03	callq	*24(%rax)
-00000000000004e7: 11	movq	$-1, 320(%rbx)
-00000000000004f2: 03	movq	%r15, %rdi
-00000000000004f5: 05	callq	0x414be0 <bsl::vector<BloombergLP::balb::Choice1, bsl::allocator<BloombergLP::balb::Choice1> >::~vector()>
-00000000000004fa: 04	movq	(%rbp), %rbx
-00000000000004fe: 03	testq	%rbx, %rbx
-0000000000000501: 02	je	0x40d86a <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x54a>
-0000000000000503: 04	movq	8(%rbp), %r15
-0000000000000507: 03	cmpq	%r15, %rbx
-000000000000050a: 02	jne	0x40d83f <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x51f>
-000000000000050c: 02	jmp	0x40d859 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x539>
-000000000000050e: 08	movq	$-1, 24(%rbx)
-0000000000000516: 04	addq	$48, %rbx
-000000000000051a: 03	cmpq	%rbx, %r15
-000000000000051d: 02	je	0x40d855 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x535>
-000000000000051f: 05	cmpq	$23, 32(%rbx)
-0000000000000524: 02	je	0x40d82e <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x50e>
-0000000000000526: 03	movq	(%rbx), %rsi
-0000000000000529: 04	movq	40(%rbx), %rdi
-000000000000052d: 03	movq	(%rdi), %rax
-0000000000000530: 03	callq	*24(%rax)
-0000000000000533: 02	jmp	0x40d82e <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x50e>
-0000000000000535: 04	movq	(%rbp), %rbx
-0000000000000539: 05	movq	8(%rsp), %rax
-000000000000053e: 03	movq	(%rax), %rdi
-0000000000000541: 03	movq	(%rdi), %rax
-0000000000000544: 03	movq	%rbx, %rsi
-0000000000000547: 03	callq	*24(%rax)
-000000000000054a: 04	movq	(%r13), %rbx
-000000000000054e: 03	testq	%rbx, %rbx
-0000000000000551: 02	je	0x40d8a5 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x585>
-0000000000000553: 04	movq	8(%r13), %rbp
-0000000000000557: 03	cmpq	%rbp, %rbx
-000000000000055a: 02	je	0x40d894 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x574>
-000000000000055c: 03	movq	%rbx, %rdi
-000000000000055f: 05	callq	0x406b30 <BloombergLP::balb::Sequence3::~Sequence3()>
-0000000000000564: 07	addq	$184, %rbx
-000000000000056b: 03	cmpq	%rbx, %rbp
-000000000000056e: 02	jne	0x40d87c <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x55c>
-0000000000000570: 04	movq	(%r13), %rbx
-0000000000000574: 05	movq	16(%rsp), %rax
-0000000000000579: 03	movq	(%rax), %rdi
-000000000000057c: 03	movq	(%rdi), %rax
-000000000000057f: 03	movq	%rbx, %rsi
-0000000000000582: 03	callq	*24(%rax)
-0000000000000585: 05	movq	40(%rsp), %rax
-000000000000058a: 03	movq	(%rax), %rsi
-000000000000058d: 03	testq	%rsi, %rsi
-0000000000000590: 02	je	0x40d8ed <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x5cd>
-0000000000000592: 05	movq	24(%rsp), %rax
-0000000000000597: 03	movq	(%rax), %rdi
-000000000000059a: 03	movq	(%rdi), %rax
-000000000000059d: 03	callq	*24(%rax)
-00000000000005a0: 02	jmp	0x40d8ed <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x5cd>
-00000000000005a2: 03	movq	%rax, %rdi
-00000000000005a5: 05	callq	0x4043c0 <__clang_call_terminate>
-00000000000005aa: 03	movq	%rax, %rdi
-00000000000005ad: 05	callq	0x4043c0 <__clang_call_terminate>
-00000000000005b2: 03	movq	%rax, %rdi
-00000000000005b5: 05	callq	0x4043c0 <__clang_call_terminate>
-00000000000005ba: 03	movq	%rax, %rdi
-00000000000005bd: 05	callq	0x4043c0 <__clang_call_terminate>
-00000000000005c2: 03	movq	%rax, %rdi
-00000000000005c5: 05	callq	0x4043c0 <__clang_call_terminate>
-00000000000005ca: 03	movq	%rax, %r14
-00000000000005cd: 05	movq	56(%rsp), %rax
-00000000000005d2: 03	movq	(%rax), %rsi
-00000000000005d5: 03	testq	%rsi, %rsi
-00000000000005d8: 02	je	0x40d915 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x5f5>
-00000000000005da: 05	movq	32(%rsp), %rax
-00000000000005df: 03	movq	(%rax), %rdi
-00000000000005e2: 03	movq	(%rdi), %rax
-00000000000005e5: 03	callq	*24(%rax)
-00000000000005e8: 02	jmp	0x40d915 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x5f5>
-00000000000005ea: 03	movq	%rax, %rdi
-00000000000005ed: 05	callq	0x4043c0 <__clang_call_terminate>
-00000000000005f2: 03	movq	%rax, %r14
-00000000000005f5: 04	movq	(%rsp), %rax
-00000000000005f9: 03	movq	(%rax), %rbx
-00000000000005fc: 03	testq	%rbx, %rbx
-00000000000005ff: 02	je	0x40d97a <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x65a>
-0000000000000601: 04	movq	(%rsp), %rax
-0000000000000605: 04	movq	8(%rax), %rbp
-0000000000000609: 03	cmpq	%rbp, %rbx
-000000000000060c: 02	jne	0x40d939 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x619>
-000000000000060e: 02	jmp	0x40d954 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x634>
-0000000000000610: 04	addq	$32, %rbx
-0000000000000614: 03	cmpq	%rbx, %rbp
-0000000000000617: 02	je	0x40d94d <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x62d>
-0000000000000619: 03	movq	(%rbx), %rsi
-000000000000061c: 03	testq	%rsi, %rsi
-000000000000061f: 02	je	0x40d930 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x610>
-0000000000000621: 04	movq	24(%rbx), %rdi
-0000000000000625: 03	movq	(%rdi), %rax
-0000000000000628: 03	callq	*24(%rax)
-000000000000062b: 02	jmp	0x40d930 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x610>
-000000000000062d: 04	movq	(%rsp), %rax
-0000000000000631: 03	movq	(%rax), %rbx
-0000000000000634: 05	movq	48(%rsp), %rax
-0000000000000639: 03	movq	(%rax), %rdi
-000000000000063c: 03	movq	(%rdi), %rax
-000000000000063f: 03	movq	%rbx, %rsi
-0000000000000642: 03	callq	*24(%rax)
-0000000000000645: 02	jmp	0x40d97a <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x65a>
-0000000000000647: 03	movq	%rax, %rdi
-000000000000064a: 05	callq	0x4043c0 <__clang_call_terminate>
-000000000000064f: 03	movq	%rax, %rdi
-0000000000000652: 05	callq	0x4043c0 <__clang_call_terminate>
-0000000000000657: 03	movq	%rax, %r14
-000000000000065a: 05	movq	80(%rsp), %rax
-000000000000065f: 03	movq	(%rax), %rsi
-0000000000000662: 03	testq	%rsi, %rsi
-0000000000000665: 02	je	0x40d9a2 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x682>
-0000000000000667: 05	movq	64(%rsp), %rax
-000000000000066c: 03	movq	(%rax), %rdi
-000000000000066f: 03	movq	(%rdi), %rax
-0000000000000672: 03	callq	*24(%rax)
-0000000000000675: 02	jmp	0x40d9a2 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x682>
-0000000000000677: 03	movq	%rax, %rdi
-000000000000067a: 05	callq	0x4043c0 <__clang_call_terminate>
-000000000000067f: 03	movq	%rax, %r14
-0000000000000682: 05	movq	96(%rsp), %rax
-0000000000000687: 03	movq	(%rax), %rsi
-000000000000068a: 03	testq	%rsi, %rsi
-000000000000068d: 02	je	0x40d9ca <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x6aa>
-000000000000068f: 05	movq	72(%rsp), %rax
-0000000000000694: 03	movq	(%rax), %rdi
-0000000000000697: 03	movq	(%rdi), %rax
-000000000000069a: 03	callq	*24(%rax)
-000000000000069d: 02	jmp	0x40d9ca <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x6aa>
-000000000000069f: 03	movq	%rax, %rdi
-00000000000006a2: 05	callq	0x4043c0 <__clang_call_terminate>
-00000000000006a7: 03	movq	%rax, %r14
-00000000000006aa: 04	movq	(%r12), %rsi
-00000000000006ae: 03	testq	%rsi, %rsi
-00000000000006b1: 02	je	0x40d9e1 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x6c1>
-00000000000006b3: 05	movq	88(%rsp), %rax
-00000000000006b8: 03	movq	(%rax), %rdi
-00000000000006bb: 03	movq	(%rdi), %rax
-00000000000006be: 03	callq	*24(%rax)
-00000000000006c1: 03	movq	%r14, %rdi
-00000000000006c4: 05	callq	0x4039f0 <_Unwind_Resume@plt>
-00000000000006c9: 03	movq	%rax, %rdi
-00000000000006cc: 05	callq	0x4043c0 <__clang_call_terminate>
-00000000000006d1: 10	nopw	%cs:(%rax,%rax)
-00000000000006db: 05	nopl	(%rax,%rax)
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%r13	;  2 bytes
+M0000000000000007:	pushq	%r12	;  2 bytes
+M0000000000000009:	pushq	%rbx	;  1 bytes
+M000000000000000a:	subq	$104, %rsp	;  4 bytes
+M000000000000000e:	movq	%rsi, %r14	;  3 bytes
+M0000000000000011:	movq	%rdi, %rbx	;  3 bytes
+M0000000000000014:	movq	$0, (%rdi)	;  7 bytes
+M000000000000001b:	leaq	8(%rdi), %r12	;  4 bytes
+M000000000000001f:	testq	%rsi, %rsi	;  3 bytes
+M0000000000000022:	je	0x40d4b3 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x193>	;  6 bytes
+M0000000000000028:	xorps	%xmm0, %xmm0	;  3 bytes
+M000000000000002b:	movups	%xmm0, (%r12)	;  5 bytes
+M0000000000000030:	movq	$0, 16(%r12)	;  9 bytes
+M0000000000000039:	leaq	32(%rbx), %rax	;  4 bytes
+M000000000000003d:	movq	%rax, 88(%rsp)	;  5 bytes
+M0000000000000042:	movq	%r14, 32(%rbx)	;  4 bytes
+M0000000000000046:	leaq	40(%rbx), %rax	;  4 bytes
+M000000000000004a:	movq	%rax, 96(%rsp)	;  5 bytes
+M000000000000004f:	movups	%xmm0, 40(%rbx)	;  4 bytes
+M0000000000000053:	movq	$0, 56(%rbx)	;  8 bytes
+M000000000000005b:	leaq	64(%rbx), %rax	;  4 bytes
+M000000000000005f:	movq	%rax, 72(%rsp)	;  5 bytes
+M0000000000000064:	movq	%r14, 64(%rbx)	;  4 bytes
+M0000000000000068:	leaq	72(%rbx), %rax	;  4 bytes
+M000000000000006c:	movq	%rax, 80(%rsp)	;  5 bytes
+M0000000000000071:	movups	%xmm0, 72(%rbx)	;  4 bytes
+M0000000000000075:	movq	$0, 88(%rbx)	;  8 bytes
+M000000000000007d:	leaq	96(%rbx), %rax	;  4 bytes
+M0000000000000081:	movq	%rax, 64(%rsp)	;  5 bytes
+M0000000000000086:	movq	%r14, 96(%rbx)	;  4 bytes
+M000000000000008a:	leaq	104(%rbx), %rax	;  4 bytes
+M000000000000008e:	movq	%rax, (%rsp)	;  4 bytes
+M0000000000000092:	movups	%xmm0, 104(%rbx)	;  4 bytes
+M0000000000000096:	movq	$0, 120(%rbx)	;  8 bytes
+M000000000000009e:	leaq	128(%rbx), %rax	;  7 bytes
+M00000000000000a5:	movq	%rax, 48(%rsp)	;  5 bytes
+M00000000000000aa:	movq	%r14, 128(%rbx)	;  7 bytes
+M00000000000000b1:	leaq	136(%rbx), %rax	;  7 bytes
+M00000000000000b8:	movq	%rax, 56(%rsp)	;  5 bytes
+M00000000000000bd:	movups	%xmm0, 136(%rbx)	;  7 bytes
+M00000000000000c4:	movq	$0, 152(%rbx)	; 11 bytes
+M00000000000000cf:	leaq	160(%rbx), %rax	;  7 bytes
+M00000000000000d6:	movq	%rax, 32(%rsp)	;  5 bytes
+M00000000000000db:	movq	%r14, 160(%rbx)	;  7 bytes
+M00000000000000e2:	leaq	168(%rbx), %rax	;  7 bytes
+M00000000000000e9:	movq	%rax, 40(%rsp)	;  5 bytes
+M00000000000000ee:	movups	%xmm0, 168(%rbx)	;  7 bytes
+M00000000000000f5:	movq	$0, 184(%rbx)	; 11 bytes
+M0000000000000100:	leaq	192(%rbx), %rax	;  7 bytes
+M0000000000000107:	movq	%rax, 24(%rsp)	;  5 bytes
+M000000000000010c:	movq	%r14, 192(%rbx)	;  7 bytes
+M0000000000000113:	leaq	200(%rbx), %r13	;  7 bytes
+M000000000000011a:	movups	%xmm0, 200(%rbx)	;  7 bytes
+M0000000000000121:	movq	$0, 216(%rbx)	; 11 bytes
+M000000000000012c:	leaq	224(%rbx), %rax	;  7 bytes
+M0000000000000133:	movq	%rax, 16(%rsp)	;  5 bytes
+M0000000000000138:	movq	%r14, 224(%rbx)	;  7 bytes
+M000000000000013f:	leaq	232(%rbx), %rbp	;  7 bytes
+M0000000000000146:	movups	%xmm0, 232(%rbx)	;  7 bytes
+M000000000000014d:	movq	$0, 248(%rbx)	; 11 bytes
+M0000000000000158:	leaq	256(%rbx), %rax	;  7 bytes
+M000000000000015f:	movq	%rax, 8(%rsp)	;  5 bytes
+M0000000000000164:	movq	%r14, 256(%rbx)	;  7 bytes
+M000000000000016b:	movups	%xmm0, 264(%rbx)	;  7 bytes
+M0000000000000172:	movq	$0, 280(%rbx)	; 11 bytes
+M000000000000017d:	movq	%r14, 288(%rbx)	;  7 bytes
+M0000000000000184:	leaq	264(%rbx), %r15	;  7 bytes
+M000000000000018b:	movq	%r14, %rax	;  3 bytes
+M000000000000018e:	jmp	0x40d6b7 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x397>	;  5 bytes
+M0000000000000193:	movq	2561686(%rip), %rax  # 67eb50 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M000000000000019a:	testq	%rax, %rax	;  3 bytes
+M000000000000019d:	jne	0x40d4c4 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x1a4>	;  2 bytes
+M000000000000019f:	callq	0x4207c0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M00000000000001a4:	xorps	%xmm0, %xmm0	;  3 bytes
+M00000000000001a7:	movups	%xmm0, (%r12)	;  5 bytes
+M00000000000001ac:	movq	$0, 16(%r12)	;  9 bytes
+M00000000000001b5:	leaq	32(%rbx), %r15	;  4 bytes
+M00000000000001b9:	movq	%rax, 32(%rbx)	;  4 bytes
+M00000000000001bd:	movq	2561644(%rip), %rax  # 67eb50 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M00000000000001c4:	testq	%rax, %rax	;  3 bytes
+M00000000000001c7:	movq	%r15, 88(%rsp)	;  5 bytes
+M00000000000001cc:	jne	0x40d4f3 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x1d3>	;  2 bytes
+M00000000000001ce:	callq	0x4207c0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M00000000000001d3:	leaq	40(%rbx), %rbp	;  4 bytes
+M00000000000001d7:	xorps	%xmm0, %xmm0	;  3 bytes
+M00000000000001da:	movups	%xmm0, (%rbp)	;  4 bytes
+M00000000000001de:	movq	$0, 16(%rbp)	;  8 bytes
+M00000000000001e6:	leaq	64(%rbx), %r13	;  4 bytes
+M00000000000001ea:	movq	%rax, 64(%rbx)	;  4 bytes
+M00000000000001ee:	movq	2561595(%rip), %rax  # 67eb50 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M00000000000001f5:	testq	%rax, %rax	;  3 bytes
+M00000000000001f8:	movq	%rbp, 96(%rsp)	;  5 bytes
+M00000000000001fd:	movq	%r13, 72(%rsp)	;  5 bytes
+M0000000000000202:	jne	0x40d529 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x209>	;  2 bytes
+M0000000000000204:	callq	0x4207c0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M0000000000000209:	leaq	72(%rbx), %rcx	;  4 bytes
+M000000000000020d:	xorps	%xmm0, %xmm0	;  3 bytes
+M0000000000000210:	movups	%xmm0, (%rcx)	;  3 bytes
+M0000000000000213:	movq	%rcx, 80(%rsp)	;  5 bytes
+M0000000000000218:	movq	$0, 16(%rcx)	;  8 bytes
+M0000000000000220:	leaq	96(%rbx), %rcx	;  4 bytes
+M0000000000000224:	movq	%rcx, 64(%rsp)	;  5 bytes
+M0000000000000229:	movq	%rax, 96(%rbx)	;  4 bytes
+M000000000000022d:	movq	2561532(%rip), %rax  # 67eb50 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M0000000000000234:	testq	%rax, %rax	;  3 bytes
+M0000000000000237:	jne	0x40d55e <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x23e>	;  2 bytes
+M0000000000000239:	callq	0x4207c0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M000000000000023e:	leaq	104(%rbx), %rcx	;  4 bytes
+M0000000000000242:	xorps	%xmm0, %xmm0	;  3 bytes
+M0000000000000245:	movups	%xmm0, (%rcx)	;  3 bytes
+M0000000000000248:	movq	%rcx, (%rsp)	;  4 bytes
+M000000000000024c:	movq	$0, 16(%rcx)	;  8 bytes
+M0000000000000254:	leaq	128(%rbx), %rcx	;  7 bytes
+M000000000000025b:	movq	%rcx, 48(%rsp)	;  5 bytes
+M0000000000000260:	movq	%rax, 128(%rbx)	;  7 bytes
+M0000000000000267:	movq	2561474(%rip), %rax  # 67eb50 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M000000000000026e:	testq	%rax, %rax	;  3 bytes
+M0000000000000271:	jne	0x40d598 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x278>	;  2 bytes
+M0000000000000273:	callq	0x4207c0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M0000000000000278:	leaq	136(%rbx), %rcx	;  7 bytes
+M000000000000027f:	xorps	%xmm0, %xmm0	;  3 bytes
+M0000000000000282:	movups	%xmm0, (%rcx)	;  3 bytes
+M0000000000000285:	movq	%rcx, 56(%rsp)	;  5 bytes
+M000000000000028a:	movq	$0, 16(%rcx)	;  8 bytes
+M0000000000000292:	leaq	160(%rbx), %rcx	;  7 bytes
+M0000000000000299:	movq	%rcx, 32(%rsp)	;  5 bytes
+M000000000000029e:	movq	%rax, 160(%rbx)	;  7 bytes
+M00000000000002a5:	movq	2561412(%rip), %rax  # 67eb50 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M00000000000002ac:	testq	%rax, %rax	;  3 bytes
+M00000000000002af:	jne	0x40d5d6 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x2b6>	;  2 bytes
+M00000000000002b1:	callq	0x4207c0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M00000000000002b6:	leaq	168(%rbx), %rcx	;  7 bytes
+M00000000000002bd:	xorps	%xmm0, %xmm0	;  3 bytes
+M00000000000002c0:	movups	%xmm0, (%rcx)	;  3 bytes
+M00000000000002c3:	movq	%rcx, 40(%rsp)	;  5 bytes
+M00000000000002c8:	movq	$0, 16(%rcx)	;  8 bytes
+M00000000000002d0:	leaq	192(%rbx), %rcx	;  7 bytes
+M00000000000002d7:	movq	%rcx, 24(%rsp)	;  5 bytes
+M00000000000002dc:	movq	%rax, 192(%rbx)	;  7 bytes
+M00000000000002e3:	movq	2561350(%rip), %rax  # 67eb50 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M00000000000002ea:	testq	%rax, %rax	;  3 bytes
+M00000000000002ed:	jne	0x40d614 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x2f4>	;  2 bytes
+M00000000000002ef:	callq	0x4207c0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M00000000000002f4:	leaq	200(%rbx), %r13	;  7 bytes
+M00000000000002fb:	xorps	%xmm0, %xmm0	;  3 bytes
+M00000000000002fe:	movups	%xmm0, (%r13)	;  5 bytes
+M0000000000000303:	movq	$0, 16(%r13)	;  8 bytes
+M000000000000030b:	leaq	224(%rbx), %rcx	;  7 bytes
+M0000000000000312:	movq	%rcx, 16(%rsp)	;  5 bytes
+M0000000000000317:	movq	%rax, 224(%rbx)	;  7 bytes
+M000000000000031e:	movq	2561291(%rip), %rax  # 67eb50 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M0000000000000325:	testq	%rax, %rax	;  3 bytes
+M0000000000000328:	jne	0x40d64f <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x32f>	;  2 bytes
+M000000000000032a:	callq	0x4207c0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M000000000000032f:	leaq	232(%rbx), %rbp	;  7 bytes
+M0000000000000336:	xorps	%xmm0, %xmm0	;  3 bytes
+M0000000000000339:	movups	%xmm0, (%rbp)	;  4 bytes
+M000000000000033d:	movq	$0, 16(%rbp)	;  8 bytes
+M0000000000000345:	leaq	256(%rbx), %rcx	;  7 bytes
+M000000000000034c:	movq	%rcx, 8(%rsp)	;  5 bytes
+M0000000000000351:	movq	%rax, 256(%rbx)	;  7 bytes
+M0000000000000358:	movq	2561233(%rip), %rax  # 67eb50 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M000000000000035f:	testq	%rax, %rax	;  3 bytes
+M0000000000000362:	jne	0x40d689 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x369>	;  2 bytes
+M0000000000000364:	callq	0x4207c0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M0000000000000369:	leaq	264(%rbx), %r15	;  7 bytes
+M0000000000000370:	xorps	%xmm0, %xmm0	;  3 bytes
+M0000000000000373:	movups	%xmm0, (%r15)	;  4 bytes
+M0000000000000377:	movq	$0, 16(%r15)	;  8 bytes
+M000000000000037f:	movq	%rax, 288(%rbx)	;  7 bytes
+M0000000000000386:	movq	2561187(%rip), %rax  # 67eb50 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M000000000000038d:	testq	%rax, %rax	;  3 bytes
+M0000000000000390:	jne	0x40d6b7 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x397>	;  2 bytes
+M0000000000000392:	callq	0x4207c0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M0000000000000397:	movq	$0, 296(%rbx)	; 11 bytes
+M00000000000003a2:	movaps	231767(%rip), %xmm0  # 446020 <__dso_handle+0x8>	;  7 bytes
+M00000000000003a9:	movups	%xmm0, 320(%rbx)	;  7 bytes
+M00000000000003b0:	movq	%rax, 336(%rbx)	;  7 bytes
+M00000000000003b7:	movb	$0, 296(%rbx)	;  7 bytes
+M00000000000003be:	testq	%r14, %r14	;  3 bytes
+M00000000000003c1:	je	0x40d701 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x3e1>	;  2 bytes
+M00000000000003c3:	movb	$0, 376(%rbx)	;  7 bytes
+M00000000000003ca:	movq	%r14, 384(%rbx)	;  7 bytes
+M00000000000003d1:	movb	$0, 392(%rbx)	;  7 bytes
+M00000000000003d8:	movb	$0, 408(%rbx)	;  7 bytes
+M00000000000003df:	jmp	0x40d742 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x422>	;  2 bytes
+M00000000000003e1:	movq	2561096(%rip), %rax  # 67eb50 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M00000000000003e8:	testq	%rax, %rax	;  3 bytes
+M00000000000003eb:	jne	0x40d712 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x3f2>	;  2 bytes
+M00000000000003ed:	callq	0x4207c0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M00000000000003f2:	movb	$0, 376(%rbx)	;  7 bytes
+M00000000000003f9:	movq	%rax, 384(%rbx)	;  7 bytes
+M0000000000000400:	movb	$0, 392(%rbx)	;  7 bytes
+M0000000000000407:	movb	$0, 408(%rbx)	;  7 bytes
+M000000000000040e:	movq	2561051(%rip), %r14  # 67eb50 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M0000000000000415:	testq	%r14, %r14	;  3 bytes
+M0000000000000418:	jne	0x40d742 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x422>	;  2 bytes
+M000000000000041a:	callq	0x4207c0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M000000000000041f:	movq	%rax, %r14	;  3 bytes
+M0000000000000422:	movb	$0, 464(%rbx)	;  7 bytes
+M0000000000000429:	movq	%r14, 472(%rbx)	;  7 bytes
+M0000000000000430:	movl	$0, 480(%rbx)	; 10 bytes
+M000000000000043a:	movb	$0, 484(%rbx)	;  7 bytes
+M0000000000000441:	movb	$0, 488(%rbx)	;  7 bytes
+M0000000000000448:	movb	$0, 492(%rbx)	;  7 bytes
+M000000000000044f:	movb	$0, 496(%rbx)	;  7 bytes
+M0000000000000456:	movl	$0, 500(%rbx)	; 10 bytes
+M0000000000000460:	movb	$0, 504(%rbx)	;  7 bytes
+M0000000000000467:	addq	$104, %rsp	;  4 bytes
+M000000000000046b:	popq	%rbx	;  1 bytes
+M000000000000046c:	popq	%r12	;  2 bytes
+M000000000000046e:	popq	%r13	;  2 bytes
+M0000000000000470:	popq	%r14	;  2 bytes
+M0000000000000472:	popq	%r15	;  2 bytes
+M0000000000000474:	popq	%rbp	;  1 bytes
+M0000000000000475:	retq		;  1 bytes
+M0000000000000476:	movq	%rax, %r14	;  3 bytes
+M0000000000000479:	cmpb	$0, 376(%rbx)	;  7 bytes
+M0000000000000480:	je	0x40d7e9 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x4c9>	;  2 bytes
+M0000000000000482:	movb	$0, 376(%rbx)	;  7 bytes
+M0000000000000489:	movq	344(%rbx), %rsi	;  7 bytes
+M0000000000000490:	testq	%rsi, %rsi	;  3 bytes
+M0000000000000493:	je	0x40d7e9 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x4c9>	;  2 bytes
+M0000000000000495:	movq	368(%rbx), %rdi	;  7 bytes
+M000000000000049c:	movq	(%rdi), %rax	;  3 bytes
+M000000000000049f:	callq	*24(%rax)	;  3 bytes
+M00000000000004a2:	jmp	0x40d7e9 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x4c9>	;  2 bytes
+M00000000000004a4:	movq	%rax, %rdi	;  3 bytes
+M00000000000004a7:	callq	0x4043c0 <__clang_call_terminate>	;  5 bytes
+M00000000000004ac:	movq	%rax, %r14	;  3 bytes
+M00000000000004af:	jmp	0x40d812 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x4f2>	;  2 bytes
+M00000000000004b1:	movq	%rax, %r14	;  3 bytes
+M00000000000004b4:	jmp	0x40d81a <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x4fa>	;  2 bytes
+M00000000000004b6:	movq	%rax, %r14	;  3 bytes
+M00000000000004b9:	jmp	0x40d86a <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x54a>	;  5 bytes
+M00000000000004be:	movq	%rax, %r14	;  3 bytes
+M00000000000004c1:	jmp	0x40d8a5 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x585>	;  5 bytes
+M00000000000004c6:	movq	%rax, %r14	;  3 bytes
+M00000000000004c9:	cmpq	$23, 328(%rbx)	;  8 bytes
+M00000000000004d1:	je	0x40d807 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x4e7>	;  2 bytes
+M00000000000004d3:	movq	296(%rbx), %rsi	;  7 bytes
+M00000000000004da:	movq	336(%rbx), %rdi	;  7 bytes
+M00000000000004e1:	movq	(%rdi), %rax	;  3 bytes
+M00000000000004e4:	callq	*24(%rax)	;  3 bytes
+M00000000000004e7:	movq	$-1, 320(%rbx)	; 11 bytes
+M00000000000004f2:	movq	%r15, %rdi	;  3 bytes
+M00000000000004f5:	callq	0x414be0 <bsl::vector<BloombergLP::balb::Choice1, bsl::allocator<BloombergLP::balb::Choice1> >::~vector()>	;  5 bytes
+M00000000000004fa:	movq	(%rbp), %rbx	;  4 bytes
+M00000000000004fe:	testq	%rbx, %rbx	;  3 bytes
+M0000000000000501:	je	0x40d86a <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x54a>	;  2 bytes
+M0000000000000503:	movq	8(%rbp), %r15	;  4 bytes
+M0000000000000507:	cmpq	%r15, %rbx	;  3 bytes
+M000000000000050a:	jne	0x40d83f <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x51f>	;  2 bytes
+M000000000000050c:	jmp	0x40d859 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x539>	;  2 bytes
+M000000000000050e:	movq	$-1, 24(%rbx)	;  8 bytes
+M0000000000000516:	addq	$48, %rbx	;  4 bytes
+M000000000000051a:	cmpq	%rbx, %r15	;  3 bytes
+M000000000000051d:	je	0x40d855 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x535>	;  2 bytes
+M000000000000051f:	cmpq	$23, 32(%rbx)	;  5 bytes
+M0000000000000524:	je	0x40d82e <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x50e>	;  2 bytes
+M0000000000000526:	movq	(%rbx), %rsi	;  3 bytes
+M0000000000000529:	movq	40(%rbx), %rdi	;  4 bytes
+M000000000000052d:	movq	(%rdi), %rax	;  3 bytes
+M0000000000000530:	callq	*24(%rax)	;  3 bytes
+M0000000000000533:	jmp	0x40d82e <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x50e>	;  2 bytes
+M0000000000000535:	movq	(%rbp), %rbx	;  4 bytes
+M0000000000000539:	movq	8(%rsp), %rax	;  5 bytes
+M000000000000053e:	movq	(%rax), %rdi	;  3 bytes
+M0000000000000541:	movq	(%rdi), %rax	;  3 bytes
+M0000000000000544:	movq	%rbx, %rsi	;  3 bytes
+M0000000000000547:	callq	*24(%rax)	;  3 bytes
+M000000000000054a:	movq	(%r13), %rbx	;  4 bytes
+M000000000000054e:	testq	%rbx, %rbx	;  3 bytes
+M0000000000000551:	je	0x40d8a5 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x585>	;  2 bytes
+M0000000000000553:	movq	8(%r13), %rbp	;  4 bytes
+M0000000000000557:	cmpq	%rbp, %rbx	;  3 bytes
+M000000000000055a:	je	0x40d894 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x574>	;  2 bytes
+M000000000000055c:	movq	%rbx, %rdi	;  3 bytes
+M000000000000055f:	callq	0x406b30 <BloombergLP::balb::Sequence3::~Sequence3()>	;  5 bytes
+M0000000000000564:	addq	$184, %rbx	;  7 bytes
+M000000000000056b:	cmpq	%rbx, %rbp	;  3 bytes
+M000000000000056e:	jne	0x40d87c <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x55c>	;  2 bytes
+M0000000000000570:	movq	(%r13), %rbx	;  4 bytes
+M0000000000000574:	movq	16(%rsp), %rax	;  5 bytes
+M0000000000000579:	movq	(%rax), %rdi	;  3 bytes
+M000000000000057c:	movq	(%rdi), %rax	;  3 bytes
+M000000000000057f:	movq	%rbx, %rsi	;  3 bytes
+M0000000000000582:	callq	*24(%rax)	;  3 bytes
+M0000000000000585:	movq	40(%rsp), %rax	;  5 bytes
+M000000000000058a:	movq	(%rax), %rsi	;  3 bytes
+M000000000000058d:	testq	%rsi, %rsi	;  3 bytes
+M0000000000000590:	je	0x40d8ed <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x5cd>	;  2 bytes
+M0000000000000592:	movq	24(%rsp), %rax	;  5 bytes
+M0000000000000597:	movq	(%rax), %rdi	;  3 bytes
+M000000000000059a:	movq	(%rdi), %rax	;  3 bytes
+M000000000000059d:	callq	*24(%rax)	;  3 bytes
+M00000000000005a0:	jmp	0x40d8ed <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x5cd>	;  2 bytes
+M00000000000005a2:	movq	%rax, %rdi	;  3 bytes
+M00000000000005a5:	callq	0x4043c0 <__clang_call_terminate>	;  5 bytes
+M00000000000005aa:	movq	%rax, %rdi	;  3 bytes
+M00000000000005ad:	callq	0x4043c0 <__clang_call_terminate>	;  5 bytes
+M00000000000005b2:	movq	%rax, %rdi	;  3 bytes
+M00000000000005b5:	callq	0x4043c0 <__clang_call_terminate>	;  5 bytes
+M00000000000005ba:	movq	%rax, %rdi	;  3 bytes
+M00000000000005bd:	callq	0x4043c0 <__clang_call_terminate>	;  5 bytes
+M00000000000005c2:	movq	%rax, %rdi	;  3 bytes
+M00000000000005c5:	callq	0x4043c0 <__clang_call_terminate>	;  5 bytes
+M00000000000005ca:	movq	%rax, %r14	;  3 bytes
+M00000000000005cd:	movq	56(%rsp), %rax	;  5 bytes
+M00000000000005d2:	movq	(%rax), %rsi	;  3 bytes
+M00000000000005d5:	testq	%rsi, %rsi	;  3 bytes
+M00000000000005d8:	je	0x40d915 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x5f5>	;  2 bytes
+M00000000000005da:	movq	32(%rsp), %rax	;  5 bytes
+M00000000000005df:	movq	(%rax), %rdi	;  3 bytes
+M00000000000005e2:	movq	(%rdi), %rax	;  3 bytes
+M00000000000005e5:	callq	*24(%rax)	;  3 bytes
+M00000000000005e8:	jmp	0x40d915 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x5f5>	;  2 bytes
+M00000000000005ea:	movq	%rax, %rdi	;  3 bytes
+M00000000000005ed:	callq	0x4043c0 <__clang_call_terminate>	;  5 bytes
+M00000000000005f2:	movq	%rax, %r14	;  3 bytes
+M00000000000005f5:	movq	(%rsp), %rax	;  4 bytes
+M00000000000005f9:	movq	(%rax), %rbx	;  3 bytes
+M00000000000005fc:	testq	%rbx, %rbx	;  3 bytes
+M00000000000005ff:	je	0x40d97a <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x65a>	;  2 bytes
+M0000000000000601:	movq	(%rsp), %rax	;  4 bytes
+M0000000000000605:	movq	8(%rax), %rbp	;  4 bytes
+M0000000000000609:	cmpq	%rbp, %rbx	;  3 bytes
+M000000000000060c:	jne	0x40d939 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x619>	;  2 bytes
+M000000000000060e:	jmp	0x40d954 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x634>	;  2 bytes
+M0000000000000610:	addq	$32, %rbx	;  4 bytes
+M0000000000000614:	cmpq	%rbx, %rbp	;  3 bytes
+M0000000000000617:	je	0x40d94d <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x62d>	;  2 bytes
+M0000000000000619:	movq	(%rbx), %rsi	;  3 bytes
+M000000000000061c:	testq	%rsi, %rsi	;  3 bytes
+M000000000000061f:	je	0x40d930 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x610>	;  2 bytes
+M0000000000000621:	movq	24(%rbx), %rdi	;  4 bytes
+M0000000000000625:	movq	(%rdi), %rax	;  3 bytes
+M0000000000000628:	callq	*24(%rax)	;  3 bytes
+M000000000000062b:	jmp	0x40d930 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x610>	;  2 bytes
+M000000000000062d:	movq	(%rsp), %rax	;  4 bytes
+M0000000000000631:	movq	(%rax), %rbx	;  3 bytes
+M0000000000000634:	movq	48(%rsp), %rax	;  5 bytes
+M0000000000000639:	movq	(%rax), %rdi	;  3 bytes
+M000000000000063c:	movq	(%rdi), %rax	;  3 bytes
+M000000000000063f:	movq	%rbx, %rsi	;  3 bytes
+M0000000000000642:	callq	*24(%rax)	;  3 bytes
+M0000000000000645:	jmp	0x40d97a <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x65a>	;  2 bytes
+M0000000000000647:	movq	%rax, %rdi	;  3 bytes
+M000000000000064a:	callq	0x4043c0 <__clang_call_terminate>	;  5 bytes
+M000000000000064f:	movq	%rax, %rdi	;  3 bytes
+M0000000000000652:	callq	0x4043c0 <__clang_call_terminate>	;  5 bytes
+M0000000000000657:	movq	%rax, %r14	;  3 bytes
+M000000000000065a:	movq	80(%rsp), %rax	;  5 bytes
+M000000000000065f:	movq	(%rax), %rsi	;  3 bytes
+M0000000000000662:	testq	%rsi, %rsi	;  3 bytes
+M0000000000000665:	je	0x40d9a2 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x682>	;  2 bytes
+M0000000000000667:	movq	64(%rsp), %rax	;  5 bytes
+M000000000000066c:	movq	(%rax), %rdi	;  3 bytes
+M000000000000066f:	movq	(%rdi), %rax	;  3 bytes
+M0000000000000672:	callq	*24(%rax)	;  3 bytes
+M0000000000000675:	jmp	0x40d9a2 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x682>	;  2 bytes
+M0000000000000677:	movq	%rax, %rdi	;  3 bytes
+M000000000000067a:	callq	0x4043c0 <__clang_call_terminate>	;  5 bytes
+M000000000000067f:	movq	%rax, %r14	;  3 bytes
+M0000000000000682:	movq	96(%rsp), %rax	;  5 bytes
+M0000000000000687:	movq	(%rax), %rsi	;  3 bytes
+M000000000000068a:	testq	%rsi, %rsi	;  3 bytes
+M000000000000068d:	je	0x40d9ca <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x6aa>	;  2 bytes
+M000000000000068f:	movq	72(%rsp), %rax	;  5 bytes
+M0000000000000694:	movq	(%rax), %rdi	;  3 bytes
+M0000000000000697:	movq	(%rdi), %rax	;  3 bytes
+M000000000000069a:	callq	*24(%rax)	;  3 bytes
+M000000000000069d:	jmp	0x40d9ca <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x6aa>	;  2 bytes
+M000000000000069f:	movq	%rax, %rdi	;  3 bytes
+M00000000000006a2:	callq	0x4043c0 <__clang_call_terminate>	;  5 bytes
+M00000000000006a7:	movq	%rax, %r14	;  3 bytes
+M00000000000006aa:	movq	(%r12), %rsi	;  4 bytes
+M00000000000006ae:	testq	%rsi, %rsi	;  3 bytes
+M00000000000006b1:	je	0x40d9e1 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)+0x6c1>	;  2 bytes
+M00000000000006b3:	movq	88(%rsp), %rax	;  5 bytes
+M00000000000006b8:	movq	(%rax), %rdi	;  3 bytes
+M00000000000006bb:	movq	(%rdi), %rax	;  3 bytes
+M00000000000006be:	callq	*24(%rax)	;  3 bytes
+M00000000000006c1:	movq	%r14, %rdi	;  3 bytes
+M00000000000006c4:	callq	0x4039f0 <_Unwind_Resume@plt>	;  5 bytes
+M00000000000006c9:	movq	%rax, %rdi	;  3 bytes
+M00000000000006cc:	callq	0x4043c0 <__clang_call_terminate>	;  5 bytes
+M00000000000006d1:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M00000000000006db:	nopl	(%rax,%rax)	;  5 bytes

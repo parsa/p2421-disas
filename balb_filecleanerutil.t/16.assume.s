@@ -1,22 +1,22 @@
 000000000040b8a0 <BloombergLP::bdlma::BufferedSequentialPool::BufferedSequentialPool(char*, unsigned long, unsigned long, BloombergLP::bslma::Allocator*)>:
-0000000000000000: 01	pushq	%rbx
-0000000000000001: 03	movq	%rdi, %rbx
-0000000000000004: 03	movq	%rsi, (%rdi)
-0000000000000007: 04	movq	%rdx, 8(%rdi)
-000000000000000b: 08	movq	$0, 16(%rdi)
-0000000000000013: 06	movw	$4111, 24(%rdi)
-0000000000000019: 04	movq	%rcx, 32(%rdi)
-000000000000001d: 06	movw	$0, 40(%rdi)
-0000000000000023: 03	testq	%r8, %r8
-0000000000000026: 02	jne	0x40b8dc <BloombergLP::bdlma::BufferedSequentialPool::BufferedSequentialPool(char*, unsigned long, unsigned long, BloombergLP::bslma::Allocator*)+0x3c>
-0000000000000028: 07	movq	2499585(%rip), %r8  # 66dcd0 <BloombergLP::bslma::Default::s_defaultAllocator>
-000000000000002f: 03	testq	%r8, %r8
-0000000000000032: 02	jne	0x40b8dc <BloombergLP::bdlma::BufferedSequentialPool::BufferedSequentialPool(char*, unsigned long, unsigned long, BloombergLP::bslma::Allocator*)+0x3c>
-0000000000000034: 05	callq	0x4171b0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-0000000000000039: 03	movq	%rax, %r8
-000000000000003c: 04	movq	%r8, 48(%rbx)
-0000000000000040: 01	popq	%rbx
-0000000000000041: 01	retq	
-0000000000000042: 03	movq	%rax, %rdi
-0000000000000045: 05	callq	0x405000 <_Unwind_Resume@plt>
-000000000000004a: 06	nopw	(%rax,%rax)
+M0000000000000000:	pushq	%rbx	;  1 bytes
+M0000000000000001:	movq	%rdi, %rbx	;  3 bytes
+M0000000000000004:	movq	%rsi, (%rdi)	;  3 bytes
+M0000000000000007:	movq	%rdx, 8(%rdi)	;  4 bytes
+M000000000000000b:	movq	$0, 16(%rdi)	;  8 bytes
+M0000000000000013:	movw	$4111, 24(%rdi)	;  6 bytes
+M0000000000000019:	movq	%rcx, 32(%rdi)	;  4 bytes
+M000000000000001d:	movw	$0, 40(%rdi)	;  6 bytes
+M0000000000000023:	testq	%r8, %r8	;  3 bytes
+M0000000000000026:	jne	0x40b8dc <BloombergLP::bdlma::BufferedSequentialPool::BufferedSequentialPool(char*, unsigned long, unsigned long, BloombergLP::bslma::Allocator*)+0x3c>	;  2 bytes
+M0000000000000028:	movq	2499585(%rip), %r8  # 66dcd0 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M000000000000002f:	testq	%r8, %r8	;  3 bytes
+M0000000000000032:	jne	0x40b8dc <BloombergLP::bdlma::BufferedSequentialPool::BufferedSequentialPool(char*, unsigned long, unsigned long, BloombergLP::bslma::Allocator*)+0x3c>	;  2 bytes
+M0000000000000034:	callq	0x4171b0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M0000000000000039:	movq	%rax, %r8	;  3 bytes
+M000000000000003c:	movq	%r8, 48(%rbx)	;  4 bytes
+M0000000000000040:	popq	%rbx	;  1 bytes
+M0000000000000041:	retq		;  1 bytes
+M0000000000000042:	movq	%rax, %rdi	;  3 bytes
+M0000000000000045:	callq	0x405000 <_Unwind_Resume@plt>	;  5 bytes
+M000000000000004a:	nopw	(%rax,%rax)	;  6 bytes

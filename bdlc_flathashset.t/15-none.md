@@ -2,187 +2,187 @@
 
 ```nasm
 000000000044ed40 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 02	pushq	%r13
-0000000000000007: 02	pushq	%r12
-0000000000000009: 01	pushq	%rbx
-000000000000000a: 04	subq	$24, %rsp
-000000000000000e: 03	movq	%rsi, %rbx
-0000000000000011: 03	movq	%rdi, %r15
-0000000000000014: 04	movq	40(%rdi), %r14
-0000000000000018: 04	movq	56(%rdi), %rdi
-000000000000001c: 03	testq	%rdi, %rdi
-000000000000001f: 02	jne	0x44ed75 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x35>
-0000000000000021: 07	movq	2440480(%rip), %rdi  # 6a2a88 <BloombergLP::bslma::Default::s_defaultAllocator>
-0000000000000028: 03	testq	%rdi, %rdi
-000000000000002b: 02	jne	0x44ed75 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x35>
-000000000000002d: 05	callq	0x457f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-0000000000000032: 03	movq	%rax, %rdi
-0000000000000035: 03	testq	%rbx, %rbx
-0000000000000038: 04	movq	%rdi, (%rsp)
-000000000000003c: 06	je	0x44ee07 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0xc7>
-0000000000000042: 06	movl	$32, %r13d
-0000000000000048: 04	cmpq	$33, %rbx
-000000000000004c: 02	jb	0x44edb3 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x73>
-000000000000004e: 03	decq	%rbx
-0000000000000051: 04	orq	$1, %rbx
-0000000000000055: 04	bsrq	%rbx, %rax
-0000000000000059: 04	xorq	$63, %rax
-000000000000005d: 02	movl	%eax, %ecx
-000000000000005f: 02	negb	%cl
-0000000000000061: 06	movl	$1, %r13d
-0000000000000067: 03	shlq	%cl, %r13
-000000000000006a: 03	testq	%rax, %rax
-000000000000006d: 06	je	0x44ef50 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x210>
-0000000000000073: 08	leaq	(,%r13,4), %rsi
-000000000000007b: 03	movq	(%rdi), %rax
-000000000000007e: 03	movq	%rdi, %rbx
-0000000000000081: 03	callq	*16(%rax)
-0000000000000084: 03	movq	%rax, %r12
-0000000000000087: 03	movq	(%rbx), %rax
-000000000000008a: 03	movq	%rbx, %rdi
-000000000000008d: 03	movq	%r13, %rsi
-0000000000000090: 03	callq	*16(%rax)
-0000000000000093: 03	movq	%rax, %rbx
-0000000000000096: 03	movq	%r13, %rax
-0000000000000099: 04	shrq	$4, %rax
-000000000000009d: 03	decq	%rax
-00000000000000a0: 03	movq	%rax, %rcx
-00000000000000a3: 04	orq	$1, %rcx
-00000000000000a7: 04	bsrq	%rcx, %rbp
-00000000000000ab: 03	xorl	$63, %ebp
-00000000000000ae: 04	cmpq	$1, %rax
-00000000000000b2: 03	adcl	$0, %ebp
-00000000000000b5: 03	movq	%rbx, %rdi
-00000000000000b8: 05	movl	$128, %esi
-00000000000000bd: 03	movq	%r13, %rdx
-00000000000000c0: 05	callq	0x403820 <memset@plt>
-00000000000000c5: 02	jmp	0x44ee11 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0xd1>
-00000000000000c7: 02	xorl	%ebp, %ebp
-00000000000000c9: 03	xorl	%r13d, %r13d
-00000000000000cc: 02	xorl	%ebx, %ebx
-00000000000000ce: 03	xorl	%r12d, %r12d
-00000000000000d1: 04	movq	24(%r15), %rax
-00000000000000d5: 03	testq	%rax, %rax
-00000000000000d8: 05	movq	%rbp, 8(%rsp)
-00000000000000dd: 06	je	0x44ef0c <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x1cc>
-00000000000000e3: 03	movq	%r14, %r9
-00000000000000e6: 02	movl	%ebp, %ecx
-00000000000000e8: 03	shrq	%cl, %r9
-00000000000000eb: 04	shlq	$4, %r9
-00000000000000ef: 04	leaq	-1(%r13), %rdx
-00000000000000f3: 04	andb	$127, %r14b
-00000000000000f7: 02	xorl	%esi, %esi
-00000000000000f9: 02	xorl	%ebp, %ebp
-00000000000000fb: 02	jmp	0x44ee56 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x116>
-00000000000000fd: 03	nopl	(%rax)
-0000000000000100: 04	movq	24(%r15), %rax
-0000000000000104: 05	movq	16(%rsp), %rsi
-0000000000000109: 04	addq	$16, %rsi
-000000000000010d: 03	cmpq	%rax, %rsi
-0000000000000110: 06	jae	0x44ef0e <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x1ce>
-0000000000000116: 04	movq	8(%r15), %r10
-000000000000011a: 06	movdqu	(%r10,%rsi), %xmm0
-0000000000000120: 04	pmovmskb	%xmm0, %ecx
-0000000000000124: 04	cmpw	$-1, %cx
-0000000000000128: 02	je	0x44ee49 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x109>
-000000000000012a: 03	addq	%rsi, %r10
-000000000000012d: 05	movq	%rsi, 16(%rsp)
-0000000000000132: 08	leaq	(,%rsi,4), %r11
-000000000000013a: 03	addq	(%r15), %r11
-000000000000013d: 02	notl	%ecx
-000000000000013f: 03	movzwl	%cx, %eax
-0000000000000142: 02	jmp	0x44eeac <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x16c>
-0000000000000144: 10	nopw	%cs:(%rax,%rax)
-000000000000014e: 02	nop	
-0000000000000150: 02	xorl	%edi, %edi
-0000000000000152: 04	movl	(%r11,%rcx,4), %esi
-0000000000000156: 04	movl	%esi, (%r12,%rdi,4)
-000000000000015a: 04	movb	%r14b, (%rbx,%rdi)
-000000000000015e: 03	incq	%rbp
-0000000000000161: 05	movl	$4294967294, %esi
-0000000000000166: 02	roll	%cl, %esi
-0000000000000168: 02	andl	%esi, %eax
-000000000000016a: 02	je	0x44ee40 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x100>
-000000000000016c: 03	bsfl	%eax, %ecx
-000000000000016f: 05	movb	$-64, (%r10,%rcx)
-0000000000000174: 04	decq	16(%r15)
-0000000000000178: 03	testq	%r13, %r13
-000000000000017b: 02	je	0x44ee90 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x150>
-000000000000017d: 03	movq	%r9, %rdi
-0000000000000180: 02	xorl	%esi, %esi
-0000000000000182: 10	nopw	%cs:(%rax,%rax)
-000000000000018c: 04	nopl	(%rax)
-0000000000000190: 05	movdqu	(%rbx,%rdi), %xmm0
-0000000000000195: 05	pmovmskb	%xmm0, %r8d
-000000000000019a: 04	testw	%r8w, %r8w
-000000000000019e: 02	jne	0x44ef00 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x1c0>
-00000000000001a0: 04	addq	$16, %rdi
-00000000000001a4: 03	andq	%rdx, %rdi
-00000000000001a7: 04	addq	$16, %rsi
-00000000000001ab: 03	cmpq	%r13, %rsi
-00000000000001ae: 02	jb	0x44eed0 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x190>
-00000000000001b0: 03	movq	%r13, %rdi
-00000000000001b3: 02	jmp	0x44ee92 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x152>
-00000000000001b5: 10	nopw	%cs:(%rax,%rax)
-00000000000001bf: 01	nop	
-00000000000001c0: 04	movzwl	%r8w, %esi
-00000000000001c4: 03	bsfl	%esi, %esi
-00000000000001c7: 03	addq	%rsi, %rdi
-00000000000001ca: 02	jmp	0x44ee92 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x152>
-00000000000001cc: 02	xorl	%ebp, %ebp
-00000000000001ce: 03	movq	(%r15), %rsi
-00000000000001d1: 04	movq	56(%r15), %rdi
-00000000000001d5: 03	movq	(%rdi), %rax
-00000000000001d8: 03	callq	*24(%rax)
-00000000000001db: 04	movq	8(%r15), %rsi
-00000000000001df: 04	movq	56(%r15), %rdi
-00000000000001e3: 03	movq	(%rdi), %rax
-00000000000001e6: 03	callq	*24(%rax)
-00000000000001e9: 03	movq	%r12, (%r15)
-00000000000001ec: 04	movq	%rbx, 8(%r15)
-00000000000001f0: 04	movq	%rbp, 16(%r15)
-00000000000001f4: 04	movq	%r13, 24(%r15)
-00000000000001f8: 05	movq	8(%rsp), %rax
-00000000000001fd: 04	movl	%eax, 32(%r15)
-0000000000000201: 04	addq	$24, %rsp
-0000000000000205: 01	popq	%rbx
-0000000000000206: 02	popq	%r12
-0000000000000208: 02	popq	%r13
-000000000000020a: 02	popq	%r14
-000000000000020c: 02	popq	%r15
-000000000000020e: 01	popq	%rbp
-000000000000020f: 01	retq	
-0000000000000210: 03	xorl	%r13d, %r13d
-0000000000000213: 05	jmp	0x44edb3 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x73>
-0000000000000218: 03	movq	%rax, %rbp
-000000000000021b: 03	testq	%r12, %r12
-000000000000021e: 02	je	0x44ef7f <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x23f>
-0000000000000220: 04	movq	(%rsp), %rdi
-0000000000000224: 03	movq	(%rdi), %rax
-0000000000000227: 03	movq	%r12, %rsi
-000000000000022a: 03	callq	*24(%rax)
-000000000000022d: 02	jmp	0x44ef7f <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x23f>
-000000000000022f: 03	movq	%rax, %rdi
-0000000000000232: 05	callq	0x430490 <__clang_call_terminate>
-0000000000000237: 03	movq	%rax, %rbp
-000000000000023a: 03	testq	%r12, %r12
-000000000000023d: 02	jne	0x44ef87 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x247>
-000000000000023f: 03	movq	%rbp, %rdi
-0000000000000242: 05	callq	0x403e30 <_Unwind_Resume@plt>
-0000000000000247: 04	movq	(%rsp), %rdi
-000000000000024b: 03	movq	(%rdi), %rax
-000000000000024e: 03	movq	%rdi, %r14
-0000000000000251: 03	movq	%r12, %rsi
-0000000000000254: 03	callq	*24(%rax)
-0000000000000257: 03	movq	%r14, %rdi
-000000000000025a: 03	movq	(%r14), %rax
-000000000000025d: 03	movq	%rbx, %rsi
-0000000000000260: 03	callq	*24(%rax)
-0000000000000263: 02	jmp	0x44ef7f <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x23f>
-0000000000000265: 03	movq	%rax, %rdi
-0000000000000268: 05	callq	0x430490 <__clang_call_terminate>
-000000000000026d: 03	nopl	(%rax)
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%r13	;  2 bytes
+M0000000000000007:	pushq	%r12	;  2 bytes
+M0000000000000009:	pushq	%rbx	;  1 bytes
+M000000000000000a:	subq	$24, %rsp	;  4 bytes
+M000000000000000e:	movq	%rsi, %rbx	;  3 bytes
+M0000000000000011:	movq	%rdi, %r15	;  3 bytes
+M0000000000000014:	movq	40(%rdi), %r14	;  4 bytes
+M0000000000000018:	movq	56(%rdi), %rdi	;  4 bytes
+M000000000000001c:	testq	%rdi, %rdi	;  3 bytes
+M000000000000001f:	jne	0x44ed75 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x35>	;  2 bytes
+M0000000000000021:	movq	2440480(%rip), %rdi  # 6a2a88 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M0000000000000028:	testq	%rdi, %rdi	;  3 bytes
+M000000000000002b:	jne	0x44ed75 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x35>	;  2 bytes
+M000000000000002d:	callq	0x457f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M0000000000000032:	movq	%rax, %rdi	;  3 bytes
+M0000000000000035:	testq	%rbx, %rbx	;  3 bytes
+M0000000000000038:	movq	%rdi, (%rsp)	;  4 bytes
+M000000000000003c:	je	0x44ee07 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0xc7>	;  6 bytes
+M0000000000000042:	movl	$32, %r13d	;  6 bytes
+M0000000000000048:	cmpq	$33, %rbx	;  4 bytes
+M000000000000004c:	jb	0x44edb3 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x73>	;  2 bytes
+M000000000000004e:	decq	%rbx	;  3 bytes
+M0000000000000051:	orq	$1, %rbx	;  4 bytes
+M0000000000000055:	bsrq	%rbx, %rax	;  4 bytes
+M0000000000000059:	xorq	$63, %rax	;  4 bytes
+M000000000000005d:	movl	%eax, %ecx	;  2 bytes
+M000000000000005f:	negb	%cl	;  2 bytes
+M0000000000000061:	movl	$1, %r13d	;  6 bytes
+M0000000000000067:	shlq	%cl, %r13	;  3 bytes
+M000000000000006a:	testq	%rax, %rax	;  3 bytes
+M000000000000006d:	je	0x44ef50 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x210>	;  6 bytes
+M0000000000000073:	leaq	(,%r13,4), %rsi	;  8 bytes
+M000000000000007b:	movq	(%rdi), %rax	;  3 bytes
+M000000000000007e:	movq	%rdi, %rbx	;  3 bytes
+M0000000000000081:	callq	*16(%rax)	;  3 bytes
+M0000000000000084:	movq	%rax, %r12	;  3 bytes
+M0000000000000087:	movq	(%rbx), %rax	;  3 bytes
+M000000000000008a:	movq	%rbx, %rdi	;  3 bytes
+M000000000000008d:	movq	%r13, %rsi	;  3 bytes
+M0000000000000090:	callq	*16(%rax)	;  3 bytes
+M0000000000000093:	movq	%rax, %rbx	;  3 bytes
+M0000000000000096:	movq	%r13, %rax	;  3 bytes
+M0000000000000099:	shrq	$4, %rax	;  4 bytes
+M000000000000009d:	decq	%rax	;  3 bytes
+M00000000000000a0:	movq	%rax, %rcx	;  3 bytes
+M00000000000000a3:	orq	$1, %rcx	;  4 bytes
+M00000000000000a7:	bsrq	%rcx, %rbp	;  4 bytes
+M00000000000000ab:	xorl	$63, %ebp	;  3 bytes
+M00000000000000ae:	cmpq	$1, %rax	;  4 bytes
+M00000000000000b2:	adcl	$0, %ebp	;  3 bytes
+M00000000000000b5:	movq	%rbx, %rdi	;  3 bytes
+M00000000000000b8:	movl	$128, %esi	;  5 bytes
+M00000000000000bd:	movq	%r13, %rdx	;  3 bytes
+M00000000000000c0:	callq	0x403820 <memset@plt>	;  5 bytes
+M00000000000000c5:	jmp	0x44ee11 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0xd1>	;  2 bytes
+M00000000000000c7:	xorl	%ebp, %ebp	;  2 bytes
+M00000000000000c9:	xorl	%r13d, %r13d	;  3 bytes
+M00000000000000cc:	xorl	%ebx, %ebx	;  2 bytes
+M00000000000000ce:	xorl	%r12d, %r12d	;  3 bytes
+M00000000000000d1:	movq	24(%r15), %rax	;  4 bytes
+M00000000000000d5:	testq	%rax, %rax	;  3 bytes
+M00000000000000d8:	movq	%rbp, 8(%rsp)	;  5 bytes
+M00000000000000dd:	je	0x44ef0c <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x1cc>	;  6 bytes
+M00000000000000e3:	movq	%r14, %r9	;  3 bytes
+M00000000000000e6:	movl	%ebp, %ecx	;  2 bytes
+M00000000000000e8:	shrq	%cl, %r9	;  3 bytes
+M00000000000000eb:	shlq	$4, %r9	;  4 bytes
+M00000000000000ef:	leaq	-1(%r13), %rdx	;  4 bytes
+M00000000000000f3:	andb	$127, %r14b	;  4 bytes
+M00000000000000f7:	xorl	%esi, %esi	;  2 bytes
+M00000000000000f9:	xorl	%ebp, %ebp	;  2 bytes
+M00000000000000fb:	jmp	0x44ee56 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x116>	;  2 bytes
+M00000000000000fd:	nopl	(%rax)	;  3 bytes
+M0000000000000100:	movq	24(%r15), %rax	;  4 bytes
+M0000000000000104:	movq	16(%rsp), %rsi	;  5 bytes
+M0000000000000109:	addq	$16, %rsi	;  4 bytes
+M000000000000010d:	cmpq	%rax, %rsi	;  3 bytes
+M0000000000000110:	jae	0x44ef0e <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x1ce>	;  6 bytes
+M0000000000000116:	movq	8(%r15), %r10	;  4 bytes
+M000000000000011a:	movdqu	(%r10,%rsi), %xmm0	;  6 bytes
+M0000000000000120:	pmovmskb	%xmm0, %ecx	;  4 bytes
+M0000000000000124:	cmpw	$-1, %cx	;  4 bytes
+M0000000000000128:	je	0x44ee49 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x109>	;  2 bytes
+M000000000000012a:	addq	%rsi, %r10	;  3 bytes
+M000000000000012d:	movq	%rsi, 16(%rsp)	;  5 bytes
+M0000000000000132:	leaq	(,%rsi,4), %r11	;  8 bytes
+M000000000000013a:	addq	(%r15), %r11	;  3 bytes
+M000000000000013d:	notl	%ecx	;  2 bytes
+M000000000000013f:	movzwl	%cx, %eax	;  3 bytes
+M0000000000000142:	jmp	0x44eeac <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x16c>	;  2 bytes
+M0000000000000144:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000014e:	nop		;  2 bytes
+M0000000000000150:	xorl	%edi, %edi	;  2 bytes
+M0000000000000152:	movl	(%r11,%rcx,4), %esi	;  4 bytes
+M0000000000000156:	movl	%esi, (%r12,%rdi,4)	;  4 bytes
+M000000000000015a:	movb	%r14b, (%rbx,%rdi)	;  4 bytes
+M000000000000015e:	incq	%rbp	;  3 bytes
+M0000000000000161:	movl	$4294967294, %esi	;  5 bytes
+M0000000000000166:	roll	%cl, %esi	;  2 bytes
+M0000000000000168:	andl	%esi, %eax	;  2 bytes
+M000000000000016a:	je	0x44ee40 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x100>	;  2 bytes
+M000000000000016c:	bsfl	%eax, %ecx	;  3 bytes
+M000000000000016f:	movb	$-64, (%r10,%rcx)	;  5 bytes
+M0000000000000174:	decq	16(%r15)	;  4 bytes
+M0000000000000178:	testq	%r13, %r13	;  3 bytes
+M000000000000017b:	je	0x44ee90 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x150>	;  2 bytes
+M000000000000017d:	movq	%r9, %rdi	;  3 bytes
+M0000000000000180:	xorl	%esi, %esi	;  2 bytes
+M0000000000000182:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000018c:	nopl	(%rax)	;  4 bytes
+M0000000000000190:	movdqu	(%rbx,%rdi), %xmm0	;  5 bytes
+M0000000000000195:	pmovmskb	%xmm0, %r8d	;  5 bytes
+M000000000000019a:	testw	%r8w, %r8w	;  4 bytes
+M000000000000019e:	jne	0x44ef00 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x1c0>	;  2 bytes
+M00000000000001a0:	addq	$16, %rdi	;  4 bytes
+M00000000000001a4:	andq	%rdx, %rdi	;  3 bytes
+M00000000000001a7:	addq	$16, %rsi	;  4 bytes
+M00000000000001ab:	cmpq	%r13, %rsi	;  3 bytes
+M00000000000001ae:	jb	0x44eed0 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x190>	;  2 bytes
+M00000000000001b0:	movq	%r13, %rdi	;  3 bytes
+M00000000000001b3:	jmp	0x44ee92 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x152>	;  2 bytes
+M00000000000001b5:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M00000000000001bf:	nop		;  1 bytes
+M00000000000001c0:	movzwl	%r8w, %esi	;  4 bytes
+M00000000000001c4:	bsfl	%esi, %esi	;  3 bytes
+M00000000000001c7:	addq	%rsi, %rdi	;  3 bytes
+M00000000000001ca:	jmp	0x44ee92 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x152>	;  2 bytes
+M00000000000001cc:	xorl	%ebp, %ebp	;  2 bytes
+M00000000000001ce:	movq	(%r15), %rsi	;  3 bytes
+M00000000000001d1:	movq	56(%r15), %rdi	;  4 bytes
+M00000000000001d5:	movq	(%rdi), %rax	;  3 bytes
+M00000000000001d8:	callq	*24(%rax)	;  3 bytes
+M00000000000001db:	movq	8(%r15), %rsi	;  4 bytes
+M00000000000001df:	movq	56(%r15), %rdi	;  4 bytes
+M00000000000001e3:	movq	(%rdi), %rax	;  3 bytes
+M00000000000001e6:	callq	*24(%rax)	;  3 bytes
+M00000000000001e9:	movq	%r12, (%r15)	;  3 bytes
+M00000000000001ec:	movq	%rbx, 8(%r15)	;  4 bytes
+M00000000000001f0:	movq	%rbp, 16(%r15)	;  4 bytes
+M00000000000001f4:	movq	%r13, 24(%r15)	;  4 bytes
+M00000000000001f8:	movq	8(%rsp), %rax	;  5 bytes
+M00000000000001fd:	movl	%eax, 32(%r15)	;  4 bytes
+M0000000000000201:	addq	$24, %rsp	;  4 bytes
+M0000000000000205:	popq	%rbx	;  1 bytes
+M0000000000000206:	popq	%r12	;  2 bytes
+M0000000000000208:	popq	%r13	;  2 bytes
+M000000000000020a:	popq	%r14	;  2 bytes
+M000000000000020c:	popq	%r15	;  2 bytes
+M000000000000020e:	popq	%rbp	;  1 bytes
+M000000000000020f:	retq		;  1 bytes
+M0000000000000210:	xorl	%r13d, %r13d	;  3 bytes
+M0000000000000213:	jmp	0x44edb3 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x73>	;  5 bytes
+M0000000000000218:	movq	%rax, %rbp	;  3 bytes
+M000000000000021b:	testq	%r12, %r12	;  3 bytes
+M000000000000021e:	je	0x44ef7f <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x23f>	;  2 bytes
+M0000000000000220:	movq	(%rsp), %rdi	;  4 bytes
+M0000000000000224:	movq	(%rdi), %rax	;  3 bytes
+M0000000000000227:	movq	%r12, %rsi	;  3 bytes
+M000000000000022a:	callq	*24(%rax)	;  3 bytes
+M000000000000022d:	jmp	0x44ef7f <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x23f>	;  2 bytes
+M000000000000022f:	movq	%rax, %rdi	;  3 bytes
+M0000000000000232:	callq	0x430490 <__clang_call_terminate>	;  5 bytes
+M0000000000000237:	movq	%rax, %rbp	;  3 bytes
+M000000000000023a:	testq	%r12, %r12	;  3 bytes
+M000000000000023d:	jne	0x44ef87 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x247>	;  2 bytes
+M000000000000023f:	movq	%rbp, %rdi	;  3 bytes
+M0000000000000242:	callq	0x403e30 <_Unwind_Resume@plt>	;  5 bytes
+M0000000000000247:	movq	(%rsp), %rdi	;  4 bytes
+M000000000000024b:	movq	(%rdi), %rax	;  3 bytes
+M000000000000024e:	movq	%rdi, %r14	;  3 bytes
+M0000000000000251:	movq	%r12, %rsi	;  3 bytes
+M0000000000000254:	callq	*24(%rax)	;  3 bytes
+M0000000000000257:	movq	%r14, %rdi	;  3 bytes
+M000000000000025a:	movq	(%r14), %rax	;  3 bytes
+M000000000000025d:	movq	%rbx, %rsi	;  3 bytes
+M0000000000000260:	callq	*24(%rax)	;  3 bytes
+M0000000000000263:	jmp	0x44ef7f <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)+0x23f>	;  2 bytes
+M0000000000000265:	movq	%rax, %rdi	;  3 bytes
+M0000000000000268:	callq	0x430490 <__clang_call_terminate>	;  5 bytes
+M000000000000026d:	nopl	(%rax)	;  3 bytes
 ```

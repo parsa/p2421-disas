@@ -2,206 +2,206 @@
 
 ```nasm
 0000000000468e90 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)>:
-0000000000000000: 02	pushq	%r15
-0000000000000002: 02	pushq	%r14
-0000000000000004: 02	pushq	%r13
-0000000000000006: 02	pushq	%r12
-0000000000000008: 01	pushq	%rbx
-0000000000000009: 03	movq	%rsi, %r15
-000000000000000c: 03	movq	%rdi, %r13
-000000000000000f: 02	movl	(%rdi), %eax
-0000000000000011: 03	cmpl	$12, %eax
-0000000000000014: 06	je	0x468f93 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x103>
-000000000000001a: 03	cmpl	$4, %eax
-000000000000001d: 06	jne	0x46906a <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x1da>
-0000000000000023: 04	movq	32(%r13), %r12
-0000000000000027: 04	movq	(%r12), %rax
-000000000000002b: 05	movl	$96, %esi
-0000000000000030: 03	movq	%r12, %rdi
-0000000000000033: 03	callq	*16(%rax)
-0000000000000036: 03	movq	%rax, %rbx
-0000000000000039: 03	movq	%rax, %r14
-000000000000003c: 04	movq	32(%r13), %rax
-0000000000000040: 07	movq	$4918368, (%rbx)
-0000000000000047: 03	testq	%rax, %rax
-000000000000004a: 02	jne	0x468eed <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x5d>
-000000000000004c: 07	movq	2739525(%rip), %rax  # 705c28 <BloombergLP::bslma::Default::s_defaultAllocator>
-0000000000000053: 03	testq	%rax, %rax
-0000000000000056: 02	jne	0x468eed <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x5d>
-0000000000000058: 05	callq	0x47ce20 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-000000000000005d: 04	movq	%rax, 64(%r14)
-0000000000000061: 03	xorps	%xmm0, %xmm0
-0000000000000064: 05	movups	%xmm0, 72(%r14)
-0000000000000069: 04	addq	$16, %rbx
-000000000000006d: 03	movq	%rbx, %rdi
-0000000000000070: 03	movq	%r15, %rsi
-0000000000000073: 05	callq	0x47fcd0 <BloombergLP::bslstl::Function_Rep::copyInit(BloombergLP::bslstl::Function_Rep const&)>
-0000000000000078: 04	movq	32(%r13), %r15
-000000000000007c: 03	movq	%r15, %r12
-000000000000007f: 03	testq	%r15, %r15
-0000000000000082: 02	jne	0x468f28 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x98>
-0000000000000084: 07	movq	2739469(%rip), %r12  # 705c28 <BloombergLP::bslma::Default::s_defaultAllocator>
-000000000000008b: 03	testq	%r12, %r12
-000000000000008e: 02	jne	0x468f28 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x98>
-0000000000000090: 05	callq	0x47ce20 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-0000000000000095: 03	movq	%rax, %r12
-0000000000000098: 04	movq	(%r12), %rax
-000000000000009c: 05	movl	$40, %esi
-00000000000000a1: 03	movq	%r12, %rdi
-00000000000000a4: 03	callq	*16(%rax)
-00000000000000a7: 03	movq	%rax, %rbx
-00000000000000aa: 10	movabsq	$4294967298, %rax
-00000000000000b4: 04	movq	%rax, 8(%rbx)
-00000000000000b8: 07	movq	$4928104, (%rbx)
-00000000000000bf: 03	testq	%r15, %r15
-00000000000000c2: 02	jne	0x468f68 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0xd8>
-00000000000000c4: 07	movq	2739405(%rip), %rax  # 705c28 <BloombergLP::bslma::Default::s_defaultAllocator>
-00000000000000cb: 03	testq	%rax, %rax
-00000000000000ce: 02	jne	0x468f65 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0xd5>
-00000000000000d0: 05	callq	0x47ce20 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-00000000000000d5: 03	movq	%rax, %r15
-00000000000000d8: 04	movq	%r15, 16(%rbx)
-00000000000000dc: 04	movq	%r14, 24(%rbx)
-00000000000000e0: 04	movq	%r12, 32(%rbx)
-00000000000000e4: 04	movq	%r14, 16(%r13)
-00000000000000e8: 04	movq	24(%r13), %rdi
-00000000000000ec: 04	movq	%rbx, 24(%r13)
-00000000000000f0: 03	testq	%rdi, %rdi
-00000000000000f3: 06	je	0x46906a <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x1da>
-00000000000000f9: 05	callq	0x47d740 <BloombergLP::bslma::SharedPtrRep::releaseRef()>
-00000000000000fe: 05	jmp	0x46906a <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x1da>
-0000000000000103: 04	movq	32(%r13), %r12
-0000000000000107: 04	movq	(%r12), %rax
-000000000000010b: 05	movl	$96, %esi
-0000000000000110: 03	movq	%r12, %rdi
-0000000000000113: 03	callq	*16(%rax)
-0000000000000116: 03	movq	%rax, %rbx
-0000000000000119: 03	movq	%rax, %r14
-000000000000011c: 04	movq	32(%r13), %rax
-0000000000000120: 07	movq	$4920264, (%rbx)
-0000000000000127: 03	testq	%rax, %rax
-000000000000012a: 02	jne	0x468fcd <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x13d>
-000000000000012c: 07	movq	2739301(%rip), %rax  # 705c28 <BloombergLP::bslma::Default::s_defaultAllocator>
-0000000000000133: 03	testq	%rax, %rax
-0000000000000136: 02	jne	0x468fcd <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x13d>
-0000000000000138: 05	callq	0x47ce20 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-000000000000013d: 04	movq	%rax, 64(%r14)
-0000000000000141: 03	xorps	%xmm0, %xmm0
-0000000000000144: 05	movups	%xmm0, 72(%r14)
-0000000000000149: 04	addq	$16, %rbx
-000000000000014d: 03	movq	%rbx, %rdi
-0000000000000150: 03	movq	%r15, %rsi
-0000000000000153: 05	callq	0x47fcd0 <BloombergLP::bslstl::Function_Rep::copyInit(BloombergLP::bslstl::Function_Rep const&)>
-0000000000000158: 04	movq	32(%r13), %r15
-000000000000015c: 03	movq	%r15, %r12
-000000000000015f: 03	testq	%r15, %r15
-0000000000000162: 02	jne	0x469008 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x178>
-0000000000000164: 07	movq	2739245(%rip), %r12  # 705c28 <BloombergLP::bslma::Default::s_defaultAllocator>
-000000000000016b: 03	testq	%r12, %r12
-000000000000016e: 02	jne	0x469008 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x178>
-0000000000000170: 05	callq	0x47ce20 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-0000000000000175: 03	movq	%rax, %r12
-0000000000000178: 04	movq	(%r12), %rax
-000000000000017c: 05	movl	$40, %esi
-0000000000000181: 03	movq	%r12, %rdi
-0000000000000184: 03	callq	*16(%rax)
-0000000000000187: 03	movq	%rax, %rbx
-000000000000018a: 10	movabsq	$4294967298, %rax
-0000000000000194: 04	movq	%rax, 8(%rbx)
-0000000000000198: 07	movq	$4928384, (%rbx)
-000000000000019f: 03	testq	%r15, %r15
-00000000000001a2: 02	jne	0x469048 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x1b8>
-00000000000001a4: 07	movq	2739181(%rip), %rax  # 705c28 <BloombergLP::bslma::Default::s_defaultAllocator>
-00000000000001ab: 03	testq	%rax, %rax
-00000000000001ae: 02	jne	0x469045 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x1b5>
-00000000000001b0: 05	callq	0x47ce20 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-00000000000001b5: 03	movq	%rax, %r15
-00000000000001b8: 04	movq	%r15, 16(%rbx)
-00000000000001bc: 04	movq	%r14, 24(%rbx)
-00000000000001c0: 04	movq	%r12, 32(%rbx)
-00000000000001c4: 04	movq	%r14, 16(%r13)
-00000000000001c8: 04	movq	24(%r13), %rdi
-00000000000001cc: 04	movq	%rbx, 24(%r13)
-00000000000001d0: 03	testq	%rdi, %rdi
-00000000000001d3: 02	je	0x46906a <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x1da>
-00000000000001d5: 05	callq	0x47d740 <BloombergLP::bslma::SharedPtrRep::releaseRef()>
-00000000000001da: 01	popq	%rbx
-00000000000001db: 02	popq	%r12
-00000000000001dd: 02	popq	%r13
-00000000000001df: 02	popq	%r14
-00000000000001e1: 02	popq	%r15
-00000000000001e3: 01	retq	
-00000000000001e4: 03	movq	%rax, %r13
-00000000000001e7: 04	movq	(%r12), %rax
-00000000000001eb: 03	movq	%r12, %rdi
-00000000000001ee: 03	movq	%rbx, %rsi
-00000000000001f1: 03	callq	*24(%rax)
-00000000000001f4: 05	jmp	0x46910f <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x27f>
-00000000000001f9: 03	movq	%rax, %rdi
-00000000000001fc: 05	callq	0x450f10 <__clang_call_terminate>
-0000000000000201: 03	movq	%rax, %r13
-0000000000000204: 02	jmp	0x4690d3 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x243>
-0000000000000206: 03	movq	%rax, %r13
-0000000000000209: 04	movq	(%r12), %rax
-000000000000020d: 03	movq	%r12, %rdi
-0000000000000210: 03	movq	%rbx, %rsi
-0000000000000213: 03	callq	*24(%rax)
-0000000000000216: 05	jmp	0x469137 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x2a7>
-000000000000021b: 03	movq	%rax, %rdi
-000000000000021e: 05	callq	0x450f10 <__clang_call_terminate>
-0000000000000223: 03	movq	%rax, %r13
-0000000000000226: 02	jmp	0x4690f5 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x265>
-0000000000000228: 03	movq	%rax, %rdi
-000000000000022b: 05	callq	0x450f10 <__clang_call_terminate>
-0000000000000230: 03	movq	%rax, %rdi
-0000000000000233: 05	callq	0x450f10 <__clang_call_terminate>
-0000000000000238: 03	movq	%rax, %r13
-000000000000023b: 03	movq	%rbx, %rdi
-000000000000023e: 05	callq	0x47fc40 <BloombergLP::bslstl::Function_Rep::~Function_Rep()>
-0000000000000243: 04	movq	(%r12), %rax
-0000000000000247: 03	movq	%r12, %rdi
-000000000000024a: 03	movq	%r14, %rsi
-000000000000024d: 03	callq	*24(%rax)
-0000000000000250: 02	jmp	0x469152 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x2c2>
-0000000000000252: 03	movq	%rax, %rdi
-0000000000000255: 05	callq	0x450f10 <__clang_call_terminate>
-000000000000025a: 03	movq	%rax, %r13
-000000000000025d: 03	movq	%rbx, %rdi
-0000000000000260: 05	callq	0x47fc40 <BloombergLP::bslstl::Function_Rep::~Function_Rep()>
-0000000000000265: 04	movq	(%r12), %rax
-0000000000000269: 03	movq	%r12, %rdi
-000000000000026c: 03	movq	%r14, %rsi
-000000000000026f: 03	callq	*24(%rax)
-0000000000000272: 02	jmp	0x469152 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x2c2>
-0000000000000274: 03	movq	%rax, %rdi
-0000000000000277: 05	callq	0x450f10 <__clang_call_terminate>
-000000000000027c: 03	movq	%rax, %r13
-000000000000027f: 03	movq	(%r14), %rax
-0000000000000282: 04	movq	-16(%rax), %rbx
-0000000000000286: 03	addq	%r14, %rbx
-0000000000000289: 03	movq	%r14, %rdi
-000000000000028c: 02	callq	*(%rax)
-000000000000028e: 03	movq	(%r15), %rax
-0000000000000291: 03	movq	%r15, %rdi
-0000000000000294: 03	movq	%rbx, %rsi
-0000000000000297: 03	callq	*24(%rax)
-000000000000029a: 02	jmp	0x469152 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x2c2>
-000000000000029c: 03	movq	%rax, %rdi
-000000000000029f: 05	callq	0x450f10 <__clang_call_terminate>
-00000000000002a4: 03	movq	%rax, %r13
-00000000000002a7: 03	movq	(%r14), %rax
-00000000000002aa: 04	movq	-16(%rax), %rbx
-00000000000002ae: 03	addq	%r14, %rbx
-00000000000002b1: 03	movq	%r14, %rdi
-00000000000002b4: 02	callq	*(%rax)
-00000000000002b6: 03	movq	(%r15), %rax
-00000000000002b9: 03	movq	%r15, %rdi
-00000000000002bc: 03	movq	%rbx, %rsi
-00000000000002bf: 03	callq	*24(%rax)
-00000000000002c2: 03	movq	%r13, %rdi
-00000000000002c5: 05	callq	0x404c00 <_Unwind_Resume@plt>
-00000000000002ca: 03	movq	%rax, %rdi
-00000000000002cd: 05	callq	0x450f10 <__clang_call_terminate>
-00000000000002d2: 10	nopw	%cs:(%rax,%rax)
-00000000000002dc: 04	nopl	(%rax)
+M0000000000000000:	pushq	%r15	;  2 bytes
+M0000000000000002:	pushq	%r14	;  2 bytes
+M0000000000000004:	pushq	%r13	;  2 bytes
+M0000000000000006:	pushq	%r12	;  2 bytes
+M0000000000000008:	pushq	%rbx	;  1 bytes
+M0000000000000009:	movq	%rsi, %r15	;  3 bytes
+M000000000000000c:	movq	%rdi, %r13	;  3 bytes
+M000000000000000f:	movl	(%rdi), %eax	;  2 bytes
+M0000000000000011:	cmpl	$12, %eax	;  3 bytes
+M0000000000000014:	je	0x468f93 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x103>	;  6 bytes
+M000000000000001a:	cmpl	$4, %eax	;  3 bytes
+M000000000000001d:	jne	0x46906a <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x1da>	;  6 bytes
+M0000000000000023:	movq	32(%r13), %r12	;  4 bytes
+M0000000000000027:	movq	(%r12), %rax	;  4 bytes
+M000000000000002b:	movl	$96, %esi	;  5 bytes
+M0000000000000030:	movq	%r12, %rdi	;  3 bytes
+M0000000000000033:	callq	*16(%rax)	;  3 bytes
+M0000000000000036:	movq	%rax, %rbx	;  3 bytes
+M0000000000000039:	movq	%rax, %r14	;  3 bytes
+M000000000000003c:	movq	32(%r13), %rax	;  4 bytes
+M0000000000000040:	movq	$4918368, (%rbx)	;  7 bytes
+M0000000000000047:	testq	%rax, %rax	;  3 bytes
+M000000000000004a:	jne	0x468eed <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x5d>	;  2 bytes
+M000000000000004c:	movq	2739525(%rip), %rax  # 705c28 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M0000000000000053:	testq	%rax, %rax	;  3 bytes
+M0000000000000056:	jne	0x468eed <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x5d>	;  2 bytes
+M0000000000000058:	callq	0x47ce20 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M000000000000005d:	movq	%rax, 64(%r14)	;  4 bytes
+M0000000000000061:	xorps	%xmm0, %xmm0	;  3 bytes
+M0000000000000064:	movups	%xmm0, 72(%r14)	;  5 bytes
+M0000000000000069:	addq	$16, %rbx	;  4 bytes
+M000000000000006d:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000070:	movq	%r15, %rsi	;  3 bytes
+M0000000000000073:	callq	0x47fcd0 <BloombergLP::bslstl::Function_Rep::copyInit(BloombergLP::bslstl::Function_Rep const&)>	;  5 bytes
+M0000000000000078:	movq	32(%r13), %r15	;  4 bytes
+M000000000000007c:	movq	%r15, %r12	;  3 bytes
+M000000000000007f:	testq	%r15, %r15	;  3 bytes
+M0000000000000082:	jne	0x468f28 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x98>	;  2 bytes
+M0000000000000084:	movq	2739469(%rip), %r12  # 705c28 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M000000000000008b:	testq	%r12, %r12	;  3 bytes
+M000000000000008e:	jne	0x468f28 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x98>	;  2 bytes
+M0000000000000090:	callq	0x47ce20 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M0000000000000095:	movq	%rax, %r12	;  3 bytes
+M0000000000000098:	movq	(%r12), %rax	;  4 bytes
+M000000000000009c:	movl	$40, %esi	;  5 bytes
+M00000000000000a1:	movq	%r12, %rdi	;  3 bytes
+M00000000000000a4:	callq	*16(%rax)	;  3 bytes
+M00000000000000a7:	movq	%rax, %rbx	;  3 bytes
+M00000000000000aa:	movabsq	$4294967298, %rax	; 10 bytes
+M00000000000000b4:	movq	%rax, 8(%rbx)	;  4 bytes
+M00000000000000b8:	movq	$4928104, (%rbx)	;  7 bytes
+M00000000000000bf:	testq	%r15, %r15	;  3 bytes
+M00000000000000c2:	jne	0x468f68 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0xd8>	;  2 bytes
+M00000000000000c4:	movq	2739405(%rip), %rax  # 705c28 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M00000000000000cb:	testq	%rax, %rax	;  3 bytes
+M00000000000000ce:	jne	0x468f65 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0xd5>	;  2 bytes
+M00000000000000d0:	callq	0x47ce20 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M00000000000000d5:	movq	%rax, %r15	;  3 bytes
+M00000000000000d8:	movq	%r15, 16(%rbx)	;  4 bytes
+M00000000000000dc:	movq	%r14, 24(%rbx)	;  4 bytes
+M00000000000000e0:	movq	%r12, 32(%rbx)	;  4 bytes
+M00000000000000e4:	movq	%r14, 16(%r13)	;  4 bytes
+M00000000000000e8:	movq	24(%r13), %rdi	;  4 bytes
+M00000000000000ec:	movq	%rbx, 24(%r13)	;  4 bytes
+M00000000000000f0:	testq	%rdi, %rdi	;  3 bytes
+M00000000000000f3:	je	0x46906a <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x1da>	;  6 bytes
+M00000000000000f9:	callq	0x47d740 <BloombergLP::bslma::SharedPtrRep::releaseRef()>	;  5 bytes
+M00000000000000fe:	jmp	0x46906a <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x1da>	;  5 bytes
+M0000000000000103:	movq	32(%r13), %r12	;  4 bytes
+M0000000000000107:	movq	(%r12), %rax	;  4 bytes
+M000000000000010b:	movl	$96, %esi	;  5 bytes
+M0000000000000110:	movq	%r12, %rdi	;  3 bytes
+M0000000000000113:	callq	*16(%rax)	;  3 bytes
+M0000000000000116:	movq	%rax, %rbx	;  3 bytes
+M0000000000000119:	movq	%rax, %r14	;  3 bytes
+M000000000000011c:	movq	32(%r13), %rax	;  4 bytes
+M0000000000000120:	movq	$4920264, (%rbx)	;  7 bytes
+M0000000000000127:	testq	%rax, %rax	;  3 bytes
+M000000000000012a:	jne	0x468fcd <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x13d>	;  2 bytes
+M000000000000012c:	movq	2739301(%rip), %rax  # 705c28 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M0000000000000133:	testq	%rax, %rax	;  3 bytes
+M0000000000000136:	jne	0x468fcd <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x13d>	;  2 bytes
+M0000000000000138:	callq	0x47ce20 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M000000000000013d:	movq	%rax, 64(%r14)	;  4 bytes
+M0000000000000141:	xorps	%xmm0, %xmm0	;  3 bytes
+M0000000000000144:	movups	%xmm0, 72(%r14)	;  5 bytes
+M0000000000000149:	addq	$16, %rbx	;  4 bytes
+M000000000000014d:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000150:	movq	%r15, %rsi	;  3 bytes
+M0000000000000153:	callq	0x47fcd0 <BloombergLP::bslstl::Function_Rep::copyInit(BloombergLP::bslstl::Function_Rep const&)>	;  5 bytes
+M0000000000000158:	movq	32(%r13), %r15	;  4 bytes
+M000000000000015c:	movq	%r15, %r12	;  3 bytes
+M000000000000015f:	testq	%r15, %r15	;  3 bytes
+M0000000000000162:	jne	0x469008 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x178>	;  2 bytes
+M0000000000000164:	movq	2739245(%rip), %r12  # 705c28 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M000000000000016b:	testq	%r12, %r12	;  3 bytes
+M000000000000016e:	jne	0x469008 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x178>	;  2 bytes
+M0000000000000170:	callq	0x47ce20 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M0000000000000175:	movq	%rax, %r12	;  3 bytes
+M0000000000000178:	movq	(%r12), %rax	;  4 bytes
+M000000000000017c:	movl	$40, %esi	;  5 bytes
+M0000000000000181:	movq	%r12, %rdi	;  3 bytes
+M0000000000000184:	callq	*16(%rax)	;  3 bytes
+M0000000000000187:	movq	%rax, %rbx	;  3 bytes
+M000000000000018a:	movabsq	$4294967298, %rax	; 10 bytes
+M0000000000000194:	movq	%rax, 8(%rbx)	;  4 bytes
+M0000000000000198:	movq	$4928384, (%rbx)	;  7 bytes
+M000000000000019f:	testq	%r15, %r15	;  3 bytes
+M00000000000001a2:	jne	0x469048 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x1b8>	;  2 bytes
+M00000000000001a4:	movq	2739181(%rip), %rax  # 705c28 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M00000000000001ab:	testq	%rax, %rax	;  3 bytes
+M00000000000001ae:	jne	0x469045 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x1b5>	;  2 bytes
+M00000000000001b0:	callq	0x47ce20 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M00000000000001b5:	movq	%rax, %r15	;  3 bytes
+M00000000000001b8:	movq	%r15, 16(%rbx)	;  4 bytes
+M00000000000001bc:	movq	%r14, 24(%rbx)	;  4 bytes
+M00000000000001c0:	movq	%r12, 32(%rbx)	;  4 bytes
+M00000000000001c4:	movq	%r14, 16(%r13)	;  4 bytes
+M00000000000001c8:	movq	24(%r13), %rdi	;  4 bytes
+M00000000000001cc:	movq	%rbx, 24(%r13)	;  4 bytes
+M00000000000001d0:	testq	%rdi, %rdi	;  3 bytes
+M00000000000001d3:	je	0x46906a <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x1da>	;  2 bytes
+M00000000000001d5:	callq	0x47d740 <BloombergLP::bslma::SharedPtrRep::releaseRef()>	;  5 bytes
+M00000000000001da:	popq	%rbx	;  1 bytes
+M00000000000001db:	popq	%r12	;  2 bytes
+M00000000000001dd:	popq	%r13	;  2 bytes
+M00000000000001df:	popq	%r14	;  2 bytes
+M00000000000001e1:	popq	%r15	;  2 bytes
+M00000000000001e3:	retq		;  1 bytes
+M00000000000001e4:	movq	%rax, %r13	;  3 bytes
+M00000000000001e7:	movq	(%r12), %rax	;  4 bytes
+M00000000000001eb:	movq	%r12, %rdi	;  3 bytes
+M00000000000001ee:	movq	%rbx, %rsi	;  3 bytes
+M00000000000001f1:	callq	*24(%rax)	;  3 bytes
+M00000000000001f4:	jmp	0x46910f <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x27f>	;  5 bytes
+M00000000000001f9:	movq	%rax, %rdi	;  3 bytes
+M00000000000001fc:	callq	0x450f10 <__clang_call_terminate>	;  5 bytes
+M0000000000000201:	movq	%rax, %r13	;  3 bytes
+M0000000000000204:	jmp	0x4690d3 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x243>	;  2 bytes
+M0000000000000206:	movq	%rax, %r13	;  3 bytes
+M0000000000000209:	movq	(%r12), %rax	;  4 bytes
+M000000000000020d:	movq	%r12, %rdi	;  3 bytes
+M0000000000000210:	movq	%rbx, %rsi	;  3 bytes
+M0000000000000213:	callq	*24(%rax)	;  3 bytes
+M0000000000000216:	jmp	0x469137 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x2a7>	;  5 bytes
+M000000000000021b:	movq	%rax, %rdi	;  3 bytes
+M000000000000021e:	callq	0x450f10 <__clang_call_terminate>	;  5 bytes
+M0000000000000223:	movq	%rax, %r13	;  3 bytes
+M0000000000000226:	jmp	0x4690f5 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x265>	;  2 bytes
+M0000000000000228:	movq	%rax, %rdi	;  3 bytes
+M000000000000022b:	callq	0x450f10 <__clang_call_terminate>	;  5 bytes
+M0000000000000230:	movq	%rax, %rdi	;  3 bytes
+M0000000000000233:	callq	0x450f10 <__clang_call_terminate>	;  5 bytes
+M0000000000000238:	movq	%rax, %r13	;  3 bytes
+M000000000000023b:	movq	%rbx, %rdi	;  3 bytes
+M000000000000023e:	callq	0x47fc40 <BloombergLP::bslstl::Function_Rep::~Function_Rep()>	;  5 bytes
+M0000000000000243:	movq	(%r12), %rax	;  4 bytes
+M0000000000000247:	movq	%r12, %rdi	;  3 bytes
+M000000000000024a:	movq	%r14, %rsi	;  3 bytes
+M000000000000024d:	callq	*24(%rax)	;  3 bytes
+M0000000000000250:	jmp	0x469152 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x2c2>	;  2 bytes
+M0000000000000252:	movq	%rax, %rdi	;  3 bytes
+M0000000000000255:	callq	0x450f10 <__clang_call_terminate>	;  5 bytes
+M000000000000025a:	movq	%rax, %r13	;  3 bytes
+M000000000000025d:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000260:	callq	0x47fc40 <BloombergLP::bslstl::Function_Rep::~Function_Rep()>	;  5 bytes
+M0000000000000265:	movq	(%r12), %rax	;  4 bytes
+M0000000000000269:	movq	%r12, %rdi	;  3 bytes
+M000000000000026c:	movq	%r14, %rsi	;  3 bytes
+M000000000000026f:	callq	*24(%rax)	;  3 bytes
+M0000000000000272:	jmp	0x469152 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x2c2>	;  2 bytes
+M0000000000000274:	movq	%rax, %rdi	;  3 bytes
+M0000000000000277:	callq	0x450f10 <__clang_call_terminate>	;  5 bytes
+M000000000000027c:	movq	%rax, %r13	;  3 bytes
+M000000000000027f:	movq	(%r14), %rax	;  3 bytes
+M0000000000000282:	movq	-16(%rax), %rbx	;  4 bytes
+M0000000000000286:	addq	%r14, %rbx	;  3 bytes
+M0000000000000289:	movq	%r14, %rdi	;  3 bytes
+M000000000000028c:	callq	*(%rax)	;  2 bytes
+M000000000000028e:	movq	(%r15), %rax	;  3 bytes
+M0000000000000291:	movq	%r15, %rdi	;  3 bytes
+M0000000000000294:	movq	%rbx, %rsi	;  3 bytes
+M0000000000000297:	callq	*24(%rax)	;  3 bytes
+M000000000000029a:	jmp	0x469152 <BloombergLP::balcl::TypeInfo::setConstraint(bsl::function<bool (long long const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)> const&)+0x2c2>	;  2 bytes
+M000000000000029c:	movq	%rax, %rdi	;  3 bytes
+M000000000000029f:	callq	0x450f10 <__clang_call_terminate>	;  5 bytes
+M00000000000002a4:	movq	%rax, %r13	;  3 bytes
+M00000000000002a7:	movq	(%r14), %rax	;  3 bytes
+M00000000000002aa:	movq	-16(%rax), %rbx	;  4 bytes
+M00000000000002ae:	addq	%r14, %rbx	;  3 bytes
+M00000000000002b1:	movq	%r14, %rdi	;  3 bytes
+M00000000000002b4:	callq	*(%rax)	;  2 bytes
+M00000000000002b6:	movq	(%r15), %rax	;  3 bytes
+M00000000000002b9:	movq	%r15, %rdi	;  3 bytes
+M00000000000002bc:	movq	%rbx, %rsi	;  3 bytes
+M00000000000002bf:	callq	*24(%rax)	;  3 bytes
+M00000000000002c2:	movq	%r13, %rdi	;  3 bytes
+M00000000000002c5:	callq	0x404c00 <_Unwind_Resume@plt>	;  5 bytes
+M00000000000002ca:	movq	%rax, %rdi	;  3 bytes
+M00000000000002cd:	callq	0x450f10 <__clang_call_terminate>	;  5 bytes
+M00000000000002d2:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M00000000000002dc:	nopl	(%rax)	;  4 bytes
 ```

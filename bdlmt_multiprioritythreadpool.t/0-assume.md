@@ -2,191 +2,191 @@
 
 ```nasm
 000000000040dec0 <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 02	pushq	%r13
-0000000000000007: 02	pushq	%r12
-0000000000000009: 01	pushq	%rbx
-000000000000000a: 07	subq	$360, %rsp
-0000000000000011: 03	movq	%rdi, %r13
-0000000000000014: 04	leaq	40(%rdi), %rbx
-0000000000000018: 03	movq	%rbx, %rdi
-000000000000001b: 05	callq	0x4044e0 <pthread_mutex_lock@plt>
-0000000000000020: 07	movl	516(%r13), %eax
-0000000000000027: 02	xorl	%ebp, %ebp
-0000000000000029: 03	cmpl	$1, %eax
-000000000000002c: 06	je	0x40e152 <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x292>
-0000000000000032: 05	leaq	104(%rsp), %r15
-0000000000000037: 03	movq	%r15, %rdi
-000000000000003a: 05	callq	0x403f40 <sigfillset@plt>
-000000000000003f: 03	movq	%r15, %rdi
-0000000000000042: 05	movl	$7, %esi
-0000000000000047: 05	callq	0x4044f0 <sigdelset@plt>
-000000000000004c: 03	movq	%r15, %rdi
-000000000000004f: 05	movl	$8, %esi
-0000000000000054: 05	callq	0x4044f0 <sigdelset@plt>
-0000000000000059: 03	movq	%r15, %rdi
-000000000000005c: 05	movl	$4, %esi
-0000000000000061: 05	callq	0x4044f0 <sigdelset@plt>
-0000000000000066: 03	movq	%r15, %rdi
-0000000000000069: 05	movl	$11, %esi
-000000000000006e: 05	callq	0x4044f0 <sigdelset@plt>
-0000000000000073: 03	movq	%r15, %rdi
-0000000000000076: 05	movl	$31, %esi
-000000000000007b: 05	callq	0x4044f0 <sigdelset@plt>
-0000000000000080: 03	movq	%r15, %rdi
-0000000000000083: 05	movl	$6, %esi
-0000000000000088: 05	callq	0x4044f0 <sigdelset@plt>
-000000000000008d: 03	movq	%r15, %rdi
-0000000000000090: 05	movl	$5, %esi
-0000000000000095: 05	callq	0x4044f0 <sigdelset@plt>
-000000000000009a: 03	movq	%r15, %rdi
-000000000000009d: 05	movl	$6, %esi
-00000000000000a2: 05	callq	0x4044f0 <sigdelset@plt>
-00000000000000a7: 08	leaq	232(%rsp), %rdx
-00000000000000af: 02	xorl	%edi, %edi
-00000000000000b1: 03	movq	%r15, %rsi
-00000000000000b4: 05	callq	0x4044a0 <pthread_sigmask@plt>
-00000000000000b9: 07	movq	2402816(%rip), %rax  # 658980 <BloombergLP::bslma::Default::s_defaultAllocator>
-00000000000000c0: 03	testq	%rax, %rax
-00000000000000c3: 02	jne	0x40df8a <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0xca>
-00000000000000c5: 05	callq	0x40fb10 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-00000000000000ca: 07	movq	2402799(%rip), %rax  # 658980 <BloombergLP::bslma::Default::s_defaultAllocator>
-00000000000000d1: 03	testq	%rax, %rax
-00000000000000d4: 02	jne	0x40df9b <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0xdb>
-00000000000000d6: 05	callq	0x40fb10 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-00000000000000db: 05	movq	%rax, 64(%rsp)
-00000000000000e0: 03	xorps	%xmm0, %xmm0
-00000000000000e3: 05	movups	%xmm0, 72(%rsp)
-00000000000000e8: 05	leaq	16(%rsp), %rdi
-00000000000000ed: 05	movl	$24, %esi
-00000000000000f2: 05	callq	0x412300 <BloombergLP::bslstl::Function_Rep::allocateBuf(unsigned long)>
-00000000000000f7: 09	movq	$4255840, 72(%rsp)
-0000000000000100: 09	movq	$4249648, 16(%rsp)
-0000000000000109: 09	movq	$0, 24(%rsp)
-0000000000000112: 06	cmpq	$0, 64(%rsp)
-0000000000000118: 02	jne	0x40dfeb <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x12b>
-000000000000011a: 07	movq	2402719(%rip), %rax  # 658980 <BloombergLP::bslma::Default::s_defaultAllocator>
-0000000000000121: 03	testq	%rax, %rax
-0000000000000124: 02	jne	0x40dfeb <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x12b>
-0000000000000126: 05	callq	0x40fb10 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-000000000000012b: 05	movq	%r13, 32(%rsp)
-0000000000000130: 09	movq	$4255808, 80(%rsp)
-0000000000000139: 03	movq	%r13, %rdi
-000000000000013c: 05	callq	0x4044e0 <pthread_mutex_lock@plt>
-0000000000000141: 02	xorl	%eax, %eax
-0000000000000143: 07	xchgl	%eax, 516(%r13)
-000000000000014a: 02	xorl	%eax, %eax
-000000000000014c: 07	movl	520(%r13), %ecx
-0000000000000153: 03	cmpl	$1, %ecx
-0000000000000156: 02	jne	0x40e01f <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x15f>
-0000000000000158: 07	xchgl	%eax, 520(%r13)
-000000000000015f: 07	movl	512(%r13), %r14d
-0000000000000166: 03	testl	%r14d, %r14d
-0000000000000169: 02	je	0x40e07a <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x1ba>
-000000000000016b: 05	movq	%rbx, 8(%rsp)
-0000000000000170: 07	leaq	432(%r13), %r15
-0000000000000177: 07	leaq	360(%r13), %rbp
-000000000000017e: 02	xorl	%ebx, %ebx
-0000000000000180: 05	leaq	16(%rsp), %r12
-0000000000000185: 10	nopw	%cs:(%rax,%rax)
-000000000000018f: 01	nop	
-0000000000000190: 03	movq	%r15, %rdi
-0000000000000193: 03	movq	%r12, %rsi
-0000000000000196: 03	movq	%rbp, %rdx
-0000000000000199: 05	callq	0x40f0e0 <int BloombergLP::bslmt::ThreadGroup::addThread<bsl::function<void ()> >(bsl::function<void ()> const&, BloombergLP::bslmt::ThreadAttributes const&)>
-000000000000019e: 02	testl	%eax, %eax
-00000000000001a0: 02	jne	0x40e06c <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x1ac>
-00000000000001a2: 02	incl	%ebx
-00000000000001a4: 03	cmpl	%ebx, %r14d
-00000000000001a7: 02	jne	0x40e050 <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x190>
-00000000000001a9: 03	movl	%r14d, %ebx
-00000000000001ac: 07	cmpl	%ebx, 512(%r13)
-00000000000001b3: 05	movq	8(%rsp), %rbx
-00000000000001b8: 02	jne	0x40e0a8 <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x1e8>
-00000000000001ba: 07	movl	520(%r13), %eax
-00000000000001c1: 02	testl	%eax, %eax
-00000000000001c3: 02	je	0x40e102 <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x242>
-00000000000001c5: 07	leaq	536(%r13), %rbp
-00000000000001cc: 04	nopl	(%rax)
-00000000000001d0: 03	movq	%rbp, %rdi
-00000000000001d3: 03	movq	%r13, %rsi
-00000000000001d6: 05	callq	0x4043a0 <pthread_cond_wait@plt>
-00000000000001db: 07	movl	516(%r13), %eax
-00000000000001e2: 02	testl	%eax, %eax
-00000000000001e4: 02	je	0x40e090 <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x1d0>
-00000000000001e6: 02	jmp	0x40e127 <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x267>
-00000000000001e8: 05	movl	$2, %eax
-00000000000001ed: 07	xchgl	%eax, 516(%r13)
-00000000000001f4: 07	leaq	536(%r13), %rdi
-00000000000001fb: 05	callq	0x404590 <pthread_cond_broadcast@plt>
-0000000000000200: 03	movq	%r13, %rdi
-0000000000000203: 05	callq	0x4045e0 <pthread_mutex_unlock@plt>
-0000000000000208: 03	movq	%r15, %rdi
-000000000000020b: 05	callq	0x4118c0 <BloombergLP::bslmt::ThreadGroup::joinAll()>
-0000000000000210: 03	movq	%r13, %rdi
-0000000000000213: 05	callq	0x4044e0 <pthread_mutex_lock@plt>
-0000000000000218: 07	movl	520(%r13), %eax
-000000000000021f: 02	testl	%eax, %eax
-0000000000000221: 02	jne	0x40e0ef <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x22f>
-0000000000000223: 05	movl	$1, %eax
-0000000000000228: 07	xchgl	%eax, 520(%r13)
-000000000000022f: 05	movl	$3, %eax
-0000000000000234: 07	xchgl	%eax, 516(%r13)
-000000000000023b: 05	movl	$4294967295, %ebp
-0000000000000240: 02	jmp	0x40e129 <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x269>
-0000000000000242: 07	leaq	592(%r13), %rbp
-0000000000000249: 07	nopl	(%rax)
-0000000000000250: 03	movq	%rbp, %rdi
-0000000000000253: 03	movq	%r13, %rsi
-0000000000000256: 05	callq	0x4043a0 <pthread_cond_wait@plt>
-000000000000025b: 07	movl	520(%r13), %eax
-0000000000000262: 03	cmpl	$1, %eax
-0000000000000265: 02	jne	0x40e110 <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x250>
-0000000000000267: 02	xorl	%ebp, %ebp
-0000000000000269: 03	movq	%r13, %rdi
-000000000000026c: 05	callq	0x4045e0 <pthread_mutex_unlock@plt>
-0000000000000271: 08	leaq	232(%rsp), %rsi
-0000000000000279: 05	leaq	104(%rsp), %rdx
-000000000000027e: 05	movl	$2, %edi
-0000000000000283: 05	callq	0x4044a0 <pthread_sigmask@plt>
-0000000000000288: 05	leaq	16(%rsp), %rdi
-000000000000028d: 05	callq	0x4122a0 <BloombergLP::bslstl::Function_Rep::~Function_Rep()>
-0000000000000292: 03	movq	%rbx, %rdi
-0000000000000295: 05	callq	0x4045e0 <pthread_mutex_unlock@plt>
-000000000000029a: 02	movl	%ebp, %eax
-000000000000029c: 07	addq	$360, %rsp
-00000000000002a3: 01	popq	%rbx
-00000000000002a4: 02	popq	%r12
-00000000000002a6: 02	popq	%r13
-00000000000002a8: 02	popq	%r14
-00000000000002aa: 02	popq	%r15
-00000000000002ac: 01	popq	%rbp
-00000000000002ad: 01	retq	
-00000000000002ae: 03	movq	%rax, %r15
-00000000000002b1: 03	movq	%r13, %rdi
-00000000000002b4: 05	callq	0x4044e0 <pthread_mutex_lock@plt>
-00000000000002b9: 02	jmp	0x40e19d <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x2dd>
-00000000000002bb: 02	jmp	0x40e17d <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x2bd>
-00000000000002bd: 05	movq	%rbx, 8(%rsp)
-00000000000002c2: 03	movq	%rax, %r15
-00000000000002c5: 02	jmp	0x40e1af <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x2ef>
-00000000000002c7: 05	movq	%rbx, 8(%rsp)
-00000000000002cc: 03	movq	%rax, %r15
-00000000000002cf: 02	jmp	0x40e1a5 <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x2e5>
-00000000000002d1: 02	jmp	0x40e195 <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x2d5>
-00000000000002d3: 02	jmp	0x40e19a <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x2da>
-00000000000002d5: 05	movq	%rbx, 8(%rsp)
-00000000000002da: 03	movq	%rax, %r15
-00000000000002dd: 03	movq	%r13, %rdi
-00000000000002e0: 05	callq	0x4045e0 <pthread_mutex_unlock@plt>
-00000000000002e5: 05	leaq	16(%rsp), %rdi
-00000000000002ea: 05	callq	0x4122a0 <BloombergLP::bslstl::Function_Rep::~Function_Rep()>
-00000000000002ef: 05	movq	8(%rsp), %rdi
-00000000000002f4: 05	callq	0x4045e0 <pthread_mutex_unlock@plt>
-00000000000002f9: 03	movq	%r15, %rdi
-00000000000002fc: 05	callq	0x404580 <_Unwind_Resume@plt>
-0000000000000301: 10	nopw	%cs:(%rax,%rax)
-000000000000030b: 05	nopl	(%rax,%rax)
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%r13	;  2 bytes
+M0000000000000007:	pushq	%r12	;  2 bytes
+M0000000000000009:	pushq	%rbx	;  1 bytes
+M000000000000000a:	subq	$360, %rsp	;  7 bytes
+M0000000000000011:	movq	%rdi, %r13	;  3 bytes
+M0000000000000014:	leaq	40(%rdi), %rbx	;  4 bytes
+M0000000000000018:	movq	%rbx, %rdi	;  3 bytes
+M000000000000001b:	callq	0x4044e0 <pthread_mutex_lock@plt>	;  5 bytes
+M0000000000000020:	movl	516(%r13), %eax	;  7 bytes
+M0000000000000027:	xorl	%ebp, %ebp	;  2 bytes
+M0000000000000029:	cmpl	$1, %eax	;  3 bytes
+M000000000000002c:	je	0x40e152 <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x292>	;  6 bytes
+M0000000000000032:	leaq	104(%rsp), %r15	;  5 bytes
+M0000000000000037:	movq	%r15, %rdi	;  3 bytes
+M000000000000003a:	callq	0x403f40 <sigfillset@plt>	;  5 bytes
+M000000000000003f:	movq	%r15, %rdi	;  3 bytes
+M0000000000000042:	movl	$7, %esi	;  5 bytes
+M0000000000000047:	callq	0x4044f0 <sigdelset@plt>	;  5 bytes
+M000000000000004c:	movq	%r15, %rdi	;  3 bytes
+M000000000000004f:	movl	$8, %esi	;  5 bytes
+M0000000000000054:	callq	0x4044f0 <sigdelset@plt>	;  5 bytes
+M0000000000000059:	movq	%r15, %rdi	;  3 bytes
+M000000000000005c:	movl	$4, %esi	;  5 bytes
+M0000000000000061:	callq	0x4044f0 <sigdelset@plt>	;  5 bytes
+M0000000000000066:	movq	%r15, %rdi	;  3 bytes
+M0000000000000069:	movl	$11, %esi	;  5 bytes
+M000000000000006e:	callq	0x4044f0 <sigdelset@plt>	;  5 bytes
+M0000000000000073:	movq	%r15, %rdi	;  3 bytes
+M0000000000000076:	movl	$31, %esi	;  5 bytes
+M000000000000007b:	callq	0x4044f0 <sigdelset@plt>	;  5 bytes
+M0000000000000080:	movq	%r15, %rdi	;  3 bytes
+M0000000000000083:	movl	$6, %esi	;  5 bytes
+M0000000000000088:	callq	0x4044f0 <sigdelset@plt>	;  5 bytes
+M000000000000008d:	movq	%r15, %rdi	;  3 bytes
+M0000000000000090:	movl	$5, %esi	;  5 bytes
+M0000000000000095:	callq	0x4044f0 <sigdelset@plt>	;  5 bytes
+M000000000000009a:	movq	%r15, %rdi	;  3 bytes
+M000000000000009d:	movl	$6, %esi	;  5 bytes
+M00000000000000a2:	callq	0x4044f0 <sigdelset@plt>	;  5 bytes
+M00000000000000a7:	leaq	232(%rsp), %rdx	;  8 bytes
+M00000000000000af:	xorl	%edi, %edi	;  2 bytes
+M00000000000000b1:	movq	%r15, %rsi	;  3 bytes
+M00000000000000b4:	callq	0x4044a0 <pthread_sigmask@plt>	;  5 bytes
+M00000000000000b9:	movq	2402816(%rip), %rax  # 658980 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M00000000000000c0:	testq	%rax, %rax	;  3 bytes
+M00000000000000c3:	jne	0x40df8a <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0xca>	;  2 bytes
+M00000000000000c5:	callq	0x40fb10 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M00000000000000ca:	movq	2402799(%rip), %rax  # 658980 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M00000000000000d1:	testq	%rax, %rax	;  3 bytes
+M00000000000000d4:	jne	0x40df9b <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0xdb>	;  2 bytes
+M00000000000000d6:	callq	0x40fb10 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M00000000000000db:	movq	%rax, 64(%rsp)	;  5 bytes
+M00000000000000e0:	xorps	%xmm0, %xmm0	;  3 bytes
+M00000000000000e3:	movups	%xmm0, 72(%rsp)	;  5 bytes
+M00000000000000e8:	leaq	16(%rsp), %rdi	;  5 bytes
+M00000000000000ed:	movl	$24, %esi	;  5 bytes
+M00000000000000f2:	callq	0x412300 <BloombergLP::bslstl::Function_Rep::allocateBuf(unsigned long)>	;  5 bytes
+M00000000000000f7:	movq	$4255840, 72(%rsp)	;  9 bytes
+M0000000000000100:	movq	$4249648, 16(%rsp)	;  9 bytes
+M0000000000000109:	movq	$0, 24(%rsp)	;  9 bytes
+M0000000000000112:	cmpq	$0, 64(%rsp)	;  6 bytes
+M0000000000000118:	jne	0x40dfeb <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x12b>	;  2 bytes
+M000000000000011a:	movq	2402719(%rip), %rax  # 658980 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M0000000000000121:	testq	%rax, %rax	;  3 bytes
+M0000000000000124:	jne	0x40dfeb <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x12b>	;  2 bytes
+M0000000000000126:	callq	0x40fb10 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M000000000000012b:	movq	%r13, 32(%rsp)	;  5 bytes
+M0000000000000130:	movq	$4255808, 80(%rsp)	;  9 bytes
+M0000000000000139:	movq	%r13, %rdi	;  3 bytes
+M000000000000013c:	callq	0x4044e0 <pthread_mutex_lock@plt>	;  5 bytes
+M0000000000000141:	xorl	%eax, %eax	;  2 bytes
+M0000000000000143:	xchgl	%eax, 516(%r13)	;  7 bytes
+M000000000000014a:	xorl	%eax, %eax	;  2 bytes
+M000000000000014c:	movl	520(%r13), %ecx	;  7 bytes
+M0000000000000153:	cmpl	$1, %ecx	;  3 bytes
+M0000000000000156:	jne	0x40e01f <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x15f>	;  2 bytes
+M0000000000000158:	xchgl	%eax, 520(%r13)	;  7 bytes
+M000000000000015f:	movl	512(%r13), %r14d	;  7 bytes
+M0000000000000166:	testl	%r14d, %r14d	;  3 bytes
+M0000000000000169:	je	0x40e07a <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x1ba>	;  2 bytes
+M000000000000016b:	movq	%rbx, 8(%rsp)	;  5 bytes
+M0000000000000170:	leaq	432(%r13), %r15	;  7 bytes
+M0000000000000177:	leaq	360(%r13), %rbp	;  7 bytes
+M000000000000017e:	xorl	%ebx, %ebx	;  2 bytes
+M0000000000000180:	leaq	16(%rsp), %r12	;  5 bytes
+M0000000000000185:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000018f:	nop		;  1 bytes
+M0000000000000190:	movq	%r15, %rdi	;  3 bytes
+M0000000000000193:	movq	%r12, %rsi	;  3 bytes
+M0000000000000196:	movq	%rbp, %rdx	;  3 bytes
+M0000000000000199:	callq	0x40f0e0 <int BloombergLP::bslmt::ThreadGroup::addThread<bsl::function<void ()> >(bsl::function<void ()> const&, BloombergLP::bslmt::ThreadAttributes const&)>	;  5 bytes
+M000000000000019e:	testl	%eax, %eax	;  2 bytes
+M00000000000001a0:	jne	0x40e06c <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x1ac>	;  2 bytes
+M00000000000001a2:	incl	%ebx	;  2 bytes
+M00000000000001a4:	cmpl	%ebx, %r14d	;  3 bytes
+M00000000000001a7:	jne	0x40e050 <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x190>	;  2 bytes
+M00000000000001a9:	movl	%r14d, %ebx	;  3 bytes
+M00000000000001ac:	cmpl	%ebx, 512(%r13)	;  7 bytes
+M00000000000001b3:	movq	8(%rsp), %rbx	;  5 bytes
+M00000000000001b8:	jne	0x40e0a8 <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x1e8>	;  2 bytes
+M00000000000001ba:	movl	520(%r13), %eax	;  7 bytes
+M00000000000001c1:	testl	%eax, %eax	;  2 bytes
+M00000000000001c3:	je	0x40e102 <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x242>	;  2 bytes
+M00000000000001c5:	leaq	536(%r13), %rbp	;  7 bytes
+M00000000000001cc:	nopl	(%rax)	;  4 bytes
+M00000000000001d0:	movq	%rbp, %rdi	;  3 bytes
+M00000000000001d3:	movq	%r13, %rsi	;  3 bytes
+M00000000000001d6:	callq	0x4043a0 <pthread_cond_wait@plt>	;  5 bytes
+M00000000000001db:	movl	516(%r13), %eax	;  7 bytes
+M00000000000001e2:	testl	%eax, %eax	;  2 bytes
+M00000000000001e4:	je	0x40e090 <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x1d0>	;  2 bytes
+M00000000000001e6:	jmp	0x40e127 <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x267>	;  2 bytes
+M00000000000001e8:	movl	$2, %eax	;  5 bytes
+M00000000000001ed:	xchgl	%eax, 516(%r13)	;  7 bytes
+M00000000000001f4:	leaq	536(%r13), %rdi	;  7 bytes
+M00000000000001fb:	callq	0x404590 <pthread_cond_broadcast@plt>	;  5 bytes
+M0000000000000200:	movq	%r13, %rdi	;  3 bytes
+M0000000000000203:	callq	0x4045e0 <pthread_mutex_unlock@plt>	;  5 bytes
+M0000000000000208:	movq	%r15, %rdi	;  3 bytes
+M000000000000020b:	callq	0x4118c0 <BloombergLP::bslmt::ThreadGroup::joinAll()>	;  5 bytes
+M0000000000000210:	movq	%r13, %rdi	;  3 bytes
+M0000000000000213:	callq	0x4044e0 <pthread_mutex_lock@plt>	;  5 bytes
+M0000000000000218:	movl	520(%r13), %eax	;  7 bytes
+M000000000000021f:	testl	%eax, %eax	;  2 bytes
+M0000000000000221:	jne	0x40e0ef <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x22f>	;  2 bytes
+M0000000000000223:	movl	$1, %eax	;  5 bytes
+M0000000000000228:	xchgl	%eax, 520(%r13)	;  7 bytes
+M000000000000022f:	movl	$3, %eax	;  5 bytes
+M0000000000000234:	xchgl	%eax, 516(%r13)	;  7 bytes
+M000000000000023b:	movl	$4294967295, %ebp	;  5 bytes
+M0000000000000240:	jmp	0x40e129 <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x269>	;  2 bytes
+M0000000000000242:	leaq	592(%r13), %rbp	;  7 bytes
+M0000000000000249:	nopl	(%rax)	;  7 bytes
+M0000000000000250:	movq	%rbp, %rdi	;  3 bytes
+M0000000000000253:	movq	%r13, %rsi	;  3 bytes
+M0000000000000256:	callq	0x4043a0 <pthread_cond_wait@plt>	;  5 bytes
+M000000000000025b:	movl	520(%r13), %eax	;  7 bytes
+M0000000000000262:	cmpl	$1, %eax	;  3 bytes
+M0000000000000265:	jne	0x40e110 <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x250>	;  2 bytes
+M0000000000000267:	xorl	%ebp, %ebp	;  2 bytes
+M0000000000000269:	movq	%r13, %rdi	;  3 bytes
+M000000000000026c:	callq	0x4045e0 <pthread_mutex_unlock@plt>	;  5 bytes
+M0000000000000271:	leaq	232(%rsp), %rsi	;  8 bytes
+M0000000000000279:	leaq	104(%rsp), %rdx	;  5 bytes
+M000000000000027e:	movl	$2, %edi	;  5 bytes
+M0000000000000283:	callq	0x4044a0 <pthread_sigmask@plt>	;  5 bytes
+M0000000000000288:	leaq	16(%rsp), %rdi	;  5 bytes
+M000000000000028d:	callq	0x4122a0 <BloombergLP::bslstl::Function_Rep::~Function_Rep()>	;  5 bytes
+M0000000000000292:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000295:	callq	0x4045e0 <pthread_mutex_unlock@plt>	;  5 bytes
+M000000000000029a:	movl	%ebp, %eax	;  2 bytes
+M000000000000029c:	addq	$360, %rsp	;  7 bytes
+M00000000000002a3:	popq	%rbx	;  1 bytes
+M00000000000002a4:	popq	%r12	;  2 bytes
+M00000000000002a6:	popq	%r13	;  2 bytes
+M00000000000002a8:	popq	%r14	;  2 bytes
+M00000000000002aa:	popq	%r15	;  2 bytes
+M00000000000002ac:	popq	%rbp	;  1 bytes
+M00000000000002ad:	retq		;  1 bytes
+M00000000000002ae:	movq	%rax, %r15	;  3 bytes
+M00000000000002b1:	movq	%r13, %rdi	;  3 bytes
+M00000000000002b4:	callq	0x4044e0 <pthread_mutex_lock@plt>	;  5 bytes
+M00000000000002b9:	jmp	0x40e19d <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x2dd>	;  2 bytes
+M00000000000002bb:	jmp	0x40e17d <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x2bd>	;  2 bytes
+M00000000000002bd:	movq	%rbx, 8(%rsp)	;  5 bytes
+M00000000000002c2:	movq	%rax, %r15	;  3 bytes
+M00000000000002c5:	jmp	0x40e1af <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x2ef>	;  2 bytes
+M00000000000002c7:	movq	%rbx, 8(%rsp)	;  5 bytes
+M00000000000002cc:	movq	%rax, %r15	;  3 bytes
+M00000000000002cf:	jmp	0x40e1a5 <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x2e5>	;  2 bytes
+M00000000000002d1:	jmp	0x40e195 <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x2d5>	;  2 bytes
+M00000000000002d3:	jmp	0x40e19a <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()+0x2da>	;  2 bytes
+M00000000000002d5:	movq	%rbx, 8(%rsp)	;  5 bytes
+M00000000000002da:	movq	%rax, %r15	;  3 bytes
+M00000000000002dd:	movq	%r13, %rdi	;  3 bytes
+M00000000000002e0:	callq	0x4045e0 <pthread_mutex_unlock@plt>	;  5 bytes
+M00000000000002e5:	leaq	16(%rsp), %rdi	;  5 bytes
+M00000000000002ea:	callq	0x4122a0 <BloombergLP::bslstl::Function_Rep::~Function_Rep()>	;  5 bytes
+M00000000000002ef:	movq	8(%rsp), %rdi	;  5 bytes
+M00000000000002f4:	callq	0x4045e0 <pthread_mutex_unlock@plt>	;  5 bytes
+M00000000000002f9:	movq	%r15, %rdi	;  3 bytes
+M00000000000002fc:	callq	0x404580 <_Unwind_Resume@plt>	;  5 bytes
+M0000000000000301:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000030b:	nopl	(%rax,%rax)	;  5 bytes
 ```

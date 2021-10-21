@@ -2,122 +2,122 @@
 
 ```nasm
 0000000000411020 <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 02	pushq	%r13
-0000000000000007: 02	pushq	%r12
-0000000000000009: 01	pushq	%rbx
-000000000000000a: 04	subq	$56, %rsp
-000000000000000e: 03	movq	%rdx, %rbx
-0000000000000011: 03	movq	%rsi, %r14
-0000000000000014: 09	movq	$0, 8(%rsp)
-000000000000001d: 07	movaps	157484(%rip), %xmm0  # 437770 <__dso_handle+0x8>
-0000000000000024: 05	movups	%xmm0, 32(%rsp)
-0000000000000029: 07	movq	2356976(%rip), %rax  # 650740 <BloombergLP::bslma::Default::s_defaultAllocator>
-0000000000000030: 03	testq	%rax, %rax
-0000000000000033: 02	je	0x411061 <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x41>
-0000000000000035: 05	leaq	8(%rsp), %rcx
-000000000000003a: 05	movq	%rax, 48(%rsp)
-000000000000003f: 02	jmp	0x41107f <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x5f>
-0000000000000041: 05	callq	0x411f30 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-0000000000000046: 06	cmpq	$23, 40(%rsp)
-000000000000004c: 05	movq	%rax, 48(%rsp)
-0000000000000051: 02	je	0x41107a <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x5a>
-0000000000000053: 05	movq	8(%rsp), %rcx
-0000000000000058: 02	jmp	0x41107f <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x5f>
-000000000000005a: 05	leaq	8(%rsp), %rcx
-000000000000005f: 03	movb	$0, (%rcx)
-0000000000000062: 03	cmpl	$2, (%rbx)
-0000000000000065: 05	movl	$4423319, %eax
-000000000000006a: 05	movl	$4423326, %esi
-000000000000006f: 04	cmoveq	%rax, %rsi
-0000000000000073: 05	movq	32(%rsp), %rbx
-0000000000000078: 09	movq	$0, 32(%rsp)
-0000000000000081: 05	leaq	8(%rsp), %rbp
-0000000000000086: 05	movl	$6, %edx
-000000000000008b: 05	movl	$4427107, %ecx
-0000000000000090: 03	movq	%rbp, %rdi
-0000000000000093: 05	callq	0x414040 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-0000000000000098: 05	movq	40(%rsp), %r13
-000000000000009d: 05	movq	8(%rsp), %r12
-00000000000000a2: 06	movl	$1, %r15d
-00000000000000a8: 05	cmpl	$6, 32(%rsp)
-00000000000000ad: 06	jne	0x411179 <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x159>
-00000000000000b3: 04	cmpq	$23, %r13
-00000000000000b7: 03	movq	%r12, %rax
-00000000000000ba: 04	cmoveq	%rbp, %rax
-00000000000000be: 04	movsbq	(%rax), %rbx
-00000000000000c2: 05	callq	0x402ed0 <__ctype_toupper_loc@plt>
-00000000000000c7: 03	movq	(%rax), %rax
-00000000000000ca: 04	cmpl	$86, (%rax,%rbx,4)
-00000000000000ce: 06	jne	0x411179 <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x159>
-00000000000000d4: 04	cmpq	$23, %r13
-00000000000000d8: 03	movq	%r12, %rcx
-00000000000000db: 04	cmoveq	%rbp, %rcx
-00000000000000df: 05	movsbq	1(%rcx), %rcx
-00000000000000e4: 04	cmpl	$65, (%rax,%rcx,4)
-00000000000000e8: 02	jne	0x411179 <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x159>
-00000000000000ea: 04	cmpq	$23, %r13
-00000000000000ee: 03	movq	%r12, %rcx
-00000000000000f1: 04	cmoveq	%rbp, %rcx
-00000000000000f5: 05	movsbq	2(%rcx), %rcx
-00000000000000fa: 04	cmpl	$76, (%rax,%rcx,4)
-00000000000000fe: 02	jne	0x411179 <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x159>
-0000000000000100: 04	cmpq	$23, %r13
-0000000000000104: 03	movq	%r12, %rcx
-0000000000000107: 04	cmoveq	%rbp, %rcx
-000000000000010b: 05	movsbq	3(%rcx), %rcx
-0000000000000110: 04	cmpl	$85, (%rax,%rcx,4)
-0000000000000114: 02	jne	0x411179 <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x159>
-0000000000000116: 04	cmpq	$23, %r13
-000000000000011a: 03	movq	%r12, %rcx
-000000000000011d: 04	cmoveq	%rbp, %rcx
-0000000000000121: 05	movsbq	4(%rcx), %rcx
-0000000000000126: 04	cmpl	$69, (%rax,%rcx,4)
-000000000000012a: 02	jne	0x411179 <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x159>
-000000000000012c: 04	cmpq	$23, %r13
-0000000000000130: 04	cmovneq	%r12, %rbp
-0000000000000134: 05	movsbq	5(%rbp), %rcx
-0000000000000139: 03	movl	(%rax,%rcx,4), %eax
-000000000000013c: 03	cmpl	$50, %eax
-000000000000013f: 02	je	0x41116f <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x14f>
-0000000000000141: 03	cmpl	$49, %eax
-0000000000000144: 02	jne	0x411179 <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x159>
-0000000000000146: 07	movl	$1, (%r14)
-000000000000014d: 02	jmp	0x411176 <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x156>
-000000000000014f: 07	movl	$2, (%r14)
-0000000000000156: 03	xorl	%r15d, %r15d
-0000000000000159: 04	cmpq	$23, %r13
-000000000000015d: 02	je	0x41118d <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x16d>
-000000000000015f: 05	movq	48(%rsp), %rdi
-0000000000000164: 03	movq	(%rdi), %rax
-0000000000000167: 03	movq	%r12, %rsi
-000000000000016a: 03	callq	*24(%rax)
-000000000000016d: 03	movl	%r15d, %eax
-0000000000000170: 04	addq	$56, %rsp
-0000000000000174: 01	popq	%rbx
-0000000000000175: 02	popq	%r12
-0000000000000177: 02	popq	%r13
-0000000000000179: 02	popq	%r14
-000000000000017b: 02	popq	%r15
-000000000000017d: 01	popq	%rbp
-000000000000017e: 01	retq	
-000000000000017f: 03	movq	%rax, %rdi
-0000000000000182: 05	callq	0x40f610 <__clang_call_terminate>
-0000000000000187: 03	movq	%rax, %rdi
-000000000000018a: 05	callq	0x40f610 <__clang_call_terminate>
-000000000000018f: 03	movq	%rax, %rbp
-0000000000000192: 05	movq	%rbx, 32(%rsp)
-0000000000000197: 06	cmpq	$23, 40(%rsp)
-000000000000019d: 02	je	0x4111cf <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x1af>
-000000000000019f: 05	movq	8(%rsp), %rsi
-00000000000001a4: 05	movq	48(%rsp), %rdi
-00000000000001a9: 03	movq	(%rdi), %rax
-00000000000001ac: 03	callq	*24(%rax)
-00000000000001af: 03	movq	%rbp, %rdi
-00000000000001b2: 05	callq	0x403240 <_Unwind_Resume@plt>
-00000000000001b7: 03	movq	%rax, %rdi
-00000000000001ba: 05	callq	0x40f610 <__clang_call_terminate>
-00000000000001bf: 01	nop	
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%r13	;  2 bytes
+M0000000000000007:	pushq	%r12	;  2 bytes
+M0000000000000009:	pushq	%rbx	;  1 bytes
+M000000000000000a:	subq	$56, %rsp	;  4 bytes
+M000000000000000e:	movq	%rdx, %rbx	;  3 bytes
+M0000000000000011:	movq	%rsi, %r14	;  3 bytes
+M0000000000000014:	movq	$0, 8(%rsp)	;  9 bytes
+M000000000000001d:	movaps	157484(%rip), %xmm0  # 437770 <__dso_handle+0x8>	;  7 bytes
+M0000000000000024:	movups	%xmm0, 32(%rsp)	;  5 bytes
+M0000000000000029:	movq	2356976(%rip), %rax  # 650740 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M0000000000000030:	testq	%rax, %rax	;  3 bytes
+M0000000000000033:	je	0x411061 <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x41>	;  2 bytes
+M0000000000000035:	leaq	8(%rsp), %rcx	;  5 bytes
+M000000000000003a:	movq	%rax, 48(%rsp)	;  5 bytes
+M000000000000003f:	jmp	0x41107f <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x5f>	;  2 bytes
+M0000000000000041:	callq	0x411f30 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M0000000000000046:	cmpq	$23, 40(%rsp)	;  6 bytes
+M000000000000004c:	movq	%rax, 48(%rsp)	;  5 bytes
+M0000000000000051:	je	0x41107a <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x5a>	;  2 bytes
+M0000000000000053:	movq	8(%rsp), %rcx	;  5 bytes
+M0000000000000058:	jmp	0x41107f <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x5f>	;  2 bytes
+M000000000000005a:	leaq	8(%rsp), %rcx	;  5 bytes
+M000000000000005f:	movb	$0, (%rcx)	;  3 bytes
+M0000000000000062:	cmpl	$2, (%rbx)	;  3 bytes
+M0000000000000065:	movl	$4423319, %eax	;  5 bytes
+M000000000000006a:	movl	$4423326, %esi	;  5 bytes
+M000000000000006f:	cmoveq	%rax, %rsi	;  4 bytes
+M0000000000000073:	movq	32(%rsp), %rbx	;  5 bytes
+M0000000000000078:	movq	$0, 32(%rsp)	;  9 bytes
+M0000000000000081:	leaq	8(%rsp), %rbp	;  5 bytes
+M0000000000000086:	movl	$6, %edx	;  5 bytes
+M000000000000008b:	movl	$4427107, %ecx	;  5 bytes
+M0000000000000090:	movq	%rbp, %rdi	;  3 bytes
+M0000000000000093:	callq	0x414040 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M0000000000000098:	movq	40(%rsp), %r13	;  5 bytes
+M000000000000009d:	movq	8(%rsp), %r12	;  5 bytes
+M00000000000000a2:	movl	$1, %r15d	;  6 bytes
+M00000000000000a8:	cmpl	$6, 32(%rsp)	;  5 bytes
+M00000000000000ad:	jne	0x411179 <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x159>	;  6 bytes
+M00000000000000b3:	cmpq	$23, %r13	;  4 bytes
+M00000000000000b7:	movq	%r12, %rax	;  3 bytes
+M00000000000000ba:	cmoveq	%rbp, %rax	;  4 bytes
+M00000000000000be:	movsbq	(%rax), %rbx	;  4 bytes
+M00000000000000c2:	callq	0x402ed0 <__ctype_toupper_loc@plt>	;  5 bytes
+M00000000000000c7:	movq	(%rax), %rax	;  3 bytes
+M00000000000000ca:	cmpl	$86, (%rax,%rbx,4)	;  4 bytes
+M00000000000000ce:	jne	0x411179 <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x159>	;  6 bytes
+M00000000000000d4:	cmpq	$23, %r13	;  4 bytes
+M00000000000000d8:	movq	%r12, %rcx	;  3 bytes
+M00000000000000db:	cmoveq	%rbp, %rcx	;  4 bytes
+M00000000000000df:	movsbq	1(%rcx), %rcx	;  5 bytes
+M00000000000000e4:	cmpl	$65, (%rax,%rcx,4)	;  4 bytes
+M00000000000000e8:	jne	0x411179 <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x159>	;  2 bytes
+M00000000000000ea:	cmpq	$23, %r13	;  4 bytes
+M00000000000000ee:	movq	%r12, %rcx	;  3 bytes
+M00000000000000f1:	cmoveq	%rbp, %rcx	;  4 bytes
+M00000000000000f5:	movsbq	2(%rcx), %rcx	;  5 bytes
+M00000000000000fa:	cmpl	$76, (%rax,%rcx,4)	;  4 bytes
+M00000000000000fe:	jne	0x411179 <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x159>	;  2 bytes
+M0000000000000100:	cmpq	$23, %r13	;  4 bytes
+M0000000000000104:	movq	%r12, %rcx	;  3 bytes
+M0000000000000107:	cmoveq	%rbp, %rcx	;  4 bytes
+M000000000000010b:	movsbq	3(%rcx), %rcx	;  5 bytes
+M0000000000000110:	cmpl	$85, (%rax,%rcx,4)	;  4 bytes
+M0000000000000114:	jne	0x411179 <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x159>	;  2 bytes
+M0000000000000116:	cmpq	$23, %r13	;  4 bytes
+M000000000000011a:	movq	%r12, %rcx	;  3 bytes
+M000000000000011d:	cmoveq	%rbp, %rcx	;  4 bytes
+M0000000000000121:	movsbq	4(%rcx), %rcx	;  5 bytes
+M0000000000000126:	cmpl	$69, (%rax,%rcx,4)	;  4 bytes
+M000000000000012a:	jne	0x411179 <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x159>	;  2 bytes
+M000000000000012c:	cmpq	$23, %r13	;  4 bytes
+M0000000000000130:	cmovneq	%r12, %rbp	;  4 bytes
+M0000000000000134:	movsbq	5(%rbp), %rcx	;  5 bytes
+M0000000000000139:	movl	(%rax,%rcx,4), %eax	;  3 bytes
+M000000000000013c:	cmpl	$50, %eax	;  3 bytes
+M000000000000013f:	je	0x41116f <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x14f>	;  2 bytes
+M0000000000000141:	cmpl	$49, %eax	;  3 bytes
+M0000000000000144:	jne	0x411179 <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x159>	;  2 bytes
+M0000000000000146:	movl	$1, (%r14)	;  7 bytes
+M000000000000014d:	jmp	0x411176 <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x156>	;  2 bytes
+M000000000000014f:	movl	$2, (%r14)	;  7 bytes
+M0000000000000156:	xorl	%r15d, %r15d	;  3 bytes
+M0000000000000159:	cmpq	$23, %r13	;  4 bytes
+M000000000000015d:	je	0x41118d <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x16d>	;  2 bytes
+M000000000000015f:	movq	48(%rsp), %rdi	;  5 bytes
+M0000000000000164:	movq	(%rdi), %rax	;  3 bytes
+M0000000000000167:	movq	%r12, %rsi	;  3 bytes
+M000000000000016a:	callq	*24(%rax)	;  3 bytes
+M000000000000016d:	movl	%r15d, %eax	;  3 bytes
+M0000000000000170:	addq	$56, %rsp	;  4 bytes
+M0000000000000174:	popq	%rbx	;  1 bytes
+M0000000000000175:	popq	%r12	;  2 bytes
+M0000000000000177:	popq	%r13	;  2 bytes
+M0000000000000179:	popq	%r14	;  2 bytes
+M000000000000017b:	popq	%r15	;  2 bytes
+M000000000000017d:	popq	%rbp	;  1 bytes
+M000000000000017e:	retq		;  1 bytes
+M000000000000017f:	movq	%rax, %rdi	;  3 bytes
+M0000000000000182:	callq	0x40f610 <__clang_call_terminate>	;  5 bytes
+M0000000000000187:	movq	%rax, %rdi	;  3 bytes
+M000000000000018a:	callq	0x40f610 <__clang_call_terminate>	;  5 bytes
+M000000000000018f:	movq	%rax, %rbp	;  3 bytes
+M0000000000000192:	movq	%rbx, 32(%rsp)	;  5 bytes
+M0000000000000197:	cmpq	$23, 40(%rsp)	;  6 bytes
+M000000000000019d:	je	0x4111cf <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)+0x1af>	;  2 bytes
+M000000000000019f:	movq	8(%rsp), %rsi	;  5 bytes
+M00000000000001a4:	movq	48(%rsp), %rdi	;  5 bytes
+M00000000000001a9:	movq	(%rdi), %rax	;  3 bytes
+M00000000000001ac:	callq	*24(%rax)	;  3 bytes
+M00000000000001af:	movq	%rbp, %rdi	;  3 bytes
+M00000000000001b2:	callq	0x403240 <_Unwind_Resume@plt>	;  5 bytes
+M00000000000001b7:	movq	%rax, %rdi	;  3 bytes
+M00000000000001ba:	callq	0x40f610 <__clang_call_terminate>	;  5 bytes
+M00000000000001bf:	nop		;  1 bytes
 ```

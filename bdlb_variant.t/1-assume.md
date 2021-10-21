@@ -2,313 +2,313 @@
 
 ```nasm
 00000000004f2470 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)>:
-0000000000000000: 01	pushq	%rbx
-0000000000000001: 03	movq	%rdi, %rbx
-0000000000000004: 02	decl	%ecx
-0000000000000006: 07	jmpq	*5449952(,%rcx,8)
-000000000000000d: 07	movq	2613580(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>
-0000000000000014: 03	testq	%rax, %rax
-0000000000000017: 02	jne	0x4f248e <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x1e>
-0000000000000019: 05	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-000000000000001e: 07	movq	$0, (%rbx)
-0000000000000025: 04	movq	%rax, 40(%rbx)
-0000000000000029: 07	movaps	228656(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>
-0000000000000030: 04	movups	%xmm0, 24(%rbx)
-0000000000000034: 05	movl	$5473488, %esi
-0000000000000039: 05	movl	$5, %edx
-000000000000003e: 05	movl	$5471545, %ecx
-0000000000000043: 03	movq	%rbx, %rdi
-0000000000000046: 05	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-000000000000004b: 05	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>
-0000000000000050: 07	movq	2613513(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>
-0000000000000057: 03	testq	%rax, %rax
-000000000000005a: 02	jne	0x4f24d1 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x61>
-000000000000005c: 05	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-0000000000000061: 07	movq	$0, (%rbx)
-0000000000000068: 04	movq	%rax, 40(%rbx)
-000000000000006c: 07	movaps	228589(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>
-0000000000000073: 04	movups	%xmm0, 24(%rbx)
-0000000000000077: 05	movl	$5473488, %esi
-000000000000007c: 05	movl	$5, %edx
-0000000000000081: 05	movl	$5471545, %ecx
-0000000000000086: 03	movq	%rbx, %rdi
-0000000000000089: 05	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-000000000000008e: 05	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>
-0000000000000093: 07	movq	2613446(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>
-000000000000009a: 03	testq	%rax, %rax
-000000000000009d: 02	jne	0x4f2514 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0xa4>
-000000000000009f: 05	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-00000000000000a4: 07	movq	$0, (%rbx)
-00000000000000ab: 04	movq	%rax, 40(%rbx)
-00000000000000af: 07	movaps	228522(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>
-00000000000000b6: 04	movups	%xmm0, 24(%rbx)
-00000000000000ba: 05	movl	$5473488, %esi
-00000000000000bf: 05	movl	$5, %edx
-00000000000000c4: 05	movl	$5471545, %ecx
-00000000000000c9: 03	movq	%rbx, %rdi
-00000000000000cc: 05	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-00000000000000d1: 05	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>
-00000000000000d6: 07	movq	2613379(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>
-00000000000000dd: 03	testq	%rax, %rax
-00000000000000e0: 02	jne	0x4f2557 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0xe7>
-00000000000000e2: 05	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-00000000000000e7: 07	movq	$0, (%rbx)
-00000000000000ee: 04	movq	%rax, 40(%rbx)
-00000000000000f2: 07	movaps	228455(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>
-00000000000000f9: 04	movups	%xmm0, 24(%rbx)
-00000000000000fd: 05	movl	$5473488, %esi
-0000000000000102: 05	movl	$5, %edx
-0000000000000107: 05	movl	$5471545, %ecx
-000000000000010c: 03	movq	%rbx, %rdi
-000000000000010f: 05	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-0000000000000114: 05	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>
-0000000000000119: 07	movq	2613312(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>
-0000000000000120: 03	testq	%rax, %rax
-0000000000000123: 02	jne	0x4f259a <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x12a>
-0000000000000125: 05	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-000000000000012a: 07	movq	$0, (%rbx)
-0000000000000131: 04	movq	%rax, 40(%rbx)
-0000000000000135: 07	movaps	228388(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>
-000000000000013c: 04	movups	%xmm0, 24(%rbx)
-0000000000000140: 05	movl	$5473488, %esi
-0000000000000145: 05	movl	$5, %edx
-000000000000014a: 05	movl	$5471545, %ecx
-000000000000014f: 03	movq	%rbx, %rdi
-0000000000000152: 05	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-0000000000000157: 05	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>
-000000000000015c: 07	movq	2613245(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>
-0000000000000163: 03	testq	%rax, %rax
-0000000000000166: 02	jne	0x4f25dd <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x16d>
-0000000000000168: 05	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-000000000000016d: 07	movq	$0, (%rbx)
-0000000000000174: 04	movq	%rax, 40(%rbx)
-0000000000000178: 07	movaps	228321(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>
-000000000000017f: 04	movups	%xmm0, 24(%rbx)
-0000000000000183: 05	movl	$5473488, %esi
-0000000000000188: 05	movl	$5, %edx
-000000000000018d: 05	movl	$5471545, %ecx
-0000000000000192: 03	movq	%rbx, %rdi
-0000000000000195: 05	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-000000000000019a: 05	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>
-000000000000019f: 07	movq	2613178(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>
-00000000000001a6: 03	testq	%rax, %rax
-00000000000001a9: 02	jne	0x4f2620 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x1b0>
-00000000000001ab: 05	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-00000000000001b0: 07	movq	$0, (%rbx)
-00000000000001b7: 04	movq	%rax, 40(%rbx)
-00000000000001bb: 07	movaps	228254(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>
-00000000000001c2: 04	movups	%xmm0, 24(%rbx)
-00000000000001c6: 05	movl	$5473488, %esi
-00000000000001cb: 05	movl	$5, %edx
-00000000000001d0: 05	movl	$5471545, %ecx
-00000000000001d5: 03	movq	%rbx, %rdi
-00000000000001d8: 05	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-00000000000001dd: 05	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>
-00000000000001e2: 07	movq	2613111(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>
-00000000000001e9: 03	testq	%rax, %rax
-00000000000001ec: 02	jne	0x4f2663 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x1f3>
-00000000000001ee: 05	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-00000000000001f3: 07	movq	$0, (%rbx)
-00000000000001fa: 04	movq	%rax, 40(%rbx)
-00000000000001fe: 07	movaps	228187(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>
-0000000000000205: 04	movups	%xmm0, 24(%rbx)
-0000000000000209: 05	movl	$5473488, %esi
-000000000000020e: 05	movl	$5, %edx
-0000000000000213: 05	movl	$5471545, %ecx
-0000000000000218: 03	movq	%rbx, %rdi
-000000000000021b: 05	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-0000000000000220: 05	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>
-0000000000000225: 07	movq	2613044(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>
-000000000000022c: 03	testq	%rax, %rax
-000000000000022f: 02	jne	0x4f26a6 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x236>
-0000000000000231: 05	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-0000000000000236: 07	movq	$0, (%rbx)
-000000000000023d: 04	movq	%rax, 40(%rbx)
-0000000000000241: 07	movaps	228120(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>
-0000000000000248: 04	movups	%xmm0, 24(%rbx)
-000000000000024c: 05	movl	$5473488, %esi
-0000000000000251: 05	movl	$5, %edx
-0000000000000256: 05	movl	$5471545, %ecx
-000000000000025b: 03	movq	%rbx, %rdi
-000000000000025e: 05	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-0000000000000263: 05	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>
-0000000000000268: 07	movq	2612977(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>
-000000000000026f: 03	testq	%rax, %rax
-0000000000000272: 02	jne	0x4f26e9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x279>
-0000000000000274: 05	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-0000000000000279: 07	movq	$0, (%rbx)
-0000000000000280: 04	movq	%rax, 40(%rbx)
-0000000000000284: 07	movaps	228053(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>
-000000000000028b: 04	movups	%xmm0, 24(%rbx)
-000000000000028f: 05	movl	$5473488, %esi
-0000000000000294: 05	movl	$5, %edx
-0000000000000299: 05	movl	$5471545, %ecx
-000000000000029e: 03	movq	%rbx, %rdi
-00000000000002a1: 05	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-00000000000002a6: 05	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>
-00000000000002ab: 07	movq	2612910(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>
-00000000000002b2: 03	testq	%rax, %rax
-00000000000002b5: 02	jne	0x4f272c <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x2bc>
-00000000000002b7: 05	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-00000000000002bc: 07	movq	$0, (%rbx)
-00000000000002c3: 04	movq	%rax, 40(%rbx)
-00000000000002c7: 07	movaps	227986(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>
-00000000000002ce: 04	movups	%xmm0, 24(%rbx)
-00000000000002d2: 05	movl	$5473488, %esi
-00000000000002d7: 05	movl	$5, %edx
-00000000000002dc: 05	movl	$5471545, %ecx
-00000000000002e1: 03	movq	%rbx, %rdi
-00000000000002e4: 05	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-00000000000002e9: 05	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>
-00000000000002ee: 07	movq	2612843(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>
-00000000000002f5: 03	testq	%rax, %rax
-00000000000002f8: 02	jne	0x4f276f <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x2ff>
-00000000000002fa: 05	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-00000000000002ff: 07	movq	$0, (%rbx)
-0000000000000306: 04	movq	%rax, 40(%rbx)
-000000000000030a: 07	movaps	227919(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>
-0000000000000311: 04	movups	%xmm0, 24(%rbx)
-0000000000000315: 05	movl	$5473488, %esi
-000000000000031a: 05	movl	$5, %edx
-000000000000031f: 05	movl	$5471545, %ecx
-0000000000000324: 03	movq	%rbx, %rdi
-0000000000000327: 05	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-000000000000032c: 05	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>
-0000000000000331: 07	movq	2612776(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>
-0000000000000338: 03	testq	%rax, %rax
-000000000000033b: 02	jne	0x4f27b2 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x342>
-000000000000033d: 05	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-0000000000000342: 07	movq	$0, (%rbx)
-0000000000000349: 04	movq	%rax, 40(%rbx)
-000000000000034d: 07	movaps	227852(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>
-0000000000000354: 04	movups	%xmm0, 24(%rbx)
-0000000000000358: 05	movl	$5473488, %esi
-000000000000035d: 05	movl	$5, %edx
-0000000000000362: 05	movl	$5471545, %ecx
-0000000000000367: 03	movq	%rbx, %rdi
-000000000000036a: 05	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-000000000000036f: 05	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>
-0000000000000374: 07	movq	2612709(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>
-000000000000037b: 03	testq	%rax, %rax
-000000000000037e: 02	jne	0x4f27f5 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x385>
-0000000000000380: 05	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-0000000000000385: 07	movq	$0, (%rbx)
-000000000000038c: 04	movq	%rax, 40(%rbx)
-0000000000000390: 07	movaps	227785(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>
-0000000000000397: 04	movups	%xmm0, 24(%rbx)
-000000000000039b: 05	movl	$5473488, %esi
-00000000000003a0: 05	movl	$5, %edx
-00000000000003a5: 05	movl	$5471545, %ecx
-00000000000003aa: 03	movq	%rbx, %rdi
-00000000000003ad: 05	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-00000000000003b2: 05	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>
-00000000000003b7: 07	movq	2612642(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>
-00000000000003be: 03	testq	%rax, %rax
-00000000000003c1: 02	jne	0x4f2838 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x3c8>
-00000000000003c3: 05	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-00000000000003c8: 07	movq	$0, (%rbx)
-00000000000003cf: 04	movq	%rax, 40(%rbx)
-00000000000003d3: 07	movaps	227718(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>
-00000000000003da: 04	movups	%xmm0, 24(%rbx)
-00000000000003de: 05	movl	$5473488, %esi
-00000000000003e3: 05	movl	$5, %edx
-00000000000003e8: 05	movl	$5471545, %ecx
-00000000000003ed: 03	movq	%rbx, %rdi
-00000000000003f0: 05	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-00000000000003f5: 05	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>
-00000000000003fa: 07	movq	2612575(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>
-0000000000000401: 03	testq	%rax, %rax
-0000000000000404: 02	jne	0x4f287b <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x40b>
-0000000000000406: 05	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-000000000000040b: 07	movq	$0, (%rbx)
-0000000000000412: 04	movq	%rax, 40(%rbx)
-0000000000000416: 07	movaps	227651(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>
-000000000000041d: 04	movups	%xmm0, 24(%rbx)
-0000000000000421: 05	movl	$5473488, %esi
-0000000000000426: 05	movl	$5, %edx
-000000000000042b: 05	movl	$5471545, %ecx
-0000000000000430: 03	movq	%rbx, %rdi
-0000000000000433: 05	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-0000000000000438: 05	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>
-000000000000043d: 07	movq	2612508(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>
-0000000000000444: 03	testq	%rax, %rax
-0000000000000447: 02	jne	0x4f28be <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x44e>
-0000000000000449: 05	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-000000000000044e: 07	movq	$0, (%rbx)
-0000000000000455: 04	movq	%rax, 40(%rbx)
-0000000000000459: 07	movaps	227584(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>
-0000000000000460: 04	movups	%xmm0, 24(%rbx)
-0000000000000464: 05	movl	$5473488, %esi
-0000000000000469: 05	movl	$5, %edx
-000000000000046e: 05	movl	$5471545, %ecx
-0000000000000473: 03	movq	%rbx, %rdi
-0000000000000476: 05	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-000000000000047b: 05	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>
-0000000000000480: 07	movq	2612441(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>
-0000000000000487: 03	testq	%rax, %rax
-000000000000048a: 02	jne	0x4f2901 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x491>
-000000000000048c: 05	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-0000000000000491: 07	movq	$0, (%rbx)
-0000000000000498: 04	movq	%rax, 40(%rbx)
-000000000000049c: 07	movaps	227517(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>
-00000000000004a3: 04	movups	%xmm0, 24(%rbx)
-00000000000004a7: 05	movl	$5473488, %esi
-00000000000004ac: 05	movl	$5, %edx
-00000000000004b1: 05	movl	$5471545, %ecx
-00000000000004b6: 03	movq	%rbx, %rdi
-00000000000004b9: 05	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-00000000000004be: 02	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>
-00000000000004c0: 07	movq	2612377(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>
-00000000000004c7: 03	testq	%rax, %rax
-00000000000004ca: 02	jne	0x4f2941 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x4d1>
-00000000000004cc: 05	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-00000000000004d1: 07	movq	$0, (%rbx)
-00000000000004d8: 04	movq	%rax, 40(%rbx)
-00000000000004dc: 07	movaps	227453(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>
-00000000000004e3: 04	movups	%xmm0, 24(%rbx)
-00000000000004e7: 05	movl	$5473488, %esi
-00000000000004ec: 05	movl	$5, %edx
-00000000000004f1: 05	movl	$5471545, %ecx
-00000000000004f6: 03	movq	%rbx, %rdi
-00000000000004f9: 05	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-00000000000004fe: 02	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>
-0000000000000500: 07	movq	2612313(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>
-0000000000000507: 03	testq	%rax, %rax
-000000000000050a: 02	jne	0x4f2981 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x511>
-000000000000050c: 05	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-0000000000000511: 07	movq	$0, (%rbx)
-0000000000000518: 04	movq	%rax, 40(%rbx)
-000000000000051c: 07	movaps	227389(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>
-0000000000000523: 04	movups	%xmm0, 24(%rbx)
-0000000000000527: 05	movl	$5473488, %esi
-000000000000052c: 05	movl	$5, %edx
-0000000000000531: 05	movl	$5471545, %ecx
-0000000000000536: 03	movq	%rbx, %rdi
-0000000000000539: 05	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-000000000000053e: 03	movq	%rbx, %rax
-0000000000000541: 01	popq	%rbx
-0000000000000542: 01	retq	
-0000000000000543: 02	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>
-0000000000000545: 02	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>
-0000000000000547: 02	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>
-0000000000000549: 02	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>
-000000000000054b: 02	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>
-000000000000054d: 02	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>
-000000000000054f: 02	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>
-0000000000000551: 02	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>
-0000000000000553: 02	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>
-0000000000000555: 02	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>
-0000000000000557: 02	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>
-0000000000000559: 02	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>
-000000000000055b: 02	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>
-000000000000055d: 02	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>
-000000000000055f: 02	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>
-0000000000000561: 02	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>
-0000000000000563: 02	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>
-0000000000000565: 02	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>
-0000000000000567: 02	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>
-0000000000000569: 08	movq	$0, 24(%rbx)
-0000000000000571: 03	movq	%rax, %rdi
-0000000000000574: 05	callq	0x403f90 <_Unwind_Resume@plt>
-0000000000000579: 07	nopl	(%rax)
+M0000000000000000:	pushq	%rbx	;  1 bytes
+M0000000000000001:	movq	%rdi, %rbx	;  3 bytes
+M0000000000000004:	decl	%ecx	;  2 bytes
+M0000000000000006:	jmpq	*5449952(,%rcx,8)	;  7 bytes
+M000000000000000d:	movq	2613580(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M0000000000000014:	testq	%rax, %rax	;  3 bytes
+M0000000000000017:	jne	0x4f248e <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x1e>	;  2 bytes
+M0000000000000019:	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M000000000000001e:	movq	$0, (%rbx)	;  7 bytes
+M0000000000000025:	movq	%rax, 40(%rbx)	;  4 bytes
+M0000000000000029:	movaps	228656(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>	;  7 bytes
+M0000000000000030:	movups	%xmm0, 24(%rbx)	;  4 bytes
+M0000000000000034:	movl	$5473488, %esi	;  5 bytes
+M0000000000000039:	movl	$5, %edx	;  5 bytes
+M000000000000003e:	movl	$5471545, %ecx	;  5 bytes
+M0000000000000043:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000046:	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M000000000000004b:	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>	;  5 bytes
+M0000000000000050:	movq	2613513(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M0000000000000057:	testq	%rax, %rax	;  3 bytes
+M000000000000005a:	jne	0x4f24d1 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x61>	;  2 bytes
+M000000000000005c:	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M0000000000000061:	movq	$0, (%rbx)	;  7 bytes
+M0000000000000068:	movq	%rax, 40(%rbx)	;  4 bytes
+M000000000000006c:	movaps	228589(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>	;  7 bytes
+M0000000000000073:	movups	%xmm0, 24(%rbx)	;  4 bytes
+M0000000000000077:	movl	$5473488, %esi	;  5 bytes
+M000000000000007c:	movl	$5, %edx	;  5 bytes
+M0000000000000081:	movl	$5471545, %ecx	;  5 bytes
+M0000000000000086:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000089:	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M000000000000008e:	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>	;  5 bytes
+M0000000000000093:	movq	2613446(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M000000000000009a:	testq	%rax, %rax	;  3 bytes
+M000000000000009d:	jne	0x4f2514 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0xa4>	;  2 bytes
+M000000000000009f:	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M00000000000000a4:	movq	$0, (%rbx)	;  7 bytes
+M00000000000000ab:	movq	%rax, 40(%rbx)	;  4 bytes
+M00000000000000af:	movaps	228522(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>	;  7 bytes
+M00000000000000b6:	movups	%xmm0, 24(%rbx)	;  4 bytes
+M00000000000000ba:	movl	$5473488, %esi	;  5 bytes
+M00000000000000bf:	movl	$5, %edx	;  5 bytes
+M00000000000000c4:	movl	$5471545, %ecx	;  5 bytes
+M00000000000000c9:	movq	%rbx, %rdi	;  3 bytes
+M00000000000000cc:	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M00000000000000d1:	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>	;  5 bytes
+M00000000000000d6:	movq	2613379(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M00000000000000dd:	testq	%rax, %rax	;  3 bytes
+M00000000000000e0:	jne	0x4f2557 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0xe7>	;  2 bytes
+M00000000000000e2:	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M00000000000000e7:	movq	$0, (%rbx)	;  7 bytes
+M00000000000000ee:	movq	%rax, 40(%rbx)	;  4 bytes
+M00000000000000f2:	movaps	228455(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>	;  7 bytes
+M00000000000000f9:	movups	%xmm0, 24(%rbx)	;  4 bytes
+M00000000000000fd:	movl	$5473488, %esi	;  5 bytes
+M0000000000000102:	movl	$5, %edx	;  5 bytes
+M0000000000000107:	movl	$5471545, %ecx	;  5 bytes
+M000000000000010c:	movq	%rbx, %rdi	;  3 bytes
+M000000000000010f:	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M0000000000000114:	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>	;  5 bytes
+M0000000000000119:	movq	2613312(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M0000000000000120:	testq	%rax, %rax	;  3 bytes
+M0000000000000123:	jne	0x4f259a <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x12a>	;  2 bytes
+M0000000000000125:	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M000000000000012a:	movq	$0, (%rbx)	;  7 bytes
+M0000000000000131:	movq	%rax, 40(%rbx)	;  4 bytes
+M0000000000000135:	movaps	228388(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>	;  7 bytes
+M000000000000013c:	movups	%xmm0, 24(%rbx)	;  4 bytes
+M0000000000000140:	movl	$5473488, %esi	;  5 bytes
+M0000000000000145:	movl	$5, %edx	;  5 bytes
+M000000000000014a:	movl	$5471545, %ecx	;  5 bytes
+M000000000000014f:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000152:	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M0000000000000157:	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>	;  5 bytes
+M000000000000015c:	movq	2613245(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M0000000000000163:	testq	%rax, %rax	;  3 bytes
+M0000000000000166:	jne	0x4f25dd <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x16d>	;  2 bytes
+M0000000000000168:	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M000000000000016d:	movq	$0, (%rbx)	;  7 bytes
+M0000000000000174:	movq	%rax, 40(%rbx)	;  4 bytes
+M0000000000000178:	movaps	228321(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>	;  7 bytes
+M000000000000017f:	movups	%xmm0, 24(%rbx)	;  4 bytes
+M0000000000000183:	movl	$5473488, %esi	;  5 bytes
+M0000000000000188:	movl	$5, %edx	;  5 bytes
+M000000000000018d:	movl	$5471545, %ecx	;  5 bytes
+M0000000000000192:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000195:	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M000000000000019a:	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>	;  5 bytes
+M000000000000019f:	movq	2613178(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M00000000000001a6:	testq	%rax, %rax	;  3 bytes
+M00000000000001a9:	jne	0x4f2620 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x1b0>	;  2 bytes
+M00000000000001ab:	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M00000000000001b0:	movq	$0, (%rbx)	;  7 bytes
+M00000000000001b7:	movq	%rax, 40(%rbx)	;  4 bytes
+M00000000000001bb:	movaps	228254(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>	;  7 bytes
+M00000000000001c2:	movups	%xmm0, 24(%rbx)	;  4 bytes
+M00000000000001c6:	movl	$5473488, %esi	;  5 bytes
+M00000000000001cb:	movl	$5, %edx	;  5 bytes
+M00000000000001d0:	movl	$5471545, %ecx	;  5 bytes
+M00000000000001d5:	movq	%rbx, %rdi	;  3 bytes
+M00000000000001d8:	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M00000000000001dd:	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>	;  5 bytes
+M00000000000001e2:	movq	2613111(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M00000000000001e9:	testq	%rax, %rax	;  3 bytes
+M00000000000001ec:	jne	0x4f2663 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x1f3>	;  2 bytes
+M00000000000001ee:	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M00000000000001f3:	movq	$0, (%rbx)	;  7 bytes
+M00000000000001fa:	movq	%rax, 40(%rbx)	;  4 bytes
+M00000000000001fe:	movaps	228187(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>	;  7 bytes
+M0000000000000205:	movups	%xmm0, 24(%rbx)	;  4 bytes
+M0000000000000209:	movl	$5473488, %esi	;  5 bytes
+M000000000000020e:	movl	$5, %edx	;  5 bytes
+M0000000000000213:	movl	$5471545, %ecx	;  5 bytes
+M0000000000000218:	movq	%rbx, %rdi	;  3 bytes
+M000000000000021b:	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M0000000000000220:	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>	;  5 bytes
+M0000000000000225:	movq	2613044(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M000000000000022c:	testq	%rax, %rax	;  3 bytes
+M000000000000022f:	jne	0x4f26a6 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x236>	;  2 bytes
+M0000000000000231:	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M0000000000000236:	movq	$0, (%rbx)	;  7 bytes
+M000000000000023d:	movq	%rax, 40(%rbx)	;  4 bytes
+M0000000000000241:	movaps	228120(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>	;  7 bytes
+M0000000000000248:	movups	%xmm0, 24(%rbx)	;  4 bytes
+M000000000000024c:	movl	$5473488, %esi	;  5 bytes
+M0000000000000251:	movl	$5, %edx	;  5 bytes
+M0000000000000256:	movl	$5471545, %ecx	;  5 bytes
+M000000000000025b:	movq	%rbx, %rdi	;  3 bytes
+M000000000000025e:	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M0000000000000263:	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>	;  5 bytes
+M0000000000000268:	movq	2612977(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M000000000000026f:	testq	%rax, %rax	;  3 bytes
+M0000000000000272:	jne	0x4f26e9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x279>	;  2 bytes
+M0000000000000274:	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M0000000000000279:	movq	$0, (%rbx)	;  7 bytes
+M0000000000000280:	movq	%rax, 40(%rbx)	;  4 bytes
+M0000000000000284:	movaps	228053(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>	;  7 bytes
+M000000000000028b:	movups	%xmm0, 24(%rbx)	;  4 bytes
+M000000000000028f:	movl	$5473488, %esi	;  5 bytes
+M0000000000000294:	movl	$5, %edx	;  5 bytes
+M0000000000000299:	movl	$5471545, %ecx	;  5 bytes
+M000000000000029e:	movq	%rbx, %rdi	;  3 bytes
+M00000000000002a1:	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M00000000000002a6:	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>	;  5 bytes
+M00000000000002ab:	movq	2612910(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M00000000000002b2:	testq	%rax, %rax	;  3 bytes
+M00000000000002b5:	jne	0x4f272c <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x2bc>	;  2 bytes
+M00000000000002b7:	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M00000000000002bc:	movq	$0, (%rbx)	;  7 bytes
+M00000000000002c3:	movq	%rax, 40(%rbx)	;  4 bytes
+M00000000000002c7:	movaps	227986(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>	;  7 bytes
+M00000000000002ce:	movups	%xmm0, 24(%rbx)	;  4 bytes
+M00000000000002d2:	movl	$5473488, %esi	;  5 bytes
+M00000000000002d7:	movl	$5, %edx	;  5 bytes
+M00000000000002dc:	movl	$5471545, %ecx	;  5 bytes
+M00000000000002e1:	movq	%rbx, %rdi	;  3 bytes
+M00000000000002e4:	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M00000000000002e9:	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>	;  5 bytes
+M00000000000002ee:	movq	2612843(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M00000000000002f5:	testq	%rax, %rax	;  3 bytes
+M00000000000002f8:	jne	0x4f276f <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x2ff>	;  2 bytes
+M00000000000002fa:	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M00000000000002ff:	movq	$0, (%rbx)	;  7 bytes
+M0000000000000306:	movq	%rax, 40(%rbx)	;  4 bytes
+M000000000000030a:	movaps	227919(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>	;  7 bytes
+M0000000000000311:	movups	%xmm0, 24(%rbx)	;  4 bytes
+M0000000000000315:	movl	$5473488, %esi	;  5 bytes
+M000000000000031a:	movl	$5, %edx	;  5 bytes
+M000000000000031f:	movl	$5471545, %ecx	;  5 bytes
+M0000000000000324:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000327:	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M000000000000032c:	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>	;  5 bytes
+M0000000000000331:	movq	2612776(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M0000000000000338:	testq	%rax, %rax	;  3 bytes
+M000000000000033b:	jne	0x4f27b2 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x342>	;  2 bytes
+M000000000000033d:	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M0000000000000342:	movq	$0, (%rbx)	;  7 bytes
+M0000000000000349:	movq	%rax, 40(%rbx)	;  4 bytes
+M000000000000034d:	movaps	227852(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>	;  7 bytes
+M0000000000000354:	movups	%xmm0, 24(%rbx)	;  4 bytes
+M0000000000000358:	movl	$5473488, %esi	;  5 bytes
+M000000000000035d:	movl	$5, %edx	;  5 bytes
+M0000000000000362:	movl	$5471545, %ecx	;  5 bytes
+M0000000000000367:	movq	%rbx, %rdi	;  3 bytes
+M000000000000036a:	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M000000000000036f:	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>	;  5 bytes
+M0000000000000374:	movq	2612709(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M000000000000037b:	testq	%rax, %rax	;  3 bytes
+M000000000000037e:	jne	0x4f27f5 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x385>	;  2 bytes
+M0000000000000380:	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M0000000000000385:	movq	$0, (%rbx)	;  7 bytes
+M000000000000038c:	movq	%rax, 40(%rbx)	;  4 bytes
+M0000000000000390:	movaps	227785(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>	;  7 bytes
+M0000000000000397:	movups	%xmm0, 24(%rbx)	;  4 bytes
+M000000000000039b:	movl	$5473488, %esi	;  5 bytes
+M00000000000003a0:	movl	$5, %edx	;  5 bytes
+M00000000000003a5:	movl	$5471545, %ecx	;  5 bytes
+M00000000000003aa:	movq	%rbx, %rdi	;  3 bytes
+M00000000000003ad:	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M00000000000003b2:	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>	;  5 bytes
+M00000000000003b7:	movq	2612642(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M00000000000003be:	testq	%rax, %rax	;  3 bytes
+M00000000000003c1:	jne	0x4f2838 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x3c8>	;  2 bytes
+M00000000000003c3:	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M00000000000003c8:	movq	$0, (%rbx)	;  7 bytes
+M00000000000003cf:	movq	%rax, 40(%rbx)	;  4 bytes
+M00000000000003d3:	movaps	227718(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>	;  7 bytes
+M00000000000003da:	movups	%xmm0, 24(%rbx)	;  4 bytes
+M00000000000003de:	movl	$5473488, %esi	;  5 bytes
+M00000000000003e3:	movl	$5, %edx	;  5 bytes
+M00000000000003e8:	movl	$5471545, %ecx	;  5 bytes
+M00000000000003ed:	movq	%rbx, %rdi	;  3 bytes
+M00000000000003f0:	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M00000000000003f5:	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>	;  5 bytes
+M00000000000003fa:	movq	2612575(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M0000000000000401:	testq	%rax, %rax	;  3 bytes
+M0000000000000404:	jne	0x4f287b <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x40b>	;  2 bytes
+M0000000000000406:	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M000000000000040b:	movq	$0, (%rbx)	;  7 bytes
+M0000000000000412:	movq	%rax, 40(%rbx)	;  4 bytes
+M0000000000000416:	movaps	227651(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>	;  7 bytes
+M000000000000041d:	movups	%xmm0, 24(%rbx)	;  4 bytes
+M0000000000000421:	movl	$5473488, %esi	;  5 bytes
+M0000000000000426:	movl	$5, %edx	;  5 bytes
+M000000000000042b:	movl	$5471545, %ecx	;  5 bytes
+M0000000000000430:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000433:	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M0000000000000438:	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>	;  5 bytes
+M000000000000043d:	movq	2612508(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M0000000000000444:	testq	%rax, %rax	;  3 bytes
+M0000000000000447:	jne	0x4f28be <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x44e>	;  2 bytes
+M0000000000000449:	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M000000000000044e:	movq	$0, (%rbx)	;  7 bytes
+M0000000000000455:	movq	%rax, 40(%rbx)	;  4 bytes
+M0000000000000459:	movaps	227584(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>	;  7 bytes
+M0000000000000460:	movups	%xmm0, 24(%rbx)	;  4 bytes
+M0000000000000464:	movl	$5473488, %esi	;  5 bytes
+M0000000000000469:	movl	$5, %edx	;  5 bytes
+M000000000000046e:	movl	$5471545, %ecx	;  5 bytes
+M0000000000000473:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000476:	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M000000000000047b:	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>	;  5 bytes
+M0000000000000480:	movq	2612441(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M0000000000000487:	testq	%rax, %rax	;  3 bytes
+M000000000000048a:	jne	0x4f2901 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x491>	;  2 bytes
+M000000000000048c:	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M0000000000000491:	movq	$0, (%rbx)	;  7 bytes
+M0000000000000498:	movq	%rax, 40(%rbx)	;  4 bytes
+M000000000000049c:	movaps	227517(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>	;  7 bytes
+M00000000000004a3:	movups	%xmm0, 24(%rbx)	;  4 bytes
+M00000000000004a7:	movl	$5473488, %esi	;  5 bytes
+M00000000000004ac:	movl	$5, %edx	;  5 bytes
+M00000000000004b1:	movl	$5471545, %ecx	;  5 bytes
+M00000000000004b6:	movq	%rbx, %rdi	;  3 bytes
+M00000000000004b9:	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M00000000000004be:	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>	;  2 bytes
+M00000000000004c0:	movq	2612377(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M00000000000004c7:	testq	%rax, %rax	;  3 bytes
+M00000000000004ca:	jne	0x4f2941 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x4d1>	;  2 bytes
+M00000000000004cc:	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M00000000000004d1:	movq	$0, (%rbx)	;  7 bytes
+M00000000000004d8:	movq	%rax, 40(%rbx)	;  4 bytes
+M00000000000004dc:	movaps	227453(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>	;  7 bytes
+M00000000000004e3:	movups	%xmm0, 24(%rbx)	;  4 bytes
+M00000000000004e7:	movl	$5473488, %esi	;  5 bytes
+M00000000000004ec:	movl	$5, %edx	;  5 bytes
+M00000000000004f1:	movl	$5471545, %ecx	;  5 bytes
+M00000000000004f6:	movq	%rbx, %rdi	;  3 bytes
+M00000000000004f9:	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M00000000000004fe:	jmp	0x4f29ae <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x53e>	;  2 bytes
+M0000000000000500:	movq	2612313(%rip), %rax  # 7705d0 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M0000000000000507:	testq	%rax, %rax	;  3 bytes
+M000000000000050a:	jne	0x4f2981 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x511>	;  2 bytes
+M000000000000050c:	callq	0x4f4f90 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M0000000000000511:	movq	$0, (%rbx)	;  7 bytes
+M0000000000000518:	movq	%rax, 40(%rbx)	;  4 bytes
+M000000000000051c:	movaps	227389(%rip), %xmm0  # 52a1d0 <main::DATA+0x9a0>	;  7 bytes
+M0000000000000523:	movups	%xmm0, 24(%rbx)	;  4 bytes
+M0000000000000527:	movl	$5473488, %esi	;  5 bytes
+M000000000000052c:	movl	$5, %edx	;  5 bytes
+M0000000000000531:	movl	$5471545, %ecx	;  5 bytes
+M0000000000000536:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000539:	callq	0x4f94f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M000000000000053e:	movq	%rbx, %rax	;  3 bytes
+M0000000000000541:	popq	%rbx	;  1 bytes
+M0000000000000542:	retq		;  1 bytes
+M0000000000000543:	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>	;  2 bytes
+M0000000000000545:	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>	;  2 bytes
+M0000000000000547:	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>	;  2 bytes
+M0000000000000549:	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>	;  2 bytes
+M000000000000054b:	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>	;  2 bytes
+M000000000000054d:	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>	;  2 bytes
+M000000000000054f:	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>	;  2 bytes
+M0000000000000551:	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>	;  2 bytes
+M0000000000000553:	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>	;  2 bytes
+M0000000000000555:	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>	;  2 bytes
+M0000000000000557:	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>	;  2 bytes
+M0000000000000559:	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>	;  2 bytes
+M000000000000055b:	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>	;  2 bytes
+M000000000000055d:	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>	;  2 bytes
+M000000000000055f:	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>	;  2 bytes
+M0000000000000561:	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>	;  2 bytes
+M0000000000000563:	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>	;  2 bytes
+M0000000000000565:	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>	;  2 bytes
+M0000000000000567:	jmp	0x4f29d9 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)+0x569>	;  2 bytes
+M0000000000000569:	movq	$0, 24(%rbx)	;  8 bytes
+M0000000000000571:	movq	%rax, %rdi	;  3 bytes
+M0000000000000574:	callq	0x403f90 <_Unwind_Resume@plt>	;  5 bytes
+M0000000000000579:	nopl	(%rax)	;  7 bytes
 ```

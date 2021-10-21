@@ -2,40 +2,40 @@
 
 ```nasm
 00000000004018e0 <find1AtMaxOracle(unsigned long)>:
-0000000000000000: 05	movl	$60, %eax
-0000000000000005: 10	nopw	%cs:(%rax,%rax)
-000000000000000f: 01	nop	
-0000000000000010: 03	leal	3(%rax), %ecx
-0000000000000013: 03	movzbl	%cl, %ecx
-0000000000000016: 04	btq	%rcx, %rdi
-000000000000001a: 02	jb	0x401943 <find1AtMaxOracle(unsigned long)+0x63>
-000000000000001c: 03	leal	2(%rax), %ecx
-000000000000001f: 03	movzbl	%cl, %ecx
-0000000000000022: 04	btq	%rcx, %rdi
-0000000000000026: 02	jb	0x401948 <find1AtMaxOracle(unsigned long)+0x68>
-0000000000000028: 03	leal	1(%rax), %ecx
-000000000000002b: 03	movzbl	%cl, %ecx
-000000000000002e: 04	btq	%rcx, %rdi
-0000000000000032: 02	jb	0x40194d <find1AtMaxOracle(unsigned long)+0x6d>
-0000000000000034: 04	btq	%rax, %rdi
-0000000000000038: 02	jb	0x401950 <find1AtMaxOracle(unsigned long)+0x70>
-000000000000003a: 04	addq	$-4, %rax
-000000000000003e: 04	cmpq	$-4, %rax
-0000000000000042: 02	jne	0x4018f0 <find1AtMaxOracle(unsigned long)+0x10>
-0000000000000044: 01	pushq	%rax
-0000000000000045: 05	movl	$4411488, %esi
-000000000000004a: 05	movl	$1, %edi
-000000000000004f: 05	movl	$418, %edx
-0000000000000054: 05	callq	0x401960 <(anonymous namespace)::aSsErT(bool, char const*, int)>
-0000000000000059: 05	movl	$4294967295, %eax
-000000000000005e: 04	addq	$8, %rsp
-0000000000000062: 01	retq	
-0000000000000063: 04	addq	$3, %rax
-0000000000000067: 01	retq	
-0000000000000068: 04	addq	$2, %rax
-000000000000006c: 01	retq	
-000000000000006d: 03	incq	%rax
-0000000000000070: 01	retq	
-0000000000000071: 10	nopw	%cs:(%rax,%rax)
-000000000000007b: 05	nopl	(%rax,%rax)
+M0000000000000000:	movl	$60, %eax	;  5 bytes
+M0000000000000005:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000000f:	nop		;  1 bytes
+M0000000000000010:	leal	3(%rax), %ecx	;  3 bytes
+M0000000000000013:	movzbl	%cl, %ecx	;  3 bytes
+M0000000000000016:	btq	%rcx, %rdi	;  4 bytes
+M000000000000001a:	jb	0x401943 <find1AtMaxOracle(unsigned long)+0x63>	;  2 bytes
+M000000000000001c:	leal	2(%rax), %ecx	;  3 bytes
+M000000000000001f:	movzbl	%cl, %ecx	;  3 bytes
+M0000000000000022:	btq	%rcx, %rdi	;  4 bytes
+M0000000000000026:	jb	0x401948 <find1AtMaxOracle(unsigned long)+0x68>	;  2 bytes
+M0000000000000028:	leal	1(%rax), %ecx	;  3 bytes
+M000000000000002b:	movzbl	%cl, %ecx	;  3 bytes
+M000000000000002e:	btq	%rcx, %rdi	;  4 bytes
+M0000000000000032:	jb	0x40194d <find1AtMaxOracle(unsigned long)+0x6d>	;  2 bytes
+M0000000000000034:	btq	%rax, %rdi	;  4 bytes
+M0000000000000038:	jb	0x401950 <find1AtMaxOracle(unsigned long)+0x70>	;  2 bytes
+M000000000000003a:	addq	$-4, %rax	;  4 bytes
+M000000000000003e:	cmpq	$-4, %rax	;  4 bytes
+M0000000000000042:	jne	0x4018f0 <find1AtMaxOracle(unsigned long)+0x10>	;  2 bytes
+M0000000000000044:	pushq	%rax	;  1 bytes
+M0000000000000045:	movl	$4411488, %esi	;  5 bytes
+M000000000000004a:	movl	$1, %edi	;  5 bytes
+M000000000000004f:	movl	$418, %edx	;  5 bytes
+M0000000000000054:	callq	0x401960 <(anonymous namespace)::aSsErT(bool, char const*, int)>	;  5 bytes
+M0000000000000059:	movl	$4294967295, %eax	;  5 bytes
+M000000000000005e:	addq	$8, %rsp	;  4 bytes
+M0000000000000062:	retq		;  1 bytes
+M0000000000000063:	addq	$3, %rax	;  4 bytes
+M0000000000000067:	retq		;  1 bytes
+M0000000000000068:	addq	$2, %rax	;  4 bytes
+M000000000000006c:	retq		;  1 bytes
+M000000000000006d:	incq	%rax	;  3 bytes
+M0000000000000070:	retq		;  1 bytes
+M0000000000000071:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000007b:	nopl	(%rax,%rax)	;  5 bytes
 ```

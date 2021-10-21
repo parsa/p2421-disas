@@ -1,29 +1,29 @@
 00000000004054e0 <BloombergLP::balb::SequenceWithAnonymityChoice1::makeSelection6()>:
-0000000000000000: 01	pushq	%rbx
-0000000000000001: 03	movq	%rdi, %rbx
-0000000000000004: 04	cmpl	$1, 48(%rdi)
-0000000000000008: 02	jne	0x4054fd <BloombergLP::balb::SequenceWithAnonymityChoice1::makeSelection6()+0x1d>
-000000000000000a: 03	movq	%rbx, %rdi
-000000000000000d: 02	xorl	%esi, %esi
-000000000000000f: 07	movq	$-1, %rdx
-0000000000000016: 05	callq	0x424d20 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::erase(unsigned long, unsigned long)>
-000000000000001b: 02	jmp	0x40553e <BloombergLP::balb::SequenceWithAnonymityChoice1::makeSelection6()+0x5e>
-000000000000001d: 07	movl	$4294967295, 48(%rbx)
-0000000000000024: 04	movq	56(%rbx), %rax
-0000000000000028: 03	testq	%rax, %rax
-000000000000002b: 02	jne	0x40551e <BloombergLP::balb::SequenceWithAnonymityChoice1::makeSelection6()+0x3e>
-000000000000002d: 07	movq	2594364(%rip), %rax  # 67eb50 <BloombergLP::bslma::Default::s_defaultAllocator>
-0000000000000034: 03	testq	%rax, %rax
-0000000000000037: 02	jne	0x40551e <BloombergLP::balb::SequenceWithAnonymityChoice1::makeSelection6()+0x3e>
-0000000000000039: 05	callq	0x4207c0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-000000000000003e: 07	movq	$0, (%rbx)
-0000000000000045: 07	movaps	264948(%rip), %xmm0  # 446020 <__dso_handle+0x8>
-000000000000004c: 04	movups	%xmm0, 24(%rbx)
-0000000000000050: 04	movq	%rax, 40(%rbx)
-0000000000000054: 03	movb	$0, (%rbx)
-0000000000000057: 07	movl	$1, 48(%rbx)
-000000000000005e: 03	movq	%rbx, %rax
-0000000000000061: 01	popq	%rbx
-0000000000000062: 01	retq	
-0000000000000063: 10	nopw	%cs:(%rax,%rax)
-000000000000006d: 03	nopl	(%rax)
+M0000000000000000:	pushq	%rbx	;  1 bytes
+M0000000000000001:	movq	%rdi, %rbx	;  3 bytes
+M0000000000000004:	cmpl	$1, 48(%rdi)	;  4 bytes
+M0000000000000008:	jne	0x4054fd <BloombergLP::balb::SequenceWithAnonymityChoice1::makeSelection6()+0x1d>	;  2 bytes
+M000000000000000a:	movq	%rbx, %rdi	;  3 bytes
+M000000000000000d:	xorl	%esi, %esi	;  2 bytes
+M000000000000000f:	movq	$-1, %rdx	;  7 bytes
+M0000000000000016:	callq	0x424d20 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::erase(unsigned long, unsigned long)>	;  5 bytes
+M000000000000001b:	jmp	0x40553e <BloombergLP::balb::SequenceWithAnonymityChoice1::makeSelection6()+0x5e>	;  2 bytes
+M000000000000001d:	movl	$4294967295, 48(%rbx)	;  7 bytes
+M0000000000000024:	movq	56(%rbx), %rax	;  4 bytes
+M0000000000000028:	testq	%rax, %rax	;  3 bytes
+M000000000000002b:	jne	0x40551e <BloombergLP::balb::SequenceWithAnonymityChoice1::makeSelection6()+0x3e>	;  2 bytes
+M000000000000002d:	movq	2594364(%rip), %rax  # 67eb50 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M0000000000000034:	testq	%rax, %rax	;  3 bytes
+M0000000000000037:	jne	0x40551e <BloombergLP::balb::SequenceWithAnonymityChoice1::makeSelection6()+0x3e>	;  2 bytes
+M0000000000000039:	callq	0x4207c0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M000000000000003e:	movq	$0, (%rbx)	;  7 bytes
+M0000000000000045:	movaps	264948(%rip), %xmm0  # 446020 <__dso_handle+0x8>	;  7 bytes
+M000000000000004c:	movups	%xmm0, 24(%rbx)	;  4 bytes
+M0000000000000050:	movq	%rax, 40(%rbx)	;  4 bytes
+M0000000000000054:	movb	$0, (%rbx)	;  3 bytes
+M0000000000000057:	movl	$1, 48(%rbx)	;  7 bytes
+M000000000000005e:	movq	%rbx, %rax	;  3 bytes
+M0000000000000061:	popq	%rbx	;  1 bytes
+M0000000000000062:	retq		;  1 bytes
+M0000000000000063:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000006d:	nopl	(%rax)	;  3 bytes

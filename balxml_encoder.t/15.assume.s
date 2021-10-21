@@ -1,116 +1,116 @@
 00000000004e2380 <int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 01	pushq	%rbx
-0000000000000006: 04	subq	$24, %rsp
-000000000000000a: 03	movq	%rsi, %rbx
-000000000000000d: 03	movq	%rdi, %r14
-0000000000000010: 03	cmpl	$2, %edx
-0000000000000013: 02	je	0x4e2413 <int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)+0x93>
-0000000000000015: 03	cmpl	$1, %edx
-0000000000000018: 06	je	0x4e249e <int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)+0x11e>
-000000000000001e: 05	movl	$4294967295, %ebp
-0000000000000023: 02	testl	%edx, %edx
-0000000000000025: 06	jne	0x4e2491 <int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)+0x111>
-000000000000002b: 04	subq	$-128, %r14
-000000000000002f: 07	movl	514954(%rip), %r15d  # 55ff40 <BloombergLP::s_baltst::MySequenceWithAnonymousChoice::ATTRIBUTE_INFO_ARRAY+0x20>
-0000000000000036: 03	movq	(%rbx), %rax
-0000000000000039: 03	movq	(%rax), %rbp
-000000000000003c: 07	cmpl	$2, 216(%rbp)
-0000000000000043: 02	jne	0x4e23e7 <int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)+0x67>
-0000000000000045: 07	movq	160(%rbp), %rdi
-000000000000004c: 04	movb	$62, (%rsp)
-0000000000000050: 03	movq	%rsp, %rsi
-0000000000000053: 05	movl	$1, %edx
-0000000000000058: 05	callq	0x4521a0 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>
-000000000000005d: 10	movl	$3, 216(%rbp)
-0000000000000067: 06	movl	180(%rbp), %eax
-000000000000006d: 02	incl	%eax
-000000000000006f: 06	movl	%eax, 176(%rbp)
-0000000000000075: 07	movq	160(%rbp), %rdi
-000000000000007c: 03	movq	(%rbx), %rax
-000000000000007f: 04	movq	8(%rax), %rax
-0000000000000083: 03	movq	(%rax), %rcx
-0000000000000086: 03	movq	%r14, %rsi
-0000000000000089: 03	movl	%r15d, %edx
-000000000000008c: 05	callq	0x48f490 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& BloombergLP::balxml::TypesPrintUtil::print<BloombergLP::bdlb::NullableValue<int> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::bdlb::NullableValue<int> const&, int, BloombergLP::balxml::EncoderOptions const*)>
-0000000000000091: 02	jmp	0x4e2475 <int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)+0xf5>
-0000000000000093: 07	movl	514934(%rip), %r15d  # 55ff90 <BloombergLP::s_baltst::MySequenceWithAnonymousChoice::ATTRIBUTE_INFO_ARRAY+0x70>
-000000000000009a: 03	movq	(%rbx), %rax
-000000000000009d: 03	movq	(%rax), %rbp
-00000000000000a0: 07	cmpl	$2, 216(%rbp)
-00000000000000a7: 02	jne	0x4e244b <int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)+0xcb>
-00000000000000a9: 07	movq	160(%rbp), %rdi
-00000000000000b0: 04	movb	$62, (%rsp)
-00000000000000b4: 03	movq	%rsp, %rsi
-00000000000000b7: 05	movl	$1, %edx
-00000000000000bc: 05	callq	0x4521a0 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>
-00000000000000c1: 10	movl	$3, 216(%rbp)
-00000000000000cb: 06	movl	180(%rbp), %eax
-00000000000000d1: 02	incl	%eax
-00000000000000d3: 06	movl	%eax, 176(%rbp)
-00000000000000d9: 07	movq	160(%rbp), %rdi
-00000000000000e0: 03	movq	(%rbx), %rax
-00000000000000e3: 04	movq	8(%rax), %rax
-00000000000000e7: 03	movq	(%rax), %rcx
-00000000000000ea: 03	movq	%r14, %rsi
-00000000000000ed: 03	movl	%r15d, %edx
-00000000000000f0: 05	callq	0x4df460 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& BloombergLP::balxml::TypesPrintUtil::print<BloombergLP::bdlb::NullableValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::bdlb::NullableValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > const&, int, BloombergLP::balxml::EncoderOptions const*)>
-00000000000000f5: 03	movq	(%rbx), %rax
-00000000000000f8: 03	movq	(%rax), %rax
-00000000000000fb: 07	movq	160(%rax), %rax
-0000000000000102: 03	movq	(%rax), %rcx
-0000000000000105: 04	movq	-24(%rcx), %rcx
-0000000000000109: 02	xorl	%edx, %edx
-000000000000010b: 04	cmpl	32(%rax,%rcx), %edx
-000000000000010f: 02	sbbl	%ebp, %ebp
-0000000000000111: 02	movl	%ebp, %eax
-0000000000000113: 04	addq	$24, %rsp
-0000000000000117: 01	popq	%rbx
-0000000000000118: 02	popq	%r14
-000000000000011a: 02	popq	%r15
-000000000000011c: 01	popq	%rbp
-000000000000011d: 01	retq	
-000000000000011e: 04	movl	112(%r14), %eax
-0000000000000122: 03	cmpl	$-1, %eax
-0000000000000125: 02	je	0x4e24e8 <int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)+0x168>
-0000000000000127: 04	addq	$64, %r14
-000000000000012b: 03	movq	(%rbx), %rcx
-000000000000012e: 05	movq	%rcx, 16(%rsp)
-0000000000000133: 02	testl	%eax, %eax
-0000000000000135: 02	je	0x4e2523 <int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)+0x1a3>
-0000000000000137: 07	movq	514930(%rip), %rax  # 560030 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::SELECTION_INFO_ARRAY+0x30>
-000000000000013e: 07	movslq	514931(%rip), %rcx  # 560038 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::SELECTION_INFO_ARRAY+0x38>
-0000000000000145: 04	movq	%rax, (%rsp)
-0000000000000149: 05	movq	%rcx, 8(%rsp)
-000000000000014e: 06	movl	514932(%rip), %ecx  # 560048 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::SELECTION_INFO_ARRAY+0x48>
-0000000000000154: 05	leaq	16(%rsp), %rdi
-0000000000000159: 03	movq	%rsp, %rdx
-000000000000015c: 03	movq	%r14, %rsi
-000000000000015f: 05	callq	0x4dcfb0 <int BloombergLP::balxml::Encoder_EncodeObject::executeImp<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlat_TypeCategory::Simple>(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&, std::__1::basic_string_view<char, std::__1::char_traits<char> > const&, int, BloombergLP::bdlat_TypeCategory::Simple)>
-0000000000000164: 02	movl	%eax, %ebp
-0000000000000166: 02	jmp	0x4e2491 <int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)+0x111>
-0000000000000168: 06	movl	514682(%rip), %ecx  # 55ff68 <BloombergLP::s_baltst::MySequenceWithAnonymousChoice::ATTRIBUTE_INFO_ARRAY+0x48>
-000000000000016e: 03	movq	(%rbx), %rax
-0000000000000171: 08	movq	$5579711, (%rsp)
-0000000000000179: 09	movq	$3, 8(%rsp)
-0000000000000182: 04	movq	8(%rax), %rdi
-0000000000000186: 03	movq	%rsp, %rdx
-0000000000000189: 05	movl	$4294967295, %ebp
-000000000000018e: 05	movl	$5579675, %esi
-0000000000000193: 06	movl	$4294967295, %r8d
-0000000000000199: 05	callq	0x4e4a00 <BloombergLP::balxml::Encoder::logError(char const*, std::__1::basic_string_view<char, std::__1::char_traits<char> > const&, int, int)>
-000000000000019e: 05	jmp	0x4e2491 <int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)+0x111>
-00000000000001a3: 07	movq	514782(%rip), %rax  # 560008 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::SELECTION_INFO_ARRAY+0x8>
-00000000000001aa: 07	movslq	514783(%rip), %rcx  # 560010 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::SELECTION_INFO_ARRAY+0x10>
-00000000000001b1: 04	movq	%rax, (%rsp)
-00000000000001b5: 05	movq	%rcx, 8(%rsp)
-00000000000001ba: 06	movl	514784(%rip), %ecx  # 560020 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::SELECTION_INFO_ARRAY+0x20>
-00000000000001c0: 05	leaq	16(%rsp), %rdi
-00000000000001c5: 03	movq	%rsp, %rdx
-00000000000001c8: 03	movq	%r14, %rsi
-00000000000001cb: 05	callq	0x456570 <int BloombergLP::balxml::Encoder_EncodeObject::executeImp<int, BloombergLP::bdlat_TypeCategory::Simple>(int const&, std::__1::basic_string_view<char, std::__1::char_traits<char> > const&, int, BloombergLP::bdlat_TypeCategory::Simple)>
-00000000000001d0: 02	movl	%eax, %ebp
-00000000000001d2: 05	jmp	0x4e2491 <int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)+0x111>
-00000000000001d7: 09	nopw	(%rax,%rax)
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%rbx	;  1 bytes
+M0000000000000006:	subq	$24, %rsp	;  4 bytes
+M000000000000000a:	movq	%rsi, %rbx	;  3 bytes
+M000000000000000d:	movq	%rdi, %r14	;  3 bytes
+M0000000000000010:	cmpl	$2, %edx	;  3 bytes
+M0000000000000013:	je	0x4e2413 <int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)+0x93>	;  2 bytes
+M0000000000000015:	cmpl	$1, %edx	;  3 bytes
+M0000000000000018:	je	0x4e249e <int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)+0x11e>	;  6 bytes
+M000000000000001e:	movl	$4294967295, %ebp	;  5 bytes
+M0000000000000023:	testl	%edx, %edx	;  2 bytes
+M0000000000000025:	jne	0x4e2491 <int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)+0x111>	;  6 bytes
+M000000000000002b:	subq	$-128, %r14	;  4 bytes
+M000000000000002f:	movl	514954(%rip), %r15d  # 55ff40 <BloombergLP::s_baltst::MySequenceWithAnonymousChoice::ATTRIBUTE_INFO_ARRAY+0x20>	;  7 bytes
+M0000000000000036:	movq	(%rbx), %rax	;  3 bytes
+M0000000000000039:	movq	(%rax), %rbp	;  3 bytes
+M000000000000003c:	cmpl	$2, 216(%rbp)	;  7 bytes
+M0000000000000043:	jne	0x4e23e7 <int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)+0x67>	;  2 bytes
+M0000000000000045:	movq	160(%rbp), %rdi	;  7 bytes
+M000000000000004c:	movb	$62, (%rsp)	;  4 bytes
+M0000000000000050:	movq	%rsp, %rsi	;  3 bytes
+M0000000000000053:	movl	$1, %edx	;  5 bytes
+M0000000000000058:	callq	0x4521a0 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>	;  5 bytes
+M000000000000005d:	movl	$3, 216(%rbp)	; 10 bytes
+M0000000000000067:	movl	180(%rbp), %eax	;  6 bytes
+M000000000000006d:	incl	%eax	;  2 bytes
+M000000000000006f:	movl	%eax, 176(%rbp)	;  6 bytes
+M0000000000000075:	movq	160(%rbp), %rdi	;  7 bytes
+M000000000000007c:	movq	(%rbx), %rax	;  3 bytes
+M000000000000007f:	movq	8(%rax), %rax	;  4 bytes
+M0000000000000083:	movq	(%rax), %rcx	;  3 bytes
+M0000000000000086:	movq	%r14, %rsi	;  3 bytes
+M0000000000000089:	movl	%r15d, %edx	;  3 bytes
+M000000000000008c:	callq	0x48f490 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& BloombergLP::balxml::TypesPrintUtil::print<BloombergLP::bdlb::NullableValue<int> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::bdlb::NullableValue<int> const&, int, BloombergLP::balxml::EncoderOptions const*)>	;  5 bytes
+M0000000000000091:	jmp	0x4e2475 <int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)+0xf5>	;  2 bytes
+M0000000000000093:	movl	514934(%rip), %r15d  # 55ff90 <BloombergLP::s_baltst::MySequenceWithAnonymousChoice::ATTRIBUTE_INFO_ARRAY+0x70>	;  7 bytes
+M000000000000009a:	movq	(%rbx), %rax	;  3 bytes
+M000000000000009d:	movq	(%rax), %rbp	;  3 bytes
+M00000000000000a0:	cmpl	$2, 216(%rbp)	;  7 bytes
+M00000000000000a7:	jne	0x4e244b <int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)+0xcb>	;  2 bytes
+M00000000000000a9:	movq	160(%rbp), %rdi	;  7 bytes
+M00000000000000b0:	movb	$62, (%rsp)	;  4 bytes
+M00000000000000b4:	movq	%rsp, %rsi	;  3 bytes
+M00000000000000b7:	movl	$1, %edx	;  5 bytes
+M00000000000000bc:	callq	0x4521a0 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>	;  5 bytes
+M00000000000000c1:	movl	$3, 216(%rbp)	; 10 bytes
+M00000000000000cb:	movl	180(%rbp), %eax	;  6 bytes
+M00000000000000d1:	incl	%eax	;  2 bytes
+M00000000000000d3:	movl	%eax, 176(%rbp)	;  6 bytes
+M00000000000000d9:	movq	160(%rbp), %rdi	;  7 bytes
+M00000000000000e0:	movq	(%rbx), %rax	;  3 bytes
+M00000000000000e3:	movq	8(%rax), %rax	;  4 bytes
+M00000000000000e7:	movq	(%rax), %rcx	;  3 bytes
+M00000000000000ea:	movq	%r14, %rsi	;  3 bytes
+M00000000000000ed:	movl	%r15d, %edx	;  3 bytes
+M00000000000000f0:	callq	0x4df460 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& BloombergLP::balxml::TypesPrintUtil::print<BloombergLP::bdlb::NullableValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::bdlb::NullableValue<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > const&, int, BloombergLP::balxml::EncoderOptions const*)>	;  5 bytes
+M00000000000000f5:	movq	(%rbx), %rax	;  3 bytes
+M00000000000000f8:	movq	(%rax), %rax	;  3 bytes
+M00000000000000fb:	movq	160(%rax), %rax	;  7 bytes
+M0000000000000102:	movq	(%rax), %rcx	;  3 bytes
+M0000000000000105:	movq	-24(%rcx), %rcx	;  4 bytes
+M0000000000000109:	xorl	%edx, %edx	;  2 bytes
+M000000000000010b:	cmpl	32(%rax,%rcx), %edx	;  4 bytes
+M000000000000010f:	sbbl	%ebp, %ebp	;  2 bytes
+M0000000000000111:	movl	%ebp, %eax	;  2 bytes
+M0000000000000113:	addq	$24, %rsp	;  4 bytes
+M0000000000000117:	popq	%rbx	;  1 bytes
+M0000000000000118:	popq	%r14	;  2 bytes
+M000000000000011a:	popq	%r15	;  2 bytes
+M000000000000011c:	popq	%rbp	;  1 bytes
+M000000000000011d:	retq		;  1 bytes
+M000000000000011e:	movl	112(%r14), %eax	;  4 bytes
+M0000000000000122:	cmpl	$-1, %eax	;  3 bytes
+M0000000000000125:	je	0x4e24e8 <int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)+0x168>	;  2 bytes
+M0000000000000127:	addq	$64, %r14	;  4 bytes
+M000000000000012b:	movq	(%rbx), %rcx	;  3 bytes
+M000000000000012e:	movq	%rcx, 16(%rsp)	;  5 bytes
+M0000000000000133:	testl	%eax, %eax	;  2 bytes
+M0000000000000135:	je	0x4e2523 <int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)+0x1a3>	;  2 bytes
+M0000000000000137:	movq	514930(%rip), %rax  # 560030 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::SELECTION_INFO_ARRAY+0x30>	;  7 bytes
+M000000000000013e:	movslq	514931(%rip), %rcx  # 560038 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::SELECTION_INFO_ARRAY+0x38>	;  7 bytes
+M0000000000000145:	movq	%rax, (%rsp)	;  4 bytes
+M0000000000000149:	movq	%rcx, 8(%rsp)	;  5 bytes
+M000000000000014e:	movl	514932(%rip), %ecx  # 560048 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::SELECTION_INFO_ARRAY+0x48>	;  6 bytes
+M0000000000000154:	leaq	16(%rsp), %rdi	;  5 bytes
+M0000000000000159:	movq	%rsp, %rdx	;  3 bytes
+M000000000000015c:	movq	%r14, %rsi	;  3 bytes
+M000000000000015f:	callq	0x4dcfb0 <int BloombergLP::balxml::Encoder_EncodeObject::executeImp<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlat_TypeCategory::Simple>(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&, std::__1::basic_string_view<char, std::__1::char_traits<char> > const&, int, BloombergLP::bdlat_TypeCategory::Simple)>	;  5 bytes
+M0000000000000164:	movl	%eax, %ebp	;  2 bytes
+M0000000000000166:	jmp	0x4e2491 <int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)+0x111>	;  2 bytes
+M0000000000000168:	movl	514682(%rip), %ecx  # 55ff68 <BloombergLP::s_baltst::MySequenceWithAnonymousChoice::ATTRIBUTE_INFO_ARRAY+0x48>	;  6 bytes
+M000000000000016e:	movq	(%rbx), %rax	;  3 bytes
+M0000000000000171:	movq	$5579711, (%rsp)	;  8 bytes
+M0000000000000179:	movq	$3, 8(%rsp)	;  9 bytes
+M0000000000000182:	movq	8(%rax), %rdi	;  4 bytes
+M0000000000000186:	movq	%rsp, %rdx	;  3 bytes
+M0000000000000189:	movl	$4294967295, %ebp	;  5 bytes
+M000000000000018e:	movl	$5579675, %esi	;  5 bytes
+M0000000000000193:	movl	$4294967295, %r8d	;  6 bytes
+M0000000000000199:	callq	0x4e4a00 <BloombergLP::balxml::Encoder::logError(char const*, std::__1::basic_string_view<char, std::__1::char_traits<char> > const&, int, int)>	;  5 bytes
+M000000000000019e:	jmp	0x4e2491 <int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)+0x111>	;  5 bytes
+M00000000000001a3:	movq	514782(%rip), %rax  # 560008 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::SELECTION_INFO_ARRAY+0x8>	;  7 bytes
+M00000000000001aa:	movslq	514783(%rip), %rcx  # 560010 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::SELECTION_INFO_ARRAY+0x10>	;  7 bytes
+M00000000000001b1:	movq	%rax, (%rsp)	;  4 bytes
+M00000000000001b5:	movq	%rcx, 8(%rsp)	;  5 bytes
+M00000000000001ba:	movl	514784(%rip), %ecx  # 560020 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::SELECTION_INFO_ARRAY+0x20>	;  6 bytes
+M00000000000001c0:	leaq	16(%rsp), %rdi	;  5 bytes
+M00000000000001c5:	movq	%rsp, %rdx	;  3 bytes
+M00000000000001c8:	movq	%r14, %rsi	;  3 bytes
+M00000000000001cb:	callq	0x456570 <int BloombergLP::balxml::Encoder_EncodeObject::executeImp<int, BloombergLP::bdlat_TypeCategory::Simple>(int const&, std::__1::basic_string_view<char, std::__1::char_traits<char> > const&, int, BloombergLP::bdlat_TypeCategory::Simple)>	;  5 bytes
+M00000000000001d0:	movl	%eax, %ebp	;  2 bytes
+M00000000000001d2:	jmp	0x4e2491 <int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)+0x111>	;  5 bytes
+M00000000000001d7:	nopw	(%rax,%rax)	;  9 bytes

@@ -1,69 +1,69 @@
 00000000004181c0 <void BloombergLP::bslim::Printer_Helper::print<BloombergLP::s_baltst::Colors::Value const*>(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::s_baltst::Colors::Value const* const&, BloombergLP::s_baltst::Colors::Value const* const&, int, int)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 02	pushq	%r13
-0000000000000007: 02	pushq	%r12
-0000000000000009: 01	pushq	%rbx
-000000000000000a: 04	subq	$40, %rsp
-000000000000000e: 03	movq	%rdx, %r12
-0000000000000011: 03	movq	%rsi, %rbx
-0000000000000014: 03	movq	%rdi, %rsi
-0000000000000017: 05	leaq	16(%rsp), %r14
-000000000000001c: 03	movq	%r14, %rdi
-000000000000001f: 02	movl	%ecx, %edx
-0000000000000021: 03	movl	%r8d, %ecx
-0000000000000024: 05	callq	0x4ca1b0 <BloombergLP::bslim::Printer::Printer(std::__1::basic_ostream<char, std::__1::char_traits<char> >*, int, int)>
-0000000000000029: 03	movq	%r14, %rdi
-000000000000002c: 02	xorl	%esi, %esi
-000000000000002e: 05	callq	0x4ca370 <BloombergLP::bslim::Printer::start(bool) const>
-0000000000000033: 03	movq	(%rbx), %rbp
-0000000000000036: 04	cmpq	%rbp, (%r12)
-000000000000003a: 02	je	0x41826c <void BloombergLP::bslim::Printer_Helper::print<BloombergLP::s_baltst::Colors::Value const*>(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::s_baltst::Colors::Value const* const&, BloombergLP::s_baltst::Colors::Value const* const&, int, int)+0xac>
-000000000000003c: 05	leaq	16(%rsp), %r14
-0000000000000041: 02	jmp	0x41821a <void BloombergLP::bslim::Printer_Helper::print<BloombergLP::s_baltst::Colors::Value const*>(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::s_baltst::Colors::Value const* const&, BloombergLP::s_baltst::Colors::Value const* const&, int, int)+0x5a>
-0000000000000043: 10	nopw	%cs:(%rax,%rax)
-000000000000004d: 03	nopl	(%rax)
-0000000000000050: 04	addq	$4, %rbp
-0000000000000054: 04	cmpq	(%r12), %rbp
-0000000000000058: 02	je	0x41826c <void BloombergLP::bslim::Printer_Helper::print<BloombergLP::s_baltst::Colors::Value const*>(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::s_baltst::Colors::Value const* const&, BloombergLP::s_baltst::Colors::Value const* const&, int, int)+0xac>
-000000000000005a: 03	movq	%r14, %rdi
-000000000000005d: 05	callq	0x4ca140 <BloombergLP::bslim::Printer::printIndentation() const>
-0000000000000062: 05	movq	16(%rsp), %r13
-0000000000000067: 05	movl	36(%rsp), %r15d
-000000000000006c: 04	movslq	(%rbp), %rax
-0000000000000070: 08	movq	5195816(,%rax,8), %rbx
-0000000000000078: 03	movq	%rbx, %rdi
-000000000000007b: 05	callq	0x405eb0 <strlen@plt>
-0000000000000080: 03	movq	%r13, %rdi
-0000000000000083: 03	movq	%rbx, %rsi
-0000000000000086: 03	movq	%rax, %rdx
-0000000000000089: 05	callq	0x417b30 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>
-000000000000008e: 03	testl	%r15d, %r15d
-0000000000000091: 02	js	0x418210 <void BloombergLP::bslim::Printer_Helper::print<BloombergLP::s_baltst::Colors::Value const*>(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::s_baltst::Colors::Value const* const&, BloombergLP::s_baltst::Colors::Value const* const&, int, int)+0x50>
-0000000000000093: 05	movb	$10, 15(%rsp)
-0000000000000098: 05	movl	$1, %edx
-000000000000009d: 03	movq	%r13, %rdi
-00000000000000a0: 05	leaq	15(%rsp), %rsi
-00000000000000a5: 05	callq	0x417b30 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>
-00000000000000aa: 02	jmp	0x418210 <void BloombergLP::bslim::Printer_Helper::print<BloombergLP::s_baltst::Colors::Value const*>(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::s_baltst::Colors::Value const* const&, BloombergLP::s_baltst::Colors::Value const* const&, int, int)+0x50>
-00000000000000ac: 05	leaq	16(%rsp), %rdi
-00000000000000b1: 02	xorl	%esi, %esi
-00000000000000b3: 05	callq	0x4ca1f0 <BloombergLP::bslim::Printer::end(bool) const>
-00000000000000b8: 05	leaq	16(%rsp), %rdi
-00000000000000bd: 05	callq	0x4ca1d0 <BloombergLP::bslim::Printer::~Printer()>
-00000000000000c2: 04	addq	$40, %rsp
-00000000000000c6: 01	popq	%rbx
-00000000000000c7: 02	popq	%r12
-00000000000000c9: 02	popq	%r13
-00000000000000cb: 02	popq	%r14
-00000000000000cd: 02	popq	%r15
-00000000000000cf: 01	popq	%rbp
-00000000000000d0: 01	retq	
-00000000000000d1: 02	jmp	0x418293 <void BloombergLP::bslim::Printer_Helper::print<BloombergLP::s_baltst::Colors::Value const*>(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::s_baltst::Colors::Value const* const&, BloombergLP::s_baltst::Colors::Value const* const&, int, int)+0xd3>
-00000000000000d3: 03	movq	%rax, %rbx
-00000000000000d6: 05	leaq	16(%rsp), %rdi
-00000000000000db: 05	callq	0x4ca1d0 <BloombergLP::bslim::Printer::~Printer()>
-00000000000000e0: 03	movq	%rbx, %rdi
-00000000000000e3: 05	callq	0x4065a0 <_Unwind_Resume@plt>
-00000000000000e8: 08	nopl	(%rax,%rax)
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%r13	;  2 bytes
+M0000000000000007:	pushq	%r12	;  2 bytes
+M0000000000000009:	pushq	%rbx	;  1 bytes
+M000000000000000a:	subq	$40, %rsp	;  4 bytes
+M000000000000000e:	movq	%rdx, %r12	;  3 bytes
+M0000000000000011:	movq	%rsi, %rbx	;  3 bytes
+M0000000000000014:	movq	%rdi, %rsi	;  3 bytes
+M0000000000000017:	leaq	16(%rsp), %r14	;  5 bytes
+M000000000000001c:	movq	%r14, %rdi	;  3 bytes
+M000000000000001f:	movl	%ecx, %edx	;  2 bytes
+M0000000000000021:	movl	%r8d, %ecx	;  3 bytes
+M0000000000000024:	callq	0x4ca1b0 <BloombergLP::bslim::Printer::Printer(std::__1::basic_ostream<char, std::__1::char_traits<char> >*, int, int)>	;  5 bytes
+M0000000000000029:	movq	%r14, %rdi	;  3 bytes
+M000000000000002c:	xorl	%esi, %esi	;  2 bytes
+M000000000000002e:	callq	0x4ca370 <BloombergLP::bslim::Printer::start(bool) const>	;  5 bytes
+M0000000000000033:	movq	(%rbx), %rbp	;  3 bytes
+M0000000000000036:	cmpq	%rbp, (%r12)	;  4 bytes
+M000000000000003a:	je	0x41826c <void BloombergLP::bslim::Printer_Helper::print<BloombergLP::s_baltst::Colors::Value const*>(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::s_baltst::Colors::Value const* const&, BloombergLP::s_baltst::Colors::Value const* const&, int, int)+0xac>	;  2 bytes
+M000000000000003c:	leaq	16(%rsp), %r14	;  5 bytes
+M0000000000000041:	jmp	0x41821a <void BloombergLP::bslim::Printer_Helper::print<BloombergLP::s_baltst::Colors::Value const*>(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::s_baltst::Colors::Value const* const&, BloombergLP::s_baltst::Colors::Value const* const&, int, int)+0x5a>	;  2 bytes
+M0000000000000043:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000004d:	nopl	(%rax)	;  3 bytes
+M0000000000000050:	addq	$4, %rbp	;  4 bytes
+M0000000000000054:	cmpq	(%r12), %rbp	;  4 bytes
+M0000000000000058:	je	0x41826c <void BloombergLP::bslim::Printer_Helper::print<BloombergLP::s_baltst::Colors::Value const*>(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::s_baltst::Colors::Value const* const&, BloombergLP::s_baltst::Colors::Value const* const&, int, int)+0xac>	;  2 bytes
+M000000000000005a:	movq	%r14, %rdi	;  3 bytes
+M000000000000005d:	callq	0x4ca140 <BloombergLP::bslim::Printer::printIndentation() const>	;  5 bytes
+M0000000000000062:	movq	16(%rsp), %r13	;  5 bytes
+M0000000000000067:	movl	36(%rsp), %r15d	;  5 bytes
+M000000000000006c:	movslq	(%rbp), %rax	;  4 bytes
+M0000000000000070:	movq	5195816(,%rax,8), %rbx	;  8 bytes
+M0000000000000078:	movq	%rbx, %rdi	;  3 bytes
+M000000000000007b:	callq	0x405eb0 <strlen@plt>	;  5 bytes
+M0000000000000080:	movq	%r13, %rdi	;  3 bytes
+M0000000000000083:	movq	%rbx, %rsi	;  3 bytes
+M0000000000000086:	movq	%rax, %rdx	;  3 bytes
+M0000000000000089:	callq	0x417b30 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>	;  5 bytes
+M000000000000008e:	testl	%r15d, %r15d	;  3 bytes
+M0000000000000091:	js	0x418210 <void BloombergLP::bslim::Printer_Helper::print<BloombergLP::s_baltst::Colors::Value const*>(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::s_baltst::Colors::Value const* const&, BloombergLP::s_baltst::Colors::Value const* const&, int, int)+0x50>	;  2 bytes
+M0000000000000093:	movb	$10, 15(%rsp)	;  5 bytes
+M0000000000000098:	movl	$1, %edx	;  5 bytes
+M000000000000009d:	movq	%r13, %rdi	;  3 bytes
+M00000000000000a0:	leaq	15(%rsp), %rsi	;  5 bytes
+M00000000000000a5:	callq	0x417b30 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)>	;  5 bytes
+M00000000000000aa:	jmp	0x418210 <void BloombergLP::bslim::Printer_Helper::print<BloombergLP::s_baltst::Colors::Value const*>(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::s_baltst::Colors::Value const* const&, BloombergLP::s_baltst::Colors::Value const* const&, int, int)+0x50>	;  2 bytes
+M00000000000000ac:	leaq	16(%rsp), %rdi	;  5 bytes
+M00000000000000b1:	xorl	%esi, %esi	;  2 bytes
+M00000000000000b3:	callq	0x4ca1f0 <BloombergLP::bslim::Printer::end(bool) const>	;  5 bytes
+M00000000000000b8:	leaq	16(%rsp), %rdi	;  5 bytes
+M00000000000000bd:	callq	0x4ca1d0 <BloombergLP::bslim::Printer::~Printer()>	;  5 bytes
+M00000000000000c2:	addq	$40, %rsp	;  4 bytes
+M00000000000000c6:	popq	%rbx	;  1 bytes
+M00000000000000c7:	popq	%r12	;  2 bytes
+M00000000000000c9:	popq	%r13	;  2 bytes
+M00000000000000cb:	popq	%r14	;  2 bytes
+M00000000000000cd:	popq	%r15	;  2 bytes
+M00000000000000cf:	popq	%rbp	;  1 bytes
+M00000000000000d0:	retq		;  1 bytes
+M00000000000000d1:	jmp	0x418293 <void BloombergLP::bslim::Printer_Helper::print<BloombergLP::s_baltst::Colors::Value const*>(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::s_baltst::Colors::Value const* const&, BloombergLP::s_baltst::Colors::Value const* const&, int, int)+0xd3>	;  2 bytes
+M00000000000000d3:	movq	%rax, %rbx	;  3 bytes
+M00000000000000d6:	leaq	16(%rsp), %rdi	;  5 bytes
+M00000000000000db:	callq	0x4ca1d0 <BloombergLP::bslim::Printer::~Printer()>	;  5 bytes
+M00000000000000e0:	movq	%rbx, %rdi	;  3 bytes
+M00000000000000e3:	callq	0x4065a0 <_Unwind_Resume@plt>	;  5 bytes
+M00000000000000e8:	nopl	(%rax,%rax)	;  8 bytes

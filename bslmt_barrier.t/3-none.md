@@ -2,76 +2,76 @@
 
 ```nasm
 0000000000409040 <int BloombergLP::bslmt::ChronoUtil::timedWait<BloombergLP::bslmt::Barrier, AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > >(BloombergLP::bslmt::Barrier*, std::__1::chrono::time_point<AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > > const&)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 02	pushq	%r13
-0000000000000007: 02	pushq	%r12
-0000000000000009: 01	pushq	%rbx
-000000000000000a: 04	subq	$40, %rsp
-000000000000000e: 03	movq	%rsi, %rbx
-0000000000000011: 03	movq	%rdi, %r13
-0000000000000014: 05	callq	0x403660 <_ZNSt3__16chrono12steady_clock3nowEv@plt>
-0000000000000019: 03	movq	%rax, %rbp
-000000000000001c: 07	addq	$-10000, %rbp
-0000000000000023: 05	movl	$4294967295, %eax
-0000000000000028: 03	cmpq	(%rbx), %rbp
-000000000000002b: 06	jge	0x409130 <int BloombergLP::bslmt::ChronoUtil::timedWait<BloombergLP::bslmt::Barrier, AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > >(BloombergLP::bslmt::Barrier*, std::__1::chrono::time_point<AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > > const&)+0xf0>
-0000000000000031: 10	movabsq	$1237940039285380275, %r14
-000000000000003b: 03	movq	%rsp, %r15
-000000000000003e: 05	leaq	16(%rsp), %r12
-0000000000000043: 10	nopw	%cs:(%rax,%rax)
-000000000000004d: 03	nopl	(%rax)
-0000000000000050: 04	movl	88(%r13), %eax
-0000000000000054: 02	testl	%eax, %eax
-0000000000000056: 02	je	0x4090b0 <int BloombergLP::bslmt::ChronoUtil::timedWait<BloombergLP::bslmt::Barrier, AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > >(BloombergLP::bslmt::Barrier*, std::__1::chrono::time_point<AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > > const&)+0x70>
-0000000000000058: 03	cmpl	$1, %eax
-000000000000005b: 02	jne	0x4090c0 <int BloombergLP::bslmt::ChronoUtil::timedWait<BloombergLP::bslmt::Barrier, AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > >(BloombergLP::bslmt::Barrier*, std::__1::chrono::time_point<AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > > const&)+0x80>
-000000000000005d: 05	callq	0x42f1e0 <BloombergLP::bsls::SystemTime::nowMonotonicClock()>
-0000000000000062: 02	jmp	0x4090b5 <int BloombergLP::bslmt::ChronoUtil::timedWait<BloombergLP::bslmt::Barrier, AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > >(BloombergLP::bslmt::Barrier*, std::__1::chrono::time_point<AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > > const&)+0x75>
-0000000000000064: 10	nopw	%cs:(%rax,%rax)
-000000000000006e: 02	nop	
-0000000000000070: 05	callq	0x42f270 <BloombergLP::bsls::SystemTime::nowRealtimeClock()>
-0000000000000075: 02	jmp	0x4090c4 <int BloombergLP::bslmt::ChronoUtil::timedWait<BloombergLP::bslmt::Barrier, AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > >(BloombergLP::bslmt::Barrier*, std::__1::chrono::time_point<AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > > const&)+0x84>
-0000000000000077: 09	nopw	(%rax,%rax)
-0000000000000080: 02	xorl	%edx, %edx
-0000000000000082: 02	xorl	%eax, %eax
-0000000000000084: 04	movq	%rax, (%rsp)
-0000000000000088: 04	movl	%edx, 8(%rsp)
-000000000000008c: 03	movq	(%rbx), %rcx
-000000000000008f: 03	subq	%rbp, %rcx
-0000000000000092: 03	movq	%rcx, %rax
-0000000000000095: 03	imulq	%r14
-0000000000000098: 03	movq	%rdx, %rax
-000000000000009b: 04	shrq	$63, %rax
-000000000000009f: 04	sarq	$26, %rdx
-00000000000000a3: 03	addq	%rax, %rdx
-00000000000000a6: 06	imull	$3294967296, %edx, %eax
-00000000000000ac: 02	addl	%eax, %ecx
-00000000000000ae: 03	movq	%r15, %rdi
-00000000000000b1: 03	movq	%rdx, %rsi
-00000000000000b4: 02	movl	%ecx, %edx
-00000000000000b6: 05	callq	0x42f390 <BloombergLP::bsls::TimeInterval::addInterval(long long, int)>
-00000000000000bb: 03	movups	(%rax), %xmm0
-00000000000000be: 05	movaps	%xmm0, 16(%rsp)
-00000000000000c3: 03	movq	%r13, %rdi
-00000000000000c6: 03	movq	%r12, %rsi
-00000000000000c9: 05	callq	0x4091d0 <BloombergLP::bslmt::Barrier::timedWait(BloombergLP::bsls::TimeInterval const&)>
-00000000000000ce: 03	cmpl	$-1, %eax
-00000000000000d1: 02	jne	0x409130 <int BloombergLP::bslmt::ChronoUtil::timedWait<BloombergLP::bslmt::Barrier, AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > >(BloombergLP::bslmt::Barrier*, std::__1::chrono::time_point<AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > > const&)+0xf0>
-00000000000000d3: 05	callq	0x403660 <_ZNSt3__16chrono12steady_clock3nowEv@plt>
-00000000000000d8: 03	movq	%rax, %rbp
-00000000000000db: 07	addq	$-10000, %rbp
-00000000000000e2: 03	cmpq	(%rbx), %rbp
-00000000000000e5: 06	jl	0x409090 <int BloombergLP::bslmt::ChronoUtil::timedWait<BloombergLP::bslmt::Barrier, AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > >(BloombergLP::bslmt::Barrier*, std::__1::chrono::time_point<AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > > const&)+0x50>
-00000000000000eb: 05	movl	$4294967295, %eax
-00000000000000f0: 04	addq	$40, %rsp
-00000000000000f4: 01	popq	%rbx
-00000000000000f5: 02	popq	%r12
-00000000000000f7: 02	popq	%r13
-00000000000000f9: 02	popq	%r14
-00000000000000fb: 02	popq	%r15
-00000000000000fd: 01	popq	%rbp
-00000000000000fe: 01	retq	
-00000000000000ff: 01	nop	
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%r13	;  2 bytes
+M0000000000000007:	pushq	%r12	;  2 bytes
+M0000000000000009:	pushq	%rbx	;  1 bytes
+M000000000000000a:	subq	$40, %rsp	;  4 bytes
+M000000000000000e:	movq	%rsi, %rbx	;  3 bytes
+M0000000000000011:	movq	%rdi, %r13	;  3 bytes
+M0000000000000014:	callq	0x403660 <_ZNSt3__16chrono12steady_clock3nowEv@plt>	;  5 bytes
+M0000000000000019:	movq	%rax, %rbp	;  3 bytes
+M000000000000001c:	addq	$-10000, %rbp	;  7 bytes
+M0000000000000023:	movl	$4294967295, %eax	;  5 bytes
+M0000000000000028:	cmpq	(%rbx), %rbp	;  3 bytes
+M000000000000002b:	jge	0x409130 <int BloombergLP::bslmt::ChronoUtil::timedWait<BloombergLP::bslmt::Barrier, AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > >(BloombergLP::bslmt::Barrier*, std::__1::chrono::time_point<AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > > const&)+0xf0>	;  6 bytes
+M0000000000000031:	movabsq	$1237940039285380275, %r14	; 10 bytes
+M000000000000003b:	movq	%rsp, %r15	;  3 bytes
+M000000000000003e:	leaq	16(%rsp), %r12	;  5 bytes
+M0000000000000043:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000004d:	nopl	(%rax)	;  3 bytes
+M0000000000000050:	movl	88(%r13), %eax	;  4 bytes
+M0000000000000054:	testl	%eax, %eax	;  2 bytes
+M0000000000000056:	je	0x4090b0 <int BloombergLP::bslmt::ChronoUtil::timedWait<BloombergLP::bslmt::Barrier, AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > >(BloombergLP::bslmt::Barrier*, std::__1::chrono::time_point<AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > > const&)+0x70>	;  2 bytes
+M0000000000000058:	cmpl	$1, %eax	;  3 bytes
+M000000000000005b:	jne	0x4090c0 <int BloombergLP::bslmt::ChronoUtil::timedWait<BloombergLP::bslmt::Barrier, AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > >(BloombergLP::bslmt::Barrier*, std::__1::chrono::time_point<AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > > const&)+0x80>	;  2 bytes
+M000000000000005d:	callq	0x42f1e0 <BloombergLP::bsls::SystemTime::nowMonotonicClock()>	;  5 bytes
+M0000000000000062:	jmp	0x4090b5 <int BloombergLP::bslmt::ChronoUtil::timedWait<BloombergLP::bslmt::Barrier, AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > >(BloombergLP::bslmt::Barrier*, std::__1::chrono::time_point<AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > > const&)+0x75>	;  2 bytes
+M0000000000000064:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000006e:	nop		;  2 bytes
+M0000000000000070:	callq	0x42f270 <BloombergLP::bsls::SystemTime::nowRealtimeClock()>	;  5 bytes
+M0000000000000075:	jmp	0x4090c4 <int BloombergLP::bslmt::ChronoUtil::timedWait<BloombergLP::bslmt::Barrier, AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > >(BloombergLP::bslmt::Barrier*, std::__1::chrono::time_point<AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > > const&)+0x84>	;  2 bytes
+M0000000000000077:	nopw	(%rax,%rax)	;  9 bytes
+M0000000000000080:	xorl	%edx, %edx	;  2 bytes
+M0000000000000082:	xorl	%eax, %eax	;  2 bytes
+M0000000000000084:	movq	%rax, (%rsp)	;  4 bytes
+M0000000000000088:	movl	%edx, 8(%rsp)	;  4 bytes
+M000000000000008c:	movq	(%rbx), %rcx	;  3 bytes
+M000000000000008f:	subq	%rbp, %rcx	;  3 bytes
+M0000000000000092:	movq	%rcx, %rax	;  3 bytes
+M0000000000000095:	imulq	%r14	;  3 bytes
+M0000000000000098:	movq	%rdx, %rax	;  3 bytes
+M000000000000009b:	shrq	$63, %rax	;  4 bytes
+M000000000000009f:	sarq	$26, %rdx	;  4 bytes
+M00000000000000a3:	addq	%rax, %rdx	;  3 bytes
+M00000000000000a6:	imull	$3294967296, %edx, %eax	;  6 bytes
+M00000000000000ac:	addl	%eax, %ecx	;  2 bytes
+M00000000000000ae:	movq	%r15, %rdi	;  3 bytes
+M00000000000000b1:	movq	%rdx, %rsi	;  3 bytes
+M00000000000000b4:	movl	%ecx, %edx	;  2 bytes
+M00000000000000b6:	callq	0x42f390 <BloombergLP::bsls::TimeInterval::addInterval(long long, int)>	;  5 bytes
+M00000000000000bb:	movups	(%rax), %xmm0	;  3 bytes
+M00000000000000be:	movaps	%xmm0, 16(%rsp)	;  5 bytes
+M00000000000000c3:	movq	%r13, %rdi	;  3 bytes
+M00000000000000c6:	movq	%r12, %rsi	;  3 bytes
+M00000000000000c9:	callq	0x4091d0 <BloombergLP::bslmt::Barrier::timedWait(BloombergLP::bsls::TimeInterval const&)>	;  5 bytes
+M00000000000000ce:	cmpl	$-1, %eax	;  3 bytes
+M00000000000000d1:	jne	0x409130 <int BloombergLP::bslmt::ChronoUtil::timedWait<BloombergLP::bslmt::Barrier, AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > >(BloombergLP::bslmt::Barrier*, std::__1::chrono::time_point<AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > > const&)+0xf0>	;  2 bytes
+M00000000000000d3:	callq	0x403660 <_ZNSt3__16chrono12steady_clock3nowEv@plt>	;  5 bytes
+M00000000000000d8:	movq	%rax, %rbp	;  3 bytes
+M00000000000000db:	addq	$-10000, %rbp	;  7 bytes
+M00000000000000e2:	cmpq	(%rbx), %rbp	;  3 bytes
+M00000000000000e5:	jl	0x409090 <int BloombergLP::bslmt::ChronoUtil::timedWait<BloombergLP::bslmt::Barrier, AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > >(BloombergLP::bslmt::Barrier*, std::__1::chrono::time_point<AnotherClock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > > const&)+0x50>	;  6 bytes
+M00000000000000eb:	movl	$4294967295, %eax	;  5 bytes
+M00000000000000f0:	addq	$40, %rsp	;  4 bytes
+M00000000000000f4:	popq	%rbx	;  1 bytes
+M00000000000000f5:	popq	%r12	;  2 bytes
+M00000000000000f7:	popq	%r13	;  2 bytes
+M00000000000000f9:	popq	%r14	;  2 bytes
+M00000000000000fb:	popq	%r15	;  2 bytes
+M00000000000000fd:	popq	%rbp	;  1 bytes
+M00000000000000fe:	retq		;  1 bytes
+M00000000000000ff:	nop		;  1 bytes
 ```

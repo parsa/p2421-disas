@@ -1,100 +1,100 @@
 000000000041b0d0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*> > const&, BloombergLP::bslma::Allocator*)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 02	pushq	%r13
-0000000000000007: 02	pushq	%r12
-0000000000000009: 01	pushq	%rbx
-000000000000000a: 01	pushq	%rax
-000000000000000b: 03	movq	%rcx, %r14
-000000000000000e: 03	movq	%rdx, %r12
-0000000000000011: 03	movq	%rsi, %r15
-0000000000000014: 04	movq	%rdi, (%rsp)
-0000000000000018: 04	movq	48(%rsi), %r13
-000000000000001c: 05	cmpq	$23, 56(%rsi)
-0000000000000021: 02	je	0x41b0f9 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*> > const&, BloombergLP::bslma::Allocator*)+0x29>
-0000000000000023: 04	movq	24(%r15), %rbp
-0000000000000027: 02	jmp	0x41b0fd <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*> > const&, BloombergLP::bslma::Allocator*)+0x2d>
-0000000000000029: 04	leaq	24(%r15), %rbp
-000000000000002d: 03	movq	(%r14), %rax
-0000000000000030: 05	movl	$80, %esi
-0000000000000035: 03	movq	%r14, %rdi
-0000000000000038: 03	callq	*16(%rax)
-000000000000003b: 03	movq	%rax, %rbx
-000000000000003e: 07	movq	$4305456, (%rax)
-0000000000000045: 04	movq	(%r12), %rax
-0000000000000049: 04	movq	%rax, 8(%rbx)
-000000000000004d: 05	movq	8(%r12), %rax
-0000000000000052: 04	movq	%rax, 16(%rbx)
-0000000000000056: 05	movq	16(%r12), %rax
-000000000000005b: 04	movq	%rax, 24(%rbx)
-000000000000005f: 04	leaq	32(%rbx), %rdi
-0000000000000063: 08	movq	$0, 32(%rbx)
-000000000000006b: 04	movq	%r14, 72(%rbx)
-000000000000006f: 07	movaps	177098(%rip), %xmm0  # 446510 <__dso_handle+0x48>
-0000000000000076: 04	movups	%xmm0, 56(%rbx)
-000000000000007a: 05	movl	$4487417, %ecx
-000000000000007f: 03	movq	%rbp, %rsi
-0000000000000082: 03	movq	%r13, %rdx
-0000000000000085: 05	callq	0x423990 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-000000000000008a: 05	movl	$4324768, %edx
-000000000000008f: 04	movq	(%rsp), %rdi
-0000000000000093: 03	movq	%r15, %rsi
-0000000000000096: 03	movq	%rbx, %rcx
-0000000000000099: 05	callq	0x4207f0 <BloombergLP::bslmt::ThreadUtilImpl<BloombergLP::bslmt::Platform::PosixThreads>::create(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, void* (*)(void*), void*)>
-000000000000009e: 02	movl	%eax, %ebp
-00000000000000a0: 02	testl	%eax, %eax
-00000000000000a2: 02	je	0x41b19d <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*> > const&, BloombergLP::bslma::Allocator*)+0xcd>
-00000000000000a4: 05	cmpq	$23, 64(%rbx)
-00000000000000a9: 02	je	0x41b189 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*> > const&, BloombergLP::bslma::Allocator*)+0xb9>
-00000000000000ab: 04	movq	32(%rbx), %rsi
-00000000000000af: 04	movq	72(%rbx), %rdi
-00000000000000b3: 03	movq	(%rdi), %rax
-00000000000000b6: 03	callq	*24(%rax)
-00000000000000b9: 08	movq	$-1, 56(%rbx)
-00000000000000c1: 03	movq	(%r14), %rax
-00000000000000c4: 03	movq	%r14, %rdi
-00000000000000c7: 03	movq	%rbx, %rsi
-00000000000000ca: 03	callq	*24(%rax)
-00000000000000cd: 02	movl	%ebp, %eax
-00000000000000cf: 04	addq	$8, %rsp
-00000000000000d3: 01	popq	%rbx
-00000000000000d4: 02	popq	%r12
-00000000000000d6: 02	popq	%r13
-00000000000000d8: 02	popq	%r14
-00000000000000da: 02	popq	%r15
-00000000000000dc: 01	popq	%rbp
-00000000000000dd: 01	retq	
-00000000000000de: 03	movq	%rax, %rdi
-00000000000000e1: 05	callq	0x4156b0 <__clang_call_terminate>
-00000000000000e6: 03	movq	%rax, %rdi
-00000000000000e9: 05	callq	0x4156b0 <__clang_call_terminate>
-00000000000000ee: 03	movq	%rax, %r15
-00000000000000f1: 05	cmpq	$23, 64(%rbx)
-00000000000000f6: 02	je	0x41b1d6 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*> > const&, BloombergLP::bslma::Allocator*)+0x106>
-00000000000000f8: 04	movq	32(%rbx), %rsi
-00000000000000fc: 04	movq	72(%rbx), %rdi
-0000000000000100: 03	movq	(%rdi), %rax
-0000000000000103: 03	callq	*24(%rax)
-0000000000000106: 08	movq	$-1, 56(%rbx)
-000000000000010e: 03	movq	(%r14), %rax
-0000000000000111: 03	movq	%r14, %rdi
-0000000000000114: 03	movq	%rbx, %rsi
-0000000000000117: 03	callq	*24(%rax)
-000000000000011a: 02	jmp	0x41b213 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*> > const&, BloombergLP::bslma::Allocator*)+0x143>
-000000000000011c: 03	movq	%rax, %rdi
-000000000000011f: 05	callq	0x4156b0 <__clang_call_terminate>
-0000000000000124: 03	movq	%rax, %rdi
-0000000000000127: 05	callq	0x4156b0 <__clang_call_terminate>
-000000000000012c: 03	movq	%rax, %r15
-000000000000012f: 08	movq	$0, 56(%rbx)
-0000000000000137: 03	movq	(%r14), %rax
-000000000000013a: 03	movq	%r14, %rdi
-000000000000013d: 03	movq	%rbx, %rsi
-0000000000000140: 03	callq	*24(%rax)
-0000000000000143: 03	movq	%r15, %rdi
-0000000000000146: 05	callq	0x404270 <_Unwind_Resume@plt>
-000000000000014b: 03	movq	%rax, %rdi
-000000000000014e: 05	callq	0x4156b0 <__clang_call_terminate>
-0000000000000153: 10	nopw	%cs:(%rax,%rax)
-000000000000015d: 03	nopl	(%rax)
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%r13	;  2 bytes
+M0000000000000007:	pushq	%r12	;  2 bytes
+M0000000000000009:	pushq	%rbx	;  1 bytes
+M000000000000000a:	pushq	%rax	;  1 bytes
+M000000000000000b:	movq	%rcx, %r14	;  3 bytes
+M000000000000000e:	movq	%rdx, %r12	;  3 bytes
+M0000000000000011:	movq	%rsi, %r15	;  3 bytes
+M0000000000000014:	movq	%rdi, (%rsp)	;  4 bytes
+M0000000000000018:	movq	48(%rsi), %r13	;  4 bytes
+M000000000000001c:	cmpq	$23, 56(%rsi)	;  5 bytes
+M0000000000000021:	je	0x41b0f9 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*> > const&, BloombergLP::bslma::Allocator*)+0x29>	;  2 bytes
+M0000000000000023:	movq	24(%r15), %rbp	;  4 bytes
+M0000000000000027:	jmp	0x41b0fd <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*> > const&, BloombergLP::bslma::Allocator*)+0x2d>	;  2 bytes
+M0000000000000029:	leaq	24(%r15), %rbp	;  4 bytes
+M000000000000002d:	movq	(%r14), %rax	;  3 bytes
+M0000000000000030:	movl	$80, %esi	;  5 bytes
+M0000000000000035:	movq	%r14, %rdi	;  3 bytes
+M0000000000000038:	callq	*16(%rax)	;  3 bytes
+M000000000000003b:	movq	%rax, %rbx	;  3 bytes
+M000000000000003e:	movq	$4305456, (%rax)	;  7 bytes
+M0000000000000045:	movq	(%r12), %rax	;  4 bytes
+M0000000000000049:	movq	%rax, 8(%rbx)	;  4 bytes
+M000000000000004d:	movq	8(%r12), %rax	;  5 bytes
+M0000000000000052:	movq	%rax, 16(%rbx)	;  4 bytes
+M0000000000000056:	movq	16(%r12), %rax	;  5 bytes
+M000000000000005b:	movq	%rax, 24(%rbx)	;  4 bytes
+M000000000000005f:	leaq	32(%rbx), %rdi	;  4 bytes
+M0000000000000063:	movq	$0, 32(%rbx)	;  8 bytes
+M000000000000006b:	movq	%r14, 72(%rbx)	;  4 bytes
+M000000000000006f:	movaps	177098(%rip), %xmm0  # 446510 <__dso_handle+0x48>	;  7 bytes
+M0000000000000076:	movups	%xmm0, 56(%rbx)	;  4 bytes
+M000000000000007a:	movl	$4487417, %ecx	;  5 bytes
+M000000000000007f:	movq	%rbp, %rsi	;  3 bytes
+M0000000000000082:	movq	%r13, %rdx	;  3 bytes
+M0000000000000085:	callq	0x423990 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M000000000000008a:	movl	$4324768, %edx	;  5 bytes
+M000000000000008f:	movq	(%rsp), %rdi	;  4 bytes
+M0000000000000093:	movq	%r15, %rsi	;  3 bytes
+M0000000000000096:	movq	%rbx, %rcx	;  3 bytes
+M0000000000000099:	callq	0x4207f0 <BloombergLP::bslmt::ThreadUtilImpl<BloombergLP::bslmt::Platform::PosixThreads>::create(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, void* (*)(void*), void*)>	;  5 bytes
+M000000000000009e:	movl	%eax, %ebp	;  2 bytes
+M00000000000000a0:	testl	%eax, %eax	;  2 bytes
+M00000000000000a2:	je	0x41b19d <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*> > const&, BloombergLP::bslma::Allocator*)+0xcd>	;  2 bytes
+M00000000000000a4:	cmpq	$23, 64(%rbx)	;  5 bytes
+M00000000000000a9:	je	0x41b189 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*> > const&, BloombergLP::bslma::Allocator*)+0xb9>	;  2 bytes
+M00000000000000ab:	movq	32(%rbx), %rsi	;  4 bytes
+M00000000000000af:	movq	72(%rbx), %rdi	;  4 bytes
+M00000000000000b3:	movq	(%rdi), %rax	;  3 bytes
+M00000000000000b6:	callq	*24(%rax)	;  3 bytes
+M00000000000000b9:	movq	$-1, 56(%rbx)	;  8 bytes
+M00000000000000c1:	movq	(%r14), %rax	;  3 bytes
+M00000000000000c4:	movq	%r14, %rdi	;  3 bytes
+M00000000000000c7:	movq	%rbx, %rsi	;  3 bytes
+M00000000000000ca:	callq	*24(%rax)	;  3 bytes
+M00000000000000cd:	movl	%ebp, %eax	;  2 bytes
+M00000000000000cf:	addq	$8, %rsp	;  4 bytes
+M00000000000000d3:	popq	%rbx	;  1 bytes
+M00000000000000d4:	popq	%r12	;  2 bytes
+M00000000000000d6:	popq	%r13	;  2 bytes
+M00000000000000d8:	popq	%r14	;  2 bytes
+M00000000000000da:	popq	%r15	;  2 bytes
+M00000000000000dc:	popq	%rbp	;  1 bytes
+M00000000000000dd:	retq		;  1 bytes
+M00000000000000de:	movq	%rax, %rdi	;  3 bytes
+M00000000000000e1:	callq	0x4156b0 <__clang_call_terminate>	;  5 bytes
+M00000000000000e6:	movq	%rax, %rdi	;  3 bytes
+M00000000000000e9:	callq	0x4156b0 <__clang_call_terminate>	;  5 bytes
+M00000000000000ee:	movq	%rax, %r15	;  3 bytes
+M00000000000000f1:	cmpq	$23, 64(%rbx)	;  5 bytes
+M00000000000000f6:	je	0x41b1d6 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*> > const&, BloombergLP::bslma::Allocator*)+0x106>	;  2 bytes
+M00000000000000f8:	movq	32(%rbx), %rsi	;  4 bytes
+M00000000000000fc:	movq	72(%rbx), %rdi	;  4 bytes
+M0000000000000100:	movq	(%rdi), %rax	;  3 bytes
+M0000000000000103:	callq	*24(%rax)	;  3 bytes
+M0000000000000106:	movq	$-1, 56(%rbx)	;  8 bytes
+M000000000000010e:	movq	(%r14), %rax	;  3 bytes
+M0000000000000111:	movq	%r14, %rdi	;  3 bytes
+M0000000000000114:	movq	%rbx, %rsi	;  3 bytes
+M0000000000000117:	callq	*24(%rax)	;  3 bytes
+M000000000000011a:	jmp	0x41b213 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*), BloombergLP::bdlf::Bind_BoundTuple2<BloombergLP::bdlcc::FixedQueue<int>*, BloombergLP::bsls::AtomicInt*> > const&, BloombergLP::bslma::Allocator*)+0x143>	;  2 bytes
+M000000000000011c:	movq	%rax, %rdi	;  3 bytes
+M000000000000011f:	callq	0x4156b0 <__clang_call_terminate>	;  5 bytes
+M0000000000000124:	movq	%rax, %rdi	;  3 bytes
+M0000000000000127:	callq	0x4156b0 <__clang_call_terminate>	;  5 bytes
+M000000000000012c:	movq	%rax, %r15	;  3 bytes
+M000000000000012f:	movq	$0, 56(%rbx)	;  8 bytes
+M0000000000000137:	movq	(%r14), %rax	;  3 bytes
+M000000000000013a:	movq	%r14, %rdi	;  3 bytes
+M000000000000013d:	movq	%rbx, %rsi	;  3 bytes
+M0000000000000140:	callq	*24(%rax)	;  3 bytes
+M0000000000000143:	movq	%r15, %rdi	;  3 bytes
+M0000000000000146:	callq	0x404270 <_Unwind_Resume@plt>	;  5 bytes
+M000000000000014b:	movq	%rax, %rdi	;  3 bytes
+M000000000000014e:	callq	0x4156b0 <__clang_call_terminate>	;  5 bytes
+M0000000000000153:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000015d:	nopl	(%rax)	;  3 bytes

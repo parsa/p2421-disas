@@ -2,49 +2,49 @@
 
 ```nasm
 000000000040ca50 <BloombergLP::bdls::FilesystemUtil::open(char const*, BloombergLP::bdls::FilesystemUtil::FileOpenPolicy, BloombergLP::bdls::FilesystemUtil::FileIOPolicy, BloombergLP::bdls::FilesystemUtil::FileTruncatePolicy)>:
-0000000000000000: 02	movl	%esi, %eax
-0000000000000002: 02	movl	%ecx, %esi
-0000000000000004: 02	orl	%eax, %esi
-0000000000000006: 02	je	0x40ca97 <BloombergLP::bdls::FilesystemUtil::open(char const*, BloombergLP::bdls::FilesystemUtil::FileOpenPolicy, BloombergLP::bdls::FilesystemUtil::FileIOPolicy, BloombergLP::bdls::FilesystemUtil::FileTruncatePolicy)+0x47>
-0000000000000008: 02	decl	%edx
-000000000000000a: 02	xorl	%esi, %esi
-000000000000000c: 03	cmpl	$4, %edx
-000000000000000f: 02	jae	0x40ca6b <BloombergLP::bdls::FilesystemUtil::open(char const*, BloombergLP::bdls::FilesystemUtil::FileOpenPolicy, BloombergLP::bdls::FilesystemUtil::FileIOPolicy, BloombergLP::bdls::FilesystemUtil::FileTruncatePolicy)+0x1b>
-0000000000000011: 03	movslq	%edx, %rdx
-0000000000000014: 07	movl	4444304(,%rdx,4), %esi
-000000000000001b: 03	cmpl	$3, %eax
-000000000000001e: 02	ja	0x40ca90 <BloombergLP::bdls::FilesystemUtil::open(char const*, BloombergLP::bdls::FilesystemUtil::FileOpenPolicy, BloombergLP::bdls::FilesystemUtil::FileIOPolicy, BloombergLP::bdls::FilesystemUtil::FileTruncatePolicy)+0x40>
-0000000000000020: 05	movl	$438, %edx
-0000000000000025: 06	movl	$192, %r8d
-000000000000002b: 02	movl	%eax, %eax
-000000000000002d: 07	jmpq	*4444072(,%rax,8)
-0000000000000034: 02	movl	%esi, %eax
-0000000000000036: 05	orl	$512, %eax
-000000000000003b: 02	testl	%ecx, %ecx
-000000000000003d: 03	cmovel	%eax, %esi
-0000000000000040: 02	xorl	%eax, %eax
-0000000000000042: 05	jmp	0x405050 <open@plt>
-0000000000000047: 03	cmpl	$4, %edx
-000000000000004a: 02	ja	0x40cacd <BloombergLP::bdls::FilesystemUtil::open(char const*, BloombergLP::bdls::FilesystemUtil::FileOpenPolicy, BloombergLP::bdls::FilesystemUtil::FileIOPolicy, BloombergLP::bdls::FilesystemUtil::FileTruncatePolicy)+0x7d>
-000000000000004c: 02	movl	%edx, %edx
-000000000000004e: 07	jmpq	*4444032(,%rdx,8)
-0000000000000055: 05	movl	$4294967295, %eax
-000000000000005a: 01	retq	
-000000000000005b: 05	movl	$384, %edx
-0000000000000060: 02	jmp	0x40cac3 <BloombergLP::bdls::FilesystemUtil::open(char const*, BloombergLP::bdls::FilesystemUtil::FileOpenPolicy, BloombergLP::bdls::FilesystemUtil::FileIOPolicy, BloombergLP::bdls::FilesystemUtil::FileTruncatePolicy)+0x73>
-0000000000000062: 03	xorl	%r8d, %r8d
-0000000000000065: 02	testl	%ecx, %ecx
-0000000000000067: 04	sete	%r8b
-000000000000006b: 04	shll	$9, %r8d
-000000000000006f: 04	orl	$64, %r8d
-0000000000000073: 03	orl	%r8d, %esi
-0000000000000076: 02	xorl	%eax, %eax
-0000000000000078: 05	jmp	0x405050 <open@plt>
-000000000000007d: 02	xorl	%esi, %esi
-000000000000007f: 02	jmp	0x40ca6b <BloombergLP::bdls::FilesystemUtil::open(char const*, BloombergLP::bdls::FilesystemUtil::FileOpenPolicy, BloombergLP::bdls::FilesystemUtil::FileIOPolicy, BloombergLP::bdls::FilesystemUtil::FileTruncatePolicy)+0x1b>
-0000000000000081: 05	movl	$1, %esi
-0000000000000086: 02	jmp	0x40ca6b <BloombergLP::bdls::FilesystemUtil::open(char const*, BloombergLP::bdls::FilesystemUtil::FileOpenPolicy, BloombergLP::bdls::FilesystemUtil::FileIOPolicy, BloombergLP::bdls::FilesystemUtil::FileTruncatePolicy)+0x1b>
-0000000000000088: 05	movl	$2, %esi
-000000000000008d: 02	jmp	0x40ca6b <BloombergLP::bdls::FilesystemUtil::open(char const*, BloombergLP::bdls::FilesystemUtil::FileOpenPolicy, BloombergLP::bdls::FilesystemUtil::FileIOPolicy, BloombergLP::bdls::FilesystemUtil::FileTruncatePolicy)+0x1b>
-000000000000008f: 01	nop	
+M0000000000000000:	movl	%esi, %eax	;  2 bytes
+M0000000000000002:	movl	%ecx, %esi	;  2 bytes
+M0000000000000004:	orl	%eax, %esi	;  2 bytes
+M0000000000000006:	je	0x40ca97 <BloombergLP::bdls::FilesystemUtil::open(char const*, BloombergLP::bdls::FilesystemUtil::FileOpenPolicy, BloombergLP::bdls::FilesystemUtil::FileIOPolicy, BloombergLP::bdls::FilesystemUtil::FileTruncatePolicy)+0x47>	;  2 bytes
+M0000000000000008:	decl	%edx	;  2 bytes
+M000000000000000a:	xorl	%esi, %esi	;  2 bytes
+M000000000000000c:	cmpl	$4, %edx	;  3 bytes
+M000000000000000f:	jae	0x40ca6b <BloombergLP::bdls::FilesystemUtil::open(char const*, BloombergLP::bdls::FilesystemUtil::FileOpenPolicy, BloombergLP::bdls::FilesystemUtil::FileIOPolicy, BloombergLP::bdls::FilesystemUtil::FileTruncatePolicy)+0x1b>	;  2 bytes
+M0000000000000011:	movslq	%edx, %rdx	;  3 bytes
+M0000000000000014:	movl	4444304(,%rdx,4), %esi	;  7 bytes
+M000000000000001b:	cmpl	$3, %eax	;  3 bytes
+M000000000000001e:	ja	0x40ca90 <BloombergLP::bdls::FilesystemUtil::open(char const*, BloombergLP::bdls::FilesystemUtil::FileOpenPolicy, BloombergLP::bdls::FilesystemUtil::FileIOPolicy, BloombergLP::bdls::FilesystemUtil::FileTruncatePolicy)+0x40>	;  2 bytes
+M0000000000000020:	movl	$438, %edx	;  5 bytes
+M0000000000000025:	movl	$192, %r8d	;  6 bytes
+M000000000000002b:	movl	%eax, %eax	;  2 bytes
+M000000000000002d:	jmpq	*4444072(,%rax,8)	;  7 bytes
+M0000000000000034:	movl	%esi, %eax	;  2 bytes
+M0000000000000036:	orl	$512, %eax	;  5 bytes
+M000000000000003b:	testl	%ecx, %ecx	;  2 bytes
+M000000000000003d:	cmovel	%eax, %esi	;  3 bytes
+M0000000000000040:	xorl	%eax, %eax	;  2 bytes
+M0000000000000042:	jmp	0x405050 <open@plt>	;  5 bytes
+M0000000000000047:	cmpl	$4, %edx	;  3 bytes
+M000000000000004a:	ja	0x40cacd <BloombergLP::bdls::FilesystemUtil::open(char const*, BloombergLP::bdls::FilesystemUtil::FileOpenPolicy, BloombergLP::bdls::FilesystemUtil::FileIOPolicy, BloombergLP::bdls::FilesystemUtil::FileTruncatePolicy)+0x7d>	;  2 bytes
+M000000000000004c:	movl	%edx, %edx	;  2 bytes
+M000000000000004e:	jmpq	*4444032(,%rdx,8)	;  7 bytes
+M0000000000000055:	movl	$4294967295, %eax	;  5 bytes
+M000000000000005a:	retq		;  1 bytes
+M000000000000005b:	movl	$384, %edx	;  5 bytes
+M0000000000000060:	jmp	0x40cac3 <BloombergLP::bdls::FilesystemUtil::open(char const*, BloombergLP::bdls::FilesystemUtil::FileOpenPolicy, BloombergLP::bdls::FilesystemUtil::FileIOPolicy, BloombergLP::bdls::FilesystemUtil::FileTruncatePolicy)+0x73>	;  2 bytes
+M0000000000000062:	xorl	%r8d, %r8d	;  3 bytes
+M0000000000000065:	testl	%ecx, %ecx	;  2 bytes
+M0000000000000067:	sete	%r8b	;  4 bytes
+M000000000000006b:	shll	$9, %r8d	;  4 bytes
+M000000000000006f:	orl	$64, %r8d	;  4 bytes
+M0000000000000073:	orl	%r8d, %esi	;  3 bytes
+M0000000000000076:	xorl	%eax, %eax	;  2 bytes
+M0000000000000078:	jmp	0x405050 <open@plt>	;  5 bytes
+M000000000000007d:	xorl	%esi, %esi	;  2 bytes
+M000000000000007f:	jmp	0x40ca6b <BloombergLP::bdls::FilesystemUtil::open(char const*, BloombergLP::bdls::FilesystemUtil::FileOpenPolicy, BloombergLP::bdls::FilesystemUtil::FileIOPolicy, BloombergLP::bdls::FilesystemUtil::FileTruncatePolicy)+0x1b>	;  2 bytes
+M0000000000000081:	movl	$1, %esi	;  5 bytes
+M0000000000000086:	jmp	0x40ca6b <BloombergLP::bdls::FilesystemUtil::open(char const*, BloombergLP::bdls::FilesystemUtil::FileOpenPolicy, BloombergLP::bdls::FilesystemUtil::FileIOPolicy, BloombergLP::bdls::FilesystemUtil::FileTruncatePolicy)+0x1b>	;  2 bytes
+M0000000000000088:	movl	$2, %esi	;  5 bytes
+M000000000000008d:	jmp	0x40ca6b <BloombergLP::bdls::FilesystemUtil::open(char const*, BloombergLP::bdls::FilesystemUtil::FileOpenPolicy, BloombergLP::bdls::FilesystemUtil::FileIOPolicy, BloombergLP::bdls::FilesystemUtil::FileTruncatePolicy)+0x1b>	;  2 bytes
+M000000000000008f:	nop		;  1 bytes
 ```

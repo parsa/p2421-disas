@@ -2,57 +2,57 @@
 
 ```nasm
 00000000004138f0 <BloombergLP::baltzo::TimeZoneUtilImp::initLocalTime(BloombergLP::bdlt::DatetimeTz*, BloombergLP::baltzo::LocalTimeValidity::Enum*, BloombergLP::bdlt::Datetime const&, char const*, BloombergLP::baltzo::DstPolicy::Enum, BloombergLP::baltzo::ZoneinfoCache*)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 02	pushq	%r13
-0000000000000007: 02	pushq	%r12
-0000000000000009: 01	pushq	%rbx
-000000000000000a: 04	subq	$24, %rsp
-000000000000000e: 05	movl	%r8d, 12(%rsp)
-0000000000000013: 03	movq	%rcx, %r14
-0000000000000016: 03	movq	%rdx, %r15
-0000000000000019: 03	movq	%rsi, %r12
-000000000000001c: 03	movq	%rdi, %r13
-000000000000001f: 08	movl	$0, 8(%rsp)
-0000000000000027: 05	leaq	8(%rsp), %rsi
-000000000000002c: 03	movq	%r9, %rdi
-000000000000002f: 03	movq	%rcx, %rdx
-0000000000000032: 05	callq	0x41a310 <BloombergLP::baltzo::ZoneinfoCache::getZoneinfo(int*, char const*)>
-0000000000000037: 03	movq	%rax, %rbp
-000000000000003a: 04	movl	8(%rsp), %ebx
-000000000000003e: 03	testq	%rax, %rax
-0000000000000041: 02	jne	0x413963 <BloombergLP::baltzo::TimeZoneUtilImp::initLocalTime(BloombergLP::bdlt::DatetimeTz*, BloombergLP::baltzo::LocalTimeValidity::Enum*, BloombergLP::bdlt::Datetime const&, char const*, BloombergLP::baltzo::DstPolicy::Enum, BloombergLP::baltzo::ZoneinfoCache*)+0x73>
-0000000000000043: 06	movl	2624031(%rip), %eax  # 694358 <BloombergLP::bsls::Log::s_severityThreshold>
-0000000000000049: 03	cmpl	$3, %eax
-000000000000004c: 02	jl	0x413963 <BloombergLP::baltzo::TimeZoneUtilImp::initLocalTime(BloombergLP::bdlt::DatetimeTz*, BloombergLP::baltzo::LocalTimeValidity::Enum*, BloombergLP::bdlt::Datetime const&, char const*, BloombergLP::baltzo::DstPolicy::Enum, BloombergLP::baltzo::ZoneinfoCache*)+0x73>
-000000000000004e: 05	movl	$4563161, %esi
-0000000000000053: 05	movl	$4563259, %ecx
-0000000000000058: 05	movl	$3, %edi
-000000000000005d: 05	movl	$52, %edx
-0000000000000062: 03	movq	%r14, %r8
-0000000000000065: 03	movl	%ebx, %r9d
-0000000000000068: 02	xorl	%eax, %eax
-000000000000006a: 05	callq	0x432120 <BloombergLP::bsls::Log::logFormattedMessage(BloombergLP::bsls::LogSeverity::Enum, char const*, int, char const*, ...)>
-000000000000006f: 04	movl	8(%rsp), %ebx
-0000000000000073: 02	testl	%ebx, %ebx
-0000000000000075: 02	jne	0x413982 <BloombergLP::baltzo::TimeZoneUtilImp::initLocalTime(BloombergLP::bdlt::DatetimeTz*, BloombergLP::baltzo::LocalTimeValidity::Enum*, BloombergLP::bdlt::Datetime const&, char const*, BloombergLP::baltzo::DstPolicy::Enum, BloombergLP::baltzo::ZoneinfoCache*)+0x92>
-0000000000000077: 05	leaq	16(%rsp), %rdx
-000000000000007c: 03	movq	%r13, %rdi
-000000000000007f: 03	movq	%r12, %rsi
-0000000000000082: 03	movq	%r15, %rcx
-0000000000000085: 05	movl	12(%rsp), %r8d
-000000000000008a: 03	movq	%rbp, %r9
-000000000000008d: 05	callq	0x4139a0 <BloombergLP::baltzo::TimeZoneUtilImp::resolveLocalTime(BloombergLP::bdlt::DatetimeTz*, BloombergLP::baltzo::LocalTimeValidity::Enum*, BloombergLP::baltzo::ZoneinfoTransition const**, BloombergLP::bdlt::Datetime const&, BloombergLP::baltzo::DstPolicy::Enum, BloombergLP::baltzo::Zoneinfo const&)>
-0000000000000092: 02	movl	%ebx, %eax
-0000000000000094: 04	addq	$24, %rsp
-0000000000000098: 01	popq	%rbx
-0000000000000099: 02	popq	%r12
-000000000000009b: 02	popq	%r13
-000000000000009d: 02	popq	%r14
-000000000000009f: 02	popq	%r15
-00000000000000a1: 01	popq	%rbp
-00000000000000a2: 01	retq	
-00000000000000a3: 10	nopw	%cs:(%rax,%rax)
-00000000000000ad: 03	nopl	(%rax)
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%r13	;  2 bytes
+M0000000000000007:	pushq	%r12	;  2 bytes
+M0000000000000009:	pushq	%rbx	;  1 bytes
+M000000000000000a:	subq	$24, %rsp	;  4 bytes
+M000000000000000e:	movl	%r8d, 12(%rsp)	;  5 bytes
+M0000000000000013:	movq	%rcx, %r14	;  3 bytes
+M0000000000000016:	movq	%rdx, %r15	;  3 bytes
+M0000000000000019:	movq	%rsi, %r12	;  3 bytes
+M000000000000001c:	movq	%rdi, %r13	;  3 bytes
+M000000000000001f:	movl	$0, 8(%rsp)	;  8 bytes
+M0000000000000027:	leaq	8(%rsp), %rsi	;  5 bytes
+M000000000000002c:	movq	%r9, %rdi	;  3 bytes
+M000000000000002f:	movq	%rcx, %rdx	;  3 bytes
+M0000000000000032:	callq	0x41a310 <BloombergLP::baltzo::ZoneinfoCache::getZoneinfo(int*, char const*)>	;  5 bytes
+M0000000000000037:	movq	%rax, %rbp	;  3 bytes
+M000000000000003a:	movl	8(%rsp), %ebx	;  4 bytes
+M000000000000003e:	testq	%rax, %rax	;  3 bytes
+M0000000000000041:	jne	0x413963 <BloombergLP::baltzo::TimeZoneUtilImp::initLocalTime(BloombergLP::bdlt::DatetimeTz*, BloombergLP::baltzo::LocalTimeValidity::Enum*, BloombergLP::bdlt::Datetime const&, char const*, BloombergLP::baltzo::DstPolicy::Enum, BloombergLP::baltzo::ZoneinfoCache*)+0x73>	;  2 bytes
+M0000000000000043:	movl	2624031(%rip), %eax  # 694358 <BloombergLP::bsls::Log::s_severityThreshold>	;  6 bytes
+M0000000000000049:	cmpl	$3, %eax	;  3 bytes
+M000000000000004c:	jl	0x413963 <BloombergLP::baltzo::TimeZoneUtilImp::initLocalTime(BloombergLP::bdlt::DatetimeTz*, BloombergLP::baltzo::LocalTimeValidity::Enum*, BloombergLP::bdlt::Datetime const&, char const*, BloombergLP::baltzo::DstPolicy::Enum, BloombergLP::baltzo::ZoneinfoCache*)+0x73>	;  2 bytes
+M000000000000004e:	movl	$4563161, %esi	;  5 bytes
+M0000000000000053:	movl	$4563259, %ecx	;  5 bytes
+M0000000000000058:	movl	$3, %edi	;  5 bytes
+M000000000000005d:	movl	$52, %edx	;  5 bytes
+M0000000000000062:	movq	%r14, %r8	;  3 bytes
+M0000000000000065:	movl	%ebx, %r9d	;  3 bytes
+M0000000000000068:	xorl	%eax, %eax	;  2 bytes
+M000000000000006a:	callq	0x432120 <BloombergLP::bsls::Log::logFormattedMessage(BloombergLP::bsls::LogSeverity::Enum, char const*, int, char const*, ...)>	;  5 bytes
+M000000000000006f:	movl	8(%rsp), %ebx	;  4 bytes
+M0000000000000073:	testl	%ebx, %ebx	;  2 bytes
+M0000000000000075:	jne	0x413982 <BloombergLP::baltzo::TimeZoneUtilImp::initLocalTime(BloombergLP::bdlt::DatetimeTz*, BloombergLP::baltzo::LocalTimeValidity::Enum*, BloombergLP::bdlt::Datetime const&, char const*, BloombergLP::baltzo::DstPolicy::Enum, BloombergLP::baltzo::ZoneinfoCache*)+0x92>	;  2 bytes
+M0000000000000077:	leaq	16(%rsp), %rdx	;  5 bytes
+M000000000000007c:	movq	%r13, %rdi	;  3 bytes
+M000000000000007f:	movq	%r12, %rsi	;  3 bytes
+M0000000000000082:	movq	%r15, %rcx	;  3 bytes
+M0000000000000085:	movl	12(%rsp), %r8d	;  5 bytes
+M000000000000008a:	movq	%rbp, %r9	;  3 bytes
+M000000000000008d:	callq	0x4139a0 <BloombergLP::baltzo::TimeZoneUtilImp::resolveLocalTime(BloombergLP::bdlt::DatetimeTz*, BloombergLP::baltzo::LocalTimeValidity::Enum*, BloombergLP::baltzo::ZoneinfoTransition const**, BloombergLP::bdlt::Datetime const&, BloombergLP::baltzo::DstPolicy::Enum, BloombergLP::baltzo::Zoneinfo const&)>	;  5 bytes
+M0000000000000092:	movl	%ebx, %eax	;  2 bytes
+M0000000000000094:	addq	$24, %rsp	;  4 bytes
+M0000000000000098:	popq	%rbx	;  1 bytes
+M0000000000000099:	popq	%r12	;  2 bytes
+M000000000000009b:	popq	%r13	;  2 bytes
+M000000000000009d:	popq	%r14	;  2 bytes
+M000000000000009f:	popq	%r15	;  2 bytes
+M00000000000000a1:	popq	%rbp	;  1 bytes
+M00000000000000a2:	retq		;  1 bytes
+M00000000000000a3:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M00000000000000ad:	nopl	(%rax)	;  3 bytes
 ```

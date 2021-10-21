@@ -1,43 +1,43 @@
 000000000040cc90 <BloombergLP::bdlbb::InBlobStreamBuf::underflow()>:
-0000000000000000: 04	movq	64(%rdi), %rcx
-0000000000000004: 03	movl	36(%rcx), %eax
-0000000000000007: 04	movl	76(%rdi), %r9d
-000000000000000b: 03	movl	24(%rdi), %edx
-000000000000000e: 04	movq	16(%rdi), %rsi
-0000000000000012: 02	subl	%esi, %edx
-0000000000000014: 03	addl	%r9d, %edx
-0000000000000017: 02	cmpl	%eax, %edx
-0000000000000019: 02	jge	0x40cd12 <BloombergLP::bdlbb::InBlobStreamBuf::underflow()+0x82>
-000000000000001b: 04	movq	32(%rdi), %r11
-000000000000001f: 03	subq	%rsi, %r11
-0000000000000022: 04	movslq	72(%rdi), %rsi
-0000000000000026: 03	movq	(%rcx), %r8
-0000000000000029: 04	leaq	(%rsi,%rsi,2), %rdx
-000000000000002d: 05	movslq	16(%r8,%rdx,8), %r10
-0000000000000032: 03	cmpq	%r10, %r11
-0000000000000035: 02	jne	0x40cce5 <BloombergLP::bdlbb::InBlobStreamBuf::underflow()+0x55>
-0000000000000037: 03	addl	%r10d, %r9d
-000000000000003a: 04	movl	%r9d, 76(%rdi)
-000000000000003e: 02	incl	%esi
-0000000000000040: 03	movl	%esi, 72(%rdi)
-0000000000000043: 03	movq	(%rcx), %r8
-0000000000000046: 03	movslq	%esi, %rsi
-0000000000000049: 04	leaq	(%rsi,%rsi,2), %rcx
-000000000000004d: 05	movl	16(%r8,%rcx,8), %r10d
-0000000000000052: 03	xorl	%r11d, %r11d
-0000000000000055: 04	leaq	(%rsi,%rsi,2), %rcx
-0000000000000059: 03	subl	%r9d, %eax
-000000000000005c: 03	cmpl	%eax, %r10d
-000000000000005f: 04	cmovll	%r10d, %eax
-0000000000000063: 04	movq	(%r8,%rcx,8), %rcx
-0000000000000067: 02	cltq	
-0000000000000069: 04	leaq	(%rcx,%r11), %rdx
-000000000000006d: 03	addq	%rcx, %rax
-0000000000000070: 04	movq	%rcx, 16(%rdi)
-0000000000000074: 04	movq	%rdx, 24(%rdi)
-0000000000000078: 04	movq	%rax, 32(%rdi)
-000000000000007c: 05	movzbl	(%rcx,%r11), %eax
-0000000000000081: 01	retq	
-0000000000000082: 05	movl	$4294967295, %eax
-0000000000000087: 01	retq	
-0000000000000088: 08	nopl	(%rax,%rax)
+M0000000000000000:	movq	64(%rdi), %rcx	;  4 bytes
+M0000000000000004:	movl	36(%rcx), %eax	;  3 bytes
+M0000000000000007:	movl	76(%rdi), %r9d	;  4 bytes
+M000000000000000b:	movl	24(%rdi), %edx	;  3 bytes
+M000000000000000e:	movq	16(%rdi), %rsi	;  4 bytes
+M0000000000000012:	subl	%esi, %edx	;  2 bytes
+M0000000000000014:	addl	%r9d, %edx	;  3 bytes
+M0000000000000017:	cmpl	%eax, %edx	;  2 bytes
+M0000000000000019:	jge	0x40cd12 <BloombergLP::bdlbb::InBlobStreamBuf::underflow()+0x82>	;  2 bytes
+M000000000000001b:	movq	32(%rdi), %r11	;  4 bytes
+M000000000000001f:	subq	%rsi, %r11	;  3 bytes
+M0000000000000022:	movslq	72(%rdi), %rsi	;  4 bytes
+M0000000000000026:	movq	(%rcx), %r8	;  3 bytes
+M0000000000000029:	leaq	(%rsi,%rsi,2), %rdx	;  4 bytes
+M000000000000002d:	movslq	16(%r8,%rdx,8), %r10	;  5 bytes
+M0000000000000032:	cmpq	%r10, %r11	;  3 bytes
+M0000000000000035:	jne	0x40cce5 <BloombergLP::bdlbb::InBlobStreamBuf::underflow()+0x55>	;  2 bytes
+M0000000000000037:	addl	%r10d, %r9d	;  3 bytes
+M000000000000003a:	movl	%r9d, 76(%rdi)	;  4 bytes
+M000000000000003e:	incl	%esi	;  2 bytes
+M0000000000000040:	movl	%esi, 72(%rdi)	;  3 bytes
+M0000000000000043:	movq	(%rcx), %r8	;  3 bytes
+M0000000000000046:	movslq	%esi, %rsi	;  3 bytes
+M0000000000000049:	leaq	(%rsi,%rsi,2), %rcx	;  4 bytes
+M000000000000004d:	movl	16(%r8,%rcx,8), %r10d	;  5 bytes
+M0000000000000052:	xorl	%r11d, %r11d	;  3 bytes
+M0000000000000055:	leaq	(%rsi,%rsi,2), %rcx	;  4 bytes
+M0000000000000059:	subl	%r9d, %eax	;  3 bytes
+M000000000000005c:	cmpl	%eax, %r10d	;  3 bytes
+M000000000000005f:	cmovll	%r10d, %eax	;  4 bytes
+M0000000000000063:	movq	(%r8,%rcx,8), %rcx	;  4 bytes
+M0000000000000067:	cltq		;  2 bytes
+M0000000000000069:	leaq	(%rcx,%r11), %rdx	;  4 bytes
+M000000000000006d:	addq	%rcx, %rax	;  3 bytes
+M0000000000000070:	movq	%rcx, 16(%rdi)	;  4 bytes
+M0000000000000074:	movq	%rdx, 24(%rdi)	;  4 bytes
+M0000000000000078:	movq	%rax, 32(%rdi)	;  4 bytes
+M000000000000007c:	movzbl	(%rcx,%r11), %eax	;  5 bytes
+M0000000000000081:	retq		;  1 bytes
+M0000000000000082:	movl	$4294967295, %eax	;  5 bytes
+M0000000000000087:	retq		;  1 bytes
+M0000000000000088:	nopl	(%rax,%rax)	;  8 bytes

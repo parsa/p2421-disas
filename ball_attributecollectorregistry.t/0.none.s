@@ -1,108 +1,108 @@
 00000000004057a0 <u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)>:
-0000000000000000: 02	pushq	%r15
-0000000000000002: 02	pushq	%r14
-0000000000000004: 02	pushq	%r13
-0000000000000006: 02	pushq	%r12
-0000000000000008: 01	pushq	%rbx
-0000000000000009: 07	subq	$128, %rsp
-0000000000000010: 03	movq	%rsi, %r12
-0000000000000013: 03	movq	%rdi, %r14
-0000000000000016: 07	movq	2392611(%rip), %r15  # 64d9e0 <BloombergLP::bslma::Default::s_defaultAllocator>
-000000000000001d: 03	testq	%r15, %r15
-0000000000000020: 02	jne	0x4057ca <u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)+0x2a>
-0000000000000022: 05	callq	0x40cd40 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-0000000000000027: 03	movq	%rax, %r15
-000000000000002a: 04	movq	(%r12), %r13
-000000000000002e: 08	movq	$0, (%rsp)
-0000000000000036: 09	movq	$23, 32(%rsp)
-000000000000003f: 05	movq	%r15, 40(%rsp)
-0000000000000044: 03	movq	%r13, %rdi
-0000000000000047: 05	callq	0x404020 <strlen@plt>
-000000000000004c: 09	movq	$0, 24(%rsp)
-0000000000000055: 03	movq	%rsp, %rbx
-0000000000000058: 05	movl	$4407932, %ecx
-000000000000005d: 03	movq	%rbx, %rdi
-0000000000000060: 03	movq	%r13, %rsi
-0000000000000063: 03	movq	%rax, %rdx
-0000000000000066: 05	callq	0x4104c0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>
-000000000000006b: 06	cmpq	$23, 32(%rsp)
-0000000000000071: 02	je	0x405817 <u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)+0x77>
-0000000000000073: 04	movq	(%rsp), %rbx
-0000000000000077: 05	movq	%rbx, 48(%rsp)
-000000000000007c: 05	leaq	56(%rsp), %rdi
-0000000000000081: 04	addq	$8, %r12
-0000000000000085: 03	movq	%r12, %rsi
-0000000000000088: 03	movq	%r15, %rdx
-000000000000008b: 05	callq	0x40a430 <BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, long long, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::VariantImp(BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, long long, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > const&, BloombergLP::bslma::Allocator*)>
-0000000000000090: 05	movl	$4294967295, %eax
-0000000000000095: 05	movq	%rax, 120(%rsp)
-000000000000009a: 03	movq	%rsp, %rsi
-000000000000009d: 03	movq	%r14, %rdi
-00000000000000a0: 05	callq	0x409490 <bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >::push_back(BloombergLP::ball::ManagedAttribute&&)>
-00000000000000a5: 04	movl	104(%rsp), %eax
-00000000000000a9: 02	testl	%eax, %eax
-00000000000000ab: 02	je	0x40587b <u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)+0xdb>
-00000000000000ad: 03	cmpl	$3, %eax
-00000000000000b0: 02	jne	0x405873 <u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)+0xd3>
-00000000000000b2: 06	cmpq	$23, 88(%rsp)
-00000000000000b8: 02	je	0x40586a <u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)+0xca>
-00000000000000ba: 05	movq	56(%rsp), %rsi
-00000000000000bf: 05	movq	96(%rsp), %rdi
-00000000000000c4: 03	movq	(%rdi), %rax
-00000000000000c7: 03	callq	*24(%rax)
-00000000000000ca: 09	movq	$-1, 80(%rsp)
-00000000000000d3: 08	movl	$0, 104(%rsp)
-00000000000000db: 06	cmpq	$23, 32(%rsp)
-00000000000000e1: 02	je	0x405892 <u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)+0xf2>
-00000000000000e3: 04	movq	(%rsp), %rsi
-00000000000000e7: 05	movq	40(%rsp), %rdi
-00000000000000ec: 03	movq	(%rdi), %rax
-00000000000000ef: 03	callq	*24(%rax)
-00000000000000f2: 07	addq	$128, %rsp
-00000000000000f9: 01	popq	%rbx
-00000000000000fa: 02	popq	%r12
-00000000000000fc: 02	popq	%r13
-00000000000000fe: 02	popq	%r14
-0000000000000100: 02	popq	%r15
-0000000000000102: 01	retq	
-0000000000000103: 03	movq	%rax, %rdi
-0000000000000106: 05	callq	0x4099d0 <__clang_call_terminate>
-000000000000010b: 03	movq	%rax, %rdi
-000000000000010e: 05	callq	0x4099d0 <__clang_call_terminate>
-0000000000000113: 03	movq	%rax, %rbx
-0000000000000116: 04	movl	104(%rsp), %eax
-000000000000011a: 02	testl	%eax, %eax
-000000000000011c: 02	je	0x4058ec <u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)+0x14c>
-000000000000011e: 03	cmpl	$3, %eax
-0000000000000121: 02	jne	0x4058e4 <u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)+0x144>
-0000000000000123: 06	cmpq	$23, 88(%rsp)
-0000000000000129: 02	je	0x4058db <u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)+0x13b>
-000000000000012b: 05	movq	56(%rsp), %rsi
-0000000000000130: 05	movq	96(%rsp), %rdi
-0000000000000135: 03	movq	(%rdi), %rax
-0000000000000138: 03	callq	*24(%rax)
-000000000000013b: 09	movq	$-1, 80(%rsp)
-0000000000000144: 08	movl	$0, 104(%rsp)
-000000000000014c: 06	cmpq	$23, 32(%rsp)
-0000000000000152: 02	je	0x40592f <u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)+0x18f>
-0000000000000154: 04	movq	(%rsp), %rsi
-0000000000000158: 05	movq	40(%rsp), %rdi
-000000000000015d: 03	movq	(%rdi), %rax
-0000000000000160: 03	callq	*24(%rax)
-0000000000000163: 02	jmp	0x40592f <u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)+0x18f>
-0000000000000165: 03	movq	%rax, %rdi
-0000000000000168: 05	callq	0x4099d0 <__clang_call_terminate>
-000000000000016d: 03	movq	%rax, %rdi
-0000000000000170: 05	callq	0x4099d0 <__clang_call_terminate>
-0000000000000175: 03	movq	%rax, %rbx
-0000000000000178: 06	cmpq	$23, 32(%rsp)
-000000000000017e: 02	je	0x40592f <u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)+0x18f>
-0000000000000180: 04	movq	(%rsp), %rsi
-0000000000000184: 05	movq	40(%rsp), %rdi
-0000000000000189: 03	movq	(%rdi), %rax
-000000000000018c: 03	callq	*24(%rax)
-000000000000018f: 03	movq	%rbx, %rdi
-0000000000000192: 05	callq	0x404480 <_Unwind_Resume@plt>
-0000000000000197: 03	movq	%rax, %rdi
-000000000000019a: 05	callq	0x4099d0 <__clang_call_terminate>
-000000000000019f: 01	nop	
+M0000000000000000:	pushq	%r15	;  2 bytes
+M0000000000000002:	pushq	%r14	;  2 bytes
+M0000000000000004:	pushq	%r13	;  2 bytes
+M0000000000000006:	pushq	%r12	;  2 bytes
+M0000000000000008:	pushq	%rbx	;  1 bytes
+M0000000000000009:	subq	$128, %rsp	;  7 bytes
+M0000000000000010:	movq	%rsi, %r12	;  3 bytes
+M0000000000000013:	movq	%rdi, %r14	;  3 bytes
+M0000000000000016:	movq	2392611(%rip), %r15  # 64d9e0 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M000000000000001d:	testq	%r15, %r15	;  3 bytes
+M0000000000000020:	jne	0x4057ca <u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)+0x2a>	;  2 bytes
+M0000000000000022:	callq	0x40cd40 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M0000000000000027:	movq	%rax, %r15	;  3 bytes
+M000000000000002a:	movq	(%r12), %r13	;  4 bytes
+M000000000000002e:	movq	$0, (%rsp)	;  8 bytes
+M0000000000000036:	movq	$23, 32(%rsp)	;  9 bytes
+M000000000000003f:	movq	%r15, 40(%rsp)	;  5 bytes
+M0000000000000044:	movq	%r13, %rdi	;  3 bytes
+M0000000000000047:	callq	0x404020 <strlen@plt>	;  5 bytes
+M000000000000004c:	movq	$0, 24(%rsp)	;  9 bytes
+M0000000000000055:	movq	%rsp, %rbx	;  3 bytes
+M0000000000000058:	movl	$4407932, %ecx	;  5 bytes
+M000000000000005d:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000060:	movq	%r13, %rsi	;  3 bytes
+M0000000000000063:	movq	%rax, %rdx	;  3 bytes
+M0000000000000066:	callq	0x4104c0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >::privateAppend(char const*, unsigned long, char const*)>	;  5 bytes
+M000000000000006b:	cmpq	$23, 32(%rsp)	;  6 bytes
+M0000000000000071:	je	0x405817 <u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)+0x77>	;  2 bytes
+M0000000000000073:	movq	(%rsp), %rbx	;  4 bytes
+M0000000000000077:	movq	%rbx, 48(%rsp)	;  5 bytes
+M000000000000007c:	leaq	56(%rsp), %rdi	;  5 bytes
+M0000000000000081:	addq	$8, %r12	;  4 bytes
+M0000000000000085:	movq	%r12, %rsi	;  3 bytes
+M0000000000000088:	movq	%r15, %rdx	;  3 bytes
+M000000000000008b:	callq	0x40a430 <BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, long long, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::VariantImp(BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, long long, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > > const&, BloombergLP::bslma::Allocator*)>	;  5 bytes
+M0000000000000090:	movl	$4294967295, %eax	;  5 bytes
+M0000000000000095:	movq	%rax, 120(%rsp)	;  5 bytes
+M000000000000009a:	movq	%rsp, %rsi	;  3 bytes
+M000000000000009d:	movq	%r14, %rdi	;  3 bytes
+M00000000000000a0:	callq	0x409490 <bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >::push_back(BloombergLP::ball::ManagedAttribute&&)>	;  5 bytes
+M00000000000000a5:	movl	104(%rsp), %eax	;  4 bytes
+M00000000000000a9:	testl	%eax, %eax	;  2 bytes
+M00000000000000ab:	je	0x40587b <u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)+0xdb>	;  2 bytes
+M00000000000000ad:	cmpl	$3, %eax	;  3 bytes
+M00000000000000b0:	jne	0x405873 <u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)+0xd3>	;  2 bytes
+M00000000000000b2:	cmpq	$23, 88(%rsp)	;  6 bytes
+M00000000000000b8:	je	0x40586a <u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)+0xca>	;  2 bytes
+M00000000000000ba:	movq	56(%rsp), %rsi	;  5 bytes
+M00000000000000bf:	movq	96(%rsp), %rdi	;  5 bytes
+M00000000000000c4:	movq	(%rdi), %rax	;  3 bytes
+M00000000000000c7:	callq	*24(%rax)	;  3 bytes
+M00000000000000ca:	movq	$-1, 80(%rsp)	;  9 bytes
+M00000000000000d3:	movl	$0, 104(%rsp)	;  8 bytes
+M00000000000000db:	cmpq	$23, 32(%rsp)	;  6 bytes
+M00000000000000e1:	je	0x405892 <u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)+0xf2>	;  2 bytes
+M00000000000000e3:	movq	(%rsp), %rsi	;  4 bytes
+M00000000000000e7:	movq	40(%rsp), %rdi	;  5 bytes
+M00000000000000ec:	movq	(%rdi), %rax	;  3 bytes
+M00000000000000ef:	callq	*24(%rax)	;  3 bytes
+M00000000000000f2:	addq	$128, %rsp	;  7 bytes
+M00000000000000f9:	popq	%rbx	;  1 bytes
+M00000000000000fa:	popq	%r12	;  2 bytes
+M00000000000000fc:	popq	%r13	;  2 bytes
+M00000000000000fe:	popq	%r14	;  2 bytes
+M0000000000000100:	popq	%r15	;  2 bytes
+M0000000000000102:	retq		;  1 bytes
+M0000000000000103:	movq	%rax, %rdi	;  3 bytes
+M0000000000000106:	callq	0x4099d0 <__clang_call_terminate>	;  5 bytes
+M000000000000010b:	movq	%rax, %rdi	;  3 bytes
+M000000000000010e:	callq	0x4099d0 <__clang_call_terminate>	;  5 bytes
+M0000000000000113:	movq	%rax, %rbx	;  3 bytes
+M0000000000000116:	movl	104(%rsp), %eax	;  4 bytes
+M000000000000011a:	testl	%eax, %eax	;  2 bytes
+M000000000000011c:	je	0x4058ec <u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)+0x14c>	;  2 bytes
+M000000000000011e:	cmpl	$3, %eax	;  3 bytes
+M0000000000000121:	jne	0x4058e4 <u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)+0x144>	;  2 bytes
+M0000000000000123:	cmpq	$23, 88(%rsp)	;  6 bytes
+M0000000000000129:	je	0x4058db <u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)+0x13b>	;  2 bytes
+M000000000000012b:	movq	56(%rsp), %rsi	;  5 bytes
+M0000000000000130:	movq	96(%rsp), %rdi	;  5 bytes
+M0000000000000135:	movq	(%rdi), %rax	;  3 bytes
+M0000000000000138:	callq	*24(%rax)	;  3 bytes
+M000000000000013b:	movq	$-1, 80(%rsp)	;  9 bytes
+M0000000000000144:	movl	$0, 104(%rsp)	;  8 bytes
+M000000000000014c:	cmpq	$23, 32(%rsp)	;  6 bytes
+M0000000000000152:	je	0x40592f <u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)+0x18f>	;  2 bytes
+M0000000000000154:	movq	(%rsp), %rsi	;  4 bytes
+M0000000000000158:	movq	40(%rsp), %rdi	;  5 bytes
+M000000000000015d:	movq	(%rdi), %rax	;  3 bytes
+M0000000000000160:	callq	*24(%rax)	;  3 bytes
+M0000000000000163:	jmp	0x40592f <u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)+0x18f>	;  2 bytes
+M0000000000000165:	movq	%rax, %rdi	;  3 bytes
+M0000000000000168:	callq	0x4099d0 <__clang_call_terminate>	;  5 bytes
+M000000000000016d:	movq	%rax, %rdi	;  3 bytes
+M0000000000000170:	callq	0x4099d0 <__clang_call_terminate>	;  5 bytes
+M0000000000000175:	movq	%rax, %rbx	;  3 bytes
+M0000000000000178:	cmpq	$23, 32(%rsp)	;  6 bytes
+M000000000000017e:	je	0x40592f <u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)+0x18f>	;  2 bytes
+M0000000000000180:	movq	(%rsp), %rsi	;  4 bytes
+M0000000000000184:	movq	40(%rsp), %rdi	;  5 bytes
+M0000000000000189:	movq	(%rdi), %rax	;  3 bytes
+M000000000000018c:	callq	*24(%rax)	;  3 bytes
+M000000000000018f:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000192:	callq	0x404480 <_Unwind_Resume@plt>	;  5 bytes
+M0000000000000197:	movq	%rax, %rdi	;  3 bytes
+M000000000000019a:	callq	0x4099d0 <__clang_call_terminate>	;  5 bytes
+M000000000000019f:	nop		;  1 bytes

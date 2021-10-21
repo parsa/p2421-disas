@@ -2,75 +2,75 @@
 
 ```nasm
 000000000040c690 <BloombergLP::bdlma::SequentialPool::SequentialPool(unsigned long, unsigned long, BloombergLP::bsls::BlockGrowth::Strategy, BloombergLP::bsls::Alignment::Strategy, BloombergLP::bslma::Allocator*)>:
-0000000000000000: 02	pushq	%r14
-0000000000000002: 01	pushq	%rbx
-0000000000000003: 01	pushq	%rax
-0000000000000004: 03	movl	%ecx, %r10d
-0000000000000007: 03	movq	%rsi, %r14
-000000000000000a: 03	movq	%rdi, %rbx
-000000000000000d: 10	movabsq	$72057594037927935, %rsi
-0000000000000017: 03	testl	%r8d, %r8d
-000000000000001a: 05	movl	$15, %ecx
-000000000000001f: 04	cmovel	%r8d, %ecx
-0000000000000023: 03	xorps	%xmm0, %xmm0
-0000000000000026: 03	movups	%xmm0, (%rdi)
-0000000000000029: 08	movq	$0, 16(%rdi)
-0000000000000031: 03	movb	%cl, 24(%rdi)
-0000000000000034: 04	cmpl	$2, %r8d
-0000000000000038: 05	movl	$1, %ecx
-000000000000003d: 05	movl	$16, %edi
-0000000000000042: 03	cmovel	%ecx, %edi
-0000000000000045: 04	movb	%dil, 25(%rbx)
-0000000000000049: 04	leaq	32(%rbx), %rcx
-000000000000004d: 08	movq	$0, 32(%rbx)
-0000000000000055: 04	movq	%rcx, 40(%rbx)
-0000000000000059: 04	leaq	-1(%r14), %rcx
-000000000000005d: 03	movq	%rcx, %rdi
-0000000000000060: 04	orq	$1, %rdi
-0000000000000064: 04	bsrq	%rdi, %rax
-0000000000000068: 03	xorl	$63, %eax
-000000000000006b: 04	cmpq	$1, %rcx
-000000000000006f: 03	adcl	$0, %eax
-0000000000000072: 02	movl	%eax, %ecx
-0000000000000074: 02	negb	%cl
-0000000000000076: 05	movl	$1, %edi
-000000000000007b: 03	shlq	%cl, %rdi
-000000000000007e: 02	testl	%eax, %eax
-0000000000000080: 02	je	0x40c715 <BloombergLP::bdlma::SequentialPool::SequentialPool(unsigned long, unsigned long, BloombergLP::bsls::BlockGrowth::Strategy, BloombergLP::bsls::Alignment::Strategy, BloombergLP::bslma::Allocator*)+0x85>
-0000000000000082: 03	addq	%rdi, %rsi
-0000000000000085: 10	movabsq	$9223372036854775806, %rax
-000000000000008f: 03	andq	%rax, %rdx
-0000000000000092: 04	leaq	1(%rdx), %rax
-0000000000000096: 04	bsrq	%rax, %rax
-000000000000009a: 03	xorl	$63, %eax
-000000000000009d: 04	cmpq	$1, %rdx
-00000000000000a1: 02	sbbl	%ecx, %ecx
-00000000000000a3: 02	subl	%eax, %ecx
-00000000000000a5: 07	movq	$-1, %rax
-00000000000000ac: 03	shlq	%cl, %rax
-00000000000000af: 10	movabsq	$-72057594037927936, %rcx
-00000000000000b9: 03	orq	%rsi, %rcx
-00000000000000bc: 03	orq	%rax, %rcx
-00000000000000bf: 07	movq	%rcx, 496(%rbx)
-00000000000000c6: 02	xorl	%eax, %eax
-00000000000000c8: 03	testl	%r10d, %r10d
-00000000000000cb: 04	cmovneq	%r14, %rax
-00000000000000cf: 07	movq	%rcx, 504(%rbx)
-00000000000000d6: 07	movups	%xmm0, 512(%rbx)
-00000000000000dd: 07	movq	%rax, 528(%rbx)
-00000000000000e4: 03	testq	%r9, %r9
-00000000000000e7: 02	jne	0x40c78d <BloombergLP::bdlma::SequentialPool::SequentialPool(unsigned long, unsigned long, BloombergLP::bsls::BlockGrowth::Strategy, BloombergLP::bsls::Alignment::Strategy, BloombergLP::bslma::Allocator*)+0xfd>
-00000000000000e9: 07	movq	2495824(%rip), %r9  # 66dcd0 <BloombergLP::bslma::Default::s_defaultAllocator>
-00000000000000f0: 03	testq	%r9, %r9
-00000000000000f3: 02	jne	0x40c78d <BloombergLP::bdlma::SequentialPool::SequentialPool(unsigned long, unsigned long, BloombergLP::bsls::BlockGrowth::Strategy, BloombergLP::bsls::Alignment::Strategy, BloombergLP::bslma::Allocator*)+0xfd>
-00000000000000f5: 05	callq	0x4173a0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>
-00000000000000fa: 03	movq	%rax, %r9
-00000000000000fd: 07	movq	%r9, 536(%rbx)
-0000000000000104: 03	movq	%rbx, %rdi
-0000000000000107: 03	movq	%r14, %rsi
-000000000000010a: 04	addq	$8, %rsp
-000000000000010e: 01	popq	%rbx
-000000000000010f: 02	popq	%r14
-0000000000000111: 05	jmp	0x40bea0 <BloombergLP::bdlma::SequentialPool::reserveCapacity(unsigned long)>
-0000000000000116: 10	nopw	%cs:(%rax,%rax)
+M0000000000000000:	pushq	%r14	;  2 bytes
+M0000000000000002:	pushq	%rbx	;  1 bytes
+M0000000000000003:	pushq	%rax	;  1 bytes
+M0000000000000004:	movl	%ecx, %r10d	;  3 bytes
+M0000000000000007:	movq	%rsi, %r14	;  3 bytes
+M000000000000000a:	movq	%rdi, %rbx	;  3 bytes
+M000000000000000d:	movabsq	$72057594037927935, %rsi	; 10 bytes
+M0000000000000017:	testl	%r8d, %r8d	;  3 bytes
+M000000000000001a:	movl	$15, %ecx	;  5 bytes
+M000000000000001f:	cmovel	%r8d, %ecx	;  4 bytes
+M0000000000000023:	xorps	%xmm0, %xmm0	;  3 bytes
+M0000000000000026:	movups	%xmm0, (%rdi)	;  3 bytes
+M0000000000000029:	movq	$0, 16(%rdi)	;  8 bytes
+M0000000000000031:	movb	%cl, 24(%rdi)	;  3 bytes
+M0000000000000034:	cmpl	$2, %r8d	;  4 bytes
+M0000000000000038:	movl	$1, %ecx	;  5 bytes
+M000000000000003d:	movl	$16, %edi	;  5 bytes
+M0000000000000042:	cmovel	%ecx, %edi	;  3 bytes
+M0000000000000045:	movb	%dil, 25(%rbx)	;  4 bytes
+M0000000000000049:	leaq	32(%rbx), %rcx	;  4 bytes
+M000000000000004d:	movq	$0, 32(%rbx)	;  8 bytes
+M0000000000000055:	movq	%rcx, 40(%rbx)	;  4 bytes
+M0000000000000059:	leaq	-1(%r14), %rcx	;  4 bytes
+M000000000000005d:	movq	%rcx, %rdi	;  3 bytes
+M0000000000000060:	orq	$1, %rdi	;  4 bytes
+M0000000000000064:	bsrq	%rdi, %rax	;  4 bytes
+M0000000000000068:	xorl	$63, %eax	;  3 bytes
+M000000000000006b:	cmpq	$1, %rcx	;  4 bytes
+M000000000000006f:	adcl	$0, %eax	;  3 bytes
+M0000000000000072:	movl	%eax, %ecx	;  2 bytes
+M0000000000000074:	negb	%cl	;  2 bytes
+M0000000000000076:	movl	$1, %edi	;  5 bytes
+M000000000000007b:	shlq	%cl, %rdi	;  3 bytes
+M000000000000007e:	testl	%eax, %eax	;  2 bytes
+M0000000000000080:	je	0x40c715 <BloombergLP::bdlma::SequentialPool::SequentialPool(unsigned long, unsigned long, BloombergLP::bsls::BlockGrowth::Strategy, BloombergLP::bsls::Alignment::Strategy, BloombergLP::bslma::Allocator*)+0x85>	;  2 bytes
+M0000000000000082:	addq	%rdi, %rsi	;  3 bytes
+M0000000000000085:	movabsq	$9223372036854775806, %rax	; 10 bytes
+M000000000000008f:	andq	%rax, %rdx	;  3 bytes
+M0000000000000092:	leaq	1(%rdx), %rax	;  4 bytes
+M0000000000000096:	bsrq	%rax, %rax	;  4 bytes
+M000000000000009a:	xorl	$63, %eax	;  3 bytes
+M000000000000009d:	cmpq	$1, %rdx	;  4 bytes
+M00000000000000a1:	sbbl	%ecx, %ecx	;  2 bytes
+M00000000000000a3:	subl	%eax, %ecx	;  2 bytes
+M00000000000000a5:	movq	$-1, %rax	;  7 bytes
+M00000000000000ac:	shlq	%cl, %rax	;  3 bytes
+M00000000000000af:	movabsq	$-72057594037927936, %rcx	; 10 bytes
+M00000000000000b9:	orq	%rsi, %rcx	;  3 bytes
+M00000000000000bc:	orq	%rax, %rcx	;  3 bytes
+M00000000000000bf:	movq	%rcx, 496(%rbx)	;  7 bytes
+M00000000000000c6:	xorl	%eax, %eax	;  2 bytes
+M00000000000000c8:	testl	%r10d, %r10d	;  3 bytes
+M00000000000000cb:	cmovneq	%r14, %rax	;  4 bytes
+M00000000000000cf:	movq	%rcx, 504(%rbx)	;  7 bytes
+M00000000000000d6:	movups	%xmm0, 512(%rbx)	;  7 bytes
+M00000000000000dd:	movq	%rax, 528(%rbx)	;  7 bytes
+M00000000000000e4:	testq	%r9, %r9	;  3 bytes
+M00000000000000e7:	jne	0x40c78d <BloombergLP::bdlma::SequentialPool::SequentialPool(unsigned long, unsigned long, BloombergLP::bsls::BlockGrowth::Strategy, BloombergLP::bsls::Alignment::Strategy, BloombergLP::bslma::Allocator*)+0xfd>	;  2 bytes
+M00000000000000e9:	movq	2495824(%rip), %r9  # 66dcd0 <BloombergLP::bslma::Default::s_defaultAllocator>	;  7 bytes
+M00000000000000f0:	testq	%r9, %r9	;  3 bytes
+M00000000000000f3:	jne	0x40c78d <BloombergLP::bdlma::SequentialPool::SequentialPool(unsigned long, unsigned long, BloombergLP::bsls::BlockGrowth::Strategy, BloombergLP::bsls::Alignment::Strategy, BloombergLP::bslma::Allocator*)+0xfd>	;  2 bytes
+M00000000000000f5:	callq	0x4173a0 <BloombergLP::bslma::Default::determineAndReturnDefaultAllocator()>	;  5 bytes
+M00000000000000fa:	movq	%rax, %r9	;  3 bytes
+M00000000000000fd:	movq	%r9, 536(%rbx)	;  7 bytes
+M0000000000000104:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000107:	movq	%r14, %rsi	;  3 bytes
+M000000000000010a:	addq	$8, %rsp	;  4 bytes
+M000000000000010e:	popq	%rbx	;  1 bytes
+M000000000000010f:	popq	%r14	;  2 bytes
+M0000000000000111:	jmp	0x40bea0 <BloombergLP::bdlma::SequentialPool::reserveCapacity(unsigned long)>	;  5 bytes
+M0000000000000116:	nopw	%cs:(%rax,%rax)	; 10 bytes
 ```

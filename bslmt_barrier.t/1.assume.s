@@ -1,46 +1,46 @@
 0000000000403ef0 <testThread5b>:
-0000000000000000: 02	pushq	%r14
-0000000000000002: 01	pushq	%rbx
-0000000000000003: 04	subq	$24, %rsp
-0000000000000007: 03	movq	%rdi, %rbx
-000000000000000a: 05	movl	$1, %eax
-000000000000000f: 01	lock	
-0000000000000010: 04	xaddl	%eax, 120(%rdi)
-0000000000000014: 02	testl	%eax, %eax
-0000000000000016: 02	je	0x403f12 <testThread5b+0x22>
-0000000000000018: 03	movq	%rbx, %rdi
-000000000000001b: 05	callq	0x409160 <BloombergLP::bslmt::Barrier::wait()>
-0000000000000020: 02	jmp	0x403f7c <testThread5b+0x8c>
-0000000000000022: 07	cmpl	$1, 132(%rbx)
-0000000000000029: 02	jne	0x403f22 <testThread5b+0x32>
-000000000000002b: 05	callq	0x42f080 <BloombergLP::bsls::SystemTime::nowMonotonicClock()>
-0000000000000030: 02	jmp	0x403f27 <testThread5b+0x37>
-0000000000000032: 05	callq	0x42f110 <BloombergLP::bsls::SystemTime::nowRealtimeClock()>
-0000000000000037: 05	movq	%rax, 8(%rsp)
-000000000000003c: 04	movl	%edx, 16(%rsp)
-0000000000000040: 04	movslq	124(%rbx), %rax
-0000000000000044: 07	imulq	$1125899907, %rax, %rcx
-000000000000004b: 03	movq	%rcx, %rdx
-000000000000004e: 04	shrq	$63, %rdx
-0000000000000052: 04	sarq	$50, %rcx
-0000000000000056: 02	addl	%edx, %ecx
-0000000000000058: 03	movslq	%ecx, %rsi
-000000000000005b: 06	imull	$1000000, %esi, %ecx
-0000000000000061: 02	subl	%ecx, %eax
-0000000000000063: 06	imull	$1000, %eax, %edx
-0000000000000069: 05	leaq	8(%rsp), %r14
-000000000000006e: 03	movq	%r14, %rdi
-0000000000000071: 05	callq	0x42f230 <BloombergLP::bsls::TimeInterval::addInterval(long long, int)>
-0000000000000076: 03	movq	%rbx, %rdi
-0000000000000079: 03	movq	%r14, %rsi
-000000000000007c: 05	callq	0x4090b0 <BloombergLP::bslmt::Barrier::timedWait(BloombergLP::bsls::TimeInterval const&)>
-0000000000000081: 02	testl	%eax, %eax
-0000000000000083: 02	je	0x403f7c <testThread5b+0x8c>
-0000000000000085: 01	lock	
-0000000000000086: 06	incl	128(%rbx)
-000000000000008c: 03	movq	%rbx, %rax
-000000000000008f: 04	addq	$24, %rsp
-0000000000000093: 01	popq	%rbx
-0000000000000094: 02	popq	%r14
-0000000000000096: 01	retq	
-0000000000000097: 09	nopw	(%rax,%rax)
+M0000000000000000:	pushq	%r14	;  2 bytes
+M0000000000000002:	pushq	%rbx	;  1 bytes
+M0000000000000003:	subq	$24, %rsp	;  4 bytes
+M0000000000000007:	movq	%rdi, %rbx	;  3 bytes
+M000000000000000a:	movl	$1, %eax	;  5 bytes
+M000000000000000f:	lock		;  1 bytes
+M0000000000000010:	xaddl	%eax, 120(%rdi)	;  4 bytes
+M0000000000000014:	testl	%eax, %eax	;  2 bytes
+M0000000000000016:	je	0x403f12 <testThread5b+0x22>	;  2 bytes
+M0000000000000018:	movq	%rbx, %rdi	;  3 bytes
+M000000000000001b:	callq	0x409160 <BloombergLP::bslmt::Barrier::wait()>	;  5 bytes
+M0000000000000020:	jmp	0x403f7c <testThread5b+0x8c>	;  2 bytes
+M0000000000000022:	cmpl	$1, 132(%rbx)	;  7 bytes
+M0000000000000029:	jne	0x403f22 <testThread5b+0x32>	;  2 bytes
+M000000000000002b:	callq	0x42f080 <BloombergLP::bsls::SystemTime::nowMonotonicClock()>	;  5 bytes
+M0000000000000030:	jmp	0x403f27 <testThread5b+0x37>	;  2 bytes
+M0000000000000032:	callq	0x42f110 <BloombergLP::bsls::SystemTime::nowRealtimeClock()>	;  5 bytes
+M0000000000000037:	movq	%rax, 8(%rsp)	;  5 bytes
+M000000000000003c:	movl	%edx, 16(%rsp)	;  4 bytes
+M0000000000000040:	movslq	124(%rbx), %rax	;  4 bytes
+M0000000000000044:	imulq	$1125899907, %rax, %rcx	;  7 bytes
+M000000000000004b:	movq	%rcx, %rdx	;  3 bytes
+M000000000000004e:	shrq	$63, %rdx	;  4 bytes
+M0000000000000052:	sarq	$50, %rcx	;  4 bytes
+M0000000000000056:	addl	%edx, %ecx	;  2 bytes
+M0000000000000058:	movslq	%ecx, %rsi	;  3 bytes
+M000000000000005b:	imull	$1000000, %esi, %ecx	;  6 bytes
+M0000000000000061:	subl	%ecx, %eax	;  2 bytes
+M0000000000000063:	imull	$1000, %eax, %edx	;  6 bytes
+M0000000000000069:	leaq	8(%rsp), %r14	;  5 bytes
+M000000000000006e:	movq	%r14, %rdi	;  3 bytes
+M0000000000000071:	callq	0x42f230 <BloombergLP::bsls::TimeInterval::addInterval(long long, int)>	;  5 bytes
+M0000000000000076:	movq	%rbx, %rdi	;  3 bytes
+M0000000000000079:	movq	%r14, %rsi	;  3 bytes
+M000000000000007c:	callq	0x4090b0 <BloombergLP::bslmt::Barrier::timedWait(BloombergLP::bsls::TimeInterval const&)>	;  5 bytes
+M0000000000000081:	testl	%eax, %eax	;  2 bytes
+M0000000000000083:	je	0x403f7c <testThread5b+0x8c>	;  2 bytes
+M0000000000000085:	lock		;  1 bytes
+M0000000000000086:	incl	128(%rbx)	;  6 bytes
+M000000000000008c:	movq	%rbx, %rax	;  3 bytes
+M000000000000008f:	addq	$24, %rsp	;  4 bytes
+M0000000000000093:	popq	%rbx	;  1 bytes
+M0000000000000094:	popq	%r14	;  2 bytes
+M0000000000000096:	retq		;  1 bytes
+M0000000000000097:	nopw	(%rax,%rax)	;  9 bytes

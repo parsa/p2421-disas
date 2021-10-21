@@ -2,54 +2,54 @@
 
 ```nasm
 00000000004679f0 <BloombergLP::bdlt::Iso8601Util::generate(char*, int, BloombergLP::bdlt::TimeTz const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)>:
-0000000000000000: 01	pushq	%rbp
-0000000000000001: 02	pushq	%r15
-0000000000000003: 02	pushq	%r14
-0000000000000005: 01	pushq	%rbx
-0000000000000006: 04	subq	$24, %rsp
-000000000000000a: 02	movl	%esi, %ebp
-000000000000000c: 03	movq	%rdi, %r14
-000000000000000f: 03	cmpl	$21, %esi
-0000000000000012: 02	jl	0x467a1a <BloombergLP::bdlt::Iso8601Util::generate(char*, int, BloombergLP::bdlt::TimeTz const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)+0x2a>
-0000000000000014: 03	movq	%r14, %rdi
-0000000000000017: 03	movq	%rdx, %rsi
-000000000000001a: 03	movq	%rcx, %rdx
-000000000000001d: 05	callq	0x467a80 <BloombergLP::bdlt::Iso8601Util::generateRaw(char*, BloombergLP::bdlt::TimeTz const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)>
-0000000000000022: 02	movl	%eax, %ebx
-0000000000000024: 02	cmpl	%ebp, %ebx
-0000000000000026: 02	jl	0x467a5c <BloombergLP::bdlt::Iso8601Util::generate(char*, int, BloombergLP::bdlt::TimeTz const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)+0x6c>
-0000000000000028: 02	jmp	0x467a64 <BloombergLP::bdlt::Iso8601Util::generate(char*, int, BloombergLP::bdlt::TimeTz const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)+0x74>
-000000000000002a: 03	movq	%rsp, %rdi
-000000000000002d: 03	movq	%rdx, %rsi
-0000000000000030: 03	movq	%rcx, %rdx
-0000000000000033: 05	callq	0x467a80 <BloombergLP::bdlt::Iso8601Util::generateRaw(char*, BloombergLP::bdlt::TimeTz const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)>
-0000000000000038: 02	movl	%eax, %ebx
-000000000000003a: 02	cmpl	%ebp, %eax
-000000000000003c: 02	jge	0x467a4a <BloombergLP::bdlt::Iso8601Util::generate(char*, int, BloombergLP::bdlt::TimeTz const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)+0x5a>
-000000000000003e: 03	movslq	%ebx, %r15
-0000000000000041: 03	movq	%rsp, %rsi
-0000000000000044: 03	movq	%r14, %rdi
-0000000000000047: 03	movq	%r15, %rdx
-000000000000004a: 05	callq	0x404980 <memcpy@plt>
-000000000000004f: 05	movb	$0, (%r14,%r15)
-0000000000000054: 02	cmpl	%ebp, %ebx
-0000000000000056: 02	jl	0x467a5c <BloombergLP::bdlt::Iso8601Util::generate(char*, int, BloombergLP::bdlt::TimeTz const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)+0x6c>
-0000000000000058: 02	jmp	0x467a64 <BloombergLP::bdlt::Iso8601Util::generate(char*, int, BloombergLP::bdlt::TimeTz const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)+0x74>
-000000000000005a: 03	movslq	%ebp, %rdx
-000000000000005d: 03	movq	%rsp, %rsi
-0000000000000060: 03	movq	%r14, %rdi
-0000000000000063: 05	callq	0x404980 <memcpy@plt>
-0000000000000068: 02	cmpl	%ebp, %ebx
-000000000000006a: 02	jge	0x467a64 <BloombergLP::bdlt::Iso8601Util::generate(char*, int, BloombergLP::bdlt::TimeTz const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)+0x74>
-000000000000006c: 03	movslq	%ebx, %rax
-000000000000006f: 05	movb	$0, (%r14,%rax)
-0000000000000074: 02	movl	%ebx, %eax
-0000000000000076: 04	addq	$24, %rsp
-000000000000007a: 01	popq	%rbx
-000000000000007b: 02	popq	%r14
-000000000000007d: 02	popq	%r15
-000000000000007f: 01	popq	%rbp
-0000000000000080: 01	retq	
-0000000000000081: 10	nopw	%cs:(%rax,%rax)
-000000000000008b: 05	nopl	(%rax,%rax)
+M0000000000000000:	pushq	%rbp	;  1 bytes
+M0000000000000001:	pushq	%r15	;  2 bytes
+M0000000000000003:	pushq	%r14	;  2 bytes
+M0000000000000005:	pushq	%rbx	;  1 bytes
+M0000000000000006:	subq	$24, %rsp	;  4 bytes
+M000000000000000a:	movl	%esi, %ebp	;  2 bytes
+M000000000000000c:	movq	%rdi, %r14	;  3 bytes
+M000000000000000f:	cmpl	$21, %esi	;  3 bytes
+M0000000000000012:	jl	0x467a1a <BloombergLP::bdlt::Iso8601Util::generate(char*, int, BloombergLP::bdlt::TimeTz const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)+0x2a>	;  2 bytes
+M0000000000000014:	movq	%r14, %rdi	;  3 bytes
+M0000000000000017:	movq	%rdx, %rsi	;  3 bytes
+M000000000000001a:	movq	%rcx, %rdx	;  3 bytes
+M000000000000001d:	callq	0x467a80 <BloombergLP::bdlt::Iso8601Util::generateRaw(char*, BloombergLP::bdlt::TimeTz const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)>	;  5 bytes
+M0000000000000022:	movl	%eax, %ebx	;  2 bytes
+M0000000000000024:	cmpl	%ebp, %ebx	;  2 bytes
+M0000000000000026:	jl	0x467a5c <BloombergLP::bdlt::Iso8601Util::generate(char*, int, BloombergLP::bdlt::TimeTz const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)+0x6c>	;  2 bytes
+M0000000000000028:	jmp	0x467a64 <BloombergLP::bdlt::Iso8601Util::generate(char*, int, BloombergLP::bdlt::TimeTz const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)+0x74>	;  2 bytes
+M000000000000002a:	movq	%rsp, %rdi	;  3 bytes
+M000000000000002d:	movq	%rdx, %rsi	;  3 bytes
+M0000000000000030:	movq	%rcx, %rdx	;  3 bytes
+M0000000000000033:	callq	0x467a80 <BloombergLP::bdlt::Iso8601Util::generateRaw(char*, BloombergLP::bdlt::TimeTz const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)>	;  5 bytes
+M0000000000000038:	movl	%eax, %ebx	;  2 bytes
+M000000000000003a:	cmpl	%ebp, %eax	;  2 bytes
+M000000000000003c:	jge	0x467a4a <BloombergLP::bdlt::Iso8601Util::generate(char*, int, BloombergLP::bdlt::TimeTz const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)+0x5a>	;  2 bytes
+M000000000000003e:	movslq	%ebx, %r15	;  3 bytes
+M0000000000000041:	movq	%rsp, %rsi	;  3 bytes
+M0000000000000044:	movq	%r14, %rdi	;  3 bytes
+M0000000000000047:	movq	%r15, %rdx	;  3 bytes
+M000000000000004a:	callq	0x404980 <memcpy@plt>	;  5 bytes
+M000000000000004f:	movb	$0, (%r14,%r15)	;  5 bytes
+M0000000000000054:	cmpl	%ebp, %ebx	;  2 bytes
+M0000000000000056:	jl	0x467a5c <BloombergLP::bdlt::Iso8601Util::generate(char*, int, BloombergLP::bdlt::TimeTz const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)+0x6c>	;  2 bytes
+M0000000000000058:	jmp	0x467a64 <BloombergLP::bdlt::Iso8601Util::generate(char*, int, BloombergLP::bdlt::TimeTz const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)+0x74>	;  2 bytes
+M000000000000005a:	movslq	%ebp, %rdx	;  3 bytes
+M000000000000005d:	movq	%rsp, %rsi	;  3 bytes
+M0000000000000060:	movq	%r14, %rdi	;  3 bytes
+M0000000000000063:	callq	0x404980 <memcpy@plt>	;  5 bytes
+M0000000000000068:	cmpl	%ebp, %ebx	;  2 bytes
+M000000000000006a:	jge	0x467a64 <BloombergLP::bdlt::Iso8601Util::generate(char*, int, BloombergLP::bdlt::TimeTz const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)+0x74>	;  2 bytes
+M000000000000006c:	movslq	%ebx, %rax	;  3 bytes
+M000000000000006f:	movb	$0, (%r14,%rax)	;  5 bytes
+M0000000000000074:	movl	%ebx, %eax	;  2 bytes
+M0000000000000076:	addq	$24, %rsp	;  4 bytes
+M000000000000007a:	popq	%rbx	;  1 bytes
+M000000000000007b:	popq	%r14	;  2 bytes
+M000000000000007d:	popq	%r15	;  2 bytes
+M000000000000007f:	popq	%rbp	;  1 bytes
+M0000000000000080:	retq		;  1 bytes
+M0000000000000081:	nopw	%cs:(%rax,%rax)	; 10 bytes
+M000000000000008b:	nopl	(%rax,%rax)	;  5 bytes
 ```
