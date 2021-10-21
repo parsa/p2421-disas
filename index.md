@@ -1,4 +1,6 @@
-# Comparison of building BDE with assumed vs ignored contract-checking semantics
+# Assumed vs ignored contract-checking semantics in BDE
 
-* [List of changed functions](fxs)
+> Note: Functions that repeat in different test drivers with the same generated code have been omitted for brevity.
+
+* [List of affected functions](fxs)
 * [List of affected tests](test-drivers)
