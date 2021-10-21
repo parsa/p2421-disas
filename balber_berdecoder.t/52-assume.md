@@ -1,6 +1,6 @@
 # `BloombergLP::bdlt::Time::setMicrosecond(int)` - Assumed
 
-```x86asm
+```nasm
 000000000046b880 <BloombergLP::bdlt::Time::setMicrosecond(int)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r14

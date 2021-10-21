@@ -1,6 +1,6 @@
 # `BloombergLP::baljsn::EncodingStyle::toString(BloombergLP::baljsn::EncodingStyle::Value)` - Assumed
 
-```x86asm
+```nasm
 000000000040db80 <BloombergLP::baljsn::EncodingStyle::toString(BloombergLP::baljsn::EncodingStyle::Value)>:
 0000000000000000: 02	testl	%edi, %edi
 0000000000000002: 05	movl	$4315136, %ecx

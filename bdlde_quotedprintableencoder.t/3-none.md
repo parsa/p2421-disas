@@ -1,6 +1,6 @@
 # `BloombergLP::bdlde::QuotedPrintableEncoder::appendAsHex(char*, char, bool)` - Ignored
 
-```x86asm
+```nasm
 000000000041ece0 <BloombergLP::bdlde::QuotedPrintableEncoder::appendAsHex(char*, char, bool)>:
 0000000000000000: 04	movzbl	%dl, %r9d
 0000000000000004: 03	andl	$15, %edx

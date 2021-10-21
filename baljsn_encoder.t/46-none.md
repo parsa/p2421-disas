@@ -1,6 +1,6 @@
 # `BloombergLP::s_baltst::MySequenceWithChoice::reset()` - Ignored
 
-```x86asm
+```nasm
 00000000004b6a90 <BloombergLP::s_baltst::MySequenceWithChoice::reset()>:
 0000000000000000: 07	movl	$4294967295, 4(%rdi)
 0000000000000007: 01	retq	

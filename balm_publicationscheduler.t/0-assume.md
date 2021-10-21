@@ -1,6 +1,6 @@
 # `Action::typeString(Action::Type)` - Assumed
 
-```x86asm
+```nasm
 00000000004064f0 <Action::typeString(Action::Type)>:
 0000000000000000: 02	testl	%edi, %edi
 0000000000000002: 05	movl	$4600341, %ecx

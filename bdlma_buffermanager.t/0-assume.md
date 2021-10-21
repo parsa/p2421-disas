@@ -1,6 +1,6 @@
 # `detectNOccurrences(int, int const*, int)` - Assumed
 
-```x86asm
+```nasm
 0000000000401f90 <detectNOccurrences(int, int const*, int)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

@@ -1,6 +1,6 @@
 # `BloombergLP::s_baltst::BasicSchemaSequenceElementChoice::selectionName() const` - Assumed
 
-```x86asm
+```nasm
 000000000043a5e0 <BloombergLP::s_baltst::BasicSchemaSequenceElementChoice::selectionName() const>:
 0000000000000000: 03	movl	64(%rdi), %eax
 0000000000000003: 02	testl	%eax, %eax

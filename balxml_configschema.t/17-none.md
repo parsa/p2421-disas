@@ -1,6 +1,6 @@
 # `int BloombergLP::balxml::Decoder_ParseObject::executeImp<BloombergLP::s_baltst::BasicSchemaChoice>(BloombergLP::s_baltst::BasicSchemaChoice*, int, BloombergLP::bdlat_TypeCategory::Choice)` - Ignored
 
-```x86asm
+```nasm
 0000000000410a60 <int BloombergLP::balxml::Decoder_ParseObject::executeImp<BloombergLP::s_baltst::BasicSchemaChoice>(BloombergLP::s_baltst::BasicSchemaChoice*, int, BloombergLP::bdlat_TypeCategory::Choice)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r14

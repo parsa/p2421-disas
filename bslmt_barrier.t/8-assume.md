@@ -1,6 +1,6 @@
 # `testThread4` - Assumed
 
-```x86asm
+```nasm
 0000000000403f90 <testThread4>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

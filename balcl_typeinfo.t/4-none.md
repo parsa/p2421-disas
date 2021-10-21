@@ -1,6 +1,6 @@
 # `(anonymous namespace)::u::setLinkedVariable(BloombergLP::balcl::TypeInfo*, BloombergLP::balcl::OptionType::Enum, void*)` - Ignored
 
-```x86asm
+```nasm
 0000000000414370 <(anonymous namespace)::u::setLinkedVariable(BloombergLP::balcl::TypeInfo*, BloombergLP::balcl::OptionType::Enum, void*)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

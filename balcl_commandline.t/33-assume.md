@@ -1,6 +1,6 @@
 # `(anonymous namespace)::u::createTypeInfo(BloombergLP::balcl::OptionType::Enum, void*, void*)` - Assumed
 
-```x86asm
+```nasm
 000000000044b390 <(anonymous namespace)::u::createTypeInfo(BloombergLP::balcl::OptionType::Enum, void*, void*)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

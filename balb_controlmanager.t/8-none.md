@@ -1,6 +1,6 @@
 # `BloombergLP::bdlb::String::areEqualCaseless(char const*, int, char const*, int)` - Ignored
 
-```x86asm
+```nasm
 000000000040cfb0 <BloombergLP::bdlb::String::areEqualCaseless(char const*, int, char const*, int)>:
 0000000000000000: 02	xorl	%eax, %eax
 0000000000000002: 02	cmpl	%ecx, %esi

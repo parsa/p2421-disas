@@ -1,6 +1,6 @@
 # `BloombergLP::s_baltst::MySequenceWithChoiceChoice::operator=(BloombergLP::s_baltst::MySequenceWithChoiceChoice const&)` - Assumed
 
-```x86asm
+```nasm
 00000000004b64e0 <BloombergLP::s_baltst::MySequenceWithChoiceChoice::operator=(BloombergLP::s_baltst::MySequenceWithChoiceChoice const&)>:
 0000000000000000: 03	movq	%rdi, %rax
 0000000000000003: 03	cmpq	%rsi, %rdi

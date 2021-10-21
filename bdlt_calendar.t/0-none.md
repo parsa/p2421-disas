@@ -1,6 +1,6 @@
 # `int loadWeekendDaysTransition<BloombergLP::bdlt::Calendar>(char const**, BloombergLP::bdlt::Calendar*, BloombergLP::bdlt::Date const&)` - Ignored
 
-```x86asm
+```nasm
 0000000000451340 <int loadWeekendDaysTransition<BloombergLP::bdlt::Calendar>(char const**, BloombergLP::bdlt::Calendar*, BloombergLP::bdlt::Date const&)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

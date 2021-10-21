@@ -1,6 +1,6 @@
 # `BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::replaceImp(void*, unsigned long, int, void*, unsigned long, int, unsigned long)` - Ignored
 
-```x86asm
+```nasm
 000000000041d590 <BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::replaceImp(void*, unsigned long, int, void*, unsigned long, int, unsigned long)>:
 0000000000000000: 02	pushq	%r14
 0000000000000002: 01	pushq	%rbx

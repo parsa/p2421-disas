@@ -1,6 +1,6 @@
 # `BloombergLP::balb::SequenceWithAnonymity::SequenceWithAnonymity(BloombergLP::balb::SequenceWithAnonymity const&, BloombergLP::bslma::Allocator*)` - Ignored
 
-```x86asm
+```nasm
 0000000000411270 <BloombergLP::balb::SequenceWithAnonymity::SequenceWithAnonymity(BloombergLP::balb::SequenceWithAnonymity const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

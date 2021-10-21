@@ -1,6 +1,6 @@
 # `BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Signed>::append(long)` - Assumed
 
-```x86asm
+```nasm
 000000000041b9c0 <BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Signed>::append(long)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

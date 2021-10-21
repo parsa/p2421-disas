@@ -1,6 +1,6 @@
 # `BloombergLP::balm::PublicationType::toString(BloombergLP::balm::PublicationType::Value)` - Assumed
 
-```x86asm
+```nasm
 00000000004095a0 <BloombergLP::balm::PublicationType::toString(BloombergLP::balm::PublicationType::Value)>:
 0000000000000000: 03	movslq	%edi, %rax
 0000000000000003: 08	movq	4413080(,%rax,8), %rax

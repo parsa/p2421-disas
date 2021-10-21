@@ -1,6 +1,6 @@
 # `BloombergLP::balb::SequenceWithAnonymityChoice2::reset()` - Ignored
 
-```x86asm
+```nasm
 0000000000410ba0 <BloombergLP::balb::SequenceWithAnonymityChoice2::reset()>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

@@ -1,6 +1,6 @@
 # `BloombergLP::bdlt::DayOfWeekSet_Iter::DayOfWeekSet_Iter(int, int)` - Ignored
 
-```x86asm
+```nasm
 000000000040e6e0 <BloombergLP::bdlt::DayOfWeekSet_Iter::DayOfWeekSet_Iter(int, int)>:
 0000000000000000: 03	movb	%sil, (%rdi)
 0000000000000003: 03	movb	%dl, 1(%rdi)

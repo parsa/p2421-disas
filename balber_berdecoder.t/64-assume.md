@@ -1,6 +1,6 @@
 # `int BloombergLP::balber::BerUtil_IntegerImpUtil::putIntegerValue<unsigned short>(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, unsigned short)` - Assumed
 
-```x86asm
+```nasm
 0000000000446740 <int BloombergLP::balber::BerUtil_IntegerImpUtil::putIntegerValue<unsigned short>(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, unsigned short)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

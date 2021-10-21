@@ -1,6 +1,6 @@
 # `BloombergLP::balst::StackTraceResolverImpl<BloombergLP::balst::ObjectFileFormat::Elf>::processLoadedImage(char const*, void const*, int, void*, void*)` - Assumed
 
-```x86asm
+```nasm
 000000000040b430 <BloombergLP::balst::StackTraceResolverImpl<BloombergLP::balst::ObjectFileFormat::Elf>::processLoadedImage(char const*, void const*, int, void*, void*)>:
 0000000000000000: 02	pushq	%r14
 0000000000000002: 01	pushq	%rbx

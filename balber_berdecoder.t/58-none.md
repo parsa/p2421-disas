@@ -1,6 +1,6 @@
 # `BloombergLP::s_baltst::MyEnumeration::toString(BloombergLP::s_baltst::MyEnumeration::Value)` - Ignored
 
-```x86asm
+```nasm
 000000000045b5a0 <BloombergLP::s_baltst::MyEnumeration::toString(BloombergLP::s_baltst::MyEnumeration::Value)>:
 0000000000000000: 02	xorl	%ecx, %ecx
 0000000000000002: 03	cmpl	$1, %edi

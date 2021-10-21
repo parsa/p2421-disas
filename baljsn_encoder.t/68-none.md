@@ -1,6 +1,6 @@
 # `BloombergLP::s_baltst::Sequence1::operator=(BloombergLP::s_baltst::Sequence1 const&)` - Ignored
 
-```x86asm
+```nasm
 00000000004bb590 <BloombergLP::s_baltst::Sequence1::operator=(BloombergLP::s_baltst::Sequence1 const&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

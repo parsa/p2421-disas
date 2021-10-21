@@ -1,6 +1,6 @@
 # `operator<<(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, Action const&)` - Ignored
 
-```x86asm
+```nasm
 0000000000406430 <operator<<(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, Action const&)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

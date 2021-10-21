@@ -1,6 +1,6 @@
 # `g(char const*)` - Assumed
 
-```x86asm
+```nasm
 0000000000405ed0 <g(char const*)>:
 0000000000000000: 02	pushq	%r14
 0000000000000002: 01	pushq	%rbx

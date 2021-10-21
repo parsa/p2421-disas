@@ -1,6 +1,6 @@
 # `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<ContentionReader<BloombergLP::bslmt::RWMutex> >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, ContentionReader<BloombergLP::bslmt::RWMutex> const&, BloombergLP::bslma::Allocator*)` - Ignored
 
-```x86asm
+```nasm
 0000000000409080 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<ContentionReader<BloombergLP::bslmt::RWMutex> >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, ContentionReader<BloombergLP::bslmt::RWMutex> const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

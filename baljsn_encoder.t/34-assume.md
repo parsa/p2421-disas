@@ -1,6 +1,6 @@
 # `BloombergLP::s_baltst::MySequenceWithChoiceChoice::makeSelection(int)` - Assumed
 
-```x86asm
+```nasm
 00000000004b6570 <BloombergLP::s_baltst::MySequenceWithChoiceChoice::makeSelection(int)>:
 0000000000000000: 03	cmpl	$-1, %esi
 0000000000000003: 02	je	0x4b658d <BloombergLP::s_baltst::MySequenceWithChoiceChoice::makeSelection(int)+0x1d>

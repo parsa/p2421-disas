@@ -1,6 +1,6 @@
 # `BloombergLP::bdlat_TypeName_Imp::xsdName(BloombergLP::bdldfp::Decimal_Type64 const*, int)` - Ignored
 
-```x86asm
+```nasm
 00000000004eff70 <BloombergLP::bdlat_TypeName_Imp::xsdName(BloombergLP::bdldfp::Decimal_Type64 const*, int)>:
 0000000000000000: 02	xorl	%eax, %eax
 0000000000000002: 04	testb	$7, %sil

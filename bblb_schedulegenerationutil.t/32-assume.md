@@ -1,6 +1,6 @@
 # `BloombergLP::bdlt::Calendar::addHolidayCode(BloombergLP::bdlt::Date const&, int)` - Assumed
 
-```x86asm
+```nasm
 000000000040ca10 <BloombergLP::bdlt::Calendar::addHolidayCode(BloombergLP::bdlt::Date const&, int)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

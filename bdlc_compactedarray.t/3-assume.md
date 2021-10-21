@@ -1,6 +1,6 @@
 # `BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::print(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, int, int) const` - Assumed
 
-```x86asm
+```nasm
 000000000043ab90 <BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::print(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, int, int) const>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

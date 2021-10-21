@@ -1,6 +1,6 @@
 # `BloombergLP::bdlcc::FixedQueueIndexManager::reservePopIndexForClear(unsigned int*, unsigned int*, unsigned int, unsigned int)` - Assumed
 
-```x86asm
+```nasm
 000000000040c220 <BloombergLP::bdlcc::FixedQueueIndexManager::reservePopIndexForClear(unsigned int*, unsigned int*, unsigned int, unsigned int)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

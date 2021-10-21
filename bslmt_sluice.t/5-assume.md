@@ -1,6 +1,6 @@
 # `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<EnterAndWaitUntilDoneJob>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, EnterAndWaitUntilDoneJob const&, BloombergLP::bslma::Allocator*)` - Assumed
 
-```x86asm
+```nasm
 0000000000405b50 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<EnterAndWaitUntilDoneJob>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, EnterAndWaitUntilDoneJob const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

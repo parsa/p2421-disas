@@ -1,6 +1,6 @@
 # `int BloombergLP::s_baltst::Sequence6::accessAttributes<BloombergLP::baljsn::Encoder_AttributeVisitor>(BloombergLP::baljsn::Encoder_AttributeVisitor&) const` - Assumed
 
-```x86asm
+```nasm
 0000000000476660 <int BloombergLP::s_baltst::Sequence6::accessAttributes<BloombergLP::baljsn::Encoder_AttributeVisitor>(BloombergLP::baljsn::Encoder_AttributeVisitor&) const>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r14

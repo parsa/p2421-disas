@@ -1,6 +1,6 @@
 # `BloombergLP::bbldc::PeriodDayCountUtil::daysDiff(BloombergLP::bdlt::Date const&, BloombergLP::bdlt::Date const&, BloombergLP::bbldc::DayCountConvention::Enum)` - Assumed
 
-```x86asm
+```nasm
 0000000000404d30 <BloombergLP::bbldc::PeriodDayCountUtil::daysDiff(BloombergLP::bdlt::Date const&, BloombergLP::bdlt::Date const&, BloombergLP::bbldc::DayCountConvention::Enum)>:
 0000000000000000: 02	movl	(%rsi), %eax
 0000000000000002: 02	subl	(%rdi), %eax

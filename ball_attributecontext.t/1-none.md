@@ -1,6 +1,6 @@
 # `workerThread1` - Ignored
 
-```x86asm
+```nasm
 00000000004060f0 <workerThread1>:
 0000000000000000: 02	pushq	%r14
 0000000000000002: 01	pushq	%rbx

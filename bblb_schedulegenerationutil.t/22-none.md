@@ -1,6 +1,6 @@
 # `BloombergLP::bblb::ScheduleGenerationUtil::generateFromDayOfMonth(bsl::vector<BloombergLP::bdlt::Date, bsl::allocator<BloombergLP::bdlt::Date> >*, BloombergLP::bdlt::Date const&, BloombergLP::bdlt::Date const&, int, int, int, int, int)` - Ignored
 
-```x86asm
+```nasm
 000000000040b6c0 <BloombergLP::bblb::ScheduleGenerationUtil::generateFromDayOfMonth(bsl::vector<BloombergLP::bdlt::Date, bsl::allocator<BloombergLP::bdlt::Date> >*, BloombergLP::bdlt::Date const&, BloombergLP::bdlt::Date const&, int, int, int, int, int)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

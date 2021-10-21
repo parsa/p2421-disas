@@ -1,6 +1,6 @@
 # `void testCase04<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >()` - Ignored
 
-```x86asm
+```nasm
 0000000000429fe0 <void testCase04<bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >()>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

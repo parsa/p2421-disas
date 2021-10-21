@@ -1,6 +1,6 @@
 # `BloombergLP::balb::SequenceWithAnonymity::~SequenceWithAnonymity()` - Ignored
 
-```x86asm
+```nasm
 00000000004113f0 <BloombergLP::balb::SequenceWithAnonymity::~SequenceWithAnonymity()>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 03	movq	%rdi, %rbx

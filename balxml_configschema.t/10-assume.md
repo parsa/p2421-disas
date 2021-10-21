@@ -1,6 +1,6 @@
 # `int BloombergLP::balxml::Decoder_ParseObject::executeImp<BloombergLP::s_baltst::BasicSchemaSimpleTypeElementChoice>(BloombergLP::s_baltst::BasicSchemaSimpleTypeElementChoice*, int, BloombergLP::bdlat_TypeCategory::Choice)` - Assumed
 
-```x86asm
+```nasm
 00000000004118c0 <int BloombergLP::balxml::Decoder_ParseObject::executeImp<BloombergLP::s_baltst::BasicSchemaSimpleTypeElementChoice>(BloombergLP::s_baltst::BasicSchemaSimpleTypeElementChoice*, int, BloombergLP::bdlat_TypeCategory::Choice)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

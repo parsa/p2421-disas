@@ -1,6 +1,6 @@
 # `BloombergLP::s_baltst::SequenceWithAnonymityChoice1::reset()` - Assumed
 
-```x86asm
+```nasm
 00000000004d0f30 <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::reset()>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 03	movq	%rdi, %rbx

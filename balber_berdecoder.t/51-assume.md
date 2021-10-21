@@ -1,6 +1,6 @@
 # `BloombergLP::bdlt::ProlepticDateImpUtil::lastDayOfMonth(int, int)` - Assumed
 
-```x86asm
+```nasm
 000000000046a6a0 <BloombergLP::bdlt::ProlepticDateImpUtil::lastDayOfMonth(int, int)>:
 0000000000000000: 02	movl	%esi, %eax
 0000000000000002: 07	movl	4937712(,%rax,4), %ecx

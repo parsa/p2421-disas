@@ -1,6 +1,6 @@
 # `BloombergLP::bdlbb::Blob::removeBuffers(int, int)` - Ignored
 
-```x86asm
+```nasm
 000000000041ea80 <BloombergLP::bdlbb::Blob::removeBuffers(int, int)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

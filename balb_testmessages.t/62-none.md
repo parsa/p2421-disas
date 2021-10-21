@@ -1,6 +1,6 @@
 # `BloombergLP::balb::SequenceWithAnonymityChoice::makeSelection(int)` - Ignored
 
-```x86asm
+```nasm
 000000000040b3e0 <BloombergLP::balb::SequenceWithAnonymityChoice::makeSelection(int)>:
 0000000000000000: 02	pushq	%r14
 0000000000000002: 01	pushq	%rbx

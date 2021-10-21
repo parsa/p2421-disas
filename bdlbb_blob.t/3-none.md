@@ -1,6 +1,6 @@
 # `BloombergLP::bdlbb::Blob::moveAndAppendDataBuffers(BloombergLP::bdlbb::Blob*)` - Ignored
 
-```x86asm
+```nasm
 000000000041f0e0 <BloombergLP::bdlbb::Blob::moveAndAppendDataBuffers(BloombergLP::bdlbb::Blob*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

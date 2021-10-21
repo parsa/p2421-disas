@@ -1,6 +1,6 @@
 # `example1::main()` - Assumed
 
-```x86asm
+```nasm
 00000000004050f0 <example1::main()>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 07	subq	$192, %rsp

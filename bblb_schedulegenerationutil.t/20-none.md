@@ -1,6 +1,6 @@
 # `BloombergLP::bdlt::Calendar::addWeekendDays(BloombergLP::bdlt::DayOfWeekSet const&)` - Ignored
 
-```x86asm
+```nasm
 000000000040cca0 <BloombergLP::bdlt::Calendar::addWeekendDays(BloombergLP::bdlt::DayOfWeekSet const&)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

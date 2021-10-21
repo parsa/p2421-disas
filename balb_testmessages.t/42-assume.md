@@ -1,6 +1,6 @@
 # `BloombergLP::balb::Sequence1::operator=(BloombergLP::balb::Sequence1 const&)` - Assumed
 
-```x86asm
+```nasm
 000000000040fbe0 <BloombergLP::balb::Sequence1::operator=(BloombergLP::balb::Sequence1 const&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

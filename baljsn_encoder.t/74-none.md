@@ -1,6 +1,6 @@
 # `BloombergLP::s_baltst::Choice3::makeSelection4()` - Ignored
 
-```x86asm
+```nasm
 00000000004b9f60 <BloombergLP::s_baltst::Choice3::makeSelection4()>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 03	movq	%rdi, %rbx

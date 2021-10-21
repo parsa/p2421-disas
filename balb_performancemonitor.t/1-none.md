@@ -1,6 +1,6 @@
 # `BloombergLP::bsls::SystemTime::now(BloombergLP::bsls::SystemClockType::Enum)` - Ignored
 
-```x86asm
+```nasm
 000000000041ea60 <BloombergLP::bsls::SystemTime::now(BloombergLP::bsls::SystemClockType::Enum)>:
 0000000000000000: 01	pushq	%rax
 0000000000000001: 02	testl	%edi, %edi

@@ -1,6 +1,6 @@
 # `BloombergLP::s_baltst::MyChoiceWithDefaultValues::makeSelection(int)` - Ignored
 
-```x86asm
+```nasm
 00000000004052c0 <BloombergLP::s_baltst::MyChoiceWithDefaultValues::makeSelection(int)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r14

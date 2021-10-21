@@ -1,6 +1,6 @@
 # `BloombergLP::bdlb::BitStringUtil::assign(unsigned long*, unsigned long, bool, unsigned long)` - Ignored
 
-```x86asm
+```nasm
 0000000000442780 <BloombergLP::bdlb::BitStringUtil::assign(unsigned long*, unsigned long, bool, unsigned long)>:
 0000000000000000: 02	pushq	%r14
 0000000000000002: 01	pushq	%rbx

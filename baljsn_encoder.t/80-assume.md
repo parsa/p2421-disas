@@ -1,6 +1,6 @@
 # `BloombergLP::s_baltst::SequenceWithAnonymityChoice::makeSelection4(BloombergLP::s_baltst::CustomInt const&)` - Assumed
 
-```x86asm
+```nasm
 00000000004cfe50 <BloombergLP::s_baltst::SequenceWithAnonymityChoice::makeSelection4(BloombergLP::s_baltst::CustomInt const&)>:
 0000000000000000: 02	pushq	%r14
 0000000000000002: 01	pushq	%rbx

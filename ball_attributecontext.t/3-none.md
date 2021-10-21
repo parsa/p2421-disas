@@ -1,6 +1,6 @@
 # `usageExample2` - Ignored
 
-```x86asm
+```nasm
 0000000000405a40 <usageExample2>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

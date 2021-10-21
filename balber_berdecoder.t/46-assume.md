@@ -1,6 +1,6 @@
 # `int BloombergLP::s_baltst::MyChoiceWithDefaultValues::manipulateSelection<BloombergLP::balber::BerDecoder_NodeVisitor>(BloombergLP::balber::BerDecoder_NodeVisitor&)` - Assumed
 
-```x86asm
+```nasm
 0000000000445a90 <int BloombergLP::s_baltst::MyChoiceWithDefaultValues::manipulateSelection<BloombergLP::balber::BerDecoder_NodeVisitor>(BloombergLP::balber::BerDecoder_NodeVisitor&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

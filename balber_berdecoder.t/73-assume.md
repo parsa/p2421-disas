@@ -1,6 +1,6 @@
 # `BloombergLP::bdlt::Iso8601Util::parse(BloombergLP::bdlt::Datetime*, char const*, int)` - Assumed
 
-```x86asm
+```nasm
 0000000000468d10 <BloombergLP::bdlt::Iso8601Util::parse(BloombergLP::bdlt::Datetime*, char const*, int)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

@@ -1,6 +1,6 @@
 # `BloombergLP::bsls::SystemTime::now(BloombergLP::bsls::SystemClockType::Enum)` - Assumed
 
-```x86asm
+```nasm
 000000000041e970 <BloombergLP::bsls::SystemTime::now(BloombergLP::bsls::SystemClockType::Enum)>:
 0000000000000000: 03	cmpl	$1, %edi
 0000000000000003: 02	jne	0x41e97a <BloombergLP::bsls::SystemTime::now(BloombergLP::bsls::SystemClockType::Enum)+0xa>

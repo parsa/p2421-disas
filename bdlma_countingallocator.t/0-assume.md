@@ -1,6 +1,6 @@
 # `DoubleStack::pop()` - Assumed
 
-```x86asm
+```nasm
 00000000004043f0 <DoubleStack::pop()>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 03	movq	%rdi, %rbx

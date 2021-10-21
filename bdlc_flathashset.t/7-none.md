@@ -1,6 +1,6 @@
 # `BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, EqualAndState<int> >::indexOfKey(bool*, int const&, unsigned long)` - Ignored
 
-```x86asm
+```nasm
 000000000044dae0 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, EqualAndState<int> >::indexOfKey(bool*, int const&, unsigned long)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

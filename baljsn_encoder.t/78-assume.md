@@ -1,6 +1,6 @@
 # `BloombergLP::s_baltst::SequenceWithAnonymityChoice::makeSelection2()` - Assumed
 
-```x86asm
+```nasm
 00000000004d05f0 <BloombergLP::s_baltst::SequenceWithAnonymityChoice::makeSelection2()>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 03	movq	%rdi, %rbx

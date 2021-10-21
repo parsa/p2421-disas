@@ -1,6 +1,6 @@
 # `void testPutValue<BloombergLP::bdlt::Datetime>(int, int, int, int, int, BloombergLP::bdlt::Datetime const&, BloombergLP::baljsn::EncoderOptions const*, bool)` - Ignored
 
-```x86asm
+```nasm
 00000000004245c0 <void testPutValue<BloombergLP::bdlt::Datetime>(int, int, int, int, int, BloombergLP::bdlt::Datetime const&, BloombergLP::baljsn::EncoderOptions const*, bool)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

@@ -1,6 +1,6 @@
 # `void testPutValue<BloombergLP::bdlt::TimeTz>(int, int, int, int, BloombergLP::bdlt::TimeTz const&, BloombergLP::baljsn::EncoderOptions const*, bool)` - Ignored
 
-```x86asm
+```nasm
 0000000000420a90 <void testPutValue<BloombergLP::bdlt::TimeTz>(int, int, int, int, BloombergLP::bdlt::TimeTz const&, BloombergLP::baljsn::EncoderOptions const*, bool)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

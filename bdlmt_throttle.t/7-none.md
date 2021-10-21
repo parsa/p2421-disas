@@ -1,6 +1,6 @@
 # `Case_Throttle_MULTITHREADED::threadJob()` - Ignored
 
-```x86asm
+```nasm
 00000000004056e0 <Case_Throttle_MULTITHREADED::threadJob()>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

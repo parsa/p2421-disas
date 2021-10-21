@@ -1,6 +1,6 @@
 # `void BloombergLP::bdld::Datum::apply<Benchmark_Visitor>(Benchmark_Visitor&) const` - Ignored
 
-```x86asm
+```nasm
 000000000045c480 <void BloombergLP::bdld::Datum::apply<Benchmark_Visitor>(Benchmark_Visitor&) const>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

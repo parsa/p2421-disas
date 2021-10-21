@@ -1,6 +1,6 @@
 # `BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()` - Assumed
 
-```x86asm
+```nasm
 000000000040dec0 <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

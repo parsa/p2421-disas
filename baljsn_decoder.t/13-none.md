@@ -1,6 +1,6 @@
 # `BloombergLP::case4::Color::toString(BloombergLP::case4::Color::Value)` - Ignored
 
-```x86asm
+```nasm
 0000000000408c90 <BloombergLP::case4::Color::toString(BloombergLP::case4::Color::Value)>:
 0000000000000000: 03	cmpl	$2, %edi
 0000000000000003: 02	ja	0x408ca1 <BloombergLP::case4::Color::toString(BloombergLP::case4::Color::Value)+0x11>

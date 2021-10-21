@@ -1,6 +1,6 @@
 # `BloombergLP::bdlbb::InBlobStreamBuf::underflow()` - Assumed
 
-```x86asm
+```nasm
 000000000040cc90 <BloombergLP::bdlbb::InBlobStreamBuf::underflow()>:
 0000000000000000: 04	movq	64(%rdi), %rcx
 0000000000000004: 03	movl	36(%rcx), %eax

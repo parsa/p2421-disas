@@ -1,6 +1,6 @@
 # `BloombergLP::bdlb::TokenizerIterator::TokenizerIterator(char const*, char const*, BloombergLP::bdlb::Tokenizer_Data const*)` - Assumed
 
-```x86asm
+```nasm
 0000000000473190 <BloombergLP::bdlb::TokenizerIterator::TokenizerIterator(char const*, char const*, BloombergLP::bdlb::Tokenizer_Data const*)>:
 0000000000000000: 03	movq	%rcx, (%rdi)
 0000000000000003: 04	movq	%rsi, 8(%rdi)

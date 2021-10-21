@@ -1,6 +1,6 @@
 # `bsl::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, BloombergLP::bsltf::StdStatefulAllocator<wchar_t, true, true, true, true> >::seekoff(long long, std::__1::ios_base::seekdir, unsigned int)` - Assumed
 
-```x86asm
+```nasm
 00000000004212d0 <bsl::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, BloombergLP::bsltf::StdStatefulAllocator<wchar_t, true, true, true, true> >::seekoff(long long, std::__1::ios_base::seekdir, unsigned int)>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 03	cmpl	$1, %edx

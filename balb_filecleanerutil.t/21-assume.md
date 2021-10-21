@@ -1,6 +1,6 @@
 # `BloombergLP::bdlt::PosixDateImpUtil::lastDayOfMonth(int, int)` - Assumed
 
-```x86asm
+```nasm
 00000000004135e0 <BloombergLP::bdlt::PosixDateImpUtil::lastDayOfMonth(int, int)>:
 0000000000000000: 02	movl	%esi, %eax
 0000000000000002: 07	movl	4445072(,%rax,4), %ecx

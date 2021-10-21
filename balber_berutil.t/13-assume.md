@@ -1,6 +1,6 @@
 # `BloombergLP::bdldfp::DecimalImpUtil::decompose(int*, unsigned long long*, int*, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType64)` - Assumed
 
-```x86asm
+```nasm
 0000000000476b80 <BloombergLP::bdldfp::DecimalImpUtil::decompose(int*, unsigned long long*, int*, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType64)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

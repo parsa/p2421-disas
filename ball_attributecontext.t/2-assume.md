@@ -1,6 +1,6 @@
 # `case3ContextThread` - Assumed
 
-```x86asm
+```nasm
 000000000040ac00 <case3ContextThread>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

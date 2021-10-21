@@ -1,6 +1,6 @@
 # `BloombergLP::bdlma::BufferImpUtil::allocateFromBuffer(long*, char*, unsigned long, unsigned long, BloombergLP::bsls::Alignment::Strategy)` - Ignored
 
-```x86asm
+```nasm
 000000000040fae0 <BloombergLP::bdlma::BufferImpUtil::allocateFromBuffer(long*, char*, unsigned long, unsigned long, BloombergLP::bsls::Alignment::Strategy)>:
 0000000000000000: 03	movq	%rsi, %rax
 0000000000000003: 04	cmpl	$2, %r8d

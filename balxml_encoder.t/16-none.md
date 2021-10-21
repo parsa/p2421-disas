@@ -1,6 +1,6 @@
 # `BloombergLP::bdlat_TypeName_Imp::xsdName(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const*, int)` - Ignored
 
-```x86asm
+```nasm
 00000000004eff80 <BloombergLP::bdlat_TypeName_Imp::xsdName(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const*, int)>:
 0000000000000000: 03	andl	$7, %esi
 0000000000000003: 03	cmpl	$4, %esi

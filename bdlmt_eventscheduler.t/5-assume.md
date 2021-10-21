@@ -1,6 +1,6 @@
 # `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlmt::EventScheduler*, int, int, int, int), BloombergLP::bdlf::Bind_BoundTuple5<BloombergLP::bdlmt::EventScheduler*, int, int, int, int> > >(unsigned long*, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlmt::EventScheduler*, int, int, int, int), BloombergLP::bdlf::Bind_BoundTuple5<BloombergLP::bdlmt::EventScheduler*, int, int, int, int> > const&, BloombergLP::bslma::Allocator*)` - Assumed
 
-```x86asm
+```nasm
 0000000000429160 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlmt::EventScheduler*, int, int, int, int), BloombergLP::bdlf::Bind_BoundTuple5<BloombergLP::bdlmt::EventScheduler*, int, int, int, int> > >(unsigned long*, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlmt::EventScheduler*, int, int, int, int), BloombergLP::bdlf::Bind_BoundTuple5<BloombergLP::bdlmt::EventScheduler*, int, int, int, int> > const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

@@ -1,6 +1,6 @@
 # `BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Signed>::reserveCapacity(unsigned long, long)` - Assumed
 
-```x86asm
+```nasm
 000000000041cab0 <BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Signed>::reserveCapacity(unsigned long, long)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

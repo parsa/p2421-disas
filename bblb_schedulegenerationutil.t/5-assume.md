@@ -1,6 +1,6 @@
 # `BloombergLP::bdlt::PackedCalendar::addWeekendDay(BloombergLP::bdlt::DayOfWeek::Enum)` - Assumed
 
-```x86asm
+```nasm
 00000000004105e0 <BloombergLP::bdlt::PackedCalendar::addWeekendDay(BloombergLP::bdlt::DayOfWeek::Enum)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 01	pushq	%rbx

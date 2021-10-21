@@ -1,6 +1,6 @@
 # `BloombergLP::bdlb::String::rtrim(char const*, int*)` - Ignored
 
-```x86asm
+```nasm
 000000000040d230 <BloombergLP::bdlb::String::rtrim(char const*, int*)>:
 0000000000000000: 03	movslq	(%rsi), %rax
 0000000000000003: 03	testq	%rax, %rax

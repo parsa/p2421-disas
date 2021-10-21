@@ -1,6 +1,6 @@
 # `UsageExample::TradeMatcher::placeBuyOrder(double, int)` - Assumed
 
-```x86asm
+```nasm
 0000000000402c60 <UsageExample::TradeMatcher::placeBuyOrder(double, int)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

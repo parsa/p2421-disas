@@ -1,6 +1,6 @@
 # `int BloombergLP::balber::BerEncoder::encode<unsigned long long>(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, unsigned long long const&)` - Assumed
 
-```x86asm
+```nasm
 0000000000443530 <int BloombergLP::balber::BerEncoder::encode<unsigned long long>(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, unsigned long long const&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

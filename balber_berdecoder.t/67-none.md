@@ -1,6 +1,6 @@
 # `BloombergLP::bdlt::Iso8601Util::parse(BloombergLP::bdlt::TimeTz*, char const*, int)` - Ignored
 
-```x86asm
+```nasm
 0000000000469a00 <BloombergLP::bdlt::Iso8601Util::parse(BloombergLP::bdlt::TimeTz*, char const*, int)>:
 0000000000000000: 05	movl	$4294967295, %eax
 0000000000000005: 03	cmpl	$8, %edx

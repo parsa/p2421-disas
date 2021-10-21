@@ -1,6 +1,6 @@
 # `BloombergLP::ball::Observer::publish(BloombergLP::ball::Record const&, BloombergLP::ball::Context const&)` - Ignored
 
-```x86asm
+```nasm
 0000000000414940 <BloombergLP::ball::Observer::publish(BloombergLP::ball::Record const&, BloombergLP::ball::Context const&)>:
 0000000000000000: 01	retq	
 0000000000000001: 10	nopw	%cs:(%rax,%rax)

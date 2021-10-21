@@ -1,6 +1,6 @@
 # `BloombergLP::balb::Sequence4::~Sequence4()` - Assumed
 
-```x86asm
+```nasm
 000000000040e340 <BloombergLP::balb::Sequence4::~Sequence4()>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

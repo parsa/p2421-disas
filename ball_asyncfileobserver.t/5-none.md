@@ -1,6 +1,6 @@
 # `BloombergLP::bdlsb::OverflowMemOutStreamBuf::seekoff(long long, std::__1::ios_base::seekdir, unsigned int)` - Ignored
 
-```x86asm
+```nasm
 00000000004612e0 <BloombergLP::bdlsb::OverflowMemOutStreamBuf::seekoff(long long, std::__1::ios_base::seekdir, unsigned int)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

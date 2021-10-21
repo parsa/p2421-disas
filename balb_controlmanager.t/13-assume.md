@@ -1,6 +1,6 @@
 # `BloombergLP::bslmt::ThreadUtilImpl<BloombergLP::bslmt::Platform::PosixThreads>::getMinSchedulingPriority(BloombergLP::bslmt::ThreadAttributes::SchedulingPolicy)` - Assumed
 
-```x86asm
+```nasm
 000000000040fd80 <BloombergLP::bslmt::ThreadUtilImpl<BloombergLP::bslmt::Platform::PosixThreads>::getMinSchedulingPriority(BloombergLP::bslmt::ThreadAttributes::SchedulingPolicy)>:
 0000000000000000: 03	movslq	%edi, %rax
 0000000000000003: 07	movl	4426424(,%rax,4), %edi

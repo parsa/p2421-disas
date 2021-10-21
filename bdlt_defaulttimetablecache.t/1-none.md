@@ -1,6 +1,6 @@
 # `BloombergLP::bdlc::CompactedArray<BloombergLP::bdlt::Timetable_Day>::increment(BloombergLP::bdlt::Timetable_Day const&, unsigned long)` - Ignored
 
-```x86asm
+```nasm
 0000000000409c30 <BloombergLP::bdlc::CompactedArray<BloombergLP::bdlt::Timetable_Day>::increment(BloombergLP::bdlt::Timetable_Day const&, unsigned long)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

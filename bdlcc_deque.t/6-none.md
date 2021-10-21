@@ -1,6 +1,6 @@
 # `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<TEST_CASE_26::TimedPopRecordBack<double> >(unsigned long*, TEST_CASE_26::TimedPopRecordBack<double> const&, BloombergLP::bslma::Allocator*)` - Ignored
 
-```x86asm
+```nasm
 00000000004954c0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<TEST_CASE_26::TimedPopRecordBack<double> >(unsigned long*, TEST_CASE_26::TimedPopRecordBack<double> const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

@@ -1,6 +1,6 @@
 # `BloombergLP::bdlt::Calendar::getNextBusinessDay(BloombergLP::bdlt::Date*, BloombergLP::bdlt::Date const&, int) const` - Assumed
 
-```x86asm
+```nasm
 000000000040ce70 <BloombergLP::bdlt::Calendar::getNextBusinessDay(BloombergLP::bdlt::Date*, BloombergLP::bdlt::Date const&, int) const>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r14

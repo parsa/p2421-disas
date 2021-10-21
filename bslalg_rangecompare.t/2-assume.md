@@ -1,6 +1,6 @@
 # `MyContainer<MyString>::reserve(unsigned long)` - Assumed
 
-```x86asm
+```nasm
 0000000000411980 <MyContainer<MyString>::reserve(unsigned long)>:
 0000000000000000: 02	pushq	%r14
 0000000000000002: 01	pushq	%rbx

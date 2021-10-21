@@ -1,6 +1,6 @@
 # `BloombergLP::bdlmt::MultiQueueThreadPool::pauseQueue(int)` - Assumed
 
-```x86asm
+```nasm
 0000000000434af0 <BloombergLP::bdlmt::MultiQueueThreadPool::pauseQueue(int)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

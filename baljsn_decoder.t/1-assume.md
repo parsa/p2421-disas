@@ -1,6 +1,6 @@
 # `BloombergLP::bdlde::Utf8CheckingInStreamBufWrapper::xsgetn(char*, long)` - Assumed
 
-```x86asm
+```nasm
 000000000048c330 <BloombergLP::bdlde::Utf8CheckingInStreamBufWrapper::xsgetn(char*, long)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

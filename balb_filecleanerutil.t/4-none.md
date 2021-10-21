@@ -1,6 +1,6 @@
 # `BloombergLP::bdlma::SequentialPool::SequentialPool(unsigned long, unsigned long, BloombergLP::bsls::BlockGrowth::Strategy, BloombergLP::bslma::Allocator*)` - Ignored
 
-```x86asm
+```nasm
 000000000040c480 <BloombergLP::bdlma::SequentialPool::SequentialPool(unsigned long, unsigned long, BloombergLP::bsls::BlockGrowth::Strategy, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 02	pushq	%r14
 0000000000000002: 01	pushq	%rbx

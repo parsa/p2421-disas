@@ -1,6 +1,6 @@
 # `BloombergLP::s_baltst::SequenceWithAnonymityChoice::makeSelection4()` - Ignored
 
-```x86asm
+```nasm
 00000000004d08a0 <BloombergLP::s_baltst::SequenceWithAnonymityChoice::makeSelection4()>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 03	movq	%rdi, %rbx

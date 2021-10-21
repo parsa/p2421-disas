@@ -1,6 +1,6 @@
 # `BloombergLP::balxml::MiniReader::advanceToNextNode()` - Ignored
 
-```x86asm
+```nasm
 000000000047ea00 <BloombergLP::balxml::MiniReader::advanceToNextNode()>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 03	movq	%rdi, %rbx

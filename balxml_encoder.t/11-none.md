@@ -1,6 +1,6 @@
 # `BloombergLP::bdlat_TypeName_Imp::xsdName(float const*, int)` - Ignored
 
-```x86asm
+```nasm
 00000000004eff30 <BloombergLP::bdlat_TypeName_Imp::xsdName(float const*, int)>:
 0000000000000000: 03	andl	$7, %esi
 0000000000000003: 02	xorl	%ecx, %ecx

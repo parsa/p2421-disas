@@ -1,6 +1,6 @@
 # `BloombergLP::balxml::EncodingStyle::toString(BloombergLP::balxml::EncodingStyle::Value)` - Ignored
 
-```x86asm
+```nasm
 00000000004e7240 <BloombergLP::balxml::EncodingStyle::toString(BloombergLP::balxml::EncodingStyle::Value)>:
 0000000000000000: 02	xorl	%ecx, %ecx
 0000000000000002: 03	cmpl	$1, %edi

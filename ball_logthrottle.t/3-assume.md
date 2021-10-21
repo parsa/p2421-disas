@@ -1,6 +1,6 @@
 # `Usage::radiationMonitorPrintfDaemon()` - Assumed
 
-```x86asm
+```nasm
 0000000000406dd0 <Usage::radiationMonitorPrintfDaemon()>:
 0000000000000000: 02	pushq	%r14
 0000000000000002: 01	pushq	%rbx

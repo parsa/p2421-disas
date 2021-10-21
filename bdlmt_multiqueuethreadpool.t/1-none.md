@@ -1,6 +1,6 @@
 # `BloombergLP::bdlmt::MultiQueueThreadPool_Queue::waitWhilePausing()` - Ignored
 
-```x86asm
+```nasm
 0000000000432f50 <BloombergLP::bdlmt::MultiQueueThreadPool_Queue::waitWhilePausing()>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

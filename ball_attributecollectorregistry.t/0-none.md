@@ -1,6 +1,6 @@
 # `u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)` - Ignored
 
-```x86asm
+```nasm
 00000000004057a0 <u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

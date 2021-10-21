@@ -1,6 +1,6 @@
 # `BloombergLP::bdlb::HashUtil::hash0(char const*, int, int)` - Assumed
 
-```x86asm
+```nasm
 00000000004245f0 <BloombergLP::bdlb::HashUtil::hash0(char const*, int, int)>:
 0000000000000000: 03	movl	%edx, %r8d
 0000000000000003: 02	testl	%esi, %esi

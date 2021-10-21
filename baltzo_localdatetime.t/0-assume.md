@@ -1,6 +1,6 @@
 # `BloombergLP::bslx::MarshallingUtil::getArrayUint40(unsigned long long*, char const*, int)` - Assumed
 
-```x86asm
+```nasm
 00000000004575d0 <BloombergLP::bslx::MarshallingUtil::getArrayUint40(unsigned long long*, char const*, int)>:
 0000000000000000: 02	testl	%edx, %edx
 0000000000000002: 06	je	0x457690 <BloombergLP::bslx::MarshallingUtil::getArrayUint40(unsigned long long*, char const*, int)+0xc0>

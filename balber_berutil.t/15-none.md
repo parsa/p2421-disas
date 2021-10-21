@@ -1,6 +1,6 @@
 # `(anonymous namespace)::u::Md5ChecksumAlgorithm::operator()(void const*, unsigned long)` - Ignored
 
-```x86asm
+```nasm
 0000000000464fd0 <(anonymous namespace)::u::Md5ChecksumAlgorithm::operator()(void const*, unsigned long)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

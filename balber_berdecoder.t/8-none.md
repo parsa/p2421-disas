@@ -1,6 +1,6 @@
 # `BloombergLP::s_baltst::MyChoiceWithDefaultValues::reset()` - Ignored
 
-```x86asm
+```nasm
 0000000000405280 <BloombergLP::s_baltst::MyChoiceWithDefaultValues::reset()>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 03	movq	%rdi, %rbx

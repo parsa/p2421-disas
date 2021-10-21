@@ -1,6 +1,6 @@
 # `(anonymous namespace)::u::Md5StateUtil::appendPaddingAndLength((anonymous namespace)::u::Md5State*)` - Ignored
 
-```x86asm
+```nasm
 000000000045d7d0 <(anonymous namespace)::u::Md5StateUtil::appendPaddingAndLength((anonymous namespace)::u::Md5State*)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

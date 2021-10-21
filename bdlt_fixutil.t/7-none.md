@@ -1,6 +1,6 @@
 # `BloombergLP::bdlt::FixUtil::parse(BloombergLP::bdlt::Datetime*, char const*, int)` - Ignored
 
-```x86asm
+```nasm
 000000000043c1f0 <BloombergLP::bdlt::FixUtil::parse(BloombergLP::bdlt::Datetime*, char const*, int)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

@@ -1,6 +1,6 @@
 # `BloombergLP::s_baltst::Colors::toString(BloombergLP::s_baltst::Colors::Value)` - Ignored
 
-```x86asm
+```nasm
 0000000000406870 <BloombergLP::s_baltst::Colors::toString(BloombergLP::s_baltst::Colors::Value)>:
 0000000000000000: 03	cmpl	$4, %edi
 0000000000000003: 02	ja	0x406881 <BloombergLP::s_baltst::Colors::toString(BloombergLP::s_baltst::Colors::Value)+0x11>

@@ -1,6 +1,6 @@
 # `BloombergLP::bdldfp::DecimalImpUtil::normalize(BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType64)` - Assumed
 
-```x86asm
+```nasm
 0000000000476940 <BloombergLP::bdldfp::DecimalImpUtil::normalize(BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType64)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r14

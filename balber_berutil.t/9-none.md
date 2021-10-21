@@ -1,6 +1,6 @@
 # `BloombergLP::bdldfp::DecimalImpUtil::classify(BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType32)` - Ignored
 
-```x86asm
+```nasm
 00000000004765f0 <BloombergLP::bdldfp::DecimalImpUtil::classify(BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType32)>:
 0000000000000000: 01	pushq	%rax
 0000000000000001: 05	callq	0x4857e0 <__bid32_class>

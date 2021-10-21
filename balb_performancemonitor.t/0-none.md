@@ -1,6 +1,6 @@
 # `BloombergLP::bdlma::ConcurrentPool::reserveCapacity(int)` - Ignored
 
-```x86asm
+```nasm
 0000000000422b70 <BloombergLP::bdlma::ConcurrentPool::reserveCapacity(int)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

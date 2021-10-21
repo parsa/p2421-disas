@@ -1,6 +1,6 @@
 # `BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::operator[](unsigned long) const` - Ignored
 
-```x86asm
+```nasm
 00000000004207d0 <BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::operator[](unsigned long) const>:
 0000000000000000: 03	movl	16(%rdi), %ecx
 0000000000000003: 02	xorl	%eax, %eax

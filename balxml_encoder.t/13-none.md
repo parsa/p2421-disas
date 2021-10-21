@@ -1,6 +1,6 @@
 # `int BloombergLP::balxml::Encoder_EncodeValue::executeImp<BloombergLP::s_baltst::MySequenceWithNillables>(BloombergLP::s_baltst::MySequenceWithNillables const&, int, BloombergLP::bdlat_TypeCategory::Sequence)` - Ignored
 
-```x86asm
+```nasm
 00000000004e03f0 <int BloombergLP::balxml::Encoder_EncodeValue::executeImp<BloombergLP::s_baltst::MySequenceWithNillables>(BloombergLP::s_baltst::MySequenceWithNillables const&, int, BloombergLP::bdlat_TypeCategory::Sequence)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

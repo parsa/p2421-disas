@@ -1,6 +1,6 @@
 # `BloombergLP::bdlat_TypeName_Imp::xsdName(double const*, int)` - Assumed
 
-```x86asm
+```nasm
 00000000004ef7e0 <BloombergLP::bdlat_TypeName_Imp::xsdName(double const*, int)>:
 0000000000000000: 04	testb	$7, %sil
 0000000000000004: 05	movl	$5637817, %ecx

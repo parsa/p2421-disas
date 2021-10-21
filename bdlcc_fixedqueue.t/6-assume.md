@@ -1,6 +1,6 @@
 # `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(char*, char*, BloombergLP::bdlcc::FixedQueue<char*>*, BloombergLP::bslmt::Barrier*, bool), BloombergLP::bdlf::Bind_BoundTuple5<char*, char*, BloombergLP::bdlcc::FixedQueue<char*>*, BloombergLP::bslmt::Barrier*, bool> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(char*, char*, BloombergLP::bdlcc::FixedQueue<char*>*, BloombergLP::bslmt::Barrier*, bool), BloombergLP::bdlf::Bind_BoundTuple5<char*, char*, BloombergLP::bdlcc::FixedQueue<char*>*, BloombergLP::bslmt::Barrier*, bool> > const&, BloombergLP::bslma::Allocator*)` - Assumed
 
-```x86asm
+```nasm
 000000000041c030 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(char*, char*, BloombergLP::bdlcc::FixedQueue<char*>*, BloombergLP::bslmt::Barrier*, bool), BloombergLP::bdlf::Bind_BoundTuple5<char*, char*, BloombergLP::bdlcc::FixedQueue<char*>*, BloombergLP::bslmt::Barrier*, bool> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(char*, char*, BloombergLP::bdlcc::FixedQueue<char*>*, BloombergLP::bslmt::Barrier*, bool), BloombergLP::bdlf::Bind_BoundTuple5<char*, char*, BloombergLP::bdlcc::FixedQueue<char*>*, BloombergLP::bslmt::Barrier*, bool> > const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

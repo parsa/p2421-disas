@@ -1,6 +1,6 @@
 # `BloombergLP::bdlmt::ThreadPool::enqueueJob(bsl::function<void ()>&&)` - Assumed
 
-```x86asm
+```nasm
 0000000000437ce0 <BloombergLP::bdlmt::ThreadPool::enqueueJob(bsl::function<void ()>&&)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

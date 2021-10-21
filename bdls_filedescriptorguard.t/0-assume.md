@@ -1,6 +1,6 @@
 # `BloombergLP::bdls::FileDescriptorGuard::closeAndRelease()` - Assumed
 
-```x86asm
+```nasm
 0000000000406ab0 <BloombergLP::bdls::FileDescriptorGuard::closeAndRelease()>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 01	pushq	%rbx

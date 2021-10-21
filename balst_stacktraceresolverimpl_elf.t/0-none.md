@@ -1,6 +1,6 @@
 # `stuffRandomAddresses(BloombergLP::balst::StackTrace*)` - Ignored
 
-```x86asm
+```nasm
 0000000000404d90 <stuffRandomAddresses(BloombergLP::balst::StackTrace*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

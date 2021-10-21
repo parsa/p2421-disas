@@ -1,6 +1,6 @@
 # `BloombergLP::balb::Choice5::reset()` - Assumed
 
-```x86asm
+```nasm
 0000000000406010 <BloombergLP::balb::Choice5::reset()>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

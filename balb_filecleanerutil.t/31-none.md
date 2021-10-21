@@ -1,6 +1,6 @@
 # `BloombergLP::bdls::PathUtil::popLeaf(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >*, int)` - Ignored
 
-```x86asm
+```nasm
 0000000000412310 <BloombergLP::bdls::PathUtil::popLeaf(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >*, int)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

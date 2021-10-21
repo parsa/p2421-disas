@@ -1,6 +1,6 @@
 # `int BloombergLP::balber::BerDecoder_Node::decodeChoice<BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice>(BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice*)` - Assumed
 
-```x86asm
+```nasm
 000000000044b450 <int BloombergLP::balber::BerDecoder_Node::decodeChoice<BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice>(BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

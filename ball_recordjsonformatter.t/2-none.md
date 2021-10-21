@@ -1,6 +1,6 @@
 # `BloombergLP::ball::(anonymous namespace)::AttributeFormatter::parse(BloombergLP::bdld::DatumMapRef)` - Ignored
 
-```x86asm
+```nasm
 000000000041c3e0 <BloombergLP::ball::(anonymous namespace)::AttributeFormatter::parse(BloombergLP::bdld::DatumMapRef)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

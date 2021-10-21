@@ -1,6 +1,6 @@
 # `BloombergLP::balm::PublicationType::toString(BloombergLP::balm::PublicationType::Value)` - Ignored
 
-```x86asm
+```nasm
 00000000004095a0 <BloombergLP::balm::PublicationType::toString(BloombergLP::balm::PublicationType::Value)>:
 0000000000000000: 03	cmpl	$7, %edi
 0000000000000003: 02	ja	0x4095b1 <BloombergLP::balm::PublicationType::toString(BloombergLP::balm::PublicationType::Value)+0x11>

@@ -1,6 +1,6 @@
 # `g(char const*)` - Ignored
 
-```x86asm
+```nasm
 0000000000432590 <g(char const*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

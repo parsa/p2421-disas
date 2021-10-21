@@ -1,6 +1,6 @@
 # `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<MULTIPRIORITYTHREADPOOL_CASE_10::ProducerThread>(unsigned long*, MULTIPRIORITYTHREADPOOL_CASE_10::ProducerThread const&, BloombergLP::bslma::Allocator*)` - Ignored
 
-```x86asm
+```nasm
 000000000040ca90 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<MULTIPRIORITYTHREADPOOL_CASE_10::ProducerThread>(unsigned long*, MULTIPRIORITYTHREADPOOL_CASE_10::ProducerThread const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

@@ -1,6 +1,6 @@
 # `BloombergLP::s_baltst::MyChoice::operator=(BloombergLP::s_baltst::MyChoice const&)` - Ignored
 
-```x86asm
+```nasm
 000000000045ad90 <BloombergLP::s_baltst::MyChoice::operator=(BloombergLP::s_baltst::MyChoice const&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 01	pushq	%rbx

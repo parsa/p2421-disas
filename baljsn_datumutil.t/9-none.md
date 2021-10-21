@@ -1,6 +1,6 @@
 # `BloombergLP::bdlb::BitStringUtil::areEqual(unsigned long const*, unsigned long, unsigned long const*, unsigned long, unsigned long)` - Ignored
 
-```x86asm
+```nasm
 0000000000446930 <BloombergLP::bdlb::BitStringUtil::areEqual(unsigned long const*, unsigned long, unsigned long const*, unsigned long, unsigned long)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

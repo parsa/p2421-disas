@@ -1,6 +1,6 @@
 # `BloombergLP::s_baltst::MyChoice::makeSelection(int)` - Assumed
 
-```x86asm
+```nasm
 000000000045b240 <BloombergLP::s_baltst::MyChoice::makeSelection(int)>:
 0000000000000000: 02	pushq	%r14
 0000000000000002: 01	pushq	%rbx

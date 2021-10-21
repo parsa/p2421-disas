@@ -1,6 +1,6 @@
 # `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<EnterPostSleepAndWaitJob>(unsigned long*, EnterPostSleepAndWaitJob const&, BloombergLP::bslma::Allocator*)` - Ignored
 
-```x86asm
+```nasm
 0000000000405dd0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<EnterPostSleepAndWaitJob>(unsigned long*, EnterPostSleepAndWaitJob const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

@@ -1,6 +1,6 @@
 # `isState(BloombergLP::bdlde::Base64Encoder*, int)` - Ignored
 
-```x86asm
+```nasm
 0000000000405f80 <isState(BloombergLP::bdlde::Base64Encoder*, int)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

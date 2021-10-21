@@ -1,6 +1,6 @@
 # `foo(int*)` - Assumed
 
-```x86asm
+```nasm
 000000000046ebf0 <foo(int*)>:
 0000000000000000: 01	retq	
 0000000000000001: 10	nopw	%cs:(%rax,%rax)

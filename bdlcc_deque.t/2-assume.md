@@ -1,6 +1,6 @@
 # `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<RANDOM_PUSH_POP_TEST::PusherThread>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, RANDOM_PUSH_POP_TEST::PusherThread const&, BloombergLP::bslma::Allocator*)` - Assumed
 
-```x86asm
+```nasm
 00000000004adf90 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<RANDOM_PUSH_POP_TEST::PusherThread>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, RANDOM_PUSH_POP_TEST::PusherThread const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

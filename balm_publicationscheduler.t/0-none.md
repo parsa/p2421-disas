@@ -1,6 +1,6 @@
 # `Action::typeString(Action::Type)` - Ignored
 
-```x86asm
+```nasm
 0000000000406510 <Action::typeString(Action::Type)>:
 0000000000000000: 03	cmpl	$1, %edi
 0000000000000003: 05	movl	$4601127, %eax

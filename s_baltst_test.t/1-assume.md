@@ -1,6 +1,6 @@
 # `BloombergLP::s_baltst::Response::selectionName() const` - Assumed
 
-```x86asm
+```nasm
 00000000004366d0 <BloombergLP::s_baltst::Response::selectionName() const>:
 0000000000000000: 06	movl	872(%rdi), %eax
 0000000000000006: 02	testl	%eax, %eax

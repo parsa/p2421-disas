@@ -1,6 +1,6 @@
 # `MyCalendarLoader::load(BloombergLP::bdlt::PackedCalendar*, char const*)` - Assumed
 
-```x86asm
+```nasm
 00000000004026a0 <MyCalendarLoader::load(BloombergLP::bdlt::PackedCalendar*, char const*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r14

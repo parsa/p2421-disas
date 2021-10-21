@@ -1,6 +1,6 @@
 # `BloombergLP::s_baltst::Sequence1::~Sequence1()` - Assumed
 
-```x86asm
+```nasm
 00000000004bb1a0 <BloombergLP::s_baltst::Sequence1::~Sequence1()>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

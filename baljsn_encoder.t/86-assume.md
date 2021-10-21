@@ -1,6 +1,6 @@
 # `BloombergLP::baljsn::Encoder_EncodeImplUtil::encodeCharArray(BloombergLP::baljsn::Formatter*, bsl::vector<char, bsl::allocator<char> > const&, BloombergLP::baljsn::EncoderOptions const&)` - Assumed
 
-```x86asm
+```nasm
 0000000000484a20 <BloombergLP::baljsn::Encoder_EncodeImplUtil::encodeCharArray(BloombergLP::baljsn::Formatter*, bsl::vector<char, bsl::allocator<char> > const&, BloombergLP::baljsn::EncoderOptions const&)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

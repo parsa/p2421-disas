@@ -1,6 +1,6 @@
 # `BloombergLP::balb::Choice4::makeSelection1()` - Assumed
 
-```x86asm
+```nasm
 0000000000404be0 <BloombergLP::balb::Choice4::makeSelection1()>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

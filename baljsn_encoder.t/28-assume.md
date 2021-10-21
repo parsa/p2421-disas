@@ -1,6 +1,6 @@
 # `BloombergLP::s_baltst::SequenceWithAnonymityChoice2::selectionName() const` - Assumed
 
-```x86asm
+```nasm
 00000000004d2010 <BloombergLP::s_baltst::SequenceWithAnonymityChoice2::selectionName() const>:
 0000000000000000: 03	movl	8(%rdi), %eax
 0000000000000003: 02	testl	%eax, %eax

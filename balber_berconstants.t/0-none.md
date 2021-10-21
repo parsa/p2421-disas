@@ -1,6 +1,6 @@
 # `BloombergLP::balber::operator<<(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::balber::BerConstants::TagType)` - Ignored
 
-```x86asm
+```nasm
 0000000000406240 <BloombergLP::balber::operator<<(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::balber::BerConstants::TagType)>:
 0000000000000000: 03	cmpl	$32, %esi
 0000000000000003: 02	je	0x406258 <BloombergLP::balber::operator<<(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::balber::BerConstants::TagType)+0x18>

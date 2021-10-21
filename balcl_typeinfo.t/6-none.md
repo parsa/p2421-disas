@@ -1,6 +1,6 @@
 # `(anonymous namespace)::u::setConstraint(BloombergLP::balcl::TypeInfo*, BloombergLP::balcl::OptionType::Enum, void const*)` - Ignored
 
-```x86asm
+```nasm
 0000000000413310 <(anonymous namespace)::u::setConstraint(BloombergLP::balcl::TypeInfo*, BloombergLP::balcl::OptionType::Enum, void const*)>:
 0000000000000000: 03	cmpl	$17, %esi
 0000000000000003: 02	ja	0x41335e <(anonymous namespace)::u::setConstraint(BloombergLP::balcl::TypeInfo*, BloombergLP::balcl::OptionType::Enum, void const*)+0x4e>

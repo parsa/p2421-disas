@@ -1,6 +1,6 @@
 # `BloombergLP::s_baltst::MyEnumeration::toString(BloombergLP::s_baltst::MyEnumeration::Value)` - Assumed
 
-```x86asm
+```nasm
 000000000045b690 <BloombergLP::s_baltst::MyEnumeration::toString(BloombergLP::s_baltst::MyEnumeration::Value)>:
 0000000000000000: 02	testl	%edi, %edi
 0000000000000002: 05	movl	$4819462, %ecx

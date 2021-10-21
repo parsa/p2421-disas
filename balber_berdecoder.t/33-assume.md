@@ -1,6 +1,6 @@
 # `BloombergLP::balber::BerUtil_DatetimeImpUtil::putIso8601DatetimeTzValue(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, BloombergLP::bdlt::DatetimeTz const&, BloombergLP::balber::BerEncoderOptions const*)` - Assumed
 
-```x86asm
+```nasm
 00000000004580b0 <BloombergLP::balber::BerUtil_DatetimeImpUtil::putIso8601DatetimeTzValue(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, BloombergLP::bdlt::DatetimeTz const&, BloombergLP::balber::BerEncoderOptions const*)>:
 0000000000000000: 02	pushq	%r14
 0000000000000002: 01	pushq	%rbx

@@ -1,6 +1,6 @@
 # `BloombergLP::bbldc::CalendarDayCountUtil::yearsDiff(BloombergLP::bdlt::Date const&, BloombergLP::bdlt::Date const&, BloombergLP::bdlt::Calendar const&, BloombergLP::bbldc::DayCountConvention::Enum)` - Ignored
 
-```x86asm
+```nasm
 0000000000404b00 <BloombergLP::bbldc::CalendarDayCountUtil::yearsDiff(BloombergLP::bdlt::Date const&, BloombergLP::bdlt::Date const&, BloombergLP::bdlt::Calendar const&, BloombergLP::bbldc::DayCountConvention::Enum)>:
 0000000000000000: 04	xorpd	%xmm0, %xmm0
 0000000000000004: 03	cmpl	$10, %ecx

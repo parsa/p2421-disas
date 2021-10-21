@@ -1,6 +1,6 @@
 # `char const* ggParseNode<IntNode, void (*)(IntNode*, int)>(IntNode**, char const*, void (* const&)(IntNode*, int))` - Ignored
 
-```x86asm
+```nasm
 0000000000487ae0 <char const* ggParseNode<IntNode, void (*)(IntNode*, int)>(IntNode**, char const*, void (* const&)(IntNode*, int))>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

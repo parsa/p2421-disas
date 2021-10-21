@@ -1,6 +1,6 @@
 # `BloombergLP::bdlb::String::upperCaseCmp(char const*, char const*, int)` - Ignored
 
-```x86asm
+```nasm
 000000000040d810 <BloombergLP::bdlb::String::upperCaseCmp(char const*, char const*, int)>:
 0000000000000000: 02	testl	%edx, %edx
 0000000000000002: 02	jle	0x40d844 <BloombergLP::bdlb::String::upperCaseCmp(char const*, char const*, int)+0x34>

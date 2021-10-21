@@ -1,6 +1,6 @@
 # `BloombergLP::bdlde::Utf8Util::advanceIfValid(int*, char const**, char const*, unsigned long, long)` - Ignored
 
-```x86asm
+```nasm
 000000000041daf0 <BloombergLP::bdlde::Utf8Util::advanceIfValid(int*, char const**, char const*, unsigned long, long)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r14

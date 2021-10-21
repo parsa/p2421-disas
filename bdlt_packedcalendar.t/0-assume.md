@@ -1,6 +1,6 @@
 # `loadWeekendDaysTransition(char const**, BloombergLP::bdlt::PackedCalendar*, BloombergLP::bdlt::Date const&)` - Assumed
 
-```x86asm
+```nasm
 0000000000405140 <loadWeekendDaysTransition(char const**, BloombergLP::bdlt::PackedCalendar*, BloombergLP::bdlt::Date const&)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

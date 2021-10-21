@@ -1,6 +1,6 @@
 # `BloombergLP::test::MixedSequence::MixedSequence(BloombergLP::bslma::Allocator*)` - Assumed
 
-```x86asm
+```nasm
 000000000040ec50 <BloombergLP::test::MixedSequence::MixedSequence(BloombergLP::bslma::Allocator*)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

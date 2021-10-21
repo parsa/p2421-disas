@@ -1,6 +1,6 @@
 # `BloombergLP::balber::BerUtil_TimeImpUtil::putCompactBinaryTimeTzValue(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, BloombergLP::bdlt::TimeTz const&, BloombergLP::balber::BerEncoderOptions const*)` - Assumed
 
-```x86asm
+```nasm
 00000000004565b0 <BloombergLP::balber::BerUtil_TimeImpUtil::putCompactBinaryTimeTzValue(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, BloombergLP::bdlt::TimeTz const&, BloombergLP::balber::BerEncoderOptions const*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

@@ -1,6 +1,6 @@
 # `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<MULTIPRIORITYQUEUE_TEST_CASE_9::ConsumerThread>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, MULTIPRIORITYQUEUE_TEST_CASE_9::ConsumerThread const&, BloombergLP::bslma::Allocator*)` - Assumed
 
-```x86asm
+```nasm
 000000000042ea20 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<MULTIPRIORITYQUEUE_TEST_CASE_9::ConsumerThread>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, MULTIPRIORITYQUEUE_TEST_CASE_9::ConsumerThread const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

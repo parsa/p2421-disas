@@ -1,6 +1,6 @@
 # `BloombergLP::bdlt::ProlepticDateImpUtil::numLeapYears(int, int)` - Assumed
 
-```x86asm
+```nasm
 000000000046a6f0 <BloombergLP::bdlt::ProlepticDateImpUtil::numLeapYears(int, int)>:
 0000000000000000: 03	movzwl	%si, %eax
 0000000000000003: 03	shrl	$2, %esi

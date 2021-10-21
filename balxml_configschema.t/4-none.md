@@ -1,6 +1,6 @@
 # `BloombergLP::s_baltst::BasicSchemaEnumerationElementChoice::selectionName() const` - Ignored
 
-```x86asm
+```nasm
 0000000000430340 <BloombergLP::s_baltst::BasicSchemaEnumerationElementChoice::selectionName() const>:
 0000000000000000: 04	cmpl	$0, 64(%rdi)
 0000000000000004: 05	movl	$4859006, %ecx

@@ -1,6 +1,6 @@
 # `find1AtMaxOracle(unsigned long)` - Ignored
 
-```x86asm
+```nasm
 00000000004018e0 <find1AtMaxOracle(unsigned long)>:
 0000000000000000: 05	movl	$61, %eax
 0000000000000005: 10	nopw	%cs:(%rax,%rax)

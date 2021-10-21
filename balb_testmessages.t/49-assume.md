@@ -1,6 +1,6 @@
 # `BloombergLP::balb::Choice3::makeSelection4(BloombergLP::balb::CustomInt const&)` - Assumed
 
-```x86asm
+```nasm
 000000000040a660 <BloombergLP::balb::Choice3::makeSelection4(BloombergLP::balb::CustomInt const&)>:
 0000000000000000: 02	pushq	%r14
 0000000000000002: 01	pushq	%rbx

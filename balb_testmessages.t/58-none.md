@@ -1,6 +1,6 @@
 # `BloombergLP::balb::Enumerated::toString(BloombergLP::balb::Enumerated::Value)` - Ignored
 
-```x86asm
+```nasm
 0000000000404f90 <BloombergLP::balb::Enumerated::toString(BloombergLP::balb::Enumerated::Value)>:
 0000000000000000: 03	cmpl	$2, %edi
 0000000000000003: 02	ja	0x404fa1 <BloombergLP::balb::Enumerated::toString(BloombergLP::balb::Enumerated::Value)+0x11>

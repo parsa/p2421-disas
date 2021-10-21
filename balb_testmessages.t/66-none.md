@@ -1,6 +1,6 @@
 # `bsl::vector<BloombergLP::balb::Choice1, bsl::allocator<BloombergLP::balb::Choice1> >::~vector()` - Ignored
 
-```x86asm
+```nasm
 0000000000414be0 <bsl::vector<BloombergLP::balb::Choice1, bsl::allocator<BloombergLP::balb::Choice1> >::~vector()>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

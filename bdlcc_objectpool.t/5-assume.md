@@ -1,6 +1,6 @@
 # `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bsls::AtomicInt*, int, void (*)(OBJECTPOOL_TEST_USAGE_EXAMPLE::Query*)), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bsls::AtomicInt*, int, void (*)(OBJECTPOOL_TEST_USAGE_EXAMPLE::Query*)> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bsls::AtomicInt*, int, void (*)(OBJECTPOOL_TEST_USAGE_EXAMPLE::Query*)), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bsls::AtomicInt*, int, void (*)(OBJECTPOOL_TEST_USAGE_EXAMPLE::Query*)> > const&, BloombergLP::bslma::Allocator*)` - Assumed
 
-```x86asm
+```nasm
 0000000000414730 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bsls::AtomicInt*, int, void (*)(OBJECTPOOL_TEST_USAGE_EXAMPLE::Query*)), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bsls::AtomicInt*, int, void (*)(OBJECTPOOL_TEST_USAGE_EXAMPLE::Query*)> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bsls::AtomicInt*, int, void (*)(OBJECTPOOL_TEST_USAGE_EXAMPLE::Query*)), BloombergLP::bdlf::Bind_BoundTuple3<BloombergLP::bsls::AtomicInt*, int, void (*)(OBJECTPOOL_TEST_USAGE_EXAMPLE::Query*)> > const&, BloombergLP::bslma::Allocator*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

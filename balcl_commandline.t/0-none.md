@@ -1,6 +1,6 @@
 # `BloombergLP::bdlb::Tokenizer::begin() const` - Ignored
 
-```x86asm
+```nasm
 0000000000473b20 <BloombergLP::bdlb::Tokenizer::begin() const>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 03	movq	%rsi, %rcx

@@ -1,6 +1,6 @@
 # `BloombergLP::ball::UserFieldValue::type() const` - Ignored
 
-```x86asm
+```nasm
 0000000000448720 <BloombergLP::ball::UserFieldValue::type() const>:
 0000000000000000: 03	movl	48(%rdi), %ecx
 0000000000000003: 03	cmpl	$6, %ecx

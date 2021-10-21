@@ -1,6 +1,6 @@
 # `Case_Allow_None::threadJobInit()` - Ignored
 
-```x86asm
+```nasm
 0000000000405060 <Case_Allow_None::threadJobInit()>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

@@ -1,6 +1,6 @@
 # `(anonymous namespace)::operator<<(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, (anonymous namespace)::ScalarData const&)` - Ignored
 
-```x86asm
+```nasm
 000000000041e420 <(anonymous namespace)::operator<<(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, (anonymous namespace)::ScalarData const&)>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 04	subq	$16, %rsp

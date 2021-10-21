@@ -1,6 +1,6 @@
 # `BloombergLP::balxml::Decoder_ParseObject::executeImp(bsl::vector<char, bsl::allocator<char> >*, int, BloombergLP::bdlat_TypeCategory::Array)` - Ignored
 
-```x86asm
+```nasm
 0000000000478890 <BloombergLP::balxml::Decoder_ParseObject::executeImp(bsl::vector<char, bsl::allocator<char> >*, int, BloombergLP::bdlat_TypeCategory::Array)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

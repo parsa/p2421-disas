@@ -1,6 +1,6 @@
 # `BloombergLP::s_baltst::MyChoiceWithDefaultValues::makeSelection2(BloombergLP::s_baltst::MyEnumeration::Value)` - Ignored
 
-```x86asm
+```nasm
 0000000000405230 <BloombergLP::s_baltst::MyChoiceWithDefaultValues::makeSelection2(BloombergLP::s_baltst::MyEnumeration::Value)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 01	pushq	%rbx

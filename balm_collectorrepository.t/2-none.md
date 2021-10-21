@@ -1,6 +1,6 @@
 # `BloombergLP::balm::MetricRegistry::setCurrentUserData(char const*, int, void const*)` - Ignored
 
-```x86asm
+```nasm
 000000000041ba20 <BloombergLP::balm::MetricRegistry::setCurrentUserData(char const*, int, void const*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

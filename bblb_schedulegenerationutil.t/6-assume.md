@@ -1,6 +1,6 @@
 # `BloombergLP::bdlt::PackedCalendar::addWeekendDaysTransition(BloombergLP::bdlt::Date const&, BloombergLP::bdlt::DayOfWeekSet const&)` - Assumed
 
-```x86asm
+```nasm
 00000000004106b0 <BloombergLP::bdlt::PackedCalendar::addWeekendDaysTransition(BloombergLP::bdlt::Date const&, BloombergLP::bdlt::DayOfWeekSet const&)>:
 0000000000000000: 01	pushq	%rax
 0000000000000001: 03	movl	(%rsi), %r10d

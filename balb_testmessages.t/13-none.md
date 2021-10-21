@@ -1,6 +1,6 @@
 # `BloombergLP::balb::SequenceWithAnonymityChoice1::operator=(BloombergLP::balb::SequenceWithAnonymityChoice1 const&)` - Ignored
 
-```x86asm
+```nasm
 0000000000405120 <BloombergLP::balb::SequenceWithAnonymityChoice1::operator=(BloombergLP::balb::SequenceWithAnonymityChoice1 const&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 01	pushq	%rbx

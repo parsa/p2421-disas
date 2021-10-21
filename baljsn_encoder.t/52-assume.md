@@ -1,6 +1,6 @@
 # `int BloombergLP::s_baltst::SequenceWithAnonymityChoice1::manipulateSelection<BloombergLP::balxml::Decoder_ParseObject>(BloombergLP::balxml::Decoder_ParseObject&)` - Assumed
 
-```x86asm
+```nasm
 0000000000460f20 <int BloombergLP::s_baltst::SequenceWithAnonymityChoice1::manipulateSelection<BloombergLP::balxml::Decoder_ParseObject>(BloombergLP::balxml::Decoder_ParseObject&)>:
 0000000000000000: 02	pushq	%r14
 0000000000000002: 01	pushq	%rbx

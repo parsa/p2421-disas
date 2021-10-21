@@ -1,6 +1,6 @@
 # `foo(int*)` - Ignored
 
-```x86asm
+```nasm
 000000000046efa0 <foo(int*)>:
 0000000000000000: 03	testq	%rdi, %rdi
 0000000000000003: 02	je	0x46efa6 <foo(int*)+0x6>

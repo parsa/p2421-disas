@@ -1,6 +1,6 @@
 # `BloombergLP::bslx::GenericInStream<bsl::basic_stringbuf<char, std::__1::char_traits<char>, bsl::allocator<char> > >::getString(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >&)` - Assumed
 
-```x86asm
+```nasm
 0000000000434250 <BloombergLP::bslx::GenericInStream<bsl::basic_stringbuf<char, std::__1::char_traits<char>, bsl::allocator<char> > >::getString(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

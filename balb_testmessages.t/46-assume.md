@@ -1,6 +1,6 @@
 # `bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::~vector()` - Assumed
 
-```x86asm
+```nasm
 00000000004152a0 <bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::~vector()>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

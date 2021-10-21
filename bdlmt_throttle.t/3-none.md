@@ -1,6 +1,6 @@
 # `Case_Allow_All::threadJobIf()` - Ignored
 
-```x86asm
+```nasm
 0000000000405320 <Case_Allow_All::threadJobIf()>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r14

@@ -1,6 +1,6 @@
 # `BloombergLP::bdlb::String::strrstrCaseless(char const*, int, char const*, int)` - Ignored
 
-```x86asm
+```nasm
 000000000040d3d0 <BloombergLP::bdlb::String::strrstrCaseless(char const*, int, char const*, int)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

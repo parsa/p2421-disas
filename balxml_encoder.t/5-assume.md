@@ -1,6 +1,6 @@
 # `BloombergLP::bdlat_TypeName_Imp::xsdName(BloombergLP::bdldfp::Decimal_Type64 const*, int)` - Assumed
 
-```x86asm
+```nasm
 00000000004ef800 <BloombergLP::bdlat_TypeName_Imp::xsdName(BloombergLP::bdldfp::Decimal_Type64 const*, int)>:
 0000000000000000: 05	movl	$5637840, %eax
 0000000000000005: 01	retq	

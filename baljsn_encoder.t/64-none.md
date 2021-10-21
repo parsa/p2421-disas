@@ -1,6 +1,6 @@
 # `BloombergLP::s_baltst::SequenceWithAnonymityChoice::makeSelection3(BloombergLP::s_baltst::CustomString const&)` - Ignored
 
-```x86asm
+```nasm
 00000000004cff00 <BloombergLP::s_baltst::SequenceWithAnonymityChoice::makeSelection3(BloombergLP::s_baltst::CustomString const&)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

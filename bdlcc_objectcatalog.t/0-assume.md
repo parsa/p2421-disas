@@ -1,6 +1,6 @@
 # `verifyStateThread` - Assumed
 
-```x86asm
+```nasm
 00000000004062b0 <verifyStateThread>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 05	movl	$7524736, %edi

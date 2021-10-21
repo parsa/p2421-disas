@@ -1,6 +1,6 @@
 # `(anonymous namespace)::u::checkPrint(BloombergLP::balcl::OptionValue const&)` - Assumed
 
-```x86asm
+```nasm
 000000000042d510 <(anonymous namespace)::u::checkPrint(BloombergLP::balcl::OptionValue const&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

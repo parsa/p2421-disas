@@ -1,6 +1,6 @@
 # `void testCopyConstructWithIterators<FnPtrConvertibleType>(bool, bool, bool)` - Ignored
 
-```x86asm
+```nasm
 00000000004cc8c0 <void testCopyConstructWithIterators<FnPtrConvertibleType>(bool, bool, bool)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

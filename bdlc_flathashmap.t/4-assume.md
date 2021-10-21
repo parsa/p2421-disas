@@ -1,6 +1,6 @@
 # `BloombergLP::bdlc::FlatHashTable<int, bsl::pair<int, int>, BloombergLP::bdlc::FlatHashMap_EntryUtil<int, int, bsl::pair<int, int> >, SeedIsHash<int>, EqualAndState<int> >::indexOfKey(bool*, int const&, unsigned long)` - Assumed
 
-```x86asm
+```nasm
 0000000000454190 <BloombergLP::bdlc::FlatHashTable<int, bsl::pair<int, int>, BloombergLP::bdlc::FlatHashMap_EntryUtil<int, int, bsl::pair<int, int> >, SeedIsHash<int>, EqualAndState<int> >::indexOfKey(bool*, int const&, unsigned long)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

@@ -1,6 +1,6 @@
 # `BloombergLP::balb::Sequence1::~Sequence1()` - Ignored
 
-```x86asm
+```nasm
 000000000040f900 <BloombergLP::balb::Sequence1::~Sequence1()>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

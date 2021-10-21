@@ -1,6 +1,6 @@
 # `BloombergLP::balb::SequenceWithAnonymityChoice::makeSelection1(BloombergLP::balb::Sequence6 const&)` - Assumed
 
-```x86asm
+```nasm
 000000000040b160 <BloombergLP::balb::SequenceWithAnonymityChoice::makeSelection1(BloombergLP::balb::Sequence6 const&)>:
 0000000000000000: 02	pushq	%r14
 0000000000000002: 01	pushq	%rbx

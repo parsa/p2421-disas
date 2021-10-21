@@ -1,6 +1,6 @@
 # `MyContainer<int>::reserve(unsigned long)` - Ignored
 
-```x86asm
+```nasm
 0000000000411c80 <MyContainer<int>::reserve(unsigned long)>:
 0000000000000000: 02	pushq	%r15
 0000000000000002: 02	pushq	%r14

@@ -1,6 +1,6 @@
 # `int BloombergLP::baljsn::SimpleFormatter::addValue<BloombergLP::bdlt::DateTz>(BloombergLP::bdlt::DateTz const&)` - Ignored
 
-```x86asm
+```nasm
 000000000042a820 <int BloombergLP::baljsn::SimpleFormatter::addValue<BloombergLP::bdlt::DateTz>(BloombergLP::bdlt::DateTz const&)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

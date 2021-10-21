@@ -1,6 +1,6 @@
 # `BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)` - Assumed
 
-```x86asm
+```nasm
 000000000044ebf0 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, SeedIsHash<int>, bsl::equal_to<int> >::rehashRaw(unsigned long)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

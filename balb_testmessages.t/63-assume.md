@@ -1,6 +1,6 @@
 # `void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::balb::Choice3, BloombergLP::balb::Choice3 const*, bsl::allocator<BloombergLP::balb::Choice3> >(BloombergLP::balb::Choice3*, BloombergLP::balb::Choice3*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, unsigned long, bsl::allocator<BloombergLP::balb::Choice3>, BloombergLP::bslmf::MetaInt<1>*)` - Assumed
 
-```x86asm
+```nasm
 000000000041bc10 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::balb::Choice3, BloombergLP::balb::Choice3 const*, bsl::allocator<BloombergLP::balb::Choice3> >(BloombergLP::balb::Choice3*, BloombergLP::balb::Choice3*, BloombergLP::balb::Choice3 const*, BloombergLP::balb::Choice3 const*, unsigned long, bsl::allocator<BloombergLP::balb::Choice3>, BloombergLP::bslmf::MetaInt<1>*)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

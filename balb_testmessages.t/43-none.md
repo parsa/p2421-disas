@@ -1,6 +1,6 @@
 # `BloombergLP::balb::Choice3::makeSelection2(unsigned char)` - Ignored
 
-```x86asm
+```nasm
 000000000040a480 <BloombergLP::balb::Choice3::makeSelection2(unsigned char)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 01	pushq	%rbx

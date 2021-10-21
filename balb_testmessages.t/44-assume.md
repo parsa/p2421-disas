@@ -1,6 +1,6 @@
 # `BloombergLP::balb::SequenceWithAnonymityChoice::makeSelection2(unsigned char)` - Assumed
 
-```x86asm
+```nasm
 000000000040b1e0 <BloombergLP::balb::SequenceWithAnonymityChoice::makeSelection2(unsigned char)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 01	pushq	%rbx

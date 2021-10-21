@@ -1,6 +1,6 @@
 # `gggDispatch(BloombergLP::bdlc::BitArray*, char const*, bool)` - Ignored
 
-```x86asm
+```nasm
 000000000044ee90 <gggDispatch(BloombergLP::bdlc::BitArray*, char const*, bool)>:
 0000000000000000: 01	pushq	%rbp
 0000000000000001: 02	pushq	%r15

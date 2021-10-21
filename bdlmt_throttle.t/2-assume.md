@@ -1,6 +1,6 @@
 # `Case_Usage::reportError(std::__1::basic_ostream<char, std::__1::char_traits<char> >&)` - Assumed
 
-```x86asm
+```nasm
 0000000000404dc0 <Case_Usage::reportError(std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>:
 0000000000000000: 01	pushq	%rbx
 0000000000000001: 04	subq	$16, %rsp
