@@ -1,3 +1,7 @@
+# Ignored vs assumed in `ball_attributecollectorregistry.t`
+
+<script src="../sorttable.js"></script>
 |   Index | Function                                                                                                                                                             |   Difference in number of lines |   Function size difference in bytes | Disassembly                                                             |   Number of lines in assumed build | Number of bytes in assumed build   |   Number of lines in ignored build | Number of bytes in ignored build   |
 |--------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------:|------------------------------------:|:------------------------------------------------------------------------|-----------------------------------:|:-----------------------------------|-----------------------------------:|:-----------------------------------|
 |       0 | `u::collectingVisitor(bsl::vector<BloombergLP::ball::ManagedAttribute, bsl::allocator<BloombergLP::ball::ManagedAttribute> >*, BloombergLP::ball::Attribute const&)` |                             -33 |                                -128 | [Assumed](0.assume.s.txt), [Ignored](0.none.s.txt), [Diff](0.diff.html) |                                288 | 4,216,736                          |                                416 | 4,216,736                          |
+{: .sortable }

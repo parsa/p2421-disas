@@ -1,4 +1,8 @@
+# Ignored vs assumed in `bdlde_base64encoder.t`
+
+<script src="../sorttable.js"></script>
 |   Index | Function                                            |   Difference in number of lines |   Function size difference in bytes | Disassembly                                                             | Number of lines in assumed build   | Number of bytes in assumed build   | Number of lines in ignored build   | Number of bytes in ignored build   |
 |--------:|:----------------------------------------------------|--------------------------------:|------------------------------------:|:------------------------------------------------------------------------|:-----------------------------------|:-----------------------------------|:-----------------------------------|:-----------------------------------|
 |       1 | `isState(BloombergLP::bdlde::Base64Encoder*, int)`  |                              -1 |                                  16 | [Assumed](1.assume.s.txt), [Ignored](1.none.s.txt), [Diff](1.diff.html) | 7,424                              | 4,218,768                          | 7,408                              | 4,218,752                          |
 |       0 | `setState(BloombergLP::bdlde::Base64Encoder*, int)` |                               1 |                                  16 | [Assumed](0.assume.s.txt), [Ignored](0.none.s.txt), [Diff](0.diff.html) | 3,680                              | 4,215,088                          | 3,664                              | 4,215,088                          |
+{: .sortable }
