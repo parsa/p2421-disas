@@ -1,4 +1,4 @@
-# 8.assume.s
+# `BloombergLP::s_baltst::MyChoiceWithDefaultValues::reset()` - Assumed
 
 ```x86asm
 00000000004052c0 <BloombergLP::s_baltst::MyChoiceWithDefaultValues::reset()>:

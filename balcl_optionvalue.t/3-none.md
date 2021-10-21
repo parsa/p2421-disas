@@ -1,4 +1,4 @@
-# 3.none.s
+# `(anonymous namespace)::u::checkPrint(BloombergLP::balcl::OptionValue const&)` - Ignored
 
 ```x86asm
 000000000042d520 <(anonymous namespace)::u::checkPrint(BloombergLP::balcl::OptionValue const&)>:

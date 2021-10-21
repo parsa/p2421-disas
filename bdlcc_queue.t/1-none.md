@@ -1,4 +1,4 @@
-# 1.none.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<QUEUE_TEST_CASE_MINUS_1::Producer>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, QUEUE_TEST_CASE_MINUS_1::Producer const&, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 0000000000420030 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<QUEUE_TEST_CASE_MINUS_1::Producer>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, QUEUE_TEST_CASE_MINUS_1::Producer const&, BloombergLP::bslma::Allocator*)>:

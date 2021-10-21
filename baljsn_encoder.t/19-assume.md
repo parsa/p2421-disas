@@ -1,4 +1,4 @@
-# 19.assume.s
+# `int BloombergLP::balb::Choice5::accessSelection<BloombergLP::baljsn::Encoder_SelectionVisitor>(BloombergLP::baljsn::Encoder_SelectionVisitor&) const` - Assumed
 
 ```x86asm
 0000000000482b90 <int BloombergLP::balb::Choice5::accessSelection<BloombergLP::baljsn::Encoder_SelectionVisitor>(BloombergLP::baljsn::Encoder_SelectionVisitor&) const>:

@@ -1,4 +1,4 @@
-# 3.none.s
+# `BloombergLP::ball::AsyncFileObserver::releaseRecords()` - Ignored
 
 ```x86asm
 000000000042df00 <BloombergLP::ball::AsyncFileObserver::releaseRecords()>:

@@ -1,4 +1,4 @@
-# 0.assume.s
+# `HashCrossReference<Box, bsl::hash<Box> >::HashCrossReference(Box const*, unsigned long, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 00000000004029b0 <HashCrossReference<Box, bsl::hash<Box> >::HashCrossReference(Box const*, unsigned long, BloombergLP::bslma::Allocator*)>:

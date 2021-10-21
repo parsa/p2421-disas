@@ -1,4 +1,4 @@
-# 4.none.s
+# `BloombergLP::bdlbb::Blob::removeBuffers(int, int)` - Ignored
 
 ```x86asm
 000000000041ea80 <BloombergLP::bdlbb::Blob::removeBuffers(int, int)>:

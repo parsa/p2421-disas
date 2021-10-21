@@ -1,4 +1,4 @@
-# 1.none.s
+# `BloombergLP::bslmt::ThroughputBenchmark::execute(BloombergLP::bslmt::ThroughputBenchmarkResult*, int, int, bsl::function<void (bool)> const&, bsl::function<void (bool)> const&, bsl::function<void (bool)> const&)` - Ignored
 
 ```x86asm
 00000000005847d0 <BloombergLP::bslmt::ThroughputBenchmark::execute(BloombergLP::bslmt::ThroughputBenchmarkResult*, int, int, bsl::function<void (bool)> const&, bsl::function<void (bool)> const&, bsl::function<void (bool)> const&)>:

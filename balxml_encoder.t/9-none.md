@@ -1,4 +1,4 @@
-# 9.none.s
+# `int BloombergLP::balxml::Encoder::encode<BloombergLP::s_baltst::MyChoice>(BloombergLP::balxml::Formatter&, BloombergLP::s_baltst::MyChoice const&)` - Ignored
 
 ```x86asm
 00000000004dead0 <int BloombergLP::balxml::Encoder::encode<BloombergLP::s_baltst::MyChoice>(BloombergLP::balxml::Formatter&, BloombergLP::s_baltst::MyChoice const&)>:

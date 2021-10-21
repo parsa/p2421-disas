@@ -1,4 +1,4 @@
-# 6.none.s
+# `(anonymous namespace)::u::isUniqueAdd((anonymous namespace)::u::AddMode)` - Ignored
 
 ```x86asm
 0000000000418c50 <(anonymous namespace)::u::isUniqueAdd((anonymous namespace)::u::AddMode)>:

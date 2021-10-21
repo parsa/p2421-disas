@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::balm::MetricRegistry::setUserData(BloombergLP::balm::MetricId const&, int, void const*)` - Ignored
 
 ```x86asm
 000000000041caf0 <BloombergLP::balm::MetricRegistry::setUserData(BloombergLP::balm::MetricId const&, int, void const*)>:

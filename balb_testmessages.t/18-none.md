@@ -1,4 +1,4 @@
-# 18.none.s
+# `BloombergLP::balb::SequenceWithAnonymity::~SequenceWithAnonymity()` - Ignored
 
 ```x86asm
 00000000004113f0 <BloombergLP::balb::SequenceWithAnonymity::~SequenceWithAnonymity()>:

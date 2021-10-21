@@ -1,4 +1,4 @@
-# 7.none.s
+# `BloombergLP::balb::Choice5::reset()` - Ignored
 
 ```x86asm
 0000000000405fe0 <BloombergLP::balb::Choice5::reset()>:

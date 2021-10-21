@@ -1,4 +1,4 @@
-# 70.assume.s
+# `BloombergLP::s_baltst::Sequence1::Sequence1(BloombergLP::s_baltst::Sequence1&&)` - Assumed
 
 ```x86asm
 00000000004bac10 <BloombergLP::s_baltst::Sequence1::Sequence1(BloombergLP::s_baltst::Sequence1&&)>:

@@ -1,4 +1,4 @@
-# 0.none.s
+# `DoubleStack::pop()` - Ignored
 
 ```x86asm
 00000000004043f0 <DoubleStack::pop()>:

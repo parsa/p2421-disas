@@ -1,4 +1,4 @@
-# 9.assume.s
+# `int BloombergLP::balber::BerDecoder::decode<BloombergLP::s_baltst::MyChoiceWithDefaultValues>(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, BloombergLP::s_baltst::MyChoiceWithDefaultValues*)` - Assumed
 
 ```x86asm
 000000000043af90 <int BloombergLP::balber::BerDecoder::decode<BloombergLP::s_baltst::MyChoiceWithDefaultValues>(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, BloombergLP::s_baltst::MyChoiceWithDefaultValues*)>:

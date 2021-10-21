@@ -1,4 +1,4 @@
-# 13.assume.s
+# `BloombergLP::bdldfp::DecimalImpUtil::decompose(int*, unsigned long long*, int*, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType64)` - Assumed
 
 ```x86asm
 0000000000476b80 <BloombergLP::bdldfp::DecimalImpUtil::decompose(int*, unsigned long long*, int*, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType64)>:

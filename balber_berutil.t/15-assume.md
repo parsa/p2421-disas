@@ -1,4 +1,4 @@
-# 15.assume.s
+# `(anonymous namespace)::u::Md5ChecksumAlgorithm::operator()(void const*, unsigned long)` - Assumed
 
 ```x86asm
 0000000000464fd0 <(anonymous namespace)::u::Md5ChecksumAlgorithm::operator()(void const*, unsigned long)>:

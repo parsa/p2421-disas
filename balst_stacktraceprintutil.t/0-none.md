@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::balst::StackTraceResolverImpl<BloombergLP::balst::ObjectFileFormat::Elf>::processLoadedImage(char const*, void const*, int, void*, void*)` - Ignored
 
 ```x86asm
 000000000040b430 <BloombergLP::balst::StackTraceResolverImpl<BloombergLP::balst::ObjectFileFormat::Elf>::processLoadedImage(char const*, void const*, int, void*, void*)>:

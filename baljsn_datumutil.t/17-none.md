@@ -1,4 +1,4 @@
-# 17.none.s
+# `void testCase04<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >()` - Ignored
 
 ```x86asm
 000000000042fa80 <void testCase04<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >()>:

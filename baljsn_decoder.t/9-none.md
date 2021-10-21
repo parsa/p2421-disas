@@ -1,4 +1,4 @@
-# 9.none.s
+# `BloombergLP::balxml::Decoder_StdVectorCharContext::Decoder_StdVectorCharContext(bsl::vector<char, bsl::allocator<char> >*, int)` - Ignored
 
 ```x86asm
 0000000000478730 <BloombergLP::balxml::Decoder_StdVectorCharContext::Decoder_StdVectorCharContext(bsl::vector<char, bsl::allocator<char> >*, int)>:

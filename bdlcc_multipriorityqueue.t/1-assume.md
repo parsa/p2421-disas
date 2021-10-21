@@ -1,4 +1,4 @@
-# 1.assume.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<MULTIPRIORITYQUEUE_TEST_CASE_8::ProducerThread>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, MULTIPRIORITYQUEUE_TEST_CASE_8::ProducerThread const&, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 00000000004315a0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<MULTIPRIORITYQUEUE_TEST_CASE_8::ProducerThread>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, MULTIPRIORITYQUEUE_TEST_CASE_8::ProducerThread const&, BloombergLP::bslma::Allocator*)>:

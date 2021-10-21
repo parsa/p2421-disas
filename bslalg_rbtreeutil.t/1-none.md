@@ -1,4 +1,4 @@
-# 1.none.s
+# `char const* ggParseNode<IntNode, void (*)(IntNode*, int)>(IntNode**, char const*, void (* const&)(IntNode*, int))` - Ignored
 
 ```x86asm
 0000000000487ae0 <char const* ggParseNode<IntNode, void (*)(IntNode*, int)>(IntNode**, char const*, void (* const&)(IntNode*, int))>:

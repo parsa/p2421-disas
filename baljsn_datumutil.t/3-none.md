@@ -1,4 +1,4 @@
-# 3.none.s
+# `BloombergLP::bdlb::BitStringUtil::assign(unsigned long*, unsigned long, bool, unsigned long)` - Ignored
 
 ```x86asm
 0000000000442780 <BloombergLP::bdlb::BitStringUtil::assign(unsigned long*, unsigned long, bool, unsigned long)>:

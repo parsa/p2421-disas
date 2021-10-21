@@ -1,4 +1,4 @@
-# 9.none.s
+# `BloombergLP::ball::Record::clear()` - Ignored
 
 ```x86asm
 00000000004132a0 <BloombergLP::ball::Record::clear()>:

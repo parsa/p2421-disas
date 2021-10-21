@@ -1,4 +1,4 @@
-# 79.assume.s
+# `BloombergLP::bdlt::Iso8601Util::generateRaw(char*, BloombergLP::bdlt::Datetime const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)` - Assumed
 
 ```x86asm
 0000000000466d10 <BloombergLP::bdlt::Iso8601Util::generateRaw(char*, BloombergLP::bdlt::Datetime const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)>:

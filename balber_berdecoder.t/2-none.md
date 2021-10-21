@@ -1,4 +1,4 @@
-# 2.none.s
+# `int BloombergLP::balber::BerEncoder::encode<unsigned long>(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, unsigned long const&)` - Ignored
 
 ```x86asm
 0000000000442a10 <int BloombergLP::balber::BerEncoder::encode<unsigned long>(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, unsigned long const&)>:

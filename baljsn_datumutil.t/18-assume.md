@@ -1,4 +1,4 @@
-# 18.assume.s
+# `BloombergLP::bdlb::BitStringUtil::orEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)` - Assumed
 
 ```x86asm
 0000000000443e30 <BloombergLP::bdlb::BitStringUtil::orEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)>:

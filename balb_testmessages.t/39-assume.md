@@ -1,4 +1,4 @@
-# 39.assume.s
+# `BloombergLP::balb::SequenceWithAnonymityChoice::makeSelection1(BloombergLP::balb::Sequence6 const&)` - Assumed
 
 ```x86asm
 000000000040b160 <BloombergLP::balb::SequenceWithAnonymityChoice::makeSelection1(BloombergLP::balb::Sequence6 const&)>:

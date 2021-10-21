@@ -1,4 +1,4 @@
-# 75.none.s
+# `BloombergLP::s_baltst::Choice3::makeSelection4(BloombergLP::s_baltst::CustomInt const&)` - Ignored
 
 ```x86asm
 00000000004b96e0 <BloombergLP::s_baltst::Choice3::makeSelection4(BloombergLP::s_baltst::CustomInt const&)>:

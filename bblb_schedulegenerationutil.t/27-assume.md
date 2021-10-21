@@ -1,4 +1,4 @@
-# 27.assume.s
+# `BloombergLP::bdlt::Calendar::synchronizeCache()` - Assumed
 
 ```x86asm
 000000000040c3a0 <BloombergLP::bdlt::Calendar::synchronizeCache()>:

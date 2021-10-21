@@ -1,4 +1,4 @@
-# 64.none.s
+# `BloombergLP::s_baltst::SequenceWithAnonymityChoice::makeSelection3(BloombergLP::s_baltst::CustomString const&)` - Ignored
 
 ```x86asm
 00000000004cff00 <BloombergLP::s_baltst::SequenceWithAnonymityChoice::makeSelection3(BloombergLP::s_baltst::CustomString const&)>:

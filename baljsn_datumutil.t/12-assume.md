@@ -1,4 +1,4 @@
-# 12.assume.s
+# `(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::left(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)` - Assumed
 
 ```x86asm
 0000000000445360 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::left(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)>:

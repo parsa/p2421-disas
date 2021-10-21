@@ -1,4 +1,4 @@
-# 6.assume.s
+# `BloombergLP::balxml::Decoder_ParseObject::executeImp(bsl::vector<char, bsl::allocator<char> >*, int, BloombergLP::bdlat_TypeCategory::Array)` - Assumed
 
 ```x86asm
 0000000000478750 <BloombergLP::balxml::Decoder_ParseObject::executeImp(bsl::vector<char, bsl::allocator<char> >*, int, BloombergLP::bdlat_TypeCategory::Array)>:

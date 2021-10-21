@@ -1,4 +1,4 @@
-# 3.assume.s
+# `BloombergLP::bdlbb::Blob::moveAndAppendDataBuffers(BloombergLP::bdlbb::Blob*)` - Assumed
 
 ```x86asm
 000000000041f350 <BloombergLP::bdlbb::Blob::moveAndAppendDataBuffers(BloombergLP::bdlbb::Blob*)>:

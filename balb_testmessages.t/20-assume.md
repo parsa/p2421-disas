@@ -1,4 +1,4 @@
-# 20.assume.s
+# `BloombergLP::balb::Choice5::selectionName() const` - Assumed
 
 ```x86asm
 0000000000406410 <BloombergLP::balb::Choice5::selectionName() const>:

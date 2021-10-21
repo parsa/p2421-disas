@@ -1,4 +1,4 @@
-# 4.assume.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<Case6_Waiter>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, Case6_Waiter const&, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 0000000000408210 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<Case6_Waiter>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, Case6_Waiter const&, BloombergLP::bslma::Allocator*)>:

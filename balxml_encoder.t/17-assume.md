@@ -1,4 +1,4 @@
-# 17.assume.s
+# `BloombergLP::bdlat_TypeName_Imp::xsdName(bsl::vector<char, bsl::allocator<char> > const*, int)` - Assumed
 
 ```x86asm
 00000000004ef820 <BloombergLP::bdlat_TypeName_Imp::xsdName(bsl::vector<char, bsl::allocator<char> > const*, int)>:

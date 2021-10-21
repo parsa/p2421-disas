@@ -1,4 +1,4 @@
-# 22.none.s
+# `BloombergLP::bdlt::PosixDateImpUtil::ydToSerial(int, int)` - Ignored
 
 ```x86asm
 0000000000413aa0 <BloombergLP::bdlt::PosixDateImpUtil::ydToSerial(int, int)>:

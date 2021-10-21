@@ -1,4 +1,4 @@
-# 59.none.s
+# `BloombergLP::balb::Choice3::operator=(BloombergLP::balb::Choice3 const&)` - Ignored
 
 ```x86asm
 000000000040a210 <BloombergLP::balb::Choice3::operator=(BloombergLP::balb::Choice3 const&)>:

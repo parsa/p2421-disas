@@ -1,4 +1,4 @@
-# 19.none.s
+# `int BloombergLP::bdlat_ChoiceFunctions::bdlat_choiceManipulateSelection<BloombergLP::balb::SequenceWithAnonymityChoice1, BloombergLP::baljsn::Decoder_ElementVisitor>(BloombergLP::balb::SequenceWithAnonymityChoice1*, BloombergLP::baljsn::Decoder_ElementVisitor&)` - Ignored
 
 ```x86asm
 00000000004587a0 <int BloombergLP::bdlat_ChoiceFunctions::bdlat_choiceManipulateSelection<BloombergLP::balb::SequenceWithAnonymityChoice1, BloombergLP::baljsn::Decoder_ElementVisitor>(BloombergLP::balb::SequenceWithAnonymityChoice1*, BloombergLP::baljsn::Decoder_ElementVisitor&)>:

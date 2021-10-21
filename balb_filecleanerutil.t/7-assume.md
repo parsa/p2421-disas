@@ -1,4 +1,4 @@
-# 7.assume.s
+# `BloombergLP::bdlma::SequentialPool::SequentialPool(BloombergLP::bsls::BlockGrowth::Strategy, BloombergLP::bsls::Alignment::Strategy, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 000000000040bd90 <BloombergLP::bdlma::SequentialPool::SequentialPool(BloombergLP::bsls::BlockGrowth::Strategy, BloombergLP::bsls::Alignment::Strategy, BloombergLP::bslma::Allocator*)>:

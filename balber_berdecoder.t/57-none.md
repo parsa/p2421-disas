@@ -1,4 +1,4 @@
-# 57.none.s
+# `BloombergLP::bdlt::Time::setMinute(int)` - Ignored
 
 ```x86asm
 000000000046be00 <BloombergLP::bdlt::Time::setMinute(int)>:

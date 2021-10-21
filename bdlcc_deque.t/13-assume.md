@@ -1,4 +1,4 @@
-# 13.assume.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<TEST_CASE_11::HighWaterMarkFunctor<double> >(unsigned long*, TEST_CASE_11::HighWaterMarkFunctor<double> const&, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 00000000004b5ec0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<TEST_CASE_11::HighWaterMarkFunctor<double> >(unsigned long*, TEST_CASE_11::HighWaterMarkFunctor<double> const&, BloombergLP::bslma::Allocator*)>:

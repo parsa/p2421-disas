@@ -1,4 +1,4 @@
-# 9.assume.s
+# `BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)` - Assumed
 
 ```x86asm
 0000000000418520 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)>:

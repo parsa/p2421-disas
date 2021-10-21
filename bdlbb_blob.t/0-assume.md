@@ -1,4 +1,4 @@
-# 0.assume.s
+# `BloombergLP::bdlbb::Blob::assertInvariants() const` - Assumed
 
 ```x86asm
 000000000041dcd0 <BloombergLP::bdlbb::Blob::assertInvariants() const>:

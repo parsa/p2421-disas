@@ -1,4 +1,4 @@
-# 9.none.s
+# `int BloombergLP::s_baltst::Sequence2::accessAttributes<BloombergLP::baljsn::Encoder_AttributeVisitor>(BloombergLP::baljsn::Encoder_AttributeVisitor&) const` - Ignored
 
 ```x86asm
 000000000047d0b0 <int BloombergLP::s_baltst::Sequence2::accessAttributes<BloombergLP::baljsn::Encoder_AttributeVisitor>(BloombergLP::baljsn::Encoder_AttributeVisitor&) const>:

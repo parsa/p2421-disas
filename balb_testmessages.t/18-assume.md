@@ -1,4 +1,4 @@
-# 18.assume.s
+# `BloombergLP::balb::SequenceWithAnonymity::~SequenceWithAnonymity()` - Assumed
 
 ```x86asm
 00000000004114f0 <BloombergLP::balb::SequenceWithAnonymity::~SequenceWithAnonymity()>:

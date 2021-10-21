@@ -1,4 +1,4 @@
-# 11.none.s
+# `BloombergLP::bdlb::String::rtrim(char const*, int*)` - Ignored
 
 ```x86asm
 000000000040d230 <BloombergLP::bdlb::String::rtrim(char const*, int*)>:

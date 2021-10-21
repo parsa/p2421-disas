@@ -1,4 +1,4 @@
-# 13.assume.s
+# `BloombergLP::case4::Color::toString(BloombergLP::case4::Color::Value)` - Assumed
 
 ```x86asm
 0000000000408c80 <BloombergLP::case4::Color::toString(BloombergLP::case4::Color::Value)>:

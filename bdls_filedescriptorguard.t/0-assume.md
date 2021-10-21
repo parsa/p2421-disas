@@ -1,4 +1,4 @@
-# 0.assume.s
+# `BloombergLP::bdls::FileDescriptorGuard::closeAndRelease()` - Assumed
 
 ```x86asm
 0000000000406ab0 <BloombergLP::bdls::FileDescriptorGuard::closeAndRelease()>:

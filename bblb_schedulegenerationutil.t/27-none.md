@@ -1,4 +1,4 @@
-# 27.none.s
+# `BloombergLP::bdlt::Calendar::synchronizeCache()` - Ignored
 
 ```x86asm
 000000000040c3d0 <BloombergLP::bdlt::Calendar::synchronizeCache()>:

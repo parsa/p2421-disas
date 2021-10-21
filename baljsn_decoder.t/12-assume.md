@@ -1,4 +1,4 @@
-# 12.assume.s
+# `void BloombergLP::bslim::Printer::printAttribute<BloombergLP::s_baltst::Colors::Value>(BloombergLP::bslstl::StringRefImp<char> const&, BloombergLP::s_baltst::Colors::Value const&) const` - Assumed
 
 ```x86asm
 0000000000414280 <void BloombergLP::bslim::Printer::printAttribute<BloombergLP::s_baltst::Colors::Value>(BloombergLP::bslstl::StringRefImp<char> const&, BloombergLP::s_baltst::Colors::Value const&) const>:

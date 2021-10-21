@@ -1,4 +1,4 @@
-# 5.assume.s
+# `BloombergLP::bdlat_TypeName_Imp::xsdName(BloombergLP::bdldfp::Decimal_Type64 const*, int)` - Assumed
 
 ```x86asm
 00000000004ef800 <BloombergLP::bdlat_TypeName_Imp::xsdName(BloombergLP::bdldfp::Decimal_Type64 const*, int)>:

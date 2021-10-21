@@ -1,4 +1,4 @@
-# 59.assume.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<STACKSIZE_TEST_CASE_NAMESPACE::Func<66560> >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, STACKSIZE_TEST_CASE_NAMESPACE::Func<66560> const&, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 000000000041cd60 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<STACKSIZE_TEST_CASE_NAMESPACE::Func<66560> >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, STACKSIZE_TEST_CASE_NAMESPACE::Func<66560> const&, BloombergLP::bslma::Allocator*)>:

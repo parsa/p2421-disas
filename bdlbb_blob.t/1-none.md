@@ -1,4 +1,4 @@
-# 1.none.s
+# `BloombergLP::bdlbb::Blob::slowSetLength(int)` - Ignored
 
 ```x86asm
 000000000041dce0 <BloombergLP::bdlbb::Blob::slowSetLength(int)>:

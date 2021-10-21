@@ -1,4 +1,4 @@
-# 24.none.s
+# `BloombergLP::bdls::FilesystemUtil::visitPaths(char const*, bsl::function<void (char const*)> const&)` - Ignored
 
 ```x86asm
 000000000040d300 <BloombergLP::bdls::FilesystemUtil::visitPaths(char const*, bsl::function<void (char const*)> const&)>:

@@ -1,4 +1,4 @@
-# 0.assume.s
+# `AttributeSet::AttributeComparator::operator()(BloombergLP::ball::Attribute const&, BloombergLP::ball::Attribute const&) const` - Assumed
 
 ```x86asm
 0000000000413700 <AttributeSet::AttributeComparator::operator()(BloombergLP::ball::Attribute const&, BloombergLP::ball::Attribute const&) const>:

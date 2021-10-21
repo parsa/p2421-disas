@@ -1,4 +1,4 @@
-# 1.none.s
+# `int BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::manipulateSelection<BloombergLP::balxml::Decoder_ParseObject>(BloombergLP::balxml::Decoder_ParseObject&)` - Ignored
 
 ```x86asm
 00000000004fa350 <int BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::manipulateSelection<BloombergLP::balxml::Decoder_ParseObject>(BloombergLP::balxml::Decoder_ParseObject&)>:

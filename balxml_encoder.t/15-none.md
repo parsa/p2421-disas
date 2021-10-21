@@ -1,4 +1,4 @@
-# 15.none.s
+# `int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)` - Ignored
 
 ```x86asm
 00000000004e2b20 <int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)>:

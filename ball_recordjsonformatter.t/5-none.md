@@ -1,4 +1,4 @@
-# 5.none.s
+# `BloombergLP::ball::(anonymous namespace)::ThreadIdFormatter::format(BloombergLP::baljsn::SimpleFormatter*, BloombergLP::ball::Record const&)` - Ignored
 
 ```x86asm
 000000000041b1c0 <BloombergLP::ball::(anonymous namespace)::ThreadIdFormatter::format(BloombergLP::baljsn::SimpleFormatter*, BloombergLP::ball::Record const&)>:

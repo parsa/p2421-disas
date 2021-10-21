@@ -1,4 +1,4 @@
-# 2.assume.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(seqtst2::Control*), BloombergLP::bdlf::Bind_BoundTuple1<seqtst2::Control*> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(seqtst2::Control*), BloombergLP::bdlf::Bind_BoundTuple1<seqtst2::Control*> > const&, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 000000000041c0d0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(seqtst2::Control*), BloombergLP::bdlf::Bind_BoundTuple1<seqtst2::Control*> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(seqtst2::Control*), BloombergLP::bdlf::Bind_BoundTuple1<seqtst2::Control*> > const&, BloombergLP::bslma::Allocator*)>:

@@ -1,4 +1,4 @@
-# 80.none.s
+# `BloombergLP::s_baltst::SequenceWithAnonymityChoice::makeSelection4(BloombergLP::s_baltst::CustomInt const&)` - Ignored
 
 ```x86asm
 00000000004d0020 <BloombergLP::s_baltst::SequenceWithAnonymityChoice::makeSelection4(BloombergLP::s_baltst::CustomInt const&)>:

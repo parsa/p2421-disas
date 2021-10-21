@@ -1,4 +1,4 @@
-# 2.none.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<PingPongReader<BloombergLP::bslmt::ReaderWriterLock> >(unsigned long*, PingPongReader<BloombergLP::bslmt::ReaderWriterLock> const&, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 0000000000409800 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<PingPongReader<BloombergLP::bslmt::ReaderWriterLock> >(unsigned long*, PingPongReader<BloombergLP::bslmt::ReaderWriterLock> const&, BloombergLP::bslma::Allocator*)>:

@@ -1,4 +1,4 @@
-# 11.none.s
+# `BloombergLP::bdldfp::DecimalImpUtil::decompose(int*, BloombergLP::bdldfp::Uint128*, int*, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128)` - Ignored
 
 ```x86asm
 0000000000477130 <BloombergLP::bdldfp::DecimalImpUtil::decompose(int*, BloombergLP::bdldfp::Uint128*, int*, BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128)>:

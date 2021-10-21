@@ -1,4 +1,4 @@
-# 45.none.s
+# `BloombergLP::bdlde::Utf8Util::advanceIfValid(int*, char const**, char const*, unsigned long, long)` - Ignored
 
 ```x86asm
 000000000041daf0 <BloombergLP::bdlde::Utf8Util::advanceIfValid(int*, char const**, char const*, unsigned long, long)>:

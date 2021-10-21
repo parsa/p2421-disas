@@ -1,4 +1,4 @@
-# 1.none.s
+# `BloombergLP::balst::StackTraceUtil::loadStackTraceFromStack(BloombergLP::balst::StackTrace*, int, bool)` - Ignored
 
 ```x86asm
 0000000000409630 <BloombergLP::balst::StackTraceUtil::loadStackTraceFromStack(BloombergLP::balst::StackTrace*, int, bool)>:

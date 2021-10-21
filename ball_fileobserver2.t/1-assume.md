@@ -1,4 +1,4 @@
-# 1.assume.s
+# `(anonymous namespace)::publishRecord(BloombergLP::ball::FileObserver2*, char const*)` - Assumed
 
 ```x86asm
 0000000000426aa0 <(anonymous namespace)::publishRecord(BloombergLP::ball::FileObserver2*, char const*)>:

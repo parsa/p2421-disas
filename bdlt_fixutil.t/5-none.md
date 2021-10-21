@@ -1,4 +1,4 @@
-# 5.none.s
+# `BloombergLP::bdlt::FixUtil::generateRaw(char*, BloombergLP::bdlt::TimeTz const&, BloombergLP::bdlt::FixUtilConfiguration const&)` - Ignored
 
 ```x86asm
 000000000043ae90 <BloombergLP::bdlt::FixUtil::generateRaw(char*, BloombergLP::bdlt::TimeTz const&, BloombergLP::bdlt::FixUtilConfiguration const&)>:

@@ -1,4 +1,4 @@
-# 3.none.s
+# `BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Signed>::append(long)` - Ignored
 
 ```x86asm
 000000000041bdb0 <BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Signed>::append(long)>:

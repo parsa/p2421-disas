@@ -1,4 +1,4 @@
-# 0.none.s
+# `case4ContextThread` - Ignored
 
 ```x86asm
 0000000000407c20 <case4ContextThread>:

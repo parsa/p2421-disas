@@ -1,4 +1,4 @@
-# 0.none.s
+# `AttributeSet::AttributeComparator::operator()(BloombergLP::ball::Attribute const&, BloombergLP::ball::Attribute const&) const` - Ignored
 
 ```x86asm
 0000000000412550 <AttributeSet::AttributeComparator::operator()(BloombergLP::ball::Attribute const&, BloombergLP::ball::Attribute const&) const>:

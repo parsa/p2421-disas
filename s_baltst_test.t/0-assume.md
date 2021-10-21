@@ -1,4 +1,4 @@
-# 0.assume.s
+# `BloombergLP::s_baltst::Request::selectionName() const` - Assumed
 
 ```x86asm
 00000000004358e0 <BloombergLP::s_baltst::Request::selectionName() const>:

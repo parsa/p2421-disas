@@ -1,4 +1,4 @@
-# 51.assume.s
+# `BloombergLP::bdlt::ProlepticDateImpUtil::lastDayOfMonth(int, int)` - Assumed
 
 ```x86asm
 000000000046a6a0 <BloombergLP::bdlt::ProlepticDateImpUtil::lastDayOfMonth(int, int)>:

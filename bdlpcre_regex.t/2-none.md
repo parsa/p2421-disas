@@ -1,4 +1,4 @@
-# 2.none.s
+# `int BloombergLP::bdlpcre::RegEx::matchImp<BloombergLP::bdlpcre::(anonymous namespace)::DataExtractor<bsl::pair<unsigned long, unsigned long> > >(BloombergLP::bdlpcre::(anonymous namespace)::DataExtractor<bsl::pair<unsigned long, unsigned long> > const&, char const*, unsigned long, unsigned long, bool) const` - Ignored
 
 ```x86asm
 000000000042add0 <int BloombergLP::bdlpcre::RegEx::matchImp<BloombergLP::bdlpcre::(anonymous namespace)::DataExtractor<bsl::pair<unsigned long, unsigned long> > >(BloombergLP::bdlpcre::(anonymous namespace)::DataExtractor<bsl::pair<unsigned long, unsigned long> > const&, char const*, unsigned long, unsigned long, bool) const>:

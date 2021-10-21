@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::bdlma::BufferImpUtil::allocateFromBuffer(long*, char*, unsigned long, unsigned long, BloombergLP::bsls::Alignment::Strategy)` - Ignored
 
 ```x86asm
 000000000040fae0 <BloombergLP::bdlma::BufferImpUtil::allocateFromBuffer(long*, char*, unsigned long, unsigned long, BloombergLP::bsls::Alignment::Strategy)>:

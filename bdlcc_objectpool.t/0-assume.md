@@ -1,4 +1,4 @@
-# 0.assume.s
+# `BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::OtherType, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::OtherType> >::getObject()` - Assumed
 
 ```x86asm
 0000000000410b00 <BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::OtherType, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::OtherType> >::getObject()>:

@@ -1,4 +1,4 @@
-# 1.none.s
+# `BloombergLP::balcl::CommandLine::printUsage(std::__1::basic_ostream<char, std::__1::char_traits<char> >&) const` - Ignored
 
 ```x86asm
 000000000045b1a0 <BloombergLP::balcl::CommandLine::printUsage(std::__1::basic_ostream<char, std::__1::char_traits<char> >&) const>:

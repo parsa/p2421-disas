@@ -1,4 +1,4 @@
-# 8.assume.s
+# `BloombergLP::test::MixedSequence::print(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, int, int) const` - Assumed
 
 ```x86asm
 0000000000404a20 <BloombergLP::test::MixedSequence::print(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, int, int) const>:

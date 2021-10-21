@@ -1,4 +1,4 @@
-# 3.none.s
+# `BloombergLP::balm::MetricRegistry::insertId(char const*, char const*)` - Ignored
 
 ```x86asm
 000000000041b260 <BloombergLP::balm::MetricRegistry::insertId(char const*, char const*)>:

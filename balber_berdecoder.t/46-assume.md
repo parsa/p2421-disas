@@ -1,4 +1,4 @@
-# 46.assume.s
+# `int BloombergLP::s_baltst::MyChoiceWithDefaultValues::manipulateSelection<BloombergLP::balber::BerDecoder_NodeVisitor>(BloombergLP::balber::BerDecoder_NodeVisitor&)` - Assumed
 
 ```x86asm
 0000000000445a90 <int BloombergLP::s_baltst::MyChoiceWithDefaultValues::manipulateSelection<BloombergLP::balber::BerDecoder_NodeVisitor>(BloombergLP::balber::BerDecoder_NodeVisitor&)>:

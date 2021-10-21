@@ -1,4 +1,4 @@
-# 12.none.s
+# `int BloombergLP::balxml::Encoder_EncodeObject::executeImp<BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice, BloombergLP::bdlat_TypeCategory::Choice>(BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice const&, std::__1::basic_string_view<char, std::__1::char_traits<char> > const&, int, BloombergLP::bdlat_TypeCategory::Choice)` - Ignored
 
 ```x86asm
 00000000004e2d10 <int BloombergLP::balxml::Encoder_EncodeObject::executeImp<BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice, BloombergLP::bdlat_TypeCategory::Choice>(BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice const&, std::__1::basic_string_view<char, std::__1::char_traits<char> > const&, int, BloombergLP::bdlat_TypeCategory::Choice)>:

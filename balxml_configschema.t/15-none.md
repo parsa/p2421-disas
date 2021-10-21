@@ -1,4 +1,4 @@
-# 15.none.s
+# `BloombergLP::balxml::Decoder_ChoiceContext<BloombergLP::s_baltst::BasicSchemaElementChoice>::parseSubElement(char const*, BloombergLP::balxml::Decoder*)` - Ignored
 
 ```x86asm
 00000000004196f0 <BloombergLP::balxml::Decoder_ChoiceContext<BloombergLP::s_baltst::BasicSchemaElementChoice>::parseSubElement(char const*, BloombergLP::balxml::Decoder*)>:

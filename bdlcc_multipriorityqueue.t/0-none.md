@@ -1,4 +1,4 @@
-# 0.none.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<MULTIPRIORITYQUEUE_TEST_CASE_8::ConsumerThread>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, MULTIPRIORITYQUEUE_TEST_CASE_8::ConsumerThread const&, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 00000000004310e0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<MULTIPRIORITYQUEUE_TEST_CASE_8::ConsumerThread>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, MULTIPRIORITYQUEUE_TEST_CASE_8::ConsumerThread const&, BloombergLP::bslma::Allocator*)>:

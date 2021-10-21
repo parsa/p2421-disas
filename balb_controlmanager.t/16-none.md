@@ -1,4 +1,4 @@
-# 16.none.s
+# `BloombergLP::bslalg::ArrayPrimitives_Imp::bitwiseRotate(char*, char*, char*)` - Ignored
 
 ```x86asm
 0000000000433fe0 <BloombergLP::bslalg::ArrayPrimitives_Imp::bitwiseRotate(char*, char*, char*)>:

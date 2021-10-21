@@ -1,4 +1,4 @@
-# 9.none.s
+# `int BloombergLP::bdlat_SymbolicConverter::convert<BloombergLP::test::ChoiceA, BloombergLP::test::ChoiceB>(BloombergLP::test::ChoiceA*, BloombergLP::test::ChoiceB const&)` - Ignored
 
 ```x86asm
 000000000040f4a0 <int BloombergLP::bdlat_SymbolicConverter::convert<BloombergLP::test::ChoiceA, BloombergLP::test::ChoiceB>(BloombergLP::test::ChoiceA*, BloombergLP::test::ChoiceB const&)>:

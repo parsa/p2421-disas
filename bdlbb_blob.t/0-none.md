@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::bdlbb::Blob::assertInvariants() const` - Ignored
 
 ```x86asm
 000000000041dcd0 <BloombergLP::bdlbb::Blob::assertInvariants() const>:

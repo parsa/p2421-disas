@@ -1,4 +1,4 @@
-# 6.none.s
+# `BloombergLP::s_baltst::BasicSchemaEnumerationElementChoice::operator=(BloombergLP::s_baltst::BasicSchemaEnumerationElementChoice const&)` - Ignored
 
 ```x86asm
 000000000042fe30 <BloombergLP::s_baltst::BasicSchemaEnumerationElementChoice::operator=(BloombergLP::s_baltst::BasicSchemaEnumerationElementChoice const&)>:

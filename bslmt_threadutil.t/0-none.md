@@ -1,4 +1,4 @@
-# 0.none.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BSLMT_CONFIGURATION_TEST_NAMESPACE::Func>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BSLMT_CONFIGURATION_TEST_NAMESPACE::Func const&, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 0000000000418850 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BSLMT_CONFIGURATION_TEST_NAMESPACE::Func>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BSLMT_CONFIGURATION_TEST_NAMESPACE::Func const&, BloombergLP::bslma::Allocator*)>:

@@ -1,4 +1,4 @@
-# 7.assume.s
+# `Case_Throttle_MULTITHREADED::threadJob()` - Assumed
 
 ```x86asm
 00000000004055c0 <Case_Throttle_MULTITHREADED::threadJob()>:

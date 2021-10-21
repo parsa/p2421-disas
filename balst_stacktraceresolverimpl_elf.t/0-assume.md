@@ -1,4 +1,4 @@
-# 0.assume.s
+# `stuffRandomAddresses(BloombergLP::balst::StackTrace*)` - Assumed
 
 ```x86asm
 0000000000404d90 <stuffRandomAddresses(BloombergLP::balst::StackTrace*)>:

@@ -1,4 +1,4 @@
-# 8.none.s
+# `BloombergLP::balcl::OptionValue::type() const` - Ignored
 
 ```x86asm
 0000000000465850 <BloombergLP::balcl::OptionValue::type() const>:

@@ -1,4 +1,4 @@
-# 1.none.s
+# `(anonymous namespace)::u::constructTypeInfo(void*, BloombergLP::balcl::OptionType::Enum, void*, void*, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 00000000004134e0 <(anonymous namespace)::u::constructTypeInfo(void*, BloombergLP::balcl::OptionType::Enum, void*, void*, BloombergLP::bslma::Allocator*)>:

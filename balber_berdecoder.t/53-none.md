@@ -1,4 +1,4 @@
-# 53.none.s
+# `int BloombergLP::s_baltst::MyChoiceWithDefaultValues::accessSelection<BloombergLP::balber::BerEncoder_Visitor>(BloombergLP::balber::BerEncoder_Visitor&) const` - Ignored
 
 ```x86asm
 0000000000445480 <int BloombergLP::s_baltst::MyChoiceWithDefaultValues::accessSelection<BloombergLP::balber::BerEncoder_Visitor>(BloombergLP::balber::BerEncoder_Visitor&) const>:

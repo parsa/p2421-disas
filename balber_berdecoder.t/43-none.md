@@ -1,4 +1,4 @@
-# 43.none.s
+# `BloombergLP::s_baltst::MyChoice::makeSelection2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)` - Ignored
 
 ```x86asm
 000000000045ae80 <BloombergLP::s_baltst::MyChoice::makeSelection2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)>:

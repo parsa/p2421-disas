@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::bdlb::Tokenizer::begin() const` - Ignored
 
 ```x86asm
 0000000000473b20 <BloombergLP::bdlb::Tokenizer::begin() const>:

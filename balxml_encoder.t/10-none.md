@@ -1,4 +1,4 @@
-# 10.none.s
+# `BloombergLP::bdlat_TypeName_Imp::xsdName(double const*, int)` - Ignored
 
 ```x86asm
 00000000004eff50 <BloombergLP::bdlat_TypeName_Imp::xsdName(double const*, int)>:

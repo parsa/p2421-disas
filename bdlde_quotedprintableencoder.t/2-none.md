@@ -1,4 +1,4 @@
-# 2.none.s
+# `BloombergLP::bdlde::QuotedPrintableEncoder::endConvert(char*, int*, int)` - Ignored
 
 ```x86asm
 000000000041f520 <BloombergLP::bdlde::QuotedPrintableEncoder::endConvert(char*, int*, int)>:

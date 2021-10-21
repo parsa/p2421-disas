@@ -1,4 +1,4 @@
-# 4.none.s
+# `BloombergLP::balxml::EncodingStyle::toString(BloombergLP::balxml::EncodingStyle::Value)` - Ignored
 
 ```x86asm
 00000000004e7240 <BloombergLP::balxml::EncodingStyle::toString(BloombergLP::balxml::EncodingStyle::Value)>:

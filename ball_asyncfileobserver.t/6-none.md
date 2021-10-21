@@ -1,4 +1,4 @@
-# 6.none.s
+# `BloombergLP::ball::UserFieldValue::type() const` - Ignored
 
 ```x86asm
 0000000000448720 <BloombergLP::ball::UserFieldValue::type() const>:

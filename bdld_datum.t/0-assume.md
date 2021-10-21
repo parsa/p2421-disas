@@ -1,4 +1,4 @@
-# 0.assume.s
+# `void BloombergLP::bdld::Datum::apply<Benchmark_Visitor>(Benchmark_Visitor&) const` - Assumed
 
 ```x86asm
 000000000045c2a0 <void BloombergLP::bdld::Datum::apply<Benchmark_Visitor>(Benchmark_Visitor&) const>:

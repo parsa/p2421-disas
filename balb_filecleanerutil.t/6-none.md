@@ -1,4 +1,4 @@
-# 6.none.s
+# `BloombergLP::bdlma::SequentialPool::SequentialPool(BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 000000000040bbd0 <BloombergLP::bdlma::SequentialPool::SequentialPool(BloombergLP::bslma::Allocator*)>:

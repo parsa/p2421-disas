@@ -1,4 +1,4 @@
-# 11.none.s
+# `BloombergLP::bdld::operator==(BloombergLP::bdld::Datum const&, BloombergLP::bdld::Datum const&)` - Ignored
 
 ```x86asm
 000000000044bcb0 <BloombergLP::bdld::operator==(BloombergLP::bdld::Datum const&, BloombergLP::bdld::Datum const&)>:

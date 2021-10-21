@@ -1,4 +1,4 @@
-# 3.assume.s
+# `BloombergLP::bdlb::String::strrstr(char const*, int, char const*, int)` - Assumed
 
 ```x86asm
 000000000040d430 <BloombergLP::bdlb::String::strrstr(char const*, int, char const*, int)>:

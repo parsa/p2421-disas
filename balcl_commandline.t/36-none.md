@@ -1,4 +1,4 @@
-# 36.none.s
+# `BloombergLP::bdlb::TokenizerIterator::TokenizerIterator(char const*, char const*, BloombergLP::bdlb::Tokenizer_Data const*)` - Ignored
 
 ```x86asm
 0000000000473000 <BloombergLP::bdlb::TokenizerIterator::TokenizerIterator(char const*, char const*, BloombergLP::bdlb::Tokenizer_Data const*)>:

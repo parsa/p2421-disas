@@ -1,4 +1,4 @@
-# 0.none.s
+# `detectNOccurrences(int, int const*, int)` - Ignored
 
 ```x86asm
 0000000000401f90 <detectNOccurrences(int, int const*, int)>:

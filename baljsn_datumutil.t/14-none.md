@@ -1,4 +1,4 @@
-# 14.none.s
+# `BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)` - Ignored
 
 ```x86asm
 00000000004436b0 <BloombergLP::bdlb::BitStringUtil::minusEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)>:

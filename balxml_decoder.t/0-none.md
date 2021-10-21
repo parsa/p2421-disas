@@ -1,4 +1,4 @@
-# 0.none.s
+# `GenerateXmlElement::operator()(BloombergLP::bslstl::StringRefImp<char> const&, BloombergLP::bslstl::StringRefImp<char> const&) const` - Ignored
 
 ```x86asm
 0000000000440e00 <GenerateXmlElement::operator()(BloombergLP::bslstl::StringRefImp<char> const&, BloombergLP::bslstl::StringRefImp<char> const&) const>:

@@ -1,4 +1,4 @@
-# 9.none.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<ReadThread<BloombergLP::bslmt::RWMutex> >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, ReadThread<BloombergLP::bslmt::RWMutex> const&, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 000000000040aba0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<ReadThread<BloombergLP::bslmt::RWMutex> >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, ReadThread<BloombergLP::bslmt::RWMutex> const&, BloombergLP::bslma::Allocator*)>:

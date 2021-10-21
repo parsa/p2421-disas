@@ -1,4 +1,4 @@
-# 8.assume.s
+# `BloombergLP::ball::Record::~Record()` - Assumed
 
 ```x86asm
 0000000000412ca0 <BloombergLP::ball::Record::~Record()>:

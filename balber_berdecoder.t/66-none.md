@@ -1,4 +1,4 @@
-# 66.none.s
+# `foo(int*)` - Ignored
 
 ```x86asm
 000000000046efa0 <foo(int*)>:

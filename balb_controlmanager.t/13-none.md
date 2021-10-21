@@ -1,4 +1,4 @@
-# 13.none.s
+# `BloombergLP::bslmt::ThreadUtilImpl<BloombergLP::bslmt::Platform::PosixThreads>::getMinSchedulingPriority(BloombergLP::bslmt::ThreadAttributes::SchedulingPolicy)` - Ignored
 
 ```x86asm
 000000000040fd00 <BloombergLP::bslmt::ThreadUtilImpl<BloombergLP::bslmt::Platform::PosixThreads>::getMinSchedulingPriority(BloombergLP::bslmt::ThreadAttributes::SchedulingPolicy)>:

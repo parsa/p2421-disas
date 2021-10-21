@@ -1,4 +1,4 @@
-# 5.none.s
+# `int BloombergLP::balxml::Decoder_ParseObject::executeImp<BloombergLP::balb::SequenceWithAnonymityChoice2>(BloombergLP::balb::SequenceWithAnonymityChoice2*, int, BloombergLP::bdlat_TypeCategory::Choice)` - Ignored
 
 ```x86asm
 000000000044def0 <int BloombergLP::balxml::Decoder_ParseObject::executeImp<BloombergLP::balb::SequenceWithAnonymityChoice2>(BloombergLP::balb::SequenceWithAnonymityChoice2*, int, BloombergLP::bdlat_TypeCategory::Choice)>:

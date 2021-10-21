@@ -1,4 +1,4 @@
-# 3.none.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<SEQUENCE_CONSTRAINT_TEST::PopperThread>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, SEQUENCE_CONSTRAINT_TEST::PopperThread const&, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 00000000004aeeb0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<SEQUENCE_CONSTRAINT_TEST::PopperThread>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, SEQUENCE_CONSTRAINT_TEST::PopperThread const&, BloombergLP::bslma::Allocator*)>:

@@ -1,4 +1,4 @@
-# 28.none.s
+# `BloombergLP::s_baltst::SequenceWithAnonymityChoice2::selectionName() const` - Ignored
 
 ```x86asm
 00000000004d21a0 <BloombergLP::s_baltst::SequenceWithAnonymityChoice2::selectionName() const>:

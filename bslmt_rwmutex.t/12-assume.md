@@ -1,4 +1,4 @@
-# 12.assume.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<ReadWaitThread<BloombergLP::bslmt::ReaderWriterLock> >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, ReadWaitThread<BloombergLP::bslmt::ReaderWriterLock> const&, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 000000000040bd30 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<ReadWaitThread<BloombergLP::bslmt::ReaderWriterLock> >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, ReadWaitThread<BloombergLP::bslmt::ReaderWriterLock> const&, BloombergLP::bslma::Allocator*)>:

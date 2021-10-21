@@ -1,4 +1,4 @@
-# 8.none.s
+# `testThread4` - Ignored
 
 ```x86asm
 0000000000403fb0 <testThread4>:

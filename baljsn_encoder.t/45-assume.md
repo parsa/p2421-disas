@@ -1,4 +1,4 @@
-# 45.assume.s
+# `int BloombergLP::s_baltst::Sequence6::accessAttributes<BloombergLP::baljsn::Encoder_AttributeVisitor>(BloombergLP::baljsn::Encoder_AttributeVisitor&) const` - Assumed
 
 ```x86asm
 0000000000476660 <int BloombergLP::s_baltst::Sequence6::accessAttributes<BloombergLP::baljsn::Encoder_AttributeVisitor>(BloombergLP::baljsn::Encoder_AttributeVisitor&) const>:

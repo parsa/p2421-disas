@@ -1,4 +1,4 @@
-# 2.none.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BALL_LOG_TEST_CASE_MINUS_1::ThreadFunctor>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BALL_LOG_TEST_CASE_MINUS_1::ThreadFunctor const&, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 000000000049d950 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BALL_LOG_TEST_CASE_MINUS_1::ThreadFunctor>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BALL_LOG_TEST_CASE_MINUS_1::ThreadFunctor const&, BloombergLP::bslma::Allocator*)>:

@@ -1,4 +1,4 @@
-# 11.none.s
+# `void testCopyConstructWithIterators<FnPtrConvertibleType>(bool, bool, bool)` - Ignored
 
 ```x86asm
 00000000004cc8c0 <void testCopyConstructWithIterators<FnPtrConvertibleType>(bool, bool, bool)>:

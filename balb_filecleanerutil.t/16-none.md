@@ -1,4 +1,4 @@
-# 16.none.s
+# `BloombergLP::bdlma::BufferedSequentialPool::BufferedSequentialPool(char*, unsigned long, unsigned long, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 000000000040b880 <BloombergLP::bdlma::BufferedSequentialPool::BufferedSequentialPool(char*, unsigned long, unsigned long, BloombergLP::bslma::Allocator*)>:

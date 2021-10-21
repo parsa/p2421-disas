@@ -1,4 +1,4 @@
-# 16.assume.s
+# `int BloombergLP::balb::Choice1::manipulateSelection<BloombergLP::baljsn::Decoder_ElementVisitor>(BloombergLP::baljsn::Decoder_ElementVisitor&)` - Assumed
 
 ```x86asm
 0000000000452a40 <int BloombergLP::balb::Choice1::manipulateSelection<BloombergLP::baljsn::Decoder_ElementVisitor>(BloombergLP::baljsn::Decoder_ElementVisitor&)>:

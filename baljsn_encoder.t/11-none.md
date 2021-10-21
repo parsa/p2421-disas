@@ -1,4 +1,4 @@
-# 11.none.s
+# `BloombergLP::s_baltst::SequenceWithAnonymityChoice1::makeSelection(int)` - Ignored
 
 ```x86asm
 00000000004d12b0 <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::makeSelection(int)>:

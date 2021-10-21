@@ -1,4 +1,4 @@
-# 0.assume.s
+# `BloombergLP::balber::operator<<(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::balber::BerConstants::TagType)` - Assumed
 
 ```x86asm
 0000000000406230 <BloombergLP::balber::operator<<(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::balber::BerConstants::TagType)>:

@@ -1,4 +1,4 @@
-# 1.none.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<RANDOM_PUSH_POP_TEST::PopperThread>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, RANDOM_PUSH_POP_TEST::PopperThread const&, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 00000000004ae6e0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<RANDOM_PUSH_POP_TEST::PopperThread>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, RANDOM_PUSH_POP_TEST::PopperThread const&, BloombergLP::bslma::Allocator*)>:

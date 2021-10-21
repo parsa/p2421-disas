@@ -1,4 +1,4 @@
-# 7.none.s
+# `BloombergLP::ball::(anonymous namespace)::bslsLogMessage(BloombergLP::bsls::LogSeverity::Enum, char const*, int, char const*)` - Ignored
 
 ```x86asm
 000000000040bf00 <BloombergLP::ball::(anonymous namespace)::bslsLogMessage(BloombergLP::bsls::LogSeverity::Enum, char const*, int, char const*)>:

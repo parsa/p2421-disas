@@ -1,4 +1,4 @@
-# 5.none.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(int, BloombergLP::bslmt::Barrier*), BloombergLP::bdlf::Bind_BoundTuple2<int, BloombergLP::bslmt::Barrier*> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(int, BloombergLP::bslmt::Barrier*), BloombergLP::bdlf::Bind_BoundTuple2<int, BloombergLP::bslmt::Barrier*> > const&, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 000000000041c480 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(int, BloombergLP::bslmt::Barrier*), BloombergLP::bdlf::Bind_BoundTuple2<int, BloombergLP::bslmt::Barrier*> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(int, BloombergLP::bslmt::Barrier*), BloombergLP::bdlf::Bind_BoundTuple2<int, BloombergLP::bslmt::Barrier*> > const&, BloombergLP::bslma::Allocator*)>:

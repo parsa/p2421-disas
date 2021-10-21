@@ -1,4 +1,4 @@
-# 2.none.s
+# `gg(bsl::vector<Action, bsl::allocator<Action> >*, BloombergLP::balm::MetricRegistry&, char const*)` - Ignored
 
 ```x86asm
 00000000004081b0 <gg(bsl::vector<Action, bsl::allocator<Action> >*, BloombergLP::balm::MetricRegistry&, char const*)>:

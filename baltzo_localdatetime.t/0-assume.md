@@ -1,4 +1,4 @@
-# 0.assume.s
+# `BloombergLP::bslx::MarshallingUtil::getArrayUint40(unsigned long long*, char const*, int)` - Assumed
 
 ```x86asm
 00000000004575d0 <BloombergLP::bslx::MarshallingUtil::getArrayUint40(unsigned long long*, char const*, int)>:

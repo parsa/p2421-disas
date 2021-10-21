@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::baltzo::Zoneinfo::addTransition(long long, BloombergLP::baltzo::LocalTimeDescriptor const&)` - Ignored
 
 ```x86asm
 000000000040da10 <BloombergLP::baltzo::Zoneinfo::addTransition(long long, BloombergLP::baltzo::LocalTimeDescriptor const&)>:

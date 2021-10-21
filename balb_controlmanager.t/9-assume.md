@@ -1,4 +1,4 @@
-# 9.assume.s
+# `BloombergLP::bdlb::String::copy(char const*, int, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 000000000040d100 <BloombergLP::bdlb::String::copy(char const*, int, BloombergLP::bslma::Allocator*)>:

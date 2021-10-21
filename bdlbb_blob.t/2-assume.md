@@ -1,4 +1,4 @@
-# 2.assume.s
+# `BloombergLP::bdlbb::Blob::appendDataBuffer(BloombergLP::bdlbb::BlobBuffer const&)` - Assumed
 
 ```x86asm
 000000000041eb30 <BloombergLP::bdlbb::Blob::appendDataBuffer(BloombergLP::bdlbb::BlobBuffer const&)>:

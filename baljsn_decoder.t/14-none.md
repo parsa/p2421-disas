@@ -1,4 +1,4 @@
-# 14.none.s
+# `BloombergLP::s_baltst::Colors::toString(BloombergLP::s_baltst::Colors::Value)` - Ignored
 
 ```x86asm
 0000000000406870 <BloombergLP::s_baltst::Colors::toString(BloombergLP::s_baltst::Colors::Value)>:

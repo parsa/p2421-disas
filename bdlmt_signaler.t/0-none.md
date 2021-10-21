@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::bdlmt::Signaler_Invocable<BloombergLP::bdlmt::Signaler<void (BloombergLP::bdlcc::Deque<(anonymous namespace)::u::DoubleTI>*)>, void (BloombergLP::bdlcc::Deque<(anonymous namespace)::u::DoubleTI>*)>::operator()(BloombergLP::bdlcc::Deque<(anonymous namespace)::u::DoubleTI>*) const` - Ignored
 
 ```x86asm
 0000000000417be0 <BloombergLP::bdlmt::Signaler_Invocable<BloombergLP::bdlmt::Signaler<void (BloombergLP::bdlcc::Deque<(anonymous namespace)::u::DoubleTI>*)>, void (BloombergLP::bdlcc::Deque<(anonymous namespace)::u::DoubleTI>*)>::operator()(BloombergLP::bdlcc::Deque<(anonymous namespace)::u::DoubleTI>*) const>:

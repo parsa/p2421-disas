@@ -1,4 +1,4 @@
-# 2.none.s
+# `BenchmarkSuite::run(int, int, char**)` - Ignored
 
 ```x86asm
 0000000000405ef0 <BenchmarkSuite::run(int, int, char**)>:

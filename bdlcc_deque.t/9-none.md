@@ -1,4 +1,4 @@
-# 9.none.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<TEST_CASE_5::StraightHWMFunctorFront>(unsigned long*, TEST_CASE_5::StraightHWMFunctorFront const&, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 00000000004bc1a0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<TEST_CASE_5::StraightHWMFunctorFront>(unsigned long*, TEST_CASE_5::StraightHWMFunctorFront const&, BloombergLP::bslma::Allocator*)>:

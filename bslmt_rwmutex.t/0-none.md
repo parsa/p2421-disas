@@ -1,4 +1,4 @@
-# 0.none.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<ReaderThread>(unsigned long*, ReaderThread const&, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 0000000000408150 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<ReaderThread>(unsigned long*, ReaderThread const&, BloombergLP::bslma::Allocator*)>:

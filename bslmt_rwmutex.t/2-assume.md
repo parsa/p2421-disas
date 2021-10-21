@@ -1,4 +1,4 @@
-# 2.assume.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<PingPongReader<BloombergLP::bslmt::ReaderWriterLock> >(unsigned long*, PingPongReader<BloombergLP::bslmt::ReaderWriterLock> const&, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 0000000000409750 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<PingPongReader<BloombergLP::bslmt::ReaderWriterLock> >(unsigned long*, PingPongReader<BloombergLP::bslmt::ReaderWriterLock> const&, BloombergLP::bslma::Allocator*)>:

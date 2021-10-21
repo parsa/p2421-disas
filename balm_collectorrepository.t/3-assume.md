@@ -1,4 +1,4 @@
-# 3.assume.s
+# `BloombergLP::balm::MetricRegistry::insertId(char const*, char const*)` - Assumed
 
 ```x86asm
 000000000041b260 <BloombergLP::balm::MetricRegistry::insertId(char const*, char const*)>:

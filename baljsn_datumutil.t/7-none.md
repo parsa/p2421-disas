@@ -1,4 +1,4 @@
-# 7.none.s
+# `(anonymous namespace)::u::encodeValue(BloombergLP::baljsn::SimpleFormatter*, BloombergLP::bdld::Datum const&, int*, std::__1::basic_string_view<char, std::__1::char_traits<char> >*)` - Ignored
 
 ```x86asm
 000000000043e260 <(anonymous namespace)::u::encodeValue(BloombergLP::baljsn::SimpleFormatter*, BloombergLP::bdld::Datum const&, int*, std::__1::basic_string_view<char, std::__1::char_traits<char> >*)>:

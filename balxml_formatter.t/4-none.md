@@ -1,4 +1,4 @@
-# 4.none.s
+# `(anonymous namespace)::operator<<(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, (anonymous namespace)::ScalarData const&)` - Ignored
 
 ```x86asm
 000000000041e420 <(anonymous namespace)::operator<<(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, (anonymous namespace)::ScalarData const&)>:

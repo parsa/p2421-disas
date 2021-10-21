@@ -1,4 +1,4 @@
-# 6.none.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (BloombergLP::bdlmt::EventScheduler::*)(), BloombergLP::bdlf::Bind_BoundTuple1<BloombergLP::bdlmt::EventScheduler*> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (BloombergLP::bdlmt::EventScheduler::*)(), BloombergLP::bdlf::Bind_BoundTuple1<BloombergLP::bdlmt::EventScheduler*> > const&, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 0000000000434920 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (BloombergLP::bdlmt::EventScheduler::*)(), BloombergLP::bdlf::Bind_BoundTuple1<BloombergLP::bdlmt::EventScheduler*> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (BloombergLP::bdlmt::EventScheduler::*)(), BloombergLP::bdlf::Bind_BoundTuple1<BloombergLP::bdlmt::EventScheduler*> > const&, BloombergLP::bslma::Allocator*)>:

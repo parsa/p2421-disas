@@ -1,4 +1,4 @@
-# 0.assume.s
+# `loadWeekendDaysTransition(char const**, BloombergLP::bdlt::PackedCalendar*, BloombergLP::bdlt::Date const&)` - Assumed
 
 ```x86asm
 0000000000405140 <loadWeekendDaysTransition(char const**, BloombergLP::bdlt::PackedCalendar*, BloombergLP::bdlt::Date const&)>:

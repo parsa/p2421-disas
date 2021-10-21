@@ -1,4 +1,4 @@
-# 22.none.s
+# `BloombergLP::s_baltst::MyChoiceWithDefaultValues::makeSelection0()` - Ignored
 
 ```x86asm
 0000000000405460 <BloombergLP::s_baltst::MyChoiceWithDefaultValues::makeSelection0()>:

@@ -1,4 +1,4 @@
-# 0.none.s
+# `loadWeekendDaysTransition(char const**, BloombergLP::bdlt::PackedCalendar*, BloombergLP::bdlt::Date const&)` - Ignored
 
 ```x86asm
 0000000000405140 <loadWeekendDaysTransition(char const**, BloombergLP::bdlt::PackedCalendar*, BloombergLP::bdlt::Date const&)>:

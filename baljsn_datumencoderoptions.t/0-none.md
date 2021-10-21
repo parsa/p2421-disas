@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::baljsn::EncodingStyle::toString(BloombergLP::baljsn::EncodingStyle::Value)` - Ignored
 
 ```x86asm
 000000000040db90 <BloombergLP::baljsn::EncodingStyle::toString(BloombergLP::baljsn::EncodingStyle::Value)>:

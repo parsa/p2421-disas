@@ -1,4 +1,4 @@
-# 50.none.s
+# `BloombergLP::balb::Sequence1::reset()` - Ignored
 
 ```x86asm
 000000000040fd20 <BloombergLP::balb::Sequence1::reset()>:

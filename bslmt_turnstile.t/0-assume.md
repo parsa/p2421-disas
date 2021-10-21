@@ -1,4 +1,4 @@
-# 0.assume.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<WaitTurnAndSleepCallbackJob>(unsigned long*, WaitTurnAndSleepCallbackJob const&, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 00000000004089e0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<WaitTurnAndSleepCallbackJob>(unsigned long*, WaitTurnAndSleepCallbackJob const&, BloombergLP::bslma::Allocator*)>:

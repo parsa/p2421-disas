@@ -1,4 +1,4 @@
-# 1.none.s
+# `(anonymous namespace)::BucketsWrapper<char const*>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 000000000041a440 <(anonymous namespace)::BucketsWrapper<char const*>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)>:

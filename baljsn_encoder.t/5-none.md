@@ -1,4 +1,4 @@
-# 5.none.s
+# `BloombergLP::s_baltst::Sequence4::Sequence4(BloombergLP::s_baltst::Sequence4 const&, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 00000000004bef90 <BloombergLP::s_baltst::Sequence4::Sequence4(BloombergLP::s_baltst::Sequence4 const&, BloombergLP::bslma::Allocator*)>:

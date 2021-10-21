@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::bslmt::EntryPointFunctorAdapter<(anonymous namespace)::u::SynchronizedAddJob>::invokerFunction(void*)` - Ignored
 
 ```x86asm
 00000000004071f0 <BloombergLP::bslmt::EntryPointFunctorAdapter<(anonymous namespace)::u::SynchronizedAddJob>::invokerFunction(void*)>:

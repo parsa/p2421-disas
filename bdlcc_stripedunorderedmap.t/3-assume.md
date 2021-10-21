@@ -1,4 +1,4 @@
-# 3.assume.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bslmt::ThroughputBenchmark_WorkFunction>(unsigned long*, BloombergLP::bslmt::ThroughputBenchmark_WorkFunction const&, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 0000000000585c70 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bslmt::ThroughputBenchmark_WorkFunction>(unsigned long*, BloombergLP::bslmt::ThroughputBenchmark_WorkFunction const&, BloombergLP::bslma::Allocator*)>:

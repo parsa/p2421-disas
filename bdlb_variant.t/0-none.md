@@ -1,4 +1,4 @@
-# 0.none.s
+# `void BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApply<my_PrintVisitor&>(my_PrintVisitor&, int)` - Ignored
 
 ```x86asm
 00000000004ea710 <void BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApply<my_PrintVisitor&>(my_PrintVisitor&, int)>:

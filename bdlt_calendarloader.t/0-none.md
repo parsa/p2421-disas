@@ -1,4 +1,4 @@
-# 0.none.s
+# `MyCalendarLoader::load(BloombergLP::bdlt::PackedCalendar*, char const*)` - Ignored
 
 ```x86asm
 00000000004026a0 <MyCalendarLoader::load(BloombergLP::bdlt::PackedCalendar*, char const*)>:

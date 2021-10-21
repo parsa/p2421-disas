@@ -1,4 +1,4 @@
-# 1.none.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<WaitTurnCallbackJob>(unsigned long*, WaitTurnCallbackJob const&, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 0000000000408de0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<WaitTurnCallbackJob>(unsigned long*, WaitTurnCallbackJob const&, BloombergLP::bslma::Allocator*)>:

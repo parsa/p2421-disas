@@ -1,4 +1,4 @@
-# 15.assume.s
+# `int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)` - Assumed
 
 ```x86asm
 00000000004e2380 <int BloombergLP::bdlat_SequenceFunctions::bdlat_sequenceAccessAttribute<BloombergLP::s_baltst::MySequenceWithAnonymousChoice, BloombergLP::balxml::Encoder_EncodeValue>(BloombergLP::s_baltst::MySequenceWithAnonymousChoice const&, BloombergLP::balxml::Encoder_EncodeValue&, int)>:

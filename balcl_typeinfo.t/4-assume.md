@@ -1,4 +1,4 @@
-# 4.assume.s
+# `(anonymous namespace)::u::setLinkedVariable(BloombergLP::balcl::TypeInfo*, BloombergLP::balcl::OptionType::Enum, void*)` - Assumed
 
 ```x86asm
 00000000004142e0 <(anonymous namespace)::u::setLinkedVariable(BloombergLP::balcl::TypeInfo*, BloombergLP::balcl::OptionType::Enum, void*)>:

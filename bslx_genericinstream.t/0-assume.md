@@ -1,4 +1,4 @@
-# 0.assume.s
+# `BloombergLP::bslx::GenericInStream<bsl::basic_stringbuf<char, std::__1::char_traits<char>, bsl::allocator<char> > >::getString(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >&)` - Assumed
 
 ```x86asm
 0000000000434250 <BloombergLP::bslx::GenericInStream<bsl::basic_stringbuf<char, std::__1::char_traits<char>, bsl::allocator<char> > >::getString(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >&)>:

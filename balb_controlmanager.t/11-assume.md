@@ -1,4 +1,4 @@
-# 11.assume.s
+# `BloombergLP::bdlb::String::rtrim(char const*, int*)` - Assumed
 
 ```x86asm
 000000000040d320 <BloombergLP::bdlb::String::rtrim(char const*, int*)>:

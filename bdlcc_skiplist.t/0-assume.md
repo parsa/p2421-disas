@@ -1,4 +1,4 @@
-# 0.assume.s
+# `BloombergLP::bdlcc::SkipList_PoolUtil::createPoolManager(int*, int, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 000000000064a120 <BloombergLP::bdlcc::SkipList_PoolUtil::createPoolManager(int*, int, BloombergLP::bslma::Allocator*)>:

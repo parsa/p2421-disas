@@ -1,4 +1,4 @@
-# 98.none.s
+# `BloombergLP::s_baltst::Sequence4::~Sequence4()` - Ignored
 
 ```x86asm
 00000000004c06a0 <BloombergLP::s_baltst::Sequence4::~Sequence4()>:

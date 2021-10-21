@@ -1,4 +1,4 @@
-# 2.none.s
+# `BloombergLP::test::MixedSequence::MixedSequence(BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 000000000040ecb0 <BloombergLP::test::MixedSequence::MixedSequence(BloombergLP::bslma::Allocator*)>:

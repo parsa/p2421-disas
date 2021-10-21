@@ -1,4 +1,4 @@
-# 0.none.s
+# `.annobin_static_reloc.c_end.hot` - Ignored
 
 ```x86asm
 0000000000405291 <.annobin_static_reloc.c_end.hot>:

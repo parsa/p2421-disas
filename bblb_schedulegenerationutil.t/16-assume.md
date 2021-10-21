@@ -1,4 +1,4 @@
-# 16.assume.s
+# `BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::replaceImp(unsigned long, unsigned long)` - Assumed
 
 ```x86asm
 000000000041e770 <BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::replaceImp(unsigned long, unsigned long)>:

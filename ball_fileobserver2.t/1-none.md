@@ -1,4 +1,4 @@
-# 1.none.s
+# `(anonymous namespace)::publishRecord(BloombergLP::ball::FileObserver2*, char const*)` - Ignored
 
 ```x86asm
 0000000000426aa0 <(anonymous namespace)::publishRecord(BloombergLP::ball::FileObserver2*, char const*)>:

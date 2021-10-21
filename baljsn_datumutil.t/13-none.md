@@ -1,4 +1,4 @@
-# 13.none.s
+# `BloombergLP::bdlb::BitStringUtil::andEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)` - Ignored
 
 ```x86asm
 0000000000442b80 <BloombergLP::bdlb::BitStringUtil::andEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)>:

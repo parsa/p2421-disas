@@ -1,4 +1,4 @@
-# 10.assume.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<USAGE_EXAMPLE_1::ConsumerFunctor>(unsigned long*, USAGE_EXAMPLE_1::ConsumerFunctor const&, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 00000000004943e0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<USAGE_EXAMPLE_1::ConsumerFunctor>(unsigned long*, USAGE_EXAMPLE_1::ConsumerFunctor const&, BloombergLP::bslma::Allocator*)>:

@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::bslx::MarshallingUtil::getArrayUint40(unsigned long long*, char const*, int)` - Ignored
 
 ```x86asm
 0000000000457750 <BloombergLP::bslx::MarshallingUtil::getArrayUint40(unsigned long long*, char const*, int)>:

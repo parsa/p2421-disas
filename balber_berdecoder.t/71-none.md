@@ -1,4 +1,4 @@
-# 71.none.s
+# `BloombergLP::balber::BerUtil_StringImpUtil::putChars(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, char, int)` - Ignored
 
 ```x86asm
 0000000000454a70 <BloombergLP::balber::BerUtil_StringImpUtil::putChars(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, char, int)>:

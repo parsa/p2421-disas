@@ -1,4 +1,4 @@
-# 7.assume.s
+# `BloombergLP::ball::(anonymous namespace)::bslsLogMessage(BloombergLP::bsls::LogSeverity::Enum, char const*, int, char const*)` - Assumed
 
 ```x86asm
 000000000040bea0 <BloombergLP::ball::(anonymous namespace)::bslsLogMessage(BloombergLP::bsls::LogSeverity::Enum, char const*, int, char const*)>:

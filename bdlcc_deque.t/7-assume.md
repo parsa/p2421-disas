@@ -1,4 +1,4 @@
-# 7.assume.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<TEST_CASE_26::TimedPopRecordFront<double> >(unsigned long*, TEST_CASE_26::TimedPopRecordFront<double> const&, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 0000000000496330 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<TEST_CASE_26::TimedPopRecordFront<double> >(unsigned long*, TEST_CASE_26::TimedPopRecordFront<double> const&, BloombergLP::bslma::Allocator*)>:

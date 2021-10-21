@@ -1,4 +1,4 @@
-# 1.assume.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<PingPongReader<BloombergLP::bslmt::RWMutex> >(unsigned long*, PingPongReader<BloombergLP::bslmt::RWMutex> const&, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 0000000000408790 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<PingPongReader<BloombergLP::bslmt::RWMutex> >(unsigned long*, PingPongReader<BloombergLP::bslmt::RWMutex> const&, BloombergLP::bslma::Allocator*)>:

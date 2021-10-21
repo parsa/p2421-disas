@@ -1,4 +1,4 @@
-# 21.none.s
+# `BloombergLP::bdlt::PosixDateImpUtil::lastDayOfMonth(int, int)` - Ignored
 
 ```x86asm
 00000000004137d0 <BloombergLP::bdlt::PosixDateImpUtil::lastDayOfMonth(int, int)>:

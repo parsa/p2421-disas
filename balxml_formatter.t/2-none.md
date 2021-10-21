@@ -1,4 +1,4 @@
-# 2.none.s
+# `std::__1::basic_ostream<char, std::__1::char_traits<char> >& BloombergLP::balxml::TypesPrintUtil::print<BloombergLP::bdlt::Time>(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::bdlt::Time const&, int, BloombergLP::balxml::EncoderOptions const*)` - Ignored
 
 ```x86asm
 0000000000424490 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& BloombergLP::balxml::TypesPrintUtil::print<BloombergLP::bdlt::Time>(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::bdlt::Time const&, int, BloombergLP::balxml::EncoderOptions const*)>:

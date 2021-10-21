@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::balber::operator<<(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::balber::BerConstants::TagType)` - Ignored
 
 ```x86asm
 0000000000406240 <BloombergLP::balber::operator<<(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::balber::BerConstants::TagType)>:

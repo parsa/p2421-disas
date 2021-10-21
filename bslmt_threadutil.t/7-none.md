@@ -1,4 +1,4 @@
-# 7.none.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<STACKSIZE_TEST_CASE_NAMESPACE::Func<1048576> >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, STACKSIZE_TEST_CASE_NAMESPACE::Func<1048576> const&, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 00000000004208a0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<STACKSIZE_TEST_CASE_NAMESPACE::Func<1048576> >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, STACKSIZE_TEST_CASE_NAMESPACE::Func<1048576> const&, BloombergLP::bslma::Allocator*)>:

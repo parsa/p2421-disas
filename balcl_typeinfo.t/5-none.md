@@ -1,4 +1,4 @@
-# 5.none.s
+# `(anonymous namespace)::u::setType(BloombergLP::balcl::TypeInfo*, BloombergLP::balcl::OptionType::Enum)` - Ignored
 
 ```x86asm
 00000000004141c0 <(anonymous namespace)::u::setType(BloombergLP::balcl::TypeInfo*, BloombergLP::balcl::OptionType::Enum)>:

@@ -1,4 +1,4 @@
-# 8.assume.s
+# `BloombergLP::bdldfp::DecimalImpUtil::classify(BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128)` - Assumed
 
 ```x86asm
 0000000000476620 <BloombergLP::bdldfp::DecimalImpUtil::classify(BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128)>:

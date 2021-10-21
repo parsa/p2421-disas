@@ -1,4 +1,4 @@
-# 8.none.s
+# `BloombergLP::bdlb::String::areEqualCaseless(char const*, int, char const*, int)` - Ignored
 
 ```x86asm
 000000000040cfb0 <BloombergLP::bdlb::String::areEqualCaseless(char const*, int, char const*, int)>:

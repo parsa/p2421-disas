@@ -1,4 +1,4 @@
-# 7.none.s
+# `BloombergLP::ball::Record::Record(BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 0000000000429a00 <BloombergLP::ball::Record::Record(BloombergLP::bslma::Allocator*)>:

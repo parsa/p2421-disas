@@ -1,4 +1,4 @@
-# 0.assume.s
+# `BloombergLP::bbldc::BasicDayCountUtil::daysDiff(BloombergLP::bdlt::Date const&, BloombergLP::bdlt::Date const&, BloombergLP::bbldc::DayCountConvention::Enum)` - Assumed
 
 ```x86asm
 00000000004037a0 <BloombergLP::bbldc::BasicDayCountUtil::daysDiff(BloombergLP::bdlt::Date const&, BloombergLP::bdlt::Date const&, BloombergLP::bbldc::DayCountConvention::Enum)>:

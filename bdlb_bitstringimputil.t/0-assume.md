@@ -1,4 +1,4 @@
-# 0.assume.s
+# `find1AtMaxOracle(unsigned long)` - Assumed
 
 ```x86asm
 00000000004018e0 <find1AtMaxOracle(unsigned long)>:

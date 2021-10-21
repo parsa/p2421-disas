@@ -1,4 +1,4 @@
-# 3.none.s
+# `BloombergLP::ball::UserFieldValue& bsl::vector<BloombergLP::ball::UserFieldValue, bsl::allocator<BloombergLP::ball::UserFieldValue> >::emplace_back<bsl::vector<char, bsl::allocator<char> > const&>(bsl::vector<char, bsl::allocator<char> > const&)` - Ignored
 
 ```x86asm
 0000000000413a30 <BloombergLP::ball::UserFieldValue& bsl::vector<BloombergLP::ball::UserFieldValue, bsl::allocator<BloombergLP::ball::UserFieldValue> >::emplace_back<bsl::vector<char, bsl::allocator<char> > const&>(bsl::vector<char, bsl::allocator<char> > const&)>:

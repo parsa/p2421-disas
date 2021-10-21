@@ -1,4 +1,4 @@
-# 0.assume.s
+# `BloombergLP::bdlmt::MultiQueueThreadPool::pauseQueue(int)` - Assumed
 
 ```x86asm
 0000000000434af0 <BloombergLP::bdlmt::MultiQueueThreadPool::pauseQueue(int)>:

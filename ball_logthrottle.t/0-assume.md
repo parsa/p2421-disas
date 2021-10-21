@@ -1,4 +1,4 @@
-# 0.assume.s
+# `BloombergLP::bdlmt::Throttle::initialize(int, long long, BloombergLP::bsls::SystemClockType::Enum)` - Assumed
 
 ```x86asm
 0000000000446af0 <BloombergLP::bdlmt::Throttle::initialize(int, long long, BloombergLP::bsls::SystemClockType::Enum)>:

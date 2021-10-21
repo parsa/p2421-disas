@@ -1,4 +1,4 @@
-# 7.none.s
+# `Case_Throttle_MULTITHREADED::threadJob()` - Ignored
 
 ```x86asm
 00000000004056e0 <Case_Throttle_MULTITHREADED::threadJob()>:

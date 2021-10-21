@@ -1,4 +1,4 @@
-# 1.none.s
+# `BloombergLP::bdlde::QuotedPrintableEncoder::appendPrintable(char*, char)` - Ignored
 
 ```x86asm
 000000000041ec70 <BloombergLP::bdlde::QuotedPrintableEncoder::appendPrintable(char*, char)>:

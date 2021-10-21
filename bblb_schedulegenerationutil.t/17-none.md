@@ -1,4 +1,4 @@
-# 17.none.s
+# `BloombergLP::bdlt::DayOfWeekSet_Iter::DayOfWeekSet_Iter(int, int)` - Ignored
 
 ```x86asm
 000000000040e6e0 <BloombergLP::bdlt::DayOfWeekSet_Iter::DayOfWeekSet_Iter(int, int)>:

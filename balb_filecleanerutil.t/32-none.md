@@ -1,4 +1,4 @@
-# 32.none.s
+# `BloombergLP::bdls::PathUtil::getLeaf(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >*, BloombergLP::bslstl::StringRefImp<char> const&, int)` - Ignored
 
 ```x86asm
 00000000004124b0 <BloombergLP::bdls::PathUtil::getLeaf(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >*, BloombergLP::bslstl::StringRefImp<char> const&, int)>:

@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::bbldc::PeriodDayCountUtil::daysDiff(BloombergLP::bdlt::Date const&, BloombergLP::bdlt::Date const&, BloombergLP::bbldc::DayCountConvention::Enum)` - Ignored
 
 ```x86asm
 0000000000404d30 <BloombergLP::bbldc::PeriodDayCountUtil::daysDiff(BloombergLP::bdlt::Date const&, BloombergLP::bdlt::Date const&, BloombergLP::bbldc::DayCountConvention::Enum)>:

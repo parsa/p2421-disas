@@ -1,4 +1,4 @@
-# 8.none.s
+# `BloombergLP::ball::Record::~Record()` - Ignored
 
 ```x86asm
 0000000000412d40 <BloombergLP::ball::Record::~Record()>:

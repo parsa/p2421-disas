@@ -1,4 +1,4 @@
-# 3.none.s
+# `(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 000000000041b040 <(anonymous namespace)::BucketsWrapper<void (*)()>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)>:

@@ -1,4 +1,4 @@
-# 34.assume.s
+# `BloombergLP::bdlde::Utf8Util::advanceRaw(char const**, char const*, long)` - Assumed
 
 ```x86asm
 000000000041dc00 <BloombergLP::bdlde::Utf8Util::advanceRaw(char const**, char const*, long)>:

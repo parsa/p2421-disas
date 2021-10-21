@@ -1,4 +1,4 @@
-# 0.assume.s
+# `(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)` - Assumed
 
 ```x86asm
 0000000000412f30 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)>:

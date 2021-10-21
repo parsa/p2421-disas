@@ -1,4 +1,4 @@
-# 6.assume.s
+# `int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)` - Assumed
 
 ```x86asm
 0000000000411020 <int BloombergLP::bdlat_SymbolicConverter_Imp::convert<BloombergLP::test::EnumerationA::Value, BloombergLP::test::EnumerationB::Value>(BloombergLP::test::EnumerationA::Value*, BloombergLP::bdlat_TypeCategory::Enumeration, BloombergLP::test::EnumerationB::Value const&, BloombergLP::bdlat_TypeCategory::Enumeration)>:

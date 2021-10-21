@@ -1,4 +1,4 @@
-# 40.assume.s
+# `int BloombergLP::baljsn::Encoder_ValueDispatcher::operator()<BloombergLP::bdlt::TimeTz>(BloombergLP::bdlt::TimeTz const&, BloombergLP::bdlat_TypeCategory::Simple)` - Assumed
 
 ```x86asm
 00000000004835a0 <int BloombergLP::baljsn::Encoder_ValueDispatcher::operator()<BloombergLP::bdlt::TimeTz>(BloombergLP::bdlt::TimeTz const&, BloombergLP::bdlat_TypeCategory::Simple)>:

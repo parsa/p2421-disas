@@ -1,4 +1,4 @@
-# 42.assume.s
+# `BloombergLP::balb::Sequence1::operator=(BloombergLP::balb::Sequence1 const&)` - Assumed
 
 ```x86asm
 000000000040fbe0 <BloombergLP::balb::Sequence1::operator=(BloombergLP::balb::Sequence1 const&)>:

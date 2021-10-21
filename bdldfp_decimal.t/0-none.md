@@ -1,4 +1,4 @@
-# 0.none.s
+# `bsl::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, bsl::allocator<wchar_t> >::seekoff(long long, std::__1::ios_base::seekdir, unsigned int)` - Ignored
 
 ```x86asm
 000000000047ef10 <bsl::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, bsl::allocator<wchar_t> >::seekoff(long long, std::__1::ios_base::seekdir, unsigned int)>:

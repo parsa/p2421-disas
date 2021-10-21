@@ -1,4 +1,4 @@
-# 4.assume.s
+# `BloombergLP::ball::Record::operator=(BloombergLP::ball::Record const&)` - Assumed
 
 ```x86asm
 0000000000419de0 <BloombergLP::ball::Record::operator=(BloombergLP::ball::Record const&)>:

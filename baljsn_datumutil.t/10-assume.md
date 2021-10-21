@@ -1,4 +1,4 @@
-# 10.assume.s
+# `void BloombergLP::bdld::Datum::apply<BloombergLP::bdld::(anonymous namespace)::Datum_StreamVisitor>(BloombergLP::bdld::(anonymous namespace)::Datum_StreamVisitor&) const` - Assumed
 
 ```x86asm
 000000000044a7c0 <void BloombergLP::bdld::Datum::apply<BloombergLP::bdld::(anonymous namespace)::Datum_StreamVisitor>(BloombergLP::bdld::(anonymous namespace)::Datum_StreamVisitor&) const>:

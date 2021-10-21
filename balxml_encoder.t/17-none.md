@@ -1,4 +1,4 @@
-# 17.none.s
+# `BloombergLP::bdlat_TypeName_Imp::xsdName(bsl::vector<char, bsl::allocator<char> > const*, int)` - Ignored
 
 ```x86asm
 00000000004effa0 <BloombergLP::bdlat_TypeName_Imp::xsdName(bsl::vector<char, bsl::allocator<char> > const*, int)>:

@@ -1,4 +1,4 @@
-# 0.assume.s
+# `abortSignalHandler` - Assumed
 
 ```x86asm
 0000000000400fb0 <abortSignalHandler>:

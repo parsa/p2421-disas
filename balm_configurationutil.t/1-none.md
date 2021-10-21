@@ -1,4 +1,4 @@
-# 1.none.s
+# `BloombergLP::balm::DefaultMetricsManager::destroy()` - Ignored
 
 ```x86asm
 000000000040dd70 <BloombergLP::balm::DefaultMetricsManager::destroy()>:

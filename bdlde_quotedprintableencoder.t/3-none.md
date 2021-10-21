@@ -1,4 +1,4 @@
-# 3.none.s
+# `BloombergLP::bdlde::QuotedPrintableEncoder::appendAsHex(char*, char, bool)` - Ignored
 
 ```x86asm
 000000000041ece0 <BloombergLP::bdlde::QuotedPrintableEncoder::appendAsHex(char*, char, bool)>:

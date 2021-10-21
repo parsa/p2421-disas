@@ -1,4 +1,4 @@
-# 3.assume.s
+# `int BloombergLP::bdlpcre::RegEx::matchImp<BloombergLP::bdlpcre::(anonymous namespace)::NOP>(BloombergLP::bdlpcre::(anonymous namespace)::NOP const&, char const*, unsigned long, unsigned long, bool) const` - Assumed
 
 ```x86asm
 000000000042abf0 <int BloombergLP::bdlpcre::RegEx::matchImp<BloombergLP::bdlpcre::(anonymous namespace)::NOP>(BloombergLP::bdlpcre::(anonymous namespace)::NOP const&, char const*, unsigned long, unsigned long, bool) const>:

@@ -1,4 +1,4 @@
-# 34.assume.s
+# `BloombergLP::bdlt::PackedCalendar_BusinessDayConstIterator::previousBusinessDay()` - Assumed
 
 ```x86asm
 0000000000412c90 <BloombergLP::bdlt::PackedCalendar_BusinessDayConstIterator::previousBusinessDay()>:

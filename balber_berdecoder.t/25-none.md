@@ -1,4 +1,4 @@
-# 25.none.s
+# `BloombergLP::s_baltst::MyChoice::reset()` - Ignored
 
 ```x86asm
 000000000045af90 <BloombergLP::s_baltst::MyChoice::reset()>:

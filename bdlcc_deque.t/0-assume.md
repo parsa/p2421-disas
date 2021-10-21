@@ -1,4 +1,4 @@
-# 0.assume.s
+# `(anonymous namespace)::u::ObjChecker<double>::~ObjChecker()` - Assumed
 
 ```x86asm
 00000000004326c0 <(anonymous namespace)::u::ObjChecker<double>::~ObjChecker()>:

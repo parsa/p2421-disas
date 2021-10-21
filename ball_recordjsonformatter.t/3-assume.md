@@ -1,4 +1,4 @@
-# 3.assume.s
+# `BloombergLP::ball::(anonymous namespace)::FileFormatter::format(BloombergLP::baljsn::SimpleFormatter*, BloombergLP::ball::Record const&)` - Assumed
 
 ```x86asm
 000000000041a470 <BloombergLP::ball::(anonymous namespace)::FileFormatter::format(BloombergLP::baljsn::SimpleFormatter*, BloombergLP::ball::Record const&)>:

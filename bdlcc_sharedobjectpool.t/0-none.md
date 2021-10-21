@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::SpLink, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::SpLink> >::getObject()` - Ignored
 
 ```x86asm
 0000000000409210 <BloombergLP::bdlcc::ObjectPool<(anonymous namespace)::SpLink, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Nil<(anonymous namespace)::SpLink> >::getObject()>:

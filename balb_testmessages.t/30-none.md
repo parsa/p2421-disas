@@ -1,4 +1,4 @@
-# 30.none.s
+# `BloombergLP::balb::SequenceWithAnonymityChoice1::makeSelection6(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)` - Ignored
 
 ```x86asm
 0000000000405220 <BloombergLP::balb::SequenceWithAnonymityChoice1::makeSelection6(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)>:

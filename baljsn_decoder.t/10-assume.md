@@ -1,4 +1,4 @@
-# 10.assume.s
+# `BloombergLP::bdlde::Utf8CheckingInStreamBufWrapper::seekoff(long long, std::__1::ios_base::seekdir, unsigned int)` - Assumed
 
 ```x86asm
 000000000048c160 <BloombergLP::bdlde::Utf8CheckingInStreamBufWrapper::seekoff(long long, std::__1::ios_base::seekdir, unsigned int)>:

@@ -1,4 +1,4 @@
-# 6.assume.s
+# `Case_Allow_All::threadJobInit()` - Assumed
 
 ```x86asm
 00000000004053c0 <Case_Allow_All::threadJobInit()>:

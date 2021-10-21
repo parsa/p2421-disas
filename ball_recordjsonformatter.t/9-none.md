@@ -1,4 +1,4 @@
-# 9.none.s
+# `BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)` - Ignored
 
 ```x86asm
 0000000000419530 <BloombergLP::ball::RecordJsonFormatter::setFormat(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)>:

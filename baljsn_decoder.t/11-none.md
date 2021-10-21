@@ -1,4 +1,4 @@
-# 11.none.s
+# `void BloombergLP::bslim::Printer_Helper::print<BloombergLP::s_baltst::Colors::Value const*>(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::s_baltst::Colors::Value const* const&, BloombergLP::s_baltst::Colors::Value const* const&, int, int)` - Ignored
 
 ```x86asm
 0000000000418210 <void BloombergLP::bslim::Printer_Helper::print<BloombergLP::s_baltst::Colors::Value const*>(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::s_baltst::Colors::Value const* const&, BloombergLP::s_baltst::Colors::Value const* const&, int, int)>:

@@ -1,4 +1,4 @@
-# 13.none.s
+# `BloombergLP::case4::Color::toString(BloombergLP::case4::Color::Value)` - Ignored
 
 ```x86asm
 0000000000408c90 <BloombergLP::case4::Color::toString(BloombergLP::case4::Color::Value)>:

@@ -1,4 +1,4 @@
-# 0.assume.s
+# `Action::typeString(Action::Type)` - Assumed
 
 ```x86asm
 00000000004064f0 <Action::typeString(Action::Type)>:

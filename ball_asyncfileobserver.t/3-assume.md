@@ -1,4 +1,4 @@
-# 3.assume.s
+# `BloombergLP::ball::AsyncFileObserver::releaseRecords()` - Assumed
 
 ```x86asm
 000000000042dd30 <BloombergLP::ball::AsyncFileObserver::releaseRecords()>:

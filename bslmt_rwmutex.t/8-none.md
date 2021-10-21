@@ -1,4 +1,4 @@
-# 8.none.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<ContentionWriter<BloombergLP::bslmt::ReaderWriterLock> >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, ContentionWriter<BloombergLP::bslmt::ReaderWriterLock> const&, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 0000000000409cc0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<ContentionWriter<BloombergLP::bslmt::ReaderWriterLock> >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, ContentionWriter<BloombergLP::bslmt::ReaderWriterLock> const&, BloombergLP::bslma::Allocator*)>:

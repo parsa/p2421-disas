@@ -1,4 +1,4 @@
-# 0.assume.s
+# `void BloombergLP::bslalg::ArrayPrimitives_Imp::copyConstruct<BloombergLP::ball::ManagedAttribute, BloombergLP::ball::ManagedAttribute const*, bsl::allocator<BloombergLP::ball::ManagedAttribute> >(BloombergLP::ball::ManagedAttribute*, BloombergLP::ball::ManagedAttribute const*, BloombergLP::ball::ManagedAttribute const*, bsl::allocator<BloombergLP::ball::ManagedAttribute>, BloombergLP::bslmf::MetaInt<0>*)` - Assumed
 
 ```x86asm
 000000000049bad0 <void BloombergLP::bslalg::ArrayPrimitives_Imp::copyConstruct<BloombergLP::ball::ManagedAttribute, BloombergLP::ball::ManagedAttribute const*, bsl::allocator<BloombergLP::ball::ManagedAttribute> >(BloombergLP::ball::ManagedAttribute*, BloombergLP::ball::ManagedAttribute const*, BloombergLP::ball::ManagedAttribute const*, bsl::allocator<BloombergLP::ball::ManagedAttribute>, BloombergLP::bslmf::MetaInt<0>*)>:

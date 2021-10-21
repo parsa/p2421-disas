@@ -1,4 +1,4 @@
-# 24.assume.s
+# `BloombergLP::balb::Choice1::~Choice1()` - Assumed
 
 ```x86asm
 00000000004155f0 <BloombergLP::balb::Choice1::~Choice1()>:

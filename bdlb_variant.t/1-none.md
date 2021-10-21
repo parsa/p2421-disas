@@ -1,4 +1,4 @@
-# 1.none.s
+# `bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)` - Ignored
 
 ```x86asm
 00000000004ea9f0 <bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > > >::doApplyR<ThirdPartyVisitor&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >(ThirdPartyVisitor&, int)>:

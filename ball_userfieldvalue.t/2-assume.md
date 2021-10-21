@@ -1,4 +1,4 @@
-# 2.assume.s
+# `void BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<long long, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlt::DatetimeTz, bsl::vector<char, bsl::allocator<char> > > >::doApply<BloombergLP::bdlb::Variant_MoveAssignVisitor&>(BloombergLP::bdlb::Variant_MoveAssignVisitor&, int)` - Assumed
 
 ```x86asm
 0000000000420ab0 <void BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<long long, double, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >, BloombergLP::bdlt::DatetimeTz, bsl::vector<char, bsl::allocator<char> > > >::doApply<BloombergLP::bdlb::Variant_MoveAssignVisitor&>(BloombergLP::bdlb::Variant_MoveAssignVisitor&, int)>:

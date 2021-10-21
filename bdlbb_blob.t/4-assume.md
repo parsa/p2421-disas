@@ -1,4 +1,4 @@
-# 4.assume.s
+# `BloombergLP::bdlbb::Blob::removeBuffers(int, int)` - Assumed
 
 ```x86asm
 000000000041ecf0 <BloombergLP::bdlbb::Blob::removeBuffers(int, int)>:

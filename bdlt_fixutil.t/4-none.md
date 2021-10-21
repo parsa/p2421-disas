@@ -1,4 +1,4 @@
-# 4.none.s
+# `BloombergLP::bdlt::FixUtil::generate(char*, int, BloombergLP::bdlt::DatetimeTz const&, BloombergLP::bdlt::FixUtilConfiguration const&)` - Ignored
 
 ```x86asm
 000000000043b1e0 <BloombergLP::bdlt::FixUtil::generate(char*, int, BloombergLP::bdlt::DatetimeTz const&, BloombergLP::bdlt::FixUtilConfiguration const&)>:

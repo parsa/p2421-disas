@@ -1,4 +1,4 @@
-# 2.assume.s
+# `BloombergLP::bdlcc::FixedQueueIndexManager::FixedQueueIndexManager(unsigned long, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 000000000040be50 <BloombergLP::bdlcc::FixedQueueIndexManager::FixedQueueIndexManager(unsigned long, BloombergLP::bslma::Allocator*)>:

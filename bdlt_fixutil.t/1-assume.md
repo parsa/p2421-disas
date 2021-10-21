@@ -1,4 +1,4 @@
-# 1.assume.s
+# `(anonymous namespace)::u::parseTime(char const**, BloombergLP::bdlt::Time*, int*, bool*, char const*, char const*)` - Assumed
 
 ```x86asm
 000000000043bcb0 <(anonymous namespace)::u::parseTime(char const**, BloombergLP::bdlt::Time*, int*, bool*, char const*, char const*)>:

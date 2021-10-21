@@ -1,4 +1,4 @@
-# 20.assume.s
+# `BloombergLP::bdlt::Calendar::addWeekendDays(BloombergLP::bdlt::DayOfWeekSet const&)` - Assumed
 
 ```x86asm
 000000000040cc10 <BloombergLP::bdlt::Calendar::addWeekendDays(BloombergLP::bdlt::DayOfWeekSet const&)>:

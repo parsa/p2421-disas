@@ -1,4 +1,4 @@
-# 1.none.s
+# `BloombergLP::s_baltst::Response::selectionName() const` - Ignored
 
 ```x86asm
 0000000000436570 <BloombergLP::s_baltst::Response::selectionName() const>:

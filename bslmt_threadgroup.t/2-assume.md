@@ -1,4 +1,4 @@
-# 2.assume.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<(anonymous namespace)::u::SynchronizedAddJob>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, (anonymous namespace)::u::SynchronizedAddJob const&, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 0000000000407030 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<(anonymous namespace)::u::SynchronizedAddJob>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, (anonymous namespace)::u::SynchronizedAddJob const&, BloombergLP::bslma::Allocator*)>:

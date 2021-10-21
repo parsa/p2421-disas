@@ -1,4 +1,4 @@
-# 50.none.s
+# `BloombergLP::s_baltst::MySequenceWithChoiceChoice::reset()` - Ignored
 
 ```x86asm
 00000000004b6800 <BloombergLP::s_baltst::MySequenceWithChoiceChoice::reset()>:

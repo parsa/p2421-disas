@@ -1,4 +1,4 @@
-# 10.assume.s
+# `int BloombergLP::balber::BerDecoder_Node::decodeChoice<BloombergLP::s_baltst::MyChoice>(BloombergLP::s_baltst::MyChoice*)` - Assumed
 
 ```x86asm
 0000000000449530 <int BloombergLP::balber::BerDecoder_Node::decodeChoice<BloombergLP::s_baltst::MyChoice>(BloombergLP::s_baltst::MyChoice*)>:

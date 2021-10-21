@@ -1,4 +1,4 @@
-# 8.none.s
+# `BloombergLP::ball::(anonymous namespace)::ThreadIdFormatter::parse(BloombergLP::bdld::DatumMapRef)` - Ignored
 
 ```x86asm
 000000000041b280 <BloombergLP::ball::(anonymous namespace)::ThreadIdFormatter::parse(BloombergLP::bdld::DatumMapRef)>:

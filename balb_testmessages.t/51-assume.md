@@ -1,4 +1,4 @@
-# 51.assume.s
+# `BloombergLP::balb::SequenceWithAnonymityChoice::makeSelection2()` - Assumed
 
 ```x86asm
 000000000040b710 <BloombergLP::balb::SequenceWithAnonymityChoice::makeSelection2()>:

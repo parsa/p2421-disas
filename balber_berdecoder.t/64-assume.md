@@ -1,4 +1,4 @@
-# 64.assume.s
+# `int BloombergLP::balber::BerUtil_IntegerImpUtil::putIntegerValue<unsigned short>(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, unsigned short)` - Assumed
 
 ```x86asm
 0000000000446740 <int BloombergLP::balber::BerUtil_IntegerImpUtil::putIntegerValue<unsigned short>(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, unsigned short)>:

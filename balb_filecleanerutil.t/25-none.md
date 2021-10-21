@@ -1,4 +1,4 @@
-# 25.none.s
+# `BloombergLP::bdlt::DatetimeInterval::printToBuffer(char*, int, int) const` - Ignored
 
 ```x86asm
 0000000000414780 <BloombergLP::bdlt::DatetimeInterval::printToBuffer(char*, int, int) const>:

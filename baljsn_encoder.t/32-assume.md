@@ -1,4 +1,4 @@
-# 32.assume.s
+# `BloombergLP::bslstl::Optional_DataImp<BloombergLP::s_baltst::Choice1>::reset()` - Assumed
 
 ```x86asm
 00000000004c98b0 <BloombergLP::bslstl::Optional_DataImp<BloombergLP::s_baltst::Choice1>::reset()>:

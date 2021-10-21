@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::bdls::FileDescriptorGuard::closeAndRelease()` - Ignored
 
 ```x86asm
 0000000000406ac0 <BloombergLP::bdls::FileDescriptorGuard::closeAndRelease()>:

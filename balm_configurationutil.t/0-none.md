@@ -1,4 +1,4 @@
-# 0.none.s
+# `ThresholdPublisher::publish(BloombergLP::balm::MetricSample const&)` - Ignored
 
 ```x86asm
 00000000004043f0 <ThresholdPublisher::publish(BloombergLP::balm::MetricSample const&)>:

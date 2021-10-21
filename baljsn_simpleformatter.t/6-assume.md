@@ -1,4 +1,4 @@
-# 6.assume.s
+# `int BloombergLP::baljsn::SimpleFormatter::addValue<BloombergLP::bdlt::DateTz>(BloombergLP::bdlt::DateTz const&)` - Assumed
 
 ```x86asm
 000000000042a810 <int BloombergLP::baljsn::SimpleFormatter::addValue<BloombergLP::bdlt::DateTz>(BloombergLP::bdlt::DateTz const&)>:

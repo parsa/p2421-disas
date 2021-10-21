@@ -1,4 +1,4 @@
-# 9.none.s
+# `BloombergLP::bdlt::FixUtil::generate(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, BloombergLP::bdlt::Date const&, BloombergLP::bdlt::FixUtilConfiguration const&)` - Ignored
 
 ```x86asm
 000000000043b7a0 <BloombergLP::bdlt::FixUtil::generate(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, BloombergLP::bdlt::Date const&, BloombergLP::bdlt::FixUtilConfiguration const&)>:

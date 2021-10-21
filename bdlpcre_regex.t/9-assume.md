@@ -1,4 +1,4 @@
-# 9.assume.s
+# `BloombergLP::bdlpcre::RegEx::prepareImp(char*, unsigned long, unsigned long*, char const*, int, unsigned long)` - Assumed
 
 ```x86asm
 000000000042a7d0 <BloombergLP::bdlpcre::RegEx::prepareImp(char*, unsigned long, unsigned long*, char const*, int, unsigned long)>:

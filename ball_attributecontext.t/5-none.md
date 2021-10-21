@@ -1,4 +1,4 @@
-# 5.none.s
+# `AttributeSet::insert(BloombergLP::ball::Attribute const&)` - Ignored
 
 ```x86asm
 00000000004057b0 <AttributeSet::insert(BloombergLP::ball::Attribute const&)>:

@@ -1,4 +1,4 @@
-# 1.assume.s
+# `workerThread1` - Assumed
 
 ```x86asm
 0000000000406680 <workerThread1>:

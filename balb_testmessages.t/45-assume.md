@@ -1,4 +1,4 @@
-# 45.assume.s
+# `BloombergLP::bdlde::Utf8Util::advanceIfValid(int*, char const**, char const*, unsigned long, long)` - Assumed
 
 ```x86asm
 000000000041d9f0 <BloombergLP::bdlde::Utf8Util::advanceIfValid(int*, char const**, char const*, unsigned long, long)>:

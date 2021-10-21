@@ -1,4 +1,4 @@
-# 0.assume.s
+# `case4ContextThread` - Assumed
 
 ```x86asm
 0000000000408920 <case4ContextThread>:

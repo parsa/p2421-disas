@@ -1,4 +1,4 @@
-# 77.none.s
+# `BloombergLP::s_baltst::Sequence1::reset()` - Ignored
 
 ```x86asm
 00000000004bb8b0 <BloombergLP::s_baltst::Sequence1::reset()>:

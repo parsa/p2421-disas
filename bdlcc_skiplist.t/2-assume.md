@@ -1,4 +1,4 @@
-# 2.assume.s
+# `BloombergLP::bdlcc::SkipList_Control::incrementRefCount()` - Assumed
 
 ```x86asm
 0000000000649be0 <BloombergLP::bdlcc::SkipList_Control::incrementRefCount()>:

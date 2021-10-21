@@ -1,4 +1,4 @@
-# 21.none.s
+# `BloombergLP::balb::SequenceWithAnonymityChoice1::reset()` - Ignored
 
 ```x86asm
 0000000000405330 <BloombergLP::balb::SequenceWithAnonymityChoice1::reset()>:

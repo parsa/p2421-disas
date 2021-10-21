@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::bdlbb::InBlobStreamBuf::underflow()` - Ignored
 
 ```x86asm
 000000000040ca30 <BloombergLP::bdlbb::InBlobStreamBuf::underflow()>:

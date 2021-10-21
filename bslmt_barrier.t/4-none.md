@@ -1,4 +1,4 @@
-# 4.none.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<Case6_Waiter>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, Case6_Waiter const&, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 0000000000408250 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<Case6_Waiter>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, Case6_Waiter const&, BloombergLP::bslma::Allocator*)>:

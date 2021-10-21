@@ -1,4 +1,4 @@
-# 12.none.s
+# `void BloombergLP::bslim::Printer::printAttribute<BloombergLP::s_baltst::Colors::Value>(BloombergLP::bslstl::StringRefImp<char> const&, BloombergLP::s_baltst::Colors::Value const&) const` - Ignored
 
 ```x86asm
 00000000004142c0 <void BloombergLP::bslim::Printer::printAttribute<BloombergLP::s_baltst::Colors::Value>(BloombergLP::bslstl::StringRefImp<char> const&, BloombergLP::s_baltst::Colors::Value const&) const>:

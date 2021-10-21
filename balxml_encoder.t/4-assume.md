@@ -1,4 +1,4 @@
-# 4.assume.s
+# `BloombergLP::balxml::EncodingStyle::toString(BloombergLP::balxml::EncodingStyle::Value)` - Assumed
 
 ```x86asm
 00000000004e6a70 <BloombergLP::balxml::EncodingStyle::toString(BloombergLP::balxml::EncodingStyle::Value)>:

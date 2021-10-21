@@ -1,4 +1,4 @@
-# 8.none.s
+# `BloombergLP::bdlcc::SkipList<BloombergLP::bsls::TimeInterval, bsl::function<void ()> >::allocateNode(int, BloombergLP::bsls::TimeInterval const&, bsl::function<void ()> const&)` - Ignored
 
 ```x86asm
 0000000000649aa0 <BloombergLP::bdlcc::SkipList<BloombergLP::bsls::TimeInterval, bsl::function<void ()> >::allocateNode(int, BloombergLP::bsls::TimeInterval const&, bsl::function<void ()> const&)>:

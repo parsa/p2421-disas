@@ -1,4 +1,4 @@
-# 0.none.s
+# `thread3Wait` - Ignored
 
 ```x86asm
 0000000000403e30 <thread3Wait>:

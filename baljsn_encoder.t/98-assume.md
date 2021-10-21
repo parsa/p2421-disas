@@ -1,4 +1,4 @@
-# 98.assume.s
+# `BloombergLP::s_baltst::Sequence4::~Sequence4()` - Assumed
 
 ```x86asm
 00000000004c05f0 <BloombergLP::s_baltst::Sequence4::~Sequence4()>:

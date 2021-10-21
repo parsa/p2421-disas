@@ -1,4 +1,4 @@
-# 54.assume.s
+# `BloombergLP::bdlt::Time::setSecond(int)` - Assumed
 
 ```x86asm
 000000000046bb60 <BloombergLP::bdlt::Time::setSecond(int)>:

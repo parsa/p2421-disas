@@ -1,4 +1,4 @@
-# 1.none.s
+# `(anonymous namespace)::u::parseTime(char const**, BloombergLP::bdlt::Time*, int*, bool*, char const*, char const*)` - Ignored
 
 ```x86asm
 000000000043be70 <(anonymous namespace)::u::parseTime(char const**, BloombergLP::bdlt::Time*, int*, bool*, char const*, char const*)>:

@@ -1,4 +1,4 @@
-# 3.assume.s
+# `BloombergLP::bdlde::QuotedPrintableEncoder::appendAsHex(char*, char, bool)` - Assumed
 
 ```x86asm
 000000000041ecd0 <BloombergLP::bdlde::QuotedPrintableEncoder::appendAsHex(char*, char, bool)>:

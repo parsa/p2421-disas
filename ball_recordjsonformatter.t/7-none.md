@@ -1,4 +1,4 @@
-# 7.none.s
+# `BloombergLP::ball::(anonymous namespace)::TimestampFormatter::parse(BloombergLP::bdld::DatumMapRef)` - Ignored
 
 ```x86asm
 000000000041ac70 <BloombergLP::ball::(anonymous namespace)::TimestampFormatter::parse(BloombergLP::bdld::DatumMapRef)>:

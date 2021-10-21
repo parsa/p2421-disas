@@ -1,4 +1,4 @@
-# 47.none.s
+# `BloombergLP::balb::Choice3::makeSelection2()` - Ignored
 
 ```x86asm
 000000000040a9b0 <BloombergLP::balb::Choice3::makeSelection2()>:

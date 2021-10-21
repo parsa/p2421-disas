@@ -1,4 +1,4 @@
-# 10.none.s
+# `void testCopyConstructWithIterators<AmbiguousConvertibleType>(bool, bool, bool)` - Ignored
 
 ```x86asm
 00000000004cd5b0 <void testCopyConstructWithIterators<AmbiguousConvertibleType>(bool, bool, bool)>:

@@ -1,4 +1,4 @@
-# 15.none.s
+# `(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)` - Ignored
 
 ```x86asm
 0000000000445e20 <(anonymous namespace)::Mover<&(BloombergLP::bdlb::BitStringImpUtil::setEqBits(unsigned long*, int, unsigned long, int)), &(BloombergLP::bdlb::BitStringImpUtil::setEqWord(unsigned long*, unsigned long))>::right(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)>:

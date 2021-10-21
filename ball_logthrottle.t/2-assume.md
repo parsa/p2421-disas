@@ -1,4 +1,4 @@
-# 2.assume.s
+# `Usage::radiationMonitorBlockDaemon()` - Assumed
 
 ```x86asm
 0000000000406910 <Usage::radiationMonitorBlockDaemon()>:

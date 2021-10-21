@@ -1,4 +1,4 @@
-# 0.assume.s
+# `BloombergLP::bslmt::Sluice::enter()` - Assumed
 
 ```x86asm
 0000000000406bb0 <BloombergLP::bslmt::Sluice::enter()>:

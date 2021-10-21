@@ -1,4 +1,4 @@
-# 5.assume.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<USAGE_EXAMPLE_2::WorkerFunctor>(unsigned long*, USAGE_EXAMPLE_2::WorkerFunctor const&, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 0000000000493870 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<USAGE_EXAMPLE_2::WorkerFunctor>(unsigned long*, USAGE_EXAMPLE_2::WorkerFunctor const&, BloombergLP::bslma::Allocator*)>:

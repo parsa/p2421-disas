@@ -1,4 +1,4 @@
-# 15.assume.s
+# `BloombergLP::balxml::MiniReader::advanceToNextNode()` - Assumed
 
 ```x86asm
 000000000047e8c0 <BloombergLP::balxml::MiniReader::advanceToNextNode()>:

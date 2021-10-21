@@ -1,4 +1,4 @@
-# 31.none.s
+# `BloombergLP::bdls::PathUtil::popLeaf(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >*, int)` - Ignored
 
 ```x86asm
 0000000000412310 <BloombergLP::bdls::PathUtil::popLeaf(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >*, int)>:

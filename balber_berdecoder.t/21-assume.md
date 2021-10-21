@@ -1,4 +1,4 @@
-# 21.assume.s
+# `int BloombergLP::balber::BerDecoder::decode<BloombergLP::bdlb::Variant2<BloombergLP::bdlt::Date, BloombergLP::bdlt::DateTz> >(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, BloombergLP::bdlb::Variant2<BloombergLP::bdlt::Date, BloombergLP::bdlt::DateTz>*)` - Assumed
 
 ```x86asm
 000000000043c060 <int BloombergLP::balber::BerDecoder::decode<BloombergLP::bdlb::Variant2<BloombergLP::bdlt::Date, BloombergLP::bdlt::DateTz> >(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, BloombergLP::bdlb::Variant2<BloombergLP::bdlt::Date, BloombergLP::bdlt::DateTz>*)>:

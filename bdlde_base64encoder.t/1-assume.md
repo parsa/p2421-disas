@@ -1,4 +1,4 @@
-# 1.assume.s
+# `isState(BloombergLP::bdlde::Base64Encoder*, int)` - Assumed
 
 ```x86asm
 0000000000405f90 <isState(BloombergLP::bdlde::Base64Encoder*, int)>:

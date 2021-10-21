@@ -1,4 +1,4 @@
-# 91.assume.s
+# `BloombergLP::s_baltst::SequenceWithAnonymityChoice::operator=(BloombergLP::s_baltst::SequenceWithAnonymityChoice&&)` - Assumed
 
 ```x86asm
 00000000004cff30 <BloombergLP::s_baltst::SequenceWithAnonymityChoice::operator=(BloombergLP::s_baltst::SequenceWithAnonymityChoice&&)>:

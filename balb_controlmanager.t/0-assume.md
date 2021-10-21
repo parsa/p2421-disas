@@ -1,4 +1,4 @@
-# 0.assume.s
+# `BloombergLP::bslh::SpookyHashAlgorithmImp::update(void const*, unsigned long)` - Assumed
 
 ```x86asm
 00000000004350a0 <BloombergLP::bslh::SpookyHashAlgorithmImp::update(void const*, unsigned long)>:

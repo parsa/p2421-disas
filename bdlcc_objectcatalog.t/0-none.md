@@ -1,4 +1,4 @@
-# 0.none.s
+# `verifyStateThread` - Ignored
 
 ```x86asm
 00000000004062b0 <verifyStateThread>:

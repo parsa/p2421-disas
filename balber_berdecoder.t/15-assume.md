@@ -1,4 +1,4 @@
-# 15.assume.s
+# `BloombergLP::s_baltst::MyChoice::operator=(BloombergLP::s_baltst::MyChoice const&)` - Assumed
 
 ```x86asm
 000000000045ae40 <BloombergLP::s_baltst::MyChoice::operator=(BloombergLP::s_baltst::MyChoice const&)>:

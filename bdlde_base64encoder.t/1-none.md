@@ -1,4 +1,4 @@
-# 1.none.s
+# `isState(BloombergLP::bdlde::Base64Encoder*, int)` - Ignored
 
 ```x86asm
 0000000000405f80 <isState(BloombergLP::bdlde::Base64Encoder*, int)>:

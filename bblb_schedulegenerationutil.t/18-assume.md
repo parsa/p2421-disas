@@ -1,4 +1,4 @@
-# 18.assume.s
+# `BloombergLP::bdlt::PackedCalendar::removeHoliday(BloombergLP::bdlt::Date const&)` - Assumed
 
 ```x86asm
 0000000000410f80 <BloombergLP::bdlt::PackedCalendar::removeHoliday(BloombergLP::bdlt::Date const&)>:

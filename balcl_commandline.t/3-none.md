@@ -1,4 +1,4 @@
-# 3.none.s
+# `BloombergLP::balcl::CommandLine::theBool(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const` - Ignored
 
 ```x86asm
 000000000045ce20 <BloombergLP::balcl::CommandLine::theBool(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const>:

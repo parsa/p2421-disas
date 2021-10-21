@@ -1,4 +1,4 @@
-# 2.assume.s
+# `BloombergLP::bslmt::ThroughputBenchmarkResult::initialize(int, bsl::vector<int, bsl::allocator<int> > const&)` - Assumed
 
 ```x86asm
 0000000000586190 <BloombergLP::bslmt::ThroughputBenchmarkResult::initialize(int, bsl::vector<int, bsl::allocator<int> > const&)>:

@@ -1,4 +1,4 @@
-# 25.assume.s
+# `BloombergLP::bdlt::DatetimeInterval::printToBuffer(char*, int, int) const` - Assumed
 
 ```x86asm
 0000000000414570 <BloombergLP::bdlt::DatetimeInterval::printToBuffer(char*, int, int) const>:

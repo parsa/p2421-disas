@@ -1,4 +1,4 @@
-# 43.none.s
+# `BloombergLP::balb::Choice3::makeSelection2(unsigned char)` - Ignored
 
 ```x86asm
 000000000040a480 <BloombergLP::balb::Choice3::makeSelection2(unsigned char)>:

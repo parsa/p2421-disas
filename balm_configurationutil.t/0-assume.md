@@ -1,4 +1,4 @@
-# 0.assume.s
+# `ThresholdPublisher::publish(BloombergLP::balm::MetricSample const&)` - Assumed
 
 ```x86asm
 00000000004043f0 <ThresholdPublisher::publish(BloombergLP::balm::MetricSample const&)>:

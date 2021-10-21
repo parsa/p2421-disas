@@ -1,4 +1,4 @@
-# 43.assume.s
+# `BloombergLP::balb::Choice3::makeSelection2(unsigned char)` - Assumed
 
 ```x86asm
 000000000040a4d0 <BloombergLP::balb::Choice3::makeSelection2(unsigned char)>:

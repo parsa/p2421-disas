@@ -1,4 +1,4 @@
-# 66.assume.s
+# `foo(int*)` - Assumed
 
 ```x86asm
 000000000046ebf0 <foo(int*)>:

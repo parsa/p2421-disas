@@ -1,4 +1,4 @@
-# 11.assume.s
+# `BloombergLP::bdlat_TypeName_Imp::xsdName(float const*, int)` - Assumed
 
 ```x86asm
 00000000004ef7c0 <BloombergLP::bdlat_TypeName_Imp::xsdName(float const*, int)>:

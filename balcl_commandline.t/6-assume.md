@@ -1,4 +1,4 @@
-# 6.assume.s
+# `BloombergLP::balcl::TypeInfo::resetConstraint()` - Assumed
 
 ```x86asm
 00000000004675a0 <BloombergLP::balcl::TypeInfo::resetConstraint()>:

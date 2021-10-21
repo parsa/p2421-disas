@@ -1,4 +1,4 @@
-# 25.none.s
+# `BloombergLP::bslstl::Optional_DataImp<BloombergLP::balb::Choice1>::reset()` - Ignored
 
 ```x86asm
 0000000000415580 <BloombergLP::bslstl::Optional_DataImp<BloombergLP::balb::Choice1>::reset()>:

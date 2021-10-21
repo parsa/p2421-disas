@@ -1,4 +1,4 @@
-# 8.assume.s
+# `int BloombergLP::balxml::Decoder_ParseObject::executeImp<BloombergLP::s_baltst::BasicSchemaRestrictionElementChoice>(BloombergLP::s_baltst::BasicSchemaRestrictionElementChoice*, int, BloombergLP::bdlat_TypeCategory::Choice)` - Assumed
 
 ```x86asm
 0000000000412230 <int BloombergLP::balxml::Decoder_ParseObject::executeImp<BloombergLP::s_baltst::BasicSchemaRestrictionElementChoice>(BloombergLP::s_baltst::BasicSchemaRestrictionElementChoice*, int, BloombergLP::bdlat_TypeCategory::Choice)>:

@@ -1,4 +1,4 @@
-# 4.none.s
+# `int BloombergLP::bdlpcre::RegEx::matchImp<BloombergLP::bdlpcre::(anonymous namespace)::VectorExtractor<bsl::vector<bsl::pair<unsigned long, unsigned long>, bsl::allocator<bsl::pair<unsigned long, unsigned long> > > > >(BloombergLP::bdlpcre::(anonymous namespace)::VectorExtractor<bsl::vector<bsl::pair<unsigned long, unsigned long>, bsl::allocator<bsl::pair<unsigned long, unsigned long> > > > const&, char const*, unsigned long, unsigned long, bool) const` - Ignored
 
 ```x86asm
 000000000042b140 <int BloombergLP::bdlpcre::RegEx::matchImp<BloombergLP::bdlpcre::(anonymous namespace)::VectorExtractor<bsl::vector<bsl::pair<unsigned long, unsigned long>, bsl::allocator<bsl::pair<unsigned long, unsigned long> > > > >(BloombergLP::bdlpcre::(anonymous namespace)::VectorExtractor<bsl::vector<bsl::pair<unsigned long, unsigned long>, bsl::allocator<bsl::pair<unsigned long, unsigned long> > > > const&, char const*, unsigned long, unsigned long, bool) const>:

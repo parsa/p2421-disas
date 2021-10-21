@@ -1,4 +1,4 @@
-# 12.assume.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<TEST_CASE_10::EmptyDequeFunctor>(unsigned long*, TEST_CASE_10::EmptyDequeFunctor const&, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 00000000004b87a0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<TEST_CASE_10::EmptyDequeFunctor>(unsigned long*, TEST_CASE_10::EmptyDequeFunctor const&, BloombergLP::bslma::Allocator*)>:

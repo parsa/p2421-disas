@@ -1,4 +1,4 @@
-# 1.assume.s
+# `BloombergLP::bsls::SystemTime::now(BloombergLP::bsls::SystemClockType::Enum)` - Assumed
 
 ```x86asm
 000000000041e970 <BloombergLP::bsls::SystemTime::now(BloombergLP::bsls::SystemClockType::Enum)>:

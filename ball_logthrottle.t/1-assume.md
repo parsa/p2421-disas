@@ -1,4 +1,4 @@
-# 1.assume.s
+# `BloombergLP::bdlmt::Throttle::requestPermissionIfValid(bool*, int, BloombergLP::bsls::TimeInterval const&)` - Assumed
 
 ```x86asm
 0000000000446c30 <BloombergLP::bdlmt::Throttle::requestPermissionIfValid(bool*, int, BloombergLP::bsls::TimeInterval const&)>:

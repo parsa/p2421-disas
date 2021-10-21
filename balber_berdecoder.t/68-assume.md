@@ -1,4 +1,4 @@
-# 68.assume.s
+# `BloombergLP::bdlt::ProlepticDateImpUtil::numLeapYears(int, int)` - Assumed
 
 ```x86asm
 000000000046a6f0 <BloombergLP::bdlt::ProlepticDateImpUtil::numLeapYears(int, int)>:

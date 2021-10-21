@@ -1,4 +1,4 @@
-# 5.none.s
+# `BloombergLP::bslstl::Function_Rep::allocateBuf(unsigned long)` - Ignored
 
 ```x86asm
 0000000000410470 <BloombergLP::bslstl::Function_Rep::allocateBuf(unsigned long)>:

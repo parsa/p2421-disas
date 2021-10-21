@@ -1,4 +1,4 @@
-# 1.none.s
+# `void BloombergLP::bdld::hashAppend<MockAccumulatingHashingAlgorithm>(MockAccumulatingHashingAlgorithm&, BloombergLP::bdld::Datum const&)` - Ignored
 
 ```x86asm
 000000000045c6d0 <void BloombergLP::bdld::hashAppend<MockAccumulatingHashingAlgorithm>(MockAccumulatingHashingAlgorithm&, BloombergLP::bdld::Datum const&)>:

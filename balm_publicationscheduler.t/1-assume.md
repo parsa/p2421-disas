@@ -1,4 +1,4 @@
-# 1.assume.s
+# `operator<<(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, Action const&)` - Assumed
 
 ```x86asm
 0000000000406430 <operator<<(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, Action const&)>:

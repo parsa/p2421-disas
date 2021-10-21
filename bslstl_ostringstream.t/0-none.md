@@ -1,4 +1,4 @@
-# 0.none.s
+# `bsl::basic_stringbuf<char, std::__1::char_traits<char>, BloombergLP::bsltf::StdStatefulAllocator<char, true, true, false, true> >::seekoff(long long, std::__1::ios_base::seekdir, unsigned int)` - Ignored
 
 ```x86asm
 000000000041ee30 <bsl::basic_stringbuf<char, std::__1::char_traits<char>, BloombergLP::bsltf::StdStatefulAllocator<char, true, true, false, true> >::seekoff(long long, std::__1::ios_base::seekdir, unsigned int)>:

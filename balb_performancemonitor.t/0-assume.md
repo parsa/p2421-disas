@@ -1,4 +1,4 @@
-# 0.assume.s
+# `BloombergLP::bdlma::ConcurrentPool::reserveCapacity(int)` - Assumed
 
 ```x86asm
 0000000000422a30 <BloombergLP::bdlma::ConcurrentPool::reserveCapacity(int)>:

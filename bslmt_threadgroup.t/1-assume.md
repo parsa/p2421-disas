@@ -1,4 +1,4 @@
-# 1.assume.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<(anonymous namespace)::u::ThreadChecker::ThreadCheckerFunctor>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, (anonymous namespace)::u::ThreadChecker::ThreadCheckerFunctor const&, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 0000000000407450 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<(anonymous namespace)::u::ThreadChecker::ThreadCheckerFunctor>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, (anonymous namespace)::u::ThreadChecker::ThreadCheckerFunctor const&, BloombergLP::bslma::Allocator*)>:

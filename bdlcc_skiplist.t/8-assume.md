@@ -1,4 +1,4 @@
-# 8.assume.s
+# `BloombergLP::bdlcc::SkipList<BloombergLP::bsls::TimeInterval, bsl::function<void ()> >::allocateNode(int, BloombergLP::bsls::TimeInterval const&, bsl::function<void ()> const&)` - Assumed
 
 ```x86asm
 00000000006490e0 <BloombergLP::bdlcc::SkipList<BloombergLP::bsls::TimeInterval, bsl::function<void ()> >::allocateNode(int, BloombergLP::bsls::TimeInterval const&, bsl::function<void ()> const&)>:

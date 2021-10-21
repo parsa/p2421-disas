@@ -1,4 +1,4 @@
-# 5.assume.s
+# `BloombergLP::balb::Sequence1::Sequence1(BloombergLP::balb::Sequence1 const&, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 000000000040f5f0 <BloombergLP::balb::Sequence1::Sequence1(BloombergLP::balb::Sequence1 const&, BloombergLP::bslma::Allocator*)>:

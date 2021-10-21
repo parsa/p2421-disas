@@ -1,4 +1,4 @@
-# 3.assume.s
+# `Usage::radiationMonitorPrintfDaemon()` - Assumed
 
 ```x86asm
 0000000000406dd0 <Usage::radiationMonitorPrintfDaemon()>:

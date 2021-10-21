@@ -1,4 +1,4 @@
-# 2.none.s
+# `BloombergLP::bdlb::String::lowerCaseCmp(char const*, char const*, int)` - Ignored
 
 ```x86asm
 000000000040d090 <BloombergLP::bdlb::String::lowerCaseCmp(char const*, char const*, int)>:

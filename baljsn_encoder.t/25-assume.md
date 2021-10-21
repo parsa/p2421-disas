@@ -1,4 +1,4 @@
-# 25.assume.s
+# `BloombergLP::s_baltst::MySequenceWithChoiceChoice::operator=(BloombergLP::s_baltst::MySequenceWithChoiceChoice&&)` - Assumed
 
 ```x86asm
 00000000004b6540 <BloombergLP::s_baltst::MySequenceWithChoiceChoice::operator=(BloombergLP::s_baltst::MySequenceWithChoiceChoice&&)>:

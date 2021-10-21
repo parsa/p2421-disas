@@ -1,4 +1,4 @@
-# 29.assume.s
+# `BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::selectionName() const` - Assumed
 
 ```x86asm
 000000000045d120 <BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::selectionName() const>:

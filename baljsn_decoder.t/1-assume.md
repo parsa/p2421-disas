@@ -1,4 +1,4 @@
-# 1.assume.s
+# `BloombergLP::bdlde::Utf8CheckingInStreamBufWrapper::xsgetn(char*, long)` - Assumed
 
 ```x86asm
 000000000048c330 <BloombergLP::bdlde::Utf8CheckingInStreamBufWrapper::xsgetn(char*, long)>:

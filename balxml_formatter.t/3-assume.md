@@ -1,4 +1,4 @@
-# 3.assume.s
+# `std::__1::basic_ostream<char, std::__1::char_traits<char> >& BloombergLP::balxml::TypesPrintUtil::print<BloombergLP::bdlt::Date>(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::bdlt::Date const&, int, BloombergLP::balxml::EncoderOptions const*)` - Assumed
 
 ```x86asm
 0000000000424370 <std::__1::basic_ostream<char, std::__1::char_traits<char> >& BloombergLP::balxml::TypesPrintUtil::print<BloombergLP::bdlt::Date>(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::bdlt::Date const&, int, BloombergLP::balxml::EncoderOptions const*)>:

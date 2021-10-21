@@ -1,4 +1,4 @@
-# 1.none.s
+# `BloombergLP::bslstl::Function_Rep::copyInit(BloombergLP::bslstl::Function_Rep const&)` - Ignored
 
 ```x86asm
 00000000004104a0 <BloombergLP::bslstl::Function_Rep::copyInit(BloombergLP::bslstl::Function_Rep const&)>:

@@ -1,4 +1,4 @@
-# 23.assume.s
+# `BloombergLP::bdls::FilesystemUtil::growFile(int, long, bool, unsigned long)` - Assumed
 
 ```x86asm
 000000000040eed0 <BloombergLP::bdls::FilesystemUtil::growFile(int, long, bool, unsigned long)>:

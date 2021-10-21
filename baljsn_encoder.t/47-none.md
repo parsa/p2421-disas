@@ -1,4 +1,4 @@
-# 47.none.s
+# `BloombergLP::s_baltst::MySequenceWithChoice::~MySequenceWithChoice()` - Ignored
 
 ```x86asm
 00000000004b6a20 <BloombergLP::s_baltst::MySequenceWithChoice::~MySequenceWithChoice()>:

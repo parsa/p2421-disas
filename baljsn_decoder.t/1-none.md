@@ -1,4 +1,4 @@
-# 1.none.s
+# `BloombergLP::bdlde::Utf8CheckingInStreamBufWrapper::xsgetn(char*, long)` - Ignored
 
 ```x86asm
 000000000048c4e0 <BloombergLP::bdlde::Utf8CheckingInStreamBufWrapper::xsgetn(char*, long)>:

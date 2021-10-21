@@ -1,4 +1,4 @@
-# 4.assume.s
+# `BloombergLP::ball::Observer::publish(BloombergLP::ball::Record const&, BloombergLP::ball::Context const&)` - Assumed
 
 ```x86asm
 0000000000414810 <BloombergLP::ball::Observer::publish(BloombergLP::ball::Record const&, BloombergLP::ball::Context const&)>:

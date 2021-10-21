@@ -1,4 +1,4 @@
-# 24.none.s
+# `BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::PackedIntArrayImp(unsigned long, unsigned long, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 000000000041efc0 <BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::PackedIntArrayImp(unsigned long, unsigned long, BloombergLP::bslma::Allocator*)>:

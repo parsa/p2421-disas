@@ -1,4 +1,4 @@
-# 1.assume.s
+# `testThread5b` - Assumed
 
 ```x86asm
 0000000000403ef0 <testThread5b>:

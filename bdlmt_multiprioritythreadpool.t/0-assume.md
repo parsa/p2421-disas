@@ -1,4 +1,4 @@
-# 0.assume.s
+# `BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()` - Assumed
 
 ```x86asm
 000000000040dec0 <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()>:

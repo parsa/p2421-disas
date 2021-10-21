@@ -1,4 +1,4 @@
-# 32.assume.s
+# `BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<char, bsl::function<bool (char const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 10>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const` - Assumed
 
 ```x86asm
 000000000046dab0 <BloombergLP::balcl::(anonymous namespace)::u::ArrayConstraint<char, bsl::function<bool (char const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&)>, 10>::parse(BloombergLP::balcl::OptionValue*, std::__1::basic_ostream<char, std::__1::char_traits<char> >&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&) const>:

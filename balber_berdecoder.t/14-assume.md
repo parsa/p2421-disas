@@ -1,4 +1,4 @@
-# 14.assume.s
+# `BloombergLP::s_baltst::MyChoice::makeSelection2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >&&)` - Assumed
 
 ```x86asm
 000000000045b140 <BloombergLP::s_baltst::MyChoice::makeSelection2(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >&&)>:

@@ -1,4 +1,4 @@
-# 6.none.s
+# `BloombergLP::ball::(anonymous namespace)::TimestampFormatter::format(BloombergLP::baljsn::SimpleFormatter*, BloombergLP::ball::Record const&)` - Ignored
 
 ```x86asm
 000000000041a9a0 <BloombergLP::ball::(anonymous namespace)::TimestampFormatter::format(BloombergLP::baljsn::SimpleFormatter*, BloombergLP::ball::Record const&)>:

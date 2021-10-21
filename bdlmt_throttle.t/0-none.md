@@ -1,4 +1,4 @@
-# 0.none.s
+# `(anonymous namespace)::u::toTime(char const*)` - Ignored
 
 ```x86asm
 0000000000412a80 <(anonymous namespace)::u::toTime(char const*)>:

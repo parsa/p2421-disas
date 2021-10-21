@@ -1,4 +1,4 @@
-# 3.assume.s
+# `int BloombergLP::balb::SequenceWithAnonymityChoice1::manipulateSelection<BloombergLP::balxml::Decoder_ParseObject>(BloombergLP::balxml::Decoder_ParseObject&)` - Assumed
 
 ```x86asm
 000000000044cef0 <int BloombergLP::balb::SequenceWithAnonymityChoice1::manipulateSelection<BloombergLP::balxml::Decoder_ParseObject>(BloombergLP::balxml::Decoder_ParseObject&)>:

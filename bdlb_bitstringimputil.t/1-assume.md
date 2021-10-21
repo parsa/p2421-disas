@@ -1,4 +1,4 @@
-# 1.assume.s
+# `g(char const*)` - Assumed
 
 ```x86asm
 0000000000432590 <g(char const*)>:

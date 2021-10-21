@@ -1,4 +1,4 @@
-# 3.none.s
+# `BloombergLP::balxml::Formatter::closeElement(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)` - Ignored
 
 ```x86asm
 00000000004e7e30 <BloombergLP::balxml::Formatter::closeElement(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)>:

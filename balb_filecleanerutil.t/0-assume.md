@@ -1,4 +1,4 @@
-# 0.assume.s
+# `BloombergLP::bdlma::SequentialPool::SequentialPool(int)` - Assumed
 
 ```x86asm
 000000000040be30 <BloombergLP::bdlma::SequentialPool::SequentialPool(int)>:

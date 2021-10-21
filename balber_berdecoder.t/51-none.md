@@ -1,4 +1,4 @@
-# 51.none.s
+# `BloombergLP::bdlt::ProlepticDateImpUtil::lastDayOfMonth(int, int)` - Ignored
 
 ```x86asm
 000000000046aa20 <BloombergLP::bdlt::ProlepticDateImpUtil::lastDayOfMonth(int, int)>:

@@ -1,4 +1,4 @@
-# 7.none.s
+# `int BloombergLP::balber::BerDecoder_Node::decodeChoice<BloombergLP::s_baltst::TimingRequest>(BloombergLP::s_baltst::TimingRequest*)` - Ignored
 
 ```x86asm
 000000000044ee40 <int BloombergLP::balber::BerDecoder_Node::decodeChoice<BloombergLP::s_baltst::TimingRequest>(BloombergLP::s_baltst::TimingRequest*)>:

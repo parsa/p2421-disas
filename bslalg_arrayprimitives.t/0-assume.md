@@ -1,4 +1,4 @@
-# 0.assume.s
+# `void testCopyConstructWithIterators<int const volatile*>(bool, bool, bool)` - Assumed
 
 ```x86asm
 00000000004cbb40 <void testCopyConstructWithIterators<int const volatile*>(bool, bool, bool)>:

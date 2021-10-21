@@ -1,4 +1,4 @@
-# 1.assume.s
+# `BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 000000000040d3a0 <BloombergLP::balb::Sequence4::Sequence4(BloombergLP::bslma::Allocator*)>:

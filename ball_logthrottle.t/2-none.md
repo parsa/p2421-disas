@@ -1,4 +1,4 @@
-# 2.none.s
+# `Usage::radiationMonitorBlockDaemon()` - Ignored
 
 ```x86asm
 0000000000406930 <Usage::radiationMonitorBlockDaemon()>:

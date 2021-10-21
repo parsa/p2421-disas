@@ -1,4 +1,4 @@
-# 8.assume.s
+# `BloombergLP::balcl::OptionValue::type() const` - Assumed
 
 ```x86asm
 0000000000465e70 <BloombergLP::balcl::OptionValue::type() const>:

@@ -1,4 +1,4 @@
-# 2.none.s
+# `BloombergLP::bdlcc::FixedQueueIndexManager::FixedQueueIndexManager(unsigned long, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 000000000040bf90 <BloombergLP::bdlcc::FixedQueueIndexManager::FixedQueueIndexManager(unsigned long, BloombergLP::bslma::Allocator*)>:

@@ -1,4 +1,4 @@
-# 2.assume.s
+# `BloombergLP::ball::AsyncFileObserver::startPublicationThread()` - Assumed
 
 ```x86asm
 000000000042e260 <BloombergLP::ball::AsyncFileObserver::startPublicationThread()>:

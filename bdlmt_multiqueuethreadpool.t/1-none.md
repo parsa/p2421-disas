@@ -1,4 +1,4 @@
-# 1.none.s
+# `BloombergLP::bdlmt::MultiQueueThreadPool_Queue::waitWhilePausing()` - Ignored
 
 ```x86asm
 0000000000432f50 <BloombergLP::bdlmt::MultiQueueThreadPool_Queue::waitWhilePausing()>:

@@ -1,4 +1,4 @@
-# 0.assume.s
+# `gggDispatch(BloombergLP::bdlc::BitArray*, char const*, bool)` - Assumed
 
 ```x86asm
 000000000044edf0 <gggDispatch(BloombergLP::bdlc::BitArray*, char const*, bool)>:

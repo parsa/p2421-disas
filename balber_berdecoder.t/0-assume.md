@@ -1,4 +1,4 @@
-# 0.assume.s
+# `int BloombergLP::balber::BerEncoder::encode<unsigned int>(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, unsigned int const&)` - Assumed
 
 ```x86asm
 0000000000442340 <int BloombergLP::balber::BerEncoder::encode<unsigned int>(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, unsigned int const&)>:

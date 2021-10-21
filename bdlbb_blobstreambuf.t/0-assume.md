@@ -1,4 +1,4 @@
-# 0.assume.s
+# `BloombergLP::bdlbb::InBlobStreamBuf::underflow()` - Assumed
 
 ```x86asm
 000000000040cc90 <BloombergLP::bdlbb::InBlobStreamBuf::underflow()>:

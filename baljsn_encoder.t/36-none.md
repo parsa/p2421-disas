@@ -1,4 +1,4 @@
-# 36.none.s
+# `int BloombergLP::baljsn::Encoder_ValueDispatcher::operator()<BloombergLP::bdlt::DateTz>(BloombergLP::bdlt::DateTz const&, BloombergLP::bdlat_TypeCategory::Simple)` - Ignored
 
 ```x86asm
 00000000004830d0 <int BloombergLP::baljsn::Encoder_ValueDispatcher::operator()<BloombergLP::bdlt::DateTz>(BloombergLP::bdlt::DateTz const&, BloombergLP::bdlat_TypeCategory::Simple)>:

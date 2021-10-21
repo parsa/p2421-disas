@@ -1,4 +1,4 @@
-# 0.none.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::BoundedQueue<my_WorkRequest>*), BloombergLP::bdlf::Bind_BoundTuple1<BloombergLP::bdlcc::BoundedQueue<my_WorkRequest>*> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::BoundedQueue<my_WorkRequest>*), BloombergLP::bdlf::Bind_BoundTuple1<BloombergLP::bdlcc::BoundedQueue<my_WorkRequest>*> > const&, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 0000000000416ae0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::BoundedQueue<my_WorkRequest>*), BloombergLP::bdlf::Bind_BoundTuple1<BloombergLP::bdlcc::BoundedQueue<my_WorkRequest>*> > >(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BloombergLP::bdlf::Bind<BloombergLP::bslmf::Nil, void (*)(BloombergLP::bdlcc::BoundedQueue<my_WorkRequest>*), BloombergLP::bdlf::Bind_BoundTuple1<BloombergLP::bdlcc::BoundedQueue<my_WorkRequest>*> > const&, BloombergLP::bslma::Allocator*)>:

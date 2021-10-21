@@ -1,4 +1,4 @@
-# 7.assume.s
+# `BloombergLP::ball::Record::Record(BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 0000000000429980 <BloombergLP::ball::Record::Record(BloombergLP::bslma::Allocator*)>:

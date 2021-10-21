@@ -1,4 +1,4 @@
-# 3.none.s
+# `BloombergLP::s_baltst::BasicSchemaSimpleTypeElementChoice::selectionName() const` - Ignored
 
 ```x86asm
 0000000000432a70 <BloombergLP::s_baltst::BasicSchemaSimpleTypeElementChoice::selectionName() const>:

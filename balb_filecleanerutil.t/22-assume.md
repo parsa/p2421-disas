@@ -1,4 +1,4 @@
-# 22.assume.s
+# `BloombergLP::bdlt::PosixDateImpUtil::ydToSerial(int, int)` - Assumed
 
 ```x86asm
 0000000000413890 <BloombergLP::bdlt::PosixDateImpUtil::ydToSerial(int, int)>:

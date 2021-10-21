@@ -1,4 +1,4 @@
-# 57.none.s
+# `void BloombergLP::bslim::Printer::printAttribute<BloombergLP::balb::Enumerated::Value>(BloombergLP::bslstl::StringRefImp<char> const&, BloombergLP::balb::Enumerated::Value const&) const` - Ignored
 
 ```x86asm
 0000000000415180 <void BloombergLP::bslim::Printer::printAttribute<BloombergLP::balb::Enumerated::Value>(BloombergLP::bslstl::StringRefImp<char> const&, BloombergLP::balb::Enumerated::Value const&) const>:

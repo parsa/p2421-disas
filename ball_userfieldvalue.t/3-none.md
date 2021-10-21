@@ -1,4 +1,4 @@
-# 3.none.s
+# `verifyFieldTypeAndValue(BloombergLP::ball::UserFieldValue const&, char, char)` - Ignored
 
 ```x86asm
 0000000000404980 <verifyFieldTypeAndValue(BloombergLP::ball::UserFieldValue const&, char, char)>:

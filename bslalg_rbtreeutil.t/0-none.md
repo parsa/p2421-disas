@@ -1,4 +1,4 @@
-# 0.none.s
+# `void gg<IntNode, void (*)(IntNode*, int)>(BloombergLP::bslalg::RbTreeAnchor*, Array<IntNode, bsl::allocator<IntNode> >*, char const*, void (* const&)(IntNode*, int))` - Ignored
 
 ```x86asm
 000000000040ea40 <void gg<IntNode, void (*)(IntNode*, int)>(BloombergLP::bslalg::RbTreeAnchor*, Array<IntNode, bsl::allocator<IntNode> >*, char const*, void (* const&)(IntNode*, int))>:

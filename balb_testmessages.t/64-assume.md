@@ -1,4 +1,4 @@
-# 64.assume.s
+# `bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::vector(bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> > const&, bsl::allocator<BloombergLP::balb::Choice3> const&)` - Assumed
 
 ```x86asm
 0000000000415440 <bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::vector(bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> > const&, bsl::allocator<BloombergLP::balb::Choice3> const&)>:

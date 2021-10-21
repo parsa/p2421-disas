@@ -1,4 +1,4 @@
-# 11.assume.s
+# `BloombergLP::bdld::operator==(BloombergLP::bdld::Datum const&, BloombergLP::bdld::Datum const&)` - Assumed
 
 ```x86asm
 000000000044b680 <BloombergLP::bdld::operator==(BloombergLP::bdld::Datum const&, BloombergLP::bdld::Datum const&)>:

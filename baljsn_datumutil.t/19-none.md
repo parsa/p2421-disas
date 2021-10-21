@@ -1,4 +1,4 @@
-# 19.none.s
+# `BloombergLP::bdlb::BitStringUtil::xorEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)` - Ignored
 
 ```x86asm
 0000000000444c10 <BloombergLP::bdlb::BitStringUtil::xorEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)>:

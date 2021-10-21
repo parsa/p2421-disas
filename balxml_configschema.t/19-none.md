@@ -1,4 +1,4 @@
-# 19.none.s
+# `void BloombergLP::s_baltst::BasicSchemaUtil_ImplUtil::doRemoveAnnotations<BloombergLP::s_baltst::BasicSchemaEnumerationElement>(BloombergLP::s_baltst::BasicSchemaEnumerationElement*)` - Ignored
 
 ```x86asm
 000000000040e2b0 <void BloombergLP::s_baltst::BasicSchemaUtil_ImplUtil::doRemoveAnnotations<BloombergLP::s_baltst::BasicSchemaEnumerationElement>(BloombergLP::s_baltst::BasicSchemaEnumerationElement*)>:

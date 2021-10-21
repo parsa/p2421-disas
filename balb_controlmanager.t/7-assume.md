@@ -1,4 +1,4 @@
-# 7.assume.s
+# `BloombergLP::bdlb::String::areEqualCaseless(char const*, char const*, int)` - Assumed
 
 ```x86asm
 000000000040d080 <BloombergLP::bdlb::String::areEqualCaseless(char const*, char const*, int)>:

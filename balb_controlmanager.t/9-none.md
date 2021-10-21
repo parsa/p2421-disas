@@ -1,4 +1,4 @@
-# 9.none.s
+# `BloombergLP::bdlb::String::copy(char const*, int, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 000000000040d000 <BloombergLP::bdlb::String::copy(char const*, int, BloombergLP::bslma::Allocator*)>:

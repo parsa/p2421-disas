@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::bdlma::ConcurrentPool::reserveCapacity(int)` - Ignored
 
 ```x86asm
 0000000000422b70 <BloombergLP::bdlma::ConcurrentPool::reserveCapacity(int)>:

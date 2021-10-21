@@ -1,4 +1,4 @@
-# 7.assume.s
+# `int BloombergLP::bdlpcre::RegEx::matchImp<BloombergLP::bdlpcre::(anonymous namespace)::VectorExtractor<bsl::vector<std::__1::basic_string_view<char, std::__1::char_traits<char> >, bsl::allocator<std::__1::basic_string_view<char, std::__1::char_traits<char> > > > > >(BloombergLP::bdlpcre::(anonymous namespace)::VectorExtractor<bsl::vector<std::__1::basic_string_view<char, std::__1::char_traits<char> >, bsl::allocator<std::__1::basic_string_view<char, std::__1::char_traits<char> > > > > const&, char const*, unsigned long, unsigned long, bool) const` - Assumed
 
 ```x86asm
 000000000042b460 <int BloombergLP::bdlpcre::RegEx::matchImp<BloombergLP::bdlpcre::(anonymous namespace)::VectorExtractor<bsl::vector<std::__1::basic_string_view<char, std::__1::char_traits<char> >, bsl::allocator<std::__1::basic_string_view<char, std::__1::char_traits<char> > > > > >(BloombergLP::bdlpcre::(anonymous namespace)::VectorExtractor<bsl::vector<std::__1::basic_string_view<char, std::__1::char_traits<char> >, bsl::allocator<std::__1::basic_string_view<char, std::__1::char_traits<char> > > > > const&, char const*, unsigned long, unsigned long, bool) const>:

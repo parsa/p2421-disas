@@ -1,4 +1,4 @@
-# 5.none.s
+# `BloombergLP::s_baltst::MyChoice::makeSelection(int)` - Ignored
 
 ```x86asm
 000000000045b160 <BloombergLP::s_baltst::MyChoice::makeSelection(int)>:

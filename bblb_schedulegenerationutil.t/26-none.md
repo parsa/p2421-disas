@@ -1,4 +1,4 @@
-# 26.none.s
+# `BloombergLP::bdlt::Calendar::getNextBusinessDay(BloombergLP::bdlt::Date*, BloombergLP::bdlt::Date const&, int) const` - Ignored
 
 ```x86asm
 000000000040cf00 <BloombergLP::bdlt::Calendar::getNextBusinessDay(BloombergLP::bdlt::Date*, BloombergLP::bdlt::Date const&, int) const>:

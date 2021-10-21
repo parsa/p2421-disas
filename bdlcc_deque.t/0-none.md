@@ -1,4 +1,4 @@
-# 0.none.s
+# `(anonymous namespace)::u::ObjChecker<double>::~ObjChecker()` - Ignored
 
 ```x86asm
 00000000004326d0 <(anonymous namespace)::u::ObjChecker<double>::~ObjChecker()>:

@@ -1,4 +1,4 @@
-# 10.assume.s
+# `BloombergLP::bdlb::String::strstrCaseless(char const*, int, char const*, int)` - Assumed
 
 ```x86asm
 000000000040d3b0 <BloombergLP::bdlb::String::strstrCaseless(char const*, int, char const*, int)>:

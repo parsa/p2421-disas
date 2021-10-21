@@ -1,4 +1,4 @@
-# 56.none.s
+# `BloombergLP::bdlb::Print::hexDump(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, int)` - Ignored
 
 ```x86asm
 000000000041c840 <BloombergLP::bdlb::Print::hexDump(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, int)>:

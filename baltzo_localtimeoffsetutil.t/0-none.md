@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::baltzo::TimeZoneUtil::convertLocalToLocalTime(BloombergLP::baltzo::LocalDatetime*, char const*, BloombergLP::bdlt::Datetime const&, char const*, BloombergLP::baltzo::DstPolicy::Enum)` - Ignored
 
 ```x86asm
 0000000000412b30 <BloombergLP::baltzo::TimeZoneUtil::convertLocalToLocalTime(BloombergLP::baltzo::LocalDatetime*, char const*, BloombergLP::bdlt::Datetime const&, char const*, BloombergLP::baltzo::DstPolicy::Enum)>:

@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::test::ChoiceA::makeSelection(int)` - Ignored
 
 ```x86asm
 000000000040f380 <BloombergLP::test::ChoiceA::makeSelection(int)>:

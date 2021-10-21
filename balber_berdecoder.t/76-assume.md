@@ -1,4 +1,4 @@
-# 76.assume.s
+# `BloombergLP::s_baltst::MyChoiceWithDefaultValues::makeSelection(int)` - Assumed
 
 ```x86asm
 0000000000405310 <BloombergLP::s_baltst::MyChoiceWithDefaultValues::makeSelection(int)>:

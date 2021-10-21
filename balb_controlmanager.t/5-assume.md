@@ -1,4 +1,4 @@
-# 5.assume.s
+# `BloombergLP::bslstl::Function_Rep::allocateBuf(unsigned long)` - Assumed
 
 ```x86asm
 00000000004104e0 <BloombergLP::bslstl::Function_Rep::allocateBuf(unsigned long)>:

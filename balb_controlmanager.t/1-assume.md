@@ -1,4 +1,4 @@
-# 1.assume.s
+# `BloombergLP::bslstl::Function_Rep::copyInit(BloombergLP::bslstl::Function_Rep const&)` - Assumed
 
 ```x86asm
 0000000000410510 <BloombergLP::bslstl::Function_Rep::copyInit(BloombergLP::bslstl::Function_Rep const&)>:

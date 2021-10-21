@@ -1,4 +1,4 @@
-# 0.none.s
+# `(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)` - Ignored
 
 ```x86asm
 0000000000412f50 <(anonymous namespace)::u::areEqualValues(BloombergLP::balcl::OptionValue const&, void const*)>:

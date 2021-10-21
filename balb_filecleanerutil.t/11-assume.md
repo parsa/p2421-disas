@@ -1,4 +1,4 @@
-# 11.assume.s
+# `BloombergLP::bdlma::BufferedSequentialPool::BufferedSequentialPool(char*, unsigned long, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 000000000040b720 <BloombergLP::bdlma::BufferedSequentialPool::BufferedSequentialPool(char*, unsigned long, BloombergLP::bslma::Allocator*)>:

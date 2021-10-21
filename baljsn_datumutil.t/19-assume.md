@@ -1,4 +1,4 @@
-# 19.assume.s
+# `BloombergLP::bdlb::BitStringUtil::xorEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)` - Assumed
 
 ```x86asm
 0000000000444890 <BloombergLP::bdlb::BitStringUtil::xorEqual(unsigned long*, unsigned long, unsigned long const*, unsigned long, unsigned long)>:

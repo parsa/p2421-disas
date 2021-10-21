@@ -1,4 +1,4 @@
-# 3.assume.s
+# `verifyFieldTypeAndValue(BloombergLP::ball::UserFieldValue const&, char, char)` - Assumed
 
 ```x86asm
 0000000000404980 <verifyFieldTypeAndValue(BloombergLP::ball::UserFieldValue const&, char, char)>:

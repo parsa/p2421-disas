@@ -1,4 +1,4 @@
-# 1.none.s
+# `example1::main()` - Ignored
 
 ```x86asm
 00000000004050f0 <example1::main()>:

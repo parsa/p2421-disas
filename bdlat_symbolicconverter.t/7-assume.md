@@ -1,4 +1,4 @@
-# 7.assume.s
+# `int BloombergLP::test::MixedSequence::accessAttributes<BloombergLP::bdlat_SymbolicConverter_StoreInSequence<BloombergLP::test::MixedSequence> >(BloombergLP::bdlat_SymbolicConverter_StoreInSequence<BloombergLP::test::MixedSequence>&) const` - Assumed
 
 ```x86asm
 000000000040fd30 <int BloombergLP::test::MixedSequence::accessAttributes<BloombergLP::bdlat_SymbolicConverter_StoreInSequence<BloombergLP::test::MixedSequence> >(BloombergLP::bdlat_SymbolicConverter_StoreInSequence<BloombergLP::test::MixedSequence>&) const>:

@@ -1,4 +1,4 @@
-# 10.none.s
+# `BloombergLP::bdlb::String::strstrCaseless(char const*, int, char const*, int)` - Ignored
 
 ```x86asm
 000000000040d2d0 <BloombergLP::bdlb::String::strstrCaseless(char const*, int, char const*, int)>:

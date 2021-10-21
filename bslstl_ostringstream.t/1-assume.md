@@ -1,4 +1,4 @@
-# 1.assume.s
+# `bsl::basic_stringbuf<char, std::__1::char_traits<char>, BloombergLP::bsltf::StdStatefulAllocator<char, true, true, true, true> >::seekoff(long long, std::__1::ios_base::seekdir, unsigned int)` - Assumed
 
 ```x86asm
 000000000041e1d0 <bsl::basic_stringbuf<char, std::__1::char_traits<char>, BloombergLP::bsltf::StdStatefulAllocator<char, true, true, true, true> >::seekoff(long long, std::__1::ios_base::seekdir, unsigned int)>:

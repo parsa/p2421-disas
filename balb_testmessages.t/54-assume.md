@@ -1,4 +1,4 @@
-# 54.assume.s
+# `void BloombergLP::bslim::Printer_Helper::printRaw<BloombergLP::bdlb::NullableValue<BloombergLP::balb::Enumerated::Value> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::bdlb::NullableValue<BloombergLP::balb::Enumerated::Value> const&, int, int, BloombergLP::bslmf::SelectTraitCase<BloombergLP::bslmf::SelectTrait_False>)` - Assumed
 
 ```x86asm
 0000000000416730 <void BloombergLP::bslim::Printer_Helper::printRaw<BloombergLP::bdlb::NullableValue<BloombergLP::balb::Enumerated::Value> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::bdlb::NullableValue<BloombergLP::balb::Enumerated::Value> const&, int, int, BloombergLP::bslmf::SelectTraitCase<BloombergLP::bslmf::SelectTrait_False>)>:

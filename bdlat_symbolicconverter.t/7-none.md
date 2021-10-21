@@ -1,4 +1,4 @@
-# 7.none.s
+# `int BloombergLP::test::MixedSequence::accessAttributes<BloombergLP::bdlat_SymbolicConverter_StoreInSequence<BloombergLP::test::MixedSequence> >(BloombergLP::bdlat_SymbolicConverter_StoreInSequence<BloombergLP::test::MixedSequence>&) const` - Ignored
 
 ```x86asm
 000000000040fd00 <int BloombergLP::test::MixedSequence::accessAttributes<BloombergLP::bdlat_SymbolicConverter_StoreInSequence<BloombergLP::test::MixedSequence> >(BloombergLP::bdlat_SymbolicConverter_StoreInSequence<BloombergLP::test::MixedSequence>&) const>:

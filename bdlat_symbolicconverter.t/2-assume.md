@@ -1,4 +1,4 @@
-# 2.assume.s
+# `BloombergLP::test::MixedSequence::MixedSequence(BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 000000000040ec50 <BloombergLP::test::MixedSequence::MixedSequence(BloombergLP::bslma::Allocator*)>:

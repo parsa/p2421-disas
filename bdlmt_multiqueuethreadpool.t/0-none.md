@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::bdlmt::MultiQueueThreadPool::pauseQueue(int)` - Ignored
 
 ```x86asm
 0000000000434b40 <BloombergLP::bdlmt::MultiQueueThreadPool::pauseQueue(int)>:

@@ -1,4 +1,4 @@
-# 0.none.s
+# `void testPutValue<BloombergLP::bdlt::Date>(int, int, int, int, BloombergLP::bdlt::Date const&, BloombergLP::baljsn::EncoderOptions const*, bool)` - Ignored
 
 ```x86asm
 000000000041dcd0 <void testPutValue<BloombergLP::bdlt::Date>(int, int, int, int, BloombergLP::bdlt::Date const&, BloombergLP::baljsn::EncoderOptions const*, bool)>:

@@ -1,4 +1,4 @@
-# 1.none.s
+# `Case_Minus_1_Events_Dropped::threadJob()` - Ignored
 
 ```x86asm
 0000000000406890 <Case_Minus_1_Events_Dropped::threadJob()>:

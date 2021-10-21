@@ -1,4 +1,4 @@
-# 33.assume.s
+# `(anonymous namespace)::u::createTypeInfo(BloombergLP::balcl::OptionType::Enum, void*, void*)` - Assumed
 
 ```x86asm
 000000000044b390 <(anonymous namespace)::u::createTypeInfo(BloombergLP::balcl::OptionType::Enum, void*, void*)>:

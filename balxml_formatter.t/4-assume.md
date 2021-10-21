@@ -1,4 +1,4 @@
-# 4.assume.s
+# `(anonymous namespace)::operator<<(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, (anonymous namespace)::ScalarData const&)` - Assumed
 
 ```x86asm
 000000000041e3d0 <(anonymous namespace)::operator<<(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, (anonymous namespace)::ScalarData const&)>:

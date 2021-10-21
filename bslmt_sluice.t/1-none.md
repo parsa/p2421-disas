@@ -1,4 +1,4 @@
-# 1.none.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<EnterPostSleepAndWaitJob>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, EnterPostSleepAndWaitJob const&, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 0000000000406120 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<EnterPostSleepAndWaitJob>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, EnterPostSleepAndWaitJob const&, BloombergLP::bslma::Allocator*)>:

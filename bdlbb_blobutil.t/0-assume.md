@@ -1,4 +1,4 @@
-# 0.assume.s
+# `BloombergLP::bdlbb::BlobUtil::append(BloombergLP::bdlbb::Blob*, BloombergLP::bdlbb::Blob const&, int, int)` - Assumed
 
 ```x86asm
 000000000041a170 <BloombergLP::bdlbb::BlobUtil::append(BloombergLP::bdlbb::Blob*, BloombergLP::bdlbb::Blob const&, int, int)>:

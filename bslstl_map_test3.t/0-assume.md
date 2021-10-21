@@ -1,4 +1,4 @@
-# 0.assume.s
+# `(anonymous namespace)::IntToPairConverter<char const*, char const*, bsl::allocator<bsl::pair<char const* const, char const*> > >::createInplace(bsl::pair<char const*, char const*>*, int, bsl::allocator<bsl::pair<char const* const, char const*> >)` - Assumed
 
 ```x86asm
 000000000057b270 <(anonymous namespace)::IntToPairConverter<char const*, char const*, bsl::allocator<bsl::pair<char const* const, char const*> > >::createInplace(bsl::pair<char const*, char const*>*, int, bsl::allocator<bsl::pair<char const* const, char const*> >)>:

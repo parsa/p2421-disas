@@ -1,4 +1,4 @@
-# 70.none.s
+# `BloombergLP::s_baltst::Sequence1::Sequence1(BloombergLP::s_baltst::Sequence1&&)` - Ignored
 
 ```x86asm
 00000000004bae30 <BloombergLP::s_baltst::Sequence1::Sequence1(BloombergLP::s_baltst::Sequence1&&)>:

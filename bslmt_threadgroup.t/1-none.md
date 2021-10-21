@@ -1,4 +1,4 @@
-# 1.none.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<(anonymous namespace)::u::ThreadChecker::ThreadCheckerFunctor>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, (anonymous namespace)::u::ThreadChecker::ThreadCheckerFunctor const&, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 00000000004074c0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<(anonymous namespace)::u::ThreadChecker::ThreadCheckerFunctor>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, (anonymous namespace)::u::ThreadChecker::ThreadCheckerFunctor const&, BloombergLP::bslma::Allocator*)>:

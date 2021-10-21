@@ -1,4 +1,4 @@
-# 0.assume.s
+# `(anonymous namespace)::u::toTime(char const*)` - Assumed
 
 ```x86asm
 0000000000412670 <(anonymous namespace)::u::toTime(char const*)>:

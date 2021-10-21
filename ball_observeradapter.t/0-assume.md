@@ -1,4 +1,4 @@
-# 0.assume.s
+# `USAGE_EXAMPLE_1::main(bool)` - Assumed
 
 ```x86asm
 0000000000404630 <USAGE_EXAMPLE_1::main(bool)>:

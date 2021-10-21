@@ -1,4 +1,4 @@
-# 4.assume.s
+# `Case_Allow_None::threadJobIf()` - Assumed
 
 ```x86asm
 0000000000404e10 <Case_Allow_None::threadJobIf()>:

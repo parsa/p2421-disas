@@ -1,4 +1,4 @@
-# 1.none.s
+# `BloombergLP::bdlmt::Throttle::requestPermissionIfValid(bool*, int, BloombergLP::bsls::TimeInterval const&)` - Ignored
 
 ```x86asm
 0000000000447cf0 <BloombergLP::bdlmt::Throttle::requestPermissionIfValid(bool*, int, BloombergLP::bsls::TimeInterval const&)>:

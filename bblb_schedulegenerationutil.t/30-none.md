@@ -1,4 +1,4 @@
-# 30.none.s
+# `BloombergLP::bblb::ScheduleGenerationUtil::generateFromDayInterval(bsl::vector<BloombergLP::bdlt::Date, bsl::allocator<BloombergLP::bdlt::Date> >*, BloombergLP::bdlt::Date const&, BloombergLP::bdlt::Date const&, BloombergLP::bdlt::Date const&, int)` - Ignored
 
 ```x86asm
 000000000040b5f0 <BloombergLP::bblb::ScheduleGenerationUtil::generateFromDayInterval(bsl::vector<BloombergLP::bdlt::Date, bsl::allocator<BloombergLP::bdlt::Date> >*, BloombergLP::bdlt::Date const&, BloombergLP::bdlt::Date const&, BloombergLP::bdlt::Date const&, int)>:

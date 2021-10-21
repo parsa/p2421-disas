@@ -1,4 +1,4 @@
-# 86.none.s
+# `BloombergLP::baljsn::Encoder_EncodeImplUtil::encodeCharArray(BloombergLP::baljsn::Formatter*, bsl::vector<char, bsl::allocator<char> > const&, BloombergLP::baljsn::EncoderOptions const&)` - Ignored
 
 ```x86asm
 0000000000484850 <BloombergLP::baljsn::Encoder_EncodeImplUtil::encodeCharArray(BloombergLP::baljsn::Formatter*, bsl::vector<char, bsl::allocator<char> > const&, BloombergLP::baljsn::EncoderOptions const&)>:

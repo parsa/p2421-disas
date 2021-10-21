@@ -1,4 +1,4 @@
-# 4.none.s
+# `BloombergLP::balxml::Decoder::checkForErrors(BloombergLP::balxml::ErrorInfo const&)` - Ignored
 
 ```x86asm
 0000000000478290 <BloombergLP::balxml::Decoder::checkForErrors(BloombergLP::balxml::ErrorInfo const&)>:

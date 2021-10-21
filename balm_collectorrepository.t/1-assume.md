@@ -1,4 +1,4 @@
-# 1.assume.s
+# `BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)` - Assumed
 
 ```x86asm
 000000000041cb70 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)>:

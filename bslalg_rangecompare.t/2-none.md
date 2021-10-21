@@ -1,4 +1,4 @@
-# 2.none.s
+# `MyContainer<MyString>::reserve(unsigned long)` - Ignored
 
 ```x86asm
 0000000000411980 <MyContainer<MyString>::reserve(unsigned long)>:

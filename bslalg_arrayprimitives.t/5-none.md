@@ -1,4 +1,4 @@
-# 5.none.s
+# `void testCopyConstructWithIterators<long>(bool, bool, bool)` - Ignored
 
 ```x86asm
 00000000004c2d20 <void testCopyConstructWithIterators<long>(bool, bool, bool)>:

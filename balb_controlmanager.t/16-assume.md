@@ -1,4 +1,4 @@
-# 16.assume.s
+# `BloombergLP::bslalg::ArrayPrimitives_Imp::bitwiseRotate(char*, char*, char*)` - Assumed
 
 ```x86asm
 0000000000434050 <BloombergLP::bslalg::ArrayPrimitives_Imp::bitwiseRotate(char*, char*, char*)>:

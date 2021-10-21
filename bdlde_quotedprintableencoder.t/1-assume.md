@@ -1,4 +1,4 @@
-# 1.assume.s
+# `BloombergLP::bdlde::QuotedPrintableEncoder::appendPrintable(char*, char)` - Assumed
 
 ```x86asm
 000000000041ec60 <BloombergLP::bdlde::QuotedPrintableEncoder::appendPrintable(char*, char)>:

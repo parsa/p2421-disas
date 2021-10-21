@@ -1,4 +1,4 @@
-# 2.none.s
+# `case3ContextThread` - Ignored
 
 ```x86asm
 0000000000409930 <case3ContextThread>:

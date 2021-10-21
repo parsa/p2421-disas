@@ -1,4 +1,4 @@
-# 57.assume.s
+# `void BloombergLP::bslim::Printer::printAttribute<BloombergLP::balb::Enumerated::Value>(BloombergLP::bslstl::StringRefImp<char> const&, BloombergLP::balb::Enumerated::Value const&) const` - Assumed
 
 ```x86asm
 00000000004151a0 <void BloombergLP::bslim::Printer::printAttribute<BloombergLP::balb::Enumerated::Value>(BloombergLP::bslstl::StringRefImp<char> const&, BloombergLP::balb::Enumerated::Value const&) const>:

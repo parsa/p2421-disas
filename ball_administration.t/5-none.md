@@ -1,4 +1,4 @@
-# 5.none.s
+# `BloombergLP::bdlb::HashUtil::hash0(char const*, int, int)` - Ignored
 
 ```x86asm
 0000000000424a90 <BloombergLP::bdlb::HashUtil::hash0(char const*, int, int)>:

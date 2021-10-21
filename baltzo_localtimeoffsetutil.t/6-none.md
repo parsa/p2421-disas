@@ -1,4 +1,4 @@
-# 6.none.s
+# `BloombergLP::baltzo::TimeZoneUtilImp::loadLocalTimePeriodForUtc(BloombergLP::baltzo::LocalTimePeriod*, char const*, BloombergLP::bdlt::Datetime const&, BloombergLP::baltzo::ZoneinfoCache*)` - Ignored
 
 ```x86asm
 0000000000413c90 <BloombergLP::baltzo::TimeZoneUtilImp::loadLocalTimePeriodForUtc(BloombergLP::baltzo::LocalTimePeriod*, char const*, BloombergLP::bdlt::Datetime const&, BloombergLP::baltzo::ZoneinfoCache*)>:

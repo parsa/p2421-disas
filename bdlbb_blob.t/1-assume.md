@@ -1,4 +1,4 @@
-# 1.assume.s
+# `BloombergLP::bdlbb::Blob::slowSetLength(int)` - Assumed
 
 ```x86asm
 000000000041df10 <BloombergLP::bdlbb::Blob::slowSetLength(int)>:

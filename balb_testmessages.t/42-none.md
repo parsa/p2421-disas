@@ -1,4 +1,4 @@
-# 42.none.s
+# `BloombergLP::balb::Sequence1::operator=(BloombergLP::balb::Sequence1 const&)` - Ignored
 
 ```x86asm
 000000000040fb10 <BloombergLP::balb::Sequence1::operator=(BloombergLP::balb::Sequence1 const&)>:

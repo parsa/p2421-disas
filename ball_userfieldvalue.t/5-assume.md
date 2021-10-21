@@ -1,4 +1,4 @@
-# 5.assume.s
+# `ggg(BloombergLP::ball::UserFieldValue*, char const*, bool)` - Assumed
 
 ```x86asm
 0000000000404ec0 <ggg(BloombergLP::ball::UserFieldValue*, char const*, bool)>:

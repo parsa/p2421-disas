@@ -1,4 +1,4 @@
-# 69.none.s
+# `BloombergLP::s_baltst::Choice3::makeSelection2(unsigned char)` - Ignored
 
 ```x86asm
 00000000004b9550 <BloombergLP::s_baltst::Choice3::makeSelection2(unsigned char)>:

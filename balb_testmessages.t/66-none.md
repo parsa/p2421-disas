@@ -1,4 +1,4 @@
-# 66.none.s
+# `bsl::vector<BloombergLP::balb::Choice1, bsl::allocator<BloombergLP::balb::Choice1> >::~vector()` - Ignored
 
 ```x86asm
 0000000000414be0 <bsl::vector<BloombergLP::balb::Choice1, bsl::allocator<BloombergLP::balb::Choice1> >::~vector()>:

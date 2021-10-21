@@ -1,4 +1,4 @@
-# 67.none.s
+# `BloombergLP::bdlt::Iso8601Util::parse(BloombergLP::bdlt::TimeTz*, char const*, int)` - Ignored
 
 ```x86asm
 0000000000469a00 <BloombergLP::bdlt::Iso8601Util::parse(BloombergLP::bdlt::TimeTz*, char const*, int)>:

@@ -1,4 +1,4 @@
-# 6.none.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<Case27DrainThread>(unsigned long*, Case27DrainThread const&, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 00000000004311e0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<Case27DrainThread>(unsigned long*, Case27DrainThread const&, BloombergLP::bslma::Allocator*)>:

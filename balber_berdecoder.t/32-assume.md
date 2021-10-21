@@ -1,4 +1,4 @@
-# 32.assume.s
+# `BloombergLP::balber::BerUtil_DateImpUtil::putIso8601DateValue(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, BloombergLP::bdlt::Date const&, BloombergLP::balber::BerEncoderOptions const*)` - Assumed
 
 ```x86asm
 0000000000455200 <BloombergLP::balber::BerUtil_DateImpUtil::putIso8601DateValue(std::__1::basic_streambuf<char, std::__1::char_traits<char> >*, BloombergLP::bdlt::Date const&, BloombergLP::balber::BerEncoderOptions const*)>:

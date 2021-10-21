@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::bslx::GenericInStream<bsl::basic_stringbuf<char, std::__1::char_traits<char>, bsl::allocator<char> > >::getString(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >&)` - Ignored
 
 ```x86asm
 0000000000434240 <BloombergLP::bslx::GenericInStream<bsl::basic_stringbuf<char, std::__1::char_traits<char>, bsl::allocator<char> > >::getString(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >&)>:

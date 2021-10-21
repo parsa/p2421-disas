@@ -1,4 +1,4 @@
-# 6.assume.s
+# `BloombergLP::bslstl::Function_Rep::moveInit(BloombergLP::bslstl::Function_Rep*)` - Assumed
 
 ```x86asm
 00000000004105a0 <BloombergLP::bslstl::Function_Rep::moveInit(BloombergLP::bslstl::Function_Rep*)>:

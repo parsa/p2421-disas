@@ -1,4 +1,4 @@
-# 21.assume.s
+# `BloombergLP::bdlt::PosixDateImpUtil::lastDayOfMonth(int, int)` - Assumed
 
 ```x86asm
 00000000004135e0 <BloombergLP::bdlt::PosixDateImpUtil::lastDayOfMonth(int, int)>:

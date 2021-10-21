@@ -1,4 +1,4 @@
-# 60.none.s
+# `BloombergLP::balb::SequenceWithAnonymityChoice::operator=(BloombergLP::balb::SequenceWithAnonymityChoice const&)` - Ignored
 
 ```x86asm
 000000000040af10 <BloombergLP::balb::SequenceWithAnonymityChoice::operator=(BloombergLP::balb::SequenceWithAnonymityChoice const&)>:

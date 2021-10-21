@@ -1,4 +1,4 @@
-# 0.none.s
+# `void bsl::vector<BloombergLP::balb::Choice1, bsl::allocator<BloombergLP::balb::Choice1> >::privateInsert<BloombergLP::balb::Choice1 const*>(BloombergLP::balb::Choice1 const*, BloombergLP::balb::Choice1 const*, BloombergLP::balb::Choice1 const*, std::__1::forward_iterator_tag const&)` - Ignored
 
 ```x86asm
 000000000041a3c0 <void bsl::vector<BloombergLP::balb::Choice1, bsl::allocator<BloombergLP::balb::Choice1> >::privateInsert<BloombergLP::balb::Choice1 const*>(BloombergLP::balb::Choice1 const*, BloombergLP::balb::Choice1 const*, BloombergLP::balb::Choice1 const*, std::__1::forward_iterator_tag const&)>:

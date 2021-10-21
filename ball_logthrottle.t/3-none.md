@@ -1,4 +1,4 @@
-# 3.none.s
+# `Usage::radiationMonitorPrintfDaemon()` - Ignored
 
 ```x86asm
 0000000000406e10 <Usage::radiationMonitorPrintfDaemon()>:

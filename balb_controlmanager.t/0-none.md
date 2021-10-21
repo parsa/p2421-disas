@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::bslh::SpookyHashAlgorithmImp::update(void const*, unsigned long)` - Ignored
 
 ```x86asm
 0000000000435070 <BloombergLP::bslh::SpookyHashAlgorithmImp::update(void const*, unsigned long)>:

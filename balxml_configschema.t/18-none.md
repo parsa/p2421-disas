@@ -1,4 +1,4 @@
-# 18.none.s
+# `int BloombergLP::balxml::Decoder_ParseObject::executeImp<BloombergLP::s_baltst::BasicSchemaElementChoice>(BloombergLP::s_baltst::BasicSchemaElementChoice*, int, BloombergLP::bdlat_TypeCategory::Choice)` - Ignored
 
 ```x86asm
 0000000000419080 <int BloombergLP::balxml::Decoder_ParseObject::executeImp<BloombergLP::s_baltst::BasicSchemaElementChoice>(BloombergLP::s_baltst::BasicSchemaElementChoice*, int, BloombergLP::bdlat_TypeCategory::Choice)>:

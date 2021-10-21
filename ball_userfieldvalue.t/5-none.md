@@ -1,4 +1,4 @@
-# 5.none.s
+# `ggg(BloombergLP::ball::UserFieldValue*, char const*, bool)` - Ignored
 
 ```x86asm
 0000000000404ed0 <ggg(BloombergLP::ball::UserFieldValue*, char const*, bool)>:

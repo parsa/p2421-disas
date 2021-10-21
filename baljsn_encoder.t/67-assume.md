@@ -1,4 +1,4 @@
-# 67.assume.s
+# `void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::s_baltst::Choice1, BloombergLP::s_baltst::Choice1 const*, bsl::allocator<BloombergLP::s_baltst::Choice1> >(BloombergLP::s_baltst::Choice1*, BloombergLP::s_baltst::Choice1*, BloombergLP::s_baltst::Choice1 const*, BloombergLP::s_baltst::Choice1 const*, unsigned long, bsl::allocator<BloombergLP::s_baltst::Choice1>, BloombergLP::bslmf::MetaInt<1>*)` - Assumed
 
 ```x86asm
 00000000004ca380 <void BloombergLP::bslalg::ArrayPrimitives_Imp::insert<BloombergLP::s_baltst::Choice1, BloombergLP::s_baltst::Choice1 const*, bsl::allocator<BloombergLP::s_baltst::Choice1> >(BloombergLP::s_baltst::Choice1*, BloombergLP::s_baltst::Choice1*, BloombergLP::s_baltst::Choice1 const*, BloombergLP::s_baltst::Choice1 const*, unsigned long, bsl::allocator<BloombergLP::s_baltst::Choice1>, BloombergLP::bslmf::MetaInt<1>*)>:

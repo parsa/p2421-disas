@@ -1,4 +1,4 @@
-# 12.assume.s
+# `BloombergLP::bslmt::ThreadUtilImpl<BloombergLP::bslmt::Platform::PosixThreads>::getMaxSchedulingPriority(BloombergLP::bslmt::ThreadAttributes::SchedulingPolicy)` - Assumed
 
 ```x86asm
 000000000040fd70 <BloombergLP::bslmt::ThreadUtilImpl<BloombergLP::bslmt::Platform::PosixThreads>::getMaxSchedulingPriority(BloombergLP::bslmt::ThreadAttributes::SchedulingPolicy)>:

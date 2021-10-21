@@ -1,4 +1,4 @@
-# 0.assume.s
+# `BloombergLP::bdlb::Tokenizer::begin() const` - Assumed
 
 ```x86asm
 0000000000473bc0 <BloombergLP::bdlb::Tokenizer::begin() const>:

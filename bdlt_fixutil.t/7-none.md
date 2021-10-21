@@ -1,4 +1,4 @@
-# 7.none.s
+# `BloombergLP::bdlt::FixUtil::parse(BloombergLP::bdlt::Datetime*, char const*, int)` - Ignored
 
 ```x86asm
 000000000043c1f0 <BloombergLP::bdlt::FixUtil::parse(BloombergLP::bdlt::Datetime*, char const*, int)>:

@@ -1,4 +1,4 @@
-# 35.none.s
+# `BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Signed>::reserveCapacity(unsigned long, long)` - Ignored
 
 ```x86asm
 000000000041ce70 <BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Signed>::reserveCapacity(unsigned long, long)>:

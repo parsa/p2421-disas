@@ -1,4 +1,4 @@
-# 3.none.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<PingPongWriter<BloombergLP::bslmt::RWMutex> >(unsigned long*, PingPongWriter<BloombergLP::bslmt::RWMutex> const&, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 00000000004083e0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<PingPongWriter<BloombergLP::bslmt::RWMutex> >(unsigned long*, PingPongWriter<BloombergLP::bslmt::RWMutex> const&, BloombergLP::bslma::Allocator*)>:

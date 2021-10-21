@@ -1,4 +1,4 @@
-# 17.none.s
+# `BloombergLP::balb::SequenceWithAnonymity::SequenceWithAnonymity(BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 0000000000411100 <BloombergLP::balb::SequenceWithAnonymity::SequenceWithAnonymity(BloombergLP::bslma::Allocator*)>:

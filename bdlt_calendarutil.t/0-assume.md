@@ -1,4 +1,4 @@
-# 0.assume.s
+# `parseCalendar(char const*, BloombergLP::bdlt::Date const&)` - Assumed
 
 ```x86asm
 0000000000403040 <parseCalendar(char const*, BloombergLP::bdlt::Date const&)>:

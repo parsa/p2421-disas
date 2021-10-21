@@ -1,4 +1,4 @@
-# 67.assume.s
+# `BloombergLP::bdlt::Iso8601Util::parse(BloombergLP::bdlt::TimeTz*, char const*, int)` - Assumed
 
 ```x86asm
 00000000004696b0 <BloombergLP::bdlt::Iso8601Util::parse(BloombergLP::bdlt::TimeTz*, char const*, int)>:

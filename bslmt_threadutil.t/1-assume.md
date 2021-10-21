@@ -1,4 +1,4 @@
-# 1.assume.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BSLMT_THREAD_POLICY_CREATION_TEST::Touch>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BSLMT_THREAD_POLICY_CREATION_TEST::Touch const&, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 0000000000418150 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BSLMT_THREAD_POLICY_CREATION_TEST::Touch>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BSLMT_THREAD_POLICY_CREATION_TEST::Touch const&, BloombergLP::bslma::Allocator*)>:

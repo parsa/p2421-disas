@@ -1,4 +1,4 @@
-# 1.assume.s
+# `BloombergLP::bdls::FdStreamBuf::seekoff(long long, std::__1::ios_base::seekdir, unsigned int)` - Assumed
 
 ```x86asm
 0000000000459100 <BloombergLP::bdls::FdStreamBuf::seekoff(long long, std::__1::ios_base::seekdir, unsigned int)>:

@@ -1,4 +1,4 @@
-# 0.none.s
+# `find1AtMaxOracle(unsigned long)` - Ignored
 
 ```x86asm
 00000000004018e0 <find1AtMaxOracle(unsigned long)>:

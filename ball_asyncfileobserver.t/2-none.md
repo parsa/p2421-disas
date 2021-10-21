@@ -1,4 +1,4 @@
-# 2.none.s
+# `BloombergLP::ball::AsyncFileObserver::startPublicationThread()` - Ignored
 
 ```x86asm
 000000000042e420 <BloombergLP::ball::AsyncFileObserver::startPublicationThread()>:

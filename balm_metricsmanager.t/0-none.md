@@ -1,4 +1,4 @@
-# 0.none.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::MemFnInstance<void (LockAndModifyWorker::*)(), LockAndModifyWorker*> >(unsigned long*, BloombergLP::bdlf::MemFnInstance<void (LockAndModifyWorker::*)(), LockAndModifyWorker*> const&, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 000000000042b4a0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BloombergLP::bdlf::MemFnInstance<void (LockAndModifyWorker::*)(), LockAndModifyWorker*> >(unsigned long*, BloombergLP::bdlf::MemFnInstance<void (LockAndModifyWorker::*)(), LockAndModifyWorker*> const&, BloombergLP::bslma::Allocator*)>:

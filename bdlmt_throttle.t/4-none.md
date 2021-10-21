@@ -1,4 +1,4 @@
-# 4.none.s
+# `Case_Allow_None::threadJobIf()` - Ignored
 
 ```x86asm
 0000000000404e20 <Case_Allow_None::threadJobIf()>:

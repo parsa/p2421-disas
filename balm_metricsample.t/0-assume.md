@@ -1,4 +1,4 @@
-# 0.assume.s
+# `gg(bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >*, char const*, bsl::vector<BloombergLP::balm::MetricRecord, bsl::allocator<BloombergLP::balm::MetricRecord> > const&)` - Assumed
 
 ```x86asm
 0000000000404640 <gg(bsl::vector<BloombergLP::balm::MetricSampleGroup, bsl::allocator<BloombergLP::balm::MetricSampleGroup> >*, char const*, bsl::vector<BloombergLP::balm::MetricRecord, bsl::allocator<BloombergLP::balm::MetricRecord> > const&)>:

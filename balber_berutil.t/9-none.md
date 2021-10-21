@@ -1,4 +1,4 @@
-# 9.none.s
+# `BloombergLP::bdldfp::DecimalImpUtil::classify(BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType32)` - Ignored
 
 ```x86asm
 00000000004765f0 <BloombergLP::bdldfp::DecimalImpUtil::classify(BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType32)>:

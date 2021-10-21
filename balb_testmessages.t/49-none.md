@@ -1,4 +1,4 @@
-# 49.none.s
+# `BloombergLP::balb::Choice3::makeSelection4(BloombergLP::balb::CustomInt const&)` - Ignored
 
 ```x86asm
 000000000040a610 <BloombergLP::balb::Choice3::makeSelection4(BloombergLP::balb::CustomInt const&)>:

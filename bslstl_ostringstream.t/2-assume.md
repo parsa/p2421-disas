@@ -1,4 +1,4 @@
-# 2.assume.s
+# `bsl::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, BloombergLP::bsltf::StdStatefulAllocator<wchar_t, true, true, false, true> >::seekoff(long long, std::__1::ios_base::seekdir, unsigned int)` - Assumed
 
 ```x86asm
 0000000000421e30 <bsl::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, BloombergLP::bsltf::StdStatefulAllocator<wchar_t, true, true, false, true> >::seekoff(long long, std::__1::ios_base::seekdir, unsigned int)>:

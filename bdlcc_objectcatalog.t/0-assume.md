@@ -1,4 +1,4 @@
-# 0.assume.s
+# `verifyStateThread` - Assumed
 
 ```x86asm
 00000000004062b0 <verifyStateThread>:

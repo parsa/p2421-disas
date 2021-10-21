@@ -1,4 +1,4 @@
-# 1.none.s
+# `BloombergLP::bsls::SystemTime::now(BloombergLP::bsls::SystemClockType::Enum)` - Ignored
 
 ```x86asm
 000000000041ea60 <BloombergLP::bsls::SystemTime::now(BloombergLP::bsls::SystemClockType::Enum)>:

@@ -1,4 +1,4 @@
-# 3.none.s
+# `BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::print(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, int, int) const` - Ignored
 
 ```x86asm
 000000000043aeb0 <BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::print(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, int, int) const>:

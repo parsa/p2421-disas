@@ -1,4 +1,4 @@
-# 4.none.s
+# `BloombergLP::ball::Record::operator=(BloombergLP::ball::Record const&)` - Ignored
 
 ```x86asm
 0000000000419e10 <BloombergLP::ball::Record::operator=(BloombergLP::ball::Record const&)>:

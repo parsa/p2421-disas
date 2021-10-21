@@ -1,4 +1,4 @@
-# 2.none.s
+# `(anonymous namespace)::u::createOccurrenceInfo(BloombergLP::balcl::OccurrenceInfo::OccurrenceType, BloombergLP::balcl::OptionType::Enum, void const*)` - Ignored
 
 ```x86asm
 000000000044b070 <(anonymous namespace)::u::createOccurrenceInfo(BloombergLP::balcl::OccurrenceInfo::OccurrenceType, BloombergLP::balcl::OptionType::Enum, void const*)>:

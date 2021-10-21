@@ -1,4 +1,4 @@
-# 0.assume.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<QUEUE_TEST_CASE_MINUS_1::Consumer>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, QUEUE_TEST_CASE_MINUS_1::Consumer const&, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 000000000041fb40 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<QUEUE_TEST_CASE_MINUS_1::Consumer>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, QUEUE_TEST_CASE_MINUS_1::Consumer const&, BloombergLP::bslma::Allocator*)>:

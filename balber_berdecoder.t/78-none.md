@@ -1,4 +1,4 @@
-# 78.none.s
+# `BloombergLP::bdlt::Iso8601Util::generateRaw(char*, BloombergLP::bdlt::Date const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)` - Ignored
 
 ```x86asm
 0000000000466600 <BloombergLP::bdlt::Iso8601Util::generateRaw(char*, BloombergLP::bdlt::Date const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)>:

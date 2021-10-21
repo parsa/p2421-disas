@@ -1,4 +1,4 @@
-# 18.none.s
+# `int BloombergLP::balb::Choice4::accessSelection<BloombergLP::baljsn::Encoder_SelectionVisitor>(BloombergLP::baljsn::Encoder_SelectionVisitor&) const` - Ignored
 
 ```x86asm
 00000000004827c0 <int BloombergLP::balb::Choice4::accessSelection<BloombergLP::baljsn::Encoder_SelectionVisitor>(BloombergLP::baljsn::Encoder_SelectionVisitor&) const>:

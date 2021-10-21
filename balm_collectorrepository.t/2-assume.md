@@ -1,4 +1,4 @@
-# 2.assume.s
+# `BloombergLP::balm::MetricRegistry::setCurrentUserData(char const*, int, void const*)` - Assumed
 
 ```x86asm
 000000000041ba10 <BloombergLP::balm::MetricRegistry::setCurrentUserData(char const*, int, void const*)>:

@@ -1,4 +1,4 @@
-# 0.assume.s
+# `BloombergLP::bslmt::EntryPointFunctorAdapter<(anonymous namespace)::u::SynchronizedAddJob>::invokerFunction(void*)` - Assumed
 
 ```x86asm
 0000000000407190 <BloombergLP::bslmt::EntryPointFunctorAdapter<(anonymous namespace)::u::SynchronizedAddJob>::invokerFunction(void*)>:

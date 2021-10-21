@@ -1,4 +1,4 @@
-# 0.assume.s
+# `setState(BloombergLP::bdlde::Base64Encoder*, int)` - Assumed
 
 ```x86asm
 0000000000405130 <setState(BloombergLP::bdlde::Base64Encoder*, int)>:

@@ -1,4 +1,4 @@
-# 4.assume.s
+# `oldUsageExample` - Assumed
 
 ```x86asm
 0000000000406fb0 <oldUsageExample>:

@@ -1,4 +1,4 @@
-# 22.none.s
+# `BloombergLP::balb::SequenceWithAnonymityChoice1::selectionName() const` - Ignored
 
 ```x86asm
 00000000004056f0 <BloombergLP::balb::SequenceWithAnonymityChoice1::selectionName() const>:

@@ -1,4 +1,4 @@
-# 3.none.s
+# `usageExample2` - Ignored
 
 ```x86asm
 0000000000405a40 <usageExample2>:

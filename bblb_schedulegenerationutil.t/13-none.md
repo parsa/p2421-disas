@@ -1,4 +1,4 @@
-# 13.none.s
+# `BloombergLP::bdlt::PackedCalendar::addWeekendDays(BloombergLP::bdlt::DayOfWeekSet const&)` - Ignored
 
 ```x86asm
 00000000004106e0 <BloombergLP::bdlt::PackedCalendar::addWeekendDays(BloombergLP::bdlt::DayOfWeekSet const&)>:

@@ -1,4 +1,4 @@
-# 3.none.s
+# `SKIPLIST_TEST_CASE_MINUS_100::run()` - Ignored
 
 ```x86asm
 0000000000406e50 <SKIPLIST_TEST_CASE_MINUS_100::run()>:

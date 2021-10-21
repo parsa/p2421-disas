@@ -1,4 +1,4 @@
-# 26.assume.s
+# `BloombergLP::s_baltst::SequenceWithAnonymityChoice1::reset()` - Assumed
 
 ```x86asm
 00000000004d0f30 <BloombergLP::s_baltst::SequenceWithAnonymityChoice1::reset()>:

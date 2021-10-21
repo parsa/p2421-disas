@@ -1,4 +1,4 @@
-# 33.assume.s
+# `BloombergLP::bdlt::Calendar::addHoliday(BloombergLP::bdlt::Date const&)` - Assumed
 
 ```x86asm
 000000000040c900 <BloombergLP::bdlt::Calendar::addHoliday(BloombergLP::bdlt::Date const&)>:

@@ -1,4 +1,4 @@
-# 1.assume.s
+# `(anonymous namespace)::BucketsWrapper<char const*>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 000000000041a400 <(anonymous namespace)::BucketsWrapper<char const*>::BucketsWrapper(int, int, BloombergLP::bslma::Allocator*)>:

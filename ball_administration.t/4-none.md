@@ -1,4 +1,4 @@
-# 4.none.s
+# `BloombergLP::ball::Observer::publish(BloombergLP::ball::Record const&, BloombergLP::ball::Context const&)` - Ignored
 
 ```x86asm
 0000000000414940 <BloombergLP::ball::Observer::publish(BloombergLP::ball::Record const&, BloombergLP::ball::Context const&)>:

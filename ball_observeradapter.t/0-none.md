@@ -1,4 +1,4 @@
-# 0.none.s
+# `USAGE_EXAMPLE_1::main(bool)` - Ignored
 
 ```x86asm
 0000000000404630 <USAGE_EXAMPLE_1::main(bool)>:

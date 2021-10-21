@@ -1,4 +1,4 @@
-# 0.assume.s
+# `void testMoveConstructors<char const*, CharHashCaseInsensitive, CharEqualCaseInsensitive, true>()` - Assumed
 
 ```x86asm
 000000000041bef0 <void testMoveConstructors<char const*, CharHashCaseInsensitive, CharEqualCaseInsensitive, true>()>:

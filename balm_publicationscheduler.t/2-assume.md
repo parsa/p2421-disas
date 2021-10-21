@@ -1,4 +1,4 @@
-# 2.assume.s
+# `gg(bsl::vector<Action, bsl::allocator<Action> >*, BloombergLP::balm::MetricRegistry&, char const*)` - Assumed
 
 ```x86asm
 0000000000408190 <gg(bsl::vector<Action, bsl::allocator<Action> >*, BloombergLP::balm::MetricRegistry&, char const*)>:

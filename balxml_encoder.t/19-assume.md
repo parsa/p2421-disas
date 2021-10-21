@@ -1,4 +1,4 @@
-# 19.assume.s
+# `BloombergLP::balxml::Formatter::doAddData(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&, bool)` - Assumed
 
 ```x86asm
 00000000004e72b0 <BloombergLP::balxml::Formatter::doAddData(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&, bool)>:

@@ -1,4 +1,4 @@
-# 6.assume.s
+# `BloombergLP::ball::UserFieldValue::type() const` - Assumed
 
 ```x86asm
 00000000004484e0 <BloombergLP::ball::UserFieldValue::type() const>:

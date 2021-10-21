@@ -1,4 +1,4 @@
-# 1.none.s
+# `BloombergLP::bdls::FdStreamBuf::seekoff(long long, std::__1::ios_base::seekdir, unsigned int)` - Ignored
 
 ```x86asm
 0000000000459620 <BloombergLP::bdls::FdStreamBuf::seekoff(long long, std::__1::ios_base::seekdir, unsigned int)>:

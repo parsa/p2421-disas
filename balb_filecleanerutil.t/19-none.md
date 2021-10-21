@@ -1,4 +1,4 @@
-# 19.none.s
+# `BloombergLP::bdlma::SequentialPool::SequentialPool(BloombergLP::bsls::Alignment::Strategy, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 000000000040bcc0 <BloombergLP::bdlma::SequentialPool::SequentialPool(BloombergLP::bsls::Alignment::Strategy, BloombergLP::bslma::Allocator*)>:

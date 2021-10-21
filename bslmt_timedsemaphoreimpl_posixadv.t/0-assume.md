@@ -1,4 +1,4 @@
-# 0.assume.s
+# `thread3Wait` - Assumed
 
 ```x86asm
 0000000000403e30 <thread3Wait>:

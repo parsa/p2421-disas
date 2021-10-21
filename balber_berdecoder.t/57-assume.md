@@ -1,4 +1,4 @@
-# 57.assume.s
+# `BloombergLP::bdlt::Time::setMinute(int)` - Assumed
 
 ```x86asm
 000000000046ba50 <BloombergLP::bdlt::Time::setMinute(int)>:

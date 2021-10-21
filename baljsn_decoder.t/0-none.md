@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::balxml::Decoder_NillableContext::parseAttribute(char const*, char const*, unsigned long, BloombergLP::balxml::Decoder*)` - Ignored
 
 ```x86asm
 00000000004784f0 <BloombergLP::balxml::Decoder_NillableContext::parseAttribute(char const*, char const*, unsigned long, BloombergLP::balxml::Decoder*)>:

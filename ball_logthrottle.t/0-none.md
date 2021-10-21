@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::bdlmt::Throttle::initialize(int, long long, BloombergLP::bsls::SystemClockType::Enum)` - Ignored
 
 ```x86asm
 0000000000447bb0 <BloombergLP::bdlmt::Throttle::initialize(int, long long, BloombergLP::bsls::SystemClockType::Enum)>:

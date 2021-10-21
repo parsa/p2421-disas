@@ -1,4 +1,4 @@
-# 7.assume.s
+# `BloombergLP::balb::Choice5::reset()` - Assumed
 
 ```x86asm
 0000000000406010 <BloombergLP::balb::Choice5::reset()>:

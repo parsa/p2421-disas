@@ -1,4 +1,4 @@
-# 32.none.s
+# `BloombergLP::bdlt::Calendar::addHolidayCode(BloombergLP::bdlt::Date const&, int)` - Ignored
 
 ```x86asm
 000000000040ca80 <BloombergLP::bdlt::Calendar::addHolidayCode(BloombergLP::bdlt::Date const&, int)>:

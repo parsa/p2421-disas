@@ -1,4 +1,4 @@
-# 24.assume.s
+# `BloombergLP::bdls::FilesystemUtil::visitPaths(char const*, bsl::function<void (char const*)> const&)` - Assumed
 
 ```x86asm
 000000000040d3a0 <BloombergLP::bdls::FilesystemUtil::visitPaths(char const*, bsl::function<void (char const*)> const&)>:

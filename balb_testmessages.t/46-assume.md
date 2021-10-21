@@ -1,4 +1,4 @@
-# 46.assume.s
+# `bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::~vector()` - Assumed
 
 ```x86asm
 00000000004152a0 <bsl::vector<BloombergLP::balb::Choice3, bsl::allocator<BloombergLP::balb::Choice3> >::~vector()>:

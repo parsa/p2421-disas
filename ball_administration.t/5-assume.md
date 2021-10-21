@@ -1,4 +1,4 @@
-# 5.assume.s
+# `BloombergLP::bdlb::HashUtil::hash0(char const*, int, int)` - Assumed
 
 ```x86asm
 00000000004245f0 <BloombergLP::bdlb::HashUtil::hash0(char const*, int, int)>:

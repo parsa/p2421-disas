@@ -1,4 +1,4 @@
-# 33.assume.s
+# `BloombergLP::bdls::PathUtil::getDirname(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >*, BloombergLP::bslstl::StringRefImp<char> const&, int)` - Assumed
 
 ```x86asm
 0000000000412710 <BloombergLP::bdls::PathUtil::getDirname(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >*, BloombergLP::bslstl::StringRefImp<char> const&, int)>:

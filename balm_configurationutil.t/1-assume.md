@@ -1,4 +1,4 @@
-# 1.assume.s
+# `BloombergLP::balm::DefaultMetricsManager::destroy()` - Assumed
 
 ```x86asm
 000000000040dbe0 <BloombergLP::balm::DefaultMetricsManager::destroy()>:

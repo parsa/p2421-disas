@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()` - Ignored
 
 ```x86asm
 000000000040dee0 <BloombergLP::bdlmt::MultipriorityThreadPool::startThreads()>:

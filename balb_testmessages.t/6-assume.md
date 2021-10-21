@@ -1,4 +1,4 @@
-# 6.assume.s
+# `BloombergLP::bdlde::Utf8Util::numCodePointsRaw(char const*, unsigned long)` - Assumed
 
 ```x86asm
 000000000041e430 <BloombergLP::bdlde::Utf8Util::numCodePointsRaw(char const*, unsigned long)>:

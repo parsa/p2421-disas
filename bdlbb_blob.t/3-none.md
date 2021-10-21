@@ -1,4 +1,4 @@
-# 3.none.s
+# `BloombergLP::bdlbb::Blob::moveAndAppendDataBuffers(BloombergLP::bdlbb::Blob*)` - Ignored
 
 ```x86asm
 000000000041f0e0 <BloombergLP::bdlbb::Blob::moveAndAppendDataBuffers(BloombergLP::bdlbb::Blob*)>:

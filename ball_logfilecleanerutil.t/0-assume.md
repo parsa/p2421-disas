@@ -1,4 +1,4 @@
-# 0.assume.s
+# `BloombergLP::ball::LogFileCleanerUtil::logPatternToFilePattern(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >*, std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)` - Assumed
 
 ```x86asm
 0000000000413aa0 <BloombergLP::ball::LogFileCleanerUtil::logPatternToFilePattern(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >*, std::__1::basic_string_view<char, std::__1::char_traits<char> > const&)>:

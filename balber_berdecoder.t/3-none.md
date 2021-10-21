@@ -1,4 +1,4 @@
-# 3.none.s
+# `BloombergLP::s_baltst::MyChoiceWithDefaultValues::operator=(BloombergLP::s_baltst::MyChoiceWithDefaultValues const&)` - Ignored
 
 ```x86asm
 0000000000404fe0 <BloombergLP::s_baltst::MyChoiceWithDefaultValues::operator=(BloombergLP::s_baltst::MyChoiceWithDefaultValues const&)>:

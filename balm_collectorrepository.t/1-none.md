@@ -1,4 +1,4 @@
-# 1.none.s
+# `BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)` - Ignored
 
 ```x86asm
 000000000041cb80 <BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool)>:

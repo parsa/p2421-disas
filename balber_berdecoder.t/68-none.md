@@ -1,4 +1,4 @@
-# 68.none.s
+# `BloombergLP::bdlt::ProlepticDateImpUtil::numLeapYears(int, int)` - Ignored
 
 ```x86asm
 000000000046aa70 <BloombergLP::bdlt::ProlepticDateImpUtil::numLeapYears(int, int)>:

@@ -1,4 +1,4 @@
-# 2.assume.s
+# `BenchmarkSuite::run(int, int, char**)` - Assumed
 
 ```x86asm
 0000000000405ef0 <BenchmarkSuite::run(int, int, char**)>:

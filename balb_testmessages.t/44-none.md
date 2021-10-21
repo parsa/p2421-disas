@@ -1,4 +1,4 @@
-# 44.none.s
+# `BloombergLP::balb::SequenceWithAnonymityChoice::makeSelection2(unsigned char)` - Ignored
 
 ```x86asm
 000000000040b180 <BloombergLP::balb::SequenceWithAnonymityChoice::makeSelection2(unsigned char)>:

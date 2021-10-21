@@ -1,4 +1,4 @@
-# 33.none.s
+# `(anonymous namespace)::u::createTypeInfo(BloombergLP::balcl::OptionType::Enum, void*, void*)` - Ignored
 
 ```x86asm
 000000000044ad00 <(anonymous namespace)::u::createTypeInfo(BloombergLP::balcl::OptionType::Enum, void*, void*)>:

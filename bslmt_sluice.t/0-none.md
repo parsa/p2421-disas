@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::bslmt::Sluice::enter()` - Ignored
 
 ```x86asm
 0000000000406c80 <BloombergLP::bslmt::Sluice::enter()>:

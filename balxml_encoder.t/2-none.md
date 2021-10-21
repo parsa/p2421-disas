@@ -1,4 +1,4 @@
-# 2.none.s
+# `int BloombergLP::balxml::Encoder_EncodeValue::executeImp<BloombergLP::s_baltst::MySequenceWithAttributes>(BloombergLP::s_baltst::MySequenceWithAttributes const&, int, BloombergLP::bdlat_TypeCategory::Sequence)` - Ignored
 
 ```x86asm
 00000000004e1b40 <int BloombergLP::balxml::Encoder_EncodeValue::executeImp<BloombergLP::s_baltst::MySequenceWithAttributes>(BloombergLP::s_baltst::MySequenceWithAttributes const&, int, BloombergLP::bdlat_TypeCategory::Sequence)>:

@@ -1,4 +1,4 @@
-# 0.assume.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BSLMT_MUTEX_CASE_MINUS_1::F>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BSLMT_MUTEX_CASE_MINUS_1::F const&, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 0000000000405490 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<BSLMT_MUTEX_CASE_MINUS_1::F>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, BSLMT_MUTEX_CASE_MINUS_1::F const&, BloombergLP::bslma::Allocator*)>:

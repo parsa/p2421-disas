@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::bdlma::SequentialPool::SequentialPool(int)` - Ignored
 
 ```x86asm
 000000000040bde0 <BloombergLP::bdlma::SequentialPool::SequentialPool(int)>:

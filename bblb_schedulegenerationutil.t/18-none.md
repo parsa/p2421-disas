@@ -1,4 +1,4 @@
-# 18.none.s
+# `BloombergLP::bdlt::PackedCalendar::removeHoliday(BloombergLP::bdlt::Date const&)` - Ignored
 
 ```x86asm
 0000000000410fd0 <BloombergLP::bdlt::PackedCalendar::removeHoliday(BloombergLP::bdlt::Date const&)>:

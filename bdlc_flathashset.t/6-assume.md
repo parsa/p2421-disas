@@ -1,4 +1,4 @@
-# 6.assume.s
+# `BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, BloombergLP::bslh::FibonacciBadHashWrapper<bsl::hash<int> >, bsl::equal_to<int> >::indexOfKey(bool*, int const&, unsigned long)` - Assumed
 
 ```x86asm
 000000000044d330 <BloombergLP::bdlc::FlatHashTable<int, int, BloombergLP::bdlc::FlatHashSet_EntryUtil<int>, BloombergLP::bslh::FibonacciBadHashWrapper<bsl::hash<int> >, bsl::equal_to<int> >::indexOfKey(bool*, int const&, unsigned long)>:

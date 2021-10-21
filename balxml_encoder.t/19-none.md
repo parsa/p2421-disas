@@ -1,4 +1,4 @@
-# 19.none.s
+# `BloombergLP::balxml::Formatter::doAddData(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&, bool)` - Ignored
 
 ```x86asm
 00000000004e7a80 <BloombergLP::balxml::Formatter::doAddData(std::__1::basic_string_view<char, std::__1::char_traits<char> > const&, bool)>:

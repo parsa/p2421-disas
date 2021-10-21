@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::bdlcc::SkipList_PoolUtil::createPoolManager(int*, int, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 000000000064aae0 <BloombergLP::bdlcc::SkipList_PoolUtil::createPoolManager(int*, int, BloombergLP::bslma::Allocator*)>:

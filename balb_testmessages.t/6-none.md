@@ -1,4 +1,4 @@
-# 6.none.s
+# `BloombergLP::bdlde::Utf8Util::numCodePointsRaw(char const*, unsigned long)` - Ignored
 
 ```x86asm
 000000000041e530 <BloombergLP::bdlde::Utf8Util::numCodePointsRaw(char const*, unsigned long)>:

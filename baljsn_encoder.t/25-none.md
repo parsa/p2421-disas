@@ -1,4 +1,4 @@
-# 25.none.s
+# `BloombergLP::s_baltst::MySequenceWithChoiceChoice::operator=(BloombergLP::s_baltst::MySequenceWithChoiceChoice&&)` - Ignored
 
 ```x86asm
 00000000004b6810 <BloombergLP::s_baltst::MySequenceWithChoiceChoice::operator=(BloombergLP::s_baltst::MySequenceWithChoiceChoice&&)>:

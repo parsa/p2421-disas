@@ -1,4 +1,4 @@
-# 6.assume.s
+# `(anonymous namespace)::u::setConstraint(BloombergLP::balcl::TypeInfo*, BloombergLP::balcl::OptionType::Enum, void const*)` - Assumed
 
 ```x86asm
 00000000004132e0 <(anonymous namespace)::u::setConstraint(BloombergLP::balcl::TypeInfo*, BloombergLP::balcl::OptionType::Enum, void const*)>:

@@ -1,4 +1,4 @@
-# 4.assume.s
+# `void testPutValue<BloombergLP::bdlt::Time>(int, int, int, int, BloombergLP::bdlt::Time const&, BloombergLP::baljsn::EncoderOptions const*, bool)` - Assumed
 
 ```x86asm
 000000000041e850 <void testPutValue<BloombergLP::bdlt::Time>(int, int, int, int, BloombergLP::bdlt::Time const&, BloombergLP::baljsn::EncoderOptions const*, bool)>:

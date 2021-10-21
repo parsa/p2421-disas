@@ -1,4 +1,4 @@
-# 4.assume.s
+# `BloombergLP::balxml::Decoder::checkForErrors(BloombergLP::balxml::ErrorInfo const&)` - Assumed
 
 ```x86asm
 0000000000478140 <BloombergLP::balxml::Decoder::checkForErrors(BloombergLP::balxml::ErrorInfo const&)>:

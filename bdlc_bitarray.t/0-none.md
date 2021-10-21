@@ -1,4 +1,4 @@
-# 0.none.s
+# `gggDispatch(BloombergLP::bdlc::BitArray*, char const*, bool)` - Ignored
 
 ```x86asm
 000000000044ee90 <gggDispatch(BloombergLP::bdlc::BitArray*, char const*, bool)>:

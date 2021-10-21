@@ -1,4 +1,4 @@
-# 0.assume.s
+# `.annobin_static_reloc.c_end.hot` - Assumed
 
 ```x86asm
 00000000004047d8 <.annobin_static_reloc.c_end.hot>:

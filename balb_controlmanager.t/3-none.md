@@ -1,4 +1,4 @@
-# 3.none.s
+# `BloombergLP::bdlb::String::strrstr(char const*, int, char const*, int)` - Ignored
 
 ```x86asm
 000000000040d370 <BloombergLP::bdlb::String::strrstr(char const*, int, char const*, int)>:

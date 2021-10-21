@@ -1,4 +1,4 @@
-# 6.none.s
+# `int BloombergLP::baljsn::SimpleFormatter::addValue<BloombergLP::bdlt::DateTz>(BloombergLP::bdlt::DateTz const&)` - Ignored
 
 ```x86asm
 000000000042a820 <int BloombergLP::baljsn::SimpleFormatter::addValue<BloombergLP::bdlt::DateTz>(BloombergLP::bdlt::DateTz const&)>:

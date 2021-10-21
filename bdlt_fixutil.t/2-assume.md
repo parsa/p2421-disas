@@ -1,4 +1,4 @@
-# 2.assume.s
+# `BloombergLP::bdlt::FixUtil::generate(char*, int, BloombergLP::bdlt::DateTz const&, BloombergLP::bdlt::FixUtilConfiguration const&)` - Assumed
 
 ```x86asm
 000000000043aa60 <BloombergLP::bdlt::FixUtil::generate(char*, int, BloombergLP::bdlt::DateTz const&, BloombergLP::bdlt::FixUtilConfiguration const&)>:

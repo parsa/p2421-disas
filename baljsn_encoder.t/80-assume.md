@@ -1,4 +1,4 @@
-# 80.assume.s
+# `BloombergLP::s_baltst::SequenceWithAnonymityChoice::makeSelection4(BloombergLP::s_baltst::CustomInt const&)` - Assumed
 
 ```x86asm
 00000000004cfe50 <BloombergLP::s_baltst::SequenceWithAnonymityChoice::makeSelection4(BloombergLP::s_baltst::CustomInt const&)>:

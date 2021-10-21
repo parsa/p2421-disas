@@ -1,4 +1,4 @@
-# 3.assume.s
+# `(anonymous namespace)::u::checkPrint(BloombergLP::balcl::OptionValue const&)` - Assumed
 
 ```x86asm
 000000000042d510 <(anonymous namespace)::u::checkPrint(BloombergLP::balcl::OptionValue const&)>:

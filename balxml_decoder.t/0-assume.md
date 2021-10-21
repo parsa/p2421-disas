@@ -1,4 +1,4 @@
-# 0.assume.s
+# `GenerateXmlElement::operator()(BloombergLP::bslstl::StringRefImp<char> const&, BloombergLP::bslstl::StringRefImp<char> const&) const` - Assumed
 
 ```x86asm
 00000000004405c0 <GenerateXmlElement::operator()(BloombergLP::bslstl::StringRefImp<char> const&, BloombergLP::bslstl::StringRefImp<char> const&) const>:

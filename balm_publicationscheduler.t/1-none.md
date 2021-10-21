@@ -1,4 +1,4 @@
-# 1.none.s
+# `operator<<(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, Action const&)` - Ignored
 
 ```x86asm
 0000000000406430 <operator<<(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, Action const&)>:

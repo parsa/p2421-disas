@@ -1,4 +1,4 @@
-# 20.none.s
+# `BloombergLP::bdlt::Calendar::addWeekendDays(BloombergLP::bdlt::DayOfWeekSet const&)` - Ignored
 
 ```x86asm
 000000000040cca0 <BloombergLP::bdlt::Calendar::addWeekendDays(BloombergLP::bdlt::DayOfWeekSet const&)>:

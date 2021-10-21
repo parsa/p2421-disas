@@ -1,4 +1,4 @@
-# 2.none.s
+# `BloombergLP::bdlbb::Blob::appendDataBuffer(BloombergLP::bdlbb::BlobBuffer const&)` - Ignored
 
 ```x86asm
 000000000041e8d0 <BloombergLP::bdlbb::Blob::appendDataBuffer(BloombergLP::bdlbb::BlobBuffer const&)>:

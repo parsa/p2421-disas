@@ -1,4 +1,4 @@
-# 1.none.s
+# `int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)` - Ignored
 
 ```x86asm
 00000000004e8f10 <int BloombergLP::bdlde::Base64Encoder::endConvert<std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, int*, int)>:

@@ -1,4 +1,4 @@
-# 1.none.s
+# `workerThread1` - Ignored
 
 ```x86asm
 00000000004060f0 <workerThread1>:

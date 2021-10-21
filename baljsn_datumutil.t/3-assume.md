@@ -1,4 +1,4 @@
-# 3.assume.s
+# `BloombergLP::bdlb::BitStringUtil::assign(unsigned long*, unsigned long, bool, unsigned long)` - Assumed
 
 ```x86asm
 00000000004425b0 <BloombergLP::bdlb::BitStringUtil::assign(unsigned long*, unsigned long, bool, unsigned long)>:

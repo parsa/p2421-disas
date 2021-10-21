@@ -1,4 +1,4 @@
-# 0.assume.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<void (*)()>(unsigned long*, void (* const&)(), BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 000000000043dfd0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<void (*)()>(unsigned long*, void (* const&)(), BloombergLP::bslma::Allocator*)>:

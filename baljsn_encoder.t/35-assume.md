@@ -1,4 +1,4 @@
-# 35.assume.s
+# `int BloombergLP::baljsn::Encoder_ValueDispatcher::operator()<BloombergLP::bdlt::Date>(BloombergLP::bdlt::Date const&, BloombergLP::bdlat_TypeCategory::Simple)` - Assumed
 
 ```x86asm
 00000000004830c0 <int BloombergLP::baljsn::Encoder_ValueDispatcher::operator()<BloombergLP::bdlt::Date>(BloombergLP::bdlt::Date const&, BloombergLP::bdlat_TypeCategory::Simple)>:

@@ -1,4 +1,4 @@
-# 6.assume.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<Case27DrainThread>(unsigned long*, Case27DrainThread const&, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 00000000004311d0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<Case27DrainThread>(unsigned long*, Case27DrainThread const&, BloombergLP::bslma::Allocator*)>:

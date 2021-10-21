@@ -1,4 +1,4 @@
-# 0.none.s
+# `void BloombergLP::bdld::Datum::apply<Benchmark_Visitor>(Benchmark_Visitor&) const` - Ignored
 
 ```x86asm
 000000000045c480 <void BloombergLP::bdld::Datum::apply<Benchmark_Visitor>(Benchmark_Visitor&) const>:

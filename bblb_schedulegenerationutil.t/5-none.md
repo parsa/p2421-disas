@@ -1,4 +1,4 @@
-# 5.none.s
+# `BloombergLP::bdlt::PackedCalendar::addWeekendDay(BloombergLP::bdlt::DayOfWeek::Enum)` - Ignored
 
 ```x86asm
 0000000000410680 <BloombergLP::bdlt::PackedCalendar::addWeekendDay(BloombergLP::bdlt::DayOfWeek::Enum)>:

@@ -1,4 +1,4 @@
-# 0.none.s
+# `void testMoveConstructors<char const*, CharHashCaseInsensitive, CharEqualCaseInsensitive, true>()` - Ignored
 
 ```x86asm
 000000000041bea0 <void testMoveConstructors<char const*, CharHashCaseInsensitive, CharEqualCaseInsensitive, true>()>:

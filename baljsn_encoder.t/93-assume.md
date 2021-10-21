@@ -1,4 +1,4 @@
-# 93.assume.s
+# `BloombergLP::s_baltst::Choice3::makeSelection(int)` - Assumed
 
 ```x86asm
 00000000004b9920 <BloombergLP::s_baltst::Choice3::makeSelection(int)>:

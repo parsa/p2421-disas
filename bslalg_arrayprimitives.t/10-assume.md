@@ -1,4 +1,4 @@
-# 10.assume.s
+# `void testCopyConstructWithIterators<AmbiguousConvertibleType>(bool, bool, bool)` - Assumed
 
 ```x86asm
 00000000004cd470 <void testCopyConstructWithIterators<AmbiguousConvertibleType>(bool, bool, bool)>:

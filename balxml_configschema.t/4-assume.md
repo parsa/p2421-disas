@@ -1,4 +1,4 @@
-# 4.assume.s
+# `BloombergLP::s_baltst::BasicSchemaEnumerationElementChoice::selectionName() const` - Assumed
 
 ```x86asm
 0000000000430250 <BloombergLP::s_baltst::BasicSchemaEnumerationElementChoice::selectionName() const>:

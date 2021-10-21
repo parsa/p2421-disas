@@ -1,4 +1,4 @@
-# 87.none.s
+# `BloombergLP::s_baltst::Enumerated::toString(BloombergLP::s_baltst::Enumerated::Value)` - Ignored
 
 ```x86asm
 00000000004b4080 <BloombergLP::s_baltst::Enumerated::toString(BloombergLP::s_baltst::Enumerated::Value)>:

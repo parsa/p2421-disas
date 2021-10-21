@@ -1,4 +1,4 @@
-# 27.none.s
+# `BloombergLP::balb::Request::selectionName() const` - Ignored
 
 ```x86asm
 00000000004139c0 <BloombergLP::balb::Request::selectionName() const>:

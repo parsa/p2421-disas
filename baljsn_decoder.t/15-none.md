@@ -1,4 +1,4 @@
-# 15.none.s
+# `BloombergLP::balxml::MiniReader::advanceToNextNode()` - Ignored
 
 ```x86asm
 000000000047ea00 <BloombergLP::balxml::MiniReader::advanceToNextNode()>:

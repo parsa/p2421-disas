@@ -1,4 +1,4 @@
-# 17.assume.s
+# `BloombergLP::bdlt::DayOfWeekSet_Iter::DayOfWeekSet_Iter(int, int)` - Assumed
 
 ```x86asm
 000000000040e640 <BloombergLP::bdlt::DayOfWeekSet_Iter::DayOfWeekSet_Iter(int, int)>:

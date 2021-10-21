@@ -1,4 +1,4 @@
-# 75.assume.s
+# `BloombergLP::s_baltst::Choice3::makeSelection4(BloombergLP::s_baltst::CustomInt const&)` - Assumed
 
 ```x86asm
 00000000004b9440 <BloombergLP::s_baltst::Choice3::makeSelection4(BloombergLP::s_baltst::CustomInt const&)>:

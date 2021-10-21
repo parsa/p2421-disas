@@ -1,4 +1,4 @@
-# 0.assume.s
+# `detectNOccurrences(int, int const*, int)` - Assumed
 
 ```x86asm
 0000000000401f90 <detectNOccurrences(int, int const*, int)>:

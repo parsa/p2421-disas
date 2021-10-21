@@ -1,4 +1,4 @@
-# 12.assume.s
+# `void testCopyConstructWithIterators<int (*)()>(bool, bool, bool)` - Assumed
 
 ```x86asm
 00000000004bce10 <void testCopyConstructWithIterators<int (*)()>(bool, bool, bool)>:

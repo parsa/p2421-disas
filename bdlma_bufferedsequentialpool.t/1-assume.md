@@ -1,4 +1,4 @@
-# 1.assume.s
+# `BloombergLP::bdlma::BufferImpUtil::allocateFromBufferRaw(long*, char*, unsigned long, BloombergLP::bsls::Alignment::Strategy)` - Assumed
 
 ```x86asm
 000000000040fc20 <BloombergLP::bdlma::BufferImpUtil::allocateFromBufferRaw(long*, char*, unsigned long, BloombergLP::bsls::Alignment::Strategy)>:

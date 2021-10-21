@@ -1,4 +1,4 @@
-# 0.none.s
+# `stuffRandomAddresses(BloombergLP::balst::StackTrace*)` - Ignored
 
 ```x86asm
 0000000000404d90 <stuffRandomAddresses(BloombergLP::balst::StackTrace*)>:

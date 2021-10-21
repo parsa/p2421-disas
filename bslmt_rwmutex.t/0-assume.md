@@ -1,4 +1,4 @@
-# 0.assume.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<ReaderThread>(unsigned long*, ReaderThread const&, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 0000000000408150 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<ReaderThread>(unsigned long*, ReaderThread const&, BloombergLP::bslma::Allocator*)>:

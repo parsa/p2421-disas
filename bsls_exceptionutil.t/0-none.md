@@ -1,4 +1,4 @@
-# 0.none.s
+# `abortSignalHandler` - Ignored
 
 ```x86asm
 0000000000400fb0 <abortSignalHandler>:

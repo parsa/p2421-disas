@@ -1,4 +1,4 @@
-# 0.none.s
+# `BloombergLP::bdlcc::FixedQueueIndexManager::reservePopIndexForClear(unsigned int*, unsigned int*, unsigned int, unsigned int)` - Ignored
 
 ```x86asm
 000000000040c380 <BloombergLP::bdlcc::FixedQueueIndexManager::reservePopIndexForClear(unsigned int*, unsigned int*, unsigned int, unsigned int)>:

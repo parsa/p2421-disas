@@ -1,4 +1,4 @@
-# 1.none.s
+# `void BloombergLP::bdlmt::EventScheduler::scheduleEventRaw<std::__1::chrono::steady_clock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > >(BloombergLP::bdlmt::EventScheduler::Event**, std::__1::chrono::time_point<std::__1::chrono::steady_clock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > > const&, bsl::function<void ()> const&)` - Ignored
 
 ```x86asm
 0000000000426a70 <void BloombergLP::bdlmt::EventScheduler::scheduleEventRaw<std::__1::chrono::steady_clock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > >(BloombergLP::bdlmt::EventScheduler::Event**, std::__1::chrono::time_point<std::__1::chrono::steady_clock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > > const&, bsl::function<void ()> const&)>:

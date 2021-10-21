@@ -1,4 +1,4 @@
-# 1.assume.s
+# `BloombergLP::bdlcc::ObjectPool<BloombergLP::bdlcc::SharedObjectPool_Rep<(anonymous namespace)::SpLink, BloombergLP::bdlcc::ObjectPoolFunctors::Reset<(anonymous namespace)::SpLink> >, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Reset<BloombergLP::bdlcc::SharedObjectPool_Rep<(anonymous namespace)::SpLink, BloombergLP::bdlcc::ObjectPoolFunctors::Reset<(anonymous namespace)::SpLink> > > >::getObject()` - Assumed
 
 ```x86asm
 0000000000409600 <BloombergLP::bdlcc::ObjectPool<BloombergLP::bdlcc::SharedObjectPool_Rep<(anonymous namespace)::SpLink, BloombergLP::bdlcc::ObjectPoolFunctors::Reset<(anonymous namespace)::SpLink> >, bsl::function<void (void*, BloombergLP::bslma::Allocator*)>, BloombergLP::bdlcc::ObjectPoolFunctors::Reset<BloombergLP::bdlcc::SharedObjectPool_Rep<(anonymous namespace)::SpLink, BloombergLP::bdlcc::ObjectPoolFunctors::Reset<(anonymous namespace)::SpLink> > > >::getObject()>:

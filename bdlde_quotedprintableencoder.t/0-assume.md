@@ -1,4 +1,4 @@
-# 0.assume.s
+# `BloombergLP::bdlde::QuotedPrintableEncoder::convert(char*, int*, int*, char const*, char const*, int)` - Assumed
 
 ```x86asm
 000000000041ef60 <BloombergLP::bdlde::QuotedPrintableEncoder::convert(char*, int*, int*, char const*, char const*, int)>:

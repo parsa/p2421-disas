@@ -1,4 +1,4 @@
-# 6.none.s
+# `BloombergLP::bslstl::Function_Rep::moveInit(BloombergLP::bslstl::Function_Rep*)` - Ignored
 
 ```x86asm
 0000000000410530 <BloombergLP::bslstl::Function_Rep::moveInit(BloombergLP::bslstl::Function_Rep*)>:

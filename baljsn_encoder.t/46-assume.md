@@ -1,4 +1,4 @@
-# 46.assume.s
+# `BloombergLP::s_baltst::MySequenceWithChoice::reset()` - Assumed
 
 ```x86asm
 00000000004b67e0 <BloombergLP::s_baltst::MySequenceWithChoice::reset()>:

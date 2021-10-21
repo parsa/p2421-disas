@@ -1,4 +1,4 @@
-# 0.none.s
+# `loadFromHexStream(bsl::vector<char, bsl::allocator<char> >*, std::__1::basic_istream<char, std::__1::char_traits<char> >&)` - Ignored
 
 ```x86asm
 0000000000403dd0 <loadFromHexStream(bsl::vector<char, bsl::allocator<char> >*, std::__1::basic_istream<char, std::__1::char_traits<char> >&)>:

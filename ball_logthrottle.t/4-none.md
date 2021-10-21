@@ -1,4 +1,4 @@
-# 4.none.s
+# `Usage::radiationMonitorStreamDaemon()` - Ignored
 
 ```x86asm
 0000000000406450 <Usage::radiationMonitorStreamDaemon()>:

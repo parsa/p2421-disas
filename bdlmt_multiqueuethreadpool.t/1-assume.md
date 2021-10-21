@@ -1,4 +1,4 @@
-# 1.assume.s
+# `BloombergLP::bdlmt::MultiQueueThreadPool_Queue::waitWhilePausing()` - Assumed
 
 ```x86asm
 0000000000432ef0 <BloombergLP::bdlmt::MultiQueueThreadPool_Queue::waitWhilePausing()>:

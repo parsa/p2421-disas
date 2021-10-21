@@ -1,4 +1,4 @@
-# 9.assume.s
+# `BloombergLP::ball::Record::clear()` - Assumed
 
 ```x86asm
 00000000004131c0 <BloombergLP::ball::Record::clear()>:

@@ -1,4 +1,4 @@
-# 58.assume.s
+# `BloombergLP::s_baltst::MyEnumeration::toString(BloombergLP::s_baltst::MyEnumeration::Value)` - Assumed
 
 ```x86asm
 000000000045b690 <BloombergLP::s_baltst::MyEnumeration::toString(BloombergLP::s_baltst::MyEnumeration::Value)>:

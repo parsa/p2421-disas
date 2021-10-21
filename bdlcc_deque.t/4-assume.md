@@ -1,4 +1,4 @@
-# 4.assume.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<SEQUENCE_CONSTRAINT_TEST::PusherThread>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, SEQUENCE_CONSTRAINT_TEST::PusherThread const&, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 00000000004ae740 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<SEQUENCE_CONSTRAINT_TEST::PusherThread>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, SEQUENCE_CONSTRAINT_TEST::PusherThread const&, BloombergLP::bslma::Allocator*)>:

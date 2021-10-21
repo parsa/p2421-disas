@@ -1,4 +1,4 @@
-# 20.none.s
+# `BloombergLP::balb::Choice5::selectionName() const` - Ignored
 
 ```x86asm
 00000000004063c0 <BloombergLP::balb::Choice5::selectionName() const>:

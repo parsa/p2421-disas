@@ -1,4 +1,4 @@
-# 5.none.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<Case7_Driver>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, Case7_Driver const&, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 0000000000408880 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<Case7_Driver>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, Case7_Driver const&, BloombergLP::bslma::Allocator*)>:

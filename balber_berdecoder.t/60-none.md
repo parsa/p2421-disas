@@ -1,4 +1,4 @@
-# 60.none.s
+# `BloombergLP::bdlt::Iso8601Util::generate(char*, int, BloombergLP::bdlt::DatetimeTz const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)` - Ignored
 
 ```x86asm
 0000000000467be0 <BloombergLP::bdlt::Iso8601Util::generate(char*, int, BloombergLP::bdlt::DatetimeTz const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&)>:

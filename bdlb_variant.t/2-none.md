@@ -1,4 +1,4 @@
-# 2.none.s
+# `g(char const*)` - Ignored
 
 ```x86asm
 0000000000406190 <g(char const*)>:

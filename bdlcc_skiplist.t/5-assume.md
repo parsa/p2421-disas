@@ -1,4 +1,4 @@
-# 5.assume.s
+# `BloombergLP::bdlcc::SkipList<int, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::allocateNode(int, int const&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)` - Assumed
 
 ```x86asm
 00000000005e9830 <BloombergLP::bdlcc::SkipList<int, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > >::allocateNode(int, int const&, bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> > const&)>:

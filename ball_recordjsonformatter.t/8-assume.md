@@ -1,4 +1,4 @@
-# 8.assume.s
+# `BloombergLP::ball::(anonymous namespace)::ThreadIdFormatter::parse(BloombergLP::bdld::DatumMapRef)` - Assumed
 
 ```x86asm
 000000000041a220 <BloombergLP::ball::(anonymous namespace)::ThreadIdFormatter::parse(BloombergLP::bdld::DatumMapRef)>:

@@ -1,4 +1,4 @@
-# 5.none.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<USAGE_EXAMPLE_2::WorkerFunctor>(unsigned long*, USAGE_EXAMPLE_2::WorkerFunctor const&, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 0000000000493740 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<USAGE_EXAMPLE_2::WorkerFunctor>(unsigned long*, USAGE_EXAMPLE_2::WorkerFunctor const&, BloombergLP::bslma::Allocator*)>:

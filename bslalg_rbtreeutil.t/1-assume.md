@@ -1,4 +1,4 @@
-# 1.assume.s
+# `char const* ggParseNode<IntNode, void (*)(IntNode*, int)>(IntNode**, char const*, void (* const&)(IntNode*, int))` - Assumed
 
 ```x86asm
 0000000000487af0 <char const* ggParseNode<IntNode, void (*)(IntNode*, int)>(IntNode**, char const*, void (* const&)(IntNode*, int))>:

@@ -1,4 +1,4 @@
-# 0.none.s
+# `Action::typeString(Action::Type)` - Ignored
 
 ```x86asm
 0000000000406510 <Action::typeString(Action::Type)>:

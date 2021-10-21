@@ -1,4 +1,4 @@
-# 4.assume.s
+# `Usage::radiationMonitorStreamDaemon()` - Assumed
 
 ```x86asm
 0000000000406450 <Usage::radiationMonitorStreamDaemon()>:

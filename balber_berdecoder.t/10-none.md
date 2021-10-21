@@ -1,4 +1,4 @@
-# 10.none.s
+# `int BloombergLP::balber::BerDecoder_Node::decodeChoice<BloombergLP::s_baltst::MyChoice>(BloombergLP::s_baltst::MyChoice*)` - Ignored
 
 ```x86asm
 0000000000449440 <int BloombergLP::balber::BerDecoder_Node::decodeChoice<BloombergLP::s_baltst::MyChoice>(BloombergLP::s_baltst::MyChoice*)>:

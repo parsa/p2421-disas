@@ -1,4 +1,4 @@
-# 2.none.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<ThreadBinder>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, ThreadBinder const&, BloombergLP::bslma::Allocator*)` - Ignored
 
 ```x86asm
 00000000004090d0 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<ThreadBinder>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, ThreadBinder const&, BloombergLP::bslma::Allocator*)>:

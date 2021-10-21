@@ -1,4 +1,4 @@
-# 0.assume.s
+# `BloombergLP::baljsn::EncodingStyle::toString(BloombergLP::baljsn::EncodingStyle::Value)` - Assumed
 
 ```x86asm
 000000000040db80 <BloombergLP::baljsn::EncodingStyle::toString(BloombergLP::baljsn::EncodingStyle::Value)>:

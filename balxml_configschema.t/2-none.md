@@ -1,4 +1,4 @@
-# 2.none.s
+# `BloombergLP::s_baltst::BasicSchemaSequenceElementChoice::selectionName() const` - Ignored
 
 ```x86asm
 000000000043a6c0 <BloombergLP::s_baltst::BasicSchemaSequenceElementChoice::selectionName() const>:

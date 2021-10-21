@@ -1,4 +1,4 @@
-# 6.none.s
+# `BloombergLP::balcl::TypeInfo::resetConstraint()` - Ignored
 
 ```x86asm
 0000000000466f80 <BloombergLP::balcl::TypeInfo::resetConstraint()>:

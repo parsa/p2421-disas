@@ -1,4 +1,4 @@
-# 34.none.s
+# `BloombergLP::bdlt::PackedCalendar_BusinessDayConstIterator::previousBusinessDay()` - Ignored
 
 ```x86asm
 0000000000412ce0 <BloombergLP::bdlt::PackedCalendar_BusinessDayConstIterator::previousBusinessDay()>:

@@ -1,4 +1,4 @@
-# 4.assume.s
+# `BloombergLP::bdlb::String::upperCaseCmp(char const*, char const*, int)` - Assumed
 
 ```x86asm
 000000000040d8a0 <BloombergLP::bdlb::String::upperCaseCmp(char const*, char const*, int)>:

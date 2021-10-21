@@ -1,4 +1,4 @@
-# 17.none.s
+# `int BloombergLP::balb::Choice3::manipulateSelection<BloombergLP::baljsn::Decoder_ElementVisitor>(BloombergLP::baljsn::Decoder_ElementVisitor&)` - Ignored
 
 ```x86asm
 0000000000450b00 <int BloombergLP::balb::Choice3::manipulateSelection<BloombergLP::baljsn::Decoder_ElementVisitor>(BloombergLP::baljsn::Decoder_ElementVisitor&)>:

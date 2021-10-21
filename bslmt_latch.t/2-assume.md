@@ -1,4 +1,4 @@
-# 2.assume.s
+# `int BloombergLP::bslmt::ThreadUtil::createWithAllocator<ThreadBinder>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, ThreadBinder const&, BloombergLP::bslma::Allocator*)` - Assumed
 
 ```x86asm
 0000000000409020 <int BloombergLP::bslmt::ThreadUtil::createWithAllocator<ThreadBinder>(unsigned long*, BloombergLP::bslmt::ThreadAttributes const&, ThreadBinder const&, BloombergLP::bslma::Allocator*)>:

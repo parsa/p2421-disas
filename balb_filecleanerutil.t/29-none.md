@@ -1,4 +1,4 @@
-# 29.none.s
+# `BloombergLP::bdls::PathUtil::getRoot(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >*, BloombergLP::bslstl::StringRefImp<char> const&, int)` - Ignored
 
 ```x86asm
 00000000004129c0 <BloombergLP::bdls::PathUtil::getRoot(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >*, BloombergLP::bslstl::StringRefImp<char> const&, int)>:
