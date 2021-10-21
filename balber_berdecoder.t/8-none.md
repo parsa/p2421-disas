@@ -1,0 +1,22 @@
+# 8.none.s
+
+```asm
+0000000000405280 <BloombergLP::s_baltst::MyChoiceWithDefaultValues::reset()>:
+0000000000000000: 01	pushq	%rbx
+0000000000000001: 03	movq	%rdi, %rbx
+0000000000000004: 04	cmpl	$1, 48(%rdi)
+0000000000000008: 02	jne	0x4052a6 <BloombergLP::s_baltst::MyChoiceWithDefaultValues::reset()+0x26>
+000000000000000a: 05	cmpq	$23, 32(%rbx)
+000000000000000f: 02	je	0x40529e <BloombergLP::s_baltst::MyChoiceWithDefaultValues::reset()+0x1e>
+0000000000000011: 03	movq	(%rbx), %rsi
+0000000000000014: 04	movq	40(%rbx), %rdi
+0000000000000018: 03	movq	(%rdi), %rax
+000000000000001b: 03	callq	*24(%rax)
+000000000000001e: 08	movq	$-1, 24(%rbx)
+0000000000000026: 07	movl	$4294967295, 48(%rbx)
+000000000000002d: 01	popq	%rbx
+000000000000002e: 01	retq	
+000000000000002f: 03	movq	%rax, %rdi
+0000000000000032: 05	callq	0x444ad0 <__clang_call_terminate>
+0000000000000037: 09	nopw	(%rax,%rax)
+```

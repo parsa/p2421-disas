@@ -1,0 +1,93 @@
+# 0.none.s
+
+```asm
+0000000000402c60 <UsageExample::TradeMatcher::placeBuyOrder(double, int)>:
+0000000000000000: 01	pushq	%rbp
+0000000000000001: 02	pushq	%r15
+0000000000000003: 02	pushq	%r14
+0000000000000005: 02	pushq	%r12
+0000000000000007: 01	pushq	%rbx
+0000000000000008: 04	subq	$16, %rsp
+000000000000000c: 05	movsd	%xmm0, (%rsp)
+0000000000000011: 02	testl	%esi, %esi
+0000000000000013: 06	je	0x402d80 <UsageExample::TradeMatcher::placeBuyOrder(double, int)+0x120>
+0000000000000019: 03	movl	%esi, %r12d
+000000000000001c: 03	movq	%rdi, %r14
+000000000000001f: 04	leaq	32(%rdi), %r15
+0000000000000023: 04	movq	48(%rdi), %rbx
+0000000000000027: 09	nopw	(%rax,%rax)
+0000000000000030: 04	movq	40(%r14), %rax
+0000000000000034: 03	movq	%r15, %rcx
+0000000000000037: 03	testq	%rax, %rax
+000000000000003a: 02	je	0x402ccc <UsageExample::TradeMatcher::placeBuyOrder(double, int)+0x6c>
+000000000000003c: 05	movsd	(%rsp), %xmm0
+0000000000000041: 03	movq	%r15, %rcx
+0000000000000044: 10	nopw	%cs:(%rax,%rax)
+000000000000004e: 02	nop	
+0000000000000050: 05	movsd	24(%rax), %xmm1
+0000000000000055: 02	xorl	%edx, %edx
+0000000000000057: 04	ucomisd	%xmm0, %xmm1
+000000000000005b: 04	cmovaq	%rax, %rcx
+000000000000005f: 03	setbe	%dl
+0000000000000062: 05	movq	8(%rax,%rdx,8), %rax
+0000000000000067: 03	testq	%rax, %rax
+000000000000006a: 02	jne	0x402cb0 <UsageExample::TradeMatcher::placeBuyOrder(double, int)+0x50>
+000000000000006c: 03	cmpq	%rcx, %rbx
+000000000000006f: 02	je	0x402d09 <UsageExample::TradeMatcher::placeBuyOrder(double, int)+0xa9>
+0000000000000071: 03	movl	32(%rbx), %eax
+0000000000000074: 03	subl	%r12d, %eax
+0000000000000077: 06	jg	0x402d7d <UsageExample::TradeMatcher::placeBuyOrder(double, int)+0x11d>
+000000000000007d: 03	movq	%rbx, %rdi
+0000000000000080: 05	callq	0x6dc2b0 <BloombergLP::bslalg::RbTreeUtil::next(BloombergLP::bslalg::RbTreeNode const*)>
+0000000000000085: 03	movq	%rax, %rbp
+0000000000000088: 03	movq	%r15, %rdi
+000000000000008b: 03	movq	%rbx, %rsi
+000000000000008e: 05	callq	0x6dc660 <BloombergLP::bslalg::RbTreeUtil::remove(BloombergLP::bslalg::RbTreeAnchor*, BloombergLP::bslalg::RbTreeNode*)>
+0000000000000093: 04	movq	16(%r14), %rax
+0000000000000097: 03	movq	%rax, (%rbx)
+000000000000009a: 04	movq	%rbx, 16(%r14)
+000000000000009e: 03	movq	%rbp, %rbx
+00000000000000a1: 04	subl	32(%rbp), %r12d
+00000000000000a5: 02	jne	0x402c90 <UsageExample::TradeMatcher::placeBuyOrder(double, int)+0x30>
+00000000000000a7: 02	jmp	0x402d80 <UsageExample::TradeMatcher::placeBuyOrder(double, int)+0x120>
+00000000000000a9: 03	testl	%r12d, %r12d
+00000000000000ac: 02	jle	0x402d80 <UsageExample::TradeMatcher::placeBuyOrder(double, int)+0x120>
+00000000000000ae: 04	leaq	96(%r14), %rsi
+00000000000000b2: 04	movq	104(%r14), %rcx
+00000000000000b6: 03	testq	%rcx, %rcx
+00000000000000b9: 02	je	0x402d5b <UsageExample::TradeMatcher::placeBuyOrder(double, int)+0xfb>
+00000000000000bb: 05	movsd	(%rsp), %xmm0
+00000000000000c0: 03	movq	%rsi, %rax
+00000000000000c3: 10	nopw	%cs:(%rax,%rax)
+00000000000000cd: 03	nopl	(%rax)
+00000000000000d0: 05	movsd	24(%rcx), %xmm1
+00000000000000d5: 02	xorl	%edx, %edx
+00000000000000d7: 04	ucomisd	%xmm0, %xmm1
+00000000000000db: 04	cmovbeq	%rcx, %rax
+00000000000000df: 03	seta	%dl
+00000000000000e2: 05	movq	8(%rcx,%rdx,8), %rcx
+00000000000000e7: 03	testq	%rcx, %rcx
+00000000000000ea: 02	jne	0x402d30 <UsageExample::TradeMatcher::placeBuyOrder(double, int)+0xd0>
+00000000000000ec: 03	cmpq	%rsi, %rax
+00000000000000ef: 02	je	0x402d5b <UsageExample::TradeMatcher::placeBuyOrder(double, int)+0xfb>
+00000000000000f1: 05	ucomisd	24(%rax), %xmm0
+00000000000000f6: 03	movq	%rax, %rsi
+00000000000000f9: 02	jbe	0x402d77 <UsageExample::TradeMatcher::placeBuyOrder(double, int)+0x117>
+00000000000000fb: 04	addq	$64, %r14
+00000000000000ff: 08	movl	$0, 12(%rsp)
+0000000000000107: 03	movq	%rsp, %rdx
+000000000000010a: 05	leaq	12(%rsp), %rcx
+000000000000010f: 03	movq	%r14, %rdi
+0000000000000112: 05	callq	0x691650 <BloombergLP::bslstl::TreeIterator<bsl::pair<double const, int>, BloombergLP::bslstl::TreeNode<bsl::pair<double const, int> >, long> bsl::map<double, int, std::__1::greater<double>, bsl::allocator<bsl::pair<double const, int> > >::emplace_hint<double const&, int>(BloombergLP::bslstl::TreeIterator<bsl::pair<double const, int> const, BloombergLP::bslstl::TreeNode<bsl::pair<double const, int> >, long>, double const&, int&&)>
+0000000000000117: 04	addl	%r12d, 32(%rax)
+000000000000011b: 02	jmp	0x402d80 <UsageExample::TradeMatcher::placeBuyOrder(double, int)+0x120>
+000000000000011d: 03	movl	%eax, 32(%rbx)
+0000000000000120: 04	addq	$16, %rsp
+0000000000000124: 01	popq	%rbx
+0000000000000125: 02	popq	%r12
+0000000000000127: 02	popq	%r14
+0000000000000129: 02	popq	%r15
+000000000000012b: 01	popq	%rbp
+000000000000012c: 01	retq	
+000000000000012d: 03	nopl	(%rax)
+```

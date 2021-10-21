@@ -1,0 +1,180 @@
+# 6.none.s
+
+```asm
+000000000043abd0 <BloombergLP::bdlt::FixUtil::generateRaw(char*, BloombergLP::bdlt::DateTz const&, BloombergLP::bdlt::FixUtilConfiguration const&)>:
+0000000000000000: 01	pushq	%rbp
+0000000000000001: 02	pushq	%r15
+0000000000000003: 02	pushq	%r14
+0000000000000005: 01	pushq	%rbx
+0000000000000006: 01	pushq	%rax
+0000000000000007: 03	movq	%rdx, %r14
+000000000000000a: 03	movq	%rsi, %r15
+000000000000000d: 03	movq	%rdi, %rbx
+0000000000000010: 02	movl	(%rsi), %ebp
+0000000000000012: 02	movl	%ebp, %edi
+0000000000000014: 05	callq	0x43d240 <BloombergLP::bdlt::PosixDateImpUtil::serialToYear(int)>
+0000000000000019: 03	movslq	%eax, %rcx
+000000000000001c: 07	imulq	$1717986919, %rcx, %rax
+0000000000000023: 03	movq	%rax, %rdx
+0000000000000026: 04	shrq	$63, %rdx
+000000000000002a: 04	sarq	$34, %rax
+000000000000002e: 02	addl	%edx, %eax
+0000000000000030: 03	leal	(%rax,%rax), %edx
+0000000000000033: 03	leal	(%rdx,%rdx,4), %edx
+0000000000000036: 07	imulq	$1374389535, %rcx, %rsi
+000000000000003d: 07	imulq	$274877907, %rcx, %rdi
+0000000000000044: 02	subl	%edx, %ecx
+0000000000000046: 03	addb	$48, %cl
+0000000000000049: 03	movb	%cl, 3(%rbx)
+000000000000004c: 02	cltq	
+000000000000004e: 07	imulq	$1717986919, %rax, %rcx
+0000000000000055: 03	movq	%rcx, %rdx
+0000000000000058: 04	shrq	$63, %rdx
+000000000000005c: 04	sarq	$34, %rcx
+0000000000000060: 02	addl	%edx, %ecx
+0000000000000062: 02	addl	%ecx, %ecx
+0000000000000064: 03	leal	(%rcx,%rcx,4), %ecx
+0000000000000067: 02	subl	%ecx, %eax
+0000000000000069: 02	addb	$48, %al
+000000000000006b: 03	movb	%al, 2(%rbx)
+000000000000006e: 03	movq	%rsi, %rax
+0000000000000071: 04	shrq	$63, %rax
+0000000000000075: 04	sarq	$37, %rsi
+0000000000000079: 02	addl	%eax, %esi
+000000000000007b: 03	movslq	%esi, %rax
+000000000000007e: 07	imulq	$1717986919, %rax, %rcx
+0000000000000085: 03	movq	%rcx, %rdx
+0000000000000088: 04	shrq	$63, %rdx
+000000000000008c: 04	sarq	$34, %rcx
+0000000000000090: 02	addl	%edx, %ecx
+0000000000000092: 02	addl	%ecx, %ecx
+0000000000000094: 03	leal	(%rcx,%rcx,4), %ecx
+0000000000000097: 02	subl	%ecx, %eax
+0000000000000099: 02	addb	$48, %al
+000000000000009b: 03	movb	%al, 1(%rbx)
+000000000000009e: 03	movq	%rdi, %rax
+00000000000000a1: 04	shrq	$63, %rax
+00000000000000a5: 04	sarq	$38, %rdi
+00000000000000a9: 02	addl	%eax, %edi
+00000000000000ab: 03	movslq	%edi, %rax
+00000000000000ae: 07	imulq	$1717986919, %rax, %rcx
+00000000000000b5: 03	movq	%rcx, %rdx
+00000000000000b8: 04	shrq	$63, %rdx
+00000000000000bc: 04	sarq	$34, %rcx
+00000000000000c0: 02	addl	%edx, %ecx
+00000000000000c2: 02	addl	%ecx, %ecx
+00000000000000c4: 03	leal	(%rcx,%rcx,4), %ecx
+00000000000000c7: 02	subl	%ecx, %eax
+00000000000000c9: 02	addb	$48, %al
+00000000000000cb: 02	movb	%al, (%rbx)
+00000000000000cd: 02	movl	%ebp, %edi
+00000000000000cf: 05	callq	0x43d200 <BloombergLP::bdlt::PosixDateImpUtil::serialToMonth(int)>
+00000000000000d4: 02	cltq	
+00000000000000d6: 07	imulq	$1717986919, %rax, %rcx
+00000000000000dd: 03	movq	%rcx, %rdx
+00000000000000e0: 04	shrq	$63, %rdx
+00000000000000e4: 04	sarq	$34, %rcx
+00000000000000e8: 02	addl	%edx, %ecx
+00000000000000ea: 03	leal	(%rcx,%rcx), %edx
+00000000000000ed: 03	leal	(%rdx,%rdx,4), %edx
+00000000000000f0: 02	subl	%edx, %eax
+00000000000000f2: 02	addb	$48, %al
+00000000000000f4: 03	movb	%al, 5(%rbx)
+00000000000000f7: 03	movslq	%ecx, %rax
+00000000000000fa: 07	imulq	$1717986919, %rax, %rcx
+0000000000000101: 03	movq	%rcx, %rdx
+0000000000000104: 04	shrq	$63, %rdx
+0000000000000108: 04	sarq	$34, %rcx
+000000000000010c: 02	addl	%edx, %ecx
+000000000000010e: 02	addl	%ecx, %ecx
+0000000000000110: 03	leal	(%rcx,%rcx,4), %ecx
+0000000000000113: 02	subl	%ecx, %eax
+0000000000000115: 02	addb	$48, %al
+0000000000000117: 03	movb	%al, 4(%rbx)
+000000000000011a: 02	movl	%ebp, %edi
+000000000000011c: 05	callq	0x43d1c0 <BloombergLP::bdlt::PosixDateImpUtil::serialToDay(int)>
+0000000000000121: 02	cltq	
+0000000000000123: 07	imulq	$1717986919, %rax, %rcx
+000000000000012a: 03	movq	%rcx, %rdx
+000000000000012d: 04	shrq	$63, %rdx
+0000000000000131: 04	sarq	$34, %rcx
+0000000000000135: 02	addl	%edx, %ecx
+0000000000000137: 03	leal	(%rcx,%rcx), %edx
+000000000000013a: 03	leal	(%rdx,%rdx,4), %edx
+000000000000013d: 02	subl	%edx, %eax
+000000000000013f: 02	addb	$48, %al
+0000000000000141: 03	movb	%al, 7(%rbx)
+0000000000000144: 03	movslq	%ecx, %rax
+0000000000000147: 07	imulq	$1717986919, %rax, %rcx
+000000000000014e: 03	movq	%rcx, %rdx
+0000000000000151: 04	shrq	$63, %rdx
+0000000000000155: 04	sarq	$34, %rcx
+0000000000000159: 02	addl	%edx, %ecx
+000000000000015b: 02	addl	%ecx, %ecx
+000000000000015d: 03	leal	(%rcx,%rcx,4), %ecx
+0000000000000160: 02	subl	%ecx, %eax
+0000000000000162: 02	addb	$48, %al
+0000000000000164: 03	movb	%al, 6(%rbx)
+0000000000000167: 04	leaq	8(%rbx), %rax
+000000000000016b: 04	movl	4(%r15), %edx
+000000000000016f: 02	testl	%edx, %edx
+0000000000000171: 02	jne	0x43ad4d <BloombergLP::bdlt::FixUtil::generateRaw(char*, BloombergLP::bdlt::DateTz const&, BloombergLP::bdlt::FixUtilConfiguration const&)+0x17d>
+0000000000000173: 04	testb	$8, (%r14)
+0000000000000177: 06	jne	0x43addf <BloombergLP::bdlt::FixUtil::generateRaw(char*, BloombergLP::bdlt::DateTz const&, BloombergLP::bdlt::FixUtilConfiguration const&)+0x20f>
+000000000000017d: 02	movl	%edx, %ecx
+000000000000017f: 02	negl	%ecx
+0000000000000181: 03	cmovll	%edx, %ecx
+0000000000000184: 03	shrl	$31, %edx
+0000000000000187: 02	addb	%dl, %dl
+0000000000000189: 03	addb	$43, %dl
+000000000000018c: 03	movb	%dl, 8(%rbx)
+000000000000018f: 05	movl	$2290649225, %esi
+0000000000000194: 04	imulq	%rcx, %rsi
+0000000000000198: 04	shrq	$37, %rsi
+000000000000019c: 05	movl	$3435973837, %edx
+00000000000001a1: 02	movl	%esi, %edi
+00000000000001a3: 03	imull	$60, %esi, %ebp
+00000000000001a6: 04	imulq	%rdx, %rsi
+00000000000001aa: 04	shrq	$35, %rsi
+00000000000001ae: 02	addl	%esi, %esi
+00000000000001b0: 03	leal	(%rsi,%rsi,4), %esi
+00000000000001b3: 02	subl	%esi, %edi
+00000000000001b5: 04	orb	$48, %dil
+00000000000001b9: 04	movb	%dil, 10(%rbx)
+00000000000001bd: 07	imulq	$458129845, %rcx, %rsi
+00000000000001c4: 04	shrq	$38, %rsi
+00000000000001c8: 03	movq	%rsi, %rdi
+00000000000001cb: 04	imulq	%rdx, %rdi
+00000000000001cf: 04	shrq	$35, %rdi
+00000000000001d3: 02	addl	%edi, %edi
+00000000000001d5: 03	leal	(%rdi,%rdi,4), %edx
+00000000000001d8: 02	subl	%edx, %esi
+00000000000001da: 04	orb	$48, %sil
+00000000000001de: 04	movb	%sil, 9(%rbx)
+00000000000001e2: 04	movb	$58, 11(%rbx)
+00000000000001e6: 02	subl	%ebp, %ecx
+00000000000001e8: 06	imull	$205, %ecx, %edx
+00000000000001ee: 03	movzwl	%dx, %edx
+00000000000001f1: 03	shrl	$11, %edx
+00000000000001f4: 03	leal	(%rdx,%rdx), %esi
+00000000000001f7: 03	leal	(%rsi,%rsi,4), %esi
+00000000000001fa: 03	subb	%sil, %cl
+00000000000001fd: 03	orb	$48, %cl
+0000000000000200: 03	movb	%cl, 13(%rbx)
+0000000000000203: 03	orb	$48, %dl
+0000000000000206: 03	movb	%dl, 12(%rbx)
+0000000000000209: 04	addq	$14, %rbx
+000000000000020d: 02	jmp	0x43ade7 <BloombergLP::bdlt::FixUtil::generateRaw(char*, BloombergLP::bdlt::DateTz const&, BloombergLP::bdlt::FixUtilConfiguration const&)+0x217>
+000000000000020f: 04	movb	$90, 8(%rbx)
+0000000000000213: 04	addq	$9, %rbx
+0000000000000217: 02	subl	%eax, %ebx
+0000000000000219: 03	addl	$8, %ebx
+000000000000021c: 02	movl	%ebx, %eax
+000000000000021e: 04	addq	$8, %rsp
+0000000000000222: 01	popq	%rbx
+0000000000000223: 02	popq	%r14
+0000000000000225: 02	popq	%r15
+0000000000000227: 01	popq	%rbp
+0000000000000228: 01	retq	
+0000000000000229: 07	nopl	(%rax)
+```

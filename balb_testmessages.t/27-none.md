@@ -1,0 +1,16 @@
+# 27.none.s
+
+```asm
+00000000004139c0 <BloombergLP::balb::Request::selectionName() const>:
+0000000000000000: 06	movl	872(%rdi), %eax
+0000000000000006: 03	cmpl	$1, %eax
+0000000000000009: 05	movl	$4488620, %ecx
+000000000000000e: 05	movl	$4488179, %edx
+0000000000000013: 04	cmoveq	%rcx, %rdx
+0000000000000017: 02	testl	%eax, %eax
+0000000000000019: 05	movl	$4488606, %eax
+000000000000001e: 04	cmovneq	%rdx, %rax
+0000000000000022: 01	retq	
+0000000000000023: 10	nopw	%cs:(%rax,%rax)
+000000000000002d: 03	nopl	(%rax)
+```
