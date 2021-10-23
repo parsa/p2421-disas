@@ -1,4 +1,4 @@
-# BDE Test drivers list
+# BDE test drivers list
 
 <script src="sorttable.js"></script>
 
