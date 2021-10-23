@@ -1,0 +1,50 @@
+    ; assembly                                                                                                                                           | /* r2dec pseudo code output */
+                                                                                                                                                         | /* balb_filecleanerutil.t/none @ 0x40bcc0 */
+                                                                                                                                                         | #include <stdint.h>
+                                                                                                                                                         |  
+    ; (fcn) method.BloombergLP::bdlma::SequentialPool.SequentialPool_BloombergLP::bsls::Alignment::Strategy__BloombergLP::bslma::Allocator_ ()           | uint64_t method_BloombergLP::bdlma::SequentialPool_SequentialPool_BloombergLP::bsls::Alignment::Strategy_BloombergLP::bslma::Allocator_ (int64_t arg3, uint32_t arg2, int64_t arg1) {
+                                                                                                                                                         |     rdx = arg3;
+                                                                                                                                                         |     rsi = arg2;
+                                                                                                                                                         |     rdi = arg1;
+                                                                                                                                                         |     /* BloombergLP::bdlma::SequentialPool::SequentialPool(BloombergLP::bsls::Alignment::Strategy, BloombergLP::bslma::Allocator*) */
+    0x0040bcc0 push rbx                                                                                                                                  |     
+    0x0040bcc1 mov rbx, rdi                                                                                                                              |     rbx = rdi;
+    0x0040bcc4 test esi, esi                                                                                                                             |     
+    0x0040bcc6 mov eax, 0xf                                                                                                                              |     eax = 0xf;
+                                                                                                                                                         |     if (esi == 0) {
+    0x0040bccb cmove eax, esi                                                                                                                            |         eax = esi;
+                                                                                                                                                         |     }
+    0x0040bcce xorps xmm0, xmm0                                                                                                                          |     __asm ("xorps xmm0, xmm0");
+    0x0040bcd1 movups xmmword [rdi], xmm0                                                                                                                |     __asm ("movups xmmword [rdi], xmm0");
+    0x0040bcd4 mov qword [rdi + 0x10], 0                                                                                                                 |     *((rdi + 0x10)) = 0;
+    0x0040bcdc mov byte [rdi + 0x18], al                                                                                                                 |     *((rdi + 0x18)) = al;
+    0x0040bcdf cmp esi, 2                                                                                                                                |     
+    0x0040bce2 mov eax, 1                                                                                                                                |     eax = 1;
+    0x0040bce7 mov ecx, 0x10                                                                                                                             |     ecx = 0x10;
+                                                                                                                                                         |     if (esi == 2) {
+    0x0040bcec cmove ecx, eax                                                                                                                            |         ecx = eax;
+                                                                                                                                                         |     }
+    0x0040bcef mov byte [rdi + 0x19], cl                                                                                                                 |     *((rdi + 0x19)) = cl;
+    0x0040bcf2 lea rax, [rdi + 0x20]                                                                                                                     |     rax = rdi + 0x20;
+    0x0040bcf6 mov qword [rdi + 0x20], 0                                                                                                                 |     *((rdi + 0x20)) = 0;
+    0x0040bcfe mov qword [rdi + 0x28], rax                                                                                                               |     *((rdi + 0x28)) = rax;
+    0x0040bd02 movaps xmm1, xmmword [rip + 0x31267]                                                                                                      |     xmm1 = *(0x0043cf70);
+    0x0040bd09 movups xmmword [rdi + 0x1f0], xmm1                                                                                                        |     __asm ("movups xmmword [rdi + 0x1f0], xmm1");
+    0x0040bd10 movups xmmword [rdi + 0x200], xmm0                                                                                                        |     __asm ("movups xmmword [rdi + 0x200], xmm0");
+    0x0040bd17 mov qword [rdi + 0x210], 0                                                                                                                |     *((rdi + 0x210)) = 0;
+    0x0040bd22 test rdx, rdx                                                                                                                             |     
+                                                                                                                                                         |     if (rdx == 0) {
+    0x0040bd25 jne 0x40bd3b                                                                                                                              |         
+    0x0040bd27 mov rdx, qword [rip + 0x261fa2]                                                                                                           |         rdx = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x0040bd2e test rdx, rdx                                                                                                                             |         
+                                                                                                                                                         |         if (rdx != 0) {
+    0x0040bd31 jne 0x40bd3b                                                                                                                              |             goto label_0;
+                                                                                                                                                         |         }
+    0x0040bd33 call 0x4173a0                                                                                                                             |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+    0x0040bd38 mov rdx, rax                                                                                                                              |         rdx = rax;
+                                                                                                                                                         |     }
+                                                                                                                                                         | label_0:
+    0x0040bd3b mov qword [rbx + 0x218], rdx                                                                                                              |     *((rbx + 0x218)) = rdx;
+    0x0040bd42 pop rbx                                                                                                                                   |     
+    0x0040bd43 ret                                                                                                                                       |     return rax;
+                                                                                                                                                         | }

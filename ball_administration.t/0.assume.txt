@@ -1,0 +1,67 @@
+    ; assembly                                                                               | /* r2dec pseudo code output */
+                                                                                             | /* ball_administration.t/assume @ 0x411ee0 */
+                                                                                             | #include <stdint.h>
+                                                                                             |  
+    ; (fcn) method.BloombergLP::ball::Record.Record_BloombergLP::bslma::Allocator_ ()        | int64_t method_BloombergLP::ball::Record_Record_BloombergLP::bslma::Allocator_ (int64_t arg2, int64_t arg1) {
+                                                                                             |     rsi = arg2;
+                                                                                             |     rdi = arg1;
+                                                                                             |     /* BloombergLP::ball::Record::Record(BloombergLP::bslma::Allocator*) */
+    0x00411ee0 push rbp                                                                      |     
+    0x00411ee1 push r15                                                                      |     
+    0x00411ee3 push r14                                                                      |     
+    0x00411ee5 push r13                                                                      |     
+    0x00411ee7 push r12                                                                      |     
+    0x00411ee9 push rbx                                                                      |     
+    0x00411eea push rax                                                                      |     
+    0x00411eeb mov r15, rsi                                                                  |     r15 = rsi;
+    0x00411eee mov rbx, rdi                                                                  |     rbx = rdi;
+    0x00411ef1 mov qword [rdi], 0x45a288                                                     |     *(rdi) = vtable.BloombergLP::ball::CountingAllocator.0;
+    0x00411ef8 mov qword [rdi + 8], 0                                                        |     *((rdi + 8)) = 0;
+    0x00411f00 mov rax, rsi                                                                  |     rax = rsi;
+    0x00411f03 test rsi, rsi                                                                 |     
+                                                                                             |     if (rsi == 0) {
+    0x00411f06 jne 0x411f19                                                                  |         
+    0x00411f08 mov rax, qword [rip + 0x285aa1]                                               |         rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x00411f0f test rax, rax                                                                 |         
+                                                                                             |         if (rax != 0) {
+    0x00411f12 jne 0x411f19                                                                  |             goto label_0;
+                                                                                             |         }
+    0x00411f14 call 0x431130                                                                 |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                                                             |     }
+                                                                                             | label_0:
+    0x00411f19 mov qword [rbx + 0x10], rax                                                   |     *((rbx + 0x10)) = rax;
+    0x00411f1d lea r14, [rbx + 0x18]                                                         |     r14 = rbx + 0x18;
+    0x00411f21 mov rdi, r14                                                                  |     
+    0x00411f24 mov rsi, rbx                                                                  |     
+    0x00411f27 call 0x414830                                                                 |     BloombergLP::ball::RecordAttributes::RecordAttributes(BloombergLP::bslma::Allocator*) (r14, rbx);
+    0x00411f2c xorps xmm0, xmm0                                                              |     __asm ("xorps xmm0, xmm0");
+    0x00411f2f movups xmmword [rbx + 0xe8], xmm0                                             |     __asm ("movups xmmword [rbx + 0xe8], xmm0");
+    0x00411f36 mov qword [rbx + 0xf8], 0                                                     |     *((rbx + 0xf8)) = 0;
+    0x00411f41 mov qword [rbx + 0x100], rbx                                                  |     *((rbx + 0x100)) = rbx;
+    0x00411f48 movups xmmword [rbx + 0x108], xmm0                                            |     __asm ("movups xmmword [rbx + 0x108], xmm0");
+    0x00411f4f mov qword [rbx + 0x118], 0                                                    |     *((rbx + 0x118)) = 0;
+    0x00411f5a mov qword [rbx + 0x120], rbx                                                  |     *((rbx + 0x120)) = rbx;
+    0x00411f61 test r15, r15                                                                 |     
+                                                                                             |     if (r15 == 0) {
+    0x00411f64 jne 0x411f88                                                                  |         
+    0x00411f66 mov r15, qword [rip + 0x285a43]                                               |         r15 = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x00411f6d test r15, r15                                                                 |         
+                                                                                             |         if (r15 != 0) {
+    0x00411f70 jne 0x411f88                                                                  |             goto label_1;
+                                                                                             |         }
+    0x00411f72 lea r13, [rbx + 0xe8]                                                         |         r13 = rbx + 0xe8;
+    0x00411f79 lea r12, [rbx + 0x108]                                                        |         r12 = rbx + 0x108;
+    0x00411f80 call 0x431130                                                                 |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+    0x00411f85 mov r15, rax                                                                  |         r15 = rax;
+                                                                                             |     }
+                                                                                             | label_1:
+    0x00411f88 mov qword [rbx + 0x128], r15                                                  |     *((rbx + 0x128)) = r15;
+    0x00411f8f add rsp, 8                                                                    |     
+    0x00411f93 pop rbx                                                                       |     
+    0x00411f94 pop r12                                                                       |     
+    0x00411f96 pop r13                                                                       |     
+    0x00411f98 pop r14                                                                       |     
+    0x00411f9a pop r15                                                                       |     
+    0x00411f9c pop rbp                                                                       |     
+    0x00411f9d ret                                                                           |     return rax;
+                                                                                             | }

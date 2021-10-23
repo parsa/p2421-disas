@@ -1,0 +1,24 @@
+    ; assembly                                                                   | /* r2dec pseudo code output */
+                                                                                 | /* balm_configurationutil.t/assume @ 0x40dbe0 */
+                                                                                 | #include <stdint.h>
+                                                                                 |  
+    ; (fcn) method.BloombergLP::balm::DefaultMetricsManager.destroy__ ()         | int64_t method_BloombergLP::balm::DefaultMetricsManager_destroy_ (void) {
+                                                                                 |     /* BloombergLP::balm::DefaultMetricsManager::destroy() */
+    0x0040dbe0 push r14                                                          |     
+    0x0040dbe2 push rbx                                                          |     
+    0x0040dbe3 push rax                                                          |     
+    0x0040dbe4 mov r14, qword [rip + 0x26c395]                                   |     r14 = BloombergLP::balm::DefaultMetricsManager::s_singleton_p;
+    0x0040dbeb mov rbx, qword [rip + 0x26c396]                                   |     rbx = BloombergLP::balm::DefaultMetricsManager::s_allocator_p;
+    0x0040dbf2 mov qword [rip + 0x26c383], 0                                     |     *(obj.BloombergLP::balm::DefaultMetricsManager::s_singleton_p) = 0;
+    0x0040dbfd mov qword [rip + 0x26c380], 0                                     |     *(obj.BloombergLP::balm::DefaultMetricsManager::s_allocator_p) = 0;
+    0x0040dc08 mov rdi, r14                                                      |     
+    0x0040dc0b call 0x4133b0                                                     |     BloombergLP::balm::MetricsManager::~MetricsManager() (r14);
+    0x0040dc10 mov rax, qword [rbx]                                              |     rax = *(rbx);
+    0x0040dc13 mov rax, qword [rax + 0x18]                                       |     rax = *((rax + 0x18));
+    0x0040dc17 mov rdi, rbx                                                      |     rdi = rbx;
+    0x0040dc1a mov rsi, r14                                                      |     rsi = r14;
+    0x0040dc1d add rsp, 8                                                        |     
+    0x0040dc21 pop rbx                                                           |     
+    0x0040dc22 pop r14                                                           |     
+    0x0040dc24 jmp rax                                                           |     return void (*rax)() ();
+                                                                                 | }

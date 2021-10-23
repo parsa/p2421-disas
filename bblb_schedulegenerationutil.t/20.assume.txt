@@ -1,0 +1,105 @@
+    ; assembly                                                                                                   | /* r2dec pseudo code output */
+                                                                                                                 | /* bblb_schedulegenerationutil.t/assume @ 0x40cc10 */
+                                                                                                                 | #include <stdint.h>
+                                                                                                                 |  
+    ; (fcn) method.BloombergLP::bdlt::Calendar.addWeekendDays_BloombergLP::bdlt::DayOfWeekSet_const_ ()          | int64_t method_BloombergLP::bdlt::Calendar_addWeekendDays_BloombergLP::bdlt::DayOfWeekSet_const_ (int64_t arg4, int64_t arg2, int64_t arg1) {
+                                                                                                                 |     uint32_t var_1h;
+                                                                                                                 |     int64_t var_8h;
+                                                                                                                 |     int64_t var_9h;
+                                                                                                                 |     rcx = arg4;
+                                                                                                                 |     rsi = arg2;
+                                                                                                                 |     rdi = arg1;
+                                                                                                                 |     /* BloombergLP::bdlt::Calendar::addWeekendDays(BloombergLP::bdlt::DayOfWeekSet const&) */
+    0x0040cc10 push r15                                                                                          |     
+    0x0040cc12 push r14                                                                                          |     
+    0x0040cc14 push r13                                                                                          |     
+    0x0040cc16 push r12                                                                                          |     
+    0x0040cc18 push rbx                                                                                          |     
+    0x0040cc19 sub rsp, 0x10                                                                                     |     
+    0x0040cc1d mov r14, rsi                                                                                      |     r14 = rsi;
+    0x0040cc20 mov rbx, rdi                                                                                      |     rbx = rdi;
+    0x0040cc23 movzx esi, byte [rsi]                                                                             |     esi = *(rsi);
+    0x0040cc26 test esi, esi                                                                                     |     
+                                                                                                                 |     if (esi == 0) {
+    0x0040cc28 je 0x40cd1d                                                                                       |         goto label_1;
+                                                                                                                 |     }
+    0x0040cc2e lea r15, [rsp + 8]                                                                                |     r15 = rsp + 8;
+    0x0040cc33 mov rdi, r15                                                                                      |     
+    0x0040cc36 mov edx, 1                                                                                        |     
+    0x0040cc3b call 0x40e640                                                                                     |     BloombergLP::bdlt::DayOfWeekSet_Iter::DayOfWeekSet_Iter(int,int) (r15, rsi, 1);
+    0x0040cc40 mov r12, rsp                                                                                      |     r12 = rsp;
+    0x0040cc43 jmp 0x40cc58                                                                                      |     
+                                                                                                                 |     while (*((rbx + 0xc8)) == 0) {
+                                                                                                                 | label_0:
+    0x0040cc50 mov rdi, r15                                                                                      |         
+    0x0040cc53 call 0x40e670                                                                                     |         BloombergLP::bdlt::DayOfWeekSet_Iter::operator++() (r15);
+    0x0040cc58 movzx esi, byte [r14]                                                                             |         esi = *(r14);
+    0x0040cc5c mov rdi, r12                                                                                      |         
+    0x0040cc5f mov edx, 8                                                                                        |         
+    0x0040cc64 call 0x40e640                                                                                     |         BloombergLP::bdlt::DayOfWeekSet_Iter::DayOfWeekSet_Iter(int,int) (r12, rsi, 8);
+    0x0040cc69 movsx rax, byte [rsp + 9]                                                                         |         rax = *((rsp + 9));
+    0x0040cc6f cmp al, byte [rsp + 1]                                                                            |         
+                                                                                                                 |         if (al == *((rsp + 1))) {
+    0x0040cc73 je 0x40cd0f                                                                                       |             goto label_2;
+                                                                                                                 |         }
+    0x0040cc79 mov r13d, dword [rax*4 + 0x448ce0]                                                                |         r13d = *((rax*4 + obj.BloombergLP::bdlt::DayOfWeekSet_Iter::s_dayOfWeekArray));
+    0x0040cc81 mov rdi, rbx                                                                                      |         
+    0x0040cc84 mov esi, r13d                                                                                     |         
+    0x0040cc87 call 0x4105e0                                                                                     |         BloombergLP::bdlt::PackedCalendar::addWeekendDay(BloombergLP::bdlt::DayOfWeek::Enum) (rbx, r13d);
+    0x0040cc8c cmp dword [rbx + 0xc8], 0                                                                         |         
+    0x0040cc93 je 0x40cc50                                                                                       |         
+                                                                                                                 |     }
+    0x0040cc95 mov edi, dword [rbx]                                                                              |     
+    0x0040cc97 call 0x414350                                                                                     |     eax = BloombergLP::bdlt::PosixDateImpUtil::serialToDayOfWeek(int) (*(rbx));
+    0x0040cc9c sub r13d, eax                                                                                     |     r13d -= eax;
+    0x0040cc9f mov eax, r13d                                                                                     |     eax = r13d;
+    0x0040cca2 add eax, 7                                                                                        |     eax += 7;
+    0x0040cca5 cdqe                                                                                              |     rax = (int64_t) eax;
+    0x0040cca7 imul rax, rax, 0xffffffff92492493                                                                 |     rax *= 0xffffffff92492493;
+    0x0040ccae shr rax, 0x20                                                                                     |     rax >>= 0x20;
+    0x0040ccb2 lea eax, [rax + r13 + 7]                                                                          |     eax = rax + r13 + 7;
+    0x0040ccb7 mov ecx, eax                                                                                      |     ecx = eax;
+    0x0040ccb9 shr ecx, 0x1f                                                                                     |     ecx >>= 0x1f;
+    0x0040ccbc sar eax, 2                                                                                        |     eax >>= 2;
+    0x0040ccbf add eax, ecx                                                                                      |     eax += ecx;
+    0x0040ccc1 lea ecx, [rax*8]                                                                                  |     ecx = rax*8;
+    0x0040ccc8 sub eax, ecx                                                                                      |     eax -= ecx;
+    0x0040ccca lea eax, [r13 + rax + 7]                                                                          |     eax = r13 + rax + 7;
+    0x0040cccf cmp eax, dword [rbx + 0xc8]                                                                       |     
+                                                                                                                 |     if (eax >= *((rbx + 0xc8))) {
+    0x0040ccd5 jge 0x40cc50                                                                                      |         goto label_0;
+                                                                                                                 |     }
+    0x0040ccdb movsxd rcx, eax                                                                                   |     rcx = (int64_t) eax;
+    0x0040ccde nop                                                                                               |     
+                                                                                                                 |     do {
+    0x0040cce0 mov rax, qword [rbx + 0xa8]                                                                       |         rax = *((rbx + 0xa8));
+    0x0040cce7 mov rdx, rcx                                                                                      |         rdx = rcx;
+    0x0040ccea mov esi, 1                                                                                        |         esi = 1;
+    0x0040ccef shl rsi, cl                                                                                       |         rsi <<= cl;
+    0x0040ccf2 shr rdx, 6                                                                                        |         rdx >>= 6;
+    0x0040ccf6 or qword [rax + rdx*8], rsi                                                                       |         *((rax + rdx*8)) |= rsi;
+    0x0040ccfa add rcx, 7                                                                                        |         rcx += 7;
+    0x0040ccfe movsxd rax, dword [rbx + 0xc8]                                                                    |         rax = *((rbx + 0xc8));
+    0x0040cd05 cmp rcx, rax                                                                                      |         
+    0x0040cd08 jl 0x40cce0                                                                                       |         
+                                                                                                                 |     } while (rcx < rax);
+    0x0040cd0a jmp 0x40cc50                                                                                      |     goto label_0;
+                                                                                                                 | label_2:
+    0x0040cd0f add rsp, 0x10                                                                                     |     
+    0x0040cd13 pop rbx                                                                                           |     
+    0x0040cd14 pop r12                                                                                           |     
+    0x0040cd16 pop r13                                                                                           |     
+    0x0040cd18 pop r14                                                                                           |     
+    0x0040cd1a pop r15                                                                                           |     
+    0x0040cd1c ret                                                                                               |     return rax;
+                                                                                                                 | label_1:
+    0x0040cd1d mov rdi, rbx                                                                                      |     rdi = rbx;
+    0x0040cd20 mov rsi, r14                                                                                      |     rsi = r14;
+    0x0040cd23 add rsp, 0x10                                                                                     |     
+    0x0040cd27 pop rbx                                                                                           |     
+    0x0040cd28 pop r12                                                                                           |     
+    0x0040cd2a pop r13                                                                                           |     
+    0x0040cd2c pop r14                                                                                           |     
+    0x0040cd2e pop r15                                                                                           |     
+    0x0040cd30 jmp 0x410650                                                                                      |     return void (*0x410650)() ();
+                                                                                                                 | }

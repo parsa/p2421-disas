@@ -1,0 +1,20 @@
+    ; assembly                                   | /* r2dec pseudo code output */
+                                                 | /* bdlma_countingallocator.t/assume @ 0x4043f0 */
+                                                 | #include <stdint.h>
+                                                 |  
+    ; (fcn) method.DoubleStack.pop__ ()          | int64_t method_DoubleStack_pop_ (int64_t arg1) {
+                                                 |     rdi = arg1;
+                                                 |     /* DoubleStack::pop() */
+    0x004043f0 push rbx                          |     
+    0x004043f1 mov rbx, rdi                      |     rbx = rdi;
+    0x004043f4 mov eax, dword [rdi + 0xc]        |     eax = *((rdi + 0xc));
+    0x004043f7 mov rdi, qword [rdi + 0x10]       |     rdi = *((rdi + 0x10));
+    0x004043fb mov rcx, qword [rbx]              |     rcx = *(rbx);
+    0x004043fe dec eax                           |     eax--;
+    0x00404400 mov rsi, qword [rcx + rax*8]      |     rsi = *((rcx + rax*8));
+    0x00404404 mov rax, qword [rdi]              |     rax = *(rdi);
+    0x00404407 call qword [rax + 0x18]           |     uint64_t (*rax + 0x18)(void) (rbx);
+    0x0040440a dec dword [rbx + 0xc]             |     *((rbx + 0xc))--;
+    0x0040440d pop rbx                           |     
+    0x0040440e ret                               |     return rax;
+                                                 | }

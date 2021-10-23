@@ -1,0 +1,131 @@
+    ; assembly                                                                       | /* r2dec pseudo code output */
+                                                                                     | /* bslstl_map.t/none @ 0x402c60 */
+                                                                                     | #include <stdint.h>
+                                                                                     |  
+    ; (fcn) method.UsageExample::TradeMatcher.placeBuyOrder_double__int_ ()          | int64_t method_UsageExample::TradeMatcher_placeBuyOrder_double_int_ (int64_t arg2, int64_t arg1, int64_t arg7) {
+                                                                                     |     int64_t var_ch;
+                                                                                     |     rsi = arg2;
+                                                                                     |     rdi = arg1;
+                                                                                     |     xmm0 = arg7;
+                                                                                     |     /* UsageExample::TradeMatcher::placeBuyOrder(double, int) */
+    0x00402c60 push rbp                                                              |     
+    0x00402c61 push r15                                                              |     
+    0x00402c63 push r14                                                              |     
+    0x00402c65 push r12                                                              |     
+    0x00402c67 push rbx                                                              |     
+    0x00402c68 sub rsp, 0x10                                                         |     
+    0x00402c6c movsd qword [rsp], xmm0                                               |     *(rsp) = xmm0;
+    0x00402c71 test esi, esi                                                         |     
+                                                                                     |     if (esi == 0) {
+    0x00402c73 je 0x402d80                                                           |         goto label_1;
+                                                                                     |     }
+    0x00402c79 mov r12d, esi                                                         |     r12d = esi;
+    0x00402c7c mov r14, rdi                                                          |     r14 = rdi;
+    0x00402c7f lea r15, [rdi + 0x20]                                                 |     r15 = rdi + 0x20;
+    0x00402c83 mov rbx, qword [rdi + 0x30]                                           |     rbx = *((rdi + 0x30));
+    0x00402c87 nop word [rax + rax]                                                  |     
+                                                                                     | label_0:
+    0x00402c90 mov rax, qword [r14 + 0x28]                                           |     rax = *((r14 + 0x28));
+    0x00402c94 mov rcx, r15                                                          |     rcx = r15;
+    0x00402c97 test rax, rax                                                         |     
+                                                                                     |     if (rax == 0) {
+    0x00402c9a je 0x402ccc                                                           |         goto label_2;
+                                                                                     |     }
+    0x00402c9c movsd xmm0, qword [rsp]                                               |     xmm0 = *(rsp);
+    0x00402ca1 mov rcx, r15                                                          |     rcx = r15;
+    0x00402ca4 nop word cs:[rax + rax]                                               |     
+    0x00402cae nop                                                                   |     
+                                                                                     |     do {
+    0x00402cb0 movsd xmm1, qword [rax + 0x18]                                        |         xmm1 = *((rax + 0x18));
+    0x00402cb5 xor edx, edx                                                          |         edx = 0;
+    0x00402cb7 ucomisd xmm1, xmm0                                                    |         __asm ("ucomisd xmm1, xmm0");
+                                                                                     |         if (rax > 0) {
+    0x00402cbb cmova rcx, rax                                                        |             rcx = rax;
+                                                                                     |         }
+    0x00402cbf setbe dl                                                              |         dl = (rax <= 0) ? 1 : 0;
+    0x00402cc2 mov rax, qword [rax + rdx*8 + 8]                                      |         rax = *((rax + rdx*8 + 8));
+    0x00402cc7 test rax, rax                                                         |         
+    0x00402cca jne 0x402cb0                                                          |         
+                                                                                     |     } while (rax != 0);
+                                                                                     | label_2:
+    0x00402ccc cmp rbx, rcx                                                          |     
+                                                                                     |     if (rbx == rcx) {
+    0x00402ccf je 0x402d09                                                           |         goto label_3;
+                                                                                     |     }
+    0x00402cd1 mov eax, dword [rbx + 0x20]                                           |     eax = *((rbx + 0x20));
+    0x00402cd4 sub eax, r12d                                                         |     eax -= r12d;
+                                                                                     |     if (eax > 0) {
+    0x00402cd7 jg 0x402d7d                                                           |         goto label_4;
+                                                                                     |     }
+    0x00402cdd mov rdi, rbx                                                          |     
+    0x00402ce0 call 0x6dc2b0                                                         |     rax = BloombergLP::bslalg::RbTreeUtil::next(BloombergLP::bslalg::RbTreeNodeconst*) (rbx);
+    0x00402ce5 mov rbp, rax                                                          |     
+    0x00402ce8 mov rdi, r15                                                          |     
+    0x00402ceb mov rsi, rbx                                                          |     
+    0x00402cee call 0x6dc660                                                         |     BloombergLP::bslalg::RbTreeUtil::remove(BloombergLP::bslalg::RbTreeAnchor*,BloombergLP::bslalg::RbTreeNode*) (r15, rbx);
+    0x00402cf3 mov rax, qword [r14 + 0x10]                                           |     rax = *((r14 + 0x10));
+    0x00402cf7 mov qword [rbx], rax                                                  |     *(rbx) = rax;
+    0x00402cfa mov qword [r14 + 0x10], rbx                                           |     *((r14 + 0x10)) = rbx;
+    0x00402cfe mov rbx, rbp                                                          |     rbx = rbp;
+    0x00402d01 sub r12d, dword [rbp + 0x20]                                          |     r12d -= *((rbp + 0x20));
+                                                                                     |     if (r12d != 0) {
+    0x00402d05 jne 0x402c90                                                          |         goto label_0;
+                                                                                     |     }
+    0x00402d07 jmp 0x402d80                                                          |     goto label_1;
+                                                                                     | label_3:
+    0x00402d09 test r12d, r12d                                                       |     
+                                                                                     |     if (r12d <= 0) {
+    0x00402d0c jle 0x402d80                                                          |         goto label_1;
+                                                                                     |     }
+    0x00402d0e lea rsi, [r14 + 0x60]                                                 |     rsi = r14 + 0x60;
+    0x00402d12 mov rcx, qword [r14 + 0x68]                                           |     rcx = *((r14 + 0x68));
+    0x00402d16 test rcx, rcx                                                         |     
+                                                                                     |     if (rcx == 0) {
+    0x00402d19 je 0x402d5b                                                           |         goto label_5;
+                                                                                     |     }
+    0x00402d1b movsd xmm0, qword [rsp]                                               |     xmm0 = *(rsp);
+    0x00402d20 mov rax, rsi                                                          |     rax = rsi;
+    0x00402d23 nop word cs:[rax + rax]                                               |     
+    0x00402d2d nop dword [rax]                                                       |     
+                                                                                     |     do {
+    0x00402d30 movsd xmm1, qword [rcx + 0x18]                                        |         xmm1 = *((rcx + 0x18));
+    0x00402d35 xor edx, edx                                                          |         edx = 0;
+    0x00402d37 ucomisd xmm1, xmm0                                                    |         __asm ("ucomisd xmm1, xmm0");
+                                                                                     |         if (rcx <= 0) {
+    0x00402d3b cmovbe rax, rcx                                                       |             rax = rcx;
+                                                                                     |         }
+    0x00402d3f seta dl                                                               |         dl = (rcx > 0) ? 1 : 0;
+    0x00402d42 mov rcx, qword [rcx + rdx*8 + 8]                                      |         rcx = *((rcx + rdx*8 + 8));
+    0x00402d47 test rcx, rcx                                                         |         
+    0x00402d4a jne 0x402d30                                                          |         
+                                                                                     |     } while (rcx != 0);
+    0x00402d4c cmp rax, rsi                                                          |     
+                                                                                     |     if (rax != rsi) {
+    0x00402d4f je 0x402d5b                                                           |         
+    0x00402d51 ucomisd xmm0, qword [rax + 0x18]                                      |         __asm ("ucomisd xmm0, qword [rax + 0x18]");
+    0x00402d56 mov rsi, rax                                                          |         rsi = rax;
+                                                                                     |         if (rax <= rsi) {
+    0x00402d59 jbe 0x402d77                                                          |             goto label_6;
+                                                                                     |         }
+                                                                                     |     }
+                                                                                     | label_5:
+    0x00402d5b add r14, 0x40                                                         |     r14 += 0x40;
+    0x00402d5f mov dword [rsp + 0xc], 0                                              |     *((rsp + 0xc)) = 0;
+    0x00402d67 mov rdx, rsp                                                          |     
+    0x00402d6a lea rcx, [rsp + 0xc]                                                  |     
+    0x00402d6f mov rdi, r14                                                          |     
+    0x00402d72 call 0x691650                                                         |     eax = BloombergLP::bslstl::TreeIterator<bsl::pair<doubleconst,int>,BloombergLP::bslstl::TreeNode<bsl::pair<doubleconst,int>>,long>bsl::map<double,int,std::_1::greater<double>,bsl::allocator<bsl::pair<doubleconst,int>>>::emplace_hint<doubleconst&,int>(BloombergLP::bslstl::TreeIterator<bsl::pair<doubleconst,int>const,BloombergLP::bslstl::TreeNode<bsl::pair<doubleconst,int>>,long>,doubleconst&,int&&) (r14, rsi, rsp, rsp + 0xc);
+                                                                                     | label_6:
+    0x00402d77 add dword [rax + 0x20], r12d                                          |     *((rax + 0x20)) += r12d;
+    0x00402d7b jmp 0x402d80                                                          |     goto label_1;
+                                                                                     | label_4:
+    0x00402d7d mov dword [rbx + 0x20], eax                                           |     *((rbx + 0x20)) = eax;
+                                                                                     | label_1:
+    0x00402d80 add rsp, 0x10                                                         |     
+    0x00402d84 pop rbx                                                               |     
+    0x00402d85 pop r12                                                               |     
+    0x00402d87 pop r14                                                               |     
+    0x00402d89 pop r15                                                               |     
+    0x00402d8b pop rbp                                                               |     
+    0x00402d8c ret                                                                   |     return rax;
+                                                                                     | }

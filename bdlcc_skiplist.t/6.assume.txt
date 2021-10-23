@@ -1,0 +1,60 @@
+    ; assembly                                                                                       | /* r2dec pseudo code output */
+                                                                                                     | /* bdlcc_skiplist.t/assume @ 0x418ca0 */
+                                                                                                     | #include <stdint.h>
+                                                                                                     |  
+    ; (fcn) sym._anonymous_namespace_::u::isUniqueAdd__anonymous_namespace_::u::AddMode_ ()          | uint64_t anonymous_namespace_::u::isUniqueAdd_anonymous_namespace_::u::AddMode_ (uint32_t arg1) {
+                                                                                                     |     int64_t var_8h;
+                                                                                                     |     int64_t var_10h;
+                                                                                                     |     rdi = arg1;
+                                                                                                     |     /* (anonymous namespace)::u::isUniqueAdd((anonymous namespace)::u::AddMode) */
+    0x00418ca0 push rbp                                                                              |     
+    0x00418ca1 push rbx                                                                              |     
+    0x00418ca2 sub rsp, 0x18                                                                         |     
+    0x00418ca6 mov ebp, edi                                                                          |     
+    0x00418ca8 cmp edi, 0x18                                                                         |     
+                                                                                                     |     if (edi < 0x18) {
+    0x00418cab jae 0x418cbf                                                                          |         
+    0x00418cad mov eax, 0xfff000                                                                     |         eax = 0xfff000;
+    0x00418cb2 mov ecx, ebp                                                                          |         ecx = ebp;
+    0x00418cb4 shr eax, cl                                                                           |         eax >>= cl;
+    0x00418cb6 and al, 1                                                                             |         al &= 1;
+    0x00418cb8 add rsp, 0x18                                                                         |         
+    0x00418cbc pop rbx                                                                               |         
+    0x00418cbd pop rbp                                                                               |         
+    0x00418cbe ret                                                                                   |         return eax;
+                                                                                                     |     }
+    0x00418cbf mov byte [rsp + 0x10], 1                                                              |     *((rsp + 0x10)) = 1;
+    0x00418cc4 call 0x64fbf0                                                                         |     rax = BloombergLP::bslmt::TestUtil_Guard::singletonMutex() ();
+    0x00418cc9 mov rbx, rax                                                                          |     rbx = rax;
+    0x00418ccc mov qword [rsp + 8], rax                                                              |     *((rsp + 8)) = rax;
+    0x00418cd1 mov rdi, rax                                                                          |     
+    0x00418cd4 call 0x64f8a0                                                                         |     BloombergLP::bslmt::RecursiveMutexImpl<BloombergLP::bslmt::Platform::PosixThreads>::lock() (rax);
+    0x00418cd9 mov edi, 0x91a328                                                                     |     
+    0x00418cde mov esi, 0x67c60f                                                                     |     
+    0x00418ce3 mov edx, 0xa                                                                          |     
+    0x00418ce8 call 0x5bce00                                                                         |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (obj.std::__1::cout, "(int) mode", 0xa);
+    0x00418ced mov esi, 0x67aff6                                                                     |     
+    0x00418cf2 mov edx, 2                                                                            |     
+    0x00418cf7 mov rdi, rax                                                                          |     
+    0x00418cfa call 0x5bce00                                                                         |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x67aff6, 2);
+    0x00418cff mov rdi, rax                                                                          |     rdi = rax;
+    0x00418d02 mov esi, ebp                                                                          |     esi = ebp;
+    0x00418d04 call 0x405010                                                                         |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x00418d09 mov esi, 0x696200                                                                     |     
+    0x00418d0e mov edx, 1                                                                            |     
+    0x00418d13 mov rdi, rax                                                                          |     
+    0x00418d16 call 0x5bce00                                                                         |     std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x696200, 1);
+    0x00418d1b mov edi, 0x67aff9                                                                     |     edi = "0 && \"invalid mode\";
+    0x00418d20 mov esi, 0x104                                                                        |     esi = 0x104;
+    0x00418d25 call 0x405800                                                                         |     (anonymousnamespace)::aSsErT(int,char const*,int) ();
+    0x00418d2a lea rdi, [rsp + 8]                                                                    |     
+    0x00418d2f call 0x438070                                                                         |     rax = BloombergLP::bslmt::TestUtil_Guard::~TestUtil_Guard() (rsp + 8);
+    0x00418d34 mov rbp, rax                                                                          |     
+    0x00418d37 mov rdi, rbx                                                                          |     
+    0x00418d3a call 0x64f9f0                                                                         |     BloombergLP::bslmt::RecursiveMutexImpl<BloombergLP::bslmt::Platform::PosixThreads>::unlock() (rbx);
+    0x00418d3f mov rdi, rbp                                                                          |     rdi = rbp;
+    0x00418d42 call 0x405360                                                                         |     rax = Unwind_Resume ();
+    0x00418d47 mov rdi, rax                                                                          |     rdi = rax;
+    0x00418d4a call 0x5b9fb0                                                                         |     _clang_call_terminate ();
+    0x00418d4f nop                                                                                   |     
+                                                                                                     | }

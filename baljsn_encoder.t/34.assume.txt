@@ -1,0 +1,33 @@
+    ; assembly                                                                                       | /* r2dec pseudo code output */
+                                                                                                     | /* baljsn_encoder.t/assume @ 0x4b6570 */
+                                                                                                     | #include <stdint.h>
+                                                                                                     |  
+    ; (fcn) method.BloombergLP::s_baltst::MySequenceWithChoiceChoice.makeSelection_int_ ()           | int32_t method_BloombergLP::s_baltst::MySequenceWithChoiceChoice_makeSelection_int_ (uint32_t arg2, uint32_t arg1) {
+                                                                                                     |     rsi = arg2;
+                                                                                                     |     rdi = arg1;
+                                                                                                     |     /* BloombergLP::s_baltst::MySequenceWithChoiceChoice::makeSelection(int) */
+    0x004b6570 cmp esi, 0xffffffff                                                                   |     
+                                                                                                     |     if (esi != 0xffffffff) {
+    0x004b6573 je 0x4b658d                                                                           |         
+    0x004b6575 mov eax, 0xffffffff                                                                   |         eax = 0xffffffff;
+    0x004b657a test esi, esi                                                                         |         
+                                                                                                     |         if (esi != 0) {
+    0x004b657c jne 0x4b65a2                                                                          |             goto label_0;
+                                                                                                     |         }
+    0x004b657e cmp dword [rdi + 4], 0                                                                |         
+                                                                                                     |         if (*((rdi + 4)) != 0) {
+    0x004b6582 je 0x4b659a                                                                           |             
+    0x004b6584 mov qword [rdi], 0                                                                    |             *(rdi) = 0;
+    0x004b658b jmp 0x4b65a0                                                                          |             
+                                                                                                     |         } else {
+    0x004b658d cmp dword [rdi + 4], 0                                                                |             
+    0x004b6591 mov dword [rdi + 4], 0xffffffff                                                       |             *((rdi + 4)) = 0xffffffff;
+    0x004b6598 jmp 0x4b65a0                                                                          |             
+                                                                                                     |         } else {
+    0x004b659a mov dword [rdi], 0                                                                    |             *(rdi) = 0;
+                                                                                                     |         }
+                                                                                                     |     }
+    0x004b65a0 xor eax, eax                                                                          |     eax = 0;
+                                                                                                     | label_0:
+    0x004b65a2 ret                                                                                   |     return eax;
+                                                                                                     | }

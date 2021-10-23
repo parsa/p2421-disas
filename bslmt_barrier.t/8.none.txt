@@ -1,0 +1,169 @@
+    ; assembly                                       | /* r2dec pseudo code output */
+                                                     | /* bslmt_barrier.t/none @ 0x403fb0 */
+                                                     | #include <stdint.h>
+                                                     |  
+    ; (fcn) sym.testThread4 ()                       | uint64_t testThread4 (int64_t arg1) {
+                                                     |     int64_t var_8h;
+                                                     |     int64_t var_10h;
+                                                     |     int64_t var_18h;
+                                                     |     int64_t var_20h;
+                                                     |     rdi = arg1;
+    0x00403fb0 push rbp                              |     
+    0x00403fb1 push r15                              |     
+    0x00403fb3 push r14                              |     
+    0x00403fb5 push rbx                              |     
+    0x00403fb6 sub rsp, 0x28                         |     
+    0x00403fba mov rbx, rdi                          |     rbx = rdi;
+    0x00403fbd mov eax, dword [rdi + 0x88]           |     eax = *((rdi + 0x88));
+    0x00403fc3 test eax, eax                         |     
+                                                     |     if (eax != 0) {
+    0x00403fc5 je 0x403fd3                           |         
+    0x00403fc7 cmp eax, 1                            |         
+                                                     |         if (eax != 1) {
+    0x00403fca jne 0x403fe0                          |             goto label_0;
+                                                     |         }
+    0x00403fcc call 0x42f1e0                         |         BloombergLP::bsls::SystemTime::nowMonotonicClock() ();
+    0x00403fd1 jmp 0x403fd8                          |         
+                                                     |     } else {
+    0x00403fd3 call 0x42f270                         |         rax = BloombergLP::bsls::SystemTime::nowRealtimeClock() ();
+                                                     |     }
+    0x00403fd8 mov r15, rax                          |     r15 = rax;
+    0x00403fdb mov r14d, edx                         |     r14d = edx;
+    0x00403fde jmp 0x403fe6                          |     goto label_1;
+                                                     | label_0:
+    0x00403fe0 xor r14d, r14d                        |     r14d = 0;
+    0x00403fe3 xor r15d, r15d                        |     r15d = 0;
+                                                     | label_1:
+    0x00403fe6 mov qword [rsp + 0x18], r15           |     *((rsp + 0x18)) = r15;
+    0x00403feb mov dword [rsp + 0x20], r14d          |     *((rsp + 0x20)) = r14d;
+    0x00403ff0 movsxd rax, dword [rbx + 0x78]        |     rax = *((rbx + 0x78));
+    0x00403ff4 imul rcx, rax, 0x431bde83             |     rcx = rax * 0x431bde83;
+    0x00403ffb mov rdx, rcx                          |     
+    0x00403ffe shr rdx, 0x3f                         |     rdx >>= 0x3f;
+    0x00404002 sar rcx, 0x32                         |     rcx >>= 0x32;
+    0x00404006 add ecx, edx                          |     ecx += edx;
+    0x00404008 movsxd rsi, ecx                       |     rsi = (int64_t) ecx;
+    0x0040400b imul ecx, esi, 0xf4240                |     ecx = esi * 0xf4240;
+    0x00404011 sub eax, ecx                          |     eax -= ecx;
+    0x00404013 imul edx, eax, 0x3e8                  |     edx = eax * 0x3e8;
+    0x00404019 lea rbp, [rsp + 0x18]                 |     rbp = rsp + 0x18;
+    0x0040401e mov rdi, rbp                          |     
+    0x00404021 call 0x42f390                         |     BloombergLP::bsls::TimeInterval::addInterval(long long,int) (rbp, rsi, rcx);
+    0x00404026 mov rdi, rbx                          |     
+    0x00404029 mov rsi, rbp                          |     
+    0x0040402c call 0x4091d0                         |     eax = BloombergLP::bslmt::Barrier::timedWait(BloombergLP::bsls::TimeIntervalconst&) (rbx, rbp);
+    0x00404031 mov ebp, eax                          |     
+    0x00404033 mov eax, dword [rbx + 0x88]           |     eax = *((rbx + 0x88));
+    0x00404039 test eax, eax                         |     
+                                                     |     if (eax != 0) {
+    0x0040403b je 0x404049                           |         
+    0x0040403d cmp eax, 1                            |         
+                                                     |         if (eax != 1) {
+    0x00404040 jne 0x404050                          |             goto label_2;
+                                                     |         }
+    0x00404042 call 0x42f1e0                         |         BloombergLP::bsls::SystemTime::nowMonotonicClock() ();
+    0x00404047 jmp 0x40404e                          |         
+                                                     |     } else {
+    0x00404049 call 0x42f270                         |         eax = BloombergLP::bsls::SystemTime::nowRealtimeClock() ();
+                                                     |     }
+    0x0040404e jmp 0x404054                          |     goto label_3;
+                                                     | label_2:
+    0x00404050 xor edx, edx                          |     edx = 0;
+    0x00404052 xor eax, eax                          |     eax = 0;
+                                                     | label_3:
+    0x00404054 mov qword [rsp + 8], rax              |     *((rsp + 8)) = rax;
+    0x00404059 mov dword [rsp + 0x10], edx           |     *((rsp + 0x10)) = edx;
+    0x0040405d neg r15                               |     r15 = -r15;
+    0x00404060 neg r14d                              |     r14d = -r14d;
+    0x00404063 lea rdi, [rsp + 8]                    |     
+    0x00404068 mov rsi, r15                          |     
+    0x0040406b mov edx, r14d                         |     
+    0x0040406e call 0x42f390                         |     BloombergLP::bsls::TimeInterval::addInterval(long long,int) (rsp + 8, r15, r14d);
+    0x00404073 test ebp, ebp                         |     
+                                                     |     if (ebp != 0) {
+    0x00404075 je 0x404198                           |         
+    0x0040407b mov rax, qword [rsp + 8]              |         rax = *((rsp + 8));
+    0x00404080 mov ecx, dword [rsp + 0x10]           |         ecx = *((rsp + 0x10));
+    0x00404084 lock inc dword [rbx + 0x80]           |         *((rbx + 0x80))++;
+    0x0040408b imul rax, rax, 0xf4240                |         rax *= 0xf4240;
+    0x00404092 movsxd rcx, ecx                       |         rcx = (int64_t) ecx;
+    0x00404095 imul rcx, rcx, 0x10624dd3             |         rcx *= 0x10624dd3;
+    0x0040409c mov rdx, rcx                          |         rdx = rcx;
+    0x0040409f shr rdx, 0x3f                         |         rdx >>= 0x3f;
+    0x004040a3 sar rcx, 0x26                         |         rcx >>= 0x26;
+    0x004040a7 add ecx, edx                          |         ecx += edx;
+    0x004040a9 movsxd r14, ecx                       |         r14 = (int64_t) ecx;
+    0x004040ac add r14, rax                          |         r14 += rax;
+    0x004040af movsxd rax, dword [rbx + 0x78]        |         rax = *((rbx + 0x78));
+    0x004040b3 cmp r14, rax                          |         
+                                                     |         if (r14 >= rax) {
+    0x004040b6 jge 0x404198                          |             goto label_4;
+                                                     |         }
+    0x004040bc mov edi, 0x646770                     |         
+    0x004040c1 mov esi, 0x42f728                     |         
+    0x004040c6 mov edx, 0x11                         |         
+    0x004040cb call 0x4085c0                         |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (obj.std::__1::cout, "args->d_clockType", 0x11);
+    0x004040d0 mov esi, 0x42fddd                     |         
+    0x004040d5 mov edx, 2                            |         
+    0x004040da mov rdi, rax                          |         
+    0x004040dd call 0x4085c0                         |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x42fddd, 2);
+    0x004040e2 mov esi, dword [rbx + 0x88]           |         esi = *((rbx + 0x88));
+    0x004040e8 mov rdi, rax                          |         rdi = rax;
+    0x004040eb call 0x403600                         |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x004040f0 mov esi, 0x42f73a                     |         
+    0x004040f5 mov edx, 1                            |         
+    0x004040fa mov rdi, rax                          |         
+    0x004040fd call 0x4085c0                         |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x42f73a, 1);
+    0x00404102 mov esi, 0x42f781                     |         
+    0x00404107 mov edx, 0xf                          |         
+    0x0040410c mov rdi, rax                          |         
+    0x0040410f call 0x4085c0                         |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x42f781, 0xf);
+    0x00404114 mov esi, 0x42fddd                     |         
+    0x00404119 mov edx, 2                            |         
+    0x0040411e mov rdi, rax                          |         
+    0x00404121 call 0x4085c0                         |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x42fddd, 2);
+    0x00404126 mov esi, dword [rbx + 0x78]           |         esi = *((rbx + 0x78));
+    0x00404129 mov rdi, rax                          |         rdi = rax;
+    0x0040412c call 0x403600                         |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x00404131 mov esi, 0x42f73a                     |         
+    0x00404136 mov edx, 1                            |         
+    0x0040413b mov rdi, rax                          |         
+    0x0040413e call 0x4085c0                         |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x42f73a, 1);
+    0x00404143 mov esi, 0x42f73c                     |         
+    0x00404148 mov edx, 0x1c                         |         
+    0x0040414d mov rdi, rax                          |         
+    0x00404150 call 0x4085c0                         |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, "duration.totalMicroseconds()", 0x1c);
+    0x00404155 mov esi, 0x42fddd                     |         
+    0x0040415a mov edx, 2                            |         
+    0x0040415f mov rdi, rax                          |         
+    0x00404162 call 0x4085c0                         |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x42fddd, 2);
+    0x00404167 mov rdi, rax                          |         rdi = rax;
+    0x0040416a mov rsi, r14                          |         rsi = r14;
+    0x0040416d call 0x4036f0                         |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (long long) ();
+    0x00404172 mov esi, 0x42fae4                     |         
+    0x00404177 mov edx, 1                            |         
+    0x0040417c mov rdi, rax                          |         
+    0x0040417f call 0x4085c0                         |         std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x42fae4, 1);
+    0x00404184 mov esi, 0x42f759                     |         esi = "duration.totalMicroseconds() + relax >= args->d_absTime";
+    0x00404189 mov edi, 1                            |         edi = 1;
+    0x0040418e mov edx, 0x1c9                        |         edx = 0x1c9;
+    0x00404193 call 0x4041c0                         |         rax = (anonymousnamespace)::aSsErT(bool,char const*,int) ();
+                                                     |     }
+                                                     | label_4:
+    0x00404198 lock inc dword [rbx + 0x7c]           |     *((rbx + 0x7c))++;
+    0x0040419c nop dword [rax]                       |     
+                                                     |     do {
+    0x004041a0 mov eax, dword [rbx + 0x84]           |         eax = *((rbx + 0x84));
+    0x004041a6 inc eax                               |         eax++;
+    0x004041a8 mov ecx, dword [rbx + 0x7c]           |         ecx = *((rbx + 0x7c));
+    0x004041ab cmp eax, ecx                          |         
+    0x004041ad jne 0x4041a0                          |         
+                                                     |     } while (eax != ecx);
+    0x004041af mov rax, rbx                          |     rax = rbx;
+    0x004041b2 add rsp, 0x28                         |     
+    0x004041b6 pop rbx                               |     
+    0x004041b7 pop r14                               |     
+    0x004041b9 pop r15                               |     
+    0x004041bb pop rbp                               |     
+    0x004041bc ret                                   |     return rax;
+                                                     | }

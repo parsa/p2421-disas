@@ -1,0 +1,102 @@
+    ; assembly                                                                                                                   | /* r2dec pseudo code output */
+                                                                                                                                 | /* bdlt_packedcalendar.t/assume @ 0x405140 */
+                                                                                                                                 | #include <stdint.h>
+                                                                                                                                 |  
+    ; (fcn) sym.loadWeekendDaysTransition_char_const__BloombergLP::bdlt::PackedCalendar__BloombergLP::bdlt::Date_const_ ()       | uint64_t loadWeekendDaysTransition_char_const_BloombergLP::bdlt::PackedCalendar_BloombergLP::bdlt::Date_const_ (int64_t arg3, int64_t arg2, int64_t arg1) {
+                                                                                                                                 |     int64_t var_8h;
+                                                                                                                                 |     rdx = arg3;
+                                                                                                                                 |     rsi = arg2;
+                                                                                                                                 |     rdi = arg1;
+                                                                                                                                 |     /* loadWeekendDaysTransition(char const**, BloombergLP::bdlt::PackedCalendar*, BloombergLP::bdlt::Date const&) */
+    0x00405140 push r15                                                                                                          |     
+    0x00405142 push r14                                                                                                          |     
+    0x00405144 push r13                                                                                                          |     
+    0x00405146 push r12                                                                                                          |     
+    0x00405148 push rbx                                                                                                          |     
+    0x00405149 sub rsp, 0x10                                                                                                     |     
+    0x0040514d mov r14, rdx                                                                                                      |     r14 = rdx;
+    0x00405150 mov r15, rsi                                                                                                      |     r15 = rsi;
+    0x00405153 mov r12, rdi                                                                                                      |     r12 = rdi;
+    0x00405156 xor edi, edi                                                                                                      |     edi = 0;
+    0x00405158 test rsi, rsi                                                                                                     |     
+    0x0040515b sete dil                                                                                                          |     dil = (rsi == 0) ? 1 : 0;
+    0x0040515f mov esi, 0x48cf93                                                                                                 |     esi = "result";
+    0x00405164 mov edx, 0x29e                                                                                                    |     edx = 0x29e;
+    0x00405169 call 0x404870                                                                                                     |     (anonymousnamespace)::aSsErT(bool,char const*,int) ();
+    0x0040516e mov byte [rsp + 8], 0                                                                                             |     *((rsp + 8)) = 0;
+    0x00405173 mov r13, qword [r12]                                                                                              |     r13 = *(r12);
+    0x00405177 movsx rbx, byte [r13]                                                                                             |     rbx = *(r13);
+    0x0040517c call 0x404200                                                                                                     |     rax = ctype_b_loc ();
+    0x00405181 mov rcx, qword [rax]                                                                                              |     rcx = *(rax);
+    0x00405184 test byte [rcx + rbx*2 + 1], 2                                                                                    |     
+                                                                                                                                 |     if ((*((rcx + rbx*2 + 1)) & 2) == 0) {
+    0x00405189 je 0x405206                                                                                                       |         goto label_0;
+                                                                                                                                 |     }
+    0x0040518b inc r13                                                                                                           |     r13++;
+    0x0040518e xor esi, esi                                                                                                      |     esi = 0;
+    0x00405190 mov edx, 1                                                                                                        |     edx = 1;
+    0x00405195 nop word cs:[rax + rax]                                                                                           |     
+    0x0040519f nop                                                                                                               |     
+                                                                                                                                 |     do {
+    0x004051a0 movsx edi, bl                                                                                                     |         edi = (int32_t) bl;
+    0x004051a3 add edi, 0xffffff9f                                                                                               |         edi += 0xffffff9f;
+    0x004051a6 cmp edi, 0x16                                                                                                     |         
+                                                                                                                                 |         if (edi > 0x16) {
+    0x004051a9 ja 0x405218                                                                                                       |             goto label_1;
+                                                                                                                                 |         }
+    0x004051ab mov cl, 1                                                                                                         |         cl = 1;
+                                                                                                                                 |         /* switch table (23 cases) at 0x48af08 */
+    0x004051ad jmp qword [rdi*8 + 0x48af08]                                                                                      |         
+    0x004051b4 mov cl, 7                                                                                                         |         cl = 7;
+    0x004051b6 jmp 0x4051d0                                                                                                      |         goto label_2;
+    0x004051b8 mov cl, 6                                                                                                         |         cl = 6;
+    0x004051ba jmp 0x4051d0                                                                                                      |         goto label_2;
+    0x004051bc mov cl, 2                                                                                                         |         cl = 2;
+    0x004051be jmp 0x4051d0                                                                                                      |         goto label_2;
+    0x004051c0 mov cl, 5                                                                                                         |         cl = 5;
+    0x004051c2 jmp 0x4051d0                                                                                                      |         goto label_2;
+    0x004051c4 mov cl, 3                                                                                                         |         cl = 3;
+    0x004051c6 jmp 0x4051d0                                                                                                      |         goto label_2;
+    0x004051c8 mov cl, 4                                                                                                         |         cl = 4;
+    0x004051ca nop word [rax + rax]                                                                                              |         
+                                                                                                                                 | label_2:
+    0x004051d0 movzx esi, sil                                                                                                    |         esi = (int32_t) sil;
+    0x004051d4 popcnt edi, esi                                                                                                   |         __asm ("popcnt edi, esi");
+    0x004051d8 mov bl, 1                                                                                                         |         bl = 1;
+    0x004051da shl bl, cl                                                                                                        |         bl <<= cl;
+    0x004051dc or sil, bl                                                                                                        |         sil |= bl;
+    0x004051df mov byte [rsp + 8], sil                                                                                           |         *((rsp + 8)) = sil;
+    0x004051e4 movzx ecx, sil                                                                                                    |         ecx = (int32_t) sil;
+    0x004051e8 popcnt ecx, ecx                                                                                                   |         __asm ("popcnt ecx, ecx");
+    0x004051ec cmp edi, ecx                                                                                                      |         
+                                                                                                                                 |         if (edi >= ecx) {
+    0x004051ee jae 0x405218                                                                                                      |             goto label_1;
+                                                                                                                                 |         }
+    0x004051f0 mov qword [r12], r13                                                                                              |         *(r12) = r13;
+    0x004051f4 movsx rbx, byte [r13]                                                                                             |         rbx = *(r13);
+    0x004051f9 mov rcx, qword [rax]                                                                                              |         rcx = *(rax);
+    0x004051fc inc r13                                                                                                           |         r13++;
+    0x004051ff test byte [rcx + rbx*2 + 1], 2                                                                                    |         
+    0x00405204 jne 0x4051a0                                                                                                      |         
+                                                                                                                                 |     } while ((*((rcx + rbx*2 + 1)) & 2) != 0);
+                                                                                                                                 |     do {
+                                                                                                                                 | label_0:
+    0x00405206 lea rdx, [rsp + 8]                                                                                                |         
+    0x0040520b mov rdi, r15                                                                                                      |         
+    0x0040520e mov rsi, r14                                                                                                      |         
+    0x00405211 call 0x453220                                                                                                     |         BloombergLP::bdlt::PackedCalendar::addWeekendDaysTransition(BloombergLP::bdlt::Dateconst&,BloombergLP::bdlt::DayOfWeekSetconst&) (r15, r14, rsp + 8);
+    0x00405216 xor edx, edx                                                                                                      |         edx = 0;
+                                                                                                                                 | label_1:
+    0x00405218 mov eax, edx                                                                                                      |         eax = edx;
+    0x0040521a add rsp, 0x10                                                                                                     |         
+    0x0040521e pop rbx                                                                                                           |         
+    0x0040521f pop r12                                                                                                           |         
+    0x00405221 pop r13                                                                                                           |         
+    0x00405223 pop r14                                                                                                           |         
+    0x00405225 pop r15                                                                                                           |         
+    0x00405227 ret                                                                                                               |         return rax;
+    0x00405228 mov qword [r12], r13                                                                                              |         *(r12) = r13;
+    0x0040522c mov byte [rsp + 8], 0                                                                                             |         *((rsp + 8)) = 0;
+    0x00405231 jmp 0x405206                                                                                                      |         
+                                                                                                                                 |     } while (1);
+                                                                                                                                 | }

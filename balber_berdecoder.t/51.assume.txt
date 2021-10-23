@@ -1,0 +1,47 @@
+    ; assembly                                                                                   | /* r2dec pseudo code output */
+                                                                                                 | /* balber_berdecoder.t/assume @ 0x46a6a0 */
+                                                                                                 | #include <stdint.h>
+                                                                                                 |  
+                                                                                                 | uint16_t rotate_right16 (uint16_t value, uint32_t count) {
+                                                                                                 |     const uint16_t mask = (CHAR_BIT * sizeof (value)) - 1;
+                                                                                                 |     count &= mask;
+                                                                                                 |     return (value >> count) | (value << (-count & mask));
+                                                                                                 | }
+                                                                                                 |  
+    ; (fcn) method.BloombergLP::bdlt::ProlepticDateImpUtil.lastDayOfMonth_int__int_ ()           | int32_t method_BloombergLP::bdlt::ProlepticDateImpUtil_lastDayOfMonth_int_int_ (uint32_t arg2, int64_t arg1) {
+                                                                                                 |     rsi = arg2;
+                                                                                                 |     rdi = arg1;
+                                                                                                 |     /* BloombergLP::bdlt::ProlepticDateImpUtil::lastDayOfMonth(int, int) */
+    0x0046a6a0 mov eax, esi                                                                      |     eax = esi;
+    0x0046a6a2 mov ecx, dword [rax*4 + 0x4b57f0]                                                 |     ecx = *((rax*4 + obj.BloombergLP::bdlt::_anonymous_namespace_::normDaysPerMonth));
+    0x0046a6a9 xor eax, eax                                                                      |     eax = 0;
+    0x0046a6ab cmp esi, 2                                                                        |     
+                                                                                                 |     if (esi == 2) {
+    0x0046a6ae jne 0x46a6d1                                                                      |         
+    0x0046a6b0 mov edx, edi                                                                      |         edx = edi;
+    0x0046a6b2 and edx, 3                                                                        |         edx &= 3;
+                                                                                                 |         if (edx != 0) {
+    0x0046a6b5 jne 0x46a6d1                                                                      |             goto label_0;
+                                                                                                 |         }
+    0x0046a6b7 imul eax, edi, 0x5c29                                                             |         eax = edi * 0x5c29;
+    0x0046a6bd ror ax, 2                                                                         |         ax = rotate_right16 (ax, 2);
+    0x0046a6c1 movzx edx, ax                                                                     |         edx = (int32_t) ax;
+    0x0046a6c4 mov eax, 1                                                                        |         eax = 1;
+    0x0046a6c9 cmp edx, 0x28f                                                                    |         
+                                                                                                 |         if (edx <= 0x28f) {
+    0x0046a6cf jbe 0x46a6d4                                                                      |             goto label_1;
+                                                                                                 |         }
+                                                                                                 |     }
+                                                                                                 | label_0:
+    0x0046a6d1 add eax, ecx                                                                      |     eax += ecx;
+    0x0046a6d3 ret                                                                               |     return eax;
+                                                                                                 | label_1:
+    0x0046a6d4 imul eax, edi, 0x5c29                                                             |     eax = edi * 0x5c29;
+    0x0046a6da ror ax, 4                                                                         |     ax = rotate_right16 (ax, 4);
+    0x0046a6de movzx edx, ax                                                                     |     edx = (int32_t) ax;
+    0x0046a6e1 xor eax, eax                                                                      |     eax = 0;
+    0x0046a6e3 cmp edx, 0xa4                                                                     |     
+    0x0046a6e9 setb al                                                                           |     al = (edx < 0xa4) ? 1 : 0;
+    0x0046a6ec add eax, ecx                                                                      |     eax += ecx;
+    0x0046a6ee ret                                                                               |     return eax;
+                                                                                                 | }

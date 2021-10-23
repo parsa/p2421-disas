@@ -1,0 +1,592 @@
+    ; assembly                                                                                                                                               | /* r2dec pseudo code output */
+                                                                                                                                                             | /* bdlt_fixutil.t/assume @ 0x43a1e0 */
+                                                                                                                                                             | #include <stdint.h>
+                                                                                                                                                             |  
+    ; (fcn) method.BloombergLP::bdlt::FixUtil.generateRaw_char__BloombergLP::bdlt::Datetime_const__BloombergLP::bdlt::FixUtilConfiguration_const_ ()         | uint64_t method_BloombergLP::bdlt::FixUtil_generateRaw_char_BloombergLP::bdlt::Datetime_const_BloombergLP::bdlt::FixUtilConfiguration_const_ (int64_t arg3, int64_t arg2, char * arg1) {
+                                                                                                                                                             |     char * var_8h;
+                                                                                                                                                             |     int64_t var_10h;
+                                                                                                                                                             |     char * var_18h;
+                                                                                                                                                             |     int64_t var_20h;
+                                                                                                                                                             |     rdx = arg3;
+                                                                                                                                                             |     rsi = arg2;
+                                                                                                                                                             |     rdi = arg1;
+                                                                                                                                                             |     /* BloombergLP::bdlt::FixUtil::generateRaw(char*, BloombergLP::bdlt::Datetime const&, BloombergLP::bdlt::FixUtilConfiguration const&) */
+    0x0043a1e0 push rbp                                                                                                                                      |     
+    0x0043a1e1 push r15                                                                                                                                      |     
+    0x0043a1e3 push r14                                                                                                                                      |     
+    0x0043a1e5 push r13                                                                                                                                      |     
+    0x0043a1e7 push r12                                                                                                                                      |     
+    0x0043a1e9 push rbx                                                                                                                                      |     
+    0x0043a1ea sub rsp, 0x28                                                                                                                                 |     
+    0x0043a1ee mov r12, rdx                                                                                                                                  |     r12 = rdx;
+    0x0043a1f1 mov r14, rsi                                                                                                                                  |     r14 = rsi;
+    0x0043a1f4 mov r15, rdi                                                                                                                                  |     r15 = rdi;
+    0x0043a1f7 mov rbx, qword [rsi]                                                                                                                          |     rbx = *(rsi);
+    0x0043a1fa test rbx, rbx                                                                                                                                 |     
+                                                                                                                                                             |     if (rbx >= 0) {
+    0x0043a1fd jns 0x43a78a                                                                                                                                  |         goto label_8;
+                                                                                                                                                             |     }
+                                                                                                                                                             | label_1:
+    0x0043a203 shr rbx, 0x25                                                                                                                                 |     rbx >>= 0x25;
+    0x0043a207 and ebx, 0x3ffffff                                                                                                                            |     ebx &= 0x3ffffff;
+    0x0043a20d inc ebx                                                                                                                                       |     ebx++;
+    0x0043a20f mov edi, ebx                                                                                                                                  |     
+    0x0043a211 call 0x43d0a0                                                                                                                                 |     eax = BloombergLP::bdlt::PosixDateImpUtil::serialToYear(int) (ebx, rsi);
+    0x0043a216 mov ecx, eax                                                                                                                                  |     ecx = eax;
+    0x0043a218 mov r13d, 0xcccccccd                                                                                                                          |     r13d = 0xcccccccd;
+    0x0043a21e imul rdx, rcx, 0x51eb851f                                                                                                                     |     rdx = rcx * 0x51eb851f;
+    0x0043a225 imul rsi, rcx, 0x10624dd3                                                                                                                     |     rsi = rcx * 0x10624dd3;
+    0x0043a22c imul rcx, r13                                                                                                                                 |     rcx *= r13;
+    0x0043a230 shr rcx, 0x23                                                                                                                                 |     rcx >>= 0x23;
+    0x0043a234 lea edi, [rcx + rcx]                                                                                                                          |     edi = rcx + rcx;
+    0x0043a237 lea edi, [rdi + rdi*4]                                                                                                                        |     edi = rdi * 5;
+    0x0043a23a sub eax, edi                                                                                                                                  |     eax -= edi;
+    0x0043a23c or al, 0x30                                                                                                                                   |     al |= 0x30;
+    0x0043a23e mov byte [r15 + 3], al                                                                                                                        |     *((r15 + 3)) = al;
+    0x0043a242 mov rax, rcx                                                                                                                                  |     rax = rcx;
+    0x0043a245 imul rax, r13                                                                                                                                 |     rax *= r13;
+    0x0043a249 shr rax, 0x23                                                                                                                                 |     rax >>= 0x23;
+    0x0043a24d add eax, eax                                                                                                                                  |     eax += eax;
+    0x0043a24f lea eax, [rax + rax*4]                                                                                                                        |     eax = rax * 5;
+    0x0043a252 sub ecx, eax                                                                                                                                  |     ecx -= eax;
+    0x0043a254 or cl, 0x30                                                                                                                                   |     cl |= 0x30;
+    0x0043a257 mov byte [r15 + 2], cl                                                                                                                        |     *((r15 + 2)) = cl;
+    0x0043a25b shr rdx, 0x25                                                                                                                                 |     rdx >>= 0x25;
+    0x0043a25f mov rax, rdx                                                                                                                                  |     rax = rdx;
+    0x0043a262 imul rax, r13                                                                                                                                 |     rax *= r13;
+    0x0043a266 shr rax, 0x23                                                                                                                                 |     rax >>= 0x23;
+    0x0043a26a add eax, eax                                                                                                                                  |     eax += eax;
+    0x0043a26c lea eax, [rax + rax*4]                                                                                                                        |     eax = rax * 5;
+    0x0043a26f sub edx, eax                                                                                                                                  |     edx -= eax;
+    0x0043a271 or dl, 0x30                                                                                                                                   |     dl |= 0x30;
+    0x0043a274 mov byte [r15 + 1], dl                                                                                                                        |     *((r15 + 1)) = dl;
+    0x0043a278 shr rsi, 0x26                                                                                                                                 |     rsi >>= 0x26;
+    0x0043a27c mov rax, rsi                                                                                                                                  |     rax = rsi;
+    0x0043a27f imul rax, r13                                                                                                                                 |     rax *= r13;
+    0x0043a283 shr rax, 0x23                                                                                                                                 |     rax >>= 0x23;
+    0x0043a287 add eax, eax                                                                                                                                  |     eax += eax;
+    0x0043a289 lea eax, [rax + rax*4]                                                                                                                        |     eax = rax * 5;
+    0x0043a28c sub esi, eax                                                                                                                                  |     esi -= eax;
+    0x0043a28e or sil, 0x30                                                                                                                                  |     sil |= 0x30;
+    0x0043a292 mov byte [r15], sil                                                                                                                           |     *(r15) = sil;
+    0x0043a295 mov edi, ebx                                                                                                                                  |     
+    0x0043a297 call 0x43d060                                                                                                                                 |     eax = BloombergLP::bdlt::PosixDateImpUtil::serialToMonth(int) (ebx, rsi);
+    0x0043a29c mov ecx, eax                                                                                                                                  |     ecx = eax;
+    0x0043a29e imul rcx, r13                                                                                                                                 |     rcx *= r13;
+    0x0043a2a2 shr rcx, 0x23                                                                                                                                 |     rcx >>= 0x23;
+    0x0043a2a6 lea edx, [rcx + rcx]                                                                                                                          |     edx = rcx + rcx;
+    0x0043a2a9 lea edx, [rdx + rdx*4]                                                                                                                        |     edx = rdx * 5;
+    0x0043a2ac sub eax, edx                                                                                                                                  |     eax -= edx;
+    0x0043a2ae or al, 0x30                                                                                                                                   |     al |= 0x30;
+    0x0043a2b0 mov byte [r15 + 5], al                                                                                                                        |     *((r15 + 5)) = al;
+    0x0043a2b4 mov rax, rcx                                                                                                                                  |     rax = rcx;
+    0x0043a2b7 imul rax, r13                                                                                                                                 |     rax *= r13;
+    0x0043a2bb shr rax, 0x23                                                                                                                                 |     rax >>= 0x23;
+    0x0043a2bf add eax, eax                                                                                                                                  |     eax += eax;
+    0x0043a2c1 lea eax, [rax + rax*4]                                                                                                                        |     eax = rax * 5;
+    0x0043a2c4 sub ecx, eax                                                                                                                                  |     ecx -= eax;
+    0x0043a2c6 or cl, 0x30                                                                                                                                   |     cl |= 0x30;
+    0x0043a2c9 mov byte [r15 + 4], cl                                                                                                                        |     *((r15 + 4)) = cl;
+    0x0043a2cd mov edi, ebx                                                                                                                                  |     
+    0x0043a2cf call 0x43d020                                                                                                                                 |     eax = BloombergLP::bdlt::PosixDateImpUtil::serialToDay(int) (ebx, rsi);
+    0x0043a2d4 mov ecx, eax                                                                                                                                  |     ecx = eax;
+    0x0043a2d6 imul rcx, r13                                                                                                                                 |     rcx *= r13;
+    0x0043a2da shr rcx, 0x23                                                                                                                                 |     rcx >>= 0x23;
+    0x0043a2de lea edx, [rcx + rcx]                                                                                                                          |     edx = rcx + rcx;
+    0x0043a2e1 lea edx, [rdx + rdx*4]                                                                                                                        |     edx = rdx * 5;
+    0x0043a2e4 sub eax, edx                                                                                                                                  |     eax -= edx;
+    0x0043a2e6 or al, 0x30                                                                                                                                   |     al |= 0x30;
+    0x0043a2e8 mov byte [r15 + 7], al                                                                                                                        |     *((r15 + 7)) = al;
+    0x0043a2ec mov rax, rcx                                                                                                                                  |     rax = rcx;
+    0x0043a2ef imul rax, r13                                                                                                                                 |     rax *= r13;
+    0x0043a2f3 shr rax, 0x23                                                                                                                                 |     rax >>= 0x23;
+    0x0043a2f7 add eax, eax                                                                                                                                  |     eax += eax;
+    0x0043a2f9 lea eax, [rax + rax*4]                                                                                                                        |     eax = rax * 5;
+    0x0043a2fc sub ecx, eax                                                                                                                                  |     ecx -= eax;
+    0x0043a2fe or cl, 0x30                                                                                                                                   |     cl |= 0x30;
+    0x0043a301 mov byte [r15 + 6], cl                                                                                                                        |     *((r15 + 6)) = cl;
+    0x0043a305 mov byte [r15 + 8], 0x2d                                                                                                                      |     *((r15 + 8)) = 0x2d;
+    0x0043a30a mov rcx, qword [r14]                                                                                                                          |     rcx = *(r14);
+    0x0043a30d mov rax, rcx                                                                                                                                  |     rax = *(r14);
+    0x0043a310 test rcx, rcx                                                                                                                                 |     
+                                                                                                                                                             |     if (rcx >= 0) {
+    0x0043a313 jns 0x43a7f9                                                                                                                                  |         goto label_9;
+                                                                                                                                                             |     }
+                                                                                                                                                             | label_2:
+    0x0043a319 movabs rbx, 0x1ffffffc00                                                                                                                      |     rbx = 0x1ffffffc00;
+    0x0043a323 and rax, rbx                                                                                                                                  |     rax &= rbx;
+    0x0043a326 movabs rbp, 0x98b5bf2c03e529c5                                                                                                                |     
+    0x0043a330 mul rbp                                                                                                                                       |     rdx:rax = rax * rbp;
+    0x0043a333 shr rdx, 0x1f                                                                                                                                 |     rdx >>= 0x1f;
+    0x0043a337 cmp edx, 0x17                                                                                                                                 |     
+                                                                                                                                                             |     if (edx <= 0x17) {
+    0x0043a33a ja 0x43a354                                                                                                                                   |         
+    0x0043a33c test rcx, rcx                                                                                                                                 |         
+                                                                                                                                                             |         if (rcx >= 0) {
+    0x0043a33f jns 0x43a9a8                                                                                                                                  |             goto label_10;
+                                                                                                                                                             |         }
+                                                                                                                                                             | label_6:
+    0x0043a345 and rcx, rbx                                                                                                                                  |         rcx &= rbx;
+    0x0043a348 mov rax, rcx                                                                                                                                  |         rax = rcx;
+    0x0043a34b mul rbp                                                                                                                                       |         rdx:rax = rax * rbp;
+    0x0043a34e shr rdx, 0x1f                                                                                                                                 |         rdx >>= 0x1f;
+    0x0043a352 jmp 0x43a356                                                                                                                                  |         
+                                                                                                                                                             |     } else {
+    0x0043a354 xor edx, edx                                                                                                                                  |         edx = 0;
+                                                                                                                                                             |     }
+    0x0043a356 movzx eax, dl                                                                                                                                 |     eax = (int32_t) dl;
+    0x0043a359 imul ecx, eax, 0xcd                                                                                                                           |     ecx = eax * 0xcd;
+    0x0043a35f shr ecx, 0xb                                                                                                                                  |     ecx >>= 0xb;
+    0x0043a362 lea edx, [rcx + rcx]                                                                                                                          |     edx = rcx + rcx;
+    0x0043a365 lea edx, [rdx + rdx*4]                                                                                                                        |     edx = rdx * 5;
+    0x0043a368 sub al, dl                                                                                                                                    |     al -= dl;
+    0x0043a36a or al, 0x30                                                                                                                                   |     al |= 0x30;
+    0x0043a36c mov byte [r15 + 0xa], al                                                                                                                      |     *((r15 + 0xa)) = al;
+    0x0043a370 imul eax, ecx, 0xcd                                                                                                                           |     eax = ecx * 0xcd;
+    0x0043a376 shr eax, 0xa                                                                                                                                  |     eax >>= 0xa;
+    0x0043a379 and eax, 0xfffffffe                                                                                                                           |     eax &= 0xfffffffe;
+    0x0043a37c lea eax, [rax + rax*4]                                                                                                                        |     eax = rax * 5;
+    0x0043a37f sub cl, al                                                                                                                                    |     cl -= al;
+    0x0043a381 or cl, 0x30                                                                                                                                   |     cl |= 0x30;
+    0x0043a384 mov byte [r15 + 9], cl                                                                                                                        |     *((r15 + 9)) = cl;
+    0x0043a388 mov byte [r15 + 0xb], 0x3a                                                                                                                    |     *((r15 + 0xb)) = 0x3a;
+    0x0043a38d mov rcx, qword [r14]                                                                                                                          |     rcx = *(r14);
+    0x0043a390 test rcx, rcx                                                                                                                                 |     
+                                                                                                                                                             |     if (rcx >= 0) {
+    0x0043a393 jns 0x43a854                                                                                                                                  |         goto label_11;
+                                                                                                                                                             |     }
+                                                                                                                                                             | label_3:
+    0x0043a399 lea rax, [rbx + 0x300]                                                                                                                        |     rax = rbx + 0x300;
+    0x0043a3a0 and rax, rcx                                                                                                                                  |     rax &= rcx;
+    0x0043a3a3 shr rax, 8                                                                                                                                    |     rax >>= 8;
+    0x0043a3a7 movabs rcx, 0x11e54c672874daf                                                                                                                 |     rcx = 0x11e54c672874daf;
+    0x0043a3b1 mul rcx                                                                                                                                       |     rdx:rax = rax * rcx;
+    0x0043a3b4 shr rdx, 0xa                                                                                                                                  |     rdx >>= 0xa;
+    0x0043a3b8 imul eax, edx, 0x8889                                                                                                                         |     eax = edx * 0x8889;
+    0x0043a3be shr eax, 0x15                                                                                                                                 |     eax >>= 0x15;
+    0x0043a3c1 imul eax, eax, 0x3c                                                                                                                           |     eax *= 0x3c;
+    0x0043a3c4 sub edx, eax                                                                                                                                  |     edx -= eax;
+    0x0043a3c6 imul eax, edx, 0xcd                                                                                                                           |     eax = edx * 0xcd;
+    0x0043a3cc movzx eax, ax                                                                                                                                 |     eax = (int32_t) ax;
+    0x0043a3cf shr eax, 0xb                                                                                                                                  |     eax >>= 0xb;
+    0x0043a3d2 lea ecx, [rax + rax]                                                                                                                          |     ecx = rax + rax;
+    0x0043a3d5 lea ecx, [rcx + rcx*4]                                                                                                                        |     ecx = rcx * 5;
+    0x0043a3d8 sub dl, cl                                                                                                                                    |     dl -= cl;
+    0x0043a3da or dl, 0x30                                                                                                                                   |     dl |= 0x30;
+    0x0043a3dd mov byte [r15 + 0xd], dl                                                                                                                      |     *((r15 + 0xd)) = dl;
+    0x0043a3e1 or al, 0x30                                                                                                                                   |     al |= 0x30;
+    0x0043a3e3 mov byte [r15 + 0xc], al                                                                                                                      |     *((r15 + 0xc)) = al;
+    0x0043a3e7 mov byte [r15 + 0xe], 0x3a                                                                                                                    |     *((r15 + 0xe)) = 0x3a;
+    0x0043a3ec mov r12d, dword [r12]                                                                                                                         |     r12d = *(r12);
+    0x0043a3f0 and r12d, 7                                                                                                                                   |     r12d &= 7;
+    0x0043a3f4 mov rcx, qword [r14]                                                                                                                          |     rcx = *(r14);
+    0x0043a3f7 test r12d, r12d                                                                                                                               |     
+                                                                                                                                                             |     if (r12d != 0) {
+    0x0043a3fa je 0x43a4ee                                                                                                                                   |         
+    0x0043a400 test rcx, rcx                                                                                                                                 |         
+                                                                                                                                                             |         if (rcx >= 0) {
+    0x0043a403 jns 0x43a8a9                                                                                                                                  |             goto label_12;
+                                                                                                                                                             |         }
+                                                                                                                                                             | label_4:
+    0x0043a409 lea rax, [rbx + 0x3c0]                                                                                                                        |         rax = rbx + 0x3c0;
+    0x0043a410 and rax, rcx                                                                                                                                  |         rax &= rcx;
+    0x0043a413 movabs rcx, 0x431bde82d7b634db                                                                                                                |         rcx = 0x431bde82d7b634db;
+    0x0043a41d mul rcx                                                                                                                                       |         rdx:rax = rax * rcx;
+    0x0043a420 shr rdx, 0x12                                                                                                                                 |         rdx >>= 0x12;
+    0x0043a424 mov eax, 0x88888889                                                                                                                           |         eax = 0x88888889;
+    0x0043a429 imul rax, rdx                                                                                                                                 |         rax *= rdx;
+    0x0043a42d shr rax, 0x25                                                                                                                                 |         rax >>= 0x25;
+    0x0043a431 imul eax, eax, 0x3c                                                                                                                           |         eax *= 0x3c;
+    0x0043a434 sub edx, eax                                                                                                                                  |         edx -= eax;
+    0x0043a436 imul eax, edx, 0xcd                                                                                                                           |         eax = edx * 0xcd;
+    0x0043a43c movzx eax, ax                                                                                                                                 |         eax = (int32_t) ax;
+    0x0043a43f shr eax, 0xb                                                                                                                                  |         eax >>= 0xb;
+    0x0043a442 lea ecx, [rax + rax]                                                                                                                          |         ecx = rax + rax;
+    0x0043a445 lea ecx, [rcx + rcx*4]                                                                                                                        |         ecx = rcx * 5;
+    0x0043a448 sub dl, cl                                                                                                                                    |         dl -= cl;
+    0x0043a44a or dl, 0x30                                                                                                                                   |         dl |= 0x30;
+    0x0043a44d mov byte [r15 + 0x10], dl                                                                                                                     |         *((r15 + 0x10)) = dl;
+    0x0043a451 or al, 0x30                                                                                                                                   |         al |= 0x30;
+    0x0043a453 mov byte [r15 + 0xf], al                                                                                                                      |         *((r15 + 0xf)) = al;
+    0x0043a457 mov byte [r15 + 0x11], 0x2e                                                                                                                   |         *((r15 + 0x11)) = 0x2e;
+    0x0043a45c mov rbp, qword [r14]                                                                                                                          |         rbp = *(r14);
+    0x0043a45f mov rcx, rbp                                                                                                                                  |         rcx = *(r14);
+    0x0043a462 test rbp, rbp                                                                                                                                 |         
+                                                                                                                                                             |         if (rbp >= 0) {
+    0x0043a465 jns 0x43a8fe                                                                                                                                  |             goto label_13;
+                                                                                                                                                             |         }
+                                                                                                                                                             | label_5:
+    0x0043a46b lea rax, [rbx + 0x3f8]                                                                                                                        |         rax = rbx + 0x3f8;
+    0x0043a472 and rax, rbp                                                                                                                                  |         rax &= rbp;
+    0x0043a475 shr rax, 3                                                                                                                                    |         rax >>= 3;
+    0x0043a479 movabs rsi, 0x20c49ba5e353f7cf                                                                                                                |         rsi = 0x20c49ba5e353f7cf;
+    0x0043a483 mul rsi                                                                                                                                       |         rdx:rax = rax * rsi;
+    0x0043a486 shr rdx, 4                                                                                                                                    |         rdx >>= 4;
+    0x0043a48a imul rax, rdx, 0x10624dd3                                                                                                                     |         rax = rdx * 0x10624dd3;
+    0x0043a491 shr rax, 0x26                                                                                                                                 |         rax >>= 0x26;
+    0x0043a495 imul eax, eax, 0x3e8                                                                                                                          |         eax *= 0x3e8;
+    0x0043a49b sub edx, eax                                                                                                                                  |         edx -= eax;
+    0x0043a49d imul edi, edx, 0x3e8                                                                                                                          |         edi = edx * 0x3e8;
+    0x0043a4a3 add rbx, 0x3ff                                                                                                                                |         rbx += 0x3ff;
+    0x0043a4aa and rbx, rcx                                                                                                                                  |         rbx &= rcx;
+    0x0043a4ad mov rax, rbx                                                                                                                                  |         rax = rbx;
+    0x0043a4b0 shr rax, 3                                                                                                                                    |         rax >>= 3;
+    0x0043a4b4 mul rsi                                                                                                                                       |         rdx:rax = rax * rsi;
+    0x0043a4b7 shr rdx, 4                                                                                                                                    |         rdx >>= 4;
+    0x0043a4bb imul eax, edx, 0x3e8                                                                                                                          |         eax = edx * 0x3e8;
+    0x0043a4c1 sub ebx, eax                                                                                                                                  |         ebx -= eax;
+    0x0043a4c3 add ebx, edi                                                                                                                                  |         ebx += edi;
+    0x0043a4c5 cmp r12d, 6                                                                                                                                   |         
+                                                                                                                                                             |         if (r12d >= 6) {
+    0x0043a4c9 jae 0x43a55e                                                                                                                                  |             goto label_0;
+                                                                                                                                                             |         }
+    0x0043a4cf mov eax, ebx                                                                                                                                  |         eax = ebx;
+    0x0043a4d1 cmp r12d, 5                                                                                                                                   |         
+                                                                                                                                                             |         if (r12d < 5) {
+    0x0043a4d5 jae 0x43a551                                                                                                                                  |             
+    0x0043a4d7 cmp r12d, 4                                                                                                                                   |             
+                                                                                                                                                             |             if (r12d != 4) {
+    0x0043a4db jne 0x43a749                                                                                                                                  |                 goto label_14;
+                                                                                                                                                             |             }
+    0x0043a4e1 imul rbx, rax, 0x51eb851f                                                                                                                     |             rbx = rax * 0x51eb851f;
+    0x0043a4e8 shr rbx, 0x25                                                                                                                                 |             rbx >>= 0x25;
+    0x0043a4ec jmp 0x43a55e                                                                                                                                  |             
+                                                                                                                                                             |         } else {
+    0x0043a4ee test rcx, rcx                                                                                                                                 |             
+                                                                                                                                                             |             if (rcx >= 0) {
+    0x0043a4f1 jns 0x43a9fd                                                                                                                                  |                 goto label_15;
+                                                                                                                                                             |             }
+                                                                                                                                                             | label_7:
+    0x0043a4f7 add rbx, 0x3c0                                                                                                                                |             rbx += 0x3c0;
+    0x0043a4fe and rbx, rcx                                                                                                                                  |             rbx &= rcx;
+    0x0043a501 movabs rcx, 0x431bde82d7b634db                                                                                                                |             rcx = 0x431bde82d7b634db;
+    0x0043a50b mov rax, rbx                                                                                                                                  |             rax = rbx;
+    0x0043a50e mul rcx                                                                                                                                       |             rdx:rax = rax * rcx;
+    0x0043a511 shr rdx, 0x12                                                                                                                                 |             rdx >>= 0x12;
+    0x0043a515 mov eax, 0x88888889                                                                                                                           |             eax = 0x88888889;
+    0x0043a51a imul rax, rdx                                                                                                                                 |             rax *= rdx;
+    0x0043a51e shr rax, 0x25                                                                                                                                 |             rax >>= 0x25;
+    0x0043a522 imul eax, eax, 0x3c                                                                                                                           |             eax *= 0x3c;
+    0x0043a525 sub edx, eax                                                                                                                                  |             edx -= eax;
+    0x0043a527 imul eax, edx, 0xcd                                                                                                                           |             eax = edx * 0xcd;
+    0x0043a52d movzx eax, ax                                                                                                                                 |             eax = (int32_t) ax;
+    0x0043a530 shr eax, 0xb                                                                                                                                  |             eax >>= 0xb;
+    0x0043a533 lea ecx, [rax + rax]                                                                                                                          |             ecx = rax + rax;
+    0x0043a536 lea ecx, [rcx + rcx*4]                                                                                                                        |             ecx = rcx * 5;
+    0x0043a539 sub dl, cl                                                                                                                                    |             dl -= cl;
+    0x0043a53b or dl, 0x30                                                                                                                                   |             dl |= 0x30;
+    0x0043a53e mov byte [r15 + 0x10], dl                                                                                                                     |             *((r15 + 0x10)) = dl;
+    0x0043a542 or al, 0x30                                                                                                                                   |             al |= 0x30;
+    0x0043a544 mov byte [r15 + 0xf], al                                                                                                                      |             *((r15 + 0xf)) = al;
+    0x0043a548 lea rax, [r15 + 0x11]                                                                                                                         |             rax = r15 + 0x11;
+    0x0043a54c jmp 0x43a737                                                                                                                                  |             goto label_16;
+                                                                                                                                                             |         }
+    0x0043a551 mov ebx, 0xcccccccd                                                                                                                           |         ebx = 0xcccccccd;
+    0x0043a556 imul rbx, rax                                                                                                                                 |         rbx *= rax;
+    0x0043a55a shr rbx, 0x23                                                                                                                                 |         rbx >>= 0x23;
+                                                                                                                                                             |     }
+                                                                                                                                                             |     do {
+                                                                                                                                                             | label_0:
+    0x0043a55e lea rax, [r15 + 0x12]                                                                                                                         |         rax = r15 + 0x12;
+    0x0043a562 movsxd rdx, ebx                                                                                                                               |         rdx = (int64_t) ebx;
+    0x0043a565 imul rsi, rdx, 0x66666667                                                                                                                     |         rsi = rdx * 0x66666667;
+    0x0043a56c mov rcx, rsi                                                                                                                                  |         rcx = rsi;
+    0x0043a56f shr rcx, 0x3f                                                                                                                                 |         rcx >>= 0x3f;
+    0x0043a573 sar rsi, 0x22                                                                                                                                 |         rsi >>= 0x22;
+    0x0043a577 add esi, ecx                                                                                                                                  |         esi += ecx;
+    0x0043a579 lea ecx, [rsi + rsi]                                                                                                                          |         ecx = rsi + rsi;
+    0x0043a57c lea ecx, [rcx + rcx*4]                                                                                                                        |         ecx = rcx * 5;
+    0x0043a57f mov edi, edx                                                                                                                                  |         edi = edx;
+    0x0043a581 sub edi, ecx                                                                                                                                  |         edi -= ecx;
+    0x0043a583 add dil, 0x30                                                                                                                                 |         dil += 0x30;
+    0x0043a587 mov byte [r15 + r12 + 0x11], dil                                                                                                              |         *((r15 + r12 + 0x11)) = dil;
+    0x0043a58c cmp r12d, 1                                                                                                                                   |         
+                                                                                                                                                             |         if (r12d > 1) {
+    0x0043a590 jbe 0x43a731                                                                                                                                  |             
+    0x0043a596 lea rcx, [r12 + 0x12]                                                                                                                         |             rcx = r12 + 0x12;
+    0x0043a59b mov rdi, r12                                                                                                                                  |             rdi = r12;
+    0x0043a59e add rdi, 0x11                                                                                                                                 |             rdi += 0x11;
+    0x0043a5a2 movsxd rbp, esi                                                                                                                               |             rbp = (int64_t) esi;
+    0x0043a5a5 imul rbp, rbp, 0x66666667                                                                                                                     |             rbp *= 0x66666667;
+    0x0043a5ac mov rbx, rbp                                                                                                                                  |             rbx = rbp;
+    0x0043a5af shr rbx, 0x3f                                                                                                                                 |             rbx >>= 0x3f;
+    0x0043a5b3 sar rbp, 0x22                                                                                                                                 |             rbp >>= 0x22;
+    0x0043a5b7 add ebp, ebx                                                                                                                                  |             ebp += ebx;
+    0x0043a5b9 add ebp, ebp                                                                                                                                  |             ebp += ebp;
+    0x0043a5bb lea ebp, [rbp + rbp*4]                                                                                                                        |             ebp = rbp + rbp*4;
+    0x0043a5bf sub esi, ebp                                                                                                                                  |             esi -= ebp;
+    0x0043a5c1 add sil, 0x30                                                                                                                                 |             sil += 0x30;
+    0x0043a5c5 mov byte [r15 + rcx - 2], sil                                                                                                                 |             *((r15 + rcx - 2)) = sil;
+    0x0043a5ca cmp edi, 0x14                                                                                                                                 |             
+                                                                                                                                                             |             if (edi < 0x14) {
+    0x0043a5cd jb 0x43a731                                                                                                                                   |                 goto label_17;
+                                                                                                                                                             |             }
+    0x0043a5d3 lea rsi, [rcx - 2]                                                                                                                            |             rsi = rcx - 2;
+    0x0043a5d7 imul rdi, rdx, 0x51eb851f                                                                                                                     |             rdi = rdx * 0x51eb851f;
+    0x0043a5de mov rbp, rdi                                                                                                                                  |             
+    0x0043a5e1 shr rbp, 0x3f                                                                                                                                 |             rbp >>= 0x3f;
+    0x0043a5e5 sar rdi, 0x25                                                                                                                                 |             rdi >>= 0x25;
+    0x0043a5e9 add edi, ebp                                                                                                                                  |             edi += ebp;
+    0x0043a5eb movsxd rdi, edi                                                                                                                               |             rdi = (int64_t) edi;
+    0x0043a5ee imul rbp, rdi, 0x66666667                                                                                                                     |             rbp = rdi * 0x66666667;
+    0x0043a5f5 mov rbx, rbp                                                                                                                                  |             rbx = rbp;
+    0x0043a5f8 shr rbx, 0x3f                                                                                                                                 |             rbx >>= 0x3f;
+    0x0043a5fc sar rbp, 0x22                                                                                                                                 |             rbp >>= 0x22;
+    0x0043a600 add ebp, ebx                                                                                                                                  |             ebp += ebx;
+    0x0043a602 add ebp, ebp                                                                                                                                  |             ebp += ebp;
+    0x0043a604 lea ebp, [rbp + rbp*4]                                                                                                                        |             ebp = rbp + rbp*4;
+    0x0043a608 sub edi, ebp                                                                                                                                  |             edi -= ebp;
+    0x0043a60a add dil, 0x30                                                                                                                                 |             dil += 0x30;
+    0x0043a60e mov byte [r15 + rcx - 3], dil                                                                                                                 |             *((r15 + rcx - 3)) = dil;
+    0x0043a613 cmp rsi, 0x14                                                                                                                                 |             
+                                                                                                                                                             |             if (rsi < 0x14) {
+    0x0043a617 jb 0x43a731                                                                                                                                   |                 goto label_17;
+                                                                                                                                                             |             }
+    0x0043a61d lea rsi, [rcx - 3]                                                                                                                            |             rsi = rcx - 3;
+    0x0043a621 imul rdi, rdx, 0x10624dd3                                                                                                                     |             rdi = rdx * 0x10624dd3;
+    0x0043a628 mov rbp, rdi                                                                                                                                  |             
+    0x0043a62b shr rbp, 0x3f                                                                                                                                 |             rbp >>= 0x3f;
+    0x0043a62f sar rdi, 0x26                                                                                                                                 |             rdi >>= 0x26;
+    0x0043a633 add edi, ebp                                                                                                                                  |             edi += ebp;
+    0x0043a635 movsxd rdi, edi                                                                                                                               |             rdi = (int64_t) edi;
+    0x0043a638 imul rbp, rdi, 0x66666667                                                                                                                     |             rbp = rdi * 0x66666667;
+    0x0043a63f mov rbx, rbp                                                                                                                                  |             rbx = rbp;
+    0x0043a642 shr rbx, 0x3f                                                                                                                                 |             rbx >>= 0x3f;
+    0x0043a646 sar rbp, 0x22                                                                                                                                 |             rbp >>= 0x22;
+    0x0043a64a add ebp, ebx                                                                                                                                  |             ebp += ebx;
+    0x0043a64c add ebp, ebp                                                                                                                                  |             ebp += ebp;
+    0x0043a64e lea ebp, [rbp + rbp*4]                                                                                                                        |             ebp = rbp + rbp*4;
+    0x0043a652 sub edi, ebp                                                                                                                                  |             edi -= ebp;
+    0x0043a654 add dil, 0x30                                                                                                                                 |             dil += 0x30;
+    0x0043a658 mov byte [r15 + rcx - 4], dil                                                                                                                 |             *((r15 + rcx - 4)) = dil;
+    0x0043a65d cmp rsi, 0x14                                                                                                                                 |             
+                                                                                                                                                             |             if (rsi < 0x14) {
+    0x0043a661 jb 0x43a731                                                                                                                                   |                 goto label_17;
+                                                                                                                                                             |             }
+    0x0043a667 lea rsi, [rcx - 4]                                                                                                                            |             rsi = rcx - 4;
+    0x0043a66b imul rdi, rdx, 0x68db8bad                                                                                                                     |             rdi = rdx * 0x68db8bad;
+    0x0043a672 mov rbp, rdi                                                                                                                                  |             
+    0x0043a675 shr rbp, 0x3f                                                                                                                                 |             rbp >>= 0x3f;
+    0x0043a679 sar rdi, 0x2c                                                                                                                                 |             rdi >>= 0x2c;
+    0x0043a67d add edi, ebp                                                                                                                                  |             edi += ebp;
+    0x0043a67f movsxd rdi, edi                                                                                                                               |             rdi = (int64_t) edi;
+    0x0043a682 imul rbp, rdi, 0x66666667                                                                                                                     |             rbp = rdi * 0x66666667;
+    0x0043a689 mov rbx, rbp                                                                                                                                  |             rbx = rbp;
+    0x0043a68c shr rbx, 0x3f                                                                                                                                 |             rbx >>= 0x3f;
+    0x0043a690 sar rbp, 0x22                                                                                                                                 |             rbp >>= 0x22;
+    0x0043a694 add ebp, ebx                                                                                                                                  |             ebp += ebx;
+    0x0043a696 add ebp, ebp                                                                                                                                  |             ebp += ebp;
+    0x0043a698 lea ebp, [rbp + rbp*4]                                                                                                                        |             ebp = rbp + rbp*4;
+    0x0043a69c sub edi, ebp                                                                                                                                  |             edi -= ebp;
+    0x0043a69e add dil, 0x30                                                                                                                                 |             dil += 0x30;
+    0x0043a6a2 mov byte [r15 + rcx - 5], dil                                                                                                                 |             *((r15 + rcx - 5)) = dil;
+    0x0043a6a7 cmp rsi, 0x14                                                                                                                                 |             
+                                                                                                                                                             |             if (rsi < 0x14) {
+    0x0043a6ab jb 0x43a731                                                                                                                                   |                 goto label_17;
+                                                                                                                                                             |             }
+    0x0043a6b1 lea rsi, [rcx - 5]                                                                                                                            |             rsi = rcx - 5;
+    0x0043a6b5 imul rdi, rdx, 0x14f8b589                                                                                                                     |             rdi = rdx * 0x14f8b589;
+    0x0043a6bc mov rbp, rdi                                                                                                                                  |             
+    0x0043a6bf shr rbp, 0x3f                                                                                                                                 |             rbp >>= 0x3f;
+    0x0043a6c3 sar rdi, 0x2d                                                                                                                                 |             rdi >>= 0x2d;
+    0x0043a6c7 add edi, ebp                                                                                                                                  |             edi += ebp;
+    0x0043a6c9 movsxd rdi, edi                                                                                                                               |             rdi = (int64_t) edi;
+    0x0043a6cc imul rbp, rdi, 0x66666667                                                                                                                     |             rbp = rdi * 0x66666667;
+    0x0043a6d3 mov rbx, rbp                                                                                                                                  |             rbx = rbp;
+    0x0043a6d6 shr rbx, 0x3f                                                                                                                                 |             rbx >>= 0x3f;
+    0x0043a6da sar rbp, 0x22                                                                                                                                 |             rbp >>= 0x22;
+    0x0043a6de add ebp, ebx                                                                                                                                  |             ebp += ebx;
+    0x0043a6e0 add ebp, ebp                                                                                                                                  |             ebp += ebp;
+    0x0043a6e2 lea ebp, [rbp + rbp*4]                                                                                                                        |             ebp = rbp + rbp*4;
+    0x0043a6e6 sub edi, ebp                                                                                                                                  |             edi -= ebp;
+    0x0043a6e8 add dil, 0x30                                                                                                                                 |             dil += 0x30;
+    0x0043a6ec mov byte [rcx + r15 - 6], dil                                                                                                                 |             *((rcx + r15 - 6)) = dil;
+    0x0043a6f1 cmp rsi, 0x14                                                                                                                                 |             
+                                                                                                                                                             |             if (rsi < 0x14) {
+    0x0043a6f5 jb 0x43a731                                                                                                                                   |                 goto label_17;
+                                                                                                                                                             |             }
+    0x0043a6f7 imul rdx, rdx, 0x431bde83                                                                                                                     |             rdx *= 0x431bde83;
+    0x0043a6fe mov rsi, rdx                                                                                                                                  |             rsi = rdx;
+    0x0043a701 shr rsi, 0x3f                                                                                                                                 |             rsi >>= 0x3f;
+    0x0043a705 sar rdx, 0x32                                                                                                                                 |             rdx >>= 0x32;
+    0x0043a709 add edx, esi                                                                                                                                  |             edx += esi;
+    0x0043a70b movsxd rdx, edx                                                                                                                               |             rdx = (int64_t) edx;
+    0x0043a70e imul rsi, rdx, 0x66666667                                                                                                                     |             rsi = rdx * 0x66666667;
+    0x0043a715 mov rdi, rsi                                                                                                                                  |             rdi = rsi;
+    0x0043a718 shr rdi, 0x3f                                                                                                                                 |             rdi >>= 0x3f;
+    0x0043a71c shr rsi, 0x22                                                                                                                                 |             rsi >>= 0x22;
+    0x0043a720 add esi, edi                                                                                                                                  |             esi += edi;
+    0x0043a722 add esi, esi                                                                                                                                  |             esi += esi;
+    0x0043a724 lea esi, [rsi + rsi*4]                                                                                                                        |             esi = rsi * 5;
+    0x0043a727 sub edx, esi                                                                                                                                  |             edx -= esi;
+    0x0043a729 add dl, 0x30                                                                                                                                  |             dl += 0x30;
+    0x0043a72c mov byte [rcx + r15 - 7], dl                                                                                                                  |             *((rcx + r15 - 7)) = dl;
+                                                                                                                                                             |         }
+                                                                                                                                                             | label_17:
+    0x0043a731 mov ecx, r12d                                                                                                                                 |         ecx = r12d;
+    0x0043a734 add rax, rcx                                                                                                                                  |         rax += rcx;
+                                                                                                                                                             | label_16:
+    0x0043a737 sub eax, r15d                                                                                                                                 |         eax -= r15d;
+    0x0043a73a add rsp, 0x28                                                                                                                                 |         
+    0x0043a73e pop rbx                                                                                                                                       |         
+    0x0043a73f pop r12                                                                                                                                       |         
+    0x0043a741 pop r13                                                                                                                                       |         
+    0x0043a743 pop r14                                                                                                                                       |         
+    0x0043a745 pop r15                                                                                                                                       |         
+    0x0043a747 pop rbp                                                                                                                                       |         
+    0x0043a748 ret                                                                                                                                           |         return rax;
+                                                                                                                                                             | label_14:
+    0x0043a749 cmp r12d, 2                                                                                                                                   |         
+                                                                                                                                                             |         if (r12d > 2) {
+    0x0043a74d ja 0x43a767                                                                                                                                   |             goto label_18;
+                                                                                                                                                             |         }
+    0x0043a74f cmp r12d, 2                                                                                                                                   |         
+                                                                                                                                                             |         if (r12d != 2) {
+    0x0043a753 jne 0x43a777                                                                                                                                  |             goto label_19;
+                                                                                                                                                             |         }
+    0x0043a755 mov ebx, 0xd1b71759                                                                                                                           |         ebx = 0xd1b71759;
+    0x0043a75a imul rbx, rax                                                                                                                                 |         rbx *= rax;
+    0x0043a75e shr rbx, 0x2d                                                                                                                                 |         rbx >>= 0x2d;
+    0x0043a762 jmp 0x43a55e                                                                                                                                  |         
+                                                                                                                                                             |     } while (1);
+                                                                                                                                                             | label_18:
+    0x0043a767 imul rbx, rax, 0x10624dd3                                                                                                                     |     rbx = rax * 0x10624dd3;
+    0x0043a76e shr rbx, 0x26                                                                                                                                 |     rbx >>= 0x26;
+    0x0043a772 jmp 0x43a55e                                                                                                                                  |     goto label_0;
+                                                                                                                                                             | label_19:
+    0x0043a777 shr ebx, 5                                                                                                                                    |     ebx >>= 5;
+    0x0043a77a imul rbx, rbx, 0xa7c5ac5                                                                                                                      |     rbx *= 0xa7c5ac5;
+    0x0043a781 shr rbx, 0x27                                                                                                                                 |     rbx >>= 0x27;
+    0x0043a785 jmp 0x43a55e                                                                                                                                  |     goto label_0;
+                                                                                                                                                             | label_8:
+    0x0043a78a mov edi, 0x678b18                                                                                                                             |     
+    0x0043a78f call 0x440850                                                                                                                                 |     eax = BloombergLP::bsls::Review::updateCount(BloombergLP::bsls::Atomic_TypeTraits<BloombergLP::bsls::AtomicOperations_ALL_ALL_ClangIntrinsics>::Int*) (method.BloombergLP::bdlt::Datetime.validateAndTraceLogRepresentation___const::lambda__1::operator_____const::count);
+    0x0043a794 mov qword [rsp], 0x451c60                                                                                                                     |     *(rsp) = "detected invalid 'bdlt::Datetime'; see TEAM 579660115";
+    0x0043a79c mov qword [rsp + 8], 0x451c96                                                                                                                 |     *((rsp + 8)) = "/home/parsa/experiments/assumptions/crush/ccm-assume/groups/bdl/bdlt/bdlt_datetime.h";
+    0x0043a7a5 mov dword [rsp + 0x10], 0x466                                                                                                                 |     *((rsp + 0x10)) = 0x466;
+    0x0043a7ad mov qword [rsp + 0x18], 0x469f9a                                                                                                              |     *((rsp + 0x18)) = "R-INV";
+    0x0043a7b6 mov dword [rsp + 0x20], eax                                                                                                                   |     *((rsp + 0x20)) = eax;
+    0x0043a7ba mov rdi, rsp                                                                                                                                  |     rdi = rsp;
+    0x0043a7bd call 0x440870                                                                                                                                 |     BloombergLP::bsls::Review::invokeHandler(BloombergLP::bsls::ReviewViolationconst&) ();
+    0x0043a7c2 mov rax, qword [r14]                                                                                                                          |     rax = *(r14);
+    0x0043a7c5 mov rcx, rax                                                                                                                                  |     rcx = *(r14);
+    0x0043a7c8 shr rcx, 0x20                                                                                                                                 |     rcx >>= 0x20;
+    0x0043a7cc shl rax, 0x25                                                                                                                                 |     rax <<= 0x25;
+    0x0043a7d0 movabs rdx, 0x7fffffe000000000                                                                                                                |     rdx = 0x7fffffe000000000;
+    0x0043a7da add rdx, rax                                                                                                                                  |     rdx += rax;
+    0x0043a7dd imul rax, rcx, 0x3e8                                                                                                                          |     rax = rcx * 0x3e8;
+    0x0043a7e4 movabs rbx, 0x8000000000000000                                                                                                                |     rbx = 0x8000000000000000;
+    0x0043a7ee or rbx, rdx                                                                                                                                   |     rbx |= rdx;
+    0x0043a7f1 or rbx, rax                                                                                                                                   |     rbx |= rax;
+    0x0043a7f4 jmp 0x43a203                                                                                                                                  |     goto label_1;
+                                                                                                                                                             | label_9:
+    0x0043a7f9 mov edi, 0x678b18                                                                                                                             |     
+    0x0043a7fe call 0x440850                                                                                                                                 |     eax = BloombergLP::bsls::Review::updateCount(BloombergLP::bsls::Atomic_TypeTraits<BloombergLP::bsls::AtomicOperations_ALL_ALL_ClangIntrinsics>::Int*) (method.BloombergLP::bdlt::Datetime.validateAndTraceLogRepresentation___const::lambda__1::operator_____const::count);
+    0x0043a803 mov qword [rsp], 0x451c60                                                                                                                     |     *(rsp) = "detected invalid 'bdlt::Datetime'; see TEAM 579660115";
+    0x0043a80b mov qword [rsp + 8], 0x451c96                                                                                                                 |     *((rsp + 8)) = "/home/parsa/experiments/assumptions/crush/ccm-assume/groups/bdl/bdlt/bdlt_datetime.h";
+    0x0043a814 mov dword [rsp + 0x10], 0x466                                                                                                                 |     *((rsp + 0x10)) = 0x466;
+    0x0043a81c mov qword [rsp + 0x18], 0x469f9a                                                                                                              |     *((rsp + 0x18)) = "R-INV";
+    0x0043a825 mov dword [rsp + 0x20], eax                                                                                                                   |     *((rsp + 0x20)) = eax;
+    0x0043a829 mov rdi, rsp                                                                                                                                  |     rdi = rsp;
+    0x0043a82c call 0x440870                                                                                                                                 |     BloombergLP::bsls::Review::invokeHandler(BloombergLP::bsls::ReviewViolationconst&) ();
+    0x0043a831 mov rcx, qword [r14]                                                                                                                          |     rcx = *(r14);
+    0x0043a834 mov rax, rcx                                                                                                                                  |     rax = *(r14);
+    0x0043a837 shr rax, 0x20                                                                                                                                 |     rax >>= 0x20;
+    0x0043a83b imul rdx, rax, 0x3e8                                                                                                                          |     rdx = rax * 0x3e8;
+    0x0043a842 movabs rax, 0xffffffe000000000                                                                                                                |     rax = 0xffffffe000000000;
+    0x0043a84c or rax, rdx                                                                                                                                   |     rax |= rdx;
+    0x0043a84f jmp 0x43a319                                                                                                                                  |     goto label_2;
+                                                                                                                                                             | label_11:
+    0x0043a854 mov edi, 0x678b18                                                                                                                             |     
+    0x0043a859 call 0x440850                                                                                                                                 |     eax = BloombergLP::bsls::Review::updateCount(BloombergLP::bsls::Atomic_TypeTraits<BloombergLP::bsls::AtomicOperations_ALL_ALL_ClangIntrinsics>::Int*) (method.BloombergLP::bdlt::Datetime.validateAndTraceLogRepresentation___const::lambda__1::operator_____const::count);
+    0x0043a85e mov qword [rsp], 0x451c60                                                                                                                     |     *(rsp) = "detected invalid 'bdlt::Datetime'; see TEAM 579660115";
+    0x0043a866 mov qword [rsp + 8], 0x451c96                                                                                                                 |     *((rsp + 8)) = "/home/parsa/experiments/assumptions/crush/ccm-assume/groups/bdl/bdlt/bdlt_datetime.h";
+    0x0043a86f mov dword [rsp + 0x10], 0x466                                                                                                                 |     *((rsp + 0x10)) = 0x466;
+    0x0043a877 mov qword [rsp + 0x18], 0x469f9a                                                                                                              |     *((rsp + 0x18)) = "R-INV";
+    0x0043a880 mov dword [rsp + 0x20], eax                                                                                                                   |     *((rsp + 0x20)) = eax;
+    0x0043a884 mov rdi, rsp                                                                                                                                  |     rdi = rsp;
+    0x0043a887 call 0x440870                                                                                                                                 |     BloombergLP::bsls::Review::invokeHandler(BloombergLP::bsls::ReviewViolationconst&) ();
+    0x0043a88c mov eax, dword [r14 + 4]                                                                                                                      |     eax = *((r14 + 4));
+    0x0043a890 imul rax, rax, 0x3e8                                                                                                                          |     rax *= 0x3e8;
+    0x0043a897 movabs rcx, 0xffffffe000000000                                                                                                                |     rcx = 0xffffffe000000000;
+    0x0043a8a1 or rcx, rax                                                                                                                                   |     rcx |= rax;
+    0x0043a8a4 jmp 0x43a399                                                                                                                                  |     goto label_3;
+                                                                                                                                                             | label_12:
+    0x0043a8a9 mov edi, 0x678b18                                                                                                                             |     
+    0x0043a8ae call 0x440850                                                                                                                                 |     eax = BloombergLP::bsls::Review::updateCount(BloombergLP::bsls::Atomic_TypeTraits<BloombergLP::bsls::AtomicOperations_ALL_ALL_ClangIntrinsics>::Int*) (method.BloombergLP::bdlt::Datetime.validateAndTraceLogRepresentation___const::lambda__1::operator_____const::count);
+    0x0043a8b3 mov qword [rsp], 0x451c60                                                                                                                     |     *(rsp) = "detected invalid 'bdlt::Datetime'; see TEAM 579660115";
+    0x0043a8bb mov qword [rsp + 8], 0x451c96                                                                                                                 |     *((rsp + 8)) = "/home/parsa/experiments/assumptions/crush/ccm-assume/groups/bdl/bdlt/bdlt_datetime.h";
+    0x0043a8c4 mov dword [rsp + 0x10], 0x466                                                                                                                 |     *((rsp + 0x10)) = 0x466;
+    0x0043a8cc mov qword [rsp + 0x18], 0x469f9a                                                                                                              |     *((rsp + 0x18)) = "R-INV";
+    0x0043a8d5 mov dword [rsp + 0x20], eax                                                                                                                   |     *((rsp + 0x20)) = eax;
+    0x0043a8d9 mov rdi, rsp                                                                                                                                  |     rdi = rsp;
+    0x0043a8dc call 0x440870                                                                                                                                 |     BloombergLP::bsls::Review::invokeHandler(BloombergLP::bsls::ReviewViolationconst&) ();
+    0x0043a8e1 mov eax, dword [r14 + 4]                                                                                                                      |     eax = *((r14 + 4));
+    0x0043a8e5 imul rax, rax, 0x3e8                                                                                                                          |     rax *= 0x3e8;
+    0x0043a8ec movabs rcx, 0xffffffe000000000                                                                                                                |     rcx = 0xffffffe000000000;
+    0x0043a8f6 or rcx, rax                                                                                                                                   |     rcx |= rax;
+    0x0043a8f9 jmp 0x43a409                                                                                                                                  |     goto label_4;
+                                                                                                                                                             | label_13:
+    0x0043a8fe movabs r13, 0xffffffe000000000                                                                                                                |     r13 = 0xffffffe000000000;
+    0x0043a908 mov edi, 0x678b18                                                                                                                             |     
+    0x0043a90d call 0x440850                                                                                                                                 |     eax = BloombergLP::bsls::Review::updateCount(BloombergLP::bsls::Atomic_TypeTraits<BloombergLP::bsls::AtomicOperations_ALL_ALL_ClangIntrinsics>::Int*) (method.BloombergLP::bdlt::Datetime.validateAndTraceLogRepresentation___const::lambda__1::operator_____const::count);
+    0x0043a912 mov qword [rsp], 0x451c60                                                                                                                     |     *(rsp) = "detected invalid 'bdlt::Datetime'; see TEAM 579660115";
+    0x0043a91a mov qword [rsp + 8], 0x451c96                                                                                                                 |     *((rsp + 8)) = "/home/parsa/experiments/assumptions/crush/ccm-assume/groups/bdl/bdlt/bdlt_datetime.h";
+    0x0043a923 mov dword [rsp + 0x10], 0x466                                                                                                                 |     *((rsp + 0x10)) = 0x466;
+    0x0043a92b mov qword [rsp + 0x18], 0x469f9a                                                                                                              |     *((rsp + 0x18)) = "R-INV";
+    0x0043a934 mov dword [rsp + 0x20], eax                                                                                                                   |     *((rsp + 0x20)) = eax;
+    0x0043a938 mov rdi, rsp                                                                                                                                  |     rdi = rsp;
+    0x0043a93b call 0x440870                                                                                                                                 |     BloombergLP::bsls::Review::invokeHandler(BloombergLP::bsls::ReviewViolationconst&) ();
+    0x0043a940 mov rcx, qword [r14]                                                                                                                          |     rcx = *(r14);
+    0x0043a943 mov rax, rcx                                                                                                                                  |     rax = *(r14);
+    0x0043a946 shr rax, 0x20                                                                                                                                 |     rax >>= 0x20;
+    0x0043a94a imul rbp, rax, 0x3e8                                                                                                                          |     rbp = rax * 0x3e8;
+    0x0043a951 or rbp, r13                                                                                                                                   |     rbp |= r13;
+    0x0043a954 test rcx, rcx                                                                                                                                 |     
+                                                                                                                                                             |     if (rcx < 0) {
+    0x0043a957 js 0x43a46b                                                                                                                                   |         goto label_5;
+                                                                                                                                                             |     }
+    0x0043a95d mov edi, 0x678b18                                                                                                                             |     
+    0x0043a962 call 0x440850                                                                                                                                 |     eax = BloombergLP::bsls::Review::updateCount(BloombergLP::bsls::Atomic_TypeTraits<BloombergLP::bsls::AtomicOperations_ALL_ALL_ClangIntrinsics>::Int*) (method.BloombergLP::bdlt::Datetime.validateAndTraceLogRepresentation___const::lambda__1::operator_____const::count);
+    0x0043a967 mov qword [rsp], 0x451c60                                                                                                                     |     *(rsp) = "detected invalid 'bdlt::Datetime'; see TEAM 579660115";
+    0x0043a96f mov qword [rsp + 8], 0x451c96                                                                                                                 |     *((rsp + 8)) = "/home/parsa/experiments/assumptions/crush/ccm-assume/groups/bdl/bdlt/bdlt_datetime.h";
+    0x0043a978 mov dword [rsp + 0x10], 0x466                                                                                                                 |     *((rsp + 0x10)) = 0x466;
+    0x0043a980 mov qword [rsp + 0x18], 0x469f9a                                                                                                              |     *((rsp + 0x18)) = "R-INV";
+    0x0043a989 mov dword [rsp + 0x20], eax                                                                                                                   |     *((rsp + 0x20)) = eax;
+    0x0043a98d mov rdi, rsp                                                                                                                                  |     rdi = rsp;
+    0x0043a990 call 0x440870                                                                                                                                 |     BloombergLP::bsls::Review::invokeHandler(BloombergLP::bsls::ReviewViolationconst&) ();
+    0x0043a995 mov eax, dword [r14 + 4]                                                                                                                      |     eax = *((r14 + 4));
+    0x0043a999 imul rcx, rax, 0x3e8                                                                                                                          |     rcx = rax * 0x3e8;
+    0x0043a9a0 or rcx, r13                                                                                                                                   |     rcx |= r13;
+    0x0043a9a3 jmp 0x43a46b                                                                                                                                  |     goto label_5;
+                                                                                                                                                             | label_10:
+    0x0043a9a8 mov edi, 0x678b18                                                                                                                             |     
+    0x0043a9ad call 0x440850                                                                                                                                 |     eax = BloombergLP::bsls::Review::updateCount(BloombergLP::bsls::Atomic_TypeTraits<BloombergLP::bsls::AtomicOperations_ALL_ALL_ClangIntrinsics>::Int*) (method.BloombergLP::bdlt::Datetime.validateAndTraceLogRepresentation___const::lambda__1::operator_____const::count);
+    0x0043a9b2 mov qword [rsp], 0x451c60                                                                                                                     |     *(rsp) = "detected invalid 'bdlt::Datetime'; see TEAM 579660115";
+    0x0043a9ba mov qword [rsp + 8], 0x451c96                                                                                                                 |     *((rsp + 8)) = "/home/parsa/experiments/assumptions/crush/ccm-assume/groups/bdl/bdlt/bdlt_datetime.h";
+    0x0043a9c3 mov dword [rsp + 0x10], 0x466                                                                                                                 |     *((rsp + 0x10)) = 0x466;
+    0x0043a9cb mov qword [rsp + 0x18], 0x469f9a                                                                                                              |     *((rsp + 0x18)) = "R-INV";
+    0x0043a9d4 mov dword [rsp + 0x20], eax                                                                                                                   |     *((rsp + 0x20)) = eax;
+    0x0043a9d8 mov rdi, rsp                                                                                                                                  |     rdi = rsp;
+    0x0043a9db call 0x440870                                                                                                                                 |     BloombergLP::bsls::Review::invokeHandler(BloombergLP::bsls::ReviewViolationconst&) ();
+    0x0043a9e0 mov eax, dword [r14 + 4]                                                                                                                      |     eax = *((r14 + 4));
+    0x0043a9e4 imul rax, rax, 0x3e8                                                                                                                          |     rax *= 0x3e8;
+    0x0043a9eb movabs rcx, 0xffffffe000000000                                                                                                                |     rcx = 0xffffffe000000000;
+    0x0043a9f5 or rcx, rax                                                                                                                                   |     rcx |= rax;
+    0x0043a9f8 jmp 0x43a345                                                                                                                                  |     goto label_6;
+                                                                                                                                                             | label_15:
+    0x0043a9fd mov edi, 0x678b18                                                                                                                             |     
+    0x0043aa02 call 0x440850                                                                                                                                 |     eax = BloombergLP::bsls::Review::updateCount(BloombergLP::bsls::Atomic_TypeTraits<BloombergLP::bsls::AtomicOperations_ALL_ALL_ClangIntrinsics>::Int*) (method.BloombergLP::bdlt::Datetime.validateAndTraceLogRepresentation___const::lambda__1::operator_____const::count);
+    0x0043aa07 mov qword [rsp], 0x451c60                                                                                                                     |     *(rsp) = "detected invalid 'bdlt::Datetime'; see TEAM 579660115";
+    0x0043aa0f mov qword [rsp + 8], 0x451c96                                                                                                                 |     *((rsp + 8)) = "/home/parsa/experiments/assumptions/crush/ccm-assume/groups/bdl/bdlt/bdlt_datetime.h";
+    0x0043aa18 mov dword [rsp + 0x10], 0x466                                                                                                                 |     *((rsp + 0x10)) = 0x466;
+    0x0043aa20 mov qword [rsp + 0x18], 0x469f9a                                                                                                              |     *((rsp + 0x18)) = "R-INV";
+    0x0043aa29 mov dword [rsp + 0x20], eax                                                                                                                   |     *((rsp + 0x20)) = eax;
+    0x0043aa2d mov rdi, rsp                                                                                                                                  |     rdi = rsp;
+    0x0043aa30 call 0x440870                                                                                                                                 |     BloombergLP::bsls::Review::invokeHandler(BloombergLP::bsls::ReviewViolationconst&) ();
+    0x0043aa35 mov eax, dword [r14 + 4]                                                                                                                      |     eax = *((r14 + 4));
+    0x0043aa39 imul rax, rax, 0x3e8                                                                                                                          |     rax *= 0x3e8;
+    0x0043aa40 movabs rcx, 0xffffffe000000000                                                                                                                |     rcx = 0xffffffe000000000;
+    0x0043aa4a or rcx, rax                                                                                                                                   |     rcx |= rax;
+    0x0043aa4d jmp 0x43a4f7                                                                                                                                  |     goto label_7;
+                                                                                                                                                             | }

@@ -1,0 +1,51 @@
+    ; assembly                                                                                               | /* r2dec pseudo code output */
+                                                                                                             | /* balb_testmessages.t/none @ 0x40b180 */
+                                                                                                             | #include <stdint.h>
+                                                                                                             |  
+    ; (fcn) method.BloombergLP::balb::SequenceWithAnonymityChoice.makeSelection2_unsigned_char_ ()           | int64_t method_BloombergLP::balb::SequenceWithAnonymityChoice_makeSelection2_unsigned_char_ (int64_t arg2, int64_t arg1) {
+                                                                                                             |     rsi = arg2;
+                                                                                                             |     rdi = arg1;
+                                                                                                             |     /* BloombergLP::balb::SequenceWithAnonymityChoice::makeSelection2(unsigned char) */
+    0x0040b180 push rbp                                                                                      |     
+    0x0040b181 push rbx                                                                                      |     
+    0x0040b182 push rax                                                                                      |     
+    0x0040b183 mov ebp, esi                                                                                  |     
+    0x0040b185 mov rbx, rdi                                                                                  |     rbx = rdi;
+    0x0040b188 mov eax, dword [rdi + 0x170]                                                                  |     eax = *((rdi + 0x170));
+    0x0040b18e test eax, eax                                                                                 |     
+                                                                                                             |     if (eax != 0) {
+    0x0040b190 je 0x40b1a1                                                                                   |         
+    0x0040b192 cmp eax, 2                                                                                    |         
+                                                                                                             |         if (eax != 2) {
+    0x0040b195 je 0x40b1ab                                                                                   |             
+    0x0040b197 cmp eax, 1                                                                                    |             
+                                                                                                             |             if (eax != 1) {
+    0x0040b19a jne 0x40b1c7                                                                                  |                 goto label_0;
+                                                                                                             |             }
+    0x0040b19c mov byte [rbx], bpl                                                                           |             *(rbx) = bpl;
+    0x0040b19f jmp 0x40b1d4                                                                                  |             
+    0x0040b1a1 mov rdi, rbx                                                                                  |             
+    0x0040b1a4 call 0x4093b0                                                                                 |             BloombergLP::balb::Sequence6::~Sequence6() (rbx);
+    0x0040b1a9 jmp 0x40b1c7                                                                                  |             
+                                                                                                             |         } else {
+                                                                                                             |         } else {
+    0x0040b1ab cmp qword [rbx + 0x20], 0x17                                                                  |             
+                                                                                                             |             if (*((rbx + 0x20)) != 0x17) {
+    0x0040b1b0 je 0x40b1bf                                                                                   |                 
+    0x0040b1b2 mov rsi, qword [rbx]                                                                          |                 rsi = *(rbx);
+    0x0040b1b5 mov rdi, qword [rbx + 0x28]                                                                   |                 rdi = *((rbx + 0x28));
+    0x0040b1b9 mov rax, qword [rdi]                                                                          |                 rax = *(rdi);
+    0x0040b1bc call qword [rax + 0x18]                                                                       |                 uint64_t (*rax + 0x18)() ();
+                                                                                                             |             }
+    0x0040b1bf mov qword [rbx + 0x18], 0xffffffffffffffff                                                    |             *((rbx + 0x18)) = 0xffffffffffffffff;
+                                                                                                             |         }
+                                                                                                             | label_0:
+    0x0040b1c7 mov byte [rbx], bpl                                                                           |         *(rbx) = bpl;
+    0x0040b1ca mov dword [rbx + 0x170], 1                                                                    |         *((rbx + 0x170)) = 1;
+                                                                                                             |     }
+    0x0040b1d4 mov rax, rbx                                                                                  |     rax = rbx;
+    0x0040b1d7 add rsp, 8                                                                                    |     
+    0x0040b1db pop rbx                                                                                       |     
+    0x0040b1dc pop rbp                                                                                       |     
+    0x0040b1dd ret                                                                                           |     return rax;
+                                                                                                             | }

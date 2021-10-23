@@ -1,0 +1,83 @@
+    ; assembly                                                                                                                                       | /* r2dec pseudo code output */
+                                                                                                                                                     | /* bblb_schedulegenerationutil.t/assume @ 0x41cab0 */
+                                                                                                                                                     | #include <stdint.h>
+                                                                                                                                                     |  
+    ; (fcn) method.BloombergLP::bdlc::PackedIntArrayImp_BloombergLP::bdlc::PackedIntArrayImp_Signed_.reserveCapacity_unsigned_long__long_ ()         | int64_t method_BloombergLP::bdlc::PackedIntArrayImp_BloombergLP::bdlc::PackedIntArrayImp_Signed_reserveCapacity_unsigned_long_long_ (uint32_t arg3, int64_t arg1) {
+                                                                                                                                                     |     rdx = arg3;
+                                                                                                                                                     |     rdi = arg1;
+                                                                                                                                                     |     /* BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Signed>::reserveCapacity(unsigned long, long) */
+    0x0041cab0 push r15                                                                                                                              |     
+    0x0041cab2 push r14                                                                                                                              |     
+    0x0041cab4 push rbx                                                                                                                              |     
+    0x0041cab5 xor eax, eax                                                                                                                          |     eax = 0;
+    0x0041cab7 cmp rdx, 0x7fffffff                                                                                                                   |     
+    0x0041cabe seta al                                                                                                                               |     al = (rdx > 0x7fffffff) ? 1 : 0;
+    0x0041cac1 xor ecx, ecx                                                                                                                          |     ecx = 0;
+    0x0041cac3 cmp rdx, 0x7f                                                                                                                         |     
+    0x0041cac7 seta cl                                                                                                                               |     cl = (rdx > 0x7f) ? 1 : 0;
+    0x0041caca inc ecx                                                                                                                               |     ecx++;
+    0x0041cacc cmp rdx, 0x7fff                                                                                                                       |     
+    0x0041cad3 lea eax, [rax*4 + 4]                                                                                                                  |     eax = rax*4 + 4;
+                                                                                                                                                     |     if (rdx <= 0x7fff) {
+    0x0041cada cmovbe eax, ecx                                                                                                                       |         eax = ecx;
+                                                                                                                                                     |     }
+    0x0041cadd mov ecx, dword [rdi + 0x10]                                                                                                           |     ecx = *((rdi + 0x10));
+    0x0041cae0 cmp eax, ecx                                                                                                                          |     
+                                                                                                                                                     |     if (eax <= ecx) {
+    0x0041cae2 cmovle eax, ecx                                                                                                                       |         eax = ecx;
+                                                                                                                                                     |     }
+    0x0041cae5 imul rax, rsi                                                                                                                         |     rax *= rsi;
+    0x0041cae9 mov rcx, qword [rdi + 0x18]                                                                                                           |     rcx = *((rdi + 0x18));
+    0x0041caed cmp rax, rcx                                                                                                                          |     
+                                                                                                                                                     |     if (rax <= rcx) {
+    0x0041caf0 jbe 0x41cb5c                                                                                                                          |         goto label_0;
+                                                                                                                                                     |     }
+    0x0041caf2 mov r14, rdi                                                                                                                          |     r14 = rdi;
+    0x0041caf5 cmp rax, 0x55555550                                                                                                                   |     
+                                                                                                                                                     |     if (rax > 0x55555550) {
+    0x0041cafb ja 0x41cb54                                                                                                                           |         goto label_1;
+                                                                                                                                                     |     }
+    0x0041cafd mov rbx, rcx                                                                                                                          |     rbx = rcx;
+                                                                                                                                                     |     do {
+    0x0041cb00 lea rdx, [rbx + 3]                                                                                                                    |         rdx = rbx + 3;
+    0x0041cb04 shr rdx, 1                                                                                                                            |         rdx >>= 1;
+    0x0041cb07 add rbx, rdx                                                                                                                          |         rbx += rdx;
+    0x0041cb0a cmp rbx, rax                                                                                                                          |         
+    0x0041cb0d jb 0x41cb00                                                                                                                           |         
+                                                                                                                                                     |     } while (rbx < rax);
+    0x0041cb0f cmp rbx, rcx                                                                                                                          |     
+                                                                                                                                                     |     if (rbx <= rcx) {
+    0x0041cb12 jbe 0x41cb5c                                                                                                                          |         goto label_0;
+                                                                                                                                                     |     }
+                                                                                                                                                     |     do {
+    0x0041cb14 mov r15, qword [r14]                                                                                                                  |         r15 = *(r14);
+    0x0041cb17 mov rdi, qword [r14 + 0x20]                                                                                                           |         rdi = *((r14 + 0x20));
+    0x0041cb1b mov rax, qword [rdi]                                                                                                                  |         rax = *(rdi);
+    0x0041cb1e mov rsi, rbx                                                                                                                          |         rsi = rbx;
+    0x0041cb21 call qword [rax + 0x10]                                                                                                               |         rax = uint64_t (*rax + 0x10)() ();
+    0x0041cb24 mov qword [r14], rax                                                                                                                  |         *(r14) = rax;
+    0x0041cb27 mov qword [r14 + 0x18], rbx                                                                                                           |         *((r14 + 0x18)) = rbx;
+    0x0041cb2b movsxd rdx, dword [r14 + 0x10]                                                                                                        |         rdx = *((r14 + 0x10));
+    0x0041cb2f imul rdx, qword [r14 + 8]                                                                                                             |         rdx *= *((r14 + 8));
+    0x0041cb34 mov rdi, rax                                                                                                                          |         
+    0x0041cb37 mov rsi, r15                                                                                                                          |         
+    0x0041cb3a call 0x403b60                                                                                                                         |         memcpy (rax, r15, rdx);
+    0x0041cb3f mov rdi, qword [r14 + 0x20]                                                                                                           |         rdi = *((r14 + 0x20));
+    0x0041cb43 mov rax, qword [rdi]                                                                                                                  |         rax = *(rdi);
+    0x0041cb46 mov rax, qword [rax + 0x18]                                                                                                           |         rax = *((rax + 0x18));
+    0x0041cb4a mov rsi, r15                                                                                                                          |         rsi = r15;
+    0x0041cb4d pop rbx                                                                                                                               |         
+    0x0041cb4e pop r14                                                                                                                               |         
+    0x0041cb50 pop r15                                                                                                                               |         
+    0x0041cb52 jmp rax                                                                                                                               |         rax = void (*rax)() ();
+                                                                                                                                                     | label_1:
+    0x0041cb54 mov rbx, rax                                                                                                                          |         rbx = rax;
+    0x0041cb57 cmp rbx, rcx                                                                                                                          |         
+    0x0041cb5a ja 0x41cb14                                                                                                                           |         
+                                                                                                                                                     |     } while (rbx > rcx);
+                                                                                                                                                     | label_0:
+    0x0041cb5c pop rbx                                                                                                                               |     
+    0x0041cb5d pop r14                                                                                                                               |     
+    0x0041cb5f pop r15                                                                                                                               |     
+    0x0041cb61 ret                                                                                                                                   |     return rax;
+                                                                                                                                                     | }

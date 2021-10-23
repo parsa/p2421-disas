@@ -1,0 +1,164 @@
+    ; assembly                                                                                       | /* r2dec pseudo code output */
+                                                                                                     | /* bdlcc_skiplist.t/none @ 0x4059e0 */
+                                                                                                     | #include <stdint.h>
+                                                                                                     |  
+    ; (fcn) method.SKIPLIST_TEST_CASE_DRQS_144652915.addNodes_BloombergLP::bslmt::Barrier_ ()        | uint64_t method_SKIPLIST_TEST_CASE_DRQS_144652915_addNodes_BloombergLP::bslmt::Barrier_ (int64_t arg1) {
+                                                                                                     |     uint32_t var_bh;
+                                                                                                     |     int64_t var_ch;
+                                                                                                     |     int64_t var_10h;
+                                                                                                     |     int64_t var_18h;
+                                                                                                     |     int64_t var_20h;
+                                                                                                     |     int64_t var_28h;
+                                                                                                     |     int64_t var_30h;
+                                                                                                     |     int64_t var_40h;
+                                                                                                     |     int64_t var_50h;
+                                                                                                     |     int64_t var_60h;
+                                                                                                     |     int64_t var_70h;
+                                                                                                     |     int64_t var_80h;
+                                                                                                     |     int64_t var_90h;
+                                                                                                     |     int64_t var_a0h;
+                                                                                                     |     int64_t var_ach;
+                                                                                                     |     rdi = arg1;
+                                                                                                     |     /* SKIPLIST_TEST_CASE_DRQS_144652915::addNodes(BloombergLP::bslmt::Barrier*) */
+    0x004059e0 push rbp                                                                              |     
+    0x004059e1 push r15                                                                              |     
+    0x004059e3 push r14                                                                              |     
+    0x004059e5 push r13                                                                              |     
+    0x004059e7 push r12                                                                              |     
+    0x004059e9 push rbx                                                                              |     
+    0x004059ea sub rsp, 0xc8                                                                         |     
+    0x004059f1 mov rbx, rdi                                                                          |     rbx = rdi;
+    0x004059f4 mov eax, dword [rdi + 0x58]                                                           |     eax = *((rdi + 0x58));
+    0x004059f7 test eax, eax                                                                         |     
+                                                                                                     |     if (eax != 0) {
+    0x004059f9 je 0x405a07                                                                           |         
+    0x004059fb cmp eax, 1                                                                            |         
+                                                                                                     |         if (eax != 1) {
+    0x004059fe jne 0x405a0e                                                                          |             goto label_1;
+                                                                                                     |         }
+    0x00405a00 call 0x651a30                                                                         |         BloombergLP::bsls::SystemTime::nowMonotonicClock() ();
+    0x00405a05 jmp 0x405a0c                                                                          |         
+                                                                                                     |     } else {
+    0x00405a07 call 0x651ac0                                                                         |         eax = BloombergLP::bsls::SystemTime::nowRealtimeClock() ();
+                                                                                                     |     }
+    0x00405a0c jmp 0x405a12                                                                          |     goto label_2;
+                                                                                                     | label_1:
+    0x00405a0e xor edx, edx                                                                          |     edx = 0;
+    0x00405a10 xor eax, eax                                                                          |     eax = 0;
+                                                                                                     | label_2:
+    0x00405a12 mov dword [rsp + 0x18], edx                                                           |     *((rsp + 0x18)) = edx;
+    0x00405a16 movsxd rcx, dword [rip + 0x511b93]                                                    |     rcx = *(obj.SKIPLIST_TEST_CASE_DRQS_144652915::barrierTimeoutSeconds);
+    0x00405a1d add rcx, rax                                                                          |     rcx += rax;
+    0x00405a20 mov qword [rsp + 0x10], rcx                                                           |     *((rsp + 0x10)) = rcx;
+                                                                                                     |     if (rcx > 0) {
+    0x00405a25 jle 0x405a3b                                                                          |         
+    0x00405a27 test edx, edx                                                                         |         
+                                                                                                     |         if (edx >= 0) {
+    0x00405a29 jns 0x405a56                                                                          |             goto label_3;
+                                                                                                     |         }
+    0x00405a2b dec rcx                                                                               |         rcx--;
+    0x00405a2e mov qword [rsp + 0x10], rcx                                                           |         *((rsp + 0x10)) = rcx;
+    0x00405a33 add edx, 0x3b9aca00                                                                   |         edx += 0x3b9aca00;
+    0x00405a39 jmp 0x405a52                                                                          |         
+                                                                                                     |     } else {
+    0x00405a3b test rcx, rcx                                                                         |         
+                                                                                                     |         if (rcx == 0) {
+    0x00405a3e je 0x405a56                                                                           |             goto label_3;
+                                                                                                     |         }
+    0x00405a40 test edx, edx                                                                         |         
+                                                                                                     |         if (edx <= 0) {
+    0x00405a42 jle 0x405a56                                                                          |             goto label_3;
+                                                                                                     |         }
+    0x00405a44 inc rcx                                                                               |         rcx++;
+    0x00405a47 mov qword [rsp + 0x10], rcx                                                           |         *((rsp + 0x10)) = rcx;
+    0x00405a4c add edx, 0xc4653600                                                                   |         edx += 0xc4653600;
+                                                                                                     |     }
+    0x00405a52 mov dword [rsp + 0x18], edx                                                           |     *((rsp + 0x18)) = edx;
+                                                                                                     | label_3:
+    0x00405a56 lea rsi, [rsp + 0x10]                                                                 |     
+    0x00405a5b mov rdi, rbx                                                                          |     
+    0x00405a5e call 0x64ff20                                                                         |     eax = BloombergLP::bslmt::Barrier::timedWait(BloombergLP::bsls::TimeIntervalconst&) (rbx, rsp + 0x10);
+    0x00405a63 test eax, eax                                                                         |     
+                                                                                                     |     if (eax != 0) {
+    0x00405a65 je 0x405a8e                                                                           |         
+    0x00405a67 call 0x6504b0                                                                         |         rax = BloombergLP::bslmt::TestUtil_Guard::singletonMutex() ();
+    0x00405a6c mov rbx, rax                                                                          |         rbx = rax;
+    0x00405a6f mov rdi, rax                                                                          |         
+    0x00405a72 call 0x650160                                                                         |         BloombergLP::bslmt::RecursiveMutexImpl<BloombergLP::bslmt::Platform::PosixThreads>::lock() (rax);
+    0x00405a77 mov edi, 0x67b8dd                                                                     |         edi = "!barrierTimedWaitResult";
+    0x00405a7c mov esi, 0x1029                                                                       |         esi = 0x1029;
+    0x00405a81 call 0x405800                                                                         |         (anonymousnamespace)::aSsErT(int,char const*,int) ();
+    0x00405a86 mov rdi, rbx                                                                          |         
+    0x00405a89 call 0x6502b0                                                                         |         BloombergLP::bslmt::RecursiveMutexImpl<BloombergLP::bslmt::Platform::PosixThreads>::unlock() (rbx);
+                                                                                                     |     }
+    0x00405a8e movaps xmm0, xmmword [rip + 0x27504b]                                                 |     xmm0 = *(0x0067aae0);
+    0x00405a95 movups xmmword [rsp + 0xac], xmm0                                                     |     __asm ("movups xmmword [rsp + 0xac], xmm0");
+    0x00405a9d movaps xmmword [rsp + 0xa0], xmm0                                                     |     *((rsp + 0xa0)) = xmm0;
+    0x00405aa5 movaps xmmword [rsp + 0x90], xmm0                                                     |     *((rsp + 0x90)) = xmm0;
+    0x00405aad movaps xmmword [rsp + 0x80], xmm0                                                     |     *((rsp + 0x80)) = xmm0;
+    0x00405ab5 movaps xmmword [rsp + 0x70], xmm0                                                     |     *((rsp + 0x70)) = xmm0;
+    0x00405aba movaps xmmword [rsp + 0x60], xmm0                                                     |     *((rsp + 0x60)) = xmm0;
+    0x00405abf movaps xmmword [rsp + 0x50], xmm0                                                     |     *((rsp + 0x50)) = xmm0;
+    0x00405ac4 movaps xmmword [rsp + 0x40], xmm0                                                     |     *((rsp + 0x40)) = xmm0;
+    0x00405ac9 movaps xmmword [rsp + 0x30], xmm0                                                     |     *((rsp + 0x30)) = xmm0;
+    0x00405ace cmp dword [rip + 0x511ad7], 0                                                         |     
+                                                                                                     |     if (*(obj.SKIPLIST_TEST_CASE_DRQS_144652915::numNodesPerThread) <= 0) {
+    0x00405ad5 jle 0x405b76                                                                          |         goto label_4;
+                                                                                                     |     }
+    0x00405adb xor ebp, ebp                                                                          |     ebp = 0;
+    0x00405add lea r15, [rsp + 0xc]                                                                  |     r15 = rsp + 0xc;
+    0x00405ae2 lea r12, [rsp + 0x30]                                                                 |     r12 = rsp + 0x30;
+    0x00405ae7 lea r13, [rsp + 0xb]                                                                  |     r13 = rsp + 0xb;
+    0x00405aec jmp 0x405afa                                                                          |     
+                                                                                                     |     while (rbx == 0) {
+                                                                                                     | label_0:
+    0x00405af0 inc ebp                                                                               |         ebp++;
+    0x00405af2 cmp ebp, dword [rip + 0x511ab4]                                                       |         
+                                                                                                     |         if (ebp >= *(obj.SKIPLIST_TEST_CASE_DRQS_144652915::numNodesPerThread)) {
+    0x00405af8 jge 0x405b76                                                                          |             goto label_4;
+                                                                                                     |         }
+    0x00405afa xorps xmm0, xmm0                                                                      |         __asm ("xorps xmm0, xmm0");
+    0x00405afd movaps xmmword [rsp + 0x20], xmm0                                                     |         *((rsp + 0x20)) = xmm0;
+    0x00405b02 mov rdi, qword [rip + 0x51490f]                                                       |         
+    0x00405b09 mov eax, 1                                                                            |         eax = 1;
+    0x00405b0e lock xadd dword [rip + 0x5148fe], eax                                                 |         __asm ("lock xadd dword [obj.SKIPLIST_TEST_CASE_DRQS_144652915::index], eax");
+    0x00405b16 inc eax                                                                               |         eax++;
+    0x00405b18 mov dword [rsp + 0xc], eax                                                            |         *((rsp + 0xc)) = eax;
+    0x00405b1c lea rsi, [rsp + 0x20]                                                                 |         
+    0x00405b21 mov rdx, r15                                                                          |         
+    0x00405b24 mov rcx, r12                                                                          |         
+    0x00405b27 mov r8, r13                                                                           |         
+    0x00405b2a call 0x437b10                                                                         |         BloombergLP::bdlcc::SkipList<int,SKIPLIST_TEST_CASE_DRQS_144652915::Payload>::addR(BloombergLP::bdlcc::SkipListPairHandle<int,SKIPLIST_TEST_CASE_DRQS_144652915::Payload>*,intconst&,SKIPLIST_TEST_CASE_DRQS_144652915::Payloadconst&,bool*) (*(obj.SKIPLIST_TEST_CASE_DRQS_144652915::g_skipList_p), rsp + 0x20, r15, r12, r13);
+    0x00405b2f cmp byte [rsp + 0xb], 0                                                               |         
+                                                                                                     |         if (*((rsp + 0xb)) != 0) {
+    0x00405b34 je 0x405b4a                                                                           |             
+    0x00405b36 mov edi, 0x91a328                                                                     |             
+    0x00405b3b mov esi, 0x67b8f5                                                                     |             
+    0x00405b40 mov edx, 7                                                                            |             
+    0x00405b45 call 0x5bcfd0                                                                         |             std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (obj.std::__1::cout, "Newtop\n", 7);
+                                                                                                     |         }
+    0x00405b4a mov rbx, qword [rsp + 0x28]                                                           |         rbx = *((rsp + 0x28));
+    0x00405b4f test rbx, rbx                                                                         |         
+    0x00405b52 je 0x405af0                                                                           |         
+                                                                                                     |     }
+    0x00405b54 mov r14, qword [rsp + 0x20]                                                           |     r14 = *((rsp + 0x20));
+    0x00405b59 mov rdi, rbx                                                                          |     
+    0x00405b5c call 0x64a560                                                                         |     eax = BloombergLP::bdlcc::SkipList_Control::decrementRefCount() (rbx);
+    0x00405b61 test eax, eax                                                                         |     
+                                                                                                     |     if (eax != 0) {
+    0x00405b63 jne 0x405af0                                                                          |         goto label_0;
+                                                                                                     |     }
+    0x00405b65 mov rdi, qword [r14 + 0x50]                                                           |     
+    0x00405b69 mov rsi, rbx                                                                          |     
+    0x00405b6c call 0x64ab40                                                                         |     BloombergLP::bdlcc::SkipList_PoolUtil::deallocate(BloombergLP::bdlcc::SkipList_PoolManager*,void*) (*((r14 + 0x50)), rbx);
+    0x00405b71 jmp 0x405af0                                                                          |     goto label_0;
+                                                                                                     | label_4:
+    0x00405b76 add rsp, 0xc8                                                                         |     
+    0x00405b7d pop rbx                                                                               |     
+    0x00405b7e pop r12                                                                               |     
+    0x00405b80 pop r13                                                                               |     
+    0x00405b82 pop r14                                                                               |     
+    0x00405b84 pop r15                                                                               |     
+    0x00405b86 pop rbp                                                                               |     
+    0x00405b87 ret                                                                                   |     return rax;
+                                                                                                     | }

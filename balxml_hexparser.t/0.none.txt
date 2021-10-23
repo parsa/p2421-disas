@@ -1,0 +1,35 @@
+    ; assembly                                                                                                                                   | /* r2dec pseudo code output */
+                                                                                                                                                 | /* balxml_hexparser.t/none @ 0x403dd0 */
+                                                                                                                                                 | #include <stdint.h>
+                                                                                                                                                 |  
+    ; (fcn) sym.loadFromHexStream_bsl::vector_char__bsl::allocator_char_____std::__1::basic_istream_char__std::__1::char_traits_char____ ()      | int64_t loadFromHexStream_bsl::vector_char_bsl::allocator_char_std::_1::basic_istream_char_std::_1::char_traits_char_ (int64_t arg2, uint32_t arg1) {
+                                                                                                                                                 |     uint32_t var_8h;
+                                                                                                                                                 |     uint32_t var_10h;
+                                                                                                                                                 |     rsi = arg2;
+                                                                                                                                                 |     rdi = arg1;
+                                                                                                                                                 |     /* loadFromHexStream(bsl::vector<char, bsl::allocator<char> >*, std::__1::basic_istream<char, std::__1::char_traits<char> >&) */
+    0x00403dd0 sub rsp, 0x18                                                                                                                     |     
+    0x00403dd4 mov byte [rsp + 8], 0                                                                                                             |     *((rsp + 8)) = 0;
+    0x00403dd9 mov qword [rsp + 0x10], rdi                                                                                                       |     *((rsp + 0x10)) = rdi;
+    0x00403dde mov rax, qword [rdi]                                                                                                              |     rax = *(rdi);
+    0x00403de1 cmp qword [rdi + 8], rax                                                                                                          |     
+                                                                                                                                                 |     if (*((rdi + 8)) != rax) {
+    0x00403de5 je 0x403deb                                                                                                                       |         
+    0x00403de7 mov qword [rdi + 8], rax                                                                                                          |         *((rdi + 8)) = rax;
+                                                                                                                                                 |     }
+    0x00403deb mov rax, qword [rsi]                                                                                                              |     rax = *(rsi);
+    0x00403dee mov rax, qword [rax - 0x18]                                                                                                       |     rax = *((rax - 0x18));
+    0x00403df2 mov rsi, qword [rsi + rax + 0x28]                                                                                                 |     
+    0x00403df7 lea rdi, [rsp + 8]                                                                                                                |     
+    0x00403dfc xor edx, edx                                                                                                                      |     
+    0x00403dfe call 0x408040                                                                                                                     |     eax = intBloombergLP::balxml::HexParser<bsl::vector<char,bsl::allocator<char>>>::pushCharacters<std::_1::istreambuf_iterator<char,std::_1::char_traits<char>>>(std::_1::istreambuf_iterator<char,std::_1::char_traits<char>>,std::_1::istreambuf_iterator<char,std::_1::char_traits<char>>) (rsp + 8, *((rsi + rax + 0x28)), 0);
+    0x00403e03 test eax, eax                                                                                                                     |     
+    0x00403e05 setne al                                                                                                                          |     al = (eax != 0) ? 1 : 0;
+    0x00403e08 cmp byte [rsp + 8], 0                                                                                                             |     
+    0x00403e0d setne cl                                                                                                                          |     cl = (*((rsp + 8)) != 0) ? 1 : 0;
+    0x00403e10 or cl, al                                                                                                                         |     cl |= al;
+    0x00403e12 movzx eax, cl                                                                                                                     |     eax = (int32_t) cl;
+    0x00403e15 neg eax                                                                                                                           |     eax = -eax;
+    0x00403e17 add rsp, 0x18                                                                                                                     |     
+    0x00403e1b ret                                                                                                                               |     return rax;
+                                                                                                                                                 | }

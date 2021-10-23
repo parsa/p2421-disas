@@ -1,0 +1,69 @@
+    ; assembly                                                           | /* r2dec pseudo code output */
+                                                                         | /* balber_berdecoder.t/none @ 0x46bc20 */
+                                                                         | #include <stdint.h>
+                                                                         |  
+    ; (fcn) method.BloombergLP::bdlt::Time.setMicrosecond_int_ ()        | int64_t method_BloombergLP::bdlt::Time_setMicrosecond_int_ (int64_t arg2, int64_t arg1) {
+                                                                         |     char * var_8h;
+                                                                         |     char * var_10h;
+                                                                         |     int64_t var_18h;
+                                                                         |     char * var_20h;
+                                                                         |     int64_t var_28h;
+                                                                         |     rsi = arg2;
+                                                                         |     rdi = arg1;
+                                                                         |     /* BloombergLP::bdlt::Time::setMicrosecond(int) */
+    0x0046bc20 push rbp                                                  |     
+    0x0046bc21 push r14                                                  |     
+    0x0046bc23 push rbx                                                  |     
+    0x0046bc24 sub rsp, 0x30                                             |     
+    0x0046bc28 mov ebp, esi                                              |     
+    0x0046bc2a mov rbx, rdi                                              |     rbx = rdi;
+    0x0046bc2d movabs r14, 0x4000000000                                  |     r14 = 0x4000000000;
+    0x0046bc37 mov rcx, qword [rdi]                                      |     rcx = *(rdi);
+    0x0046bc3a cmp rcx, r14                                              |     
+                                                                         |     if (rcx < r14) {
+    0x0046bc3d jl 0x46bca0                                               |         goto label_0;
+                                                                         |     }
+    0x0046bc3f movabs rax, 0xffffffbfffffffff                            |     rax = 0xffffffbfffffffff;
+    0x0046bc49 and rcx, rax                                              |     rcx &= rax;
+                                                                         |     do {
+    0x0046bc4c movabs rax, 0x141dd75fff                                  |         rax = 0x141dd75fff;
+    0x0046bc56 cmp rcx, rax                                              |         
+                                                                         |         if (rcx <= rax) {
+    0x0046bc59 jg 0x46bc8e                                               |             
+    0x0046bc5b movabs rdx, 0x20c49ba5e353f7cf                            |             rdx = 0x20c49ba5e353f7cf;
+    0x0046bc65 mov rax, rcx                                              |             rax = rcx;
+    0x0046bc68 imul rdx                                                  |             rdx:rax = rax * rdx;
+    0x0046bc6b mov rax, rdx                                              |             rax = rdx;
+    0x0046bc6e shr rax, 0x3f                                             |             rax >>= 0x3f;
+    0x0046bc72 sar rdx, 7                                                |             rdx >>= 7;
+    0x0046bc76 add rdx, rax                                              |             rdx += rax;
+    0x0046bc79 imul rax, rdx, 0x3e8                                      |             rax = rdx * 0x3e8;
+    0x0046bc80 movsxd rdx, ebp                                           |             rdx = (int64_t) ebp;
+    0x0046bc83 add rdx, rcx                                              |             rdx += rcx;
+    0x0046bc86 sub rax, rcx                                              |             rax -= rcx;
+    0x0046bc89 add rax, rdx                                              |             rax += rdx;
+    0x0046bc8c jmp 0x46bc91                                              |             
+                                                                         |         } else {
+    0x0046bc8e movsxd rax, ebp                                           |             rax = (int64_t) ebp;
+                                                                         |         }
+    0x0046bc91 or rax, r14                                               |         rax |= r14;
+    0x0046bc94 mov qword [rbx], rax                                      |         *(rbx) = rax;
+    0x0046bc97 add rsp, 0x30                                             |         
+    0x0046bc9b pop rbx                                                   |         
+    0x0046bc9c pop r14                                                   |         
+    0x0046bc9e pop rbp                                                   |         
+    0x0046bc9f ret                                                       |         return rax;
+                                                                         | label_0:
+    0x0046bca0 mov edi, 0x6f73e0                                         |         
+    0x0046bca5 call 0x46f4e0                                             |         eax = BloombergLP::bsls::Review::updateCount(BloombergLP::bsls::Atomic_TypeTraits<BloombergLP::bsls::AtomicOperations_ALL_ALL_ClangIntrinsics>::Int*) (method.BloombergLP::bdlt::Time.invalidMicrosecondsFromMidnight___const::__0::operator_____const::count);
+    0x0046bcaa mov qword [rsp + 8], 0x4ccc90                             |         *((rsp + 8)) = "detected invalid 'bdlt::Time'; see TEAM 579660115";
+    0x0046bcb3 mov qword [rsp + 0x10], 0x4cccc2                          |         *((rsp + 0x10)) = "/home/parsa/experiments/assumptions/crush/ccm-none/groups/bdl/bdlt/bdlt_time.cpp";
+    0x0046bcbc mov dword [rsp + 0x18], 0xcb                              |         *((rsp + 0x18)) = 0xcb;
+    0x0046bcc4 mov qword [rsp + 0x20], 0x4cd8e2                          |         *((rsp + 0x20)) = "R-INV";
+    0x0046bccd mov dword [rsp + 0x28], eax                               |         *((rsp + 0x28)) = eax;
+    0x0046bcd1 lea rdi, [rsp + 8]                                        |         rdi = rsp + 8;
+    0x0046bcd6 call 0x46f500                                             |         BloombergLP::bsls::Review::invokeHandler(BloombergLP::bsls::ReviewViolationconst&) ();
+    0x0046bcdb imul rcx, qword [rbx], 0x3e8                              |         rcx = *(rbx) * 0x3e8;
+    0x0046bce2 jmp 0x46bc4c                                              |         
+                                                                         |     } while (1);
+                                                                         | }

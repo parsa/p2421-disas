@@ -1,0 +1,31 @@
+    ; assembly                                                                           | /* r2dec pseudo code output */
+                                                                                         | /* bdlcc_skiplist.t/assume @ 0x649be0 */
+                                                                                         | #include <stdint.h>
+                                                                                         |  
+    ; (fcn) method.BloombergLP::bdlcc::SkipList_Control.incrementRefCount__ ()           | int32_t method_BloombergLP::bdlcc::SkipList_Control_incrementRefCount_ (int64_t arg1) {
+                                                                                         |     rdi = arg1;
+                                                                                         |     /* BloombergLP::bdlcc::SkipList_Control::incrementRefCount() */
+    0x00649be0 mov esi, dword [rdi]                                                      |     esi = *(rdi);
+    0x00649be2 lea ecx, [rsi + 1]                                                        |     ecx = rsi + 1;
+    0x00649be5 mov eax, esi                                                              |     eax = esi;
+    0x00649be7 lock cmpxchg dword [rdi], ecx                                             |     __asm ("lock cmpxchg dword [rdi], ecx");
+    0x00649beb cmp esi, eax                                                              |     
+                                                                                         |     if (esi == eax) {
+    0x00649bed je 0x649c0f                                                               |         goto label_0;
+                                                                                         |     }
+    0x00649bef mov edx, eax                                                              |     edx = eax;
+    0x00649bf1 nop word cs:[rax + rax]                                                   |     
+    0x00649bfb nop dword [rax + rax]                                                     |     
+                                                                                         |     do {
+    0x00649c00 lea ecx, [rdx + 1]                                                        |         ecx = rdx + 1;
+    0x00649c03 mov eax, edx                                                              |         eax = edx;
+    0x00649c05 lock cmpxchg dword [rdi], ecx                                             |         __asm ("lock cmpxchg dword [rdi], ecx");
+    0x00649c09 cmp edx, eax                                                              |         
+    0x00649c0b mov edx, eax                                                              |         edx = eax;
+    0x00649c0d jne 0x649c00                                                              |         
+                                                                                         |     } while (edx != eax);
+                                                                                         | label_0:
+    0x00649c0f and ecx, 0xfffff                                                          |     ecx &= 0xfffff;
+    0x00649c15 mov eax, ecx                                                              |     eax = ecx;
+    0x00649c17 ret                                                                       |     return eax;
+                                                                                         | }

@@ -1,0 +1,658 @@
+    ; assembly                                           | /* r2dec pseudo code output */
+                                                         | /* bdlb_bitstringimputil.t/none @ 0x432590 */
+                                                         | #include <stdint.h>
+                                                         |  
+    ; (fcn) sym.g_char_const_ ()                         | uint64_t g_char_const_ (int64_t arg1) {
+                                                         |     int64_t var_dh;
+                                                         |     int64_t var_eh;
+                                                         |     int64_t var_fh;
+                                                         |     int64_t var_10h;
+                                                         |     int64_t var_11h;
+                                                         |     int64_t var_12h;
+                                                         |     int64_t var_13h;
+                                                         |     int64_t var_14h;
+                                                         |     int64_t var_18h;
+                                                         |     int64_t var_20h;
+                                                         |     rdi = arg1;
+                                                         |     /* g(char const*) */
+    0x00432590 push rbp                                  |     
+    0x00432591 push r15                                  |     
+    0x00432593 push r14                                  |     
+    0x00432595 push r13                                  |     
+    0x00432597 push r12                                  |     
+    0x00432599 push rbx                                  |     
+    0x0043259a sub rsp, 0x28                             |     
+    0x0043259e mov bpl, byte [rdi]                       |     bpl = *(rdi);
+    0x004325a1 xor r12d, r12d                            |     r12d = 0;
+    0x004325a4 test bpl, bpl                             |     
+                                                         |     if (bpl == 0) {
+    0x004325a7 je 0x432d6e                               |         goto label_4;
+                                                         |     }
+    0x004325ad mov r15, rdi                              |     r15 = rdi;
+    0x004325b0 lea rax, [rdi + 1]                        |     rax = rdi + 1;
+    0x004325b4 mov qword [rsp + 0x20], rax               |     *((rsp + 0x20)) = rax;
+    0x004325b9 mov ebx, 0xffffffff                       |     ebx = 0xffffffff;
+    0x004325be movabs r14, 0x100000000                   |     r14 = 0x100000000;
+    0x004325c8 mov byte [rsp + 0xd], bpl                 |     *((rsp + 0xd)) = bpl;
+    0x004325cd mov r8, rdi                               |     r8 = rdi;
+    0x004325d0 mov esi, 0xffffffff                       |     esi = 0xffffffff;
+    0x004325d5 mov edx, 0xffffffff                       |     edx = 0xffffffff;
+    0x004325da xor r13d, r13d                            |     r13d = 0;
+    0x004325dd jmp 0x432603                              |     
+                                                         |     while (ecx < 2) {
+    0x004325e0 inc r13d                                  |         r13d++;
+    0x004325e3 mov edx, r12d                             |         edx = r12d;
+    0x004325e6 mov eax, r12d                             |         eax = r12d;
+                                                         | label_0:
+    0x004325e9 movsxd rcx, eax                           |         rcx = (int64_t) eax;
+    0x004325ec lea r12, [rcx + 1]                        |         r12 = rcx + 1;
+    0x004325f0 lea r8, [r15 + rcx + 1]                   |         r8 = r15 + rcx + 1;
+    0x004325f5 mov bpl, byte [r15 + rcx + 1]             |         bpl = *((r15 + rcx + 1));
+    0x004325fa test bpl, bpl                             |         
+                                                         |         if (bpl == 0) {
+    0x004325fd je 0x4326fc                               |             goto label_5;
+                                                         |         }
+    0x00432603 movsx eax, bpl                            |         eax = (int32_t) bpl;
+    0x00432607 lea ecx, [rax - 0x30]                     |         ecx = rax - 0x30;
+    0x0043260a cmp ecx, 2                                |         
+    0x0043260d jb 0x4325e0                               |         
+                                                         |     }
+    0x0043260f cmp eax, 0x2e                             |     
+                                                         |     if (eax != 0x2e) {
+    0x00432612 jne 0x4326c0                              |         goto label_6;
+                                                         |     }
+    0x00432618 cmp esi, 0xffffffff                       |     
+                                                         |     if (esi != 0xffffffff) {
+    0x0043261b jne 0x432856                              |         goto label_7;
+                                                         |     }
+    0x00432621 test r13d, r13d                           |     
+                                                         |     if (r13d == 0) {
+    0x00432624 je 0x4329ce                               |         goto label_8;
+                                                         |     }
+    0x0043262a mov dword [rsp + 0x14], edx               |     *((rsp + 0x14)) = edx;
+    0x0043262e call 0x401650                             |     rax = ctype_b_loc ();
+    0x00432633 mov rax, qword [rax]                      |     rax = *(rax);
+    0x00432636 movsxd rcx, r12d                          |     rcx = (int64_t) r12d;
+    0x00432639 mov rdx, qword [rsp + 0x20]               |     rdx = *((rsp + 0x20));
+    0x0043263e lea rbp, [rdx + rcx]                      |     rbp = rdx + rcx;
+    0x00432642 shl rcx, 0x20                             |     rcx <<= 0x20;
+    0x00432646 lea edx, [r12 + 1]                        |     edx = r12 + 1;
+    0x0043264b nop dword [rax + rax]                     |     
+                                                         |     do {
+    0x00432650 mov ebx, edx                              |         ebx = edx;
+    0x00432652 add rcx, r14                              |         rcx += r14;
+    0x00432655 movsx rsi, byte [rbp]                     |         rsi = *(rbp);
+    0x0043265a inc r12d                                  |         r12d++;
+    0x0043265d inc rbp                                   |         rbp++;
+    0x00432660 lea edx, [rbx + 1]                        |         edx = rbx + 1;
+    0x00432663 test byte [rax + rsi*2 + 1], 0x20         |         
+    0x00432668 jne 0x432650                              |         
+                                                         |     } while ((*((rax + rsi*2 + 1)) & 0x20) != 0);
+    0x0043266a cmp sil, 0x2e                             |     
+                                                         |     if (sil != 0x2e) {
+    0x0043266e jne 0x432a89                              |         goto label_9;
+                                                         |     }
+    0x00432674 movsxd rbp, ebx                           |     rbp = (int64_t) ebx;
+    0x00432677 add rbp, r15                              |     rbp += r15;
+    0x0043267a nop word [rax + rax]                      |     
+                                                         |     do {
+    0x00432680 movsx rcx, byte [rbp + 1]                 |         rcx = *((rbp + 1));
+    0x00432685 inc rbp                                   |         rbp++;
+    0x00432688 inc ebx                                   |         ebx++;
+    0x0043268a test byte [rax + rcx*2 + 1], 0x20         |         
+    0x0043268f jne 0x432680                              |         
+                                                         |     } while ((*((rax + rcx*2 + 1)) & 0x20) != 0);
+    0x00432691 mov eax, ecx                              |     eax = ecx;
+    0x00432693 and al, 0xfe                              |     al &= 0xfe;
+    0x00432695 cmp al, 0x30                              |     
+    0x00432697 mov edx, dword [rsp + 0x14]               |     edx = *((rsp + 0x14));
+                                                         |     if (al != 0x30) {
+    0x0043269b jne 0x432b42                              |         goto label_10;
+                                                         |     }
+    0x004326a1 movsxd rax, edx                           |     rax = (int64_t) edx;
+    0x004326a4 cmp cl, byte [r15 + rax]                  |     
+                                                         |     if (cl != *((r15 + rax))) {
+    0x004326a8 jne 0x432bfa                              |         goto label_11;
+                                                         |     }
+    0x004326ae dec r13d                                  |     r13d--;
+    0x004326b1 mov esi, edx                              |     esi = edx;
+    0x004326b3 mov eax, ebx                              |     eax = ebx;
+    0x004326b5 jmp 0x4325e9                              |     goto label_0;
+                                                         | label_6:
+    0x004326c0 mov dword [rsp + 0x14], esi               |     *((rsp + 0x14)) = esi;
+    0x004326c4 mov r14d, edx                             |     r14d = edx;
+    0x004326c7 mov qword [rsp + 0x18], r8                |     *((rsp + 0x18)) = r8;
+    0x004326cc call 0x401650                             |     rax = ctype_b_loc ();
+    0x004326d1 mov rax, qword [rax]                      |     rax = *(rax);
+    0x004326d4 movsx rcx, bpl                            |     rcx = (int64_t) bpl;
+    0x004326d8 test byte [rax + rcx*2 + 1], 0x20         |     
+                                                         |     if ((*((rax + rcx*2 + 1)) & 0x20) == 0) {
+    0x004326dd je 0x432911                               |         goto label_12;
+                                                         |     }
+    0x004326e3 mov eax, r12d                             |     eax = r12d;
+    0x004326e6 mov edx, r14d                             |     edx = r14d;
+    0x004326e9 movabs r14, 0x100000000                   |     r14 = 0x100000000;
+    0x004326f3 mov esi, dword [rsp + 0x14]               |     esi = *((rsp + 0x14));
+    0x004326f7 jmp 0x4325e9                              |     goto label_0;
+                                                         | label_5:
+    0x004326fc cmp r13d, 0x41                            |     
+                                                         |     if (r13d >= 0x41) {
+    0x00432700 jl 0x4327b3                               |         
+    0x00432706 mov r14d, 0x3ef                           |         r14d = 0x3ef;
+    0x0043270c cmp byte [rip + 0x226e25], 0              |         
+                                                         |         if (*(obj.G_OFF) != 0) {
+    0x00432713 jne 0x432d71                              |             goto label_3;
+                                                         |         }
+    0x00432719 mov edi, 0x639408                         |         
+    0x0043271e mov esi, 0x43696c                         |         
+    0x00432723 mov edx, 8                                |         
+    0x00432728 call 0x432e60                             |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (obj.std::__1::cout, "bitCount", 8);
+    0x0043272d mov esi, 0x43689d                         |         
+    0x00432732 mov edx, 2                                |         
+    0x00432737 mov rdi, rax                              |         
+    0x0043273a call 0x432e60                             |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x43689d, 2);
+    0x0043273f mov rdi, rax                              |         rdi = rax;
+    0x00432742 mov esi, r13d                             |         esi = r13d;
+    0x00432745 call 0x401710                             |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x0043274a mov esi, 0x436397                         |         
+    0x0043274f mov edx, 1                                |         
+    0x00432754 mov rdi, rax                              |         
+    0x00432757 call 0x432e60                             |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x436397, 1);
+    0x0043275c mov esi, 0x436975                         |         
+    0x00432761 mov edx, 0xf                              |         
+    0x00432766 mov rdi, rax                              |         
+    0x00432769 call 0x432e60                             |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, "BITS_PER_UINT64", 0xf);
+    0x0043276e mov esi, 0x43689d                         |         
+    0x00432773 mov edx, 2                                |         
+    0x00432778 mov rdi, rax                              |         
+    0x0043277b call 0x432e60                             |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x43689d, 2);
+    0x00432780 mov rdi, rax                              |         rdi = rax;
+    0x00432783 mov esi, 0x40                             |         esi = 0x40;
+    0x00432788 call 0x401710                             |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x0043278d mov esi, 0x436e50                         |         
+    0x00432792 mov edx, 1                                |         
+    0x00432797 mov rdi, rax                              |         
+    0x0043279a call 0x432e60                             |         eax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x436e50, 1);
+    0x0043279f mov esi, 0x436985                         |         esi = "G_OFF || !\"Too Many Bits\";
+    0x004327a4 mov edi, 1                                |         edi = 1;
+    0x004327a9 mov edx, 0x176                            |         edx = 0x176;
+    0x004327ae jmp 0x432cad                              |         goto label_13;
+                                                         |     }
+    0x004327b3 cmp esi, 0xffffffff                       |     
+                                                         |     if (esi == 0xffffffff) {
+    0x004327b6 je 0x432cb7                               |         goto label_14;
+                                                         |     }
+    0x004327bc movsxd rcx, esi                           |     rcx = (int64_t) esi;
+    0x004327bf xor r14d, r14d                            |     r14d = 0;
+    0x004327c2 cmp byte [r15 + rcx], 0x31                |     
+    0x004327c7 sete r14b                                 |     r14b = (*((r15 + rcx)) == 0x31) ? 1 : 0;
+    0x004327cb neg r14                                   |     r14 = -r14;
+    0x004327ce test esi, esi                             |     
+                                                         |     if (esi <= 0) {
+    0x004327d0 jle 0x43281f                              |         goto label_15;
+                                                         |     }
+    0x004327d2 mov edi, esi                              |     edi = esi;
+    0x004327d4 movabs rbp, 0x7ffffffffffffffe            |     
+    0x004327de add rbp, 2                                |     rbp += 2;
+    0x004327e2 mov esi, 1                                |     esi = 1;
+    0x004327e7 mov dl, byte [rsp + 0xd]                  |     dl = *((rsp + 0xd));
+    0x004327eb nop dword [rax + rax]                     |     
+                                                         |     do {
+    0x004327f0 mov ecx, edx                              |         ecx = edx;
+    0x004327f2 and cl, 0xfe                              |         cl &= 0xfe;
+    0x004327f5 cmp cl, 0x30                              |         
+                                                         |         if (cl == 0x30) {
+    0x004327f8 jne 0x432810                              |             
+    0x004327fa mov rcx, rbp                              |             rcx = rbp;
+    0x004327fd not rcx                                   |             rcx = ~rcx;
+    0x00432800 and rcx, r14                              |             rcx &= r14;
+    0x00432803 or r14, rbp                               |             r14 |= rbp;
+    0x00432806 cmp dl, 0x31                              |             
+                                                         |             if (dl != 0x31) {
+    0x00432809 cmovne r14, rcx                           |                 r14 = rcx;
+                                                         |             }
+    0x0043280d shr rbp, 1                                |             rbp >>= 1;
+                                                         |         }
+    0x00432810 cmp rdi, rsi                              |         
+                                                         |         if (rdi == rsi) {
+    0x00432813 je 0x43281f                               |             goto label_15;
+                                                         |         }
+    0x00432815 movzx edx, byte [r15 + rsi]               |         edx = *((r15 + rsi));
+    0x0043281a inc rsi                                   |         rsi++;
+    0x0043281d jmp 0x4327f0                              |         
+                                                         |     } while (1);
+                                                         | label_15:
+    0x0043281f mov esi, eax                              |     esi = eax;
+    0x00432821 sub esi, ebx                              |     esi -= ebx;
+    0x00432823 test esi, esi                             |     
+                                                         |     if (esi <= 0) {
+    0x00432825 jle 0x432d71                              |         goto label_3;
+                                                         |     }
+    0x0043282b mov ecx, esi                              |     ecx = esi;
+    0x0043282d neg ecx                                   |     ecx = -ecx;
+    0x0043282f movsxd rdi, ecx                           |     rdi = (int64_t) ecx;
+    0x00432832 test rdi, rdi                             |     
+    0x00432835 mov rdx, 0xffffffffffffffff               |     rdx = 0xffffffffffffffff;
+    0x0043283c cmovns rdi, rdx                           |     __asm ("cmovns rdi, rdx");
+    0x00432840 neg rdi                                   |     rdi = -rdi;
+    0x00432843 cmp esi, 1                                |     
+                                                         |     if (esi != 1) {
+    0x00432846 jne 0x432d83                              |         goto label_16;
+                                                         |     }
+    0x0043284c mov ebp, 1                                |     
+    0x00432851 jmp 0x432e12                              |     goto label_17;
+                                                         | label_7:
+    0x00432856 mov r14d, 0x3ee                           |     r14d = 0x3ee;
+    0x0043285c cmp byte [rip + 0x226cd5], 0              |     
+                                                         |     if (*(obj.G_OFF) != 0) {
+    0x00432863 jne 0x432d71                              |         goto label_3;
+                                                         |     }
+    0x00432869 mov edi, 0x639408                         |     
+    0x0043286e mov esi, 0x4368ad                         |     
+    0x00432873 mov edx, 1                                |     
+    0x00432878 mov rbx, r8                               |     rbx = r8;
+    0x0043287b call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (obj.std::__1::cout, 0x4368ad, 1);
+    0x00432880 mov esi, 0x43689d                         |     
+    0x00432885 mov edx, 2                                |     
+    0x0043288a mov rdi, rax                              |     
+    0x0043288d call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x43689d, 2);
+    0x00432892 mov rdi, rax                              |     rdi = rax;
+    0x00432895 mov esi, r12d                             |     esi = r12d;
+    0x00432898 call 0x401710                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x0043289d mov esi, 0x436397                         |     
+    0x004328a2 mov edx, 1                                |     
+    0x004328a7 mov rdi, rax                              |     
+    0x004328aa call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x436397, 1);
+    0x004328af mov esi, 0x4368af                         |     
+    0x004328b4 mov edx, 7                                |     
+    0x004328b9 mov rdi, rax                              |     
+    0x004328bc call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, "spec[i]", 7);
+    0x004328c1 mov esi, 0x43689d                         |     
+    0x004328c6 mov edx, 2                                |     
+    0x004328cb mov rdi, rax                              |     
+    0x004328ce call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x43689d, 2);
+    0x004328d3 mov cl, byte [rbx]                        |     cl = *(rbx);
+    0x004328d5 mov byte [rsp + 0xe], cl                  |     *((rsp + 0xe)) = cl;
+    0x004328d9 lea rsi, [rsp + 0xe]                      |     
+    0x004328de mov edx, 1                                |     
+    0x004328e3 mov rdi, rax                              |     
+    0x004328e6 call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, rsp + 0xe, 1);
+    0x004328eb mov esi, 0x436e50                         |     
+    0x004328f0 mov edx, 1                                |     
+    0x004328f5 mov rdi, rax                              |     
+    0x004328f8 call 0x432e60                             |     std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x436e50, 1);
+    0x004328fd mov esi, 0x4368b7                         |     esi = "G_OFF || !\"Multiple Ranges\";
+    0x00432902 mov edi, 1                                |     edi = 1;
+    0x00432907 mov edx, 0x14d                            |     edx = 0x14d;
+    0x0043290c jmp 0x432cad                              |     goto label_13;
+                                                         | label_12:
+    0x00432911 mov r14d, 0x3e9                           |     r14d = 0x3e9;
+    0x00432917 cmp byte [rip + 0x226c1a], 0              |     
+                                                         |     if (*(obj.G_OFF) != 0) {
+    0x0043291e jne 0x432d71                              |         goto label_3;
+                                                         |     }
+    0x00432924 mov edi, 0x639408                         |     
+    0x00432929 mov esi, 0x4368ad                         |     
+    0x0043292e mov edx, 1                                |     
+    0x00432933 call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (obj.std::__1::cout, 0x4368ad, 1);
+    0x00432938 mov esi, 0x43689d                         |     
+    0x0043293d mov edx, 2                                |     
+    0x00432942 mov rdi, rax                              |     
+    0x00432945 call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x43689d, 2);
+    0x0043294a mov rdi, rax                              |     rdi = rax;
+    0x0043294d mov esi, r12d                             |     esi = r12d;
+    0x00432950 call 0x401710                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x00432955 mov esi, 0x436397                         |     
+    0x0043295a mov edx, 1                                |     
+    0x0043295f mov rdi, rax                              |     
+    0x00432962 call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x436397, 1);
+    0x00432967 mov esi, 0x4368af                         |     
+    0x0043296c mov edx, 7                                |     
+    0x00432971 mov rdi, rax                              |     
+    0x00432974 call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, "spec[i]", 7);
+    0x00432979 mov esi, 0x43689d                         |     
+    0x0043297e mov edx, 2                                |     
+    0x00432983 mov rdi, rax                              |     
+    0x00432986 call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x43689d, 2);
+    0x0043298b mov rcx, qword [rsp + 0x18]               |     rcx = *((rsp + 0x18));
+    0x00432990 mov cl, byte [rcx]                        |     cl = *(rcx);
+    0x00432992 mov byte [rsp + 0x13], cl                 |     *((rsp + 0x13)) = cl;
+    0x00432996 lea rsi, [rsp + 0x13]                     |     
+    0x0043299b mov edx, 1                                |     
+    0x004329a0 mov rdi, rax                              |     
+    0x004329a3 call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, rsp + 0x13, 1);
+    0x004329a8 mov esi, 0x436e50                         |     
+    0x004329ad mov edx, 1                                |     
+    0x004329b2 mov rdi, rax                              |     
+    0x004329b5 call 0x432e60                             |     std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x436e50, 1);
+    0x004329ba mov esi, 0x43694e                         |     esi = "G_OFF || !\"Illegal Character\";
+    0x004329bf mov edi, 1                                |     edi = 1;
+    0x004329c4 mov edx, 0x16e                            |     edx = 0x16e;
+    0x004329c9 jmp 0x432cad                              |     goto label_13;
+                                                         | label_8:
+    0x004329ce mov r14d, 0x3ec                           |     r14d = 0x3ec;
+    0x004329d4 cmp byte [rip + 0x226b5d], 0              |     
+                                                         |     if (*(obj.G_OFF) != 0) {
+    0x004329db jne 0x432d71                              |         goto label_3;
+                                                         |     }
+    0x004329e1 mov edi, 0x639408                         |     
+    0x004329e6 mov esi, 0x4368ad                         |     
+    0x004329eb mov edx, 1                                |     
+    0x004329f0 mov rbx, r8                               |     rbx = r8;
+    0x004329f3 call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (obj.std::__1::cout, 0x4368ad, 1);
+    0x004329f8 mov esi, 0x43689d                         |     
+    0x004329fd mov edx, 2                                |     
+    0x00432a02 mov rdi, rax                              |     
+    0x00432a05 call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x43689d, 2);
+    0x00432a0a mov rdi, rax                              |     rdi = rax;
+    0x00432a0d mov esi, r12d                             |     esi = r12d;
+    0x00432a10 call 0x401710                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x00432a15 mov esi, 0x436397                         |     
+    0x00432a1a mov edx, 1                                |     
+    0x00432a1f mov rdi, rax                              |     
+    0x00432a22 call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x436397, 1);
+    0x00432a27 mov esi, 0x4368af                         |     
+    0x00432a2c mov edx, 7                                |     
+    0x00432a31 mov rdi, rax                              |     
+    0x00432a34 call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, "spec[i]", 7);
+    0x00432a39 mov esi, 0x43689d                         |     
+    0x00432a3e mov edx, 2                                |     
+    0x00432a43 mov rdi, rax                              |     
+    0x00432a46 call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x43689d, 2);
+    0x00432a4b mov cl, byte [rbx]                        |     cl = *(rbx);
+    0x00432a4d mov byte [rsp + 0xf], cl                  |     *((rsp + 0xf)) = cl;
+    0x00432a51 lea rsi, [rsp + 0xf]                      |     
+    0x00432a56 mov edx, 1                                |     
+    0x00432a5b mov rdi, rax                              |     
+    0x00432a5e call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, rsp + 0xf, 1);
+    0x00432a63 mov esi, 0x436e50                         |     
+    0x00432a68 mov edx, 1                                |     
+    0x00432a6d mov rdi, rax                              |     
+    0x00432a70 call 0x432e60                             |     std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x436e50, 1);
+    0x00432a75 mov esi, 0x4368d3                         |     esi = "G_OFF || !\"Missing Range Start\";
+    0x00432a7a mov edi, 1                                |     edi = 1;
+    0x00432a7f mov edx, 0x151                            |     edx = 0x151;
+    0x00432a84 jmp 0x432cad                              |     goto label_13;
+                                                         | label_9:
+    0x00432a89 mov r14d, 0x3ed                           |     r14d = 0x3ed;
+    0x00432a8f cmp byte [rip + 0x226aa2], 0              |     
+                                                         |     if (*(obj.G_OFF) != 0) {
+    0x00432a96 jne 0x432d71                              |         goto label_3;
+                                                         |     }
+    0x00432a9c mov edi, 0x639408                         |     
+    0x00432aa1 mov esi, 0x4368ad                         |     
+    0x00432aa6 mov edx, 1                                |     
+    0x00432aab call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (obj.std::__1::cout, 0x4368ad, 1);
+    0x00432ab0 mov esi, 0x43689d                         |     
+    0x00432ab5 mov edx, 2                                |     
+    0x00432aba mov rdi, rax                              |     
+    0x00432abd call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x43689d, 2);
+    0x00432ac2 mov rdi, rax                              |     rdi = rax;
+    0x00432ac5 mov esi, r12d                             |     esi = r12d;
+    0x00432ac8 call 0x401710                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x00432acd mov esi, 0x436397                         |     
+    0x00432ad2 mov edx, 1                                |     
+    0x00432ad7 mov rdi, rax                              |     
+    0x00432ada call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x436397, 1);
+    0x00432adf mov esi, 0x4368af                         |     
+    0x00432ae4 mov edx, 7                                |     
+    0x00432ae9 mov rdi, rax                              |     
+    0x00432aec call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, "spec[i]", 7);
+    0x00432af1 mov esi, 0x43689d                         |     
+    0x00432af6 mov edx, 2                                |     
+    0x00432afb mov rdi, rax                              |     
+    0x00432afe call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x43689d, 2);
+    0x00432b03 mov cl, byte [rbp - 1]                    |     cl = *((rbp - 1));
+    0x00432b06 mov byte [rsp + 0x10], cl                 |     *((rsp + 0x10)) = cl;
+    0x00432b0a lea rsi, [rsp + 0x10]                     |     
+    0x00432b0f mov edx, 1                                |     
+    0x00432b14 mov rdi, rax                              |     
+    0x00432b17 call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, rsp + 0x10, 1);
+    0x00432b1c mov esi, 0x436e50                         |     
+    0x00432b21 mov edx, 1                                |     
+    0x00432b26 mov rdi, rax                              |     
+    0x00432b29 call 0x432e60                             |     std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x436e50, 1);
+    0x00432b2e mov esi, 0x4368f3                         |     esi = "G_OFF || !\"Missing Second Dot\";
+    0x00432b33 mov edi, 1                                |     edi = 1;
+    0x00432b38 mov edx, 0x158                            |     edx = 0x158;
+    0x00432b3d jmp 0x432cad                              |     goto label_13;
+                                                         | label_10:
+    0x00432b42 mov r14d, 0x3eb                           |     r14d = 0x3eb;
+    0x00432b48 cmp byte [rip + 0x2269e9], 0              |     
+                                                         |     if (*(obj.G_OFF) != 0) {
+    0x00432b4f jne 0x432d71                              |         goto label_3;
+                                                         |     }
+    0x00432b55 mov edi, 0x639408                         |     
+    0x00432b5a mov esi, 0x4368ad                         |     
+    0x00432b5f mov edx, 1                                |     
+    0x00432b64 call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (obj.std::__1::cout, 0x4368ad, 1);
+    0x00432b69 mov esi, 0x43689d                         |     
+    0x00432b6e mov edx, 2                                |     
+    0x00432b73 mov rdi, rax                              |     
+    0x00432b76 call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x43689d, 2);
+    0x00432b7b mov rdi, rax                              |     rdi = rax;
+    0x00432b7e mov esi, ebx                              |     esi = ebx;
+    0x00432b80 call 0x401710                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x00432b85 mov esi, 0x436397                         |     
+    0x00432b8a mov edx, 1                                |     
+    0x00432b8f mov rdi, rax                              |     
+    0x00432b92 call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x436397, 1);
+    0x00432b97 mov esi, 0x4368af                         |     
+    0x00432b9c mov edx, 7                                |     
+    0x00432ba1 mov rdi, rax                              |     
+    0x00432ba4 call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, "spec[i]", 7);
+    0x00432ba9 mov esi, 0x43689d                         |     
+    0x00432bae mov edx, 2                                |     
+    0x00432bb3 mov rdi, rax                              |     
+    0x00432bb6 call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x43689d, 2);
+    0x00432bbb mov cl, byte [rbp]                        |     cl = *(rbp);
+    0x00432bbe mov byte [rsp + 0x11], cl                 |     *((rsp + 0x11)) = cl;
+    0x00432bc2 lea rsi, [rsp + 0x11]                     |     
+    0x00432bc7 mov edx, 1                                |     
+    0x00432bcc mov rdi, rax                              |     
+    0x00432bcf call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, rsp + 0x11, 1);
+    0x00432bd4 mov esi, 0x436e50                         |     
+    0x00432bd9 mov edx, 1                                |     
+    0x00432bde mov rdi, rax                              |     
+    0x00432be1 call 0x432e60                             |     std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x436e50, 1);
+    0x00432be6 mov esi, 0x436912                         |     esi = "G_OFF || !\"Missing Range End\";
+    0x00432beb mov edi, 1                                |     edi = 1;
+    0x00432bf0 mov edx, 0x15f                            |     edx = 0x15f;
+    0x00432bf5 jmp 0x432cad                              |     goto label_13;
+                                                         | label_11:
+    0x00432bfa mov r14d, 0x3ea                           |     r14d = 0x3ea;
+    0x00432c00 cmp byte [rip + 0x226931], 0              |     
+                                                         |     if (*(obj.G_OFF) != 0) {
+    0x00432c07 jne 0x432d71                              |         goto label_3;
+                                                         |     }
+    0x00432c0d mov edi, 0x639408                         |     
+    0x00432c12 mov esi, 0x4368ad                         |     
+    0x00432c17 mov edx, 1                                |     
+    0x00432c1c call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (obj.std::__1::cout, 0x4368ad, 1);
+    0x00432c21 mov esi, 0x43689d                         |     
+    0x00432c26 mov edx, 2                                |     
+    0x00432c2b mov rdi, rax                              |     
+    0x00432c2e call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x43689d, 2);
+    0x00432c33 mov rdi, rax                              |     rdi = rax;
+    0x00432c36 mov esi, ebx                              |     esi = ebx;
+    0x00432c38 call 0x401710                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x00432c3d mov esi, 0x436397                         |     
+    0x00432c42 mov edx, 1                                |     
+    0x00432c47 mov rdi, rax                              |     
+    0x00432c4a call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x436397, 1);
+    0x00432c4f mov esi, 0x4368af                         |     
+    0x00432c54 mov edx, 7                                |     
+    0x00432c59 mov rdi, rax                              |     
+    0x00432c5c call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, "spec[i]", 7);
+    0x00432c61 mov esi, 0x43689d                         |     
+    0x00432c66 mov edx, 2                                |     
+    0x00432c6b mov rdi, rax                              |     
+    0x00432c6e call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x43689d, 2);
+    0x00432c73 mov cl, byte [rbp]                        |     cl = *(rbp);
+    0x00432c76 mov byte [rsp + 0x12], cl                 |     *((rsp + 0x12)) = cl;
+    0x00432c7a lea rsi, [rsp + 0x12]                     |     
+    0x00432c7f mov edx, 1                                |     
+    0x00432c84 mov rdi, rax                              |     
+    0x00432c87 call 0x432e60                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, rsp + 0x12, 1);
+    0x00432c8c mov esi, 0x436e50                         |     
+    0x00432c91 mov edx, 1                                |     
+    0x00432c96 mov rdi, rax                              |     
+    0x00432c99 call 0x432e60                             |     std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x436e50, 1);
+    0x00432c9e mov esi, 0x436930                         |     esi = "G_OFF || !\"Nonmatching Range\";
+    0x00432ca3 mov edi, 1                                |     edi = 1;
+    0x00432ca8 mov edx, 0x163                            |     edx = 0x163;
+                                                         | label_13:
+    0x00432cad call 0x401950                             |     eax = (anonymousnamespace)::aSsErT(bool,char const*,int) ();
+    0x00432cb2 jmp 0x432d71                              |     goto label_3;
+                                                         | label_14:
+    0x00432cb7 test eax, eax                             |     
+                                                         |     if (eax < 0) {
+    0x00432cb9 js 0x432d6e                               |         goto label_4;
+                                                         |     }
+    0x00432cbf mov ecx, eax                              |     ecx = eax;
+    0x00432cc1 not ecx                                   |     ecx = ~ecx;
+    0x00432cc3 movsxd rdi, ecx                           |     rdi = (int64_t) ecx;
+    0x00432cc6 test rdi, rdi                             |     
+    0x00432cc9 mov rdx, 0xffffffffffffffff               |     rdx = 0xffffffffffffffff;
+    0x00432cd0 cmovns rdi, rdx                           |     __asm ("cmovns rdi, rdx");
+    0x00432cd4 neg rdi                                   |     rdi = -rdi;
+    0x00432cd7 test eax, eax                             |     
+                                                         |     if (eax == 0) {
+    0x00432cd9 je 0x432e0a                               |         goto label_18;
+                                                         |     }
+    0x00432cdf movabs rsi, 0x7ffffffffffffffe            |     rsi = 0x7ffffffffffffffe;
+    0x00432ce9 and rsi, rdi                              |     rsi &= rdi;
+    0x00432cec inc eax                                   |     eax++;
+    0x00432cee cdqe                                      |     rax = (int64_t) eax;
+    0x00432cf0 add r15, rax                              |     r15 += rax;
+    0x00432cf3 mov ebp, 1                                |     
+    0x00432cf8 mov rdx, 0xffffffffffffffff               |     rdx = 0xffffffffffffffff;
+    0x00432cff xor r14d, r14d                            |     r14d = 0;
+    0x00432d02 jmp 0x432d23                              |     
+                                                         |     while (al != 0x30) {
+                                                         | label_1:
+    0x00432d10 lea rax, [rsi + rdx - 2]                  |         rax = rsi + rdx - 2;
+    0x00432d15 add rdx, 0xfffffffffffffffe               |         rdx += 0xfffffffffffffffe;
+    0x00432d19 cmp rax, 0xffffffffffffffff               |         
+                                                         |         if (rax == -1) {
+    0x00432d1d je 0x432e12                               |             goto label_17;
+                                                         |         }
+    0x00432d23 movzx ecx, byte [r15 + rdx]               |         ecx = *((r15 + rdx));
+    0x00432d28 mov ebx, ecx                              |         ebx = ecx;
+    0x00432d2a and bl, 0xfe                              |         bl &= 0xfe;
+    0x00432d2d cmp bl, 0x30                              |         
+                                                         |         if (bl == 0x30) {
+    0x00432d30 jne 0x432d48                              |             
+    0x00432d32 mov rax, rbp                              |             rax = rbp;
+    0x00432d35 not rax                                   |             rax = ~rax;
+    0x00432d38 and rax, r14                              |             rax &= r14;
+    0x00432d3b or r14, rbp                               |             r14 |= rbp;
+    0x00432d3e cmp cl, 0x31                              |             
+                                                         |             if (cl != 0x31) {
+    0x00432d41 cmovne r14, rax                           |                 r14 = rax;
+                                                         |             }
+    0x00432d45 add rbp, rbp                              |             rbp += rbp;
+                                                         |         }
+    0x00432d48 movzx ebx, byte [r15 + rdx - 1]           |         ebx = *((r15 + rdx - 1));
+    0x00432d4e mov eax, ebx                              |         eax = ebx;
+    0x00432d50 and al, 0xfe                              |         al &= 0xfe;
+    0x00432d52 cmp al, 0x30                              |         
+    0x00432d54 jne 0x432d10                              |         
+                                                         |     }
+    0x00432d56 mov rax, rbp                              |     rax = rbp;
+    0x00432d59 not rax                                   |     rax = ~rax;
+    0x00432d5c and rax, r14                              |     rax &= r14;
+    0x00432d5f or r14, rbp                               |     r14 |= rbp;
+    0x00432d62 cmp bl, 0x31                              |     
+                                                         |     if (bl != 0x31) {
+    0x00432d65 cmovne r14, rax                           |         r14 = rax;
+                                                         |     }
+    0x00432d69 add rbp, rbp                              |     rbp += rbp;
+    0x00432d6c jmp 0x432d10                              |     goto label_1;
+                                                         | label_4:
+    0x00432d6e xor r14d, r14d                            |     r14d = 0;
+                                                         | label_3:
+    0x00432d71 mov rax, r14                              |     rax = r14;
+    0x00432d74 add rsp, 0x28                             |     
+    0x00432d78 pop rbx                                   |     
+    0x00432d79 pop r12                                   |     
+    0x00432d7b pop r13                                   |     
+    0x00432d7d pop r14                                   |     
+    0x00432d7f pop r15                                   |     
+    0x00432d81 pop rbp                                   |     
+    0x00432d82 ret                                       |     return rax;
+                                                         | label_16:
+    0x00432d83 movabs rsi, 0x7ffffffffffffffe            |     rsi = 0x7ffffffffffffffe;
+    0x00432d8d and rsi, rdi                              |     rsi &= rdi;
+    0x00432d90 inc eax                                   |     eax++;
+    0x00432d92 cdqe                                      |     rax = (int64_t) eax;
+    0x00432d94 add r15, rax                              |     r15 += rax;
+    0x00432d97 mov ebp, 1                                |     
+    0x00432d9c mov rdx, 0xffffffffffffffff               |     rdx = 0xffffffffffffffff;
+    0x00432da3 jmp 0x432dbf                              |     
+                                                         |     while (al != 0x30) {
+                                                         | label_2:
+    0x00432db0 lea rax, [rsi + rdx - 2]                  |         rax = rsi + rdx - 2;
+    0x00432db5 add rdx, 0xfffffffffffffffe               |         rdx += 0xfffffffffffffffe;
+    0x00432db9 cmp rax, 0xffffffffffffffff               |         
+                                                         |         if (rax == -1) {
+    0x00432dbd je 0x432e12                               |             goto label_17;
+                                                         |         }
+    0x00432dbf movzx ecx, byte [r15 + rdx]               |         ecx = *((r15 + rdx));
+    0x00432dc4 mov ebx, ecx                              |         ebx = ecx;
+    0x00432dc6 and bl, 0xfe                              |         bl &= 0xfe;
+    0x00432dc9 cmp bl, 0x30                              |         
+                                                         |         if (bl == 0x30) {
+    0x00432dcc jne 0x432de4                              |             
+    0x00432dce mov rax, rbp                              |             rax = rbp;
+    0x00432dd1 not rax                                   |             rax = ~rax;
+    0x00432dd4 and rax, r14                              |             rax &= r14;
+    0x00432dd7 or r14, rbp                               |             r14 |= rbp;
+    0x00432dda cmp cl, 0x31                              |             
+                                                         |             if (cl != 0x31) {
+    0x00432ddd cmovne r14, rax                           |                 r14 = rax;
+                                                         |             }
+    0x00432de1 add rbp, rbp                              |             rbp += rbp;
+                                                         |         }
+    0x00432de4 movzx ebx, byte [r15 + rdx - 1]           |         ebx = *((r15 + rdx - 1));
+    0x00432dea mov eax, ebx                              |         eax = ebx;
+    0x00432dec and al, 0xfe                              |         al &= 0xfe;
+    0x00432dee cmp al, 0x30                              |         
+    0x00432df0 jne 0x432db0                              |         
+                                                         |     }
+    0x00432df2 mov rax, rbp                              |     rax = rbp;
+    0x00432df5 not rax                                   |     rax = ~rax;
+    0x00432df8 and rax, r14                              |     rax &= r14;
+    0x00432dfb or r14, rbp                               |     r14 |= rbp;
+    0x00432dfe cmp bl, 0x31                              |     
+                                                         |     if (bl != 0x31) {
+    0x00432e01 cmovne r14, rax                           |         r14 = rax;
+                                                         |     }
+    0x00432e05 add rbp, rbp                              |     rbp += rbp;
+    0x00432e08 jmp 0x432db0                              |     goto label_2;
+                                                         | label_18:
+    0x00432e0a mov ebp, 1                                |     
+    0x00432e0f xor r14d, r14d                            |     r14d = 0;
+                                                         | label_17:
+    0x00432e12 test dil, 1                               |     
+                                                         |     if ((dil & 1) == 0) {
+    0x00432e16 je 0x432d71                               |         goto label_3;
+                                                         |     }
+    0x00432e1c mov cl, byte [r8 + rdx]                   |     cl = *((r8 + rdx));
+    0x00432e20 mov eax, ecx                              |     eax = ecx;
+    0x00432e22 and al, 0xfe                              |     al &= 0xfe;
+    0x00432e24 cmp al, 0x30                              |     
+                                                         |     if (al != 0x30) {
+    0x00432e26 jne 0x432d71                              |         goto label_3;
+                                                         |     }
+    0x00432e2c mov rax, rbp                              |     rax = rbp;
+    0x00432e2f not rax                                   |     rax = ~rax;
+    0x00432e32 and rax, r14                              |     rax &= r14;
+    0x00432e35 or rbp, r14                               |     rbp |= r14;
+    0x00432e38 cmp cl, 0x31                              |     
+                                                         |     if (cl != 0x31) {
+    0x00432e3b cmovne rbp, rax                           |         
+                                                         |     }
+    0x00432e3f mov r14, rbp                              |     r14 = rbp;
+    0x00432e42 jmp 0x432d71                              |     goto label_3;
+                                                         | }

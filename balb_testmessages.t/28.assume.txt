@@ -1,0 +1,24 @@
+    ; assembly                                                               | /* r2dec pseudo code output */
+                                                                             | /* balb_testmessages.t/assume @ 0x4143e0 */
+                                                                             | #include <stdint.h>
+                                                                             |  
+    ; (fcn) method.BloombergLP::balb::Response.selectionName___const ()      | int32_t method_BloombergLP::balb::Response_selectionName_const (int64_t arg1) {
+                                                                             |     rdi = arg1;
+                                                                             |     /* BloombergLP::balb::Response::selectionName() const */
+    0x004143e0 mov eax, dword [rdi + 0x368]                                  |     eax = *((rdi + 0x368));
+    0x004143e6 test eax, eax                                                 |     
+                                                                             |     if (eax != 0) {
+    0x004143e8 je 0x4143f5                                                   |         
+    0x004143ea cmp eax, 1                                                    |         
+                                                                             |         if (eax != 1) {
+    0x004143ed jne 0x4143fb                                                  |             goto label_0;
+                                                                             |         }
+    0x004143ef mov eax, 0x448558                                             |         eax = "featureResponse";
+    0x004143f4 ret                                                           |         return eax;
+                                                                             |     }
+    0x004143f5 mov eax, 0x44854b                                             |     eax = "responseData";
+    0x004143fa ret                                                           |     return eax;
+                                                                             | label_0:
+    0x004143fb mov eax, 0x448383                                             |     eax = "(* UNDEFINED *)";
+    0x00414400 ret                                                           |     return eax;
+                                                                             | }

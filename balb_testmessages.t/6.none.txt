@@ -1,0 +1,37 @@
+    ; assembly                                                                                       | /* r2dec pseudo code output */
+                                                                                                     | /* balb_testmessages.t/none @ 0x41e530 */
+                                                                                                     | #include <stdint.h>
+                                                                                                     |  
+    ; (fcn) method.BloombergLP::bdlde::Utf8Util.numCodePointsRaw_char_const__unsigned_long_ ()       | int64_t method_BloombergLP::bdlde::Utf8Util_numCodePointsRaw_char_const_unsigned_long_ (int64_t arg2, uint32_t arg1) {
+                                                                                                     |     rsi = arg2;
+                                                                                                     |     rdi = arg1;
+                                                                                                     |     /* BloombergLP::bdlde::Utf8Util::numCodePointsRaw(char const*, unsigned long) */
+    0x0041e530 test rsi, rsi                                                                         |     
+                                                                                                     |     if (rsi <= 0) {
+    0x0041e533 jle 0x41e567                                                                          |         goto label_1;
+                                                                                                     |     }
+    0x0041e535 add rsi, rdi                                                                          |     rsi += rdi;
+    0x0041e538 xor eax, eax                                                                          |     eax = 0;
+    0x0041e53a jmp 0x41e54b                                                                          |     
+                                                                                                     |     while (cl == 0xf) {
+                                                                                                     | label_0:
+    0x0041e540 add rdi, rdx                                                                          |         rdi += rdx;
+    0x0041e543 inc rax                                                                               |         rax++;
+    0x0041e546 cmp rdi, rsi                                                                          |         
+                                                                                                     |         if (rdi >= rsi) {
+    0x0041e549 jae 0x41e566                                                                          |             goto label_2;
+                                                                                                     |         }
+    0x0041e54b movzx ecx, byte [rdi]                                                                 |         ecx = *(rdi);
+    0x0041e54e shr rcx, 4                                                                            |         rcx >>= 4;
+    0x0041e552 mov edx, 4                                                                            |         edx = 4;
+    0x0041e557 cmp cl, 0xf                                                                           |         
+    0x0041e55a je 0x41e540                                                                           |         
+                                                                                                     |     }
+    0x0041e55c mov rdx, qword [rcx*8 + 0x448510]                                                     |     rdx = *((rcx*8 + 0x448510));
+    0x0041e564 jmp 0x41e540                                                                          |     goto label_0;
+                                                                                                     | label_2:
+    0x0041e566 ret                                                                                   |     return rax;
+                                                                                                     | label_1:
+    0x0041e567 xor eax, eax                                                                          |     eax = 0;
+    0x0041e569 ret                                                                                   |     return rax;
+                                                                                                     | }

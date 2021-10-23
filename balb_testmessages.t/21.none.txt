@@ -1,0 +1,26 @@
+    ; assembly                                                                       | /* r2dec pseudo code output */
+                                                                                     | /* balb_testmessages.t/none @ 0x405330 */
+                                                                                     | #include <stdint.h>
+                                                                                     |  
+    ; (fcn) method.BloombergLP::balb::SequenceWithAnonymityChoice1.reset__ ()        | int64_t method_BloombergLP::balb::SequenceWithAnonymityChoice1_reset_ (uint32_t arg1) {
+                                                                                     |     rdi = arg1;
+                                                                                     |     /* BloombergLP::balb::SequenceWithAnonymityChoice1::reset() */
+    0x00405330 push rbx                                                              |     
+    0x00405331 mov rbx, rdi                                                          |     rbx = rdi;
+    0x00405334 cmp dword [rdi + 0x30], 1                                             |     
+                                                                                     |     if (*((rdi + 0x30)) == 1) {
+    0x00405338 jne 0x405356                                                          |         
+    0x0040533a cmp qword [rbx + 0x20], 0x17                                          |         
+                                                                                     |         if (*((rbx + 0x20)) != 0x17) {
+    0x0040533f je 0x40534e                                                           |             
+    0x00405341 mov rsi, qword [rbx]                                                  |             rsi = *(rbx);
+    0x00405344 mov rdi, qword [rbx + 0x28]                                           |             rdi = *((rbx + 0x28));
+    0x00405348 mov rax, qword [rdi]                                                  |             rax = *(rdi);
+    0x0040534b call qword [rax + 0x18]                                               |             uint64_t (*rax + 0x18)() ();
+                                                                                     |         }
+    0x0040534e mov qword [rbx + 0x18], 0xffffffffffffffff                            |         *((rbx + 0x18)) = 0xffffffffffffffff;
+                                                                                     |     }
+    0x00405356 mov dword [rbx + 0x30], 0xffffffff                                    |     *((rbx + 0x30)) = 0xffffffff;
+    0x0040535d pop rbx                                                               |     
+    0x0040535e ret                                                                   |     return rax;
+                                                                                     | }

@@ -1,0 +1,44 @@
+    ; assembly                                                                           | /* r2dec pseudo code output */
+                                                                                         | /* balb_filecleanerutil.t/none @ 0x4137d0 */
+                                                                                         | #include <stdint.h>
+                                                                                         |  
+                                                                                         | uint32_t rotate_right32 (uint32_t value, uint32_t count) {
+                                                                                         |     const uint32_t mask = (CHAR_BIT * sizeof (value)) - 1;
+                                                                                         |     count &= mask;
+                                                                                         |     return (value >> count) | (value << (-count & mask));
+                                                                                         | }
+                                                                                         |  
+    ; (fcn) method.BloombergLP::bdlt::PosixDateImpUtil.lastDayOfMonth_int__int_ ()       | int32_t method_BloombergLP::bdlt::PosixDateImpUtil_lastDayOfMonth_int_int_ (int64_t arg2, uint32_t arg1) {
+                                                                                         |     rsi = arg2;
+                                                                                         |     rdi = arg1;
+                                                                                         |     /* BloombergLP::bdlt::PosixDateImpUtil::lastDayOfMonth(int, int) */
+    0x004137d0 movsxd rdx, esi                                                           |     rdx = (int64_t) esi;
+    0x004137d3 mov ecx, dword [rdx*4 + 0x43d5c0]                                         |     ecx = *((rdx*4 + method.BloombergLP::bdlt._anonymous_namespace_::normDaysPerMonth));
+    0x004137da xor eax, eax                                                              |     eax = 0;
+    0x004137dc cmp edx, 2                                                                |     
+                                                                                         |     if (edx == 2) {
+    0x004137df jne 0x41381e                                                              |         
+    0x004137e1 mov edx, edi                                                              |         edx = edi;
+    0x004137e3 and edx, 3                                                                |         edx &= 3;
+                                                                                         |         if (edx != 0) {
+    0x004137e6 jne 0x41381e                                                              |             goto label_0;
+                                                                                         |         }
+    0x004137e8 imul eax, edi, 0xc28f5c29                                                 |         eax = edi * 0xc28f5c29;
+    0x004137ee add eax, 0x51eb850                                                        |         eax += 0x51eb850;
+    0x004137f3 mov edx, eax                                                              |         edx = eax;
+    0x004137f5 ror edx, 2                                                                |         edx = rotate_right32 (edx, 2);
+    0x004137f8 cmp edx, 0x28f5c28                                                        |         
+    0x004137fe seta sil                                                                  |         sil = (edx > 0x28f5c28) ? 1 : 0;
+    0x00413802 ror eax, 4                                                                |         eax = rotate_right32 (eax, 4);
+    0x00413805 cmp eax, 0xa3d70b                                                         |         
+    0x0041380a setb al                                                                   |         al = (eax < 0xa3d70b) ? 1 : 0;
+    0x0041380d cmp edi, 0x6d9                                                            |         
+    0x00413813 setl dl                                                                   |         dl = (edi < 0x6d9) ? 1 : 0;
+    0x00413816 or dl, al                                                                 |         dl |= al;
+    0x00413818 or dl, sil                                                                |         dl |= sil;
+    0x0041381b movzx eax, dl                                                             |         eax = (int32_t) dl;
+                                                                                         |     }
+                                                                                         | label_0:
+    0x0041381e add eax, ecx                                                              |     eax += ecx;
+    0x00413820 ret                                                                       |     return eax;
+                                                                                         | }

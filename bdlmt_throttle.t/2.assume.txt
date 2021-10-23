@@ -1,0 +1,36 @@
+    ; assembly                                                                                                   | /* r2dec pseudo code output */
+                                                                                                                 | /* bdlmt_throttle.t/assume @ 0x404dc0 */
+                                                                                                                 | #include <stdint.h>
+                                                                                                                 |  
+    ; (fcn) method.Case_Usage.reportError_std::__1::basic_ostream_char__std::__1::char_traits_char____ ()        | uint64_t method_Case_Usage_reportError_std::_1::basic_ostream_char_std::_1::char_traits_char_ (int64_t arg1) {
+                                                                                                                 |     int64_t var_8h;
+                                                                                                                 |     rdi = arg1;
+                                                                                                                 |     /* Case_Usage::reportError(std::__1::basic_ostream<char, std::__1::char_traits<char> >&) */
+    0x00404dc0 push rbx                                                                                          |     
+    0x00404dc1 sub rsp, 0x10                                                                                     |     
+    0x00404dc5 mov rbx, rdi                                                                                      |     rbx = rdi;
+    0x00404dc8 cmp dword [rip + 0x252755], 1                                                                     |     
+                                                                                                                 |     if (*(0x00657524) == 1) {
+    0x00404dcf jne 0x404dd8                                                                                      |         
+    0x00404dd1 call 0x416440                                                                                     |         BloombergLP::bsls::SystemTime::nowMonotonicClock() ();
+    0x00404dd6 jmp 0x404ddd                                                                                      |         
+                                                                                                                 |     } else {
+    0x00404dd8 call 0x4164d0                                                                                     |         rax = BloombergLP::bsls::SystemTime::nowRealtimeClock() ();
+                                                                                                                 |     }
+    0x00404ddd mov qword [rsp], rax                                                                              |     *(rsp) = rax;
+    0x00404de1 mov dword [rsp + 8], edx                                                                          |     *((rsp + 8)) = edx;
+    0x00404de5 mov rsi, rsp                                                                                      |     
+    0x00404de8 mov edi, 0x657508                                                                                 |     
+    0x00404ded call 0x412ee0                                                                                     |     al = BloombergLP::bdlmt::Throttle::requestPermission(BloombergLP::bsls::TimeIntervalconst&) (method.Case_Usage.reportError_std::__1::basic_ostream_char__std::__1::char_traits_char____::throttle, rsp);
+    0x00404df2 test al, al                                                                                       |     
+                                                                                                                 |     if (al != 0) {
+    0x00404df4 je 0x404e08                                                                                       |         
+    0x00404df6 mov esi, 0x43d655                                                                                 |         
+    0x00404dfb mov edx, 0x34                                                                                     |         
+    0x00404e00 mov rdi, rbx                                                                                      |         
+    0x00404e03 call 0x4128e0                                                                                     |         std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rbx, "Help!  I'm being held prisoner in a microprocessor!\n", 0x34);
+                                                                                                                 |     }
+    0x00404e08 add rsp, 0x10                                                                                     |     
+    0x00404e0c pop rbx                                                                                           |     
+    0x00404e0d ret                                                                                               |     return rax;
+                                                                                                                 | }

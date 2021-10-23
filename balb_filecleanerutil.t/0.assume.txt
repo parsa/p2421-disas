@@ -1,0 +1,63 @@
+    ; assembly                                                                       | /* r2dec pseudo code output */
+                                                                                     | /* balb_filecleanerutil.t/assume @ 0x40be30 */
+                                                                                     | #include <stdint.h>
+                                                                                     |  
+    ; (fcn) method.BloombergLP::bdlma::SequentialPool.SequentialPool_int_ ()         | uint64_t method_BloombergLP::bdlma::SequentialPool_SequentialPool_int_ (int64_t arg3, int64_t arg2, int64_t arg1) {
+                                                                                     |     rdx = arg3;
+                                                                                     |     rsi = arg2;
+                                                                                     |     rdi = arg1;
+                                                                                     |     /* BloombergLP::bdlma::SequentialPool::SequentialPool(int) */
+    0x0040be30 push r14                                                              |     
+    0x0040be32 push rbx                                                              |     
+    0x0040be33 push rax                                                              |     
+    0x0040be34 mov rbx, rdi                                                          |     rbx = rdi;
+    0x0040be37 xorps xmm0, xmm0                                                      |     __asm ("xorps xmm0, xmm0");
+    0x0040be3a movups xmmword [rdi], xmm0                                            |     __asm ("movups xmmword [rdi], xmm0");
+    0x0040be3d mov qword [rdi + 0x10], 0                                             |     *((rdi + 0x10)) = 0;
+    0x0040be45 mov word [rdi + 0x18], 0x100f                                         |     *((rdi + 0x18)) = 0x100f;
+    0x0040be4b lea rax, [rdi + 0x20]                                                 |     rax = rdi + 0x20;
+    0x0040be4f mov qword [rdi + 0x20], 0                                             |     *((rdi + 0x20)) = 0;
+    0x0040be57 mov qword [rdi + 0x28], rax                                           |     *((rdi + 0x28)) = rax;
+    0x0040be5b movsxd r14, esi                                                       |     r14 = (int64_t) esi;
+    0x0040be5e lea rax, [r14 - 1]                                                    |     rax = r14 - 1;
+    0x0040be62 mov rcx, rax                                                          |     rcx = rax;
+    0x0040be65 or rcx, 1                                                             |     rcx |= 1;
+    0x0040be69 bsr rdx, rcx                                                          |     __asm ("bsr rdx, rcx");
+    0x0040be6d xor edx, 0x3f                                                         |     edx ^= 0x3f;
+    0x0040be70 cmp rax, 1                                                            |     
+    0x0040be74 adc edx, 0                                                            |     edx += 0;
+    0x0040be77 mov ecx, edx                                                          |     ecx = edx;
+    0x0040be79 neg cl                                                                |     cl = -cl;
+    0x0040be7b mov eax, 1                                                            |     eax = 1;
+    0x0040be80 shl rax, cl                                                           |     rax <<= cl;
+    0x0040be83 test edx, edx                                                         |     
+                                                                                     |     if (edx == 0) {
+    0x0040be85 je 0x40bee2                                                           |         goto label_0;
+                                                                                     |     }
+    0x0040be87 dec rax                                                               |     rax--;
+    0x0040be8a movabs rcx, 0xff00000000000000                                        |     rcx = 0xff00000000000000;
+    0x0040be94 or rcx, rax                                                           |     rcx |= rax;
+                                                                                     |     do {
+    0x0040be97 mov qword [rbx + 0x1f0], rcx                                          |         *((rbx + 0x1f0)) = rcx;
+    0x0040be9e mov qword [rbx + 0x1f8], rcx                                          |         *((rbx + 0x1f8)) = rcx;
+    0x0040bea5 movups xmmword [rbx + 0x200], xmm0                                    |         __asm ("movups xmmword [rbx + 0x200], xmm0");
+    0x0040beac mov qword [rbx + 0x210], 0                                            |         *((rbx + 0x210)) = 0;
+    0x0040beb7 mov rax, qword [rip + 0x261e12]                                       |         rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x0040bebe test rax, rax                                                         |         
+                                                                                     |         if (rax == 0) {
+    0x0040bec1 jne 0x40bec8                                                          |             
+    0x0040bec3 call 0x4171b0                                                         |             rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                                                     |         }
+    0x0040bec8 mov qword [rbx + 0x218], rax                                          |         *((rbx + 0x218)) = rax;
+    0x0040becf mov rdi, rbx                                                          |         
+    0x0040bed2 mov rsi, r14                                                          |         
+    0x0040bed5 call 0x40bf00                                                         |         BloombergLP::bdlma::SequentialPool::reserveCapacity(unsigned long) (rbx, r14);
+    0x0040beda add rsp, 8                                                            |         
+    0x0040bede pop rbx                                                               |         
+    0x0040bedf pop r14                                                               |         
+    0x0040bee1 ret                                                                   |         return rax;
+                                                                                     | label_0:
+    0x0040bee2 mov rcx, 0xffffffffffffffff                                           |         rcx = 0xffffffffffffffff;
+    0x0040bee9 jmp 0x40be97                                                          |         
+                                                                                     |     } while (1);
+                                                                                     | }

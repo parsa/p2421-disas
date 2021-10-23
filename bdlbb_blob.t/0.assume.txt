@@ -1,0 +1,176 @@
+    ; assembly                                                                   | /* r2dec pseudo code output */
+                                                                                 | /* bdlbb_blob.t/assume @ 0x41dcd0 */
+                                                                                 | #include <stdint.h>
+                                                                                 |  
+    ; (fcn) method.BloombergLP::bdlbb::Blob.assertInvariants___const ()          | int64_t method_BloombergLP::bdlbb::Blob_assertInvariants_const (uint32_t arg1, int64_t arg9, int64_t arg10) {
+                                                                                 |     rdi = arg1;
+                                                                                 |     xmm2 = arg9;
+                                                                                 |     xmm3 = arg10;
+                                                                                 |     /* BloombergLP::bdlbb::Blob::assertInvariants() const */
+    0x0041dcd0 mov r9d, dword [rdi + 0x28]                                       |     r9d = *((rdi + 0x28));
+    0x0041dcd4 mov r8, qword [rdi]                                               |     r8 = *(rdi);
+    0x0041dcd7 mov rax, qword [rdi + 8]                                          |     rax = *((rdi + 8));
+    0x0041dcdb sub rax, r8                                                       |     rax -= r8;
+    0x0041dcde sar rax, 3                                                        |     rax >>= 3;
+    0x0041dce2 movabs rdx, 0xaaaaaaaaaaaaaaab                                    |     rdx = 0xaaaaaaaaaaaaaaab;
+    0x0041dcec imul rdx, rax                                                     |     rdx *= rax;
+    0x0041dcf0 test r9d, r9d                                                     |     
+                                                                                 |     if (r9d > 0) {
+    0x0041dcf3 jle 0x41dd05                                                      |         
+    0x0041dcf5 cmp r9d, 9                                                        |         
+                                                                                 |         if (r9d >= 9) {
+    0x0041dcf9 jae 0x41dd14                                                      |             goto label_0;
+                                                                                 |         }
+    0x0041dcfb xor r10d, r10d                                                    |         r10d = 0;
+    0x0041dcfe xor eax, eax                                                      |         eax = 0;
+    0x0041dd00 jmp 0x41ddcd                                                      |         goto label_1;
+                                                                                 |     }
+    0x0041dd05 xor ecx, ecx                                                      |     ecx = 0;
+    0x0041dd07 cmp ecx, edx                                                      |     
+                                                                                 |     if (ecx < edx) {
+    0x0041dd09 jl 0x41ddf6                                                       |         goto label_2;
+                                                                                 |     }
+    0x0041dd0f jmp 0x41defb                                                      |     goto label_3;
+                                                                                 | label_0:
+    0x0041dd14 mov eax, r9d                                                      |     eax = r9d;
+    0x0041dd17 and eax, 7                                                        |     eax &= 7;
+    0x0041dd1a test rax, rax                                                     |     
+    0x0041dd1d mov ecx, 8                                                        |     ecx = 8;
+                                                                                 |     if (rax != 0) {
+    0x0041dd22 cmovne rcx, rax                                                   |         rcx = rax;
+                                                                                 |     }
+    0x0041dd26 mov r10, r9                                                       |     r10 = r9;
+    0x0041dd29 sub r10, rcx                                                      |     r10 -= rcx;
+    0x0041dd2c lea rax, [r8 + 0x70]                                              |     rax = r8 + 0x70;
+    0x0041dd30 pxor xmm0, xmm0                                                   |     xmm0 = 0;
+    0x0041dd34 mov rcx, r10                                                      |     rcx = r10;
+    0x0041dd37 pxor xmm1, xmm1                                                   |     xmm1 = 0;
+    0x0041dd3b nop dword [rax + rax]                                             |     
+                                                                                 |     do {
+    0x0041dd40 movdqu xmm2, xmmword [rax - 0x60]                                 |         __asm ("movdqu xmm2, xmmword [rax - 0x60]");
+    0x0041dd45 movdqu xmm3, xmmword [rax - 0x50]                                 |         __asm ("movdqu xmm3, xmmword [rax - 0x50]");
+    0x0041dd4a movdqu xmm4, xmmword [rax - 0x30]                                 |         __asm ("movdqu xmm4, xmmword [rax - 0x30]");
+    0x0041dd4f movdqu xmm5, xmmword [rax - 0x20]                                 |         __asm ("movdqu xmm5, xmmword [rax - 0x20]");
+    0x0041dd54 pblendw xmm5, xmm4, 0xf                                           |         __asm ("pblendw xmm5, xmm4, 0xf");
+    0x0041dd5a movdqu xmm4, xmmword [rax + 0x40]                                 |         __asm ("movdqu xmm4, xmmword [rax + 0x40]");
+    0x0041dd5f movdqu xmm6, xmmword [rax + 0x30]                                 |         __asm ("movdqu xmm6, xmmword [rax + 0x30]");
+    0x0041dd64 pblendw xmm6, xmm4, 0xf0                                          |         __asm ("pblendw xmm6, xmm4, 0xf0");
+    0x0041dd6a movdqu xmm4, xmmword [rax]                                        |         __asm ("movdqu xmm4, xmmword [rax]");
+    0x0041dd6e movdqu xmm7, xmmword [rax + 0x10]                                 |         __asm ("movdqu xmm7, xmmword [rax + 0x10]");
+    0x0041dd73 pshufd xmm3, xmm3, 0xfa                                           |         __asm ("pshufd xmm3, xmm3, 0xfa");
+    0x0041dd78 pblendw xmm3, xmm2, 0xf3                                          |         __asm ("pblendw xmm3, xmm2, 0xf3");
+    0x0041dd7e pshufd xmm2, xmm5, 0x84                                           |         __asm ("pshufd xmm2, xmm5, 0x84");
+    0x0041dd83 pblendw xmm2, xmm3, 0xf                                           |         __asm ("pblendw xmm2, xmm3, 0xf");
+    0x0041dd89 paddd xmm0, xmm2                                                  |         __asm ("paddd xmm0, xmm2");
+    0x0041dd8d pshufd xmm2, xmm7, 0xfa                                           |         __asm ("pshufd xmm2, xmm7, 0xfa");
+    0x0041dd92 pblendw xmm2, xmm4, 0xf3                                          |         __asm ("pblendw xmm2, xmm4, 0xf3");
+    0x0041dd98 pshufd xmm3, xmm6, 0x84                                           |         __asm ("pshufd xmm3, xmm6, 0x84");
+    0x0041dd9d pblendw xmm3, xmm2, 0xf                                           |         __asm ("pblendw xmm3, xmm2, 0xf");
+    0x0041dda3 paddd xmm1, xmm3                                                  |         __asm ("paddd xmm1, xmm3");
+    0x0041dda7 add rax, 0xc0                                                     |         rax += 0xc0;
+    0x0041ddad add rcx, 0xfffffffffffffff8                                       |         rcx += 0xfffffffffffffff8;
+    0x0041ddb1 jne 0x41dd40                                                      |         
+                                                                                 |     } while (rcx != 0);
+    0x0041ddb3 paddd xmm1, xmm0                                                  |     __asm ("paddd xmm1, xmm0");
+    0x0041ddb7 pshufd xmm0, xmm1, 0xee                                           |     __asm ("pshufd xmm0, xmm1, 0xee");
+    0x0041ddbc paddd xmm0, xmm1                                                  |     __asm ("paddd xmm0, xmm1");
+    0x0041ddc0 pshufd xmm1, xmm0, 0x55                                           |     __asm ("pshufd xmm1, xmm0, 0x55");
+    0x0041ddc5 paddd xmm1, xmm0                                                  |     __asm ("paddd xmm1, xmm0");
+    0x0041ddc9 movd eax, xmm1                                                    |     eax = xmm1;
+                                                                                 | label_1:
+    0x0041ddcd lea rcx, [r10 + r10*2]                                            |     rcx = r10 * 3;
+    0x0041ddd1 lea rcx, [r8 + rcx*8 + 0x10]                                      |     rcx = r8 + rcx*8 + 0x10;
+    0x0041ddd6 mov rsi, r9                                                       |     rsi = r9;
+    0x0041ddd9 sub rsi, r10                                                      |     rsi -= r10;
+    0x0041dddc nop dword [rax]                                                   |     
+                                                                                 |     do {
+    0x0041dde0 add eax, dword [rcx]                                              |         eax += *(rcx);
+    0x0041dde2 add rcx, 0x18                                                     |         rcx += 0x18;
+    0x0041dde6 dec rsi                                                           |         rsi--;
+    0x0041dde9 jne 0x41dde0                                                      |         
+                                                                                 |     } while (rsi != 0);
+    0x0041ddeb mov ecx, r9d                                                      |     ecx = r9d;
+    0x0041ddee cmp ecx, edx                                                      |     
+                                                                                 |     if (ecx >= edx) {
+    0x0041ddf0 jge 0x41defb                                                      |         goto label_3;
+                                                                                 |     }
+                                                                                 | label_2:
+    0x0041ddf6 mov eax, dword [rdi + 0x2c]                                       |     eax = *((rdi + 0x2c));
+    0x0041ddf9 mov r11d, ecx                                                     |     r11d = ecx;
+    0x0041ddfc mov edx, edx                                                      |     
+    0x0041ddfe mov r10, rdx                                                      |     r10 = rdx;
+    0x0041de01 sub r10, r11                                                      |     r10 -= r11;
+    0x0041de04 cmp r10, 8                                                        |     
+                                                                                 |     if (r10 <= 8) {
+    0x0041de08 ja 0x41de12                                                       |         
+    0x0041de0a mov r10, r11                                                      |         r10 = r11;
+    0x0041de0d jmp 0x41dedd                                                      |         goto label_4;
+                                                                                 |     }
+    0x0041de12 mov esi, r10d                                                     |     esi = r10d;
+    0x0041de15 and esi, 7                                                        |     esi &= 7;
+    0x0041de18 test rsi, rsi                                                     |     
+    0x0041de1b mov ecx, 8                                                        |     ecx = 8;
+                                                                                 |     if (rsi != 0) {
+    0x0041de20 cmovne rcx, rsi                                                   |         rcx = rsi;
+                                                                                 |     }
+    0x0041de24 sub r10, rcx                                                      |     r10 -= rcx;
+    0x0041de27 add r10, r11                                                      |     r10 += r11;
+    0x0041de2a movd xmm0, eax                                                    |     xmm0 = eax;
+    0x0041de2e lea rax, [r11 + r11*2]                                            |     rax = r11 * 3;
+    0x0041de32 lea rax, [r8 + rax*8 + 0x70]                                      |     rax = r8 + rax*8 + 0x70;
+    0x0041de37 add rcx, r11                                                      |     rcx += r11;
+    0x0041de3a sub rcx, rdx                                                      |     rcx -= rdx;
+    0x0041de3d pxor xmm1, xmm1                                                   |     xmm1 = 0;
+    0x0041de41 nop word cs:[rax + rax]                                           |     
+    0x0041de4b nop dword [rax + rax]                                             |     
+                                                                                 |     do {
+    0x0041de50 movdqu xmm2, xmmword [rax - 0x60]                                 |         __asm ("movdqu xmm2, xmmword [rax - 0x60]");
+    0x0041de55 movdqu xmm3, xmmword [rax - 0x50]                                 |         __asm ("movdqu xmm3, xmmword [rax - 0x50]");
+    0x0041de5a movdqu xmm4, xmmword [rax - 0x30]                                 |         __asm ("movdqu xmm4, xmmword [rax - 0x30]");
+    0x0041de5f movdqu xmm5, xmmword [rax - 0x20]                                 |         __asm ("movdqu xmm5, xmmword [rax - 0x20]");
+    0x0041de64 pblendw xmm5, xmm4, 0xf                                           |         __asm ("pblendw xmm5, xmm4, 0xf");
+    0x0041de6a movdqu xmm4, xmmword [rax + 0x40]                                 |         __asm ("movdqu xmm4, xmmword [rax + 0x40]");
+    0x0041de6f movdqu xmm6, xmmword [rax + 0x30]                                 |         __asm ("movdqu xmm6, xmmword [rax + 0x30]");
+    0x0041de74 pblendw xmm6, xmm4, 0xf0                                          |         __asm ("pblendw xmm6, xmm4, 0xf0");
+    0x0041de7a movdqu xmm4, xmmword [rax]                                        |         __asm ("movdqu xmm4, xmmword [rax]");
+    0x0041de7e movdqu xmm7, xmmword [rax + 0x10]                                 |         __asm ("movdqu xmm7, xmmword [rax + 0x10]");
+    0x0041de83 pshufd xmm3, xmm3, 0xfa                                           |         __asm ("pshufd xmm3, xmm3, 0xfa");
+    0x0041de88 pblendw xmm3, xmm2, 0xf3                                          |         __asm ("pblendw xmm3, xmm2, 0xf3");
+    0x0041de8e pshufd xmm2, xmm5, 0x84                                           |         __asm ("pshufd xmm2, xmm5, 0x84");
+    0x0041de93 pblendw xmm2, xmm3, 0xf                                           |         __asm ("pblendw xmm2, xmm3, 0xf");
+    0x0041de99 paddd xmm0, xmm2                                                  |         __asm ("paddd xmm0, xmm2");
+    0x0041de9d pshufd xmm2, xmm7, 0xfa                                           |         __asm ("pshufd xmm2, xmm7, 0xfa");
+    0x0041dea2 pblendw xmm2, xmm4, 0xf3                                          |         __asm ("pblendw xmm2, xmm4, 0xf3");
+    0x0041dea8 pshufd xmm3, xmm6, 0x84                                           |         __asm ("pshufd xmm3, xmm6, 0x84");
+    0x0041dead pblendw xmm3, xmm2, 0xf                                           |         __asm ("pblendw xmm3, xmm2, 0xf");
+    0x0041deb3 paddd xmm1, xmm3                                                  |         __asm ("paddd xmm1, xmm3");
+    0x0041deb7 add rax, 0xc0                                                     |         rax += 0xc0;
+    0x0041debd add rcx, 8                                                        |         rcx += 8;
+    0x0041dec1 jne 0x41de50                                                      |         
+                                                                                 |     } while (rcx != 0);
+    0x0041dec3 paddd xmm1, xmm0                                                  |     __asm ("paddd xmm1, xmm0");
+    0x0041dec7 pshufd xmm0, xmm1, 0xee                                           |     __asm ("pshufd xmm0, xmm1, 0xee");
+    0x0041decc paddd xmm0, xmm1                                                  |     __asm ("paddd xmm0, xmm1");
+    0x0041ded0 pshufd xmm1, xmm0, 0x55                                           |     __asm ("pshufd xmm1, xmm0, 0x55");
+    0x0041ded5 paddd xmm1, xmm0                                                  |     __asm ("paddd xmm1, xmm0");
+    0x0041ded9 movd eax, xmm1                                                    |     eax = xmm1;
+                                                                                 | label_4:
+    0x0041dedd lea rcx, [r10 + r10*2]                                            |     rcx = r10 * 3;
+    0x0041dee1 lea rcx, [r8 + rcx*8 + 0x10]                                      |     rcx = r8 + rcx*8 + 0x10;
+    0x0041dee6 sub rdx, r10                                                      |     rdx -= r10;
+    0x0041dee9 nop dword [rax]                                                   |     
+                                                                                 |     do {
+    0x0041def0 add eax, dword [rcx]                                              |         eax += *(rcx);
+    0x0041def2 add rcx, 0x18                                                     |         rcx += 0x18;
+    0x0041def6 dec rdx                                                           |         rdx--;
+    0x0041def9 jne 0x41def0                                                      |         
+                                                                                 |     } while (rdx != 0);
+                                                                                 | label_3:
+    0x0041defb cmp r9d, 0xffffffff                                               |     
+                                                                                 |     if (r9d != 0xffffffff) {
+    0x0041deff je 0x41df05                                                       |         
+    0x0041df01 cmp dword [rdi + 0x24], 0                                         |         
+                                                                                 |     }
+    0x0041df05 xor eax, eax                                                      |     eax = 0;
+    0x0041df07 ret                                                               |     return rax;
+                                                                                 | }

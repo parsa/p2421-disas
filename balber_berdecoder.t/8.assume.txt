@@ -1,0 +1,36 @@
+    ; assembly                                                                       | /* r2dec pseudo code output */
+                                                                                     | /* balber_berdecoder.t/assume @ 0x4052c0 */
+                                                                                     | #include <stdint.h>
+                                                                                     |  
+    ; (fcn) method.BloombergLP::s_baltst::MyChoiceWithDefaultValues.reset__ ()       | int64_t method_BloombergLP::s_baltst::MyChoiceWithDefaultValues_reset_ (int64_t arg1) {
+                                                                                     |     rdi = arg1;
+                                                                                     |     /* BloombergLP::s_baltst::MyChoiceWithDefaultValues::reset() */
+    0x004052c0 push rbx                                                              |     
+    0x004052c1 mov rbx, rdi                                                          |     rbx = rdi;
+    0x004052c4 mov eax, dword [rdi + 0x30]                                           |     eax = *((rdi + 0x30));
+    0x004052c7 test eax, eax                                                         |     
+                                                                                     |     if (eax != 0) {
+    0x004052c9 je 0x4052f1                                                           |         
+    0x004052cb cmp eax, 2                                                            |         
+                                                                                     |         if (eax == 2) {
+    0x004052ce je 0x4052f1                                                           |             goto label_0;
+                                                                                     |         }
+    0x004052d0 cmp eax, 1                                                            |         
+                                                                                     |         if (eax != 1) {
+    0x004052d3 jne 0x4052f1                                                          |             goto label_0;
+                                                                                     |         }
+    0x004052d5 cmp qword [rbx + 0x20], 0x17                                          |         
+                                                                                     |         if (*((rbx + 0x20)) != 0x17) {
+    0x004052da je 0x4052e9                                                           |             
+    0x004052dc mov rsi, qword [rbx]                                                  |             rsi = *(rbx);
+    0x004052df mov rdi, qword [rbx + 0x28]                                           |             rdi = *((rbx + 0x28));
+    0x004052e3 mov rax, qword [rdi]                                                  |             rax = *(rdi);
+    0x004052e6 call qword [rax + 0x18]                                               |             uint64_t (*rax + 0x18)() ();
+                                                                                     |         }
+    0x004052e9 mov qword [rbx + 0x18], 0xffffffffffffffff                            |         *((rbx + 0x18)) = 0xffffffffffffffff;
+                                                                                     |     }
+                                                                                     | label_0:
+    0x004052f1 mov dword [rbx + 0x30], 0xffffffff                                    |     *((rbx + 0x30)) = 0xffffffff;
+    0x004052f8 pop rbx                                                               |     
+    0x004052f9 ret                                                                   |     return rax;
+                                                                                     | }

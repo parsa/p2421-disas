@@ -1,0 +1,75 @@
+    ; assembly                                                                       | /* r2dec pseudo code output */
+                                                                                     | /* ball_administration.t/none @ 0x424a90 */
+                                                                                     | #include <stdint.h>
+                                                                                     |  
+    ; (fcn) method.BloombergLP::bdlb::HashUtil.hash0_char_const__int__int_ ()        | uint64_t method_BloombergLP::bdlb::HashUtil_hash0_char_const_int_int_ (int64_t arg3, uint32_t arg2, int64_t arg1) {
+                                                                                     |     rdx = arg3;
+                                                                                     |     rsi = arg2;
+                                                                                     |     rdi = arg1;
+                                                                                     |     /* BloombergLP::bdlb::HashUtil::hash0(char const*, int, int) */
+    0x00424a90 mov r8d, edx                                                          |     r8d = edx;
+    0x00424a93 test esi, esi                                                         |     
+                                                                                     |     if (esi != 0) {
+    0x00424a95 je 0x424aab                                                           |         
+    0x00424a97 movsxd rdx, esi                                                       |         rdx = (int64_t) esi;
+    0x00424a9a lea rax, [rdx - 1]                                                    |         rax = rdx - 1;
+    0x00424a9e and esi, 3                                                            |         esi &= 3;
+    0x00424aa1 cmp rax, 3                                                            |         
+                                                                                     |         if (rax >= 3) {
+    0x00424aa5 jae 0x424ab2                                                          |             goto label_0;
+                                                                                     |         }
+    0x00424aa7 xor eax, eax                                                          |         eax = 0;
+    0x00424aa9 jmp 0x424b0d                                                          |         goto label_1;
+                                                                                     |     }
+    0x00424aab xor eax, eax                                                          |     eax = 0;
+    0x00424aad jmp 0x424b39                                                          |     goto label_2;
+                                                                                     | label_0:
+    0x00424ab2 and rdx, 0xfffffffffffffffc                                           |     rdx &= 0xfffffffffffffffc;
+    0x00424ab6 neg rdx                                                               |     rdx = -rdx;
+    0x00424ab9 xor eax, eax                                                          |     eax = 0;
+    0x00424abb nop dword [rax + rax]                                                 |     
+                                                                                     |     do {
+    0x00424ac0 movsx ecx, byte [rdi]                                                 |         ecx = *(rdi);
+    0x00424ac3 xor ecx, eax                                                          |         ecx ^= eax;
+    0x00424ac5 imul eax, ecx, 0x19660d                                               |         eax = ecx * 0x19660d;
+    0x00424acb add eax, 0x3c6ef35f                                                   |         eax += 0x3c6ef35f;
+    0x00424ad0 movsx ecx, byte [rdi + 1]                                             |         ecx = *((rdi + 1));
+    0x00424ad4 xor ecx, eax                                                          |         ecx ^= eax;
+    0x00424ad6 imul eax, ecx, 0x19660d                                               |         eax = ecx * 0x19660d;
+    0x00424adc add eax, 0x3c6ef35f                                                   |         eax += 0x3c6ef35f;
+    0x00424ae1 movsx ecx, byte [rdi + 2]                                             |         ecx = *((rdi + 2));
+    0x00424ae5 xor ecx, eax                                                          |         ecx ^= eax;
+    0x00424ae7 imul eax, ecx, 0x19660d                                               |         eax = ecx * 0x19660d;
+    0x00424aed add eax, 0x3c6ef35f                                                   |         eax += 0x3c6ef35f;
+    0x00424af2 movsx ecx, byte [rdi + 3]                                             |         ecx = *((rdi + 3));
+    0x00424af6 add rdi, 4                                                            |         rdi += 4;
+    0x00424afa xor ecx, eax                                                          |         ecx ^= eax;
+    0x00424afc imul eax, ecx, 0x19660d                                               |         eax = ecx * 0x19660d;
+    0x00424b02 add eax, 0x3c6ef35f                                                   |         eax += 0x3c6ef35f;
+    0x00424b07 add rdx, 4                                                            |         rdx += 4;
+    0x00424b0b jne 0x424ac0                                                          |         
+                                                                                     |     } while (rdx != 0);
+                                                                                     | label_1:
+    0x00424b0d test rsi, rsi                                                         |     
+                                                                                     |     if (rsi == 0) {
+    0x00424b10 je 0x424b39                                                           |         goto label_2;
+                                                                                     |     }
+    0x00424b12 xor edx, edx                                                          |     edx = 0;
+    0x00424b14 nop word cs:[rax + rax]                                               |     
+    0x00424b1e nop                                                                   |     
+                                                                                     |     do {
+    0x00424b20 movsx ecx, byte [rdi + rdx]                                           |         ecx = *((rdi + rdx));
+    0x00424b24 xor ecx, eax                                                          |         ecx ^= eax;
+    0x00424b26 imul eax, ecx, 0x19660d                                               |         eax = ecx * 0x19660d;
+    0x00424b2c add eax, 0x3c6ef35f                                                   |         eax += 0x3c6ef35f;
+    0x00424b31 inc rdx                                                               |         rdx++;
+    0x00424b34 cmp rsi, rdx                                                          |         
+    0x00424b37 jne 0x424b20                                                          |         
+                                                                                     |     } while (rsi != rdx);
+                                                                                     | label_2:
+    0x00424b39 xor edx, edx                                                          |     edx = 0;
+    0x00424b3b div r8d                                                               |     eax = edx:eax / r8d;
+                                                                                     |     edx = edx:eax % r8d;
+    0x00424b3e mov eax, edx                                                          |     eax = edx;
+    0x00424b40 ret                                                                   |     return rax;
+                                                                                     | }

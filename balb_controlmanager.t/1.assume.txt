@@ -1,0 +1,62 @@
+    ; assembly                                                                                                   | /* r2dec pseudo code output */
+                                                                                                                 | /* balb_controlmanager.t/assume @ 0x410510 */
+                                                                                                                 | #include <stdint.h>
+                                                                                                                 |  
+    ; (fcn) method.BloombergLP::bslstl::Function_Rep.copyInit_BloombergLP::bslstl::Function_Rep_const_ ()        | int64_t method_BloombergLP::bslstl::Function_Rep_copyInit_BloombergLP::bslstl::Function_Rep_const_ (int64_t arg2, int64_t arg1) {
+                                                                                                                 |     rsi = arg2;
+                                                                                                                 |     rdi = arg1;
+                                                                                                                 |     /* BloombergLP::bslstl::Function_Rep::copyInit(BloombergLP::bslstl::Function_Rep const&) */
+    0x00410510 push r15                                                                                          |     
+    0x00410512 push r14                                                                                          |     
+    0x00410514 push rbx                                                                                          |     
+    0x00410515 mov r14, rsi                                                                                      |     r14 = rsi;
+    0x00410518 mov r15, rdi                                                                                      |     r15 = rdi;
+    0x0041051b mov rax, qword [rsi + 0x38]                                                                       |     rax = *((rsi + 0x38));
+    0x0041051f test rax, rax                                                                                     |     
+                                                                                                                 |     if (rax != 0) {
+    0x00410522 je 0x410535                                                                                       |         
+    0x00410524 mov edi, 4                                                                                        |         edi = 4;
+    0x00410529 mov rsi, r14                                                                                      |         rsi = r14;
+    0x0041052c xor edx, edx                                                                                      |         edx = 0;
+    0x0041052e call rax                                                                                          |         rax = void (*rax)() ();
+    0x00410530 mov rbx, rax                                                                                      |         rbx = rax;
+    0x00410533 jmp 0x410537                                                                                      |         
+                                                                                                                 |     } else {
+    0x00410535 xor ebx, ebx                                                                                      |         ebx = 0;
+                                                                                                                 |     }
+    0x00410537 cmp qword [r15 + 0x38], 0                                                                         |     
+    0x0041053c cmp rbx, 0x31                                                                                     |     
+                                                                                                                 |     if (rbx >= 0x31) {
+    0x00410540 jb 0x41055b                                                                                       |         
+    0x00410542 lea rsi, [rbx + 0x31]                                                                             |         rsi = rbx + 0x31;
+    0x00410546 cmp rbx, 0xffffffffffffffcf                                                                       |         
+                                                                                                                 |         if (rbx <= 0xffffffffffffffcf) {
+    0x0041054a cmovbe rsi, rbx                                                                                   |             rsi = rbx;
+                                                                                                                 |         }
+    0x0041054e mov rdi, qword [r15 + 0x30]                                                                       |         rdi = *((r15 + 0x30));
+    0x00410552 mov rax, qword [rdi]                                                                              |         rax = *(rdi);
+    0x00410555 call qword [rax + 0x10]                                                                           |         rax = uint64_t (*rax + 0x10)() ();
+    0x00410558 mov qword [r15], rax                                                                              |         *(r15) = rax;
+                                                                                                                 |     }
+    0x0041055b mov rax, qword [r14 + 0x38]                                                                       |     rax = *((r14 + 0x38));
+    0x0041055f mov qword [r15 + 0x38], rax                                                                       |     *((r15 + 0x38)) = rax;
+    0x00410563 test rax, rax                                                                                     |     
+                                                                                                                 |     if (rax != 0) {
+    0x00410566 je 0x410586                                                                                       |         
+    0x00410568 mov rdx, r14                                                                                      |         rdx = r14;
+    0x0041056b cmp rbx, 0x31                                                                                     |         
+                                                                                                                 |         if (rbx >= 0x31) {
+    0x0041056f jb 0x410574                                                                                       |             
+    0x00410571 mov rdx, qword [r14]                                                                              |             rdx = *(r14);
+                                                                                                                 |         }
+    0x00410574 mov edi, 1                                                                                        |         edi = 1;
+    0x00410579 mov rsi, r15                                                                                      |         rsi = r15;
+    0x0041057c call rax                                                                                          |         void (*rax)() ();
+    0x0041057e mov rax, qword [r14 + 0x40]                                                                       |         rax = *((r14 + 0x40));
+    0x00410582 mov qword [r15 + 0x40], rax                                                                       |         *((r15 + 0x40)) = rax;
+                                                                                                                 |     }
+    0x00410586 pop rbx                                                                                           |     
+    0x00410587 pop r14                                                                                           |     
+    0x00410589 pop r15                                                                                           |     
+    0x0041058b ret                                                                                               |     return rax;
+                                                                                                                 | }

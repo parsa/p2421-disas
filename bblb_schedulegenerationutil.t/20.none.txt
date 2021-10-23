@@ -1,0 +1,113 @@
+    ; assembly                                                                                                   | /* r2dec pseudo code output */
+                                                                                                                 | /* bblb_schedulegenerationutil.t/none @ 0x40cca0 */
+                                                                                                                 | #include <stdint.h>
+                                                                                                                 |  
+    ; (fcn) method.BloombergLP::bdlt::Calendar.addWeekendDays_BloombergLP::bdlt::DayOfWeekSet_const_ ()          | int64_t method_BloombergLP::bdlt::Calendar_addWeekendDays_BloombergLP::bdlt::DayOfWeekSet_const_ (int64_t arg4, int64_t arg2, int64_t arg1) {
+                                                                                                                 |     uint32_t var_1h;
+                                                                                                                 |     int64_t var_8h;
+                                                                                                                 |     int64_t var_9h;
+                                                                                                                 |     rcx = arg4;
+                                                                                                                 |     rsi = arg2;
+                                                                                                                 |     rdi = arg1;
+                                                                                                                 |     /* BloombergLP::bdlt::Calendar::addWeekendDays(BloombergLP::bdlt::DayOfWeekSet const&) */
+    0x0040cca0 push r15                                                                                          |     
+    0x0040cca2 push r14                                                                                          |     
+    0x0040cca4 push r13                                                                                          |     
+    0x0040cca6 push r12                                                                                          |     
+    0x0040cca8 push rbx                                                                                          |     
+    0x0040cca9 sub rsp, 0x10                                                                                     |     
+    0x0040ccad mov r14, rsi                                                                                      |     r14 = rsi;
+    0x0040ccb0 mov rbx, rdi                                                                                      |     rbx = rdi;
+    0x0040ccb3 movzx esi, byte [rsi]                                                                             |     esi = *(rsi);
+    0x0040ccb6 test esi, esi                                                                                     |     
+                                                                                                                 |     if (esi == 0) {
+    0x0040ccb8 je 0x40ccf2                                                                                       |         goto label_1;
+                                                                                                                 |     }
+    0x0040ccba lea rdi, [rsp + 8]                                                                                |     
+    0x0040ccbf mov edx, 1                                                                                        |     edx = 1;
+    0x0040ccc4 call 0x40e6e0                                                                                     |     BloombergLP::bdlt::DayOfWeekSet_Iter::DayOfWeekSet_Iter(int,int) (rsp + 8);
+    0x0040ccc9 movzx esi, byte [r14]                                                                             |     esi = *(r14);
+    0x0040cccd mov rdi, rsp                                                                                      |     
+    0x0040ccd0 mov edx, 8                                                                                        |     edx = 8;
+    0x0040ccd5 call 0x40e6e0                                                                                     |     BloombergLP::bdlt::DayOfWeekSet_Iter::DayOfWeekSet_Iter(int,int) (rsp);
+    0x0040ccda mov al, byte [rsp + 9]                                                                            |     al = *((rsp + 9));
+    0x0040ccde cmp al, byte [rsp + 1]                                                                            |     
+    0x0040cce2 jne 0x40cd0a                                                                                      |     
+                                                                                                                 |     while (al == *((rsp + 1))) {
+    0x0040cce4 add rsp, 0x10                                                                                     |         
+    0x0040cce8 pop rbx                                                                                           |         
+    0x0040cce9 pop r12                                                                                           |         
+    0x0040cceb pop r13                                                                                           |         
+    0x0040cced pop r14                                                                                           |         
+    0x0040ccef pop r15                                                                                           |         
+    0x0040ccf1 ret                                                                                               |         return al;
+                                                                                                                 | label_1:
+    0x0040ccf2 mov rdi, rbx                                                                                      |         rdi = rbx;
+    0x0040ccf5 mov rsi, r14                                                                                      |         rsi = r14;
+    0x0040ccf8 add rsp, 0x10                                                                                     |         
+    0x0040ccfc pop rbx                                                                                           |         
+    0x0040ccfd pop r12                                                                                           |         
+    0x0040ccff pop r13                                                                                           |         
+    0x0040cd01 pop r14                                                                                           |         
+    0x0040cd03 pop r15                                                                                           |         
+    0x0040cd05 jmp 0x4106e0                                                                                      |         void (*0x4106e0)() ();
+    0x0040cd0a lea r15, [rsp + 8]                                                                                |         r15 = rsp + 8;
+    0x0040cd0f mov r12, rsp                                                                                      |         r12 = rsp;
+    0x0040cd12 jmp 0x40cd43                                                                                      |         goto label_2;
+                                                                                                                 | label_0:
+    0x0040cd20 mov rdi, r15                                                                                      |         
+    0x0040cd23 call 0x40e710                                                                                     |         BloombergLP::bdlt::DayOfWeekSet_Iter::operator++() (r15);
+    0x0040cd28 movzx esi, byte [r14]                                                                             |         esi = *(r14);
+    0x0040cd2c mov rdi, r12                                                                                      |         
+    0x0040cd2f mov edx, 8                                                                                        |         edx = 8;
+    0x0040cd34 call 0x40e6e0                                                                                     |         BloombergLP::bdlt::DayOfWeekSet_Iter::DayOfWeekSet_Iter(int,int) (r12);
+    0x0040cd39 mov al, byte [rsp + 9]                                                                            |         al = *((rsp + 9));
+    0x0040cd3d cmp al, byte [rsp + 1]                                                                            |         
+    0x0040cd41 je 0x40cce4                                                                                       |         
+                                                                                                                 |     }
+                                                                                                                 | label_2:
+    0x0040cd43 movsx rax, al                                                                                     |     rax = (int64_t) al;
+    0x0040cd47 mov r13d, dword [rax*4 + 0x449370]                                                                |     r13d = *((rax*4 + obj.BloombergLP::bdlt::DayOfWeekSet_Iter::s_dayOfWeekArray));
+    0x0040cd4f mov rdi, rbx                                                                                      |     
+    0x0040cd52 mov esi, r13d                                                                                     |     
+    0x0040cd55 call 0x410680                                                                                     |     BloombergLP::bdlt::PackedCalendar::addWeekendDay(BloombergLP::bdlt::DayOfWeek::Enum) (rbx, r13d);
+    0x0040cd5a cmp dword [rbx + 0xc8], 0                                                                         |     
+                                                                                                                 |     if (*((rbx + 0xc8)) == 0) {
+    0x0040cd61 je 0x40cd20                                                                                       |         goto label_0;
+                                                                                                                 |     }
+    0x0040cd63 mov edi, dword [rbx]                                                                              |     
+    0x0040cd65 call 0x4143f0                                                                                     |     eax = BloombergLP::bdlt::PosixDateImpUtil::serialToDayOfWeek(int) (*(rbx));
+    0x0040cd6a sub r13d, eax                                                                                     |     r13d -= eax;
+    0x0040cd6d mov eax, r13d                                                                                     |     eax = r13d;
+    0x0040cd70 add eax, 7                                                                                        |     eax += 7;
+    0x0040cd73 cdqe                                                                                              |     rax = (int64_t) eax;
+    0x0040cd75 imul rax, rax, 0xffffffff92492493                                                                 |     rax *= 0xffffffff92492493;
+    0x0040cd7c shr rax, 0x20                                                                                     |     rax >>= 0x20;
+    0x0040cd80 lea eax, [rax + r13 + 7]                                                                          |     eax = rax + r13 + 7;
+    0x0040cd85 mov ecx, eax                                                                                      |     ecx = eax;
+    0x0040cd87 shr ecx, 0x1f                                                                                     |     ecx >>= 0x1f;
+    0x0040cd8a sar eax, 2                                                                                        |     eax >>= 2;
+    0x0040cd8d add eax, ecx                                                                                      |     eax += ecx;
+    0x0040cd8f lea ecx, [rax*8]                                                                                  |     ecx = rax*8;
+    0x0040cd96 sub eax, ecx                                                                                      |     eax -= ecx;
+    0x0040cd98 lea eax, [r13 + rax + 7]                                                                          |     eax = r13 + rax + 7;
+    0x0040cd9d cmp eax, dword [rbx + 0xc8]                                                                       |     
+                                                                                                                 |     if (eax >= *((rbx + 0xc8))) {
+    0x0040cda3 jge 0x40cd20                                                                                      |         goto label_0;
+                                                                                                                 |     }
+    0x0040cda9 movsxd rcx, eax                                                                                   |     rcx = (int64_t) eax;
+    0x0040cdac nop dword [rax]                                                                                   |     
+                                                                                                                 |     do {
+    0x0040cdb0 mov rax, qword [rbx + 0xa8]                                                                       |         rax = *((rbx + 0xa8));
+    0x0040cdb7 mov rdx, rcx                                                                                      |         rdx = rcx;
+    0x0040cdba mov esi, 1                                                                                        |         esi = 1;
+    0x0040cdbf shl rsi, cl                                                                                       |         rsi <<= cl;
+    0x0040cdc2 shr rdx, 6                                                                                        |         rdx >>= 6;
+    0x0040cdc6 or qword [rax + rdx*8], rsi                                                                       |         *((rax + rdx*8)) |= rsi;
+    0x0040cdca add rcx, 7                                                                                        |         rcx += 7;
+    0x0040cdce movsxd rax, dword [rbx + 0xc8]                                                                    |         rax = *((rbx + 0xc8));
+    0x0040cdd5 cmp rcx, rax                                                                                      |         
+    0x0040cdd8 jl 0x40cdb0                                                                                       |         
+                                                                                                                 |     } while (rcx < rax);
+    0x0040cdda jmp 0x40cd20                                                                                      |     goto label_0;
+                                                                                                                 | }

@@ -1,0 +1,38 @@
+    ; assembly                                                           | /* r2dec pseudo code output */
+                                                                         | /* balb_testmessages.t/assume @ 0x40aa00 */
+                                                                         | #include <stdint.h>
+                                                                         |  
+    ; (fcn) method.BloombergLP::balb::Choice3.makeSelection2__ ()        | int64_t method_BloombergLP::balb::Choice3_makeSelection2_ (int64_t arg1) {
+                                                                         |     rdi = arg1;
+                                                                         |     /* BloombergLP::balb::Choice3::makeSelection2() */
+    0x0040aa00 push rbx                                                  |     
+    0x0040aa01 mov rbx, rdi                                              |     rbx = rdi;
+    0x0040aa04 mov eax, dword [rdi + 0x170]                              |     eax = *((rdi + 0x170));
+    0x0040aa0a cmp rax, 3                                                |     
+                                                                         |     if (rax <= 3) {
+    0x0040aa0e ja 0x40aa42                                               |         
+                                                                         |         /* switch table (4 cases) at 0x446308 */
+    0x0040aa10 jmp qword [rax*8 + 0x446308]                              |         
+    0x0040aa17 mov rdi, rbx                                              |         
+    0x0040aa1a call 0x409400                                             |         BloombergLP::balb::Sequence6::~Sequence6() (rbx);
+    0x0040aa1f jmp 0x40aa42                                              |         goto label_0;
+    0x0040aa21 mov byte [rbx], 0                                         |         *(rbx) = 0;
+    0x0040aa24 jmp 0x40aa4f                                              |         goto label_1;
+    0x0040aa26 cmp qword [rbx + 0x20], 0x17                              |         
+                                                                         |         if (*((rbx + 0x20)) != 0x17) {
+    0x0040aa2b je 0x40aa3a                                               |             
+    0x0040aa2d mov rsi, qword [rbx]                                      |             rsi = *(rbx);
+    0x0040aa30 mov rdi, qword [rbx + 0x28]                               |             rdi = *((rbx + 0x28));
+    0x0040aa34 mov rax, qword [rdi]                                      |             rax = *(rdi);
+    0x0040aa37 call qword [rax + 0x18]                                   |             uint64_t (*rax + 0x18)() ();
+                                                                         |         }
+    0x0040aa3a mov qword [rbx + 0x18], 0xffffffffffffffff                |         *((rbx + 0x18)) = 0xffffffffffffffff;
+                                                                         |     }
+                                                                         | label_0:
+    0x0040aa42 mov byte [rbx], 0                                         |     *(rbx) = 0;
+    0x0040aa45 mov dword [rbx + 0x170], 1                                |     *((rbx + 0x170)) = 1;
+                                                                         | label_1:
+    0x0040aa4f mov rax, rbx                                              |     rax = rbx;
+    0x0040aa52 pop rbx                                                   |     
+    0x0040aa53 ret                                                       |     return rax;
+                                                                         | }

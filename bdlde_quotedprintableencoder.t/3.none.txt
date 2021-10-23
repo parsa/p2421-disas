@@ -1,0 +1,55 @@
+    ; assembly                                                                                           | /* r2dec pseudo code output */
+                                                                                                         | /* bdlde_quotedprintableencoder.t/none @ 0x41ece0 */
+                                                                                                         | #include <stdint.h>
+                                                                                                         |  
+    ; (fcn) method.BloombergLP::bdlde::QuotedPrintableEncoder.appendAsHex_char__char__bool_ ()           | int64_t method_BloombergLP::bdlde::QuotedPrintableEncoder_appendAsHex_char_char_bool_ (int64_t arg4, int64_t arg3, int64_t arg2, int64_t arg1) {
+                                                                                                         |     rcx = arg4;
+                                                                                                         |     rdx = arg3;
+                                                                                                         |     rsi = arg2;
+                                                                                                         |     rdi = arg1;
+                                                                                                         |     /* BloombergLP::bdlde::QuotedPrintableEncoder::appendAsHex(char*, char, bool) */
+    0x0041ece0 movzx r9d, dl                                                                             |     r9d = (int32_t) dl;
+    0x0041ece4 and edx, 0xf                                                                              |     edx &= 0xf;
+    0x0041ece7 mov r8b, byte [rdx + 0x44fe45]                                                            |     r8b = *((rdx + str.0123456789ABCDEF));
+    0x0041ecee movsxd rdx, dword [rdi + 0x28]                                                            |     rdx = *((rdi + 0x28));
+    0x0041ecf2 lea eax, [rdx + 1]                                                                        |     eax = rdx + 1;
+    0x0041ecf5 mov dword [rdi + 0x28], eax                                                               |     *((rdi + 0x28)) = eax;
+    0x0041ecf8 mov byte [rdi + rdx + 0x20], r8b                                                          |     *((rdi + rdx + 0x20)) = r8b;
+    0x0041ecfd shr r9, 4                                                                                 |     r9 >>= 4;
+    0x0041ed01 mov r8b, byte [r9 + 0x44fe45]                                                             |     r8b = *((r9 + str.0123456789ABCDEF));
+    0x0041ed08 movsxd rdx, dword [rdi + 0x28]                                                            |     rdx = *((rdi + 0x28));
+    0x0041ed0c lea eax, [rdx + 1]                                                                        |     eax = rdx + 1;
+    0x0041ed0f mov dword [rdi + 0x28], eax                                                               |     *((rdi + 0x28)) = eax;
+    0x0041ed12 mov byte [rdi + rdx + 0x20], r8b                                                          |     *((rdi + rdx + 0x20)) = r8b;
+    0x0041ed17 mov eax, dword [rdi + 4]                                                                  |     eax = *((rdi + 4));
+    0x0041ed1a mov edx, dword [rdi + 8]                                                                  |     edx = *((rdi + 8));
+    0x0041ed1d sub edx, dword [rdi + 0x2c]                                                               |     edx -= *((rdi + 0x2c));
+    0x0041ed20 lea eax, [rcx + rax - 3]                                                                  |     eax = rcx + rax - 3;
+    0x0041ed24 cmp edx, eax                                                                              |     
+                                                                                                         |     if (edx < eax) {
+    0x0041ed26 jge 0x41ed33                                                                              |         
+    0x0041ed28 mov byte [rsi], 0x3d                                                                      |         *(rsi) = 0x3d;
+    0x0041ed2b inc dword [rdi + 8]                                                                       |         *((rdi + 8))++;
+    0x0041ed2e mov byte [rdi + 0x31], 0                                                                  |         *((rdi + 0x31)) = 0;
+    0x0041ed32 ret                                                                                       |         return eax;
+                                                                                                         |     }
+    0x0041ed33 movsxd rax, dword [rdi + 0x28]                                                            |     rax = *((rdi + 0x28));
+    0x0041ed37 lea ecx, [rax + 1]                                                                        |     ecx = rax + 1;
+    0x0041ed3a mov dword [rdi + 0x28], ecx                                                               |     *((rdi + 0x28)) = ecx;
+    0x0041ed3d mov byte [rdi + rax + 0x20], 0x3d                                                         |     *((rdi + rax + 0x20)) = 0x3d;
+    0x0041ed42 mov byte [rsi], 0x3d                                                                      |     *(rsi) = 0x3d;
+    0x0041ed45 inc dword [rdi + 8]                                                                       |     *((rdi + 8))++;
+    0x0041ed48 movsxd rax, dword [rdi + 0x28]                                                            |     rax = *((rdi + 0x28));
+    0x0041ed4c lea ecx, [rax + 1]                                                                        |     ecx = rax + 1;
+    0x0041ed4f mov dword [rdi + 0x28], ecx                                                               |     *((rdi + 0x28)) = ecx;
+    0x0041ed52 mov byte [rdi + rax + 0x20], 0xa                                                          |     *((rdi + rax + 0x20)) = 0xa;
+    0x0041ed57 movsxd rax, dword [rdi + 0x28]                                                            |     rax = *((rdi + 0x28));
+    0x0041ed5b lea ecx, [rax + 1]                                                                        |     ecx = rax + 1;
+    0x0041ed5e mov dword [rdi + 0x28], ecx                                                               |     *((rdi + 0x28)) = ecx;
+    0x0041ed61 mov byte [rdi + rax + 0x20], 0xd                                                          |     *((rdi + rax + 0x20)) = 0xd;
+    0x0041ed66 mov eax, dword [rdi + 8]                                                                  |     eax = *((rdi + 8));
+    0x0041ed69 add eax, 2                                                                                |     eax += 2;
+    0x0041ed6c mov dword [rdi + 0x2c], eax                                                               |     *((rdi + 0x2c)) = eax;
+    0x0041ed6f mov byte [rdi + 0x31], 0                                                                  |     *((rdi + 0x31)) = 0;
+    0x0041ed73 ret                                                                                       |     return rax;
+                                                                                                         | }

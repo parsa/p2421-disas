@@ -1,0 +1,71 @@
+    ; assembly                                                                                                                                                               | /* r2dec pseudo code output */
+                                                                                                                                                                             | /* bdlcc_fixedqueue.t/assume @ 0x420cb0 */
+                                                                                                                                                                             | #include <stdint.h>
+                                                                                                                                                                             |  
+    ; (fcn) method.BloombergLP::bslmt::TimedSemaphoreImpl_BloombergLP::bslmt::Platform::PosixAdvTimedSemaphore_.timedWait_BloombergLP::bsls::TimeInterval_const_ ()          | uint64_t method_BloombergLP::bslmt::TimedSemaphoreImpl_BloombergLP::bslmt::Platform::PosixAdvTimedSemaphore_timedWait_BloombergLP::bsls::TimeInterval_const_ (uint32_t arg2, uint32_t arg1) {
+                                                                                                                                                                             |     int64_t var_8h;
+                                                                                                                                                                             |     uint32_t var_10h;
+                                                                                                                                                                             |     rsi = arg2;
+                                                                                                                                                                             |     rdi = arg1;
+                                                                                                                                                                             |     /* BloombergLP::bslmt::TimedSemaphoreImpl<BloombergLP::bslmt::Platform::PosixAdvTimedSemaphore>::timedWait(BloombergLP::bsls::TimeInterval const&) */
+    0x00420cb0 push rbp                                                                                                                                                      |     
+    0x00420cb1 push r14                                                                                                                                                      |     
+    0x00420cb3 push rbx                                                                                                                                                      |     
+    0x00420cb4 sub rsp, 0x20                                                                                                                                                 |     
+    0x00420cb8 mov rbx, rdi                                                                                                                                                  |     rbx = rdi;
+    0x00420cbb movups xmm0, xmmword [rsi]                                                                                                                                    |     __asm ("movups xmm0, xmmword [rsi]");
+    0x00420cbe movaps xmmword [rsp + 0x10], xmm0                                                                                                                             |     *((rsp + 0x10)) = xmm0;
+    0x00420cc3 cmp dword [rdi + 0x20], 0                                                                                                                                     |     
+                                                                                                                                                                             |     if (*((rdi + 0x20)) != 0) {
+    0x00420cc7 je 0x420d0f                                                                                                                                                   |         
+    0x00420cc9 call 0x421320                                                                                                                                                 |         rax = BloombergLP::bsls::SystemTime::nowRealtimeClock() ();
+    0x00420cce mov r14, rax                                                                                                                                                  |         r14 = rax;
+    0x00420cd1 mov ebp, edx                                                                                                                                                  |         
+    0x00420cd3 cmp dword [rbx + 0x20], 1                                                                                                                                     |         
+                                                                                                                                                                             |         if (*((rbx + 0x20)) == 1) {
+    0x00420cd7 jne 0x420ce0                                                                                                                                                  |             
+    0x00420cd9 call 0x421290                                                                                                                                                 |             BloombergLP::bsls::SystemTime::nowMonotonicClock() ();
+    0x00420cde jmp 0x420ce5                                                                                                                                                  |             
+                                                                                                                                                                             |         } else {
+    0x00420ce0 call 0x421320                                                                                                                                                 |             rax = BloombergLP::bsls::SystemTime::nowRealtimeClock() ();
+                                                                                                                                                                             |         }
+    0x00420ce5 mov qword [rsp], r14                                                                                                                                          |         *(rsp) = r14;
+    0x00420ce9 mov dword [rsp + 8], ebp                                                                                                                                      |         *((rsp + 8)) = ebp;
+    0x00420ced neg rax                                                                                                                                                       |         rax = -rax;
+    0x00420cf0 neg edx                                                                                                                                                       |         edx = -edx;
+    0x00420cf2 mov rdi, rsp                                                                                                                                                  |         
+    0x00420cf5 mov rsi, rax                                                                                                                                                  |         
+    0x00420cf8 call 0x421440                                                                                                                                                 |         BloombergLP::bsls::TimeInterval::addInterval(long long,int) (rsp, rax, rdx);
+    0x00420cfd mov rsi, qword [rsp]                                                                                                                                          |         
+    0x00420d01 mov edx, dword [rsp + 8]                                                                                                                                      |         
+    0x00420d05 lea rdi, [rsp + 0x10]                                                                                                                                         |         
+    0x00420d0a call 0x421440                                                                                                                                                 |         BloombergLP::bsls::TimeInterval::addInterval(long long,int) (rsp + 0x10, *(rsp), *((rsp + 8)));
+                                                                                                                                                                             |     }
+    0x00420d0f mov rbp, rsp                                                                                                                                                  |     
+    0x00420d12 lea rsi, [rsp + 0x10]                                                                                                                                         |     
+    0x00420d17 mov rdi, rbp                                                                                                                                                  |     
+    0x00420d1a call 0x41fdc0                                                                                                                                                 |     BloombergLP::bslmt::SaturatedTimeConversionImpUtil::toTimeSpec(timespec*,BloombergLP::bsls::TimeIntervalconst&) (rbp, rsp + 0x10);
+    0x00420d1f nop                                                                                                                                                           |     
+                                                                                                                                                                             |     do {
+    0x00420d20 mov rdi, rbx                                                                                                                                                  |         rdi = rbx;
+    0x00420d23 mov rsi, rbp                                                                                                                                                  |         rsi = rbp;
+    0x00420d26 call 0x403e20                                                                                                                                                 |         eax = sem_timedwait ();
+    0x00420d2b test eax, eax                                                                                                                                                 |         
+                                                                                                                                                                             |         if (eax == 0) {
+    0x00420d2d je 0x420d40                                                                                                                                                   |             goto label_0;
+                                                                                                                                                                             |         }
+    0x00420d2f call 0x403ff0                                                                                                                                                 |         rax = errno_location ();
+    0x00420d34 cmp dword [rax], 4                                                                                                                                            |         
+    0x00420d37 je 0x420d20                                                                                                                                                   |         
+                                                                                                                                                                             |     } while (*(rax) == 4);
+    0x00420d39 mov eax, 0xffffffff                                                                                                                                           |     eax = 0xffffffff;
+    0x00420d3e jmp 0x420d42                                                                                                                                                  |     goto label_1;
+                                                                                                                                                                             | label_0:
+    0x00420d40 xor eax, eax                                                                                                                                                  |     eax = 0;
+                                                                                                                                                                             | label_1:
+    0x00420d42 add rsp, 0x20                                                                                                                                                 |     
+    0x00420d46 pop rbx                                                                                                                                                       |     
+    0x00420d47 pop r14                                                                                                                                                       |     
+    0x00420d49 pop rbp                                                                                                                                                       |     
+    0x00420d4a ret                                                                                                                                                           |     return rax;
+                                                                                                                                                                             | }

@@ -1,0 +1,124 @@
+    ; assembly                                                                                                                                           | /* r2dec pseudo code output */
+                                                                                                                                                         | /* balm_collector.t/none @ 0x40c380 */
+                                                                                                                                                         | #include <stdint.h>
+                                                                                                                                                         |  
+    ; (fcn) method.BloombergLP::bdlcc::FixedQueueIndexManager.reservePopIndexForClear_unsigned_int__unsigned_int__unsigned_int__unsigned_int_ ()         | uint64_t method_BloombergLP::bdlcc::FixedQueueIndexManager_reservePopIndexForClear_unsigned_int_unsigned_int_unsigned_int_unsigned_int_ (int64_t arg5, int64_t arg4, int64_t arg3, int64_t arg2, int64_t arg1) {
+                                                                                                                                                         |     int64_t var_8h;
+                                                                                                                                                         |     int64_t var_10h;
+                                                                                                                                                         |     r8 = arg5;
+                                                                                                                                                         |     rcx = arg4;
+                                                                                                                                                         |     rdx = arg3;
+                                                                                                                                                         |     rsi = arg2;
+                                                                                                                                                         |     rdi = arg1;
+                                                                                                                                                         |     /* BloombergLP::bdlcc::FixedQueueIndexManager::reservePopIndexForClear(unsigned int*, unsigned int*, unsigned int, unsigned int) */
+    0x0040c380 push rbp                                                                                                                                  |     
+    0x0040c381 push r15                                                                                                                                  |     
+    0x0040c383 push r14                                                                                                                                  |     
+    0x0040c385 push r13                                                                                                                                  |     
+    0x0040c387 push r12                                                                                                                                  |     
+    0x0040c389 push rbx                                                                                                                                  |     
+    0x0040c38a sub rsp, 0x18                                                                                                                             |     
+    0x0040c38e mov r12d, r8d                                                                                                                             |     r12d = r8d;
+    0x0040c391 mov r14d, ecx                                                                                                                             |     r14d = ecx;
+    0x0040c394 mov qword [rsp + 0x10], rdx                                                                                                               |     *((rsp + 0x10)) = rdx;
+    0x0040c399 mov qword [rsp + 8], rsi                                                                                                                  |     *((rsp + 8)) = rsi;
+    0x0040c39e mov r15, rdi                                                                                                                              |     r15 = rdi;
+    0x0040c3a1 mov ecx, dword [rdi + 0x40]                                                                                                               |     ecx = *((rdi + 0x40));
+    0x0040c3a4 xor r13d, r13d                                                                                                                            |     r13d = 0;
+    0x0040c3a7 jmp 0x40c3b9                                                                                                                              |     
+                                                                                                                                                         |     while (eax <= 1) {
+    0x0040c3b0 call 0x403b80                                                                                                                             |         sched_yield ();
+    0x0040c3b5 mov ecx, dword [r15 + 0x40]                                                                                                               |         ecx = *((r15 + 0x40));
+                                                                                                                                                         | label_0:
+    0x0040c3b9 mov rsi, qword [r15 + 0x80]                                                                                                               |         rsi = *((r15 + 0x80));
+    0x0040c3c0 mov edi, esi                                                                                                                              |         edi = esi;
+    0x0040c3c2 imul edi, r14d                                                                                                                            |         edi *= r14d;
+    0x0040c3c6 mov edx, dword [r15 + 0x8c]                                                                                                               |         edx = *((r15 + 0x8c));
+    0x0040c3cd inc edx                                                                                                                                   |         edx++;
+    0x0040c3cf mov eax, r12d                                                                                                                             |         eax = r12d;
+    0x0040c3d2 sub eax, ecx                                                                                                                              |         eax -= ecx;
+    0x0040c3d4 add eax, edi                                                                                                                              |         eax += edi;
+    0x0040c3d6 mov edi, edx                                                                                                                              |         edi = edx;
+    0x0040c3d8 shr edi, 1                                                                                                                                |         edi >>= 1;
+    0x0040c3da cmp eax, edi                                                                                                                              |         
+                                                                                                                                                         |         if (eax > edi) {
+    0x0040c3dc jle 0x40c3f0                                                                                                                              |             
+    0x0040c3de sub eax, edx                                                                                                                              |             eax -= edx;
+    0x0040c3e0 test eax, eax                                                                                                                             |             
+                                                                                                                                                         |             if (eax != 0) {
+    0x0040c3e2 jne 0x40c3fe                                                                                                                              |                 goto label_1;
+                                                                                                                                                         |             }
+    0x0040c3e4 jmp 0x40c455                                                                                                                              |             goto label_2;
+                                                                                                                                                         |         }
+    0x0040c3f0 neg edi                                                                                                                                   |         edi = -edi;
+    0x0040c3f2 cmp eax, edi                                                                                                                              |         
+                                                                                                                                                         |         if (eax >= edi) {
+    0x0040c3f4 cmovge edx, r13d                                                                                                                          |             edx = r13d;
+                                                                                                                                                         |         }
+    0x0040c3f8 add eax, edx                                                                                                                              |         eax += edx;
+    0x0040c3fa test eax, eax                                                                                                                             |         
+                                                                                                                                                         |         if (eax == 0) {
+    0x0040c3fc je 0x40c455                                                                                                                               |             goto label_2;
+                                                                                                                                                         |         }
+                                                                                                                                                         | label_1:
+    0x0040c3fe mov eax, ecx                                                                                                                              |         eax = ecx;
+    0x0040c400 xor edx, edx                                                                                                                              |         edx = 0;
+    0x0040c402 div rsi                                                                                                                                   |         rax = rdx:rax / rsi;
+                                                                                                                                                         |         rdx = rdx:rax % rsi;
+    0x0040c405 mov rsi, rax                                                                                                                              |         rsi = rax;
+    0x0040c408 lea edi, [rax*4 + 2]                                                                                                                      |         edi = rax*4 + 2;
+    0x0040c40f lea ebp, [rax*4 + 3]                                                                                                                      |         ebp = rax*4 + 3;
+    0x0040c416 mov rbx, qword [r15 + 0x90]                                                                                                               |         rbx = *((r15 + 0x90));
+    0x0040c41d mov eax, edi                                                                                                                              |         eax = edi;
+    0x0040c41f lock cmpxchg dword [rbx + rdx*4], ebp                                                                                                     |         __asm ("lock cmpxchg dword [rbx + rdx*4], ebp");
+    0x0040c424 cmp edi, eax                                                                                                                              |         
+                                                                                                                                                         |         if (edi == eax) {
+    0x0040c426 je 0x40c45c                                                                                                                               |             goto label_3;
+                                                                                                                                                         |         }
+    0x0040c428 and eax, 3                                                                                                                                |         eax &= 3;
+    0x0040c42b dec eax                                                                                                                                   |         eax--;
+    0x0040c42d cmp eax, 1                                                                                                                                |         
+    0x0040c430 jbe 0x40c3b0                                                                                                                              |         
+                                                                                                                                                         |     }
+    0x0040c436 cmp dword [r15 + 0x8c], ecx                                                                                                               |     
+                                                                                                                                                         |     if (*((r15 + 0x8c)) == ecx) {
+    0x0040c43d je 0x40c451                                                                                                                               |         goto label_4;
+                                                                                                                                                         |     }
+    0x0040c43f lea edx, [rcx + 1]                                                                                                                        |     edx = rcx + 1;
+                                                                                                                                                         |     do {
+    0x0040c442 mov eax, ecx                                                                                                                              |         eax = ecx;
+    0x0040c444 lock cmpxchg dword [r15 + 0x40], edx                                                                                                      |         __asm ("lock cmpxchg dword [r15 + 0x40], edx");
+    0x0040c44a mov ecx, eax                                                                                                                              |         ecx = eax;
+    0x0040c44c jmp 0x40c3b9                                                                                                                              |         goto label_0;
+                                                                                                                                                         | label_4:
+    0x0040c451 xor edx, edx                                                                                                                              |         edx = 0;
+    0x0040c453 jmp 0x40c442                                                                                                                              |         
+                                                                                                                                                         |     } while (1);
+                                                                                                                                                         | label_2:
+    0x0040c455 mov edx, 0xffffffff                                                                                                                       |     edx = 0xffffffff;
+    0x0040c45a jmp 0x40c485                                                                                                                              |     goto label_5;
+                                                                                                                                                         | label_3:
+    0x0040c45c mov rax, qword [rsp + 8]                                                                                                                  |     rax = *((rsp + 8));
+    0x0040c461 mov dword [rax], esi                                                                                                                      |     *(rax) = esi;
+    0x0040c463 mov rax, qword [rsp + 0x10]                                                                                                               |     rax = *((rsp + 0x10));
+    0x0040c468 mov dword [rax], edx                                                                                                                      |     *(rax) = edx;
+    0x0040c46a xor edx, edx                                                                                                                              |     edx = 0;
+    0x0040c46c mov esi, 0                                                                                                                                |     esi = 0;
+    0x0040c471 cmp dword [r15 + 0x8c], ecx                                                                                                               |     
+                                                                                                                                                         |     if (*((r15 + 0x8c)) != ecx) {
+    0x0040c478 je 0x40c47d                                                                                                                               |         
+    0x0040c47a lea esi, [rcx + 1]                                                                                                                        |         esi = rcx + 1;
+                                                                                                                                                         |     }
+    0x0040c47d mov eax, ecx                                                                                                                              |     eax = ecx;
+    0x0040c47f lock cmpxchg dword [r15 + 0x40], esi                                                                                                      |     __asm ("lock cmpxchg dword [r15 + 0x40], esi");
+                                                                                                                                                         | label_5:
+    0x0040c485 mov eax, edx                                                                                                                              |     eax = edx;
+    0x0040c487 add rsp, 0x18                                                                                                                             |     
+    0x0040c48b pop rbx                                                                                                                                   |     
+    0x0040c48c pop r12                                                                                                                                   |     
+    0x0040c48e pop r13                                                                                                                                   |     
+    0x0040c490 pop r14                                                                                                                                   |     
+    0x0040c492 pop r15                                                                                                                                   |     
+    0x0040c494 pop rbp                                                                                                                                   |     
+    0x0040c495 ret                                                                                                                                       |     return rax;
+                                                                                                                                                         | }

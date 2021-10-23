@@ -1,0 +1,34 @@
+    ; assembly                                                                                                                                       | /* r2dec pseudo code output */
+                                                                                                                                                     | /* balb_filecleanerutil.t/assume @ 0x40b720 */
+                                                                                                                                                     | #include <stdint.h>
+                                                                                                                                                     |  
+    ; (fcn) method.BloombergLP::bdlma::BufferedSequentialPool.BufferedSequentialPool_char__unsigned_long__BloombergLP::bslma::Allocator_ ()          | uint64_t method_BloombergLP::bdlma::BufferedSequentialPool_BufferedSequentialPool_char_unsigned_long_BloombergLP::bslma::Allocator_ (int64_t arg4, int64_t arg3, int64_t arg2, int64_t arg1) {
+                                                                                                                                                     |     rcx = arg4;
+                                                                                                                                                     |     rdx = arg3;
+                                                                                                                                                     |     rsi = arg2;
+                                                                                                                                                     |     rdi = arg1;
+                                                                                                                                                     |     /* BloombergLP::bdlma::BufferedSequentialPool::BufferedSequentialPool(char*, unsigned long, BloombergLP::bslma::Allocator*) */
+    0x0040b720 push rbx                                                                                                                              |     
+    0x0040b721 mov rbx, rdi                                                                                                                          |     rbx = rdi;
+    0x0040b724 mov qword [rdi], rsi                                                                                                                  |     *(rdi) = rsi;
+    0x0040b727 mov qword [rdi + 8], rdx                                                                                                              |     *((rdi + 8)) = rdx;
+    0x0040b72b mov qword [rdi + 0x10], 0                                                                                                             |     *((rdi + 0x10)) = 0;
+    0x0040b733 mov word [rdi + 0x18], 0x100f                                                                                                         |     *((rdi + 0x18)) = 0x100f;
+    0x0040b739 mov qword [rdi + 0x20], 0xffffffffffffffff                                                                                            |     *((rdi + 0x20)) = 0xffffffffffffffff;
+    0x0040b741 mov word [rdi + 0x28], 0                                                                                                              |     *((rdi + 0x28)) = 0;
+    0x0040b747 test rcx, rcx                                                                                                                         |     
+                                                                                                                                                     |     if (rcx == 0) {
+    0x0040b74a jne 0x40b760                                                                                                                          |         
+    0x0040b74c mov rcx, qword [rip + 0x26257d]                                                                                                       |         rcx = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x0040b753 test rcx, rcx                                                                                                                         |         
+                                                                                                                                                     |         if (rcx != 0) {
+    0x0040b756 jne 0x40b760                                                                                                                          |             goto label_0;
+                                                                                                                                                     |         }
+    0x0040b758 call 0x4171b0                                                                                                                         |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+    0x0040b75d mov rcx, rax                                                                                                                          |         rcx = rax;
+                                                                                                                                                     |     }
+                                                                                                                                                     | label_0:
+    0x0040b760 mov qword [rbx + 0x30], rcx                                                                                                           |     *((rbx + 0x30)) = rcx;
+    0x0040b764 pop rbx                                                                                                                               |     
+    0x0040b765 ret                                                                                                                                   |     return rax;
+                                                                                                                                                     | }

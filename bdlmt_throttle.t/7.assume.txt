@@ -1,0 +1,41 @@
+    ; assembly                                                       | /* r2dec pseudo code output */
+                                                                     | /* bdlmt_throttle.t/assume @ 0x4055c0 */
+                                                                     | #include <stdint.h>
+                                                                     |  
+    ; (fcn) method.Case_Throttle_MULTITHREADED.threadJob__ ()        | int32_t method_Case_Throttle_MULTITHREADED_threadJob_ (void) {
+                                                                     |     int64_t var_18h;
+                                                                     |     int64_t var_20h;
+                                                                     |     /* Case_Throttle_MULTITHREADED::threadJob() */
+    0x004055c0 push rbp                                              |     
+    0x004055c1 push r15                                              |     
+    0x004055c3 push r14                                              |     
+    0x004055c5 push r13                                              |     
+    0x004055c7 push r12                                              |     
+    0x004055c9 push rbx                                              |     
+    0x004055ca sub rsp, 0x28                                         |     
+    0x004055ce mov ebp, dword [rip + 0x252cd0]                       |     ebp = Case_Throttle_MULTITHREADED::clockType;
+    0x004055d4 cmp ebp, 1                                            |     
+    0x004055d7 mov ebx, 0x6575a8                                     |     ebx = Case_Throttle_MULTITHREADED::throttleMonotonic;
+    0x004055dc mov r13d, 0x6575c8                                    |     r13d = Case_Throttle_MULTITHREADED::throttleRealtime;
+    0x004055e2 mov r12d, 0x6575c8                                    |     r12d = Case_Throttle_MULTITHREADED::throttleRealtime;
+                                                                     |     if (ebp == 1) {
+    0x004055e8 cmove r12, rbx                                        |         r12 = rbx;
+                                                                     |     }
+    0x004055ec mov eax, 0x6575c4                                     |     eax = 0x6575c4;
+    0x004055f1 mov ecx, 0x6575e4                                     |     ecx = 0x6575e4;
+                                                                     |     if (ebp == 1) {
+    0x004055f6 cmove rcx, rax                                        |         rcx = rax;
+                                                                     |     }
+    0x004055fa xor edi, edi                                          |     edi = 0;
+    0x004055fc cmp dword [rcx], ebp                                  |     
+    0x004055fe setne dil                                             |     dil = (*(rcx) != ebp) ? 1 : 0;
+    0x00405602 mov esi, 0x43d6e6                                     |     esi = "throttle.clockType() == clockType";
+    0x00405607 mov edx, 0x2c0                                        |     edx = 0x2c0;
+    0x0040560c call 0x404f40                                         |     (anonymousnamespace)::aSsErT(bool,char const*,int) ();
+    0x00405611 mov edi, 0x6582b8                                     |     
+    0x00405616 call 0x4141b0                                         |     BloombergLP::bslmt::Barrier::wait() (obj.Case_Throttle_MULTITHREADED::barrier);
+    0x0040561b mov qword [rsp + 0x18], 0                             |     *((rsp + 0x18)) = 0;
+    0x00405624 mov dword [rsp + 0x20], 0                             |     *((rsp + 0x20)) = 0;
+    0x0040562c mov eax, dword [rip + 0x252c6e]                       |     eax = Case_Throttle_MULTITHREADED::testMode;
+    0x00405632 jmp qword [rax*8 + 0x43b990]                          |     
+                                                                     | }

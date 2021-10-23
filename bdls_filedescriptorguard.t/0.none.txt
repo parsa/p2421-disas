@@ -1,0 +1,16 @@
+    ; assembly                                                                           | /* r2dec pseudo code output */
+                                                                                         | /* bdls_filedescriptorguard.t/none @ 0x406ac0 */
+                                                                                         | #include <stdint.h>
+                                                                                         |  
+    ; (fcn) method.BloombergLP::bdls::FileDescriptorGuard.closeAndRelease__ ()           | int32_t method_BloombergLP::bdls::FileDescriptorGuard_closeAndRelease_ (void * arg1) {
+                                                                                         |     rdi = arg1;
+                                                                                         |     /* BloombergLP::bdls::FileDescriptorGuard::closeAndRelease() */
+    0x00406ac0 push rbx                                                                  |     
+    0x00406ac1 mov rbx, rdi                                                              |     rbx = rdi;
+    0x00406ac4 mov edi, dword [rdi]                                                      |     
+    0x00406ac6 call 0x406b80                                                             |     BloombergLP::bdls::FilesystemUtil::close(int) (*(rdi));
+    0x00406acb mov eax, dword [rip + 0x2e42f]                                            |     eax = BloombergLP::bdls::FilesystemUtil::k_INVALID_FD;
+    0x00406ad1 mov dword [rbx], eax                                                      |     *(rbx) = eax;
+    0x00406ad3 pop rbx                                                                   |     
+    0x00406ad4 ret                                                                       |     return eax;
+                                                                                         | }

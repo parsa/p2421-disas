@@ -1,0 +1,114 @@
+    ; assembly                                                                       | /* r2dec pseudo code output */
+                                                                                     | /* bdlcc_deque.t/assume @ 0x4326c0 */
+                                                                                     | #include <stdint.h>
+                                                                                     |  
+    ; (fcn) sym._anonymous_namespace_::u::ObjChecker_double_::ObjChecker__ ()        | uint64_t anonymous_namespace_::u::ObjChecker_double_::ObjChecker_ (int64_t arg1) {
+                                                                                     |     rdi = arg1;
+                                                                                     |     /* (anonymous namespace)::u::ObjChecker<double>::~ObjChecker() */
+    0x004326c0 push rbp                                                              |     
+    0x004326c1 push r15                                                              |     
+    0x004326c3 push r14                                                              |     
+    0x004326c5 push r13                                                              |     
+    0x004326c7 push r12                                                              |     
+    0x004326c9 push rbx                                                              |     
+    0x004326ca push rax                                                              |     
+    0x004326cb mov rbx, qword [rdi]                                                  |     rbx = *(rdi);
+    0x004326ce test rbx, rbx                                                         |     
+                                                                                     |     if (rbx != 0) {
+    0x004326d1 je 0x432824                                                           |         
+    0x004326d7 mov rbp, rdi                                                          |         
+    0x004326da mov rdi, rbx                                                          |         rdi = rbx;
+    0x004326dd call 0x4047d0                                                         |         pthread_mutex_lock ();
+    0x004326e2 mov r14, qword [rbp + 8]                                              |         r14 = *((rbp + 8));
+    0x004326e6 test r14, r14                                                         |         
+                                                                                     |         if (r14 != 0) {
+    0x004326e9 je 0x4326f3                                                           |             
+    0x004326eb mov rdi, r14                                                          |             rdi = r14;
+    0x004326ee call 0x4047d0                                                         |             pthread_mutex_lock ();
+                                                                                     |         }
+    0x004326f3 lea r13, [rbx + 0x98]                                                 |         r13 = rbx + 0x98;
+    0x004326fa lea r12, [r14 + 0x98]                                                 |         r12 = r14 + 0x98;
+    0x00432701 mov rdi, r13                                                          |         
+    0x00432704 mov rsi, r12                                                          |         
+    0x00432707 call 0x489c00                                                         |         al = boolbsl::operator==<double,bsl::allocator<double>>(bsl::deque<double,bsl::allocator<double>>const&,bsl::deque<double,bsl::allocator<double>>const&) (r13, r12);
+    0x0043270c test al, al                                                           |         
+                                                                                     |         if (al == 0) {
+    0x0043270e jne 0x432806                                                          |             
+    0x00432714 call 0x4be660                                                         |             rax = BloombergLP::bslmt::TestUtil_Guard::singletonMutex() ();
+    0x00432719 mov r15, rax                                                          |             r15 = rax;
+    0x0043271c mov rdi, rax                                                          |             
+    0x0043271f call 0x4be310                                                         |             BloombergLP::bslmt::RecursiveMutexImpl<BloombergLP::bslmt::Platform::PosixThreads>::lock() (rax);
+    0x00432724 mov edi, 0x724e28                                                     |             
+    0x00432729 mov esi, 0x4e9066                                                     |             
+    0x0043272e mov edx, 6                                                            |             
+    0x00432733 call 0x48c740                                                         |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (obj.std::__1::cout, "d_line", 6);
+    0x00432738 mov esi, 0x4e8e2d                                                     |             
+    0x0043273d mov edx, 2                                                            |             
+    0x00432742 mov rdi, rax                                                          |             
+    0x00432745 call 0x48c740                                                         |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x4e8e2d, 2);
+    0x0043274a mov esi, dword [rbp + 0x10]                                           |             esi = *((rbp + 0x10));
+    0x0043274d mov rdi, rax                                                          |             rdi = rax;
+    0x00432750 call 0x404550                                                         |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x00432755 mov esi, 0x4eafa3                                                     |             
+    0x0043275a mov edx, 1                                                            |             
+    0x0043275f mov rdi, rax                                                          |             
+    0x00432762 call 0x48c740                                                         |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x4eafa3, 1);
+    0x00432767 mov esi, 0x4e906d                                                     |             
+    0x0043276c mov edx, 3                                                            |             
+    0x00432771 mov rdi, rax                                                          |             
+    0x00432774 call 0x48c740                                                         |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x4e906d, 3);
+    0x00432779 mov esi, 0x4e8e2d                                                     |             
+    0x0043277e mov edx, 2                                                            |             
+    0x00432783 mov rdi, rax                                                          |             
+    0x00432786 call 0x48c740                                                         |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x4e8e2d, 2);
+    0x0043278b mov rbp, rax                                                          |             
+    0x0043278e mov rdi, rax                                                          |             rdi = rax;
+    0x00432791 mov rsi, r13                                                          |             rsi = r13;
+    0x00432794 call 0x432870                                                         |             (anonymousnamespace)::operator << (std::_1::basic_ostream<char,std::_1::char_traits<char>>&,bsl::deque<double,bsl::allocator<double>>const&) ();
+    0x00432799 mov esi, 0x4eafa3                                                     |             
+    0x0043279e mov edx, 1                                                            |             
+    0x004327a3 mov rdi, rbp                                                          |             
+    0x004327a6 call 0x48c740                                                         |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rbp, 0x4eafa3, 1);
+    0x004327ab mov esi, 0x4e9089                                                     |             
+    0x004327b0 mov edx, 3                                                            |             
+    0x004327b5 mov rdi, rax                                                          |             
+    0x004327b8 call 0x48c740                                                         |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x4e9089, 3);
+    0x004327bd mov esi, 0x4e8e2d                                                     |             
+    0x004327c2 mov edx, 2                                                            |             
+    0x004327c7 mov rdi, rax                                                          |             
+    0x004327ca call 0x48c740                                                         |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x4e8e2d, 2);
+    0x004327cf mov rbp, rax                                                          |             
+    0x004327d2 mov rdi, rax                                                          |             rdi = rax;
+    0x004327d5 mov rsi, r12                                                          |             rsi = r12;
+    0x004327d8 call 0x432870                                                         |             (anonymousnamespace)::operator << (std::_1::basic_ostream<char,std::_1::char_traits<char>>&,bsl::deque<double,bsl::allocator<double>>const&) ();
+    0x004327dd mov esi, 0x4eaee0                                                     |             
+    0x004327e2 mov edx, 1                                                            |             
+    0x004327e7 mov rdi, rbp                                                          |             
+    0x004327ea call 0x48c740                                                         |             std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rbp, 0x4eaee0, 1);
+    0x004327ef mov edi, 0x4e9071                                                     |             edi = "\"AObjChecker\" && tbm == tbc";
+    0x004327f4 mov esi, 0x4f3                                                        |             esi = 0x4f3;
+    0x004327f9 call 0x4053a0                                                         |             (anonymousnamespace)::aSsErT(bool,char const*,int) ();
+    0x004327fe mov rdi, r15                                                          |             
+    0x00432801 call 0x4be460                                                         |             BloombergLP::bslmt::RecursiveMutexImpl<BloombergLP::bslmt::Platform::PosixThreads>::unlock() (r15);
+                                                                                     |         }
+    0x00432806 mov rdi, r14                                                          |         rdi = r14;
+    0x00432809 call 0x4048b0                                                         |         pthread_mutex_unlock ();
+    0x0043280e mov rdi, rbx                                                          |         rdi = rbx;
+    0x00432811 add rsp, 8                                                            |         
+    0x00432815 pop rbx                                                               |         
+    0x00432816 pop r12                                                               |         
+    0x00432818 pop r13                                                               |         
+    0x0043281a pop r14                                                               |         
+    0x0043281c pop r15                                                               |         
+    0x0043281e pop rbp                                                               |         
+    0x0043281f jmp 0x4048b0                                                          |         void (*0x4048b0)() ();
+                                                                                     |     }
+    0x00432824 add rsp, 8                                                            |     
+    0x00432828 pop rbx                                                               |     
+    0x00432829 pop r12                                                               |     
+    0x0043282b pop r13                                                               |     
+    0x0043282d pop r14                                                               |     
+    0x0043282f pop r15                                                               |     
+    0x00432831 pop rbp                                                               |     
+    0x00432832 ret                                                                   |     return rax;
+                                                                                     | }

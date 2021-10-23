@@ -1,0 +1,142 @@
+    ; assembly                                                                                                               | /* r2dec pseudo code output */
+                                                                                                                             | /* balber_berutil.t/none @ 0x45d7d0 */
+                                                                                                                             | #include <stdint.h>
+                                                                                                                             |  
+    ; (fcn) sym._anonymous_namespace_::u::Md5StateUtil::appendPaddingAndLength__anonymous_namespace_::u::Md5State_ ()        | int64_t anonymous_namespace_::u::Md5StateUtil::appendPaddingAndLength_anonymous_namespace_::u::Md5State_ (int64_t arg1) {
+                                                                                                                             |     void * var_10h;
+                                                                                                                             |     int64_t var_20h;
+                                                                                                                             |     int64_t var_30h;
+                                                                                                                             |     int64_t var_40h;
+                                                                                                                             |     uint32_t var_50h;
+                                                                                                                             |     void * s1;
+                                                                                                                             |     int64_t var_70h;
+                                                                                                                             |     int64_t var_80h;
+                                                                                                                             |     int64_t var_90h;
+                                                                                                                             |     int64_t var_a0h;
+                                                                                                                             |     rdi = arg1;
+                                                                                                                             |     /* (anonymous namespace)::u::Md5StateUtil::appendPaddingAndLength((anonymous namespace)::u::Md5State*) */
+    0x0045d7d0 push r15                                                                                                      |     
+    0x0045d7d2 push r14                                                                                                      |     
+    0x0045d7d4 push r13                                                                                                      |     
+    0x0045d7d6 push r12                                                                                                      |     
+    0x0045d7d8 push rbx                                                                                                      |     
+    0x0045d7d9 sub rsp, 0xb0                                                                                                 |     
+    0x0045d7e0 mov r14, rdi                                                                                                  |     r14 = rdi;
+    0x0045d7e3 movzx edx, byte [rdi + 0x50]                                                                                  |     edx = *((rdi + 0x50));
+    0x0045d7e7 xor eax, eax                                                                                                  |     eax = 0;
+    0x0045d7e9 cmp rdx, 0x37                                                                                                 |     
+    0x0045d7ed seta al                                                                                                       |     al = (rdx > 0x37) ? 1 : 0;
+    0x0045d7f0 shl rax, 6                                                                                                    |     rax <<= 6;
+    0x0045d7f4 sub rax, rdx                                                                                                  |     rax -= rdx;
+    0x0045d7f7 lea r15, [rax + 0x38]                                                                                         |     r15 = rax + 0x38;
+    0x0045d7fb lea rbx, [rax + 0x4fb468]                                                                                     |     rbx = rax + 0x4fb468;
+    0x0045d802 xorps xmm0, xmm0                                                                                              |     __asm ("xorps xmm0, xmm0");
+    0x0045d805 movaps xmmword [rsp + 0x90], xmm0                                                                             |     *((rsp + 0x90)) = xmm0;
+    0x0045d80d movaps xmmword [rsp + 0x80], xmm0                                                                             |     *((rsp + 0x80)) = xmm0;
+    0x0045d815 movaps xmmword [rsp + 0x70], xmm0                                                                             |     *((rsp + 0x70)) = xmm0;
+    0x0045d81a movaps xmmword [rsp + 0x60], xmm0                                                                             |     *((rsp + 0x60)) = xmm0;
+    0x0045d81f mov byte [rsp + 0xa0], dl                                                                                     |     *((rsp + 0xa0)) = dl;
+    0x0045d826 test rdx, rdx                                                                                                 |     
+                                                                                                                             |     if (rdx != 0) {
+    0x0045d829 je 0x45d83c                                                                                                   |         
+    0x0045d82b lea rsi, [r14 + 0x10]                                                                                         |         
+    0x0045d82f lea rdi, [rsp + 0x60]                                                                                         |         
+    0x0045d834 call 0x404d00                                                                                                 |         memcpy (rsp + 0x60, r14 + 0x10, rdx);
+    0x0045d839 xorps xmm0, xmm0                                                                                              |         __asm ("xorps xmm0, xmm0");
+                                                                                                                             |     }
+    0x0045d83c movaps xmmword [rsp + 0x40], xmm0                                                                             |     *((rsp + 0x40)) = xmm0;
+    0x0045d841 movaps xmmword [rsp + 0x30], xmm0                                                                             |     *((rsp + 0x30)) = xmm0;
+    0x0045d846 movaps xmmword [rsp + 0x20], xmm0                                                                             |     *((rsp + 0x20)) = xmm0;
+    0x0045d84b movaps xmmword [rsp + 0x10], xmm0                                                                             |     *((rsp + 0x10)) = xmm0;
+    0x0045d850 mov eax, 0x4fb430                                                                                             |     eax = (anonymous namespace)::u::Md5StateUtil::appendPaddingAndLength((anonymous namespace)::u::Md5State*)::paddingBuffer;
+    0x0045d855 mov ecx, ebx                                                                                                  |     ecx = ebx;
+    0x0045d857 sub cl, al                                                                                                    |     cl -= al;
+    0x0045d859 mov byte [rsp + 0x50], cl                                                                                     |     *((rsp + 0x50)) = cl;
+    0x0045d85d test r15, r15                                                                                                 |     
+                                                                                                                             |     if (r15 != 0) {
+    0x0045d860 je 0x45d887                                                                                                   |         
+    0x0045d862 not rax                                                                                                       |         rax = ~rax;
+    0x0045d865 add rax, rbx                                                                                                  |         rax += rbx;
+    0x0045d868 cmp rax, 0x3f                                                                                                 |         
+    0x0045d86c mov edx, 0x3f                                                                                                 |         edx = 0x3f;
+                                                                                                                             |         if (rax < 0x3f) {
+    0x0045d871 cmovb rdx, rax                                                                                                |             rdx = rax;
+                                                                                                                             |         }
+    0x0045d875 inc rdx                                                                                                       |         rdx++;
+    0x0045d878 lea rdi, [rsp + 0x10]                                                                                         |         
+    0x0045d87d mov esi, 0x4fb430                                                                                             |         
+    0x0045d882 call 0x404d00                                                                                                 |         memcpy (rsp + 0x10, obj._anonymous_namespace_::u::Md5StateUtil::appendPaddingAndLength__anonymous_namespace_::u::Md5State_::paddingBuffer, rdx);
+                                                                                                                             |     }
+    0x0045d887 lea r13, [rsp + 0x60]                                                                                         |     r13 = rsp + 0x60;
+    0x0045d88c lea r15, [rsp + 0x10]                                                                                         |     r15 = rsp + 0x10;
+    0x0045d891 mov rdi, r13                                                                                                  |     rdi = r13;
+    0x0045d894 mov rsi, r15                                                                                                  |     rsi = r15;
+    0x0045d897 call 0x45d990                                                                                                 |     (anonymousnamespace)::u::Md5BlockUtil::concatenate((anonymousnamespace)::u::Md5Block*,(anonymousnamespace)::u::Md5Block*) ();
+    0x0045d89c movups xmm0, xmmword [r14]                                                                                    |     __asm ("movups xmm0, xmmword [r14]");
+    0x0045d8a0 movaps xmmword [rsp], xmm0                                                                                    |     *(rsp) = xmm0;
+    0x0045d8a4 cmp byte [rsp + 0x50], 0                                                                                      |     
+                                                                                                                             |     if (*((rsp + 0x50)) != 0) {
+    0x0045d8a9 je 0x45d8c3                                                                                                   |         
+    0x0045d8ab mov rdi, rsp                                                                                                  |         rdi = rsp;
+    0x0045d8ae lea rsi, [rsp + 0x60]                                                                                         |         rsi = rsp + 0x60;
+    0x0045d8b3 call 0x45dd60                                                                                                 |         (anonymousnamespace)::u::Md5StateUtil::digest((anonymousnamespace)::u::Md5Fingerprint*,(anonymousnamespace)::u::Md5Blockconst&) ();
+    0x0045d8b8 mov r12d, 2                                                                                                   |         r12d = 2;
+    0x0045d8be mov r13, r15                                                                                                  |         r13 = r15;
+    0x0045d8c1 jmp 0x45d8c9                                                                                                  |         
+                                                                                                                             |     } else {
+    0x0045d8c3 mov r12d, 1                                                                                                   |         r12d = 1;
+                                                                                                                             |     }
+    0x0045d8c9 mov rax, qword [r14 + 0x58]                                                                                   |     rax = *((r14 + 0x58));
+    0x0045d8cd shl rax, 6                                                                                                    |     rax <<= 6;
+    0x0045d8d1 movzx ebx, byte [r14 + 0x50]                                                                                  |     ebx = *((r14 + 0x50));
+    0x0045d8d6 add rbx, rax                                                                                                  |     rbx += rax;
+    0x0045d8d9 movzx eax, byte [r13 + 0x40]                                                                                  |     eax = *((r13 + 0x40));
+    0x0045d8de lea r15, [rax + 8]                                                                                            |     r15 = rax + 8;
+    0x0045d8e2 lea rdi, [r13 + rax]                                                                                          |     rdi = r13 + rax;
+    0x0045d8e7 lea rdx, [r13 + rax + 8]                                                                                      |     rdx = r13 + rax + 8;
+    0x0045d8ec sub rdx, rdi                                                                                                  |     rdx -= rdi;
+    0x0045d8ef test rdx, rdx                                                                                                 |     
+                                                                                                                             |     if (rdx > 0) {
+    0x0045d8f2 jle 0x45d8fb                                                                                                  |         
+    0x0045d8f4 xor esi, esi                                                                                                  |         
+    0x0045d8f6 call 0x404530                                                                                                 |         memset (rdi, 0, rdx);
+                                                                                                                             |     }
+    0x0045d8fb mov byte [r13 + 0x40], r15b                                                                                   |     *((r13 + 0x40)) = r15b;
+    0x0045d8ff movzx eax, r15b                                                                                               |     eax = (int32_t) r15b;
+    0x0045d903 lea ecx, [rbx*8]                                                                                              |     ecx = rbx*8;
+    0x0045d90a mov byte [r13 + rax - 8], cl                                                                                  |     *((r13 + rax - 8)) = cl;
+    0x0045d90f mov rcx, rbx                                                                                                  |     rcx = rbx;
+    0x0045d912 shr rcx, 5                                                                                                    |     rcx >>= 5;
+    0x0045d916 mov byte [r13 + rax - 7], cl                                                                                  |     *((r13 + rax - 7)) = cl;
+    0x0045d91b mov rcx, rbx                                                                                                  |     rcx = rbx;
+    0x0045d91e shr rcx, 0xd                                                                                                  |     rcx >>= 0xd;
+    0x0045d922 mov byte [r13 + rax - 6], cl                                                                                  |     *((r13 + rax - 6)) = cl;
+    0x0045d927 mov rcx, rbx                                                                                                  |     rcx = rbx;
+    0x0045d92a shr rcx, 0x15                                                                                                 |     rcx >>= 0x15;
+    0x0045d92e mov byte [r13 + rax - 5], cl                                                                                  |     *((r13 + rax - 5)) = cl;
+    0x0045d933 mov rcx, rbx                                                                                                  |     rcx = rbx;
+    0x0045d936 shr rcx, 0x1d                                                                                                 |     rcx >>= 0x1d;
+    0x0045d93a mov byte [r13 + rax - 4], cl                                                                                  |     *((r13 + rax - 4)) = cl;
+    0x0045d93f mov rcx, rbx                                                                                                  |     rcx = rbx;
+    0x0045d942 shr rcx, 0x25                                                                                                 |     rcx >>= 0x25;
+    0x0045d946 mov byte [r13 + rax - 3], cl                                                                                  |     *((r13 + rax - 3)) = cl;
+    0x0045d94b mov rcx, rbx                                                                                                  |     rcx = rbx;
+    0x0045d94e shr rcx, 0x2d                                                                                                 |     rcx >>= 0x2d;
+    0x0045d952 mov byte [r13 + rax - 2], cl                                                                                  |     *((r13 + rax - 2)) = cl;
+    0x0045d957 shr rbx, 0x35                                                                                                 |     rbx >>= 0x35;
+    0x0045d95b mov byte [r13 + rax - 1], bl                                                                                  |     *((r13 + rax - 1)) = bl;
+    0x0045d960 mov rdi, rsp                                                                                                  |     rdi = rsp;
+    0x0045d963 mov rsi, r13                                                                                                  |     rsi = r13;
+    0x0045d966 call 0x45dd60                                                                                                 |     (anonymousnamespace)::u::Md5StateUtil::digest((anonymousnamespace)::u::Md5Fingerprint*,(anonymousnamespace)::u::Md5Blockconst&) ();
+    0x0045d96b movaps xmm0, xmmword [rsp]                                                                                    |     xmm0 = *(rsp);
+    0x0045d96f movups xmmword [r14], xmm0                                                                                    |     __asm ("movups xmmword [r14], xmm0");
+    0x0045d973 mov byte [r14 + 0x50], 0                                                                                      |     *((r14 + 0x50)) = 0;
+    0x0045d978 add qword [r14 + 0x58], r12                                                                                   |     *((r14 + 0x58)) += r12;
+    0x0045d97c add rsp, 0xb0                                                                                                 |     
+    0x0045d983 pop rbx                                                                                                       |     
+    0x0045d984 pop r12                                                                                                       |     
+    0x0045d986 pop r13                                                                                                       |     
+    0x0045d988 pop r14                                                                                                       |     
+    0x0045d98a pop r15                                                                                                       |     
+    0x0045d98c ret                                                                                                           |     return rax;
+                                                                                                                             | }

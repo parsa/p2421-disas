@@ -1,0 +1,94 @@
+    ; assembly                                                                                       | /* r2dec pseudo code output */
+                                                                                                     | /* bblb_schedulegenerationutil.t/assume @ 0x40c900 */
+                                                                                                     | #include <stdint.h>
+                                                                                                     |  
+    ; (fcn) method.BloombergLP::bdlt::Calendar.addHoliday_BloombergLP::bdlt::Date_const_ ()          | int64_t method_BloombergLP::bdlt::Calendar_addHoliday_BloombergLP::bdlt::Date_const_ (int64_t arg2, uint32_t arg1) {
+                                                                                                     |     rsi = arg2;
+                                                                                                     |     rdi = arg1;
+                                                                                                     |     /* BloombergLP::bdlt::Calendar::addHoliday(BloombergLP::bdlt::Date const&) */
+    0x0040c900 push r15                                                                              |     
+    0x0040c902 push r14                                                                              |     
+    0x0040c904 push rbx                                                                              |     
+    0x0040c905 mov r14, rsi                                                                          |     r14 = rsi;
+    0x0040c908 mov rbx, rdi                                                                          |     rbx = rdi;
+    0x0040c90b cmp dword [rdi + 0xc8], 0                                                             |     
+                                                                                                     |     if (*((rdi + 0xc8)) != 0) {
+    0x0040c912 je 0x40c92d                                                                           |         
+    0x0040c914 mov edx, dword [r14]                                                                  |         edx = *(r14);
+    0x0040c917 mov eax, dword [rbx + 4]                                                              |         eax = *((rbx + 4));
+    0x0040c91a mov ecx, edx                                                                          |         ecx = edx;
+    0x0040c91c sub ecx, dword [rbx]                                                                  |         ecx -= *(rbx);
+                                                                                                     |         if (ecx < 0) {
+    0x0040c91e jge 0x40c957                                                                          |             
+    0x0040c920 sub eax, edx                                                                          |             eax -= edx;
+    0x0040c922 lea rdi, [rbx + 0xa8]                                                                 |             rdi = rbx + 0xa8;
+    0x0040c929 cdqe                                                                                  |             rax = (int64_t) eax;
+    0x0040c92b jmp 0x40c965                                                                          |             
+                                                                                                     |         } else {
+    0x0040c92d lea rdi, [rbx + 0xa8]                                                                 |             
+    0x0040c934 mov esi, 1                                                                            |             
+    0x0040c939 call 0x439f20                                                                         |             bsl::vector<unsigned long,bsl::allocator<unsigned long>>::reserve(unsigned long) (rbx + 0xa8, 1);
+    0x0040c93e lea rdi, [rbx + 0x28]                                                                 |             
+    0x0040c942 mov esi, 8                                                                            |             
+    0x0040c947 call 0x41bbd0                                                                         |             eax = BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Signed>::reserveCapacityImp(unsigned long) (rbx + 0x28, 8);
+    0x0040c94c lea rdi, [rbx + 0x50]                                                                 |             rdi = rbx + 0x50;
+    0x0040c950 mov esi, 8                                                                            |             esi = 8;
+    0x0040c955 jmp 0x40c999                                                                          |             goto label_0;
+                                                                                                     |         }
+    0x0040c957 cmp eax, edx                                                                          |         
+                                                                                                     |         if (eax >= edx) {
+    0x0040c959 jge 0x40c9b6                                                                          |             goto label_1;
+                                                                                                     |         }
+    0x0040c95b lea rdi, [rbx + 0xa8]                                                                 |         rdi = rbx + 0xa8;
+    0x0040c962 movsxd rax, ecx                                                                       |         rax = (int64_t) ecx;
+                                                                                                     |     }
+    0x0040c965 add rax, 0x40                                                                         |     rax += 0x40;
+    0x0040c969 shr rax, 6                                                                            |     rax >>= 6;
+    0x0040c96d mov esi, 1                                                                            |     esi = 1;
+                                                                                                     |     if (rax != 0) {
+    0x0040c972 cmovne rsi, rax                                                                       |         rsi = rax;
+                                                                                                     |     }
+    0x0040c976 call 0x439f20                                                                         |     bsl::vector<unsigned long,bsl::allocator<unsigned long>>::reserve(unsigned long) (rdi, rsi);
+    0x0040c97b lea rdi, [rbx + 0x28]                                                                 |     
+    0x0040c97f mov eax, dword [rbx + 0x30]                                                           |     eax = *((rbx + 0x30));
+    0x0040c982 lea r15d, [rax*8 + 8]                                                                 |     r15d = rax*8 + 8;
+    0x0040c98a mov rsi, r15                                                                          |     
+    0x0040c98d call 0x41bbd0                                                                         |     BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Signed>::reserveCapacityImp(unsigned long) (rbx + 0x28, r15);
+    0x0040c992 lea rdi, [rbx + 0x50]                                                                 |     
+    0x0040c996 mov rsi, r15                                                                          |     
+                                                                                                     | label_0:
+    0x0040c999 call 0x41bbd0                                                                         |     BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Signed>::reserveCapacityImp(unsigned long) (rbx + 0x50, r15);
+    0x0040c99e mov rdi, rbx                                                                          |     
+    0x0040c9a1 mov rsi, r14                                                                          |     
+    0x0040c9a4 call 0x4103c0                                                                         |     BloombergLP::bdlt::PackedCalendar::addHoliday(BloombergLP::bdlt::Dateconst&) (rbx, r14);
+    0x0040c9a9 mov rdi, rbx                                                                          |     rdi = rbx;
+    0x0040c9ac pop rbx                                                                               |     
+    0x0040c9ad pop r14                                                                               |     
+    0x0040c9af pop r15                                                                               |     
+    0x0040c9b1 jmp 0x40c3a0                                                                          |     void (*0x40c3a0)() ();
+                                                                                                     | label_1:
+    0x0040c9b6 lea rdi, [rbx + 0x28]                                                                 |     
+    0x0040c9ba mov eax, dword [rbx + 0x30]                                                           |     eax = *((rbx + 0x30));
+    0x0040c9bd lea r15d, [rax*8 + 8]                                                                 |     r15d = rax*8 + 8;
+    0x0040c9c5 mov rsi, r15                                                                          |     
+    0x0040c9c8 call 0x41bbd0                                                                         |     BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Signed>::reserveCapacityImp(unsigned long) (rbx + 0x28, r15);
+    0x0040c9cd lea rdi, [rbx + 0x50]                                                                 |     
+    0x0040c9d1 mov rsi, r15                                                                          |     
+    0x0040c9d4 call 0x41bbd0                                                                         |     BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Signed>::reserveCapacityImp(unsigned long) (rbx + 0x50, r15);
+    0x0040c9d9 mov rdi, rbx                                                                          |     
+    0x0040c9dc mov rsi, r14                                                                          |     
+    0x0040c9df call 0x4103c0                                                                         |     BloombergLP::bdlt::PackedCalendar::addHoliday(BloombergLP::bdlt::Dateconst&) (rbx, r14);
+    0x0040c9e4 movsxd rcx, dword [r14]                                                               |     rcx = *(r14);
+    0x0040c9e7 movsxd rax, dword [rbx]                                                               |     rax = *(rbx);
+    0x0040c9ea sub rcx, rax                                                                          |     rcx -= rax;
+    0x0040c9ed mov rax, qword [rbx + 0xa8]                                                           |     rax = *((rbx + 0xa8));
+    0x0040c9f4 mov rdx, rcx                                                                          |     rdx = rcx;
+    0x0040c9f7 mov esi, 1                                                                            |     esi = 1;
+    0x0040c9fc shl rsi, cl                                                                           |     rsi <<= cl;
+    0x0040c9ff shr rdx, 6                                                                            |     rdx >>= 6;
+    0x0040ca03 or qword [rax + rdx*8], rsi                                                           |     *((rax + rdx*8)) |= rsi;
+    0x0040ca07 pop rbx                                                                               |     
+    0x0040ca08 pop r14                                                                               |     
+    0x0040ca0a pop r15                                                                               |     
+    0x0040ca0c ret                                                                                   |     return rax;
+                                                                                                     | }

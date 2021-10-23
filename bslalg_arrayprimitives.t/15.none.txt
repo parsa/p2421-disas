@@ -1,0 +1,665 @@
+    ; assembly                                                                           | /* r2dec pseudo code output */
+                                                                                         | /* bslalg_arrayprimitives.t/none @ 0x4be2e0 */
+                                                                                         | #include <stdint.h>
+                                                                                         |  
+    ; (fcn) sym.void_testCopyConstructWithIterators_char__bool__bool__bool_ ()           | uint64_t void_testCopyConstructWithIterators_char_bool_bool_bool_ (uint32_t arg3, uint32_t arg2) {
+                                                                                         |     int64_t var_8h;
+                                                                                         |     int64_t var_10h;
+                                                                                         |     int64_t var_18h;
+                                                                                         |     uint32_t var_20h;
+                                                                                         |     uint32_t var_2ch;
+                                                                                         |     void * s2;
+                                                                                         |     int64_t var_38h;
+                                                                                         |     int64_t var_40h;
+                                                                                         |     uint32_t var_44h;
+                                                                                         |     int64_t var_48h;
+                                                                                         |     int64_t var_50h;
+                                                                                         |     rdx = arg3;
+                                                                                         |     rsi = arg2;
+                                                                                         |     /* void testCopyConstructWithIterators<char>(bool, bool, bool) */
+    0x004be2e0 push rbp                                                                  |     
+    0x004be2e1 push r15                                                                  |     
+    0x004be2e3 push r14                                                                  |     
+    0x004be2e5 push r13                                                                  |     
+    0x004be2e7 push r12                                                                  |     
+    0x004be2e9 push rbx                                                                  |     
+    0x004be2ea sub rsp, 0x58                                                             |     
+    0x004be2ee mov dword [rsp + 0x2c], edx                                               |     *((rsp + 0x2c)) = edx;
+    0x004be2f2 mov dword [rsp + 0x44], esi                                               |     *((rsp + 0x44)) = esi;
+    0x004be2f6 cmp byte [rip + 0x25a699], 0                                              |     
+                                                                                         |     if (*(obj.verbose) != 0) {
+    0x004be2fd je 0x4be309                                                               |         
+    0x004be2ff mov edi, 0x4f6973                                                         |         
+    0x004be304 call 0x401710                                                             |         eax = puts ("\t\tfrom same type.");
+                                                                                         |     }
+    0x004be309 xor eax, eax                                                              |     eax = 0;
+    0x004be30b jmp 0x4be33c                                                              |     goto label_6;
+                                                                                         | label_1:
+    0x004be310 mov edi, 0x74f2b0                                                         |     edi = testCopyConstructWithIterators<char>(bool, bool, bool)::u;
+    0x004be315 mov rsi, rbx                                                              |     rsi = rbx;
+    0x004be318 call 0x4024e0                                                             |     verify(char*,char const*) ();
+    0x004be31d mov edi, 0x74f2b0                                                         |     edi = testCopyConstructWithIterators<char>(bool, bool, bool)::u;
+    0x004be322 mov rsi, rbx                                                              |     rsi = rbx;
+    0x004be325 call 0x402170                                                             |     cleanup(char*,char const*) ();
+    0x004be32a mov rax, qword [rsp + 0x20]                                               |     rax = *((rsp + 0x20));
+    0x004be32f inc rax                                                                   |     rax++;
+    0x004be332 cmp rax, 0x1e                                                             |     
+                                                                                         |     if (rax == 0x1e) {
+    0x004be336 je 0x4be8ba                                                               |         goto label_7;
+                                                                                         |     }
+                                                                                         | label_6:
+    0x004be33c mov qword [rsp + 0x20], rax                                               |     *((rsp + 0x20)) = rax;
+    0x004be341 lea rbx, [rax*8]                                                          |     rbx = rax*8;
+    0x004be349 mov r12, qword [rbx + rbx*4 + 0x4f3c98]                                   |     r12 = *((rbx + rbx*4 + 0x4f3c98));
+    0x004be351 mov rdi, r12                                                              |     
+    0x004be354 call 0x401790                                                             |     eax = strlen (*((rbx + rbx*4 + 0x4f3c98)));
+    0x004be359 cmp eax, 0x11                                                             |     
+                                                                                         |     if (eax >= 0x11) {
+    0x004be35c jl 0x4be387                                                               |         
+    0x004be35e mov edi, 0x4f4e04                                                         |         
+    0x004be363 mov edx, 0x4f4393                                                         |         edx = "MAX_SIZE >= (int)std::strlen(SPEC)";
+    0x004be368 mov esi, 0xfe6                                                            |         esi = 0xfe6;
+    0x004be36d xor eax, eax                                                              |         eax = 0;
+    0x004be36f call 0x401680                                                             |         printf ("Error /home/parsa/experiments/assumptions/crush/ccm-none/groups/bsl/bslalg/bslalg_arrayprimitives.t.cpp(%d): %s    (failed)\n");
+    0x004be374 mov eax, dword [rip + 0x25a61e]                                           |         eax = (anonymous namespace)::testStatus;
+    0x004be37a cmp eax, 0x64                                                             |         
+                                                                                         |         if (eax > 0x64) {
+    0x004be37d ja 0x4be387                                                               |             goto label_8;
+                                                                                         |         }
+    0x004be37f inc eax                                                                   |         eax++;
+    0x004be381 mov dword [rip + 0x25a611], eax                                           |         *(obj._anonymous_namespace_::testStatus) = eax;
+                                                                                         |     }
+                                                                                         | label_8:
+    0x004be387 mov r13d, dword [rbx + rbx*4 + 0x4f3c90]                                  |     r13d = *((rbx + rbx*4 + obj.DATA_3));
+    0x004be38f movsxd r15, dword [rbx + rbx*4 + 0x4f3ca0]                                |     r15 = *((rbx + rbx*4 + 0x4f3ca0));
+    0x004be397 mov ebp, dword [rbx + rbx*4 + 0x4f3ca4]                                   |     ebp = *((rbx + rbx*4 + 0x4f3ca4));
+    0x004be39e movsxd r14, dword [rbx + rbx*4 + 0x4f3ca8]                                |     r14 = *((rbx + rbx*4 + 0x4f3ca8));
+    0x004be3a6 mov rbx, qword [rbx + rbx*4 + 0x4f3cb0]                                   |     rbx = *((rbx + rbx*4 + 0x4f3cb0));
+    0x004be3ae cmp byte [rip + 0x25a5db], 0                                              |     
+                                                                                         |     if (*(obj.veryVerbose) != 0) {
+    0x004be3b5 je 0x4be3d6                                                               |         
+    0x004be3b7 mov qword [rsp], rbx                                                      |         *(rsp) = rbx;
+    0x004be3bb mov edi, 0x4f5c41                                                         |         
+    0x004be3c0 mov esi, r13d                                                             |         esi = r13d;
+    0x004be3c3 mov rdx, r12                                                              |         rdx = r12;
+    0x004be3c6 mov ecx, r15d                                                             |         ecx = r15d;
+    0x004be3c9 mov r8d, ebp                                                              |         r8d = ebp;
+    0x004be3cc mov r9d, r14d                                                             |         r9d = r14d;
+    0x004be3cf xor eax, eax                                                              |         eax = 0;
+    0x004be3d1 call 0x401680                                                             |         printf ("LINE = %d, SPEC = %s, SRC = %d, NE = %d, DST = %d, EXP = %s\n");
+                                                                                         |     }
+    0x004be3d6 mov qword [rsp + 0x18], rbp                                               |     *((rsp + 0x18)) = rbp;
+    0x004be3db mov edi, 0x74f2b0                                                         |     edi = testCopyConstructWithIterators<char>(bool, bool, bool)::u;
+    0x004be3e0 mov rsi, r12                                                              |     rsi = r12;
+    0x004be3e3 call 0x4ddc40                                                             |     char&gg<char>(char*,char const*) ();
+    0x004be3e8 mov edi, 0x74f2b0                                                         |     edi = testCopyConstructWithIterators<char>(bool, bool, bool)::u;
+    0x004be3ed mov rsi, r12                                                              |     rsi = r12;
+    0x004be3f0 call 0x4024e0                                                             |     verify(char*,char const*) ();
+    0x004be3f5 mov r12d, dword [rip + 0x25a5a8]                                          |     r12d = numCopyCtorCalls;
+    0x004be3fc mov ebp, dword [rip + 0x25a5aa]                                           |     ebp = numCharCtorCalls;
+    0x004be402 cmp byte [rsp + 0x2c], 0                                                  |     
+    0x004be407 mov qword [rsp + 0x10], rbx                                               |     *((rsp + 0x10)) = rbx;
+                                                                                         |     if (*((rsp + 0x2c)) == 0) {
+    0x004be40c je 0x4be4e0                                                               |         goto label_9;
+                                                                                         |     }
+    0x004be412 cmp byte [rip + 0x25a577], 0                                              |     
+                                                                                         |     if (*(obj.veryVerbose) != 0) {
+    0x004be419 je 0x4be42e                                                               |         
+    0x004be41b cmp dword [rip + 0x25a0f6], 0                                             |         
+                                                                                         |         if (*(obj.testCopyConstructWithIterators_char__bool__bool__bool_::firstTime) == 0) {
+    0x004be422 je 0x4be42e                                                               |             goto label_10;
+                                                                                         |         }
+    0x004be424 mov edi, 0x4f43ea                                                         |         
+    0x004be429 call 0x401710                                                             |         puts ("\t\tBSLMA EXCEPTION TEST -- (ENABLED) --");
+                                                                                         |     }
+                                                                                         | label_10:
+    0x004be42e mov dword [rip + 0x25a0e0], 0                                             |     *(obj.testCopyConstructWithIterators_char__bool__bool__bool_::firstTime) = 0;
+    0x004be438 cmp byte [rip + 0x25a556], 0                                              |     
+                                                                                         |     if (*(obj.veryVeryVerbose) != 0) {
+    0x004be43f je 0x4be44b                                                               |         
+    0x004be441 mov edi, 0x4f4411                                                         |         
+    0x004be446 call 0x401710                                                             |         puts ("\t\tBegin bslma exception test.");
+                                                                                         |     }
+    0x004be44b mov rax, qword [rip + 0x25a3ce]                                           |     rax = Z;
+    0x004be452 mov qword [rsp + 0x30], 0x4f69e0                                          |     *((rsp + 0x30)) = vtable.BloombergLP::bslma::TestAllocator_Proxy_BloombergLP::bslma::TestAllocator_.0;
+    0x004be45b mov qword [rsp + 0x38], rax                                               |     *((rsp + 0x38)) = rax;
+    0x004be460 mov qword [rax + 0x20], 0                                                 |     *((rax + 0x20)) = 0;
+    0x004be468 test rax, rax                                                             |     
+    0x004be46b je 0x4be581                                                               |     
+                                                                                         |     while (rax != 0) {
+                                                                                         | label_0:
+    0x004be471 lea rsi, [r15 + 0x74f2b0]                                                 |         rsi = r15 + obj_testCopyConstructWithIterators_char__bool__bool__bool_::u;
+    0x004be478 mov rax, qword [rsp + 0x18]                                               |         rax = *((rsp + 0x18));
+    0x004be47d add eax, r15d                                                             |         eax += r15d;
+    0x004be480 cdqe                                                                      |         rax = (int64_t) eax;
+    0x004be482 lea rdx, [rax + 0x74f2b0]                                                 |         rdx = rax + obj_testCopyConstructWithIterators_char__bool__bool__bool_::u;
+    0x004be489 sub rdx, rsi                                                              |         rdx -= rsi;
+                                                                                         |         if (rdx != 0) {
+    0x004be48c je 0x4be49a                                                               |             
+    0x004be48e lea rdi, [r14 + 0x74f2b0]                                                 |             
+    0x004be495 call 0x401930                                                             |             memcpy (r14 + obj.testCopyConstructWithIterators_char__bool__bool__bool_::u, rsi, rdx);
+                                                                                         |         }
+    0x004be49a mov rax, qword [rsp + 0x30]                                               |         rax = *((rsp + 0x30));
+    0x004be49f lea rdi, [rsp + 0x30]                                                     |         rdi = rsp + 0x30;
+    0x004be4a4 mov rsi, 0xffffffffffffffff                                               |         rsi = 0xffffffffffffffff;
+    0x004be4ab call qword [rax + 0x10]                                                   |         uint64_t (*rax + 0x10)() ();
+    0x004be4ae cmp byte [rip + 0x25a4e0], 0                                              |         
+                                                                                         |         if (*(obj.veryVeryVerbose) != 0) {
+    0x004be4b5 je 0x4be4c1                                                               |             
+    0x004be4b7 mov edi, 0x4f4571                                                         |             
+    0x004be4bc call 0x401710                                                             |             puts ("\t\tEnd bslma exception test.");
+                                                                                         |         }
+    0x004be4c1 cmp byte [rip + 0x25a4c8], 0                                              |         
+                                                                                         |         if (*(obj.veryVerbose) == 0) {
+    0x004be4c8 je 0x4be7e5                                                               |             goto label_11;
+                                                                                         |         }
+    0x004be4ce mov edi, 0xa                                                              |         
+    0x004be4d3 call 0x401720                                                             |         putchar (0xa);
+    0x004be4d8 mov esi, r13d                                                             |         esi = r13d;
+    0x004be4db jmp 0x4be7bf                                                              |         goto label_12;
+                                                                                         | label_9:
+    0x004be4e0 cmp qword [rip + 0x25a338], 0                                             |         
+                                                                                         |         if (*(obj.Z) == 0) {
+    0x004be4e8 jne 0x4be500                                                              |             
+    0x004be4ea mov rax, qword [rip + 0x292dc7]                                           |             rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x004be4f1 test rax, rax                                                             |             
+                                                                                         |             if (rax != 0) {
+    0x004be4f4 jne 0x4be500                                                              |                 goto label_13;
+                                                                                         |             }
+    0x004be4f6 call 0x4eede0                                                             |             BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+    0x004be4fb nop dword [rax + rax]                                                     |             
+                                                                                         |         }
+                                                                                         | label_13:
+    0x004be500 cmp qword [rsp + 0x20], 6                                                 |         
+    0x004be506 mov esi, r13d                                                             |         esi = r13d;
+                                                                                         |         if (*((rsp + 0x20)) < 6) {
+    0x004be509 jb 0x4be7bf                                                               |             goto label_12;
+                                                                                         |         }
+    0x004be50f lea rax, [r15 + 0x74f2b0]                                                 |         rax = r15 + obj_testCopyConstructWithIterators_char__bool__bool__bool_::u;
+    0x004be516 lea rcx, [r14 + 0x74f2b0]                                                 |         rcx = r14 + obj_testCopyConstructWithIterators_char__bool__bool__bool_::u;
+    0x004be51d mov rbx, qword [rsp + 0x18]                                               |         rbx = *((rsp + 0x18));
+    0x004be522 lea edx, [rbx + r15]                                                      |         edx = rbx + r15;
+    0x004be526 movsxd r9, edx                                                            |         r9 = (int64_t) edx;
+    0x004be529 mov r10, r9                                                               |         r10 = r9;
+    0x004be52c sub r10, r15                                                              |         r10 -= r15;
+    0x004be52f cmp r10, 4                                                                |         
+                                                                                         |         if (r10 < 4) {
+    0x004be533 jb 0x4be7a0                                                               |             goto label_14;
+                                                                                         |         }
+    0x004be539 mov dword [rsp + 8], ebp                                                  |         *((rsp + 8)) = ebp;
+    0x004be53d lea rdi, [r14 + 0x74f2b0]                                                 |         rdi = r14 + obj_testCopyConstructWithIterators_char__bool__bool__bool_::u;
+    0x004be544 lea edx, [rbx + r15]                                                      |         edx = rbx + r15;
+    0x004be548 movsxd rdx, edx                                                           |         rdx = (int64_t) edx;
+    0x004be54b lea rbp, [rdx + 0x74f2b0]                                                 |         rbp = rdx + obj_testCopyConstructWithIterators_char__bool__bool__bool_::u;
+    0x004be552 cmp rdi, rbp                                                              |         
+                                                                                         |         if (rdi >= rbp) {
+    0x004be555 jae 0x4be601                                                              |             goto label_15;
+                                                                                         |         }
+    0x004be55b add rdx, r14                                                              |         rdx += r14;
+    0x004be55e sub rdx, r15                                                              |         rdx -= r15;
+    0x004be561 lea rdx, [rdx + 0x74f2b0]                                                 |         rdx = rdx + obj_testCopyConstructWithIterators_char__bool__bool__bool_::u;
+    0x004be568 lea rdi, [r15 + 0x74f2b0]                                                 |         rdi = r15 + obj_testCopyConstructWithIterators_char__bool__bool__bool_::u;
+    0x004be56f cmp rdi, rdx                                                              |         
+                                                                                         |         if (rdi >= rdx) {
+    0x004be572 jae 0x4be601                                                              |             goto label_15;
+                                                                                         |         }
+    0x004be578 mov ebp, dword [rsp + 8]                                                  |         ebp = *((rsp + 8));
+    0x004be57c jmp 0x4be7a0                                                              |         goto label_14;
+    0x004be581 mov eax, 1                                                                |         eax = 1;
+    0x004be586 mov qword [rsp + 8], rax                                                  |         *((rsp + 8)) = rax;
+    0x004be58b mov rax, qword [rip + 0x292d26]                                           |         rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x004be592 test rax, rax                                                             |         
+    0x004be595 jne 0x4be471                                                              |         
+                                                                                         |     }
+    0x004be59b call 0x4eede0                                                             |     rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+    0x004be5a0 jmp 0x4be471                                                              |     goto label_0;
+                                                                                         | label_15:
+    0x004be601 cmp r10, 0x20                                                             |     
+                                                                                         |     if (r10 < 0x20) {
+    0x004be605 jae 0x4be60f                                                              |         
+    0x004be607 xor r8d, r8d                                                              |         r8d = 0;
+    0x004be60a jmp 0x4be72e                                                              |         goto label_16;
+                                                                                         |     }
+    0x004be60f mov r8, r10                                                               |     r8 = r10;
+    0x004be612 and r8, 0xffffffffffffffe0                                                |     r8 &= 0xffffffffffffffe0;
+    0x004be616 lea rbp, [r8 - 0x20]                                                      |     rbp = r8 - 0x20;
+    0x004be61a mov rdx, rbp                                                              |     rdx = rbp;
+    0x004be61d shr rdx, 5                                                                |     rdx >>= 5;
+    0x004be621 inc rdx                                                                   |     rdx++;
+    0x004be624 mov edi, edx                                                              |     edi = edx;
+    0x004be626 and edi, 3                                                                |     edi &= 3;
+    0x004be629 cmp rbp, 0x60                                                             |     
+                                                                                         |     if (rbp < 0x60) {
+    0x004be62d jae 0x4be636                                                              |         
+    0x004be62f xor ebx, ebx                                                              |         ebx = 0;
+    0x004be631 jmp 0x4be6de                                                              |         goto label_17;
+                                                                                         |     }
+    0x004be636 and rdx, 0xfffffffffffffffc                                               |     rdx &= 0xfffffffffffffffc;
+    0x004be63a neg rdx                                                                   |     rdx = -rdx;
+    0x004be63d xor ebx, ebx                                                              |     ebx = 0;
+    0x004be63f nop                                                                       |     
+                                                                                         |     do {
+    0x004be640 movups xmm0, xmmword [r15 + rbx + 0x74f2b0]                               |         __asm ("movups xmm0, xmmword [r15 + rbx + obj.testCopyConstructWithIterators_char__bool__bool__bool_::u]");
+    0x004be649 movups xmm1, xmmword [r15 + rbx + 0x74f2c0]                               |         __asm ("movups xmm1, xmmword [r15 + rbx + obj.testCopyConstructWithIterators_signed_char__bool__bool__bool_::u]");
+    0x004be652 movups xmmword [r14 + rbx + 0x74f2b0], xmm0                               |         __asm ("movups xmmword [r14 + rbx + obj.testCopyConstructWithIterators_char__bool__bool__bool_::u], xmm0");
+    0x004be65b movups xmmword [r14 + rbx + 0x74f2c0], xmm1                               |         __asm ("movups xmmword [r14 + rbx + obj.testCopyConstructWithIterators_signed_char__bool__bool__bool_::u], xmm1");
+    0x004be664 movups xmm0, xmmword [r15 + rbx + 0x74f2d0]                               |         __asm ("movups xmm0, xmmword [r15 + rbx + obj.testCopyConstructWithIterators_unsigned_char__bool__bool__bool_::u]");
+    0x004be66d movups xmm1, xmmword [r15 + rbx + 0x74f2e0]                               |         __asm ("movups xmm1, xmmword [r15 + rbx + obj.testCopyConstructWithIterators_short__bool__bool__bool_::u]");
+    0x004be676 movups xmmword [r14 + rbx + 0x74f2d0], xmm0                               |         __asm ("movups xmmword [r14 + rbx + obj.testCopyConstructWithIterators_unsigned_char__bool__bool__bool_::u], xmm0");
+    0x004be67f movups xmmword [r14 + rbx + 0x74f2e0], xmm1                               |         __asm ("movups xmmword [r14 + rbx + obj.testCopyConstructWithIterators_short__bool__bool__bool_::u], xmm1");
+    0x004be688 movups xmm0, xmmword [r15 + rbx + 0x74f2f0]                               |         __asm ("movups xmm0, xmmword [r15 + rbx + 0x74f2f0]");
+    0x004be691 movups xmm1, xmmword [r15 + rbx + 0x74f300]                               |         __asm ("movups xmm1, xmmword [r15 + rbx + obj.testCopyConstructWithIterators_unsigned_short__bool__bool__bool_::u]");
+    0x004be69a movups xmmword [r14 + rbx + 0x74f2f0], xmm0                               |         __asm ("movups xmmword [r14 + rbx + 0x74f2f0], xmm0");
+    0x004be6a3 movups xmmword [r14 + rbx + 0x74f300], xmm1                               |         __asm ("movups xmmword [r14 + rbx + obj.testCopyConstructWithIterators_unsigned_short__bool__bool__bool_::u], xmm1");
+    0x004be6ac movups xmm0, xmmword [r15 + rbx + 0x74f310]                               |         __asm ("movups xmm0, xmmword [r15 + rbx + 0x74f310]");
+    0x004be6b5 movups xmm1, xmmword [r15 + rbx + 0x74f320]                               |         __asm ("movups xmm1, xmmword [r15 + rbx + 0x74f320]");
+    0x004be6be movups xmmword [r14 + rbx + 0x74f310], xmm0                               |         __asm ("movups xmmword [r14 + rbx + 0x74f310], xmm0");
+    0x004be6c7 movups xmmword [r14 + rbx + 0x74f320], xmm1                               |         __asm ("movups xmmword [r14 + rbx + 0x74f320], xmm1");
+    0x004be6d0 sub rbx, 0xffffffffffffff80                                               |         rbx -= 0xffffffffffffff80;
+    0x004be6d4 add rdx, 4                                                                |         rdx += 4;
+    0x004be6d8 jne 0x4be640                                                              |         
+                                                                                         |     } while (rdx != 0);
+                                                                                         | label_17:
+    0x004be6de test rdi, rdi                                                             |     
+                                                                                         |     if (rdi == 0) {
+    0x004be6e1 je 0x4be71b                                                               |         goto label_18;
+                                                                                         |     }
+    0x004be6e3 lea rdx, [rbx + r14 + 0x74f2c0]                                           |     rdx = rbx + r14 + obj_testCopyConstructWithIterators_signed_char__bool__bool__bool_::u;
+    0x004be6eb lea rbx, [rbx + r15 + 0x74f2c0]                                           |     rbx = rbx + r15 + obj_testCopyConstructWithIterators_signed_char__bool__bool__bool_::u;
+    0x004be6f3 shl rdi, 5                                                                |     rdi <<= 5;
+    0x004be6f7 xor ebp, ebp                                                              |     ebp = 0;
+    0x004be6f9 nop dword [rax]                                                           |     
+                                                                                         |     do {
+    0x004be700 movups xmm0, xmmword [rbx + rbp - 0x10]                                   |         __asm ("movups xmm0, xmmword [rbx + rbp - 0x10]");
+    0x004be705 movups xmm1, xmmword [rbx + rbp]                                          |         __asm ("movups xmm1, xmmword [rbx + rbp]");
+    0x004be709 movups xmmword [rdx + rbp - 0x10], xmm0                                   |         __asm ("movups xmmword [rdx + rbp - 0x10], xmm0");
+    0x004be70e movups xmmword [rdx + rbp], xmm1                                          |         __asm ("movups xmmword [rdx + rbp], xmm1");
+    0x004be712 add rbp, 0x20                                                             |         rbp += 0x20;
+    0x004be716 cmp rdi, rbp                                                              |         
+    0x004be719 jne 0x4be700                                                              |         
+                                                                                         |     } while (rdi != rbp);
+                                                                                         | label_18:
+    0x004be71b cmp r10, r8                                                               |     
+    0x004be71e mov ebp, dword [rsp + 8]                                                  |     ebp = *((rsp + 8));
+                                                                                         |     if (r10 == r8) {
+    0x004be722 je 0x4be7bf                                                               |         goto label_12;
+                                                                                         |     }
+    0x004be728 test r10b, 0x1c                                                           |     
+                                                                                         |     if ((r10b & 0x1c) == 0) {
+    0x004be72c je 0x4be78d                                                               |         goto label_19;
+                                                                                         |     }
+                                                                                         | label_16:
+    0x004be72e mov rdx, qword [rsp + 0x18]                                               |     rdx = *((rsp + 0x18));
+    0x004be733 add edx, r15d                                                             |     edx += r15d;
+    0x004be736 movsxd r10, edx                                                           |     r10 = (int64_t) edx;
+    0x004be739 sub r10, r15                                                              |     r10 -= r15;
+    0x004be73c mov r11, r10                                                              |     r11 = r10;
+    0x004be73f and r11, 0xfffffffffffffffc                                               |     r11 &= 0xfffffffffffffffc;
+    0x004be743 add rax, r11                                                              |     rax += r11;
+    0x004be746 add rcx, r11                                                              |     rcx += r11;
+    0x004be749 lea rdi, [r8 + r14 + 0x74f2b0]                                            |     rdi = r8 + r14 + obj_testCopyConstructWithIterators_char__bool__bool__bool_::u;
+    0x004be751 lea rbx, [r8 + r15 + 0x74f2b0]                                            |     rbx = r8 + r15 + obj_testCopyConstructWithIterators_char__bool__bool__bool_::u;
+    0x004be759 mov rsi, r11                                                              |     rsi = r11;
+    0x004be75c sub rsi, r8                                                               |     rsi -= r8;
+    0x004be75f xor ebp, ebp                                                              |     ebp = 0;
+    0x004be761 nop word cs:[rax + rax]                                                   |     
+    0x004be76b nop dword [rax + rax]                                                     |     
+                                                                                         |     do {
+    0x004be770 mov edx, dword [rbx + rbp]                                                |         edx = *((rbx + rbp));
+    0x004be773 mov dword [rdi + rbp], edx                                                |         *((rdi + rbp)) = edx;
+    0x004be776 add rbp, 4                                                                |         rbp += 4;
+    0x004be77a cmp rsi, rbp                                                              |         
+    0x004be77d jne 0x4be770                                                              |         
+                                                                                         |     } while (rsi != rbp);
+    0x004be77f cmp r10, r11                                                              |     
+    0x004be782 mov ebp, dword [rsp + 8]                                                  |     ebp = *((rsp + 8));
+    0x004be786 mov esi, r13d                                                             |     esi = r13d;
+                                                                                         |     if (r10 == r11) {
+    0x004be789 jne 0x4be7a0                                                              |         
+    0x004be78b jmp 0x4be7bf                                                              |         goto label_12;
+                                                                                         | label_19:
+    0x004be78d add rcx, r8                                                               |         rcx += r8;
+    0x004be790 add rax, r8                                                               |         rax += r8;
+    0x004be793 nop word cs:[rax + rax]                                                   |         
+    0x004be79d nop dword [rax]                                                           |         
+                                                                                         |     }
+                                                                                         | label_14:
+    0x004be7a0 sub r9, rax                                                               |     r9 -= rax;
+    0x004be7a3 lea rdx, [r9 + 0x74f2b0]                                                  |     rdx = r9 + obj_testCopyConstructWithIterators_char__bool__bool__bool_::u;
+    0x004be7aa xor edi, edi                                                              |     edi = 0;
+    0x004be7ac nop dword [rax]                                                           |     
+                                                                                         |     do {
+    0x004be7b0 movzx ebx, byte [rax + rdi]                                               |         ebx = *((rax + rdi));
+    0x004be7b4 mov byte [rcx + rdi], bl                                                  |         *((rcx + rdi)) = bl;
+    0x004be7b7 inc rdi                                                                   |         rdi++;
+    0x004be7ba cmp rdx, rdi                                                              |         
+    0x004be7bd jne 0x4be7b0                                                              |         
+                                                                                         |     } while (rdx != rdi);
+                                                                                         | label_12:
+    0x004be7bf cmp byte [rip + 0x25a1ca], 0                                              |     
+                                                                                         |     if (*(obj.veryVerbose) != 0) {
+    0x004be7c6 je 0x4be7e5                                                               |         
+    0x004be7c8 mov edx, dword [rip + 0x25a1d6]                                           |         edx = numCopyCtorCalls;
+    0x004be7ce sub edx, r12d                                                             |         edx -= r12d;
+    0x004be7d1 mov ecx, dword [rip + 0x25a1d5]                                           |         ecx = numCharCtorCalls;
+    0x004be7d7 sub ecx, ebp                                                              |         ecx -= ebp;
+    0x004be7d9 mov edi, 0x4f5db4                                                         |         
+    0x004be7de xor eax, eax                                                              |         eax = 0;
+    0x004be7e0 call 0x401680                                                             |         eax = printf ("LINE = %d, #copy ctors = %d, #char ctors = %d.\n");
+                                                                                         |     }
+                                                                                         | label_11:
+    0x004be7e5 cmp byte [rsp + 0x44], 0                                                  |     
+                                                                                         |     if (*((rsp + 0x44)) == 0) {
+    0x004be7ea je 0x4be840                                                               |         goto label_20;
+                                                                                         |     }
+    0x004be7ec cmp r12d, dword [rip + 0x25a1b1]                                          |     
+    0x004be7f3 mov rbx, qword [rsp + 0x10]                                               |     rbx = *((rsp + 0x10));
+                                                                                         |     if (r12d != *(obj.numCopyCtorCalls)) {
+    0x004be7f8 je 0x4be823                                                               |         
+    0x004be7fa mov edi, 0x4f4e04                                                         |         
+    0x004be7ff mov edx, 0x4f5176                                                         |         edx = "NUM_COPIES == numCopyCtorCalls";
+    0x004be804 mov esi, 0x1005                                                           |         esi = 0x1005;
+    0x004be809 xor eax, eax                                                              |         eax = 0;
+    0x004be80b call 0x401680                                                             |         printf ("Error /home/parsa/experiments/assumptions/crush/ccm-none/groups/bsl/bslalg/bslalg_arrayprimitives.t.cpp(%d): %s    (failed)\n");
+    0x004be810 mov eax, dword [rip + 0x25a182]                                           |         eax = (anonymous namespace)::testStatus;
+    0x004be816 cmp eax, 0x64                                                             |         
+                                                                                         |         if (eax > 0x64) {
+    0x004be819 ja 0x4be823                                                               |             goto label_21;
+                                                                                         |         }
+    0x004be81b inc eax                                                                   |         eax++;
+    0x004be81d mov dword [rip + 0x25a175], eax                                           |         *(obj._anonymous_namespace_::testStatus) = eax;
+                                                                                         |     }
+                                                                                         | label_21:
+    0x004be823 cmp ebp, dword [rip + 0x25a183]                                           |     
+                                                                                         |     if (ebp == *(obj.numCharCtorCalls)) {
+    0x004be829 je 0x4be310                                                               |         goto label_1;
+                                                                                         |     }
+    0x004be82f mov edi, 0x4f4e04                                                         |     edi = "Error /home/parsa/experiments/assumptions/crush/ccm-none/groups/bsl/bslalg/bslalg_arrayprimitives.t.cpp(%d): %s    (failed)\n";
+    0x004be834 mov edx, 0x4f5de4                                                         |     edx = "NUM_CTORS == numCharCtorCalls";
+    0x004be839 mov esi, 0x1006                                                           |     esi = 0x1006;
+    0x004be83e jmp 0x4be897                                                              |     goto label_22;
+                                                                                         | label_20:
+    0x004be840 add r12d, dword [rsp + 0x18]                                              |     r12d += *((rsp + 0x18));
+    0x004be845 cmp r12d, dword [rip + 0x25a158]                                          |     
+    0x004be84c mov rbx, qword [rsp + 0x10]                                               |     rbx = *((rsp + 0x10));
+                                                                                         |     if (r12d > *(obj.numCopyCtorCalls)) {
+    0x004be851 jle 0x4be87c                                                              |         
+    0x004be853 mov edi, 0x4f4e04                                                         |         
+    0x004be858 mov edx, 0x4f5e02                                                         |         edx = "NUM_COPIES + NE <= numCopyCtorCalls";
+    0x004be85d mov esi, 0x1009                                                           |         esi = 0x1009;
+    0x004be862 xor eax, eax                                                              |         eax = 0;
+    0x004be864 call 0x401680                                                             |         printf ("Error /home/parsa/experiments/assumptions/crush/ccm-none/groups/bsl/bslalg/bslalg_arrayprimitives.t.cpp(%d): %s    (failed)\n");
+    0x004be869 mov eax, dword [rip + 0x25a129]                                           |         eax = (anonymous namespace)::testStatus;
+    0x004be86f cmp eax, 0x64                                                             |         
+                                                                                         |         if (eax > 0x64) {
+    0x004be872 ja 0x4be87c                                                               |             goto label_23;
+                                                                                         |         }
+    0x004be874 inc eax                                                                   |         eax++;
+    0x004be876 mov dword [rip + 0x25a11c], eax                                           |         *(obj._anonymous_namespace_::testStatus) = eax;
+                                                                                         |     }
+                                                                                         | label_23:
+    0x004be87c cmp ebp, dword [rip + 0x25a12a]                                           |     
+                                                                                         |     if (ebp == *(obj.numCharCtorCalls)) {
+    0x004be882 je 0x4be310                                                               |         goto label_1;
+                                                                                         |     }
+    0x004be888 mov edi, 0x4f4e04                                                         |     
+    0x004be88d mov edx, 0x4f5de4                                                         |     edx = "NUM_CTORS == numCharCtorCalls";
+    0x004be892 mov esi, 0x100a                                                           |     esi = 0x100a;
+                                                                                         | label_22:
+    0x004be897 xor eax, eax                                                              |     eax = 0;
+    0x004be899 call 0x401680                                                             |     printf ("Error /home/parsa/experiments/assumptions/crush/ccm-none/groups/bsl/bslalg/bslalg_arrayprimitives.t.cpp(%d): %s    (failed)\n");
+    0x004be89e mov eax, dword [rip + 0x25a0f4]                                           |     eax = (anonymous namespace)::testStatus;
+    0x004be8a4 cmp eax, 0x64                                                             |     
+                                                                                         |     if (eax > 0x64) {
+    0x004be8a7 ja 0x4be310                                                               |         goto label_1;
+                                                                                         |     }
+    0x004be8ad inc eax                                                                   |     eax++;
+    0x004be8af mov dword [rip + 0x25a0e3], eax                                           |     *(obj._anonymous_namespace_::testStatus) = eax;
+    0x004be8b5 jmp 0x4be310                                                              |     goto label_1;
+                                                                                         | label_7:
+    0x004be8ba cmp byte [rip + 0x25a0d5], 0                                              |     
+                                                                                         |     if (*(obj.verbose) != 0) {
+    0x004be8c1 je 0x4be8cd                                                               |         
+    0x004be8c3 mov edi, 0x4f695c                                                         |         
+    0x004be8c8 call 0x401710                                                             |         puts ("\t\tfrom different type.");
+                                                                                         |     }
+    0x004be8cd xor r15d, r15d                                                            |     r15d = 0;
+    0x004be8d0 jmp 0x4be907                                                              |     goto label_24;
+                                                                                         | label_2:
+    0x004be8e0 mov edi, 0x74f2b0                                                         |     edi = testCopyConstructWithIterators<char>(bool, bool, bool)::u;
+    0x004be8e5 mov rsi, rbx                                                              |     rsi = rbx;
+    0x004be8e8 call 0x4024e0                                                             |     verify(char*,char const*) ();
+    0x004be8ed mov edi, 0x74f2b0                                                         |     edi = testCopyConstructWithIterators<char>(bool, bool, bool)::u;
+    0x004be8f2 mov rsi, rbx                                                              |     rsi = rbx;
+    0x004be8f5 call 0x402170                                                             |     cleanup(char*,char const*) ();
+    0x004be8fa inc r15                                                                   |     r15++;
+    0x004be8fd cmp r15, 0x1e                                                             |     
+                                                                                         |     if (r15 == 0x1e) {
+    0x004be901 je 0x4bec3f                                                               |         goto label_25;
+                                                                                         |     }
+                                                                                         | label_24:
+    0x004be907 lea rbx, [r15*8]                                                          |     rbx = r15*8;
+    0x004be90f mov r12, qword [rbx + rbx*4 + 0x4f3c98]                                   |     r12 = *((rbx + rbx*4 + 0x4f3c98));
+    0x004be917 mov rdi, r12                                                              |     
+    0x004be91a call 0x401790                                                             |     eax = strlen (*((rbx + rbx*4 + 0x4f3c98)));
+    0x004be91f cmp eax, 0x11                                                             |     
+                                                                                         |     if (eax >= 0x11) {
+    0x004be922 jl 0x4be94d                                                               |         
+    0x004be924 mov edi, 0x4f4e04                                                         |         
+    0x004be929 mov edx, 0x4f4393                                                         |         edx = "MAX_SIZE >= (int)std::strlen(SPEC)";
+    0x004be92e mov esi, 0x1019                                                           |         esi = 0x1019;
+    0x004be933 xor eax, eax                                                              |         eax = 0;
+    0x004be935 call 0x401680                                                             |         printf ("Error /home/parsa/experiments/assumptions/crush/ccm-none/groups/bsl/bslalg/bslalg_arrayprimitives.t.cpp(%d): %s    (failed)\n");
+    0x004be93a mov eax, dword [rip + 0x25a058]                                           |         eax = (anonymous namespace)::testStatus;
+    0x004be940 cmp eax, 0x64                                                             |         
+                                                                                         |         if (eax > 0x64) {
+    0x004be943 ja 0x4be94d                                                               |             goto label_26;
+                                                                                         |         }
+    0x004be945 inc eax                                                                   |         eax++;
+    0x004be947 mov dword [rip + 0x25a04b], eax                                           |         *(obj._anonymous_namespace_::testStatus) = eax;
+                                                                                         |     }
+                                                                                         | label_26:
+    0x004be94d mov rdi, r12                                                              |     
+    0x004be950 call 0x401790                                                             |     rax = strlen (r12);
+    0x004be955 cmp rax, 0x14                                                             |     
+                                                                                         |     if (rax >= 0x14) {
+    0x004be959 jb 0x4be984                                                               |         
+    0x004be95b mov edi, 0x4f4e04                                                         |         
+    0x004be960 mov edx, 0x4f5e26                                                         |         edx = "SPEC_CE_LEN > std::strlen(SPEC)";
+    0x004be965 mov esi, 0x101c                                                           |         esi = 0x101c;
+    0x004be96a xor eax, eax                                                              |         eax = 0;
+    0x004be96c call 0x401680                                                             |         printf ("Error /home/parsa/experiments/assumptions/crush/ccm-none/groups/bsl/bslalg/bslalg_arrayprimitives.t.cpp(%d): %s    (failed)\n");
+    0x004be971 mov eax, dword [rip + 0x25a021]                                           |         eax = (anonymous namespace)::testStatus;
+    0x004be977 cmp eax, 0x64                                                             |         
+                                                                                         |         if (eax > 0x64) {
+    0x004be97a ja 0x4be984                                                               |             goto label_27;
+                                                                                         |         }
+    0x004be97c inc eax                                                                   |         eax++;
+    0x004be97e mov dword [rip + 0x25a014], eax                                           |         *(obj._anonymous_namespace_::testStatus) = eax;
+                                                                                         |     }
+                                                                                         | label_27:
+    0x004be984 xorps xmm0, xmm0                                                          |     __asm ("xorps xmm0, xmm0");
+    0x004be987 movaps xmmword [rsp + 0x30], xmm0                                         |     *((rsp + 0x30)) = xmm0;
+    0x004be98c mov dword [rsp + 0x40], 0                                                 |     *((rsp + 0x40)) = 0;
+    0x004be994 mov al, byte [r12]                                                        |     al = *(r12);
+    0x004be998 test al, al                                                               |     
+                                                                                         |     if (al == 0) {
+    0x004be99a je 0x4be9b1                                                               |         goto label_28;
+                                                                                         |     }
+    0x004be99c xor ecx, ecx                                                              |     ecx = 0;
+    0x004be99e nop                                                                       |     
+                                                                                         |     do {
+    0x004be9a0 mov byte [rsp + rcx + 0x30], al                                           |         *((rsp + rcx + 0x30)) = al;
+    0x004be9a4 movzx eax, byte [r12 + rcx + 1]                                           |         eax = *((r12 + rcx + 1));
+    0x004be9aa inc rcx                                                                   |         rcx++;
+    0x004be9ad test al, al                                                               |         
+    0x004be9af jne 0x4be9a0                                                              |         
+                                                                                         |     } while (al != 0);
+                                                                                         | label_28:
+    0x004be9b1 mov eax, dword [rbx + rbx*4 + 0x4f3c90]                                   |     eax = *((rbx + rbx*4 + obj.DATA_3));
+    0x004be9b8 mov dword [rsp + 0x20], eax                                               |     *((rsp + 0x20)) = eax;
+    0x004be9bc movsxd r14, dword [rbx + rbx*4 + 0x4f3ca0]                                |     r14 = *((rbx + rbx*4 + 0x4f3ca0));
+    0x004be9c4 movsxd rbp, dword [rbx + rbx*4 + 0x4f3ca4]                                |     rbp = *((rbx + rbx*4 + 0x4f3ca4));
+    0x004be9cc movsxd r13, dword [rbx + rbx*4 + 0x4f3ca8]                                |     r13 = *((rbx + rbx*4 + 0x4f3ca8));
+    0x004be9d4 mov rbx, qword [rbx + rbx*4 + 0x4f3cb0]                                   |     rbx = *((rbx + rbx*4 + 0x4f3cb0));
+    0x004be9dc cmp byte [rip + 0x259fad], 0                                              |     
+                                                                                         |     if (*(obj.veryVerbose) != 0) {
+    0x004be9e3 je 0x4bea05                                                               |         
+    0x004be9e5 mov qword [rsp], rbx                                                      |         *(rsp) = rbx;
+    0x004be9e9 mov edi, 0x4f5c41                                                         |         
+    0x004be9ee mov esi, dword [rsp + 0x20]                                               |         esi = *((rsp + 0x20));
+    0x004be9f2 mov rdx, r12                                                              |         rdx = r12;
+    0x004be9f5 mov ecx, r14d                                                             |         ecx = r14d;
+    0x004be9f8 mov r8d, ebp                                                              |         r8d = ebp;
+    0x004be9fb mov r9d, r13d                                                             |         r9d = r13d;
+    0x004be9fe xor eax, eax                                                              |         eax = 0;
+    0x004bea00 call 0x401680                                                             |         printf ("LINE = %d, SPEC = %s, SRC = %d, NE = %d, DST = %d, EXP = %s\n");
+                                                                                         |     }
+    0x004bea05 mov edi, 0x74f2b0                                                         |     edi = testCopyConstructWithIterators<char>(bool, bool, bool)::u;
+    0x004bea0a mov rsi, r12                                                              |     rsi = r12;
+    0x004bea0d call 0x4ddc40                                                             |     char&gg<char>(char*,char const*) ();
+    0x004bea12 mov edi, 0x74f2b0                                                         |     edi = testCopyConstructWithIterators<char>(bool, bool, bool)::u;
+    0x004bea17 mov rsi, r12                                                              |     rsi = r12;
+    0x004bea1a call 0x4024e0                                                             |     verify(char*,char const*) ();
+    0x004bea1f mov r12d, dword [rip + 0x259f7e]                                          |     r12d = numCopyCtorCalls;
+    0x004bea26 mov eax, dword [rip + 0x259f80]                                           |     eax = numCharCtorCalls;
+    0x004bea2c mov dword [rsp + 0x18], eax                                               |     *((rsp + 0x18)) = eax;
+    0x004bea30 cmp byte [rsp + 0x2c], 0                                                  |     
+                                                                                         |     if (*((rsp + 0x2c)) != 0) {
+    0x004bea35 je 0x4beb00                                                               |         
+    0x004bea3b cmp byte [rip + 0x259f4e], 0                                              |         
+                                                                                         |         if (*(obj.veryVerbose) != 0) {
+    0x004bea42 je 0x4bea57                                                               |             
+    0x004bea44 cmp dword [rip + 0x259ad1], 0                                             |             
+                                                                                         |             if (*(0x0071851c) == 0) {
+    0x004bea4b je 0x4bea57                                                               |                 goto label_29;
+                                                                                         |             }
+    0x004bea4d mov edi, 0x4f43ea                                                         |             
+    0x004bea52 call 0x401710                                                             |             puts ("\t\tBSLMA EXCEPTION TEST -- (ENABLED) --");
+                                                                                         |         }
+                                                                                         | label_29:
+    0x004bea57 mov dword [rip + 0x259abb], 0                                             |         *(0x0071851c) = 0;
+    0x004bea61 cmp byte [rip + 0x259f2d], 0                                              |         
+                                                                                         |         if (*(obj.veryVeryVerbose) != 0) {
+    0x004bea68 je 0x4bea74                                                               |             
+    0x004bea6a mov edi, 0x4f4411                                                         |             
+    0x004bea6f call 0x401710                                                             |             puts ("\t\tBegin bslma exception test.");
+                                                                                         |         }
+    0x004bea74 mov rax, qword [rip + 0x259da5]                                           |         rax = Z;
+    0x004bea7b mov qword [rsp + 0x48], 0x4f69e0                                          |         *((rsp + 0x48)) = vtable.BloombergLP::bslma::TestAllocator_Proxy_BloombergLP::bslma::TestAllocator_.0;
+    0x004bea84 mov qword [rsp + 0x50], rax                                               |         *((rsp + 0x50)) = rax;
+    0x004bea89 mov qword [rax + 0x20], 0                                                 |         *((rax + 0x20)) = 0;
+    0x004bea91 test rax, rax                                                             |         
+                                                                                         |         if (rax == 0) {
+    0x004bea94 je 0x4beba8                                                               |             goto label_30;
+                                                                                         |         }
+                                                                                         | label_3:
+    0x004bea9a cmp r15, 6                                                                |         
+                                                                                         |         if (r15 >= 6) {
+    0x004bea9e jb 0x4beabb                                                               |             
+    0x004beaa0 lea eax, [r14 + rbp]                                                      |             eax = r14 + rbp;
+    0x004beaa4 movsxd rdx, eax                                                           |             rdx = (int64_t) eax;
+    0x004beaa7 lea rdi, [r13 + 0x74f2b0]                                                 |             
+    0x004beaae lea rsi, [rsp + r14 + 0x30]                                               |             
+    0x004beab3 sub rdx, r14                                                              |             rdx -= r14;
+    0x004beab6 call 0x401930                                                             |             memcpy (r13 + obj.testCopyConstructWithIterators_char__bool__bool__bool_::u, rsp + r14 + 0x30, rdx);
+                                                                                         |         }
+    0x004beabb mov rax, qword [rsp + 0x48]                                               |         rax = *((rsp + 0x48));
+    0x004beac0 lea rdi, [rsp + 0x48]                                                     |         rdi = rsp + 0x48;
+    0x004beac5 mov rsi, 0xffffffffffffffff                                               |         rsi = 0xffffffffffffffff;
+    0x004beacc call qword [rax + 0x10]                                                   |         uint64_t (*rax + 0x10)() ();
+    0x004beacf cmp byte [rip + 0x259ebf], 0                                              |         
+                                                                                         |         if (*(obj.veryVeryVerbose) != 0) {
+    0x004bead6 je 0x4beae2                                                               |             
+    0x004bead8 mov edi, 0x4f4571                                                         |             
+    0x004beadd call 0x401710                                                             |             puts ("\t\tEnd bslma exception test.");
+                                                                                         |         }
+    0x004beae2 cmp byte [rip + 0x259ea7], 0                                              |         
+                                                                                         |         if (*(obj.veryVerbose) == 0) {
+    0x004beae9 je 0x4beb69                                                               |             goto label_31;
+                                                                                         |         }
+    0x004beaeb mov edi, 0xa                                                              |         
+    0x004beaf0 call 0x401720                                                             |         putchar (0xa);
+    0x004beaf5 jmp 0x4beb3d                                                              |         
+                                                                                         |     } else {
+    0x004beb00 cmp qword [rip + 0x259d18], 0                                             |         
+    0x004beb08 mov rcx, r13                                                              |         rcx = r13;
+                                                                                         |         if (*(obj.Z) == 0) {
+    0x004beb0b jne 0x4beb1d                                                              |             
+    0x004beb0d mov rax, qword [rip + 0x2927a4]                                           |             rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x004beb14 test rax, rax                                                             |             
+                                                                                         |             if (rax == 0) {
+    0x004beb17 je 0x4bec28                                                               |                 goto label_32;
+                                                                                         |             }
+                                                                                         |         }
+    0x004beb1d cmp r15, 6                                                                |         
+                                                                                         |         if (r15 < 6) {
+    0x004beb21 jb 0x4beb3d                                                               |             goto label_5;
+                                                                                         |         }
+                                                                                         | label_4:
+    0x004beb23 add rbp, r14                                                              |         rbp += r14;
+    0x004beb26 lea rdi, [rcx + 0x74f2b0]                                                 |         
+    0x004beb2d lea rsi, [rsp + r14 + 0x30]                                               |         
+    0x004beb32 sub rbp, r14                                                              |         rbp -= r14;
+    0x004beb35 mov rdx, rbp                                                              |         
+    0x004beb38 call 0x401930                                                             |         eax = memcpy (rcx + obj.testCopyConstructWithIterators_char__bool__bool__bool_::u, rsp + r14 + 0x30, rbp);
+                                                                                         |     }
+                                                                                         | label_5:
+    0x004beb3d cmp byte [rip + 0x259e4c], 0                                              |     
+                                                                                         |     if (*(obj.veryVerbose) != 0) {
+    0x004beb44 je 0x4beb69                                                               |         
+    0x004beb46 mov edx, dword [rip + 0x259e58]                                           |         edx = numCopyCtorCalls;
+    0x004beb4c sub edx, r12d                                                             |         edx -= r12d;
+    0x004beb4f mov ecx, dword [rip + 0x259e57]                                           |         ecx = numCharCtorCalls;
+    0x004beb55 sub ecx, dword [rsp + 0x18]                                               |         ecx -= *((rsp + 0x18));
+    0x004beb59 mov edi, 0x4f5db4                                                         |         
+    0x004beb5e mov esi, dword [rsp + 0x20]                                               |         esi = *((rsp + 0x20));
+    0x004beb62 xor eax, eax                                                              |         eax = 0;
+    0x004beb64 call 0x401680                                                             |         eax = printf ("LINE = %d, #copy ctors = %d, #char ctors = %d.\n");
+                                                                                         |     }
+                                                                                         | label_31:
+    0x004beb69 cmp r12d, dword [rip + 0x259e34]                                          |     
+                                                                                         |     if (r12d == *(obj.numCopyCtorCalls)) {
+    0x004beb70 je 0x4be8e0                                                               |         goto label_2;
+                                                                                         |     }
+    0x004beb76 mov edi, 0x4f4e04                                                         |     
+    0x004beb7b mov edx, 0x4f5176                                                         |     edx = "NUM_COPIES == numCopyCtorCalls";
+    0x004beb80 mov esi, 0x103f                                                           |     esi = 0x103f;
+    0x004beb85 xor eax, eax                                                              |     eax = 0;
+    0x004beb87 call 0x401680                                                             |     printf ("Error /home/parsa/experiments/assumptions/crush/ccm-none/groups/bsl/bslalg/bslalg_arrayprimitives.t.cpp(%d): %s    (failed)\n");
+    0x004beb8c mov eax, dword [rip + 0x259e06]                                           |     eax = (anonymous namespace)::testStatus;
+    0x004beb92 cmp eax, 0x64                                                             |     
+                                                                                         |     if (eax > 0x64) {
+    0x004beb95 ja 0x4be8e0                                                               |         goto label_2;
+                                                                                         |     }
+    0x004beb9b inc eax                                                                   |     eax++;
+    0x004beb9d mov dword [rip + 0x259df5], eax                                           |     *(obj._anonymous_namespace_::testStatus) = eax;
+    0x004beba3 jmp 0x4be8e0                                                              |     goto label_2;
+                                                                                         | label_30:
+    0x004beba8 mov eax, 1                                                                |     eax = 1;
+    0x004bebad mov qword [rsp + 0x10], rax                                               |     *((rsp + 0x10)) = rax;
+    0x004bebb2 mov rax, qword [rip + 0x2926ff]                                           |     rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x004bebb9 test rax, rax                                                             |     
+                                                                                         |     if (rax != 0) {
+    0x004bebbc jne 0x4bea9a                                                              |         goto label_3;
+                                                                                         |     }
+    0x004bebc2 call 0x4eede0                                                             |     BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+    0x004bebc7 jmp 0x4bea9a                                                              |     goto label_3;
+                                                                                         | label_32:
+    0x004bec28 call 0x4eede0                                                             |     BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+    0x004bec2d mov rcx, r13                                                              |     rcx = r13;
+    0x004bec30 cmp r15, 6                                                                |     
+                                                                                         |     if (r15 >= 6) {
+    0x004bec34 jae 0x4beb23                                                              |         goto label_4;
+                                                                                         |     }
+    0x004bec3a jmp 0x4beb3d                                                              |     goto label_5;
+                                                                                         | label_25:
+    0x004bec3f add rsp, 0x58                                                             |     
+    0x004bec43 pop rbx                                                                   |     
+    0x004bec44 pop r12                                                                   |     
+    0x004bec46 pop r13                                                                   |     
+    0x004bec48 pop r14                                                                   |     
+    0x004bec4a pop r15                                                                   |     
+    0x004bec4c pop rbp                                                                   |     
+    0x004bec4d ret                                                                       |     return rax;
+                                                                                         | }

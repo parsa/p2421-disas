@@ -1,0 +1,47 @@
+    ; assembly                                                                       | /* r2dec pseudo code output */
+                                                                                     | /* balb_filecleanerutil.t/assume @ 0x413890 */
+                                                                                     | #include <stdint.h>
+                                                                                     |  
+    ; (fcn) method.BloombergLP::bdlt::PosixDateImpUtil.ydToSerial_int__int_ ()       | uint32_t method_BloombergLP::bdlt::PosixDateImpUtil_ydToSerial_int_int_ (int64_t arg4, int64_t arg2, uint32_t arg1) {
+                                                                                     |     rcx = arg4;
+                                                                                     |     rsi = arg2;
+                                                                                     |     rdi = arg1;
+                                                                                     |     /* BloombergLP::bdlt::PosixDateImpUtil::ydToSerial(int, int) */
+    0x00413890 lea eax, [rdi - 1]                                                    |     eax = rdi - 1;
+    0x00413893 imul ecx, eax, 0x16d                                                  |     ecx = eax * 0x16d;
+    0x00413899 lea edx, [rdi + 2]                                                    |     edx = rdi + 2;
+    0x0041389c test ax, ax                                                           |     
+    0x0041389f cmovns edx, eax                                                       |     __asm ("cmovns edx, eax");
+    0x004138a2 movsx eax, dx                                                         |     eax = (int32_t) dx;
+    0x004138a5 sar eax, 2                                                            |     eax >>= 2;
+    0x004138a8 add eax, ecx                                                          |     eax += ecx;
+    0x004138aa cmp edi, 0x6d9                                                        |     
+                                                                                     |     if (edi >= 0x6d9) {
+    0x004138b0 jb 0x4138f6                                                           |         
+    0x004138b2 add eax, 0xfffffff5                                                   |         eax += 0xfffffff5;
+    0x004138b5 cmp edi, 0x709                                                        |         
+                                                                                     |         if (edi < 0x709) {
+    0x004138bb jb 0x4138f6                                                           |             goto label_0;
+                                                                                     |         }
+    0x004138bd lea ecx, [rdi - 0x6a5]                                                |         ecx = rdi - 0x6a5;
+    0x004138c3 movsx ecx, cx                                                         |         ecx = (int32_t) cx;
+    0x004138c6 imul ecx, ecx, 0xffffeb85                                             |         ecx *= 0xffffeb85;
+    0x004138cc mov edx, ecx                                                          |         edx = ecx;
+    0x004138ce shr edx, 0x1f                                                         |         edx >>= 0x1f;
+    0x004138d1 sar ecx, 0x13                                                         |         ecx >>= 0x13;
+    0x004138d4 add ecx, edx                                                          |         ecx += edx;
+    0x004138d6 add edi, 0xfffff9bf                                                   |         edi += 0xfffff9bf;
+    0x004138dc movsx edx, di                                                         |         edx = (int32_t) di;
+    0x004138df imul edx, edx, 0x147b                                                 |         edx *= 0x147b;
+    0x004138e5 mov edi, edx                                                          |         edi = edx;
+    0x004138e7 shr edi, 0x1f                                                         |         edi >>= 0x1f;
+    0x004138ea sar edx, 0x15                                                         |         edx >>= 0x15;
+    0x004138ed add edx, edi                                                          |         edx += edi;
+    0x004138ef add edx, ecx                                                          |         edx += ecx;
+    0x004138f1 movsx ecx, dx                                                         |         ecx = (int32_t) dx;
+    0x004138f4 add eax, ecx                                                          |         eax += ecx;
+                                                                                     |     }
+                                                                                     | label_0:
+    0x004138f6 add eax, esi                                                          |     eax += esi;
+    0x004138f8 ret                                                                   |     return eax;
+                                                                                     | }

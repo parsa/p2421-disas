@@ -1,0 +1,137 @@
+    ; assembly                                                                                       | /* r2dec pseudo code output */
+                                                                                                     | /* bdlde_quotedprintableencoder.t/assume @ 0x41f4f0 */
+                                                                                                     | #include <stdint.h>
+                                                                                                     |  
+    ; (fcn) method.BloombergLP::bdlde::QuotedPrintableEncoder.endConvert_char__int__int_ ()          | uint64_t method_BloombergLP::bdlde::QuotedPrintableEncoder_endConvert_char_int_int_ (uint32_t arg4, char * arg3, uint32_t arg2, char * arg1) {
+                                                                                                     |     rcx = arg4;
+                                                                                                     |     rdx = arg3;
+                                                                                                     |     rsi = arg2;
+                                                                                                     |     rdi = arg1;
+                                                                                                     |     /* BloombergLP::bdlde::QuotedPrintableEncoder::endConvert(char*, int*, int) */
+    0x0041f4f0 mov eax, dword [rdi + 0x1c]                                                           |     eax = *((rdi + 0x1c));
+    0x0041f4f3 cmp eax, 0xffffffff                                                                   |     
+                                                                                                     |     if (eax != 0xffffffff) {
+    0x0041f4f6 je 0x41f50e                                                                           |         
+    0x0041f4f8 cmp eax, 2                                                                            |         
+                                                                                                     |         if (eax == 2) {
+    0x0041f4fb jne 0x41f521                                                                          |             
+    0x0041f4fd mov al, byte [rdi + 0x30]                                                             |             al = *((rdi + 0x30));
+    0x0041f500 test al, al                                                                           |             
+                                                                                                     |             if (al != 0) {
+    0x0041f502 jne 0x41f524                                                                          |                 goto label_0;
+                                                                                                     |             }
+    0x0041f504 cmp dword [rdi + 0x28], 0                                                             |             
+                                                                                                     |             if (*((rdi + 0x28)) != 0) {
+    0x0041f508 je 0x41f50e                                                                           |                 
+    0x0041f50a xor eax, eax                                                                          |                 eax = 0;
+    0x0041f50c jmp 0x41f524                                                                          |                 
+                                                                                                     |             }
+                                                                                                     |         } else {
+    0x0041f50e mov dword [rdi + 0x1c], 0xffffffff                                                    |             *((rdi + 0x1c)) = 0xffffffff;
+    0x0041f515 mov dword [rdx], 0                                                                    |             *(rdx) = 0;
+    0x0041f51b mov eax, 0xffffffff                                                                   |             eax = 0xffffffff;
+    0x0041f520 ret                                                                                   |             return eax;
+                                                                                                     |         }
+    0x0041f521 mov al, byte [rdi + 0x30]                                                             |         al = *((rdi + 0x30));
+                                                                                                     |     }
+                                                                                                     | label_0:
+    0x0041f524 mov dword [rdi + 0x1c], 2                                                             |     *((rdi + 0x1c)) = 2;
+    0x0041f52b mov r8d, dword [rdi + 8]                                                              |     r8d = *((rdi + 8));
+    0x0041f52f test ecx, ecx                                                                         |     
+                                                                                                     |     if (ecx != 0) {
+    0x0041f531 je 0x41f585                                                                           |         
+    0x0041f533 test al, al                                                                           |         
+                                                                                                     |         if (al != 0) {
+    0x0041f535 je 0x41f585                                                                           |             
+    0x0041f537 movzx r9d, al                                                                         |             r9d = (int32_t) al;
+    0x0041f53b mov eax, r9d                                                                          |             eax = r9d;
+    0x0041f53e and eax, 0xf                                                                          |             eax &= 0xf;
+    0x0041f541 mov al, byte [rax + 0x44fde5]                                                         |             al = *((rax + str.0123456789ABCDEF));
+    0x0041f547 mov byte [rdi + 0x20], al                                                             |             *((rdi + 0x20)) = al;
+    0x0041f54a shr r9, 4                                                                             |             r9 >>= 4;
+    0x0041f54e mov al, byte [r9 + 0x44fde5]                                                          |             al = *((r9 + str.0123456789ABCDEF));
+    0x0041f555 mov dword [rdi + 0x28], 2                                                             |             *((rdi + 0x28)) = 2;
+    0x0041f55c mov byte [rdi + 0x21], al                                                             |             *((rdi + 0x21)) = al;
+    0x0041f55f mov r9d, r8d                                                                          |             r9d = r8d;
+    0x0041f562 sub r9d, dword [rdi + 0x2c]                                                           |             r9d -= *((rdi + 0x2c));
+    0x0041f566 mov eax, dword [rdi + 4]                                                              |             eax = *((rdi + 4));
+    0x0041f569 add eax, 0xfffffffe                                                                   |             eax += 0xfffffffe;
+    0x0041f56c cmp r9d, eax                                                                          |             
+                                                                                                     |             if (r9d >= eax) {
+    0x0041f56f jge 0x41f596                                                                          |                 goto label_1;
+                                                                                                     |             }
+    0x0041f571 mov byte [rsi], 0x3d                                                                  |             *(rsi) = 0x3d;
+    0x0041f574 mov r10d, dword [rdi + 8]                                                             |             r10d = *((rdi + 8));
+    0x0041f578 mov r9d, dword [rdi + 0x28]                                                           |             r9d = *((rdi + 0x28));
+    0x0041f57c inc r10d                                                                              |             r10d++;
+    0x0041f57f mov dword [rdi + 8], r10d                                                             |             *((rdi + 8)) = r10d;
+    0x0041f583 jmp 0x41f5d8                                                                          |             
+                                                                                                     |         }
+                                                                                                     |     } else {
+    0x0041f585 mov r9d, dword [rdi + 0x28]                                                           |         r9d = *((rdi + 0x28));
+    0x0041f589 mov r10d, r8d                                                                         |         r10d = r8d;
+    0x0041f58c test r9d, r9d                                                                         |         
+                                                                                                     |         if (r9d != 0) {
+    0x0041f58f jne 0x41f5e6                                                                          |             goto label_2;
+                                                                                                     |         }
+    0x0041f591 jmp 0x41f623                                                                          |         goto label_3;
+                                                                                                     | label_1:
+    0x0041f596 mov dword [rdi + 0x28], 3                                                             |         *((rdi + 0x28)) = 3;
+    0x0041f59d mov byte [rdi + 0x22], 0x3d                                                           |         *((rdi + 0x22)) = 0x3d;
+    0x0041f5a1 mov byte [rsi], 0x3d                                                                  |         *(rsi) = 0x3d;
+    0x0041f5a4 inc dword [rdi + 8]                                                                   |         *((rdi + 8))++;
+    0x0041f5a7 movsxd r9, dword [rdi + 0x28]                                                         |         r9 = *((rdi + 0x28));
+    0x0041f5ab lea eax, [r9 + 1]                                                                     |         eax = r9 + 1;
+    0x0041f5af mov dword [rdi + 0x28], eax                                                           |         *((rdi + 0x28)) = eax;
+    0x0041f5b2 mov byte [rdi + r9 + 0x20], 0xa                                                       |         *((rdi + r9 + 0x20)) = 0xa;
+    0x0041f5b8 movsxd r9, dword [rdi + 0x28]                                                         |         r9 = *((rdi + 0x28));
+    0x0041f5bc lea eax, [r9 + 1]                                                                     |         eax = r9 + 1;
+    0x0041f5c0 mov dword [rdi + 0x28], eax                                                           |         *((rdi + 0x28)) = eax;
+    0x0041f5c3 mov byte [rdi + r9 + 0x20], 0xd                                                       |         *((rdi + r9 + 0x20)) = 0xd;
+    0x0041f5c9 mov r10d, dword [rdi + 8]                                                             |         r10d = *((rdi + 8));
+    0x0041f5cd mov r9d, dword [rdi + 0x28]                                                           |         r9d = *((rdi + 0x28));
+    0x0041f5d1 lea eax, [r10 + 2]                                                                    |         eax = r10 + 2;
+    0x0041f5d5 mov dword [rdi + 0x2c], eax                                                           |         *((rdi + 0x2c)) = eax;
+                                                                                                     |     }
+    0x0041f5d8 inc rsi                                                                               |     rsi++;
+    0x0041f5db mov word [rdi + 0x30], 0                                                              |     *((rdi + 0x30)) = 0;
+    0x0041f5e1 test r9d, r9d                                                                         |     
+                                                                                                     |     if (r9d == 0) {
+    0x0041f5e4 je 0x41f623                                                                           |         goto label_3;
+                                                                                                     |     }
+                                                                                                     | label_2:
+    0x0041f5e6 add ecx, r8d                                                                          |     ecx += r8d;
+    0x0041f5e9 nop dword [rax]                                                                       |     
+                                                                                                     |     do {
+    0x0041f5f0 cmp r10d, ecx                                                                         |         
+                                                                                                     |         if (r10d == ecx) {
+    0x0041f5f3 je 0x41f620                                                                           |             goto label_4;
+                                                                                                     |         }
+    0x0041f5f5 movsxd r9, r9d                                                                        |         r9 = (int64_t) r9d;
+    0x0041f5f8 lea rax, [r9 - 1]                                                                     |         rax = r9 - 1;
+    0x0041f5fc mov dword [rdi + 0x28], eax                                                           |         *((rdi + 0x28)) = eax;
+    0x0041f5ff movzx eax, byte [rdi + r9 + 0x1f]                                                     |         eax = *((rdi + r9 + 0x1f));
+    0x0041f605 mov byte [rsi], al                                                                    |         *(rsi) = al;
+    0x0041f607 inc rsi                                                                               |         rsi++;
+    0x0041f60a mov r10d, dword [rdi + 8]                                                             |         r10d = *((rdi + 8));
+    0x0041f60e mov r9d, dword [rdi + 0x28]                                                           |         r9d = *((rdi + 0x28));
+    0x0041f612 inc r10d                                                                              |         r10d++;
+    0x0041f615 mov dword [rdi + 8], r10d                                                             |         *((rdi + 8)) = r10d;
+    0x0041f619 test r9d, r9d                                                                         |         
+    0x0041f61c jne 0x41f5f0                                                                          |         
+                                                                                                     |     } while (r9d != 0);
+    0x0041f61e jmp 0x41f623                                                                          |     goto label_3;
+                                                                                                     | label_4:
+    0x0041f620 mov r10d, ecx                                                                         |     r10d = ecx;
+                                                                                                     | label_3:
+    0x0041f623 sub r10d, r8d                                                                         |     r10d -= r8d;
+    0x0041f626 mov dword [rdx], r10d                                                                 |     *(rdx) = r10d;
+    0x0041f629 mov eax, 3                                                                            |     eax = 3;
+    0x0041f62e cmp byte [rdi + 0x30], 0                                                              |     
+                                                                                                     |     if (*((rdi + 0x30)) != 0) {
+    0x0041f632 je 0x41f635                                                                           |         
+    0x0041f634 ret                                                                                   |         return rax;
+                                                                                                     |     }
+    0x0041f635 mov eax, dword [rdi + 0x28]                                                           |     eax = *((rdi + 0x28));
+    0x0041f638 ret                                                                                   |     return rax;
+                                                                                                     | }

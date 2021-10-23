@@ -1,0 +1,81 @@
+    ; assembly                                           | /* r2dec pseudo code output */
+                                                         | /* bdlb_variant.t/assume @ 0x405ed0 */
+                                                         | #include <stdint.h>
+                                                         |  
+    ; (fcn) sym.g_char_const_ ()                         | int64_t g_char_const_ (int64_t arg2, char * arg1) {
+                                                         |     int64_t var_8h;
+                                                         |     int64_t var_10h;
+                                                         |     int64_t var_18h;
+                                                         |     int64_t var_48h;
+                                                         |     int64_t var_50h;
+                                                         |     rsi = arg2;
+                                                         |     rdi = arg1;
+                                                         |     /* g(char const*) */
+    0x00405ed0 push r14                                  |     
+    0x00405ed2 push rbx                                  |     
+    0x00405ed3 sub rsp, 0x58                             |     
+    0x00405ed7 mov rbx, rsi                              |     rbx = rsi;
+    0x00405eda mov r14, rdi                              |     r14 = rdi;
+    0x00405edd xor edi, edi                              |     edi = 0;
+    0x00405edf test rsi, rsi                             |     
+    0x00405ee2 sete dil                                  |     dil = (rsi == 0) ? 1 : 0;
+    0x00405ee6 mov esi, 0x532b9e                         |     esi = "spec";
+    0x00405eeb mov edx, 0xa1d                            |     edx = 0xa1d;
+    0x00405ef0 call 0x405970                             |     (anonymousnamespace)::aSsErT(bool,char const*,int) ();
+    0x00405ef5 mov dword [rsp + 0x48], 0                 |     *((rsp + 0x48)) = 0;
+    0x00405efd mov rax, qword [rip + 0x36a6cc]           |     rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x00405f04 test rax, rax                             |     
+                                                         |     if (rax == 0) {
+    0x00405f07 jne 0x405f0e                              |         
+    0x00405f09 call 0x4f4f90                             |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                         |     }
+    0x00405f0e xor edi, edi                              |     edi = 0;
+    0x00405f10 test rbx, rbx                             |     
+    0x00405f13 sete dil                                  |     dil = (rbx == 0) ? 1 : 0;
+    0x00405f17 mov qword [rsp + 0x50], rax               |     *((rsp + 0x50)) = rax;
+    0x00405f1c mov esi, 0x532b9e                         |     esi = "spec";
+    0x00405f21 mov edx, 0xa13                            |     edx = 0xa13;
+    0x00405f26 call 0x405970                             |     (anonymousnamespace)::aSsErT(bool,char const*,int) ();
+    0x00405f2b lea rdi, [rsp + 0x18]                     |     rdi = rsp + 0x18;
+    0x00405f30 mov rsi, rbx                              |     rsi = rbx;
+    0x00405f33 mov edx, 1                                |     edx = 1;
+    0x00405f38 call 0x405a70                             |     eax = ggg(BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int,bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>,TestInt,TestString,TestVoid>>*,char const*,bool) ();
+    0x00405f3d not eax                                   |     eax = ~eax;
+    0x00405f3f shr eax, 0x1f                             |     eax >>= 0x1f;
+    0x00405f42 mov esi, 0x532be3                         |     esi = "ggg(object, spec) < 0";
+    0x00405f47 mov edi, eax                              |     edi = eax;
+    0x00405f49 mov edx, 0xa14                            |     edx = 0xa14;
+    0x00405f4e call 0x405970                             |     (anonymousnamespace)::aSsErT(bool,char const*,int) ();
+    0x00405f53 mov ecx, dword [rsp + 0x48]               |     ecx = *((rsp + 0x48));
+    0x00405f57 mov dword [r14 + 0x30], ecx               |     *((r14 + 0x30)) = ecx;
+    0x00405f5b mov rax, qword [rip + 0x36a66e]           |     rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x00405f62 test rax, rax                             |     
+                                                         |     if (rax == 0) {
+    0x00405f65 jne 0x405f70                              |         
+    0x00405f67 call 0x4f4f90                             |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+    0x00405f6c mov ecx, dword [r14 + 0x30]               |         ecx = *((r14 + 0x30));
+                                                         |     }
+    0x00405f70 mov qword [r14 + 0x38], rax               |     *((r14 + 0x38)) = rax;
+    0x00405f74 test ecx, ecx                             |     
+                                                         |     if (ecx != 0) {
+    0x00405f76 je 0x405f99                               |         
+    0x00405f78 mov qword [rsp + 8], r14                  |         *((rsp + 8)) = r14;
+    0x00405f7d mov qword [rsp + 0x10], rax               |         *((rsp + 0x10)) = rax;
+    0x00405f82 mov edx, dword [rsp + 0x48]               |         edx = *((rsp + 0x48));
+    0x00405f86 test edx, edx                             |         
+                                                         |         if (edx == 0) {
+    0x00405f88 je 0x405f99                               |             goto label_0;
+                                                         |         }
+    0x00405f8a lea rdi, [rsp + 0x18]                     |         
+    0x00405f8f lea rsi, [rsp + 8]                        |         
+    0x00405f94 call 0x4cf850                             |         voidBloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int,bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>,TestInt,TestString,TestVoid>>::doApply<BloombergLP::bdlb::Variant_CopyConstructVisitor&>(BloombergLP::bdlb::Variant_CopyConstructVisitor&,int)const (rsp + 0x18, rsp + 8, rdx);
+                                                         |     }
+                                                         | label_0:
+    0x00405f99 lea rdi, [rsp + 0x18]                     |     
+    0x00405f9e call 0x4c6370                             |     BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int,bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>,TestInt,TestString,TestVoid>>::reset() (rsp + 0x18);
+    0x00405fa3 mov rax, r14                              |     rax = r14;
+    0x00405fa6 add rsp, 0x58                             |     
+    0x00405faa pop rbx                                   |     
+    0x00405fab pop r14                                   |     
+    0x00405fad ret                                       |     return rax;
+                                                         | }

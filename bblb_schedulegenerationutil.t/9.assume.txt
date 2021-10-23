@@ -1,0 +1,105 @@
+    ; assembly                                                                                                                                           | /* r2dec pseudo code output */
+                                                                                                                                                         | /* bblb_schedulegenerationutil.t/assume @ 0x41faa0 */
+                                                                                                                                                         | #include <stdint.h>
+                                                                                                                                                         |  
+    ; (fcn) method.BloombergLP::bdlc::PackedIntArrayImp_BloombergLP::bdlc::PackedIntArrayImp_Unsigned_.replace_unsigned_long__unsigned_long_ ()          | uint64_t method_BloombergLP::bdlc::PackedIntArrayImp_BloombergLP::bdlc::PackedIntArrayImp_Unsigned_replace_unsigned_long_unsigned_long_ (uint32_t arg3, int64_t arg2, int64_t arg1, int64_t arg7, int64_t arg8) {
+                                                                                                                                                         |     rdx = arg3;
+                                                                                                                                                         |     rsi = arg2;
+                                                                                                                                                         |     rdi = arg1;
+                                                                                                                                                         |     xmm0 = arg7;
+                                                                                                                                                         |     xmm1 = arg8;
+                                                                                                                                                         |     /* BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::replace(unsigned long, unsigned long) */
+    0x0041faa0 push rbp                                                                                                                                  |     
+    0x0041faa1 push r15                                                                                                                                  |     
+    0x0041faa3 push r14                                                                                                                                  |     
+    0x0041faa5 push r13                                                                                                                                  |     
+    0x0041faa7 push r12                                                                                                                                  |     
+    0x0041faa9 push rbx                                                                                                                                  |     
+    0x0041faaa push rax                                                                                                                                  |     
+    0x0041faab mov r15, rdx                                                                                                                              |     r15 = rdx;
+    0x0041faae xor eax, eax                                                                                                                              |     eax = 0;
+    0x0041fab0 mov rcx, rdx                                                                                                                              |     rcx = rdx;
+    0x0041fab3 shr rcx, 0x20                                                                                                                             |     rcx >>= 0x20;
+    0x0041fab7 setne al                                                                                                                                  |     al = (rcx != 0) ? 1 : 0;
+    0x0041faba xor ecx, ecx                                                                                                                              |     ecx = 0;
+    0x0041fabc cmp rdx, 0xff                                                                                                                             |     
+    0x0041fac3 seta cl                                                                                                                                   |     cl = (rdx > 0xff) ? 1 : 0;
+    0x0041fac6 inc ecx                                                                                                                                   |     ecx++;
+    0x0041fac8 cmp rdx, 0xffff                                                                                                                           |     
+    0x0041facf lea ebp, [rax*4 + 4]                                                                                                                      |     ebp = rax*4 + 4;
+                                                                                                                                                         |     if (rdx <= 0xffff) {
+    0x0041fad6 cmovbe ebp, ecx                                                                                                                           |         
+                                                                                                                                                         |     }
+    0x0041fad9 mov r14, rsi                                                                                                                              |     r14 = rsi;
+    0x0041fadc mov r12, rdi                                                                                                                              |     r12 = rdi;
+    0x0041fadf mov eax, dword [rdi + 0x10]                                                                                                               |     eax = *((rdi + 0x10));
+    0x0041fae2 cmp eax, ebp                                                                                                                              |     
+                                                                                                                                                         |     if (eax >= ebp) {
+    0x0041fae4 jl 0x41faef                                                                                                                               |         
+    0x0041fae6 dec eax                                                                                                                                   |         eax--;
+                                                                                                                                                         |         /* switch table (24 cases) at 0x460060 */
+    0x0041fae8 jmp qword [rax*8 + 0x460060]                                                                                                              |         
+                                                                                                                                                         |     }
+    0x0041faef mov r10, qword [r12 + 8]                                                                                                                  |     r10 = *((r12 + 8));
+    0x0041faf4 mov ecx, ebp                                                                                                                              |     ecx = ebp;
+    0x0041faf6 imul rcx, r10                                                                                                                             |     rcx *= r10;
+    0x0041fafa mov rbx, qword [r12 + 0x18]                                                                                                               |     rbx = *((r12 + 0x18));
+    0x0041faff cmp rcx, rbx                                                                                                                              |     
+                                                                                                                                                         |     if (rcx <= rbx) {
+    0x0041fb02 jbe 0x41fb83                                                                                                                              |         goto label_0;
+                                                                                                                                                         |     }
+    0x0041fb04 cmp rcx, 0x55555550                                                                                                                       |     
+                                                                                                                                                         |     if (rcx > 0x55555550) {
+    0x0041fb0b ja 0x41fbe9                                                                                                                               |         void (*0x41fbe9)() ();
+                                                                                                                                                         |     }
+    0x0041fb11 nop word cs:[rax + rax]                                                                                                                   |     
+    0x0041fb1b nop dword [rax + rax]                                                                                                                     |     
+                                                                                                                                                         |     do {
+    0x0041fb20 lea rax, [rbx + 3]                                                                                                                        |         rax = rbx + 3;
+    0x0041fb24 shr rax, 1                                                                                                                                |         rax >>= 1;
+    0x0041fb27 add rbx, rax                                                                                                                              |         rbx += rax;
+    0x0041fb2a cmp rbx, rcx                                                                                                                              |         
+    0x0041fb2d jb 0x41fb20                                                                                                                               |         
+                                                                                                                                                         |     } while (rbx < rcx);
+    0x0041fb2f mov r13, qword [r12]                                                                                                                      |     r13 = *(r12);
+    0x0041fb33 mov rdi, qword [r12 + 0x20]                                                                                                               |     rdi = *((r12 + 0x20));
+    0x0041fb38 mov rax, qword [rdi]                                                                                                                      |     rax = *(rdi);
+    0x0041fb3b mov rsi, rbx                                                                                                                              |     rsi = rbx;
+    0x0041fb3e call qword [rax + 0x10]                                                                                                                   |     rax = uint64_t (*rax + 0x10)() ();
+    0x0041fb41 mov qword [r12], rax                                                                                                                      |     *(r12) = rax;
+    0x0041fb45 mov qword [r12 + 0x18], rbx                                                                                                               |     *((r12 + 0x18)) = rbx;
+    0x0041fb4a mov ebx, dword [r12 + 0x10]                                                                                                               |     ebx = *((r12 + 0x10));
+    0x0041fb4f mov dword [r12 + 0x10], ebp                                                                                                               |     *((r12 + 0x10)) = ebp;
+    0x0041fb54 mov rdi, r12                                                                                                                              |     
+    0x0041fb57 mov rsi, rax                                                                                                                              |     
+    0x0041fb5a xor edx, edx                                                                                                                              |     
+    0x0041fb5c mov ecx, ebp                                                                                                                              |     
+    0x0041fb5e mov r8, r13                                                                                                                               |     
+    0x0041fb61 xor r9d, r9d                                                                                                                              |     
+    0x0041fb64 push qword [r12 + 8]                                                                                                                      |     
+    0x0041fb69 push rbx                                                                                                                                  |     
+    0x0041fb6a call 0x41d190                                                                                                                             |     BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::replaceImp(void*,unsigned long,int,void*,unsigned long,int,unsigned long) (r12, rax, 0, ebp, r13, 0);
+    0x0041fb6f add rsp, 0x10                                                                                                                             |     
+    0x0041fb73 mov rdi, qword [r12 + 0x20]                                                                                                               |     rdi = *((r12 + 0x20));
+    0x0041fb78 mov rax, qword [rdi]                                                                                                                      |     rax = *(rdi);
+    0x0041fb7b mov rsi, r13                                                                                                                              |     rsi = r13;
+    0x0041fb7e call qword [rax + 0x18]                                                                                                                   |     rax = uint64_t (*rax + 0x18)() ();
+    0x0041fb81 jmp 0x41fba5                                                                                                                              |     goto label_1;
+                                                                                                                                                         | label_0:
+    0x0041fb83 mov dword [r12 + 0x10], ebp                                                                                                               |     *((r12 + 0x10)) = ebp;
+    0x0041fb88 mov rsi, qword [r12]                                                                                                                      |     rsi = *(r12);
+    0x0041fb8c mov rdi, r12                                                                                                                              |     
+    0x0041fb8f xor edx, edx                                                                                                                              |     
+    0x0041fb91 mov ecx, ebp                                                                                                                              |     
+    0x0041fb93 mov r8, rsi                                                                                                                               |     
+    0x0041fb96 xor r9d, r9d                                                                                                                              |     
+    0x0041fb99 push r10                                                                                                                                  |     
+    0x0041fb9b push rax                                                                                                                                  |     
+    0x0041fb9c call 0x41d190                                                                                                                             |     BloombergLP::bdlc::PackedIntArrayImp<BloombergLP::bdlc::PackedIntArrayImp_Unsigned>::replaceImp(void*,unsigned long,int,void*,unsigned long,int,unsigned long) (r12, *(rsi), 0, ebp, rsi, 0);
+    0x0041fba1 add rsp, 0x10                                                                                                                             |     
+                                                                                                                                                         | label_1:
+    0x0041fba5 mov eax, dword [r12 + 0x10]                                                                                                               |     eax = *((r12 + 0x10));
+    0x0041fbaa dec eax                                                                                                                                   |     eax--;
+                                                                                                                                                         |     /* switch table (24 cases) at 0x460060 */
+    0x0041fbac jmp qword [rax*8 + 0x460060]                                                                                                              |     
+                                                                                                                                                         | }

@@ -1,0 +1,46 @@
+    ; assembly                                                                           | /* r2dec pseudo code output */
+                                                                                         | /* balb_filecleanerutil.t/none @ 0x413aa0 */
+                                                                                         | #include <stdint.h>
+                                                                                         |  
+    ; (fcn) method.BloombergLP::bdlt::PosixDateImpUtil.ydToSerial_int__int_ ()           | uint32_t method_BloombergLP::bdlt::PosixDateImpUtil_ydToSerial_int_int_ (int64_t arg3, int64_t arg2, signed int64_t arg1) {
+                                                                                         |     rdx = arg3;
+                                                                                         |     rsi = arg2;
+                                                                                         |     rdi = arg1;
+                                                                                         |     /* BloombergLP::bdlt::PosixDateImpUtil::ydToSerial(int, int) */
+    0x00413aa0 lea ecx, [rdi - 1]                                                        |     ecx = rdi - 1;
+    0x00413aa3 imul edx, ecx, 0x16d                                                      |     edx = ecx * 0x16d;
+    0x00413aa9 lea eax, [rdi + 2]                                                        |     eax = rdi + 2;
+    0x00413aac test ecx, ecx                                                             |     
+    0x00413aae cmovns eax, ecx                                                           |     __asm ("cmovns eax, ecx");
+    0x00413ab1 sar eax, 2                                                                |     eax >>= 2;
+    0x00413ab4 add eax, edx                                                              |     eax += edx;
+    0x00413ab6 cmp edi, 0x6d9                                                            |     
+                                                                                         |     if (edi >= 0x6d9) {
+    0x00413abc jl 0x413b09                                                               |         
+    0x00413abe add eax, 0xfffffff5                                                       |         eax += 0xfffffff5;
+    0x00413ac1 cmp edi, 0x709                                                            |         
+                                                                                         |         if (edi < 0x709) {
+    0x00413ac7 jl 0x413b09                                                               |             goto label_0;
+                                                                                         |         }
+    0x00413ac9 lea ecx, [rdi - 0x6a5]                                                    |         ecx = rdi - 0x6a5;
+    0x00413acf movsxd rcx, ecx                                                           |         rcx = (int64_t) ecx;
+    0x00413ad2 imul rcx, rcx, 0xffffffffae147ae1                                         |         rcx *= 0xffffffffae147ae1;
+    0x00413ad9 mov rdx, rcx                                                              |         rdx = rcx;
+    0x00413adc shr rdx, 0x3f                                                             |         rdx >>= 0x3f;
+    0x00413ae0 sar rcx, 0x25                                                             |         rcx >>= 0x25;
+    0x00413ae4 add ecx, edx                                                              |         ecx += edx;
+    0x00413ae6 add edi, 0xfffff9bf                                                       |         edi += 0xfffff9bf;
+    0x00413aec movsxd rdx, edi                                                           |         rdx = (int64_t) edi;
+    0x00413aef imul rdx, rdx, 0x51eb851f                                                 |         rdx *= 0x51eb851f;
+    0x00413af6 mov rdi, rdx                                                              |         rdi = rdx;
+    0x00413af9 shr rdi, 0x3f                                                             |         rdi >>= 0x3f;
+    0x00413afd sar rdx, 0x27                                                             |         rdx >>= 0x27;
+    0x00413b01 add edx, edi                                                              |         edx += edi;
+    0x00413b03 add edx, ecx                                                              |         edx += ecx;
+    0x00413b05 add edx, eax                                                              |         edx += eax;
+    0x00413b07 mov eax, edx                                                              |         eax = edx;
+                                                                                         |     }
+                                                                                         | label_0:
+    0x00413b09 add eax, esi                                                              |     eax += esi;
+    0x00413b0b ret                                                                       |     return eax;
+                                                                                         | }

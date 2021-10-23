@@ -1,0 +1,89 @@
+    ; assembly                                                                                               | /* r2dec pseudo code output */
+                                                                                                             | /* baljsn_decoder.t/assume @ 0x478140 */
+                                                                                                             | #include <stdint.h>
+                                                                                                             |  
+    ; (fcn) method.BloombergLP::balxml::Decoder.checkForErrors_BloombergLP::balxml::ErrorInfo_const_ ()      | uint64_t method_BloombergLP::balxml::Decoder_checkForErrors_BloombergLP::balxml::ErrorInfo_const_ (int64_t arg2, int64_t arg1) {
+                                                                                                             |     rsi = arg2;
+                                                                                                             |     rdi = arg1;
+                                                                                                             |     /* BloombergLP::balxml::Decoder::checkForErrors(BloombergLP::balxml::ErrorInfo const&) */
+    0x00478140 push rbp                                                                                      |     
+    0x00478141 push r15                                                                                      |     
+    0x00478143 push r14                                                                                      |     
+    0x00478145 push rbx                                                                                      |     
+    0x00478146 push rax                                                                                      |     
+    0x00478147 mov r14, rsi                                                                                  |     r14 = rsi;
+    0x0047814a mov r15, rdi                                                                                  |     r15 = rdi;
+    0x0047814d mov eax, dword [rsi]                                                                          |     eax = *(rsi);
+    0x0047814f lea ecx, [rax - 2]                                                                            |     ecx = rax - 2;
+    0x00478152 cmp ecx, 2                                                                                    |     
+                                                                                                             |     if (ecx < 2) {
+    0x00478155 jae 0x478168                                                                                  |         
+    0x00478157 mov byte [r15 + 0x414], 1                                                                     |         *((r15 + 0x414)) = 1;
+    0x0047815f inc dword [r15 + 0x408]                                                                       |         *((r15 + 0x408))++;
+    0x00478166 jmp 0x478177                                                                                  |         
+                                                                                                             |     } else {
+    0x00478168 test eax, eax                                                                                 |         
+                                                                                                             |         if (eax == 0) {
+    0x0047816a je 0x478223                                                                                   |             goto label_0;
+                                                                                                             |         }
+    0x00478170 inc dword [r15 + 0x40c]                                                                       |         *((r15 + 0x40c))++;
+                                                                                                             |     }
+    0x00478177 mov rbx, qword [r15 + 0x3c0]                                                                  |     rbx = *((r15 + 0x3c0));
+    0x0047817e test rbx, rbx                                                                                 |     
+                                                                                                             |     if (rbx == 0) {
+    0x00478181 jne 0x4781a0                                                                                  |         
+    0x00478183 lea rbx, [r15 + 0x2d8]                                                                        |         rbx = r15 + 0x2d8;
+    0x0047818a mov rsi, qword [r15 + 0x2d0]                                                                  |         
+    0x00478191 mov rdi, rbx                                                                                  |         
+    0x00478194 call 0x418b40                                                                                 |         BloombergLP::balxml::Decoder::MemOutStream::MemOutStream(BloombergLP::bslma::Allocator*) (rbx, *((r15 + 0x2d0)));
+    0x00478199 mov qword [r15 + 0x3c0], rbx                                                                  |         *((r15 + 0x3c0)) = rbx;
+                                                                                                             |     }
+    0x004781a0 mov rdi, rbx                                                                                  |     
+    0x004781a3 mov rsi, r14                                                                                  |     
+    0x004781a6 call 0x47b3d0                                                                                 |     rax = BloombergLP::balxml::operator << (std::_1::basic_ostream<char,std::_1::char_traits<char>>&,BloombergLP::balxml::ErrorInfoconst&) (rbx, r14);
+    0x004781ab mov rbx, rax                                                                                  |     rbx = rax;
+    0x004781ae mov rax, qword [rax]                                                                          |     rax = *(rax);
+    0x004781b1 mov rsi, qword [rax - 0x18]                                                                   |     rsi = *((rax - 0x18));
+    0x004781b5 add rsi, rbx                                                                                  |     rsi += rbx;
+    0x004781b8 mov rbp, rsp                                                                                  |     
+    0x004781bb mov rdi, rbp                                                                                  |     rdi = rsp;
+    0x004781be call 0x406270                                                                                 |     std::_1::ios_base::getloc()const ();
+    0x004781c3 mov esi, 0x88a810                                                                             |     esi = std::__1::ctype<char>::id;
+    0x004781c8 mov rdi, rbp                                                                                  |     rdi = rbp;
+    0x004781cb call 0x406390                                                                                 |     rax = std::_1::locale::use_facet(std::_1::locale::id&)const ();
+    0x004781d0 mov rcx, qword [rax]                                                                          |     rcx = *(rax);
+    0x004781d3 mov rdi, rax                                                                                  |     rdi = rax;
+    0x004781d6 mov esi, 0xa                                                                                  |     esi = 0xa;
+    0x004781db call qword [rcx + 0x38]                                                                       |     eax = uint64_t (*rcx + 0x38)() ();
+    0x004781de mov ebp, eax                                                                                  |     
+    0x004781e0 mov rdi, rsp                                                                                  |     rdi = rsp;
+    0x004781e3 call 0x406450                                                                                 |     std::_1::locale::~locale() ();
+    0x004781e8 movsx esi, bpl                                                                                |     esi = (int32_t) bpl;
+    0x004781ec mov rdi, rbx                                                                                  |     rdi = rbx;
+    0x004781ef call 0x405f80                                                                                 |     std::_1::basic_ostream<char,std::_1::char_traits<char>>::put(char) ();
+    0x004781f4 mov rdi, rbx                                                                                  |     rdi = rbx;
+    0x004781f7 call 0x406230                                                                                 |     std::_1::basic_ostream<char,std::_1::char_traits<char>>::flush() ();
+    0x004781fc mov rdi, qword [r15 + 0x2c8]                                                                  |     rdi = *((r15 + 0x2c8));
+    0x00478203 test rdi, rdi                                                                                 |     
+                                                                                                             |     if (rdi != 0) {
+    0x00478206 je 0x478217                                                                                   |         
+    0x00478208 mov eax, dword [r14]                                                                          |         eax = *(r14);
+    0x0047820b cmp eax, dword [rdi]                                                                          |         
+                                                                                                             |         if (eax <= *(rdi)) {
+    0x0047820d jle 0x478217                                                                                  |             goto label_1;
+                                                                                                             |         }
+    0x0047820f mov rsi, r14                                                                                  |         
+    0x00478212 call 0x47b1b0                                                                                 |         eax = BloombergLP::balxml::ErrorInfo::operator=(BloombergLP::balxml::ErrorInfoconst&) (rdi, r14);
+                                                                                                             |     }
+                                                                                                             | label_1:
+    0x00478217 xor eax, eax                                                                                  |     eax = 0;
+    0x00478219 sub al, byte [r15 + 0x414]                                                                    |     al -= *((r15 + 0x414));
+    0x00478220 movsx eax, al                                                                                 |     eax = (int32_t) al;
+                                                                                                             | label_0:
+    0x00478223 add rsp, 8                                                                                    |     
+    0x00478227 pop rbx                                                                                       |     
+    0x00478228 pop r14                                                                                       |     
+    0x0047822a pop r15                                                                                       |     
+    0x0047822c pop rbp                                                                                       |     
+    0x0047822d ret                                                                                           |     return rax;
+                                                                                                             | }

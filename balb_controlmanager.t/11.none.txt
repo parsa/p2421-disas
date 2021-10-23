@@ -1,0 +1,38 @@
+    ; assembly                                                                   | /* r2dec pseudo code output */
+                                                                                 | /* balb_controlmanager.t/none @ 0x40d230 */
+                                                                                 | #include <stdint.h>
+                                                                                 |  
+    ; (fcn) method.BloombergLP::bdlb::String.rtrim_char_const__int_ ()           | int64_t method_BloombergLP::bdlb::String_rtrim_char_const_int_ (int64_t arg2, int64_t arg1) {
+                                                                                 |     rsi = arg2;
+                                                                                 |     rdi = arg1;
+                                                                                 |     /* BloombergLP::bdlb::String::rtrim(char const*, int*) */
+    0x0040d230 movsxd rax, dword [rsi]                                           |     rax = *(rsi);
+    0x0040d233 test rax, rax                                                     |     
+                                                                                 |     if (rax == 0) {
+    0x0040d236 je 0x40d26d                                                       |         goto label_0;
+                                                                                 |     }
+    0x0040d238 mov r9, qword [rip + 0x29d71]                                     |     r9 = BloombergLP::bdlb::CharType::s_spaceArray_p;
+    0x0040d23f mov r8d, eax                                                      |     r8d = eax;
+    0x0040d242 sar r8d, 0x1f                                                     |     r8d >>= 0x1f;
+    0x0040d246 and r8d, eax                                                      |     r8d &= eax;
+    0x0040d249 lea ecx, [rax + 1]                                                |     ecx = rax + 1;
+    0x0040d24c nop dword [rax]                                                   |     
+                                                                                 |     do {
+    0x0040d250 test rax, rax                                                     |         
+                                                                                 |         if (rax <= 0) {
+    0x0040d253 jle 0x40d268                                                      |             goto label_1;
+                                                                                 |         }
+    0x0040d255 movzx edx, byte [rdi + rax - 1]                                   |         edx = *((rdi + rax - 1));
+    0x0040d25a dec rax                                                           |         rax--;
+    0x0040d25d dec ecx                                                           |         ecx--;
+    0x0040d25f cmp byte [r9 + rdx], 0                                            |         
+    0x0040d264 jne 0x40d250                                                      |         
+                                                                                 |     } while (*((r9 + rdx)) != 0);
+    0x0040d266 jmp 0x40d26b                                                      |     goto label_2;
+                                                                                 | label_1:
+    0x0040d268 mov ecx, r8d                                                      |     ecx = r8d;
+                                                                                 | label_2:
+    0x0040d26b mov dword [rsi], ecx                                              |     *(rsi) = ecx;
+                                                                                 | label_0:
+    0x0040d26d ret                                                               |     return rax;
+                                                                                 | }

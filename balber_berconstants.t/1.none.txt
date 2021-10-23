@@ -1,0 +1,36 @@
+    ; assembly                                                                                                                                                       | /* r2dec pseudo code output */
+                                                                                                                                                                     | /* balber_berconstants.t/none @ 0x4061f0 */
+                                                                                                                                                                     | #include <stdint.h>
+                                                                                                                                                                     |  
+                                                                                                                                                                     | uint32_t rotate_left32 (uint32_t value, uint32_t count) {
+                                                                                                                                                                     |     const uint32_t mask = (CHAR_BIT * sizeof (value)) - 1;
+                                                                                                                                                                     |     count &= mask;
+                                                                                                                                                                     |     return (value << count) | (value >> (-count & mask));
+                                                                                                                                                                     | }
+                                                                                                                                                                     |  
+    ; (fcn) method.BloombergLP::balber.operator___std::__1::basic_ostream_char__std::__1::char_traits_char_____BloombergLP::balber::BerConstants::TagClass_ ()       | int64_t method_BloombergLP::balber_operator_std::_1::basic_ostream_char_std::_1::char_traits_char_BloombergLP::balber::BerConstants::TagClass_ (uint32_t arg2, int64_t arg1) {
+                                                                                                                                                                     |     rsi = arg2;
+                                                                                                                                                                     |     rdi = arg1;
+                                                                                                                                                                     |     /* BloombergLP::balber::operator<<(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, BloombergLP::balber::BerConstants::TagClass) */
+    0x004061f0 rol esi, 0x1a                                                                                                                                         |     esi = rotate_left32 (esi, 0x1a);
+    0x004061f3 cmp esi, 3                                                                                                                                            |     
+                                                                                                                                                                     |     if (esi <= 3) {
+    0x004061f6 ja 0x40620e                                                                                                                                           |         
+                                                                                                                                                                     |         /* switch table (4 cases) at 0x411a38 */
+    0x004061f8 jmp qword [rsi*8 + 0x411a38]                                                                                                                          |         
+    0x004061ff mov esi, 0x4114eb                                                                                                                                     |         esi = "UNIVERSAL";
+    0x00406204 mov edx, 9                                                                                                                                            |         edx = 9;
+    0x00406209 jmp 0x405c20                                                                                                                                          |         void (*0x405c20)() ();
+                                                                                                                                                                     |     }
+    0x0040620e mov rax, rdi                                                                                                                                          |     rax = rdi;
+    0x00406211 ret                                                                                                                                                   |     return rax;
+    0x00406212 mov esi, 0x41150f                                                                                                                                     |     esi = "APPLICATION";
+    0x00406217 mov edx, 0xb                                                                                                                                          |     edx = 0xb;
+    0x0040621c jmp 0x405c20                                                                                                                                          |     void (*0x405c20)() ();
+    0x00406221 mov esi, 0x411535                                                                                                                                     |     esi = "CONTEXT_SPECIFIC";
+    0x00406226 mov edx, 0x10                                                                                                                                         |     edx = 0x10;
+    0x0040622b jmp 0x405c20                                                                                                                                          |     void (*0x405c20)() ();
+    0x00406230 mov esi, 0x411565                                                                                                                                     |     esi = "PRIVATE";
+    0x00406235 mov edx, 7                                                                                                                                            |     edx = 7;
+    0x0040623a jmp 0x405c20                                                                                                                                          |     return void (*0x405c20)() ();
+                                                                                                                                                                     | }

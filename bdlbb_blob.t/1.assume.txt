@@ -1,0 +1,211 @@
+    ; assembly                                                           | /* r2dec pseudo code output */
+                                                                         | /* bdlbb_blob.t/assume @ 0x41df10 */
+                                                                         | #include <stdint.h>
+                                                                         |  
+    ; (fcn) method.BloombergLP::bdlbb::Blob.slowSetLength_int_ ()        | int64_t method_BloombergLP::bdlbb::Blob_slowSetLength_int_ (signed int64_t arg2, int64_t arg1) {
+                                                                         |     int64_t var_8h;
+                                                                         |     int64_t var_10h;
+                                                                         |     rsi = arg2;
+                                                                         |     rdi = arg1;
+                                                                         |     /* BloombergLP::bdlbb::Blob::slowSetLength(int) */
+    0x0041df10 push rbp                                                  |     
+    0x0041df11 push r15                                                  |     
+    0x0041df13 push r14                                                  |     
+    0x0041df15 push rbx                                                  |     
+    0x0041df16 sub rsp, 0x18                                             |     
+    0x0041df1a mov r15, rdi                                              |     r15 = rdi;
+    0x0041df1d test esi, esi                                             |     
+                                                                         |     if (esi == 0) {
+    0x0041df1f je 0x41dfbe                                               |         goto label_3;
+                                                                         |     }
+    0x0041df25 mov ebx, esi                                              |     ebx = esi;
+    0x0041df27 cmp dword [r15 + 0x20], esi                               |     
+                                                                         |     if (*((r15 + 0x20)) >= esi) {
+    0x0041df2b jge 0x41df8c                                              |         goto label_4;
+                                                                         |     }
+    0x0041df2d mov r14, rsp                                              |     r14 = rsp;
+    0x0041df30 jmp 0x41df44                                              |     
+                                                                         |     while (rdi == 0) {
+                                                                         | label_0:
+    0x0041df40 cmp eax, ebx                                              |         
+                                                                         |         if (eax >= ebx) {
+    0x0041df42 jge 0x41df8c                                              |             goto label_4;
+                                                                         |         }
+    0x0041df44 xorps xmm0, xmm0                                          |         __asm ("xorps xmm0, xmm0");
+    0x0041df47 movaps xmmword [rsp], xmm0                                |         *(rsp) = xmm0;
+    0x0041df4b mov dword [rsp + 0x10], 0                                 |         *((rsp + 0x10)) = 0;
+    0x0041df53 mov rdi, qword [r15 + 0x30]                               |         rdi = *((r15 + 0x30));
+    0x0041df57 mov rax, qword [rdi]                                      |         rax = *(rdi);
+    0x0041df5a mov rsi, r14                                              |         rsi = r14;
+    0x0041df5d call qword [rax + 0x10]                                   |         uint64_t (*rax + 0x10)() ();
+    0x0041df60 mov rdi, r15                                              |         
+    0x0041df63 mov rsi, r14                                              |         
+    0x0041df66 call 0x41fcb0                                             |         bsl::vector<BloombergLP::bdlbb::BlobBuffer,bsl::allocator<BloombergLP::bdlbb::BlobBuffer>>::push_back(BloombergLP::bdlbb::BlobBufferconst&) (r15, r14);
+    0x0041df6b mov eax, dword [r15 + 0x20]                               |         eax = *((r15 + 0x20));
+    0x0041df6f add eax, dword [rsp + 0x10]                               |         eax += *((rsp + 0x10));
+    0x0041df73 mov dword [r15 + 0x20], eax                               |         *((r15 + 0x20)) = eax;
+    0x0041df77 mov rdi, qword [rsp + 8]                                  |         rdi = *((rsp + 8));
+    0x0041df7c test rdi, rdi                                             |         
+    0x0041df7f je 0x41df40                                               |         
+                                                                         |     }
+    0x0041df81 call 0x4257c0                                             |     BloombergLP::bslma::SharedPtrRep::releaseRef() (rdi);
+    0x0041df86 mov eax, dword [r15 + 0x20]                               |     eax = *((r15 + 0x20));
+    0x0041df8a jmp 0x41df40                                              |     goto label_0;
+                                                                         | label_4:
+    0x0041df8c mov eax, dword [r15 + 0x24]                               |     eax = *((r15 + 0x24));
+    0x0041df90 cmp eax, ebx                                              |     
+                                                                         |     if (eax < ebx) {
+    0x0041df92 jge 0x41dfd9                                              |         
+    0x0041df94 movsxd rdi, dword [r15 + 0x28]                            |         rdi = *((r15 + 0x28));
+    0x0041df98 cmp rdi, 0xffffffffffffffff                               |         
+                                                                         |         if (rdi == -1) {
+    0x0041df9c je 0x41e040                                               |             goto label_5;
+                                                                         |         }
+    0x0041dfa2 mov r8, qword [r15]                                       |         r8 = *(r15);
+    0x0041dfa5 lea rax, [rdi + rdi*2]                                    |         rax = rdi * 3;
+    0x0041dfa9 mov edx, dword [r8 + rax*8 + 0x10]                        |         edx = *((r8 + rax*8 + 0x10));
+    0x0041dfae mov ecx, dword [r15 + 0x2c]                               |         ecx = *((r15 + 0x2c));
+    0x0041dfb2 lea eax, [rcx + rdx]                                      |         eax = rcx + rdx;
+    0x0041dfb5 mov dword [r15 + 0x24], eax                               |         *((r15 + 0x24)) = eax;
+    0x0041dfb9 jmp 0x41e049                                              |         goto label_6;
+                                                                         | label_3:
+    0x0041dfbe movabs rax, 0xffffffff00000000                            |         rax = 0xffffffff00000000;
+    0x0041dfc8 mov qword [r15 + 0x24], rax                               |         *((r15 + 0x24)) = rax;
+    0x0041dfcc mov dword [r15 + 0x2c], 0                                 |         *((r15 + 0x2c)) = 0;
+    0x0041dfd4 jmp 0x41e118                                              |         goto label_7;
+                                                                         |     }
+    0x0041dfd9 mov r9d, dword [r15 + 0x2c]                               |     r9d = *((r15 + 0x2c));
+    0x0041dfdd movsxd rdx, dword [r15 + 0x28]                            |     rdx = *((r15 + 0x28));
+    0x0041dfe1 lea r10, [rdx - 1]                                        |     r10 = rdx - 1;
+    0x0041dfe5 mov eax, r9d                                              |     eax = r9d;
+    0x0041dfe8 sub eax, ebx                                              |     eax -= ebx;
+    0x0041dfea test eax, eax                                             |     
+    0x0041dfec setg r11b                                                 |     r11b = (eax > 0) ? 1 : 0;
+    0x0041dff0 mov r14d, r9d                                             |     r14d = r9d;
+    0x0041dff3 mov dword [r15 + 0x24], r9d                               |     *((r15 + 0x24)) = r9d;
+    0x0041dff7 mov dword [r15 + 0x28], r10d                              |     *((r15 + 0x28)) = r10d;
+    0x0041dffb sub r14d, ebx                                             |     r14d -= ebx;
+                                                                         |     if (r14d > 0) {
+    0x0041dffe jle 0x41e01d                                              |         
+    0x0041e000 test edx, edx                                             |         
+                                                                         |         if (edx <= 0) {
+    0x0041e002 jle 0x41e01d                                              |             goto label_8;
+                                                                         |         }
+    0x0041e004 mov r8, qword [r15]                                       |         r8 = *(r15);
+    0x0041e007 lea rsi, [r10 + r10*2]                                    |         rsi = r10 * 3;
+    0x0041e00b mov eax, dword [r8 + rsi*8 + 0x10]                        |         eax = *((r8 + rsi*8 + 0x10));
+    0x0041e010 cmp r14d, eax                                             |         
+                                                                         |         if (r14d >= eax) {
+    0x0041e013 jge 0x41e088                                              |             goto label_9;
+                                                                         |         }
+    0x0041e015 mov edi, r9d                                              |         edi = r9d;
+    0x0041e018 jmp 0x41e0f6                                              |         goto label_10;
+                                                                         |     }
+                                                                         | label_8:
+    0x0041e01d mov edi, r9d                                              |     edi = r9d;
+    0x0041e020 mov eax, edx                                              |     eax = edx;
+    0x0041e022 mov esi, r10d                                             |     esi = r10d;
+                                                                         | label_1:
+    0x0041e025 mov r10d, esi                                             |     
+    0x0041e028 mov edx, eax                                              |     edx = eax;
+    0x0041e02a test r11b, r11b                                           |     
+                                                                         |     if (r11b != 0) {
+    0x0041e02d jne 0x41e0f6                                              |         goto label_10;
+                                                                         |     }
+    0x0041e033 test eax, eax                                             |     
+                                                                         |     if (eax > 0) {
+    0x0041e035 jg 0x41e106                                               |         goto label_11;
+                                                                         |     }
+    0x0041e03b jmp 0x41e118                                              |     goto label_7;
+                                                                         | label_5:
+    0x0041e040 mov r8, qword [r15]                                       |     r8 = *(r15);
+    0x0041e043 mov ecx, dword [r15 + 0x2c]                               |     ecx = *((r15 + 0x2c));
+    0x0041e047 xor edx, edx                                              |     edx = 0;
+                                                                         | label_6:
+    0x0041e049 sub ebx, eax                                              |     ebx -= eax;
+    0x0041e04b lea rsi, [rdi + rdi*2]                                    |     rsi = rdi * 3;
+    0x0041e04f lea rsi, [r8 + rsi*8 + 0x28]                              |     rsi = r8 + rsi*8 + 0x28;
+    0x0041e054 inc edi                                                   |     edi++;
+    0x0041e056 nop word cs:[rax + rax]                                   |     
+                                                                         |     do {
+    0x0041e060 add ecx, edx                                              |         ecx += edx;
+    0x0041e062 mov dword [r15 + 0x2c], ecx                               |         *((r15 + 0x2c)) = ecx;
+    0x0041e066 mov dword [r15 + 0x28], edi                               |         *((r15 + 0x28)) = edi;
+    0x0041e06a mov edx, dword [rsi]                                      |         edx = *(rsi);
+    0x0041e06c cmp ebx, edx                                              |         
+    0x0041e06e mov ebp, ebx                                              |         
+                                                                         |         if (ebx > edx) {
+    0x0041e070 cmovg ebp, edx                                            |             
+                                                                         |         }
+    0x0041e073 add eax, ebp                                              |         eax += ebp;
+    0x0041e075 add rsi, 0x18                                             |         rsi += 0x18;
+    0x0041e079 inc edi                                                   |         edi++;
+    0x0041e07b mov dword [r15 + 0x24], eax                               |         *((r15 + 0x24)) = eax;
+    0x0041e07f sub ebx, edx                                              |         ebx -= edx;
+    0x0041e081 jg 0x41e060                                               |         
+                                                                         |     } while (ebx > 0);
+    0x0041e083 jmp 0x41e118                                              |     goto label_7;
+                                                                         | label_9:
+    0x0041e088 lea rsi, [r8 + rsi*8 + 0x10]                              |     rsi = r8 + rsi*8 + 0x10;
+    0x0041e08d lea edi, [rdx - 2]                                        |     edi = rdx - 2;
+    0x0041e090 movsxd rdi, edi                                           |     rdi = (int64_t) edi;
+    0x0041e093 lea rdi, [rdi + rdi*2]                                    |     rdi *= 3;
+    0x0041e097 lea rbp, [r8 + rdi*8 + 0x10]                              |     rbp = r8 + rdi*8 + 0x10;
+    0x0041e09c mov edi, r9d                                              |     edi = r9d;
+    0x0041e09f nop                                                       |     
+                                                                         | label_2:
+    0x0041e0a0 sub r9d, eax                                              |     r9d -= eax;
+    0x0041e0a3 lea eax, [rdx - 1]                                        |     eax = rdx - 1;
+    0x0041e0a6 mov dword [r15 + 0x2c], r9d                               |     *((r15 + 0x2c)) = r9d;
+    0x0041e0aa mov ebx, dword [rsi]                                      |     ebx = *(rsi);
+    0x0041e0ac sub edi, ebx                                              |     edi -= ebx;
+    0x0041e0ae lea esi, [rdx - 2]                                        |     esi = rdx - 2;
+    0x0041e0b1 mov ecx, r14d                                             |     ecx = r14d;
+    0x0041e0b4 sub ecx, ebx                                              |     ecx -= ebx;
+    0x0041e0b6 test ecx, ecx                                             |     
+    0x0041e0b8 setg r11b                                                 |     r11b = (ecx > 0) ? 1 : 0;
+    0x0041e0bc mov dword [r15 + 0x24], edi                               |     *((r15 + 0x24)) = edi;
+    0x0041e0c0 mov dword [r15 + 0x28], esi                               |     *((r15 + 0x28)) = esi;
+    0x0041e0c4 sub r14d, ebx                                             |     r14d -= ebx;
+                                                                         |     if (r14d <= 0) {
+    0x0041e0c7 jle 0x41e025                                              |         goto label_1;
+                                                                         |     }
+    0x0041e0cd test eax, eax                                             |     
+                                                                         |     if (eax <= 0) {
+    0x0041e0cf jle 0x41e025                                              |         goto label_1;
+                                                                         |     }
+    0x0041e0d5 dec r10d                                                  |     r10d--;
+    0x0041e0d8 movsxd rax, r10d                                          |     rax = (int64_t) r10d;
+    0x0041e0db lea rax, [rax + rax*2]                                    |     rax *= 3;
+    0x0041e0df lea rsi, [r8 + rax*8 + 0x10]                              |     rsi = r8 + rax*8 + 0x10;
+    0x0041e0e4 mov eax, dword [rbp]                                      |     eax = *(rbp);
+    0x0041e0e7 dec edx                                                   |     edx--;
+    0x0041e0e9 add rbp, 0xffffffffffffffe8                               |     rbp += 0xffffffffffffffe8;
+    0x0041e0ed cmp r14d, eax                                             |     
+                                                                         |     if (r14d >= eax) {
+    0x0041e0f0 jge 0x41e0a0                                              |         goto label_2;
+                                                                         |     }
+    0x0041e0f2 lea r10d, [rdx - 1]                                       |     r10d = rdx - 1;
+                                                                         | label_10:
+    0x0041e0f6 sub edi, r14d                                             |     edi -= r14d;
+    0x0041e0f9 mov dword [r15 + 0x24], edi                               |     *((r15 + 0x24)) = edi;
+    0x0041e0fd mov esi, r10d                                             |     esi = r10d;
+    0x0041e100 mov eax, edx                                              |     eax = edx;
+    0x0041e102 test eax, eax                                             |     
+                                                                         |     if (eax > 0) {
+    0x0041e104 jle 0x41e118                                              |         
+                                                                         | label_11:
+    0x0041e106 mov eax, esi                                              |         eax = esi;
+    0x0041e108 mov rcx, qword [r15]                                      |         rcx = *(r15);
+    0x0041e10b lea rax, [rax + rax*2]                                    |         rax *= 3;
+    0x0041e10f sub r9d, dword [rcx + rax*8 + 0x10]                       |         r9d -= *((rcx + rax*8 + 0x10));
+    0x0041e114 mov dword [r15 + 0x2c], r9d                               |         *((r15 + 0x2c)) = r9d;
+                                                                         |     }
+                                                                         | label_7:
+    0x0041e118 add rsp, 0x18                                             |     
+    0x0041e11c pop rbx                                                   |     
+    0x0041e11d pop r14                                                   |     
+    0x0041e11f pop r15                                                   |     
+    0x0041e121 pop rbp                                                   |     
+    0x0041e122 ret                                                       |     return rax;
+                                                                         | }

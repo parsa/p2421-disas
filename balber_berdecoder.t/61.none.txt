@@ -1,0 +1,72 @@
+    ; assembly                                                                                                                                                       | /* r2dec pseudo code output */
+                                                                                                                                                                     | /* balber_berdecoder.t/none @ 0x4679f0 */
+                                                                                                                                                                     | #include <stdint.h>
+                                                                                                                                                                     |  
+    ; (fcn) method.BloombergLP::bdlt::Iso8601Util.generate_char__int__BloombergLP::bdlt::TimeTz_const__BloombergLP::bdlt::Iso8601UtilConfiguration_const_ ()         | int64_t method_BloombergLP::bdlt::Iso8601Util_generate_char_int_BloombergLP::bdlt::TimeTz_const_BloombergLP::bdlt::Iso8601UtilConfiguration_const_ (int64_t arg4, int64_t arg3, signed int64_t arg2, int64_t arg1) {
+                                                                                                                                                                     |     rcx = arg4;
+                                                                                                                                                                     |     rdx = arg3;
+                                                                                                                                                                     |     rsi = arg2;
+                                                                                                                                                                     |     rdi = arg1;
+                                                                                                                                                                     |     /* BloombergLP::bdlt::Iso8601Util::generate(char*, int, BloombergLP::bdlt::TimeTz const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&) */
+    0x004679f0 push rbp                                                                                                                                              |     
+    0x004679f1 push r15                                                                                                                                              |     
+    0x004679f3 push r14                                                                                                                                              |     
+    0x004679f5 push rbx                                                                                                                                              |     
+    0x004679f6 sub rsp, 0x18                                                                                                                                         |     
+    0x004679fa mov ebp, esi                                                                                                                                          |     
+    0x004679fc mov r14, rdi                                                                                                                                          |     r14 = rdi;
+    0x004679ff cmp esi, 0x15                                                                                                                                         |     
+                                                                                                                                                                     |     if (esi >= 0x15) {
+    0x00467a02 jl 0x467a1a                                                                                                                                           |         
+    0x00467a04 mov rdi, r14                                                                                                                                          |         
+    0x00467a07 mov rsi, rdx                                                                                                                                          |         
+    0x00467a0a mov rdx, rcx                                                                                                                                          |         
+    0x00467a0d call 0x467a80                                                                                                                                         |         eax = BloombergLP::bdlt::Iso8601Util::generateRaw(char*,BloombergLP::bdlt::TimeTzconst&,BloombergLP::bdlt::Iso8601UtilConfigurationconst&) (r14, rdx, rcx);
+    0x00467a12 mov ebx, eax                                                                                                                                          |         ebx = eax;
+    0x00467a14 cmp ebx, ebp                                                                                                                                          |         
+                                                                                                                                                                     |         if (ebx >= ebp) {
+    0x00467a16 jl 0x467a5c                                                                                                                                           |             
+    0x00467a18 jmp 0x467a64                                                                                                                                          |             
+                                                                                                                                                                     |         } else {
+    0x00467a1a mov rdi, rsp                                                                                                                                          |             
+    0x00467a1d mov rsi, rdx                                                                                                                                          |             
+    0x00467a20 mov rdx, rcx                                                                                                                                          |             
+    0x00467a23 call 0x467a80                                                                                                                                         |             eax = BloombergLP::bdlt::Iso8601Util::generateRaw(char*,BloombergLP::bdlt::TimeTzconst&,BloombergLP::bdlt::Iso8601UtilConfigurationconst&) (rsp, rdx, rcx);
+    0x00467a28 mov ebx, eax                                                                                                                                          |             ebx = eax;
+    0x00467a2a cmp eax, ebp                                                                                                                                          |             
+                                                                                                                                                                     |             if (eax < ebp) {
+    0x00467a2c jge 0x467a4a                                                                                                                                          |                 
+    0x00467a2e movsxd r15, ebx                                                                                                                                       |                 r15 = (int64_t) ebx;
+    0x00467a31 mov rsi, rsp                                                                                                                                          |                 
+    0x00467a34 mov rdi, r14                                                                                                                                          |                 
+    0x00467a37 mov rdx, r15                                                                                                                                          |                 
+    0x00467a3a call 0x404980                                                                                                                                         |                 memcpy (r14, rsp, r15);
+    0x00467a3f mov byte [r14 + r15], 0                                                                                                                               |                 *((r14 + r15)) = 0;
+    0x00467a44 cmp ebx, ebp                                                                                                                                          |                 
+                                                                                                                                                                     |                 if (ebx < ebp) {
+    0x00467a46 jl 0x467a5c                                                                                                                                           |                     goto label_0;
+                                                                                                                                                                     |                 }
+    0x00467a48 jmp 0x467a64                                                                                                                                          |                 goto label_1;
+                                                                                                                                                                     |             }
+    0x00467a4a movsxd rdx, ebp                                                                                                                                       |             rdx = (int64_t) ebp;
+    0x00467a4d mov rsi, rsp                                                                                                                                          |             
+    0x00467a50 mov rdi, r14                                                                                                                                          |             
+    0x00467a53 call 0x404980                                                                                                                                         |             memcpy (r14, rsp, rdx);
+    0x00467a58 cmp ebx, ebp                                                                                                                                          |             
+                                                                                                                                                                     |             if (ebx >= ebp) {
+    0x00467a5a jge 0x467a64                                                                                                                                          |                 goto label_1;
+                                                                                                                                                                     |             }
+                                                                                                                                                                     |         }
+                                                                                                                                                                     | label_0:
+    0x00467a5c movsxd rax, ebx                                                                                                                                       |         rax = (int64_t) ebx;
+    0x00467a5f mov byte [r14 + rax], 0                                                                                                                               |         *((r14 + rax)) = 0;
+                                                                                                                                                                     |     }
+                                                                                                                                                                     | label_1:
+    0x00467a64 mov eax, ebx                                                                                                                                          |     eax = ebx;
+    0x00467a66 add rsp, 0x18                                                                                                                                         |     
+    0x00467a6a pop rbx                                                                                                                                               |     
+    0x00467a6b pop r14                                                                                                                                               |     
+    0x00467a6d pop r15                                                                                                                                               |     
+    0x00467a6f pop rbp                                                                                                                                               |     
+    0x00467a70 ret                                                                                                                                                   |     return rax;
+                                                                                                                                                                     | }

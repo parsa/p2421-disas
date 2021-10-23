@@ -1,0 +1,57 @@
+    ; assembly                                                                                                                                                       | /* r2dec pseudo code output */
+                                                                                                                                                                     | /* bdlma_bufferedsequentialpool.t/none @ 0x40fae0 */
+                                                                                                                                                                     | #include <stdint.h>
+                                                                                                                                                                     |  
+    ; (fcn) method.BloombergLP::bdlma::BufferImpUtil.allocateFromBuffer_long__char__unsigned_long__unsigned_long__BloombergLP::bsls::Alignment::Strategy_ ()         | int64_t method_BloombergLP::bdlma::BufferImpUtil_allocateFromBuffer_long_char_unsigned_long_unsigned_long_BloombergLP::bsls::Alignment::Strategy_ (uint32_t arg5, int64_t arg4, uint32_t arg3, int64_t arg2, int64_t arg1) {
+                                                                                                                                                                     |     r8 = arg5;
+                                                                                                                                                                     |     rcx = arg4;
+                                                                                                                                                                     |     rdx = arg3;
+                                                                                                                                                                     |     rsi = arg2;
+                                                                                                                                                                     |     rdi = arg1;
+                                                                                                                                                                     |     /* BloombergLP::bdlma::BufferImpUtil::allocateFromBuffer(long*, char*, unsigned long, unsigned long, BloombergLP::bsls::Alignment::Strategy) */
+    0x0040fae0 mov rax, rsi                                                                                                                                          |     rax = rsi;
+    0x0040fae3 cmp r8d, 2                                                                                                                                            |     
+                                                                                                                                                                     |     if (r8d != 2) {
+    0x0040fae7 je 0x40fb02                                                                                                                                           |         
+    0x0040fae9 cmp r8d, 1                                                                                                                                            |         
+                                                                                                                                                                     |         if (r8d != 1) {
+    0x0040faed je 0x40fb07                                                                                                                                           |             
+    0x0040faef test r8d, r8d                                                                                                                                         |             
+                                                                                                                                                                     |             if (r8d != 0) {
+    0x0040faf2 jne 0x40fb35                                                                                                                                          |                 goto label_0;
+                                                                                                                                                                     |             }
+    0x0040faf4 mov r8, qword [rdi]                                                                                                                                   |             r8 = *(rdi);
+    0x0040faf7 lea esi, [r8 + rax]                                                                                                                                   |             esi = r8 + rax;
+    0x0040fafb neg esi                                                                                                                                               |             esi = -esi;
+    0x0040fafd and esi, 0xf                                                                                                                                          |             esi &= 0xf;
+    0x0040fb00 jmp 0x40fb2a                                                                                                                                          |             
+                                                                                                                                                                     |         } else {
+    0x0040fb02 mov rsi, qword [rdi]                                                                                                                                  |             rsi = *(rdi);
+    0x0040fb05 jmp 0x40fb2d                                                                                                                                          |             goto label_1;
+                                                                                                                                                                     |         }
+    0x0040fb07 mov r8d, ecx                                                                                                                                          |         r8d = ecx;
+    0x0040fb0a or r8d, 0x10                                                                                                                                          |         r8d |= 0x10;
+    0x0040fb0e mov esi, r8d                                                                                                                                          |         esi = r8d;
+    0x0040fb11 neg esi                                                                                                                                               |         esi = -esi;
+    0x0040fb13 and esi, r8d                                                                                                                                          |         esi &= r8d;
+    0x0040fb16 mov r8, qword [rdi]                                                                                                                                   |         r8 = *(rdi);
+    0x0040fb19 lea r9d, [r8 + rax]                                                                                                                                   |         r9d = r8 + rax;
+    0x0040fb1d lea r10d, [rsi - 1]                                                                                                                                   |         r10d = rsi - 1;
+    0x0040fb21 sub esi, r9d                                                                                                                                          |         esi -= r9d;
+    0x0040fb24 and esi, r10d                                                                                                                                         |         esi &= r10d;
+    0x0040fb27 movsxd rsi, esi                                                                                                                                       |         rsi = (int64_t) esi;
+                                                                                                                                                                     |     }
+    0x0040fb2a add rsi, r8                                                                                                                                           |     rsi += r8;
+                                                                                                                                                                     | label_1:
+    0x0040fb2d add rcx, rsi                                                                                                                                          |     rcx += rsi;
+    0x0040fb30 cmp rcx, rdx                                                                                                                                          |     
+                                                                                                                                                                     |     if (rcx > rdx) {
+    0x0040fb33 jbe 0x40fb38                                                                                                                                          |         
+                                                                                                                                                                     | label_0:
+    0x0040fb35 xor eax, eax                                                                                                                                          |         eax = 0;
+    0x0040fb37 ret                                                                                                                                                   |         return rax;
+                                                                                                                                                                     |     }
+    0x0040fb38 add rax, rsi                                                                                                                                          |     rax += rsi;
+    0x0040fb3b mov qword [rdi], rcx                                                                                                                                  |     *(rdi) = rcx;
+    0x0040fb3e ret                                                                                                                                                   |     return rax;
+                                                                                                                                                                     | }

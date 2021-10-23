@@ -1,0 +1,151 @@
+    ; assembly                                                                                                                           | /* r2dec pseudo code output */
+                                                                                                                                         | /* ball_asyncfileobserver.t/assume @ 0x460b70 */
+                                                                                                                                         | #include <stdint.h>
+                                                                                                                                         |  
+    ; (fcn) method.BloombergLP::bdlsb::OverflowMemOutStreamBuf.seekoff_long_long__std::__1::ios_base::seekdir__unsigned_int_ ()          | int64_t method_BloombergLP::bdlsb::OverflowMemOutStreamBuf_seekoff_long_long_std::_1::ios_base::seekdir_unsigned_int_ (int64_t arg3, int64_t arg2, int64_t arg1) {
+                                                                                                                                         |     rdx = arg3;
+                                                                                                                                         |     rsi = arg2;
+                                                                                                                                         |     rdi = arg1;
+                                                                                                                                         |     /* BloombergLP::bdlsb::OverflowMemOutStreamBuf::seekoff(long long, std::__1::ios_base::seekdir, unsigned int) */
+    0x00460b70 push r15                                                                                                                  |     
+    0x00460b72 push r14                                                                                                                  |     
+    0x00460b74 push r12                                                                                                                  |     
+    0x00460b76 push rbx                                                                                                                  |     
+    0x00460b77 push rax                                                                                                                  |     
+    0x00460b78 mov eax, edx                                                                                                              |     eax = edx;
+    0x00460b7a mov rdx, 0xffffffffffffffff                                                                                               |     rdx = 0xffffffffffffffff;
+    0x00460b81 test cl, 0x10                                                                                                             |     
+                                                                                                                                         |     if ((cl & 0x10) == 0) {
+    0x00460b84 je 0x460cbf                                                                                                               |         goto label_0;
+                                                                                                                                         |     }
+    0x00460b8a mov r15, rdi                                                                                                              |     r15 = rdi;
+    0x00460b8d mov r8b, byte [rdi + 0x58]                                                                                                |     r8b = *((rdi + 0x58));
+    0x00460b91 mov r14, qword [rdi + 0x30]                                                                                               |     r14 = *((rdi + 0x30));
+    0x00460b95 mov rbx, r14                                                                                                              |     rbx = *((rdi + 0x30));
+    0x00460b98 sub rbx, qword [rdi + 0x28]                                                                                               |     rbx -= *((rdi + 0x28));
+    0x00460b9c test r8b, r8b                                                                                                             |     
+                                                                                                                                         |     if (r8b != 0) {
+    0x00460b9f je 0x460bae                                                                                                               |         
+    0x00460ba1 mov rcx, qword [r15 + 0x50]                                                                                               |         rcx = *((r15 + 0x50));
+    0x00460ba5 add rbx, rcx                                                                                                              |         rbx += rcx;
+    0x00460ba8 mov qword [r15 + 0x40], rbx                                                                                               |         *((r15 + 0x40)) = rbx;
+    0x00460bac jmp 0x460bb6                                                                                                              |         
+                                                                                                                                         |     } else {
+    0x00460bae mov qword [r15 + 0x40], rbx                                                                                               |         *((r15 + 0x40)) = rbx;
+    0x00460bb2 mov rcx, qword [r15 + 0x50]                                                                                               |         rcx = *((r15 + 0x50));
+                                                                                                                                         |     }
+    0x00460bb6 mov rdi, qword [r15 + 0x68]                                                                                               |     rdi = *((r15 + 0x68));
+    0x00460bba lea r9, [rdi + rcx]                                                                                                       |     r9 = rdi + rcx;
+    0x00460bbe test eax, eax                                                                                                             |     
+                                                                                                                                         |     if (eax != 0) {
+    0x00460bc0 je 0x460bd4                                                                                                               |         
+    0x00460bc2 cmp eax, 2                                                                                                                |         
+                                                                                                                                         |         if (eax == 2) {
+    0x00460bc5 je 0x460be1                                                                                                               |             goto label_1;
+                                                                                                                                         |         }
+    0x00460bc7 mov r12, rbx                                                                                                              |         r12 = rbx;
+    0x00460bca cmp eax, 1                                                                                                                |         
+                                                                                                                                         |         if (eax == 1) {
+    0x00460bcd je 0x460bd7                                                                                                               |             goto label_2;
+                                                                                                                                         |         }
+    0x00460bcf jmp 0x460cbf                                                                                                              |         goto label_0;
+                                                                                                                                         |     }
+    0x00460bd4 xor r12d, r12d                                                                                                            |     r12d = 0;
+                                                                                                                                         | label_2:
+    0x00460bd7 add r12, rsi                                                                                                              |     r12 += rsi;
+                                                                                                                                         |     if (r12 < 0) {
+    0x00460bda jns 0x460bed                                                                                                              |         
+    0x00460bdc jmp 0x460cbf                                                                                                              |         goto label_0;
+                                                                                                                                         | label_1:
+    0x00460be1 mov r12, r9                                                                                                               |         r12 = r9;
+    0x00460be4 add r12, rsi                                                                                                              |         r12 += rsi;
+                                                                                                                                         |         if (r12 < 0) {
+    0x00460be7 js 0x460cbf                                                                                                               |             goto label_0;
+                                                                                                                                         |         }
+                                                                                                                                         |     }
+    0x00460bed mov rax, r12                                                                                                              |     rax = r12;
+    0x00460bf0 sub rax, rcx                                                                                                              |     rax -= rcx;
+                                                                                                                                         |     if (rax <= 0) {
+    0x00460bf3 jbe 0x460c70                                                                                                              |         goto label_3;
+                                                                                                                                         |     }
+    0x00460bf5 mov rdx, r12                                                                                                              |     rdx = r12;
+    0x00460bf8 sub rdx, r9                                                                                                               |     rdx -= r9;
+                                                                                                                                         |     if (rdx <= 0) {
+    0x00460bfb jbe 0x460c8e                                                                                                              |         goto label_4;
+                                                                                                                                         |     }
+    0x00460c01 test rdi, rdi                                                                                                             |     
+                                                                                                                                         |     if (rdi != 0) {
+    0x00460c04 cmovne rcx, rdi                                                                                                           |         rcx = rdi;
+                                                                                                                                         |     }
+    0x00460c08 nop dword [rax + rax]                                                                                                     |     
+                                                                                                                                         |     do {
+    0x00460c10 mov rbx, rcx                                                                                                              |         rbx = rcx;
+    0x00460c13 mov rax, rcx                                                                                                              |         rax = rcx;
+    0x00460c16 sub rax, rdi                                                                                                              |         rax -= rdi;
+    0x00460c19 add rcx, rcx                                                                                                              |         rcx += rcx;
+    0x00460c1c cmp rax, rdx                                                                                                              |         
+    0x00460c1f jb 0x460c10                                                                                                               |         
+                                                                                                                                         |     } while (rax < rdx);
+    0x00460c21 mov rdi, qword [r15 + 0x70]                                                                                               |     rdi = *((r15 + 0x70));
+    0x00460c25 mov rax, qword [rdi]                                                                                                      |     rax = *(rdi);
+    0x00460c28 mov rsi, rbx                                                                                                              |     rsi = rbx;
+    0x00460c2b call qword [rax + 0x10]                                                                                                   |     rax = uint64_t (*rax + 0x10)() ();
+    0x00460c2e mov r14, rax                                                                                                              |     r14 = rax;
+    0x00460c31 mov rsi, qword [r15 + 0x60]                                                                                               |     
+    0x00460c35 mov rdx, qword [r15 + 0x68]                                                                                               |     
+    0x00460c39 mov rdi, rax                                                                                                              |     
+    0x00460c3c call 0x407b10                                                                                                             |     memcpy (rax, *((r15 + 0x60)), *((r15 + 0x68)));
+    0x00460c41 mov rsi, qword [r15 + 0x60]                                                                                               |     rsi = *((r15 + 0x60));
+    0x00460c45 mov rdi, qword [r15 + 0x70]                                                                                               |     rdi = *((r15 + 0x70));
+    0x00460c49 mov rax, qword [rdi]                                                                                                      |     rax = *(rdi);
+    0x00460c4c call qword [rax + 0x18]                                                                                                   |     uint64_t (*rax + 0x18)() ();
+    0x00460c4f mov qword [r15 + 0x60], r14                                                                                               |     *((r15 + 0x60)) = r14;
+    0x00460c53 mov qword [r15 + 0x68], rbx                                                                                               |     *((r15 + 0x68)) = rbx;
+    0x00460c57 mov byte [r15 + 0x58], 1                                                                                                  |     *((r15 + 0x58)) = 1;
+    0x00460c5c add rbx, r14                                                                                                              |     rbx += r14;
+    0x00460c5f mov qword [r15 + 0x28], r14                                                                                               |     *((r15 + 0x28)) = r14;
+    0x00460c63 mov qword [r15 + 0x38], rbx                                                                                               |     *((r15 + 0x38)) = rbx;
+    0x00460c67 mov rax, r12                                                                                                              |     rax = r12;
+    0x00460c6a sub rax, qword [r15 + 0x50]                                                                                               |     rax -= *((r15 + 0x50));
+    0x00460c6e jmp 0x460caf                                                                                                              |     goto label_5;
+                                                                                                                                         | label_3:
+    0x00460c70 test r8b, r8b                                                                                                             |     
+                                                                                                                                         |     if (r8b != 0) {
+    0x00460c73 je 0x460c93                                                                                                               |         
+    0x00460c75 mov byte [r15 + 0x58], 0                                                                                                  |         *((r15 + 0x58)) = 0;
+    0x00460c7a mov r14, qword [r15 + 0x48]                                                                                               |         r14 = *((r15 + 0x48));
+    0x00460c7e add rcx, r14                                                                                                              |         rcx += r14;
+    0x00460c81 mov qword [r15 + 0x28], r14                                                                                               |         *((r15 + 0x28)) = r14;
+    0x00460c85 mov qword [r15 + 0x38], rcx                                                                                               |         *((r15 + 0x38)) = rcx;
+    0x00460c89 mov rax, r12                                                                                                              |         rax = r12;
+    0x00460c8c jmp 0x460caf                                                                                                              |         goto label_5;
+                                                                                                                                         | label_4:
+    0x00460c8e test r8b, r8b                                                                                                             |         
+                                                                                                                                         |         if (r8b == 0) {
+    0x00460c91 je 0x460c9b                                                                                                               |             goto label_6;
+                                                                                                                                         |         }
+                                                                                                                                         |     }
+    0x00460c93 mov rax, r12                                                                                                              |     rax = r12;
+    0x00460c96 sub rax, rbx                                                                                                              |     rax -= rbx;
+    0x00460c99 jmp 0x460caf                                                                                                              |     goto label_5;
+                                                                                                                                         | label_6:
+    0x00460c9b mov byte [r15 + 0x58], 1                                                                                                  |     *((r15 + 0x58)) = 1;
+    0x00460ca0 mov r14, qword [r15 + 0x60]                                                                                               |     r14 = *((r15 + 0x60));
+    0x00460ca4 add rdi, r14                                                                                                              |     rdi += r14;
+    0x00460ca7 mov qword [r15 + 0x28], r14                                                                                               |     *((r15 + 0x28)) = r14;
+    0x00460cab mov qword [r15 + 0x38], rdi                                                                                               |     *((r15 + 0x38)) = rdi;
+                                                                                                                                         | label_5:
+    0x00460caf cdqe                                                                                                                      |     rax = (int64_t) eax;
+    0x00460cb1 add rax, r14                                                                                                              |     rax += r14;
+    0x00460cb4 mov qword [r15 + 0x30], rax                                                                                               |     *((r15 + 0x30)) = rax;
+    0x00460cb8 mov qword [r15 + 0x40], r12                                                                                               |     *((r15 + 0x40)) = r12;
+    0x00460cbc mov rdx, r12                                                                                                              |     rdx = r12;
+                                                                                                                                         | label_0:
+    0x00460cbf xor eax, eax                                                                                                              |     eax = 0;
+    0x00460cc1 add rsp, 8                                                                                                                |     
+    0x00460cc5 pop rbx                                                                                                                   |     
+    0x00460cc6 pop r12                                                                                                                   |     
+    0x00460cc8 pop r14                                                                                                                   |     
+    0x00460cca pop r15                                                                                                                   |     
+    0x00460ccc ret                                                                                                                       |     return rax;
+                                                                                                                                         | }

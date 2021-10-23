@@ -1,0 +1,41 @@
+    ; assembly                                                                                                                                           | /* r2dec pseudo code output */
+                                                                                                                                                         | /* bdlma_bufferedsequentialpool.t/assume @ 0x40fc20 */
+                                                                                                                                                         | #include <stdint.h>
+                                                                                                                                                         |  
+    ; (fcn) method.BloombergLP::bdlma::BufferImpUtil.allocateFromBufferRaw_long__char__unsigned_long__BloombergLP::bsls::Alignment::Strategy_ ()         | int64_t method_BloombergLP::bdlma::BufferImpUtil_allocateFromBufferRaw_long_char_unsigned_long_BloombergLP::bsls::Alignment::Strategy_ (uint32_t arg4, int64_t arg3, int64_t arg2, int64_t arg1) {
+                                                                                                                                                         |     rcx = arg4;
+                                                                                                                                                         |     rdx = arg3;
+                                                                                                                                                         |     rsi = arg2;
+                                                                                                                                                         |     rdi = arg1;
+                                                                                                                                                         |     /* BloombergLP::bdlma::BufferImpUtil::allocateFromBufferRaw(long*, char*, unsigned long, BloombergLP::bsls::Alignment::Strategy) */
+    0x0040fc20 mov rax, rsi                                                                                                                              |     rax = rsi;
+    0x0040fc23 mov rsi, qword [rdi]                                                                                                                      |     rsi = *(rdi);
+    0x0040fc26 cmp ecx, 2                                                                                                                                |     
+                                                                                                                                                         |     if (ecx != 2) {
+    0x0040fc29 je 0x40fc5d                                                                                                                               |         
+    0x0040fc2b cmp ecx, 1                                                                                                                                |         
+                                                                                                                                                         |         if (ecx == 1) {
+    0x0040fc2e jne 0x40fc52                                                                                                                              |             
+    0x0040fc30 mov r8d, edx                                                                                                                              |             r8d = edx;
+    0x0040fc33 or r8d, 0x10                                                                                                                              |             r8d |= 0x10;
+    0x0040fc37 mov ecx, r8d                                                                                                                              |             ecx = r8d;
+    0x0040fc3a neg ecx                                                                                                                                   |             ecx = -ecx;
+    0x0040fc3c and ecx, r8d                                                                                                                              |             ecx &= r8d;
+    0x0040fc3f lea r8d, [rax + rsi]                                                                                                                      |             r8d = rax + rsi;
+    0x0040fc43 lea r9d, [rcx - 1]                                                                                                                        |             r9d = rcx - 1;
+    0x0040fc47 sub ecx, r8d                                                                                                                              |             ecx -= r8d;
+    0x0040fc4a and ecx, r9d                                                                                                                              |             ecx &= r9d;
+    0x0040fc4d movsxd rcx, ecx                                                                                                                           |             rcx = (int64_t) ecx;
+    0x0040fc50 jmp 0x40fc5a                                                                                                                              |             
+                                                                                                                                                         |         } else {
+    0x0040fc52 lea ecx, [rax + rsi]                                                                                                                      |             ecx = rax + rsi;
+    0x0040fc55 neg ecx                                                                                                                                   |             ecx = -ecx;
+    0x0040fc57 and ecx, 0xf                                                                                                                              |             ecx &= 0xf;
+                                                                                                                                                         |         }
+    0x0040fc5a add rsi, rcx                                                                                                                              |         rsi += rcx;
+                                                                                                                                                         |     }
+    0x0040fc5d add rax, rsi                                                                                                                              |     rax += rsi;
+    0x0040fc60 add rdx, rsi                                                                                                                              |     rdx += rsi;
+    0x0040fc63 mov qword [rdi], rdx                                                                                                                      |     *(rdi) = rdx;
+    0x0040fc66 ret                                                                                                                                       |     return rax;
+                                                                                                                                                         | }

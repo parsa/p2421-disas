@@ -1,0 +1,143 @@
+    ; assembly                                       | /* r2dec pseudo code output */
+                                                     | /* bslmt_timedsemaphoreimpl_posixadv.t/assume @ 0x403e30 */
+                                                     | #include <stdint.h>
+                                                     |  
+    ; (fcn) sym.thread3Wait ()                       | uint64_t thread3Wait (uint32_t arg1) {
+                                                     |     int64_t var_8h;
+                                                     |     int64_t var_10h;
+                                                     |     int64_t var_18h;
+                                                     |     int64_t var_20h;
+                                                     |     rdi = arg1;
+    0x00403e30 push rbp                              |     
+    0x00403e31 push r15                              |     
+    0x00403e33 push r14                              |     
+    0x00403e35 push r13                              |     
+    0x00403e37 push r12                              |     
+    0x00403e39 push rbx                              |     
+    0x00403e3a sub rsp, 0x28                         |     
+    0x00403e3e mov r12, rdi                          |     r12 = rdi;
+    0x00403e41 mov rbx, qword [rdi + 8]              |     rbx = *((rdi + 8));
+    0x00403e45 cmp dword [rdi + 0x14], 1             |     
+                                                     |     if (*((rdi + 0x14)) == 1) {
+    0x00403e49 jne 0x403e52                          |         
+    0x00403e4b call 0x412720                         |         BloombergLP::bsls::SystemTime::nowMonotonicClock() ();
+    0x00403e50 jmp 0x403e57                          |         
+                                                     |     } else {
+    0x00403e52 call 0x4127b0                         |         rax = BloombergLP::bsls::SystemTime::nowRealtimeClock() ();
+                                                     |     }
+    0x00403e57 mov qword [rsp + 8], rax              |     *((rsp + 8)) = rax;
+    0x00403e5c mov dword [rsp + 0x10], edx           |     *((rsp + 0x10)) = edx;
+    0x00403e60 xor r14d, r14d                        |     r14d = 0;
+    0x00403e63 lea rdi, [rsp + 8]                    |     
+    0x00403e68 xor esi, esi                          |     
+    0x00403e6a mov edx, 0x186a0                      |     
+    0x00403e6f call 0x4128d0                         |     rax = BloombergLP::bsls::TimeInterval::addInterval(long long,int) (rsp + 8, 0, 0x186a0);
+    0x00403e74 mov rcx, qword [rax]                  |     rcx = *(rax);
+    0x00403e77 mov eax, dword [rax + 8]              |     eax = *((rax + 8));
+    0x00403e7a mov qword [rsp + 8], rcx              |     *((rsp + 8)) = rcx;
+    0x00403e7f mov dword [rsp + 0x10], eax           |     *((rsp + 0x10)) = eax;
+    0x00403e83 lea rsi, [rsp + 8]                    |     
+    0x00403e88 mov rdi, rbx                          |     
+    0x00403e8b call 0x407210                         |     eax = BloombergLP::bslmt::TimedSemaphoreImpl<BloombergLP::bslmt::Platform::PosixAdvTimedSemaphore>::timedWait(BloombergLP::bsls::TimeIntervalconst&) (rbx, rsp + 8);
+    0x00403e90 xor edi, edi                          |     edi = 0;
+    0x00403e92 test eax, eax                         |     
+    0x00403e94 sete dil                              |     dil = (eax == 0) ? 1 : 0;
+    0x00403e98 mov esi, 0x412c12                     |     esi = "0 != t->d_sem->timedWait(bsls::SystemTime::now(t->d_clockType) + bsls::TimeInterval(0, 1000 * 100))";
+    0x00403e9d mov edx, 0x168                        |     edx = 0x168;
+    0x00403ea2 call 0x403bb0                         |     (anonymousnamespace)::aSsErT(bool,char const*,int) ();
+    0x00403ea7 mov rdi, qword [r12]                  |     
+    0x00403eab call 0x4039e0                         |     MyBarrier::wait() (*(r12));
+    0x00403eb0 cmp dword [r12 + 0x10], 0             |     
+                                                     |     if (*((r12 + 0x10)) <= 0) {
+    0x00403eb6 jle 0x403f55                          |         goto label_2;
+                                                     |     }
+    0x00403ebc lea r15, [rsp + 8]                    |     r15 = rsp + 8;
+    0x00403ec1 jmp 0x403f41                          |     
+                                                     |     while (*((r12 + 0x14)) != 1) {
+    0x00403ed0 call 0x4127b0                         |         rax = BloombergLP::bsls::SystemTime::nowRealtimeClock() ();
+                                                     | label_0:
+    0x00403ed5 mov rbx, rax                          |         rbx = rax;
+    0x00403ed8 mov ebp, edx                          |         
+    0x00403eda lea rdi, [rsp + 0x18]                 |         
+    0x00403edf movsd xmm0, qword [rip + 0xec79]      |         xmm0 = *(0x00412b60);
+    0x00403ee7 call 0x412830                         |         BloombergLP::bsls::TimeInterval::TimeInterval(double) (rsp + 0x18, rsi, rdx, rcx);
+    0x00403eec mov qword [rsp + 8], rbx              |         *((rsp + 8)) = rbx;
+    0x00403ef1 mov dword [rsp + 0x10], ebp           |         *((rsp + 0x10)) = ebp;
+    0x00403ef5 mov rsi, qword [rsp + 0x18]           |         
+    0x00403efa mov edx, dword [rsp + 0x20]           |         
+    0x00403efe mov rdi, r15                          |         
+    0x00403f01 call 0x4128d0                         |         rax = BloombergLP::bsls::TimeInterval::addInterval(long long,int) (r15, *((rsp + 0x18)), *((rsp + 0x20)));
+    0x00403f06 mov rcx, qword [rax]                  |         rcx = *(rax);
+    0x00403f09 mov eax, dword [rax + 8]              |         eax = *((rax + 8));
+    0x00403f0c mov qword [rsp + 8], rcx              |         *((rsp + 8)) = rcx;
+    0x00403f11 mov dword [rsp + 0x10], eax           |         *((rsp + 0x10)) = eax;
+    0x00403f15 mov rdi, r13                          |         
+    0x00403f18 mov rsi, r15                          |         
+    0x00403f1b call 0x407210                         |         eax = BloombergLP::bslmt::TimedSemaphoreImpl<BloombergLP::bslmt::Platform::PosixAdvTimedSemaphore>::timedWait(BloombergLP::bsls::TimeIntervalconst&) (r13, r15);
+    0x00403f20 xor edi, edi                          |         edi = 0;
+    0x00403f22 test eax, eax                         |         
+    0x00403f24 setne dil                             |         dil = (eax != 0) ? 1 : 0;
+    0x00403f28 mov esi, 0x412c76                     |         esi = "0 == t->d_sem->timedWait(bsls::SystemTime::now(t->d_clockType) + bsls::TimeInterval(5))";
+    0x00403f2d mov edx, 0x16d                        |         edx = 0x16d;
+    0x00403f32 call 0x403bb0                         |         (anonymousnamespace)::aSsErT(bool,char const*,int) ();
+    0x00403f37 inc r14d                              |         r14d++;
+    0x00403f3a cmp r14d, dword [r12 + 0x10]          |         
+                                                     |         if (r14d >= *((r12 + 0x10))) {
+    0x00403f3f jge 0x403f55                          |             goto label_2;
+                                                     |         }
+    0x00403f41 mov r13, qword [r12 + 8]              |         r13 = *((r12 + 8));
+    0x00403f46 cmp dword [r12 + 0x14], 1             |         
+    0x00403f4c jne 0x403ed0                          |         
+                                                     |     }
+    0x00403f4e call 0x412720                         |     BloombergLP::bsls::SystemTime::nowMonotonicClock() ();
+    0x00403f53 jmp 0x403ed5                          |     goto label_0;
+                                                     | label_2:
+    0x00403f55 mov rdi, qword [r12]                  |     
+    0x00403f59 call 0x4039e0                         |     MyBarrier::wait() (*(r12));
+    0x00403f5e cmp dword [r12 + 0x10], 0             |     
+                                                     |     if (*((r12 + 0x10)) <= 0) {
+    0x00403f64 jle 0x403fca                          |         goto label_3;
+                                                     |     }
+    0x00403f66 xor ebp, ebp                          |     ebp = 0;
+    0x00403f68 lea r14, [rsp + 8]                    |     r14 = rsp + 8;
+    0x00403f6d jmp 0x403fb6                          |     
+                                                     |     while (*((r12 + 0x14)) != 1) {
+    0x00403f70 call 0x4127b0                         |         rax = BloombergLP::bsls::SystemTime::nowRealtimeClock() ();
+                                                     | label_1:
+    0x00403f75 mov qword [rsp + 8], rax              |         *((rsp + 8)) = rax;
+    0x00403f7a mov dword [rsp + 0x10], edx           |         *((rsp + 0x10)) = edx;
+    0x00403f7e mov rdi, r14                          |         
+    0x00403f81 xor esi, esi                          |         
+    0x00403f83 mov edx, 0x4e20                       |         
+    0x00403f88 call 0x4128d0                         |         rax = BloombergLP::bsls::TimeInterval::addInterval(long long,int) (r14, 0, 0x4e20);
+    0x00403f8d mov rcx, qword [rax]                  |         rcx = *(rax);
+    0x00403f90 mov eax, dword [rax + 8]              |         eax = *((rax + 8));
+    0x00403f93 mov qword [rsp + 8], rcx              |         *((rsp + 8)) = rcx;
+    0x00403f98 mov dword [rsp + 0x10], eax           |         *((rsp + 0x10)) = eax;
+    0x00403f9c mov rdi, rbx                          |         
+    0x00403f9f mov rsi, r14                          |         
+    0x00403fa2 call 0x407210                         |         eax = BloombergLP::bslmt::TimedSemaphoreImpl<BloombergLP::bslmt::Platform::PosixAdvTimedSemaphore>::timedWait(BloombergLP::bsls::TimeIntervalconst&) (rbx, r14);
+    0x00403fa7 cmp eax, 1                            |         
+    0x00403faa adc ebp, 0xffffffff                   |         ebp += 0xffffffff;
+    0x00403fad inc ebp                               |         ebp++;
+    0x00403faf cmp ebp, dword [r12 + 0x10]           |         
+                                                     |         if (ebp >= *((r12 + 0x10))) {
+    0x00403fb4 jge 0x403fca                          |             goto label_3;
+                                                     |         }
+    0x00403fb6 mov rbx, qword [r12 + 8]              |         rbx = *((r12 + 8));
+    0x00403fbb cmp dword [r12 + 0x14], 1             |         
+    0x00403fc1 jne 0x403f70                          |         
+                                                     |     }
+    0x00403fc3 call 0x412720                         |     eax = BloombergLP::bsls::SystemTime::nowMonotonicClock() ();
+    0x00403fc8 jmp 0x403f75                          |     goto label_1;
+                                                     | label_3:
+    0x00403fca xor eax, eax                          |     eax = 0;
+    0x00403fcc add rsp, 0x28                         |     
+    0x00403fd0 pop rbx                               |     
+    0x00403fd1 pop r12                               |     
+    0x00403fd3 pop r13                               |     
+    0x00403fd5 pop r14                               |     
+    0x00403fd7 pop r15                               |     
+    0x00403fd9 pop rbp                               |     
+    0x00403fda ret                                   |     return rax;
+                                                     | }

@@ -1,0 +1,57 @@
+    ; assembly                                                                                                                                                       | /* r2dec pseudo code output */
+                                                                                                                                                                     | /* balber_berdecoder.t/none @ 0x467720 */
+                                                                                                                                                                     | #include <stdint.h>
+                                                                                                                                                                     |  
+    ; (fcn) method.BloombergLP::bdlt::Iso8601Util.generate_char__int__BloombergLP::bdlt::DateTz_const__BloombergLP::bdlt::Iso8601UtilConfiguration_const_ ()         | int64_t method_BloombergLP::bdlt::Iso8601Util_generate_char_int_BloombergLP::bdlt::DateTz_const_BloombergLP::bdlt::Iso8601UtilConfiguration_const_ (int64_t arg4, int64_t arg3, signed int64_t arg2, int64_t arg1) {
+                                                                                                                                                                     |     rcx = arg4;
+                                                                                                                                                                     |     rdx = arg3;
+                                                                                                                                                                     |     rsi = arg2;
+                                                                                                                                                                     |     rdi = arg1;
+                                                                                                                                                                     |     /* BloombergLP::bdlt::Iso8601Util::generate(char*, int, BloombergLP::bdlt::DateTz const&, BloombergLP::bdlt::Iso8601UtilConfiguration const&) */
+    0x00467720 push rbp                                                                                                                                              |     
+    0x00467721 push r14                                                                                                                                              |     
+    0x00467723 push rbx                                                                                                                                              |     
+    0x00467724 sub rsp, 0x10                                                                                                                                         |     
+    0x00467728 mov r14, rdi                                                                                                                                          |     r14 = rdi;
+    0x0046772b cmp esi, 0x11                                                                                                                                         |     
+                                                                                                                                                                     |     if (esi >= 0x11) {
+    0x0046772e jl 0x467749                                                                                                                                           |         
+    0x00467730 mov rdi, r14                                                                                                                                          |         
+    0x00467733 mov rsi, rdx                                                                                                                                          |         
+    0x00467736 mov rdx, rcx                                                                                                                                          |         
+    0x00467739 call 0x467790                                                                                                                                         |         eax = BloombergLP::bdlt::Iso8601Util::generateRaw(char*,BloombergLP::bdlt::DateTzconst&,BloombergLP::bdlt::Iso8601UtilConfigurationconst&) (r14, rdx, rcx);
+    0x0046773e mov ebp, eax                                                                                                                                          |         
+    0x00467740 cdqe                                                                                                                                                  |         rax = (int64_t) eax;
+    0x00467742 mov byte [r14 + rax], 0                                                                                                                               |         *((r14 + rax)) = 0;
+    0x00467747 jmp 0x467785                                                                                                                                          |         
+                                                                                                                                                                     |     } else {
+    0x00467749 mov ebx, esi                                                                                                                                          |         ebx = esi;
+    0x0046774b mov rdi, rsp                                                                                                                                          |         
+    0x0046774e mov rsi, rdx                                                                                                                                          |         
+    0x00467751 mov rdx, rcx                                                                                                                                          |         
+    0x00467754 call 0x467790                                                                                                                                         |         eax = BloombergLP::bdlt::Iso8601Util::generateRaw(char*,BloombergLP::bdlt::DateTzconst&,BloombergLP::bdlt::Iso8601UtilConfigurationconst&) (rsp, rdx, rcx);
+    0x00467759 mov ebp, eax                                                                                                                                          |         
+    0x0046775b cmp eax, ebx                                                                                                                                          |         
+                                                                                                                                                                     |         if (eax < ebx) {
+    0x0046775d jge 0x467777                                                                                                                                          |             
+    0x0046775f movsxd rbx, ebp                                                                                                                                       |             rbx = (int64_t) ebp;
+    0x00467762 mov rsi, rsp                                                                                                                                          |             
+    0x00467765 mov rdi, r14                                                                                                                                          |             
+    0x00467768 mov rdx, rbx                                                                                                                                          |             
+    0x0046776b call 0x404980                                                                                                                                         |             memcpy (r14, rsp, rbx);
+    0x00467770 mov byte [r14 + rbx], 0                                                                                                                               |             *((r14 + rbx)) = 0;
+    0x00467775 jmp 0x467785                                                                                                                                          |             
+                                                                                                                                                                     |         } else {
+    0x00467777 movsxd rdx, ebx                                                                                                                                       |             rdx = (int64_t) ebx;
+    0x0046777a mov rsi, rsp                                                                                                                                          |             
+    0x0046777d mov rdi, r14                                                                                                                                          |             
+    0x00467780 call 0x404980                                                                                                                                         |             memcpy (r14, rsp, rdx);
+                                                                                                                                                                     |         }
+                                                                                                                                                                     |     }
+    0x00467785 mov eax, ebp                                                                                                                                          |     eax = ebp;
+    0x00467787 add rsp, 0x10                                                                                                                                         |     
+    0x0046778b pop rbx                                                                                                                                               |     
+    0x0046778c pop r14                                                                                                                                               |     
+    0x0046778e pop rbp                                                                                                                                               |     
+    0x0046778f ret                                                                                                                                                   |     return rax;
+                                                                                                                                                                     | }

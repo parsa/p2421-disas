@@ -1,0 +1,386 @@
+    ; assembly                                                   | /* r2dec pseudo code output */
+                                                                 | /* ball_attributecontext.t/none @ 0x405a40 */
+                                                                 | #include <stdint.h>
+                                                                 |  
+    ; (fcn) sym.usageExample2 ()                                 | uint64_t usageExample2 (int64_t arg1) {
+                                                                 |     uint32_t var_8h;
+                                                                 |     uint32_t var_9h;
+                                                                 |     uint32_t var_ah;
+                                                                 |     uint32_t var_bh;
+                                                                 |     uint32_t var_ch;
+                                                                 |     uint32_t var_dh;
+                                                                 |     uint32_t var_eh;
+                                                                 |     uint32_t var_fh;
+                                                                 |     char * var_10h;
+                                                                 |     int64_t var_18h;
+                                                                 |     int64_t var_30h;
+                                                                 |     uint32_t var_38h;
+                                                                 |     int64_t var_40h;
+                                                                 |     uint32_t var_48h;
+                                                                 |     int64_t var_50h;
+                                                                 |     int64_t var_58h;
+                                                                 |     char * var_60h;
+                                                                 |     int64_t var_68h;
+                                                                 |     int64_t var_70h;
+                                                                 |     int64_t var_78h;
+                                                                 |     int64_t var_88h;
+                                                                 |     int64_t var_90h;
+                                                                 |     int64_t var_98h;
+                                                                 |     int64_t var_a0h;
+                                                                 |     int64_t var_a8h;
+                                                                 |     int64_t var_b0h;
+                                                                 |     int64_t var_b8h;
+                                                                 |     uint32_t var_d0h;
+                                                                 |     int64_t var_d8h;
+                                                                 |     int64_t var_e8h;
+                                                                 |     int64_t var_100h;
+                                                                 |     uint32_t var_108h;
+                                                                 |     int64_t var_110h;
+                                                                 |     int64_t var_118h;
+                                                                 |     int64_t var_130h;
+                                                                 |     int64_t var_168h;
+                                                                 |     int64_t var_1c0h;
+                                                                 |     rdi = arg1;
+    0x00405a40 push r15                                          |     
+    0x00405a42 push r14                                          |     
+    0x00405a44 push r12                                          |     
+    0x00405a46 push rbx                                          |     
+    0x00405a47 sub rsp, 0x1c8                                    |     
+    0x00405a4e mov r15, qword [rdi]                              |     r15 = *(rdi);
+    0x00405a51 mov esi, 0x448d61                                 |     
+    0x00405a56 mov rdi, r15                                      |     
+    0x00405a59 mov edx, 0x80                                     |     
+    0x00405a5e mov ecx, 0x60                                     |     
+    0x00405a63 mov r8d, 0x40                                     |     
+    0x00405a69 mov r9d, 0x20                                     |     r9d = 0x20;
+    0x00405a6f call 0x413080                                     |     rax = BloombergLP::ball::CategoryManager::addCategory(char const*,int,int,int,int) (r15, "MyCategory", 0x80, 0x60, 0x40);
+    0x00405a74 mov r14, rax                                      |     r14 = rax;
+    0x00405a77 call 0x412420                                     |     rax = BloombergLP::ball::AttributeContext::getContext() ();
+    0x00405a7c mov r12, rax                                      |     r12 = rax;
+    0x00405a7f mov rdi, rax                                      |     
+    0x00405a82 mov rsi, r14                                      |     
+    0x00405a85 call 0x412630                                     |     al = BloombergLP::ball::AttributeContext::hasRelevantActiveRules(BloombergLP::ball::Categoryconst*)const (rax, r14);
+    0x00405a8a movzx edi, al                                     |     edi = (int32_t) al;
+    0x00405a8d mov esi, 0x448d6c                                 |     esi = "!context->hasRelevantActiveRules(cat1)";
+    0x00405a92 mov edx, 0x16e                                    |     edx = 0x16e;
+    0x00405a97 call 0x405630                                     |     symaSsErT(int ();
+    0x00405a9c mov dword [rsp + 0xc], 0                          |     *((rsp + 0xc)) = 0;
+    0x00405aa4 lea rsi, [rsp + 0xc]                              |     
+    0x00405aa9 mov rdi, r12                                      |     
+    0x00405aac mov rdx, r14                                      |     
+    0x00405aaf call 0x412770                                     |     BloombergLP::ball::AttributeContext::determineThresholdLevels(BloombergLP::ball::ThresholdAggregate*,BloombergLP::ball::Categoryconst*)const (r12, rsp + 0xc, r14);
+    0x00405ab4 xor edi, edi                                      |     edi = 0;
+    0x00405ab6 cmp byte [rsp + 0xc], 0x80                        |     
+    0x00405abb setne dil                                         |     dil = (*((rsp + 0xc)) != 0x80) ? 1 : 0;
+    0x00405abf mov esi, 0x448d93                                 |     esi = "128 == cat1ThresholdLevels.recordLevel()";
+    0x00405ac4 mov edx, 0x176                                    |     edx = 0x176;
+    0x00405ac9 call 0x405630                                     |     symaSsErT(int ();
+    0x00405ace xor edi, edi                                      |     edi = 0;
+    0x00405ad0 cmp byte [rsp + 0xd], 0x60                        |     
+    0x00405ad5 setne dil                                         |     dil = (*((rsp + 0xd)) != 0x60) ? 1 : 0;
+    0x00405ad9 mov esi, 0x448dbc                                 |     esi = "96 == cat1ThresholdLevels.passLevel()";
+    0x00405ade mov edx, 0x177                                    |     edx = 0x177;
+    0x00405ae3 call 0x405630                                     |     symaSsErT(int ();
+    0x00405ae8 xor edi, edi                                      |     edi = 0;
+    0x00405aea cmp byte [rsp + 0xe], 0x40                        |     
+    0x00405aef setne dil                                         |     dil = (*((rsp + 0xe)) != 0x40) ? 1 : 0;
+    0x00405af3 mov esi, 0x448de2                                 |     esi = "64 == cat1ThresholdLevels.triggerLevel()";
+    0x00405af8 mov edx, 0x178                                    |     edx = 0x178;
+    0x00405afd call 0x405630                                     |     symaSsErT(int ();
+    0x00405b02 xor edi, edi                                      |     edi = 0;
+    0x00405b04 cmp byte [rsp + 0xf], 0x20                        |     
+    0x00405b09 setne dil                                         |     dil = (*((rsp + 0xf)) != 0x20) ? 1 : 0;
+    0x00405b0d mov esi, 0x448e0b                                 |     esi = "32 == cat1ThresholdLevels.triggerAllLevel()";
+    0x00405b12 mov edx, 0x179                                    |     edx = 0x179;
+    0x00405b17 call 0x405630                                     |     symaSsErT(int ();
+    0x00405b1c mov qword [rsp + 0xb0], 0x448e37                  |     *((rsp + 0xb0)) = 0x448e37;
+    0x00405b28 mov qword [rsp + 0xb8], 3                         |     *((rsp + 0xb8)) = 3;
+    0x00405b34 mov qword [rsp], 0                                |     *(rsp) = 0;
+    0x00405b3c lea rbx, [rsp + 0x130]                            |     rbx = rsp + 0x130;
+    0x00405b44 lea rsi, [rsp + 0xb0]                             |     
+    0x00405b4c mov rdi, rbx                                      |     
+    0x00405b4f mov edx, 0x78                                     |     
+    0x00405b54 mov ecx, 0x6e                                     |     
+    0x00405b59 mov r8d, 0x46                                     |     
+    0x00405b5f mov r9d, 0x28                                     |     
+    0x00405b65 call 0x410040                                     |     BloombergLP::ball::Rule::Rule(std::_1::basic_string_view<char,std::_1::char_traits<char>>const&,int,int,int,int,BloombergLP::bslma::Allocator*) (rbx, rsp + 0xb0, 0x78, 0x6e, 0x46, 0x28);
+    0x00405b6a mov rdi, r15                                      |     
+    0x00405b6d mov rsi, rbx                                      |     
+    0x00405b70 call 0x413690                                     |     BloombergLP::ball::CategoryManager::addRule(BloombergLP::ball::Ruleconst&) (r15, rbx);
+    0x00405b75 mov rdi, r12                                      |     
+    0x00405b78 mov rsi, r14                                      |     
+    0x00405b7b call 0x412630                                     |     al = BloombergLP::ball::AttributeContext::hasRelevantActiveRules(BloombergLP::ball::Categoryconst*)const (r12, r14);
+    0x00405b80 xor al, 1                                         |     al ^= 1;
+    0x00405b82 movzx edi, al                                     |     edi = (int32_t) al;
+    0x00405b85 mov esi, 0x448d6d                                 |     esi = 0x448d6d;
+    0x00405b8a mov edx, 0x18d                                    |     edx = 0x18d;
+    0x00405b8f call 0x405630                                     |     symaSsErT(int ();
+    0x00405b94 mov dword [rsp + 8], 0                            |     *((rsp + 8)) = 0;
+    0x00405b9c lea rsi, [rsp + 8]                                |     
+    0x00405ba1 mov rdi, r12                                      |     
+    0x00405ba4 mov rdx, r14                                      |     
+    0x00405ba7 call 0x412770                                     |     BloombergLP::ball::AttributeContext::determineThresholdLevels(BloombergLP::ball::ThresholdAggregate*,BloombergLP::ball::Categoryconst*)const (r12, rsp + 8, r14);
+    0x00405bac xor edi, edi                                      |     edi = 0;
+    0x00405bae cmp byte [rsp + 8], 0x80                          |     
+    0x00405bb3 setne dil                                         |     dil = (*((rsp + 8)) != 0x80) ? 1 : 0;
+    0x00405bb7 mov esi, 0x448e3b                                 |     esi = "128 == thresholdLevels.recordLevel()";
+    0x00405bbc mov edx, 0x196                                    |     edx = 0x196;
+    0x00405bc1 call 0x405630                                     |     symaSsErT(int ();
+    0x00405bc6 xor edi, edi                                      |     edi = 0;
+    0x00405bc8 cmp byte [rsp + 9], 0x6e                          |     
+    0x00405bcd setne dil                                         |     dil = (*((rsp + 9)) != 0x6e) ? 1 : 0;
+    0x00405bd1 mov esi, 0x448e60                                 |     esi = "110 == thresholdLevels.passLevel()";
+    0x00405bd6 mov edx, 0x197                                    |     edx = 0x197;
+    0x00405bdb call 0x405630                                     |     symaSsErT(int ();
+    0x00405be0 xor edi, edi                                      |     edi = 0;
+    0x00405be2 cmp byte [rsp + 0xa], 0x46                        |     
+    0x00405be7 setne dil                                         |     dil = (*((rsp + 0xa)) != 0x46) ? 1 : 0;
+    0x00405beb mov esi, 0x448e83                                 |     esi = "70 == thresholdLevels.triggerLevel()";
+    0x00405bf0 mov edx, 0x198                                    |     edx = 0x198;
+    0x00405bf5 call 0x405630                                     |     symaSsErT(int ();
+    0x00405bfa xor edi, edi                                      |     edi = 0;
+    0x00405bfc cmp byte [rsp + 0xb], 0x28                        |     
+    0x00405c01 setne dil                                         |     dil = (*((rsp + 0xb)) != 0x28) ? 1 : 0;
+    0x00405c05 mov esi, 0x448ea8                                 |     esi = "40 == thresholdLevels.triggerAllLevel()";
+    0x00405c0a mov edx, 0x199                                    |     edx = 0x199;
+    0x00405c0f call 0x405630                                     |     symaSsErT(int ();
+    0x00405c14 lea rsi, [rsp + 0x130]                            |     
+    0x00405c1c mov rdi, r15                                      |     
+    0x00405c1f call 0x413840                                     |     BloombergLP::ball::CategoryManager::removeRule(BloombergLP::ball::Ruleconst&) (r15, rsp + 0x130);
+    0x00405c24 mov qword [rsp + 0x10], 0x448ed0                  |     *((rsp + 0x10)) = "uuid";
+    0x00405c2d mov qword [rsp + 0x18], 4                         |     *((rsp + 0x18)) = 4;
+    0x00405c36 mov rax, qword [rip + 0x262b43]                   |     rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x00405c3d test rax, rax                                     |     
+                                                                 |     if (rax == 0) {
+    0x00405c40 jne 0x405c47                                      |         
+    0x00405c42 call 0x41f6c0                                     |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                                 |     }
+    0x00405c47 mov qword [rsp + 0x68], rax                       |     *((rsp + 0x68)) = rax;
+    0x00405c4c lea rdi, [rsp + 0xb0]                             |     
+    0x00405c54 lea rsi, [rsp + 0x10]                             |     
+    0x00405c59 lea rcx, [rsp + 0x68]                             |     
+    0x00405c5e mov edx, 0x3c1a5c                                 |     
+    0x00405c63 call 0x410190                                     |     BloombergLP::ball::ManagedAttribute::ManagedAttribute(std::_1::basic_string_view<char,std::_1::char_traits<char>>const&,int,bsl::allocator<char>const&) (rsp + 0xb0, rsp + 0x10, 0x3c1a5c, rsp + 0x68);
+    0x00405c68 mov dword [rsp + 0x1c0], 0xffffffff               |     *((rsp + 0x1c0)) = 0xffffffff;
+    0x00405c73 mov byte [rsp + 0x10], 0                          |     *((rsp + 0x10)) = 0;
+    0x00405c78 lea rdi, [rsp + 0x168]                            |     rdi = rsp + 0x168;
+    0x00405c80 lea rsi, [rsp + 0x10]                             |     rsi = rsp + 0x10;
+    0x00405c85 lea rdx, [rsp + 0xb0]                             |     rdx = rsp + 0xb0;
+    0x00405c8d call 0x4107d0                                     |     BloombergLP::bslstl::HashTable<BloombergLP::bslstl::UnorderedSetKeyConfiguration<BloombergLP::ball::ManagedAttribute>,BloombergLP::ball::ManagedAttributeSet::AttributeHash,bsl::equal_to<BloombergLP::ball::ManagedAttribute>,bsl::allocator<BloombergLP::ball::ManagedAttribute>>::insertIfMissing(bool*,BloombergLP::ball::ManagedAttributeconst&) ();
+    0x00405c92 lea rsi, [rsp + 0x130]                            |     
+    0x00405c9a mov rdi, r15                                      |     
+    0x00405c9d call 0x413690                                     |     BloombergLP::ball::CategoryManager::addRule(BloombergLP::ball::Ruleconst&) (r15, rsp + 0x130);
+    0x00405ca2 mov rdi, r12                                      |     
+    0x00405ca5 mov rsi, r14                                      |     
+    0x00405ca8 call 0x412630                                     |     al = BloombergLP::ball::AttributeContext::hasRelevantActiveRules(BloombergLP::ball::Categoryconst*)const (r12, r14);
+    0x00405cad movzx edi, al                                     |     edi = (int32_t) al;
+    0x00405cb0 mov esi, 0x448d6c                                 |     esi = "!context->hasRelevantActiveRules(cat1)";
+    0x00405cb5 mov edx, 0x1b5                                    |     edx = 0x1b5;
+    0x00405cba call 0x405630                                     |     symaSsErT(int ();
+    0x00405cbf lea rsi, [rsp + 8]                                |     
+    0x00405cc4 mov rdi, r12                                      |     
+    0x00405cc7 mov rdx, r14                                      |     
+    0x00405cca call 0x412770                                     |     BloombergLP::ball::AttributeContext::determineThresholdLevels(BloombergLP::ball::ThresholdAggregate*,BloombergLP::ball::Categoryconst*)const (r12, rsp + 8, r14);
+    0x00405ccf mov al, byte [rsp + 8]                            |     al = *((rsp + 8));
+    0x00405cd3 cmp al, byte [rsp + 0xc]                          |     
+                                                                 |     if (al == *((rsp + 0xc))) {
+    0x00405cd7 jne 0x405cfa                                      |         
+    0x00405cd9 mov al, byte [rsp + 9]                            |         al = *((rsp + 9));
+    0x00405cdd cmp al, byte [rsp + 0xd]                          |         
+                                                                 |         if (al == *((rsp + 0xd))) {
+    0x00405ce1 jne 0x405cfa                                      |             
+    0x00405ce3 mov al, byte [rsp + 0xa]                          |             al = *((rsp + 0xa));
+    0x00405ce7 cmp al, byte [rsp + 0xe]                          |             
+                                                                 |             if (al != *((rsp + 0xe))) {
+    0x00405ceb jne 0x405cfa                                      |                 goto label_2;
+                                                                 |             }
+    0x00405ced mov al, byte [rsp + 0xb]                          |             al = *((rsp + 0xb));
+    0x00405cf1 cmp al, byte [rsp + 0xf]                          |             
+    0x00405cf5 sete al                                           |             al = (al == *((rsp + 0xf))) ? 1 : 0;
+    0x00405cf8 jmp 0x405cfc                                      |             
+                                                                 |         }
+                                                                 |     } else {
+                                                                 | label_2:
+    0x00405cfa xor eax, eax                                      |         eax = 0;
+                                                                 |     }
+    0x00405cfc xor al, 1                                         |     al ^= 1;
+    0x00405cfe movzx edi, al                                     |     edi = (int32_t) al;
+    0x00405d01 mov esi, 0x448ed5                                 |     esi = "thresholdLevels == cat1ThresholdLevels";
+    0x00405d06 mov edx, 0x1bb                                    |     edx = 0x1bb;
+    0x00405d0b call 0x405630                                     |     symaSsErT(int ();
+    0x00405d10 mov qword [rsp + 0x68], 0x448ba0                  |     *((rsp + 0x68)) = vtable.AttributeSet.0;
+    0x00405d19 mov rax, qword [rip + 0x262a60]                   |     rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x00405d20 test rax, rax                                     |     
+                                                                 |     if (rax == 0) {
+    0x00405d23 jne 0x405d2a                                      |         
+    0x00405d25 call 0x41f6c0                                     |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                                 |     }
+    0x00405d2a mov qword [rsp + 0x70], rax                       |     *((rsp + 0x70)) = rax;
+    0x00405d2f xorps xmm0, xmm0                                  |     __asm ("xorps xmm0, xmm0");
+    0x00405d32 movups xmmword [rsp + 0x78], xmm0                 |     __asm ("movups xmmword [rsp + 0x78], xmm0");
+    0x00405d37 mov dword [rsp + 0x88], 1                         |     *((rsp + 0x88)) = 1;
+    0x00405d42 lea rax, [rsp + 0x90]                             |     rax = rsp + 0x90;
+    0x00405d4a mov dword [rsp + 0xa8], 0                         |     *((rsp + 0xa8)) = 0;
+    0x00405d55 mov qword [rsp + 0xa0], rax                       |     *((rsp + 0xa0)) = rax;
+    0x00405d5d mov qword [rsp + 0x98], 0                         |     *((rsp + 0x98)) = 0;
+    0x00405d69 mov rax, qword [rip + 0x262a10]                   |     rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x00405d70 test rax, rax                                     |     
+                                                                 |     if (rax == 0) {
+    0x00405d73 jne 0x405d7a                                      |         
+    0x00405d75 call 0x41f6c0                                     |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                                 |     }
+    0x00405d7a mov qword [rsp + 0x10], 0x448ed0                  |     *((rsp + 0x10)) = "uuid";
+    0x00405d83 mov dword [rsp + 0x48], 0                         |     *((rsp + 0x48)) = 0;
+    0x00405d8b test rax, rax                                     |     
+                                                                 |     if (rax == 0) {
+    0x00405d8e jne 0x405da0                                      |         
+    0x00405d90 mov rax, qword [rip + 0x2629e9]                   |         rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x00405d97 test rax, rax                                     |         
+                                                                 |         if (rax == 0) {
+    0x00405d9a je 0x405f79                                       |             goto label_3;
+                                                                 |         }
+                                                                 |     }
+    0x00405da0 lea rbx, [rsp + 0x18]                             |     rbx = rsp + 0x18;
+    0x00405da5 mov qword [rsp + 0x50], rax                       |     *((rsp + 0x50)) = rax;
+    0x00405daa mov eax, 0xffffffff                               |     eax = 0xffffffff;
+    0x00405daf mov qword [rsp + 0x58], rax                       |     *((rsp + 0x58)) = rax;
+                                                                 |     do {
+                                                                 | label_1:
+    0x00405db4 mov dword [rbx], 0x3c1a5c                         |         *(rbx) = 0x3c1a5c;
+    0x00405dba mov dword [rsp + 0x48], 1                         |         *((rsp + 0x48)) = 1;
+                                                                 | label_0:
+    0x00405dc2 lea r15, [rsp + 0x70]                             |         r15 = rsp + 0x70;
+    0x00405dc7 lea rsi, [rsp + 0x10]                             |         
+    0x00405dcc mov rdi, r15                                      |         
+    0x00405dcf call 0x40fe00                                     |         bsl::set<BloombergLP::ball::Attribute,AttributeComparator,bsl::allocator<BloombergLP::ball::Attribute>>::insert(BloombergLP::ball::Attributeconst&) (r15, rsp + 0x10);
+    0x00405dd4 cmp dword [rsp + 0x48], 3                         |         
+                                                                 |         if (*((rsp + 0x48)) == 3) {
+    0x00405dd9 jne 0x405df3                                      |             
+    0x00405ddb cmp qword [rsp + 0x38], 0x17                      |             
+                                                                 |             if (*((rsp + 0x38)) == 0x17) {
+    0x00405de1 je 0x405df3                                       |                 goto label_4;
+                                                                 |             }
+    0x00405de3 mov rsi, qword [rsp + 0x18]                       |             rsi = *((rsp + 0x18));
+    0x00405de8 mov rdi, qword [rsp + 0x40]                       |             rdi = *((rsp + 0x40));
+    0x00405ded mov rax, qword [rdi]                              |             rax = *(rdi);
+    0x00405df0 call qword [rax + 0x18]                           |             uint64_t (*rax + 0x18)() ();
+                                                                 |         }
+                                                                 | label_4:
+    0x00405df3 mov qword [r12 + 0x20], 0                         |         *((r12 + 0x20)) = 0;
+    0x00405dfc mov qword [r12 + 0x28], 0xffffffffffffffff        |         *((r12 + 0x28)) = 0xffffffffffffffff;
+    0x00405e05 lea rdi, [rsp + 0x10]                             |         
+    0x00405e0a lea rdx, [rsp + 0x68]                             |         
+    0x00405e0f mov rsi, r12                                      |         
+    0x00405e12 call 0x411d90                                     |         BloombergLP::ball::AttributeContainerList::pushFront(BloombergLP::ball::AttributeContainerconst*) (rsp + 0x10, r12, rsp + 0x68);
+    0x00405e17 mov rdi, r12                                      |         
+    0x00405e1a mov rsi, r14                                      |         
+    0x00405e1d call 0x412630                                     |         al = BloombergLP::ball::AttributeContext::hasRelevantActiveRules(BloombergLP::ball::Categoryconst*)const (r12, r14);
+    0x00405e22 xor al, 1                                         |         al ^= 1;
+    0x00405e24 movzx edi, al                                     |         edi = (int32_t) al;
+    0x00405e27 mov esi, 0x448d6d                                 |         esi = 0x448d6d;
+    0x00405e2c mov edx, 0x1ce                                    |         edx = 0x1ce;
+    0x00405e31 call 0x405630                                     |         symaSsErT(int ();
+    0x00405e36 lea rsi, [rsp + 8]                                |         
+    0x00405e3b mov rdi, r12                                      |         
+    0x00405e3e mov rdx, r14                                      |         
+    0x00405e41 call 0x412770                                     |         BloombergLP::ball::AttributeContext::determineThresholdLevels(BloombergLP::ball::ThresholdAggregate*,BloombergLP::ball::Categoryconst*)const (r12, rsp + 8, r14);
+    0x00405e46 xor edi, edi                                      |         edi = 0;
+    0x00405e48 cmp byte [rsp + 8], 0x80                          |         
+    0x00405e4d setne dil                                         |         dil = (*((rsp + 8)) != 0x80) ? 1 : 0;
+    0x00405e51 mov esi, 0x448e3b                                 |         esi = "128 == thresholdLevels.recordLevel()";
+    0x00405e56 mov edx, 0x1d4                                    |         edx = 0x1d4;
+    0x00405e5b call 0x405630                                     |         symaSsErT(int ();
+    0x00405e60 xor edi, edi                                      |         edi = 0;
+    0x00405e62 cmp byte [rsp + 9], 0x6e                          |         
+    0x00405e67 setne dil                                         |         dil = (*((rsp + 9)) != 0x6e) ? 1 : 0;
+    0x00405e6b mov esi, 0x448e60                                 |         esi = "110 == thresholdLevels.passLevel()";
+    0x00405e70 mov edx, 0x1d5                                    |         edx = 0x1d5;
+    0x00405e75 call 0x405630                                     |         symaSsErT(int ();
+    0x00405e7a xor edi, edi                                      |         edi = 0;
+    0x00405e7c cmp byte [rsp + 0xa], 0x46                        |         
+    0x00405e81 setne dil                                         |         dil = (*((rsp + 0xa)) != 0x46) ? 1 : 0;
+    0x00405e85 mov esi, 0x448e83                                 |         esi = "70 == thresholdLevels.triggerLevel()";
+    0x00405e8a mov edx, 0x1d6                                    |         edx = 0x1d6;
+    0x00405e8f call 0x405630                                     |         symaSsErT(int ();
+    0x00405e94 xor edi, edi                                      |         edi = 0;
+    0x00405e96 cmp byte [rsp + 0xb], 0x28                        |         
+    0x00405e9b setne dil                                         |         dil = (*((rsp + 0xb)) != 0x28) ? 1 : 0;
+    0x00405e9f mov esi, 0x448ea8                                 |         esi = "40 == thresholdLevels.triggerAllLevel()";
+    0x00405ea4 mov edx, 0x1d7                                    |         edx = 0x1d7;
+    0x00405ea9 call 0x405630                                     |         symaSsErT(int ();
+    0x00405eae mov rax, qword [rsp + 0x10]                       |         rax = *((rsp + 0x10));
+    0x00405eb3 mov qword [rsp + 0x60], rax                       |         *((rsp + 0x60)) = rax;
+    0x00405eb8 mov qword [r12 + 0x20], 0                         |         *((r12 + 0x20)) = 0;
+    0x00405ec1 mov qword [r12 + 0x28], 0xffffffffffffffff        |         *((r12 + 0x28)) = 0xffffffffffffffff;
+    0x00405eca lea rsi, [rsp + 0x60]                             |         
+    0x00405ecf mov rdi, r12                                      |         
+    0x00405ed2 call 0x411e00                                     |         BloombergLP::ball::AttributeContainerList::remove(BloombergLP::ball::AttributeContainerListIteratorconst&) (r12, rsp + 0x60);
+    0x00405ed7 mov qword [rsp + 0x68], 0x448ba0                  |         *((rsp + 0x68)) = vtable.AttributeSet.0;
+    0x00405ee0 mov rdi, r15                                      |         
+    0x00405ee3 call 0x40fd00                                     |         bsl::set<BloombergLP::ball::Attribute,AttributeComparator,bsl::allocator<BloombergLP::ball::Attribute>>::~set() (r15);
+    0x00405ee8 lea rdi, [rsp + 0x68]                             |         rdi = rsp + 0x68;
+    0x00405eed call 0x411b90                                     |         BloombergLP::ball::AttributeContainer::~AttributeContainer() ();
+    0x00405ef2 mov eax, dword [rsp + 0x118]                      |         eax = *((rsp + 0x118));
+    0x00405ef9 test eax, eax                                     |         
+                                                                 |         if (eax != 0) {
+    0x00405efb je 0x405f3a                                       |             
+    0x00405efd cmp eax, 3                                        |             
+                                                                 |             if (eax == 3) {
+    0x00405f00 jne 0x405f2f                                      |                 
+    0x00405f02 cmp qword [rsp + 0x108], 0x17                     |                 
+                                                                 |                 if (*((rsp + 0x108)) != 0x17) {
+    0x00405f0b je 0x405f23                                       |                     
+    0x00405f0d mov rsi, qword [rsp + 0xe8]                       |                     rsi = *((rsp + 0xe8));
+    0x00405f15 mov rdi, qword [rsp + 0x110]                      |                     rdi = *((rsp + 0x110));
+    0x00405f1d mov rax, qword [rdi]                              |                     rax = *(rdi);
+    0x00405f20 call qword [rax + 0x18]                           |                     uint64_t (*rax + 0x18)() ();
+                                                                 |                 }
+    0x00405f23 mov qword [rsp + 0x100], 0xffffffffffffffff       |                 *((rsp + 0x100)) = 0xffffffffffffffff;
+                                                                 |             }
+    0x00405f2f mov dword [rsp + 0x118], 0                        |             *((rsp + 0x118)) = 0;
+                                                                 |         }
+    0x00405f3a cmp qword [rsp + 0xd0], 0x17                      |         
+                                                                 |         if (*((rsp + 0xd0)) != 0x17) {
+    0x00405f43 je 0x405f5b                                       |             
+    0x00405f45 mov rsi, qword [rsp + 0xb0]                       |             rsi = *((rsp + 0xb0));
+    0x00405f4d mov rdi, qword [rsp + 0xd8]                       |             rdi = *((rsp + 0xd8));
+    0x00405f55 mov rax, qword [rdi]                              |             rax = *(rdi);
+    0x00405f58 call qword [rax + 0x18]                           |             uint64_t (*rax + 0x18)() ();
+                                                                 |         }
+    0x00405f5b lea rdi, [rsp + 0x130]                            |         
+    0x00405f63 call 0x410300                                     |         eax = BloombergLP::ball::Rule::~Rule() (rsp + 0x130);
+    0x00405f68 xor eax, eax                                      |         eax = 0;
+    0x00405f6a add rsp, 0x1c8                                    |         
+    0x00405f71 pop rbx                                           |         
+    0x00405f72 pop r12                                           |         
+    0x00405f74 pop r14                                           |         
+    0x00405f76 pop r15                                           |         
+    0x00405f78 ret                                               |         return rax;
+                                                                 | label_3:
+    0x00405f79 call 0x41f6c0                                     |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+    0x00405f7e mov ecx, dword [rsp + 0x48]                       |         ecx = *((rsp + 0x48));
+    0x00405f82 lea rbx, [rsp + 0x18]                             |         rbx = rsp + 0x18;
+    0x00405f87 mov qword [rsp + 0x50], rax                       |         *((rsp + 0x50)) = rax;
+    0x00405f8c mov eax, 0xffffffff                               |         eax = 0xffffffff;
+    0x00405f91 mov qword [rsp + 0x58], rax                       |         *((rsp + 0x58)) = rax;
+    0x00405f96 cmp ecx, 3                                        |         
+                                                                 |         if (ecx == 3) {
+    0x00405f99 je 0x405fb1                                       |             goto label_5;
+                                                                 |         }
+    0x00405f9b cmp ecx, 1                                        |         
+    0x00405f9e jne 0x405db4                                      |         
+                                                                 |     } while (ecx != 1);
+    0x00405fa4 mov dword [rsp + 0x18], 0x3c1a5c                  |     *((rsp + 0x18)) = 0x3c1a5c;
+    0x00405fac jmp 0x405dc2                                      |     goto label_0;
+                                                                 | label_5:
+    0x00405fb1 cmp qword [rsp + 0x38], 0x17                      |     
+                                                                 |     if (*((rsp + 0x38)) != 0x17) {
+    0x00405fb7 je 0x405fc9                                       |         
+    0x00405fb9 mov rsi, qword [rsp + 0x18]                       |         rsi = *((rsp + 0x18));
+    0x00405fbe mov rdi, qword [rsp + 0x40]                       |         rdi = *((rsp + 0x40));
+    0x00405fc3 mov rax, qword [rdi]                              |         rax = *(rdi);
+    0x00405fc6 call qword [rax + 0x18]                           |         uint64_t (*rax + 0x18)() ();
+                                                                 |     }
+    0x00405fc9 mov qword [rsp + 0x30], 0xffffffffffffffff        |     *((rsp + 0x30)) = 0xffffffffffffffff;
+    0x00405fd2 jmp 0x405db4                                      |     goto label_1;
+                                                                 | }

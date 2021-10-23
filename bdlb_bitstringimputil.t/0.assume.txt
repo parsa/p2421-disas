@@ -1,0 +1,56 @@
+    ; assembly                                           | /* r2dec pseudo code output */
+                                                         | /* bdlb_bitstringimputil.t/assume @ 0x4018e0 */
+                                                         | #include <stdint.h>
+                                                         |  
+    ; (fcn) sym.find1AtMaxOracle_unsigned_long_ ()       | int64_t find1AtMaxOracle_unsigned_long_ (uint32_t arg1) {
+                                                         |     rdi = arg1;
+                                                         |     /* find1AtMaxOracle(unsigned long) */
+    0x004018e0 mov eax, 0x3c                             |     eax = 0x3c;
+    0x004018e5 nop word cs:[rax + rax]                   |     
+    0x004018ef nop                                       |     
+                                                         |     do {
+    0x004018f0 lea ecx, [rax + 3]                        |         ecx = rax + 3;
+    0x004018f3 movzx ecx, cl                             |         ecx = (int32_t) cl;
+    0x004018f6 bt rdi, rcx                               |         
+                                                         |         if (((rdi >> rcx) & 1) < 0) {
+    0x004018fa jb 0x401943                               |             goto label_0;
+                                                         |         }
+    0x004018fc lea ecx, [rax + 2]                        |         ecx = rax + 2;
+    0x004018ff movzx ecx, cl                             |         ecx = (int32_t) cl;
+    0x00401902 bt rdi, rcx                               |         
+                                                         |         if (((rdi >> rcx) & 1) < 0) {
+    0x00401906 jb 0x401948                               |             goto label_1;
+                                                         |         }
+    0x00401908 lea ecx, [rax + 1]                        |         ecx = rax + 1;
+    0x0040190b movzx ecx, cl                             |         ecx = (int32_t) cl;
+    0x0040190e bt rdi, rcx                               |         
+                                                         |         if (((rdi >> rcx) & 1) < 0) {
+    0x00401912 jb 0x40194d                               |             goto label_2;
+                                                         |         }
+    0x00401914 bt rdi, rax                               |         
+                                                         |         if (((rdi >> rax) & 1) < 0) {
+    0x00401918 jb 0x401950                               |             goto label_3;
+                                                         |         }
+    0x0040191a add rax, 0xfffffffffffffffc               |         rax += 0xfffffffffffffffc;
+    0x0040191e cmp rax, 0xfffffffffffffffc               |         
+    0x00401922 jne 0x4018f0                              |         
+                                                         |     } while (rax != 0xfffffffffffffffc);
+    0x00401924 push rax                                  |     
+    0x00401925 mov esi, 0x435060                         |     esi = "0 && \"0 passed to find1AtMaxOracle\";
+    0x0040192a mov edi, 1                                |     edi = 1;
+    0x0040192f mov edx, 0x1a2                            |     edx = 0x1a2;
+    0x00401934 call 0x401960                             |     (anonymousnamespace)::aSsErT(bool,char const*,int) ();
+    0x00401939 mov eax, 0xffffffff                       |     eax = 0xffffffff;
+    0x0040193e add rsp, 8                                |     
+    0x00401942 ret                                       |     return rax;
+                                                         | label_0:
+    0x00401943 add rax, 3                                |     rax += 3;
+    0x00401947 ret                                       |     return rax;
+                                                         | label_1:
+    0x00401948 add rax, 2                                |     rax += 2;
+    0x0040194c ret                                       |     return rax;
+                                                         | label_2:
+    0x0040194d inc rax                                   |     rax++;
+                                                         | label_3:
+    0x00401950 ret                                       |     return rax;
+                                                         | }

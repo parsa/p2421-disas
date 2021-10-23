@@ -1,0 +1,28 @@
+    ; assembly                                                                                           | /* r2dec pseudo code output */
+                                                                                                         | /* balb_performancemonitor.t/none @ 0x41ea60 */
+                                                                                                         | #include <stdint.h>
+                                                                                                         |  
+    ; (fcn) method.BloombergLP::bsls::SystemTime.now_BloombergLP::bsls::SystemClockType::Enum_ ()        | uint32_t method_BloombergLP::bsls::SystemTime_now_BloombergLP::bsls::SystemClockType::Enum_ (uint32_t arg1) {
+                                                                                                         |     rdi = arg1;
+                                                                                                         |     /* BloombergLP::bsls::SystemTime::now(BloombergLP::bsls::SystemClockType::Enum) */
+    0x0041ea60 push rax                                                                                  |     
+    0x0041ea61 test edi, edi                                                                             |     
+                                                                                                         |     if (edi != 0) {
+    0x0041ea63 je 0x41ea71                                                                               |         
+    0x0041ea65 cmp edi, 1                                                                                |         
+                                                                                                         |         if (edi != 1) {
+    0x0041ea68 jne 0x41ea78                                                                              |             goto label_0;
+                                                                                                         |         }
+    0x0041ea6a call 0x42e060                                                                             |         BloombergLP::bsls::SystemTime::nowMonotonicClock() ();
+    0x0041ea6f pop rcx                                                                                   |         
+    0x0041ea70 ret                                                                                       |         return;
+                                                                                                         |     }
+    0x0041ea71 call 0x42e0f0                                                                             |     eax = BloombergLP::bsls::SystemTime::nowRealtimeClock() ();
+    0x0041ea76 pop rcx                                                                                   |     
+    0x0041ea77 ret                                                                                       |     return eax;
+                                                                                                         | label_0:
+    0x0041ea78 xor edx, edx                                                                              |     edx = 0;
+    0x0041ea7a xor eax, eax                                                                              |     eax = 0;
+    0x0041ea7c pop rcx                                                                                   |     
+    0x0041ea7d ret                                                                                       |     return eax;
+                                                                                                         | }

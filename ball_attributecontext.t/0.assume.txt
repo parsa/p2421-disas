@@ -1,0 +1,1409 @@
+    ; assembly                                                   | /* r2dec pseudo code output */
+                                                                 | /* ball_attributecontext.t/assume @ 0x408920 */
+                                                                 | #include <stdint.h>
+                                                                 |  
+    ; (fcn) sym.case4ContextThread ()                            | uint64_t case4ContextThread (int64_t arg1) {
+                                                                 |     uint32_t var_ch;
+                                                                 |     uint32_t var_dh;
+                                                                 |     uint32_t var_eh;
+                                                                 |     uint32_t var_fh;
+                                                                 |     char * var_10h;
+                                                                 |     int64_t var_18h;
+                                                                 |     int64_t var_28h;
+                                                                 |     uint32_t var_30h;
+                                                                 |     uint32_t var_38h;
+                                                                 |     int64_t var_40h;
+                                                                 |     uint32_t var_48h;
+                                                                 |     int64_t var_50h;
+                                                                 |     int64_t var_58h;
+                                                                 |     int64_t var_5ch;
+                                                                 |     int64_t var_60h;
+                                                                 |     int64_t var_80h;
+                                                                 |     int64_t var_88h;
+                                                                 |     int64_t var_90h;
+                                                                 |     int64_t var_98h;
+                                                                 |     int64_t var_a0h;
+                                                                 |     int64_t var_a8h;
+                                                                 |     int64_t var_b0h;
+                                                                 |     int64_t var_b8h;
+                                                                 |     int64_t var_c0h;
+                                                                 |     int64_t var_c8h;
+                                                                 |     int64_t var_d0h;
+                                                                 |     int64_t var_d8h;
+                                                                 |     int64_t var_e0h;
+                                                                 |     int64_t var_f0h;
+                                                                 |     rdi = arg1;
+    0x00408920 push rbp                                          |     
+    0x00408921 push r15                                          |     
+    0x00408923 push r14                                          |     
+    0x00408925 push r13                                          |     
+    0x00408927 push r12                                          |     
+    0x00408929 push rbx                                          |     
+    0x0040892a sub rsp, 0xf8                                     |     
+    0x00408931 mov r14, qword [rdi]                              |     r14 = *(rdi);
+    0x00408934 mov edi, 0x66a0a8                                 |     
+    0x00408939 call 0x422bd0                                     |     BloombergLP::bslmt::Barrier::wait() (obj.BALL_ATTRIBUTECONTEXT_TEST_CASE_4::barrier);
+    0x0040893e cmp byte [rip + 0x2616e8], 0                      |     
+                                                                 |     if (*(obj.veryVerbose) != 0) {
+    0x00408945 je 0x408a04                                       |         
+    0x0040894b mov edi, 0x66a000                                 |         edi = coutMutex;
+    0x00408950 call 0x404640                                     |         pthread_mutex_lock ();
+    0x00408955 call 0x404250                                     |         eax = pthread_self ();
+    0x0040895a movsxd rsi, eax                                   |         rsi = (int64_t) eax;
+    0x0040895d mov edi, 0x669f48                                 |         edi = std::__1::cout;
+    0x00408962 call 0x404230                                     |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (unsigned long long) ();
+    0x00408967 mov esi, 0x44b203                                 |         
+    0x0040896c mov edx, 2                                        |         
+    0x00408971 mov rdi, rax                                      |         
+    0x00408974 call 0x413940                                     |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44b203, 2);
+    0x00408979 mov esi, 0x44b77d                                 |         
+    0x0040897e mov edx, 0x2b                                     |         
+    0x00408983 mov rdi, rax                                      |         
+    0x00408986 call 0x413940                                     |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, "\n\tPhase 1: Initializing attribute contexts ", 0x2b);
+    0x0040898b mov esi, 0x44b7a9                                 |         
+    0x00408990 mov edx, 0x18                                     |         
+    0x00408995 mov rdi, rax                                      |         
+    0x00408998 call 0x413940                                     |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, "and creating categories.", 0x18);
+    0x0040899d mov rbx, rax                                      |         rbx = rax;
+    0x004089a0 mov rax, qword [rax]                              |         rax = *(rax);
+    0x004089a3 mov rsi, qword [rax - 0x18]                       |         rsi = *((rax - 0x18));
+    0x004089a7 add rsi, rbx                                      |         rsi += rbx;
+    0x004089aa lea rbp, [rsp + 0x10]                             |         rbp = rsp + 0x10;
+    0x004089af mov rdi, rbp                                      |         rdi = rbp;
+    0x004089b2 call 0x404420                                     |         std::_1::ios_base::getloc()const ();
+    0x004089b7 mov esi, 0x669e90                                 |         esi = std::__1::ctype<char>::id;
+    0x004089bc mov rdi, rbp                                      |         rdi = rbp;
+    0x004089bf call 0x404550                                     |         rax = std::_1::locale::use_facet(std::_1::locale::id&)const ();
+    0x004089c4 mov rcx, qword [rax]                              |         rcx = *(rax);
+    0x004089c7 mov rdi, rax                                      |         rdi = rax;
+    0x004089ca mov esi, 0xa                                      |         esi = 0xa;
+    0x004089cf call qword [rcx + 0x38]                           |         eax = uint64_t (*rcx + 0x38)() ();
+    0x004089d2 mov ebp, eax                                      |         
+    0x004089d4 lea rdi, [rsp + 0x10]                             |         rdi = rsp + 0x10;
+    0x004089d9 call 0x4045e0                                     |         std::_1::locale::~locale() ();
+    0x004089de movsx esi, bpl                                    |         esi = (int32_t) bpl;
+    0x004089e2 mov rdi, rbx                                      |         rdi = rbx;
+    0x004089e5 call 0x404210                                     |         std::_1::basic_ostream<char,std::_1::char_traits<char>>::put(char) ();
+    0x004089ea mov rdi, rbx                                      |         rdi = rbx;
+    0x004089ed call 0x4043e0                                     |         std::_1::basic_ostream<char,std::_1::char_traits<char>>::flush() ();
+    0x004089f2 mov rdi, rbx                                      |         rdi = rbx;
+    0x004089f5 call 0x4043e0                                     |         std::_1::basic_ostream<char,std::_1::char_traits<char>>::flush() ();
+    0x004089fa mov edi, 0x66a000                                 |         edi = coutMutex;
+    0x004089ff call 0x404720                                     |         pthread_mutex_unlock ();
+                                                                 |     }
+    0x00408a04 call 0x414e40                                     |     rax = BloombergLP::ball::AttributeContext::lookupContext() ();
+    0x00408a09 xor edi, edi                                      |     edi = 0;
+    0x00408a0b test rax, rax                                     |     
+    0x00408a0e setne dil                                         |     dil = (rax != 0) ? 1 : 0;
+    0x00408a12 mov esi, 0x44b7c2                                 |     esi = "0 == Obj::lookupContext()";
+    0x00408a17 mov edx, 0x34d                                    |     edx = 0x34d;
+    0x00408a1c call 0x405860                                     |     symaSsErT(int ();
+    0x00408a21 call 0x414ca0                                     |     rax = BloombergLP::ball::AttributeContext::getContext() ();
+    0x00408a26 mov r12, rax                                      |     r12 = rax;
+    0x00408a29 xor edi, edi                                      |     edi = 0;
+    0x00408a2b test rax, rax                                     |     
+    0x00408a2e sete dil                                          |     dil = (rax == 0) ? 1 : 0;
+    0x00408a32 mov esi, 0x44b7dc                                 |     esi = 0x44b7dc;
+    0x00408a37 mov edx, 0x350                                    |     edx = 0x350;
+    0x00408a3c call 0x405860                                     |     symaSsErT(int ();
+    0x00408a41 call 0x414e40                                     |     rax = BloombergLP::ball::AttributeContext::lookupContext() ();
+    0x00408a46 xor edi, edi                                      |     edi = 0;
+    0x00408a48 cmp r12, rax                                      |     
+    0x00408a4b setne dil                                         |     dil = (r12 != rax) ? 1 : 0;
+    0x00408a4f mov esi, 0x44b7df                                 |     esi = "mX == Obj::lookupContext()";
+    0x00408a54 mov edx, 0x351                                    |     edx = 0x351;
+    0x00408a59 call 0x405860                                     |     symaSsErT(int ();
+    0x00408a5e mov rax, qword [rip + 0x261d1b]                   |     rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x00408a65 test rax, rax                                     |     
+                                                                 |     if (rax == 0) {
+    0x00408a68 jne 0x408a6f                                      |         
+    0x00408a6a call 0x421bc0                                     |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                                 |     }
+    0x00408a6f mov qword [rsp + 0x10], rax                       |     *((rsp + 0x10)) = rax;
+    0x00408a74 lea rdi, [rsp + 0x60]                             |     
+    0x00408a79 lea r15, [rsp + 0x10]                             |     r15 = rsp + 0x10;
+    0x00408a7e mov esi, 0x21                                     |     
+    0x00408a83 mov rdx, r15                                      |     
+    0x00408a86 call 0x43cd90                                     |     bsl::vector<unsigned long,bsl::allocator<unsigned long>>::vector(unsigned long,bsl::allocator<unsigned long>const&) (rsp + 0x60, 0x21, r15);
+    0x00408a8b xor ebx, ebx                                      |     ebx = 0;
+    0x00408a8d jmp 0x408a9d                                      |     
+                                                                 |     while (*((rsp + 0x30)) == 0x17) {
+                                                                 | label_0:
+    0x00408a90 mov rbx, rbp                                      |         rbx = rbp;
+    0x00408a93 cmp rbp, 0x21                                     |         
+                                                                 |         if (rbp == 0x21) {
+    0x00408a97 je 0x408b8f                                       |             goto label_20;
+                                                                 |         }
+    0x00408a9d mov rax, qword [rip + 0x261cdc]                   |         rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x00408aa4 test rax, rax                                     |         
+                                                                 |         if (rax == 0) {
+    0x00408aa7 jne 0x408aae                                      |             
+    0x00408aa9 call 0x421bc0                                     |             rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                                 |         }
+    0x00408aae mov qword [rsp + 0x10], 0                         |         *((rsp + 0x10)) = 0;
+    0x00408ab7 mov qword [rsp + 0x38], rax                       |         *((rsp + 0x38)) = rax;
+    0x00408abc movaps xmm0, xmmword [rip + 0x424dd]              |         xmm0 = .comment;
+    0x00408ac3 movups xmmword [rsp + 0x28], xmm0                 |         __asm ("movups xmmword [rsp + 0x28], xmm0");
+    0x00408ac8 mov ecx, 0x44c5fd                                 |         
+    0x00408acd mov rdi, r15                                      |         
+    0x00408ad0 mov rsi, rbx                                      |         
+    0x00408ad3 mov edx, 0x61                                     |         
+    0x00408ad8 call 0x428010                                     |         bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>::privateAppend(unsigned long,char,char const*) (r15, rbx, 0x61, "string<...>::assign(n,c): string too long");
+    0x00408add cmp qword [rsp + 0x30], 0x17                      |         
+    0x00408ae3 mov rsi, r15                                      |         rsi = r15;
+                                                                 |         if (*((rsp + 0x30)) != 0x17) {
+    0x00408ae6 je 0x408aed                                       |             
+    0x00408ae8 mov rsi, qword [rsp + 0x10]                       |             
+                                                                 |         }
+    0x00408aed lea rbp, [rbx + 1]                                |         rbp = rbx + 1;
+    0x00408af1 mov rdi, r14                                      |         
+    0x00408af4 mov edx, ebp                                      |         
+    0x00408af6 xor ecx, ecx                                      |         
+    0x00408af8 xor r8d, r8d                                      |         
+    0x00408afb xor r9d, r9d                                      |         
+    0x00408afe call 0x415d10                                     |         rax = BloombergLP::ball::CategoryManager::setThresholdLevels(char const*,int,int,int,int) (r14, *((rsp + 0x10)), ebp, 0, 0, 0);
+    0x00408b03 mov rcx, qword [rsp + 0x60]                       |         rcx = *((rsp + 0x60));
+    0x00408b08 mov qword [rcx + rbx*8], rax                      |         *((rcx + rbx*8)) = rax;
+    0x00408b0c mov rax, qword [rsp + 0x60]                       |         rax = *((rsp + 0x60));
+    0x00408b11 cmp qword [rax + rbx*8], 0                        |         
+                                                                 |         if (*((rax + rbx*8)) == 0) {
+    0x00408b16 jne 0x408b6e                                      |             
+    0x00408b18 mov edi, 0x669f48                                 |             
+    0x00408b1d mov esi, 0x44e5a5                                 |             
+    0x00408b22 mov edx, 1                                        |             
+    0x00408b27 call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (obj.std::__1::cout, 0x44e5a5, 1);
+    0x00408b2c mov esi, 0x44b203                                 |             
+    0x00408b31 mov edx, 2                                        |             
+    0x00408b36 mov rdi, rax                                      |             
+    0x00408b39 call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44b203, 2);
+    0x00408b3e mov rdi, rax                                      |             rdi = rax;
+    0x00408b41 mov esi, ebx                                      |             esi = ebx;
+    0x00408b43 call 0x4043c0                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x00408b48 mov esi, 0x44d0bd                                 |             
+    0x00408b4d mov edx, 1                                        |             
+    0x00408b52 mov rdi, rax                                      |             
+    0x00408b55 call 0x413940                                     |             std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44d0bd, 1);
+    0x00408b5a mov esi, 0x44b7fa                                 |             esi = "CATEGORIES[i]";
+    0x00408b5f mov edi, 1                                        |             edi = 1;
+    0x00408b64 mov edx, 0x35b                                    |             edx = 0x35b;
+    0x00408b69 call 0x405860                                     |             symaSsErT(int ();
+                                                                 |         }
+    0x00408b6e cmp qword [rsp + 0x30], 0x17                      |         
+    0x00408b74 je 0x408a90                                       |         
+                                                                 |     }
+    0x00408b7a mov rsi, qword [rsp + 0x10]                       |     rsi = *((rsp + 0x10));
+    0x00408b7f mov rdi, qword [rsp + 0x38]                       |     rdi = *((rsp + 0x38));
+    0x00408b84 mov rax, qword [rdi]                              |     rax = *(rdi);
+    0x00408b87 call qword [rax + 0x18]                           |     uint64_t (*rax + 0x18)() ();
+    0x00408b8a jmp 0x408a90                                      |     goto label_0;
+                                                                 | label_20:
+    0x00408b8f mov qword [rsp + 0x80], 0x44b050                  |     *((rsp + 0x80)) = vtable.AttributeSet.0;
+    0x00408b9b mov rax, qword [rip + 0x261bde]                   |     rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x00408ba2 test rax, rax                                     |     
+    0x00408ba5 mov qword [rsp + 0xe0], r12                       |     *((rsp + 0xe0)) = r12;
+                                                                 |     if (rax == 0) {
+    0x00408bad jne 0x408bb4                                      |         
+    0x00408baf call 0x421bc0                                     |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                                 |     }
+    0x00408bb4 mov qword [rsp + 0x88], rax                       |     *((rsp + 0x88)) = rax;
+    0x00408bbc xorps xmm0, xmm0                                  |     __asm ("xorps xmm0, xmm0");
+    0x00408bbf movups xmmword [rsp + 0x90], xmm0                 |     __asm ("movups xmmword [rsp + 0x90], xmm0");
+    0x00408bc7 mov dword [rsp + 0xa0], 1                         |     *((rsp + 0xa0)) = 1;
+    0x00408bd2 lea rax, [rsp + 0xa8]                             |     rax = rsp + 0xa8;
+    0x00408bda mov dword [rsp + 0xc0], 0                         |     *((rsp + 0xc0)) = 0;
+    0x00408be5 mov qword [rsp + 0xb8], rax                       |     *((rsp + 0xb8)) = rax;
+    0x00408bed mov qword [rsp + 0xb0], 0                         |     *((rsp + 0xb0)) = 0;
+    0x00408bf9 xor r12d, r12d                                    |     r12d = 0;
+    0x00408bfc lea r15, [rsp + 0x10]                             |     r15 = rsp + 0x10;
+    0x00408c01 jmp 0x408c1d                                      |     goto label_21;
+                                                                 | label_1:
+    0x00408c10 inc r12d                                          |     r12d++;
+    0x00408c13 cmp r12d, 0x20                                    |     
+                                                                 |     if (r12d == 0x20) {
+    0x00408c17 je 0x408f9d                                       |         goto label_22;
+                                                                 |     }
+                                                                 | label_21:
+    0x00408c1d mov rax, qword [rip + 0x261b5c]                   |     rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x00408c24 test rax, rax                                     |     
+                                                                 |     if (rax == 0) {
+    0x00408c27 jne 0x408c2e                                      |         
+    0x00408c29 call 0x421bc0                                     |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                                 |     }
+    0x00408c2e mov qword [rsp + 0x10], 0x44b382                  |     *((rsp + 0x10)) = "uuid";
+    0x00408c37 mov dword [rsp + 0x48], 0                         |     *((rsp + 0x48)) = 0;
+    0x00408c3f test rax, rax                                     |     
+                                                                 |     if (rax == 0) {
+    0x00408c42 jne 0x408c54                                      |         
+    0x00408c44 mov rax, qword [rip + 0x261b35]                   |         rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x00408c4b test rax, rax                                     |         
+                                                                 |         if (rax == 0) {
+    0x00408c4e je 0x408f32                                       |             goto label_23;
+                                                                 |         }
+                                                                 |     }
+    0x00408c54 mov qword [rsp + 0x50], rax                       |     *((rsp + 0x50)) = rax;
+    0x00408c59 mov eax, 0xffffffff                               |     eax = 0xffffffff;
+    0x00408c5e mov qword [rsp + 0x58], rax                       |     *((rsp + 0x58)) = rax;
+                                                                 | label_2:
+    0x00408c63 mov dword [rsp + 0x18], r12d                      |     *((rsp + 0x18)) = r12d;
+    0x00408c68 mov dword [rsp + 0x48], 1                         |     *((rsp + 0x48)) = 1;
+                                                                 | label_3:
+    0x00408c70 mov rax, qword [rsp + 0xb0]                       |     rax = *((rsp + 0xb0));
+    0x00408c78 test rax, rax                                     |     
+                                                                 |     if (rax == 0) {
+    0x00408c7b je 0x408ce0                                       |         goto label_24;
+                                                                 |     }
+    0x00408c7d xor ebx, ebx                                      |     ebx = 0;
+    0x00408c7f nop                                               |     
+                                                                 |     do {
+    0x00408c80 mov rbp, rax                                      |         
+    0x00408c83 lea rdx, [rax + 0x18]                             |         rdx = rax + 0x18;
+    0x00408c87 lea rdi, [rsp + 0x88]                             |         
+    0x00408c8f mov rsi, r15                                      |         
+    0x00408c92 call 0x413df0                                     |         al = AttributeComparator::operator()(BloombergLP::ball::Attributeconst&,BloombergLP::ball::Attributeconst&)const (rsp + 0x88, r15);
+    0x00408c97 test al, al                                       |         
+                                                                 |         if (al == 0) {
+    0x00408c99 cmove rbx, rbp                                    |             rbx = rbp;
+                                                                 |         }
+    0x00408c9d xor al, 1                                         |         al ^= 1;
+    0x00408c9f movzx ecx, al                                     |         ecx = (int32_t) al;
+    0x00408ca2 mov rax, qword [rbp + rcx*8 + 8]                  |         rax = *((rbp + rcx*8 + 8));
+    0x00408ca7 test rax, rax                                     |         
+    0x00408caa jne 0x408c80                                      |         
+                                                                 |     } while (rax != 0);
+    0x00408cac lea r14d, [rcx + rcx - 1]                         |     r14d = rcx + rcx - 1;
+    0x00408cb1 test rbx, rbx                                     |     
+                                                                 |     if (rbx != 0) {
+    0x00408cb4 je 0x408cf0                                       |         
+    0x00408cb6 add rbx, 0x18                                     |         rbx += 0x18;
+    0x00408cba lea rdi, [rsp + 0x88]                             |         
+    0x00408cc2 mov rsi, rbx                                      |         
+    0x00408cc5 mov rdx, r15                                      |         rdx = r15;
+    0x00408cc8 call 0x413df0                                     |         al = AttributeComparator::operator()(BloombergLP::ball::Attributeconst&,BloombergLP::ball::Attributeconst&)const (rsp + 0x88, rbx);
+    0x00408ccd mov ebx, r14d                                     |         ebx = r14d;
+    0x00408cd0 test al, al                                       |         
+                                                                 |         if (al != 0) {
+    0x00408cd2 jne 0x408cf3                                      |             goto label_25;
+                                                                 |         }
+    0x00408cd4 jmp 0x408f06                                      |         goto label_26;
+                                                                 | label_24:
+    0x00408ce0 mov ebx, 0xffffffff                               |         ebx = 0xffffffff;
+    0x00408ce5 lea rbp, [rsp + 0xa8]                             |         rbp = rsp + 0xa8;
+    0x00408ced jmp 0x408cf3                                      |         
+                                                                 |     } else {
+    0x00408cf0 mov ebx, r14d                                     |         ebx = r14d;
+                                                                 |     }
+                                                                 | label_25:
+    0x00408cf3 mov r13, qword [rsp + 0x98]                       |     r13 = *((rsp + 0x98));
+    0x00408cfb test r13, r13                                     |     
+                                                                 |     if (r13 != 0) {
+    0x00408cfe jne 0x408e40                                      |         goto label_27;
+                                                                 |     }
+    0x00408d04 movsxd rax, dword [rsp + 0xa0]                    |     rax = *((rsp + 0xa0));
+    0x00408d0c imul r14, rax, 0x68                               |     r14 = rax * 0x68;
+    0x00408d10 lea rsi, [r14 + 0x17]                             |     rsi = r14 + 0x17;
+    0x00408d14 and rsi, 0xfffffffffffffff0                       |     rsi &= 0xfffffffffffffff0;
+    0x00408d18 mov rdi, qword [rsp + 0x88]                       |     rdi = *((rsp + 0x88));
+    0x00408d20 mov rax, qword [rdi]                              |     rax = *(rdi);
+    0x00408d23 call qword [rax + 0x10]                           |     rax = uint64_t (*rax + 0x10)() ();
+    0x00408d26 mov rcx, rax                                      |     rcx = rax;
+    0x00408d29 mov rax, qword [rsp + 0x90]                       |     rax = *((rsp + 0x90));
+    0x00408d31 mov qword [rcx], rax                              |     *(rcx) = rax;
+    0x00408d34 mov qword [rsp + 0x90], rcx                       |     *((rsp + 0x90)) = rcx;
+    0x00408d3c lea r13, [rcx + 8]                                |     r13 = rcx + 8;
+    0x00408d40 lea rsi, [rcx + r14 - 0x60]                       |     rsi = rcx + r14 - 0x60;
+    0x00408d45 cmp rsi, r13                                      |     
+                                                                 |     if (rsi <= r13) {
+    0x00408d48 jbe 0x408e0e                                      |         goto label_5;
+                                                                 |     }
+    0x00408d4e add r14, 0xffffffffffffff97                       |     r14 += 0xffffffffffffff97;
+    0x00408d52 mov rax, r14                                      |     rax = r14;
+    0x00408d55 movabs rdx, 0x4ec4ec4ec4ec4ec5                    |     rdx = 0x4ec4ec4ec4ec4ec5;
+    0x00408d5f mul rdx                                           |     rdx:rax = rax * rdx;
+    0x00408d62 shr edx, 5                                        |     edx >>= 5;
+    0x00408d65 inc edx                                           |     edx++;
+    0x00408d67 and rdx, 7                                        |     rdx &= 7;
+                                                                 |     if (rdx == 0) {
+    0x00408d6b je 0x408f62                                       |         goto label_28;
+                                                                 |     }
+    0x00408d71 add rcx, 0x70                                     |     rcx += 0x70;
+    0x00408d75 neg rdx                                           |     rdx = -rdx;
+    0x00408d78 nop dword [rax + rax]                             |     
+                                                                 |     do {
+    0x00408d80 mov qword [rcx - 0x68], rcx                       |         *((rcx - 0x68)) = rcx;
+    0x00408d84 add rcx, 0x68                                     |         rcx += 0x68;
+    0x00408d88 inc rdx                                           |         rdx++;
+    0x00408d8b jne 0x408d80                                      |         
+                                                                 |     } while (rdx != 0);
+    0x00408d8d add rcx, 0xffffffffffffff98                       |     rcx += 0xffffffffffffff98;
+    0x00408d91 cmp r14, 0x2d8                                    |     
+                                                                 |     if (r14 < 0x2d8) {
+    0x00408d98 jb 0x408e0e                                       |         goto label_5;
+                                                                 |     }
+    0x00408d9a nop word [rax + rax]                              |     
+                                                                 |     do {
+                                                                 | label_4:
+    0x00408da0 lea rax, [rcx + 0x68]                             |         rax = rcx + 0x68;
+    0x00408da4 mov qword [rcx], rax                              |         *(rcx) = rax;
+    0x00408da7 lea rax, [rcx + 0xd0]                             |         rax = rcx + 0xd0;
+    0x00408dae mov qword [rcx + 0x68], rax                       |         *((rcx + 0x68)) = rax;
+    0x00408db2 lea rax, [rcx + 0x138]                            |         rax = rcx + 0x138;
+    0x00408db9 mov qword [rcx + 0xd0], rax                       |         *((rcx + 0xd0)) = rax;
+    0x00408dc0 lea rax, [rcx + 0x1a0]                            |         rax = rcx + 0x1a0;
+    0x00408dc7 mov qword [rcx + 0x138], rax                      |         *((rcx + 0x138)) = rax;
+    0x00408dce lea rax, [rcx + 0x208]                            |         rax = rcx + 0x208;
+    0x00408dd5 mov qword [rcx + 0x1a0], rax                      |         *((rcx + 0x1a0)) = rax;
+    0x00408ddc lea rax, [rcx + 0x270]                            |         rax = rcx + 0x270;
+    0x00408de3 mov qword [rcx + 0x208], rax                      |         *((rcx + 0x208)) = rax;
+    0x00408dea lea rax, [rcx + 0x2d8]                            |         rax = rcx + 0x2d8;
+    0x00408df1 mov qword [rcx + 0x270], rax                      |         *((rcx + 0x270)) = rax;
+    0x00408df8 lea rax, [rcx + 0x340]                            |         rax = rcx + 0x340;
+    0x00408dff mov qword [rcx + 0x2d8], rax                      |         *((rcx + 0x2d8)) = rax;
+    0x00408e06 mov rcx, rax                                      |         rcx = rax;
+    0x00408e09 cmp rax, rsi                                      |         
+    0x00408e0c jb 0x408da0                                       |         
+                                                                 |     } while (rax < rsi);
+                                                                 | label_5:
+    0x00408e0e mov rax, qword [rsp + 0x98]                       |     rax = *((rsp + 0x98));
+    0x00408e16 mov qword [rsi], rax                              |     *(rsi) = rax;
+    0x00408e19 mov qword [rsp + 0x98], r13                       |     *((rsp + 0x98)) = r13;
+    0x00408e21 mov eax, dword [rsp + 0xa0]                       |     eax = *((rsp + 0xa0));
+    0x00408e28 cmp eax, 0x1f                                     |     
+                                                                 |     if (eax <= 0x1f) {
+    0x00408e2b jg 0x408e40                                       |         
+    0x00408e2d add eax, eax                                      |         eax += eax;
+    0x00408e2f mov dword [rsp + 0xa0], eax                       |         *((rsp + 0xa0)) = eax;
+    0x00408e36 nop word cs:[rax + rax]                           |         
+                                                                 |     }
+                                                                 | label_27:
+    0x00408e40 mov rax, qword [r13]                              |     rax = *(r13);
+    0x00408e44 mov qword [rsp + 0x98], rax                       |     *((rsp + 0x98)) = rax;
+    0x00408e4c mov rax, qword [rsp + 0x88]                       |     rax = *((rsp + 0x88));
+    0x00408e54 test rax, rax                                     |     
+                                                                 |     if (rax != 0) {
+    0x00408e57 je 0x408e70                                       |         
+    0x00408e59 mov rcx, qword [rsp + 0x10]                       |         rcx = *((rsp + 0x10));
+    0x00408e5e mov qword [r13 + 0x18], rcx                       |         *((r13 + 0x18)) = rcx;
+    0x00408e62 mov ecx, dword [rsp + 0x48]                       |         ecx = *((rsp + 0x48));
+    0x00408e66 mov dword [r13 + 0x50], ecx                       |         *((r13 + 0x50)) = ecx;
+    0x00408e6a jmp 0x408eb0                                      |         
+                                                                 |     } else {
+    0x00408e70 mov rax, qword [rip + 0x261909]                   |         rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x00408e77 test rax, rax                                     |         
+                                                                 |         if (rax == 0) {
+    0x00408e7a jne 0x408e81                                      |             
+    0x00408e7c call 0x421bc0                                     |             rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                                 |         }
+    0x00408e81 mov rcx, qword [rsp + 0x10]                       |         rcx = *((rsp + 0x10));
+    0x00408e86 mov qword [r13 + 0x18], rcx                       |         *((r13 + 0x18)) = rcx;
+    0x00408e8a mov ecx, dword [rsp + 0x48]                       |         ecx = *((rsp + 0x48));
+    0x00408e8e mov dword [r13 + 0x50], ecx                       |         *((r13 + 0x50)) = ecx;
+    0x00408e92 test rax, rax                                     |         
+                                                                 |         if (rax != 0) {
+    0x00408e95 jne 0x408eb0                                      |             goto label_29;
+                                                                 |         }
+    0x00408e97 mov rax, qword [rip + 0x2618e2]                   |         rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x00408e9e test rax, rax                                     |         
+                                                                 |         if (rax != 0) {
+    0x00408ea1 jne 0x408eb0                                      |             goto label_29;
+                                                                 |         }
+    0x00408ea3 call 0x421bc0                                     |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+    0x00408ea8 mov ecx, dword [r13 + 0x50]                       |         ecx = *((r13 + 0x50));
+    0x00408eac nop dword [rax]                                   |         
+                                                                 |     }
+                                                                 | label_29:
+    0x00408eb0 mov qword [r13 + 0x58], rax                       |     *((r13 + 0x58)) = rax;
+    0x00408eb4 test ecx, ecx                                     |     
+                                                                 |     if (ecx != 0) {
+    0x00408eb6 je 0x408ede                                       |         
+    0x00408eb8 lea rcx, [r13 + 0x20]                             |         rcx = r13 + 0x20;
+    0x00408ebc mov qword [rsp + 0xd0], rcx                       |         *((rsp + 0xd0)) = rcx;
+    0x00408ec4 mov qword [rsp + 0xd8], rax                       |         *((rsp + 0xd8)) = rax;
+    0x00408ecc lea rdi, [rsp + 0x18]                             |         rdi = rsp + 0x18;
+    0x00408ed1 lea rsi, [rsp + 0xd0]                             |         rsi = rsp + 0xd0;
+    0x00408ed9 call 0x413670                                     |         _ZNK11BloombergLP4bdlb10VariantImpINS_5bslmf8TypeListIJixN3bsl12basic_stringIcNSt3_111char_traitsIcEENS4_9allocatorIcEEEEEEEE5applyINS0_28Variant_CopyConstructVisitorEEENS4_9enable_ifIXeqsr25Variant_ReturnValueHelperIT_EE5valueLi0EEvE4typeERSH_ ();
+                                                                 |     }
+    0x00408ede mov eax, dword [rsp + 0x58]                       |     eax = *((rsp + 0x58));
+    0x00408ee2 mov dword [r13 + 0x60], eax                       |     *((r13 + 0x60)) = eax;
+    0x00408ee6 mov eax, dword [rsp + 0x5c]                       |     eax = *((rsp + 0x5c));
+    0x00408eea mov dword [r13 + 0x64], eax                       |     *((r13 + 0x64)) = eax;
+    0x00408eee shr ebx, 0x1f                                     |     ebx >>= 0x1f;
+    0x00408ef1 lea rdi, [rsp + 0xa8]                             |     
+    0x00408ef9 mov rsi, rbp                                      |     
+    0x00408efc mov edx, ebx                                      |     
+    0x00408efe mov rcx, r13                                      |     rcx = r13;
+    0x00408f01 call 0x420490                                     |     BloombergLP::bslalg::RbTreeUtil::insertAt(BloombergLP::bslalg::RbTreeAnchor*,BloombergLP::bslalg::RbTreeNode*,bool,BloombergLP::bslalg::RbTreeNode*) (rsp + 0xa8, rbp, ebx);
+                                                                 | label_26:
+    0x00408f06 cmp dword [rsp + 0x48], 3                         |     
+                                                                 |     if (*((rsp + 0x48)) != 3) {
+    0x00408f0b jne 0x408c10                                      |         goto label_1;
+                                                                 |     }
+    0x00408f11 cmp qword [rsp + 0x38], 0x17                      |     
+                                                                 |     if (*((rsp + 0x38)) == 0x17) {
+    0x00408f17 je 0x408c10                                       |         goto label_1;
+                                                                 |     }
+    0x00408f1d mov rsi, qword [rsp + 0x18]                       |     rsi = *((rsp + 0x18));
+    0x00408f22 mov rdi, qword [rsp + 0x40]                       |     rdi = *((rsp + 0x40));
+    0x00408f27 mov rax, qword [rdi]                              |     rax = *(rdi);
+    0x00408f2a call qword [rax + 0x18]                           |     uint64_t (*rax + 0x18)() ();
+    0x00408f2d jmp 0x408c10                                      |     goto label_1;
+                                                                 | label_23:
+    0x00408f32 call 0x421bc0                                     |     rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+    0x00408f37 mov ecx, dword [rsp + 0x48]                       |     ecx = *((rsp + 0x48));
+    0x00408f3b mov qword [rsp + 0x50], rax                       |     *((rsp + 0x50)) = rax;
+    0x00408f40 mov eax, 0xffffffff                               |     eax = 0xffffffff;
+    0x00408f45 mov qword [rsp + 0x58], rax                       |     *((rsp + 0x58)) = rax;
+    0x00408f4a cmp ecx, 3                                        |     
+                                                                 |     if (ecx == 3) {
+    0x00408f4d je 0x408f77                                       |         goto label_30;
+                                                                 |     }
+    0x00408f4f cmp ecx, 1                                        |     
+                                                                 |     if (ecx != 1) {
+    0x00408f52 jne 0x408c63                                      |         goto label_2;
+                                                                 |     }
+    0x00408f58 mov dword [rsp + 0x18], r12d                      |     *((rsp + 0x18)) = r12d;
+    0x00408f5d jmp 0x408c70                                      |     goto label_3;
+                                                                 | label_28:
+    0x00408f62 mov rcx, r13                                      |     rcx = r13;
+    0x00408f65 cmp r14, 0x2d8                                    |     
+                                                                 |     if (r14 >= 0x2d8) {
+    0x00408f6c jae 0x408da0                                      |         goto label_4;
+                                                                 |     }
+    0x00408f72 jmp 0x408e0e                                      |     goto label_5;
+                                                                 | label_30:
+    0x00408f77 cmp qword [rsp + 0x38], 0x17                      |     
+                                                                 |     if (*((rsp + 0x38)) != 0x17) {
+    0x00408f7d je 0x408f8f                                       |         
+    0x00408f7f mov rsi, qword [rsp + 0x18]                       |         rsi = *((rsp + 0x18));
+    0x00408f84 mov rdi, qword [rsp + 0x40]                       |         rdi = *((rsp + 0x40));
+    0x00408f89 mov rax, qword [rdi]                              |         rax = *(rdi);
+    0x00408f8c call qword [rax + 0x18]                           |         uint64_t (*rax + 0x18)() ();
+                                                                 |     }
+    0x00408f8f mov qword [rsp + 0x30], 0xffffffffffffffff        |     *((rsp + 0x30)) = 0xffffffffffffffff;
+    0x00408f98 jmp 0x408c63                                      |     goto label_2;
+                                                                 | label_22:
+    0x00408f9d mov r12, qword [rsp + 0xe0]                       |     r12 = *((rsp + 0xe0));
+    0x00408fa5 mov qword [r12 + 0x20], 0                         |     *((r12 + 0x20)) = 0;
+    0x00408fae mov qword [r12 + 0x28], 0xffffffffffffffff        |     *((r12 + 0x28)) = 0xffffffffffffffff;
+    0x00408fb7 lea rdi, [rsp + 0xc8]                             |     
+    0x00408fbf lea rdx, [rsp + 0x80]                             |     
+    0x00408fc7 mov rsi, r12                                      |     
+    0x00408fca call 0x414610                                     |     BloombergLP::ball::AttributeContainerList::pushFront(BloombergLP::ball::AttributeContainerconst*) (rsp + 0xc8, r12, rsp + 0x80);
+    0x00408fcf xor ebx, ebx                                      |     ebx = 0;
+    0x00408fd1 mov r14d, 0xffffffff                              |     r14d = 0xffffffff;
+    0x00408fd7 lea rbp, [rsp + 0x10]                             |     rbp = rsp + 0x10;
+    0x00408fdc jmp 0x408feb                                      |     
+                                                                 |     while (*((rsp + 0x48)) != 3) {
+                                                                 | label_6:
+    0x00408fe0 inc ebx                                           |         ebx++;
+    0x00408fe2 cmp ebx, 0x20                                     |         
+                                                                 |         if (ebx == 0x20) {
+    0x00408fe5 je 0x409119                                       |             goto label_31;
+                                                                 |         }
+    0x00408feb mov rax, qword [rip + 0x26178e]                   |         rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x00408ff2 test rax, rax                                     |         
+                                                                 |         if (rax == 0) {
+    0x00408ff5 jne 0x408ffc                                      |             
+    0x00408ff7 call 0x421bc0                                     |             rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                                 |         }
+    0x00408ffc mov qword [rsp + 0x10], 0x44b382                  |         *((rsp + 0x10)) = "uuid";
+    0x00409005 mov dword [rsp + 0x48], 0                         |         *((rsp + 0x48)) = 0;
+    0x0040900d test rax, rax                                     |         
+                                                                 |         if (rax == 0) {
+    0x00409010 jne 0x409022                                      |             
+    0x00409012 mov rax, qword [rip + 0x261767]                   |             rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x00409019 test rax, rax                                     |             
+                                                                 |             if (rax == 0) {
+    0x0040901c je 0x4090c9                                       |                 goto label_32;
+                                                                 |             }
+                                                                 |         }
+    0x00409022 mov qword [rsp + 0x50], rax                       |         *((rsp + 0x50)) = rax;
+    0x00409027 mov qword [rsp + 0x58], r14                       |         *((rsp + 0x58)) = r14;
+                                                                 | label_7:
+    0x0040902c mov dword [rsp + 0x18], ebx                       |         *((rsp + 0x18)) = ebx;
+    0x00409030 mov dword [rsp + 0x48], 1                         |         *((rsp + 0x48)) = 1;
+                                                                 | label_8:
+    0x00409038 mov rdi, r12                                      |         
+    0x0040903b mov rsi, rbp                                      |         
+    0x0040903e call 0x414710                                     |         al = BloombergLP::ball::AttributeContainerList::hasValue(BloombergLP::ball::Attributeconst&)const (r12, rbp);
+    0x00409043 test al, al                                       |         
+                                                                 |         if (al == 0) {
+    0x00409045 jne 0x40909d                                      |             
+    0x00409047 mov edi, 0x669f48                                 |             
+    0x0040904c mov esi, 0x44e5a5                                 |             
+    0x00409051 mov edx, 1                                        |             
+    0x00409056 call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (obj.std::__1::cout, 0x44e5a5, 1);
+    0x0040905b mov esi, 0x44b203                                 |             
+    0x00409060 mov edx, 2                                        |             
+    0x00409065 mov rdi, rax                                      |             
+    0x00409068 call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44b203, 2);
+    0x0040906d mov rdi, rax                                      |             rdi = rax;
+    0x00409070 mov esi, ebx                                      |             esi = ebx;
+    0x00409072 call 0x4043c0                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x00409077 mov esi, 0x44d0bd                                 |             
+    0x0040907c mov edx, 1                                        |             
+    0x00409081 mov rdi, rax                                      |             
+    0x00409084 call 0x413940                                     |             std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44d0bd, 1);
+    0x00409089 mov esi, 0x44b808                                 |             esi = "true == X.hasAttribute(attribute)";
+    0x0040908e mov edi, 1                                        |             edi = 1;
+    0x00409093 mov edx, 0x36c                                    |             edx = 0x36c;
+    0x00409098 call 0x405860                                     |             symaSsErT(int ();
+                                                                 |         }
+    0x0040909d cmp dword [rsp + 0x48], 3                         |         
+    0x004090a2 jne 0x408fe0                                      |         
+                                                                 |     }
+    0x004090a8 cmp qword [rsp + 0x38], 0x17                      |     
+                                                                 |     if (*((rsp + 0x38)) == 0x17) {
+    0x004090ae je 0x408fe0                                       |         goto label_6;
+                                                                 |     }
+    0x004090b4 mov rsi, qword [rsp + 0x18]                       |     rsi = *((rsp + 0x18));
+    0x004090b9 mov rdi, qword [rsp + 0x40]                       |     rdi = *((rsp + 0x40));
+    0x004090be mov rax, qword [rdi]                              |     rax = *(rdi);
+    0x004090c1 call qword [rax + 0x18]                           |     uint64_t (*rax + 0x18)() ();
+    0x004090c4 jmp 0x408fe0                                      |     goto label_6;
+                                                                 | label_32:
+    0x004090c9 call 0x421bc0                                     |     rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+    0x004090ce mov ecx, dword [rsp + 0x48]                       |     ecx = *((rsp + 0x48));
+    0x004090d2 mov qword [rsp + 0x50], rax                       |     *((rsp + 0x50)) = rax;
+    0x004090d7 mov qword [rsp + 0x58], r14                       |     *((rsp + 0x58)) = r14;
+    0x004090dc cmp ecx, 3                                        |     
+                                                                 |     if (ecx == 3) {
+    0x004090df je 0x4090f3                                       |         goto label_33;
+                                                                 |     }
+    0x004090e1 cmp ecx, 1                                        |     
+                                                                 |     if (ecx != 1) {
+    0x004090e4 jne 0x40902c                                      |         goto label_7;
+                                                                 |     }
+    0x004090ea mov dword [rsp + 0x18], ebx                       |     *((rsp + 0x18)) = ebx;
+    0x004090ee jmp 0x409038                                      |     goto label_8;
+                                                                 | label_33:
+    0x004090f3 cmp qword [rsp + 0x38], 0x17                      |     
+                                                                 |     if (*((rsp + 0x38)) != 0x17) {
+    0x004090f9 je 0x40910b                                       |         
+    0x004090fb mov rsi, qword [rsp + 0x18]                       |         rsi = *((rsp + 0x18));
+    0x00409100 mov rdi, qword [rsp + 0x40]                       |         rdi = *((rsp + 0x40));
+    0x00409105 mov rax, qword [rdi]                              |         rax = *(rdi);
+    0x00409108 call qword [rax + 0x18]                           |         uint64_t (*rax + 0x18)() ();
+                                                                 |     }
+    0x0040910b mov qword [rsp + 0x30], 0xffffffffffffffff        |     *((rsp + 0x30)) = 0xffffffffffffffff;
+    0x00409114 jmp 0x40902c                                      |     goto label_7;
+                                                                 | label_31:
+    0x00409119 xor ebx, ebx                                      |     ebx = 0;
+    0x0040911b mov ebp, 1                                        |     
+                                                                 |     do {
+                                                                 | label_9:
+    0x00409120 mov rax, qword [rsp + 0x60]                       |         rax = *((rsp + 0x60));
+    0x00409125 mov rsi, qword [rax + rbp*8]                      |         
+    0x00409129 mov rdi, r12                                      |         
+    0x0040912c call 0x414eb0                                     |         al = BloombergLP::ball::AttributeContext::hasRelevantActiveRules(BloombergLP::ball::Categoryconst*)const (r12, *((rax + rbp*8)));
+    0x00409131 movzx eax, al                                     |         eax = (int32_t) al;
+    0x00409134 add ebx, eax                                      |         ebx += eax;
+    0x00409136 inc rbp                                           |         rbp++;
+    0x00409139 cmp rbp, 0x21                                     |         
+    0x0040913d jne 0x409120                                      |         
+                                                                 |     } while (rbp != 0x21);
+    0x0040913f mov ebp, 1                                        |     
+    0x00409144 cmp ebx, 0x20                                     |     
+    0x00409147 mov ebx, 0                                        |     ebx = 0;
+                                                                 |     if (ebx != 0x20) {
+    0x0040914c jne 0x409120                                      |         goto label_9;
+                                                                 |     }
+    0x0040914e mov edi, 0x66a0a8                                 |     
+    0x00409153 call 0x422bd0                                     |     BloombergLP::bslmt::Barrier::wait() (obj.BALL_ATTRIBUTECONTEXT_TEST_CASE_4::barrier);
+    0x00409158 cmp byte [rip + 0x260ece], 0                      |     
+                                                                 |     if (*(obj.veryVerbose) != 0) {
+    0x0040915f je 0x40921d                                       |         
+    0x00409165 mov edi, 0x66a000                                 |         edi = coutMutex;
+    0x0040916a call 0x404640                                     |         pthread_mutex_lock ();
+    0x0040916f call 0x404250                                     |         eax = pthread_self ();
+    0x00409174 movsxd rsi, eax                                   |         rsi = (int64_t) eax;
+    0x00409177 mov edi, 0x669f48                                 |         edi = std::__1::cout;
+    0x0040917c call 0x404230                                     |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (unsigned long long) ();
+    0x00409181 mov esi, 0x44b203                                 |         
+    0x00409186 mov edx, 2                                        |         
+    0x0040918b mov rdi, rax                                      |         
+    0x0040918e call 0x413940                                     |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44b203, 2);
+    0x00409193 mov esi, 0x44b82a                                 |         
+    0x00409198 mov edx, 0x2f                                     |         
+    0x0040919d mov rdi, rax                                      |         
+    0x004091a0 call 0x413940                                     |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, "\n\tPhase 2: Verify 'hasRelevantActiveRules' and ", 0x2f);
+    0x004091a5 mov esi, 0x44b85a                                 |         
+    0x004091aa mov edx, 0x1b                                     |         
+    0x004091af mov rdi, rax                                      |         
+    0x004091b2 call 0x413940                                     |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 'determineThresholdLevels'.", 0x1b);
+    0x004091b7 mov rbx, rax                                      |         rbx = rax;
+    0x004091ba mov rax, qword [rax]                              |         rax = *(rax);
+    0x004091bd mov rsi, qword [rax - 0x18]                       |         rsi = *((rax - 0x18));
+    0x004091c1 add rsi, rbx                                      |         rsi += rbx;
+    0x004091c4 lea rdi, [rsp + 0x10]                             |         rdi = rsp + 0x10;
+    0x004091c9 call 0x404420                                     |         std::_1::ios_base::getloc()const ();
+    0x004091ce lea rdi, [rsp + 0x10]                             |         rdi = rsp + 0x10;
+    0x004091d3 mov esi, 0x669e90                                 |         esi = std::__1::ctype<char>::id;
+    0x004091d8 call 0x404550                                     |         rax = std::_1::locale::use_facet(std::_1::locale::id&)const ();
+    0x004091dd mov rcx, qword [rax]                              |         rcx = *(rax);
+    0x004091e0 mov rdi, rax                                      |         rdi = rax;
+    0x004091e3 mov esi, 0xa                                      |         esi = 0xa;
+    0x004091e8 call qword [rcx + 0x38]                           |         eax = uint64_t (*rcx + 0x38)() ();
+    0x004091eb mov ebp, eax                                      |         
+    0x004091ed lea rdi, [rsp + 0x10]                             |         rdi = rsp + 0x10;
+    0x004091f2 call 0x4045e0                                     |         std::_1::locale::~locale() ();
+    0x004091f7 movsx esi, bpl                                    |         esi = (int32_t) bpl;
+    0x004091fb mov rdi, rbx                                      |         rdi = rbx;
+    0x004091fe call 0x404210                                     |         std::_1::basic_ostream<char,std::_1::char_traits<char>>::put(char) ();
+    0x00409203 mov rdi, rbx                                      |         rdi = rbx;
+    0x00409206 call 0x4043e0                                     |         std::_1::basic_ostream<char,std::_1::char_traits<char>>::flush() ();
+    0x0040920b mov rdi, rbx                                      |         rdi = rbx;
+    0x0040920e call 0x4043e0                                     |         std::_1::basic_ostream<char,std::_1::char_traits<char>>::flush() ();
+    0x00409213 mov edi, 0x66a000                                 |         edi = coutMutex;
+    0x00409218 call 0x404720                                     |         pthread_mutex_unlock ();
+                                                                 |     }
+    0x0040921d mov rax, qword [rsp + 0x60]                       |     rax = *((rsp + 0x60));
+    0x00409222 mov rsi, qword [rax]                              |     
+    0x00409225 mov rdi, r12                                      |     
+    0x00409228 call 0x414eb0                                     |     al = BloombergLP::ball::AttributeContext::hasRelevantActiveRules(BloombergLP::ball::Categoryconst*)const (r12, *(rax));
+    0x0040922d movzx edi, al                                     |     edi = (int32_t) al;
+    0x00409230 mov esi, 0x44b876                                 |     esi = "!X.hasRelevantActiveRules(CATEGORIES[0])";
+    0x00409235 mov edx, 0x385                                    |     edx = 0x385;
+    0x0040923a call 0x405860                                     |     symaSsErT(int ();
+    0x0040923f mov ebx, 1                                        |     ebx = 1;
+    0x00409244 jmp 0x409279                                      |     
+                                                                 |     while (al != 0) {
+                                                                 | label_10:
+    0x00409250 movzx eax, bl                                     |         eax = (int32_t) bl;
+    0x00409253 imul eax, eax, 0xcd                               |         eax *= 0xcd;
+    0x00409259 shr eax, 0xa                                      |         eax >>= 0xa;
+    0x0040925c lea eax, [rax + rax*4]                            |         eax = rax * 5;
+    0x0040925f neg eax                                           |         eax = -eax;
+    0x00409261 movzx eax, al                                     |         eax = (int32_t) al;
+    0x00409264 add al, bl                                        |         al += bl;
+                                                                 |         if (al == 0) {
+    0x00409266 je 0x4092f0                                       |             goto label_34;
+                                                                 |         }
+                                                                 | label_11:
+    0x0040926c inc rbx                                           |         rbx++;
+    0x0040926f cmp rbx, 0x21                                     |         
+                                                                 |         if (rbx == 0x21) {
+    0x00409273 je 0x409307                                       |             goto label_35;
+                                                                 |         }
+    0x00409279 mov rax, qword [rsp + 0x60]                       |         rax = *((rsp + 0x60));
+    0x0040927e mov rsi, qword [rax + rbx*8]                      |         
+    0x00409282 mov rdi, r12                                      |         
+    0x00409285 call 0x414eb0                                     |         al = BloombergLP::ball::AttributeContext::hasRelevantActiveRules(BloombergLP::ball::Categoryconst*)const (r12, *((rax + rbx*8)));
+    0x0040928a test al, al                                       |         
+    0x0040928c jne 0x409250                                      |         
+                                                                 |     }
+    0x0040928e mov edi, 0x669f48                                 |     
+    0x00409293 mov esi, 0x44e5a5                                 |     
+    0x00409298 mov edx, 1                                        |     
+    0x0040929d call 0x413940                                     |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (obj.std::__1::cout, 0x44e5a5, 1);
+    0x004092a2 mov esi, 0x44b203                                 |     
+    0x004092a7 mov edx, 2                                        |     
+    0x004092ac mov rdi, rax                                      |     
+    0x004092af call 0x413940                                     |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44b203, 2);
+    0x004092b4 mov rdi, rax                                      |     rdi = rax;
+    0x004092b7 mov esi, ebx                                      |     esi = ebx;
+    0x004092b9 call 0x4043c0                                     |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x004092be mov esi, 0x44d0bd                                 |     
+    0x004092c3 mov edx, 1                                        |     
+    0x004092c8 mov rdi, rax                                      |     
+    0x004092cb call 0x413940                                     |     std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44d0bd, 1);
+    0x004092d0 mov esi, 0x44bba0                                 |     esi = 0x44bba0;
+    0x004092d5 mov edi, 1                                        |     edi = 1;
+    0x004092da mov edx, 0x387                                    |     edx = 0x387;
+    0x004092df call 0x405860                                     |     symaSsErT(int ();
+    0x004092e4 jmp 0x409250                                      |     goto label_10;
+                                                                 | label_34:
+    0x004092f0 mov qword [r12 + 0x20], 0                         |     *((r12 + 0x20)) = 0;
+    0x004092f9 mov qword [r12 + 0x28], 0xffffffffffffffff        |     *((r12 + 0x28)) = 0xffffffffffffffff;
+    0x00409302 jmp 0x40926c                                      |     goto label_11;
+                                                                 | label_35:
+    0x00409307 mov dword [rsp + 0xc], 0                          |     *((rsp + 0xc)) = 0;
+    0x0040930f mov rax, qword [rsp + 0x60]                       |     rax = *((rsp + 0x60));
+    0x00409314 mov rdx, qword [rax]                              |     
+    0x00409317 lea rsi, [rsp + 0xc]                              |     
+    0x0040931c mov rdi, r12                                      |     
+    0x0040931f call 0x414ff0                                     |     BloombergLP::ball::AttributeContext::determineThresholdLevels(BloombergLP::ball::ThresholdAggregate*,BloombergLP::ball::Categoryconst*)const (r12, rsp + 0xc, *(rax));
+    0x00409324 mov rax, qword [rsp + 0x60]                       |     rax = *((rsp + 0x60));
+    0x00409329 mov rax, qword [rax]                              |     rax = *(rax);
+    0x0040932c mov al, byte [rax]                                |     al = *(rax);
+    0x0040932e xor edi, edi                                      |     edi = 0;
+    0x00409330 cmp al, byte [rsp + 0xc]                          |     
+    0x00409334 setne dil                                         |     dil = (al != *((rsp + 0xc))) ? 1 : 0;
+    0x00409338 mov esi, 0x44b89f                                 |     esi = "CATEGORIES[0]->recordLevel() == levels.recordLevel()";
+    0x0040933d mov edx, 0x395                                    |     edx = 0x395;
+    0x00409342 call 0x405860                                     |     symaSsErT(int ();
+    0x00409347 mov rax, qword [rsp + 0x60]                       |     rax = *((rsp + 0x60));
+    0x0040934c mov rax, qword [rax]                              |     rax = *(rax);
+    0x0040934f mov al, byte [rax + 1]                            |     al = *((rax + 1));
+    0x00409352 xor edi, edi                                      |     edi = 0;
+    0x00409354 cmp al, byte [rsp + 0xd]                          |     
+    0x00409358 setne dil                                         |     dil = (al != *((rsp + 0xd))) ? 1 : 0;
+    0x0040935c mov esi, 0x44b8d4                                 |     esi = "CATEGORIES[0]->passLevel() == levels.passLevel()";
+    0x00409361 mov edx, 0x396                                    |     edx = 0x396;
+    0x00409366 call 0x405860                                     |     symaSsErT(int ();
+    0x0040936b mov rax, qword [rsp + 0x60]                       |     rax = *((rsp + 0x60));
+    0x00409370 mov rax, qword [rax]                              |     rax = *(rax);
+    0x00409373 mov al, byte [rax + 2]                            |     al = *((rax + 2));
+    0x00409376 xor edi, edi                                      |     edi = 0;
+    0x00409378 cmp al, byte [rsp + 0xe]                          |     
+    0x0040937c setne dil                                         |     dil = (al != *((rsp + 0xe))) ? 1 : 0;
+    0x00409380 mov esi, 0x44b905                                 |     esi = "CATEGORIES[0]->triggerLevel() == levels.triggerLevel()";
+    0x00409385 mov edx, 0x397                                    |     edx = 0x397;
+    0x0040938a call 0x405860                                     |     symaSsErT(int ();
+    0x0040938f mov rax, qword [rsp + 0x60]                       |     rax = *((rsp + 0x60));
+    0x00409394 mov rax, qword [rax]                              |     rax = *(rax);
+    0x00409397 mov al, byte [rax + 3]                            |     al = *((rax + 3));
+    0x0040939a xor edi, edi                                      |     edi = 0;
+    0x0040939c cmp al, byte [rsp + 0xf]                          |     
+    0x004093a0 setne dil                                         |     dil = (al != *((rsp + 0xf))) ? 1 : 0;
+    0x004093a4 mov esi, 0x44b93c                                 |     esi = "CATEGORIES[0]->triggerAllLevel() == levels.triggerAllLevel()";
+    0x004093a9 mov edx, 0x398                                    |     edx = 0x398;
+    0x004093ae call 0x405860                                     |     symaSsErT(int ();
+    0x004093b3 mov ebx, 1                                        |     ebx = 1;
+    0x004093b8 lea rbp, [rsp + 0xc]                              |     rbp = rsp + 0xc;
+    0x004093bd jmp 0x4093e9                                      |     
+                                                                 |     while (rbx == rax) {
+                                                                 | label_12:
+    0x004093c0 movzx eax, bl                                     |         eax = (int32_t) bl;
+    0x004093c3 imul eax, eax, 0xab                               |         eax *= 0xab;
+    0x004093c9 shr eax, 9                                        |         eax >>= 9;
+    0x004093cc lea eax, [rax + rax*2]                            |         eax = rax * 3;
+    0x004093cf neg eax                                           |         eax = -eax;
+    0x004093d1 movzx eax, al                                     |         eax = (int32_t) al;
+    0x004093d4 add al, bl                                        |         al += bl;
+                                                                 |         if (al == 0) {
+    0x004093d6 je 0x409590                                       |             goto label_36;
+                                                                 |         }
+                                                                 | label_13:
+    0x004093dc inc rbx                                           |         rbx++;
+    0x004093df cmp rbx, 0x21                                     |         
+                                                                 |         if (rbx == 0x21) {
+    0x004093e3 je 0x4095a7                                       |             goto label_37;
+                                                                 |         }
+    0x004093e9 mov rax, qword [rsp + 0x60]                       |         rax = *((rsp + 0x60));
+    0x004093ee mov rdx, qword [rax + rbx*8]                      |         
+    0x004093f2 mov rdi, r12                                      |         
+    0x004093f5 mov rsi, rbp                                      |         
+    0x004093f8 call 0x414ff0                                     |         BloombergLP::ball::AttributeContext::determineThresholdLevels(BloombergLP::ball::ThresholdAggregate*,BloombergLP::ball::Categoryconst*)const (r12, rbp, *((rax + rbx*8)));
+    0x004093fd mov rax, qword [rsp + 0x60]                       |         rax = *((rsp + 0x60));
+    0x00409402 mov rax, qword [rax + rbx*8]                      |         rax = *((rax + rbx*8));
+    0x00409406 movzx eax, byte [rax]                             |         eax = *(rax);
+    0x00409409 cmp al, byte [rsp + 0xc]                          |         
+                                                                 |         if (al != *((rsp + 0xc))) {
+    0x0040940d je 0x409465                                       |             
+    0x0040940f mov edi, 0x669f48                                 |             
+    0x00409414 mov esi, 0x44e5a5                                 |             
+    0x00409419 mov edx, 1                                        |             
+    0x0040941e call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (obj.std::__1::cout, 0x44e5a5, 1);
+    0x00409423 mov esi, 0x44b203                                 |             
+    0x00409428 mov edx, 2                                        |             
+    0x0040942d mov rdi, rax                                      |             
+    0x00409430 call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44b203, 2);
+    0x00409435 mov rdi, rax                                      |             rdi = rax;
+    0x00409438 mov esi, ebx                                      |             esi = ebx;
+    0x0040943a call 0x4043c0                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x0040943f mov esi, 0x44d0bd                                 |             
+    0x00409444 mov edx, 1                                        |             
+    0x00409449 mov rdi, rax                                      |             
+    0x0040944c call 0x413940                                     |             std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44d0bd, 1);
+    0x00409451 mov esi, 0x44b979                                 |             esi = "CATEGORIES[i]->recordLevel() == levels.recordLevel()";
+    0x00409456 mov edi, 1                                        |             edi = 1;
+    0x0040945b mov edx, 0x3a0                                    |             edx = 0x3a0;
+    0x00409460 call 0x405860                                     |             symaSsErT(int ();
+                                                                 |         }
+    0x00409465 movzx eax, byte [rsp + 0xd]                       |         eax = *((rsp + 0xd));
+    0x0040946a cmp rbx, rax                                      |         
+                                                                 |         if (rbx != rax) {
+    0x0040946d je 0x4094c5                                       |             
+    0x0040946f mov edi, 0x669f48                                 |             
+    0x00409474 mov esi, 0x44e5a5                                 |             
+    0x00409479 mov edx, 1                                        |             
+    0x0040947e call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (obj.std::__1::cout, 0x44e5a5, 1);
+    0x00409483 mov esi, 0x44b203                                 |             
+    0x00409488 mov edx, 2                                        |             
+    0x0040948d mov rdi, rax                                      |             
+    0x00409490 call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44b203, 2);
+    0x00409495 mov rdi, rax                                      |             rdi = rax;
+    0x00409498 mov esi, ebx                                      |             esi = ebx;
+    0x0040949a call 0x4043c0                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x0040949f mov esi, 0x44d0bd                                 |             
+    0x004094a4 mov edx, 1                                        |             
+    0x004094a9 mov rdi, rax                                      |             
+    0x004094ac call 0x413940                                     |             std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44d0bd, 1);
+    0x004094b1 mov esi, 0x44b9ae                                 |             esi = "i == levels.passLevel()";
+    0x004094b6 mov edi, 1                                        |             edi = 1;
+    0x004094bb mov edx, 0x3a1                                    |             edx = 0x3a1;
+    0x004094c0 call 0x405860                                     |             symaSsErT(int ();
+                                                                 |         }
+    0x004094c5 movzx eax, byte [rsp + 0xe]                       |         eax = *((rsp + 0xe));
+    0x004094ca cmp rbx, rax                                      |         
+                                                                 |         if (rbx != rax) {
+    0x004094cd je 0x409525                                       |             
+    0x004094cf mov edi, 0x669f48                                 |             
+    0x004094d4 mov esi, 0x44e5a5                                 |             
+    0x004094d9 mov edx, 1                                        |             
+    0x004094de call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (obj.std::__1::cout, 0x44e5a5, 1);
+    0x004094e3 mov esi, 0x44b203                                 |             
+    0x004094e8 mov edx, 2                                        |             
+    0x004094ed mov rdi, rax                                      |             
+    0x004094f0 call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44b203, 2);
+    0x004094f5 mov rdi, rax                                      |             rdi = rax;
+    0x004094f8 mov esi, ebx                                      |             esi = ebx;
+    0x004094fa call 0x4043c0                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x004094ff mov esi, 0x44d0bd                                 |             
+    0x00409504 mov edx, 1                                        |             
+    0x00409509 mov rdi, rax                                      |             
+    0x0040950c call 0x413940                                     |             std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44d0bd, 1);
+    0x00409511 mov esi, 0x44b9c6                                 |             esi = "i == levels.triggerLevel()";
+    0x00409516 mov edi, 1                                        |             edi = 1;
+    0x0040951b mov edx, 0x3a2                                    |             edx = 0x3a2;
+    0x00409520 call 0x405860                                     |             symaSsErT(int ();
+                                                                 |         }
+    0x00409525 movzx eax, byte [rsp + 0xf]                       |         eax = *((rsp + 0xf));
+    0x0040952a cmp rbx, rax                                      |         
+    0x0040952d je 0x4093c0                                       |         
+                                                                 |     }
+    0x00409533 mov edi, 0x669f48                                 |     
+    0x00409538 mov esi, 0x44e5a5                                 |     
+    0x0040953d mov edx, 1                                        |     
+    0x00409542 call 0x413940                                     |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (obj.std::__1::cout, 0x44e5a5, 1);
+    0x00409547 mov esi, 0x44b203                                 |     
+    0x0040954c mov edx, 2                                        |     
+    0x00409551 mov rdi, rax                                      |     
+    0x00409554 call 0x413940                                     |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44b203, 2);
+    0x00409559 mov rdi, rax                                      |     rdi = rax;
+    0x0040955c mov esi, ebx                                      |     esi = ebx;
+    0x0040955e call 0x4043c0                                     |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x00409563 mov esi, 0x44d0bd                                 |     
+    0x00409568 mov edx, 1                                        |     
+    0x0040956d mov rdi, rax                                      |     
+    0x00409570 call 0x413940                                     |     std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44d0bd, 1);
+    0x00409575 mov esi, 0x44b9e1                                 |     esi = "i == levels.triggerAllLevel()";
+    0x0040957a mov edi, 1                                        |     edi = 1;
+    0x0040957f mov edx, 0x3a3                                    |     edx = 0x3a3;
+    0x00409584 call 0x405860                                     |     symaSsErT(int ();
+    0x00409589 jmp 0x4093c0                                      |     goto label_12;
+                                                                 | label_36:
+    0x00409590 mov qword [r12 + 0x20], 0                         |     *((r12 + 0x20)) = 0;
+    0x00409599 mov qword [r12 + 0x28], 0xffffffffffffffff        |     *((r12 + 0x28)) = 0xffffffffffffffff;
+    0x004095a2 jmp 0x4093dc                                      |     goto label_13;
+                                                                 | label_37:
+    0x004095a7 xor r14d, r14d                                    |     r14d = 0;
+    0x004095aa lea r13, [rsp + 0xd0]                             |     r13 = rsp + 0xd0;
+    0x004095b2 jmp 0x4095cd                                      |     goto label_38;
+                                                                 | label_15:
+    0x004095c0 inc r14                                           |     r14++;
+    0x004095c3 cmp r14, 0x20                                     |     
+                                                                 |     if (r14 == 0x20) {
+    0x004095c7 je 0x409c81                                       |         goto label_39;
+                                                                 |     }
+                                                                 | label_38:
+    0x004095cd mov rax, qword [rsp + 0xc8]                       |     rax = *((rsp + 0xc8));
+    0x004095d5 mov qword [rsp + 0xf0], rax                       |     *((rsp + 0xf0)) = rax;
+    0x004095dd mov qword [r12 + 0x20], 0                         |     *((r12 + 0x20)) = 0;
+    0x004095e6 mov qword [r12 + 0x28], 0xffffffffffffffff        |     *((r12 + 0x28)) = 0xffffffffffffffff;
+    0x004095ef mov rdi, r12                                      |     
+    0x004095f2 lea rsi, [rsp + 0xf0]                             |     
+    0x004095fa call 0x414680                                     |     BloombergLP::ball::AttributeContainerList::remove(BloombergLP::ball::AttributeContainerListIteratorconst&) (r12, rsp + 0xf0);
+    0x004095ff mov rax, qword [rip + 0x26117a]                   |     rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x00409606 test rax, rax                                     |     
+                                                                 |     if (rax == 0) {
+    0x00409609 jne 0x409610                                      |         
+    0x0040960b call 0x421bc0                                     |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                                 |     }
+    0x00409610 mov ebp, 0x1f                                     |     
+    0x00409615 sub rbp, r14                                      |     rbp -= r14;
+    0x00409618 mov qword [rsp + 0x10], 0x44b382                  |     *((rsp + 0x10)) = "uuid";
+    0x00409621 mov dword [rsp + 0x48], 0                         |     *((rsp + 0x48)) = 0;
+    0x00409629 test rax, rax                                     |     
+                                                                 |     if (rax == 0) {
+    0x0040962c jne 0x40963e                                      |         
+    0x0040962e mov rax, qword [rip + 0x26114b]                   |         rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x00409635 test rax, rax                                     |         
+                                                                 |         if (rax == 0) {
+    0x00409638 je 0x409c2c                                       |             goto label_40;
+                                                                 |         }
+                                                                 |     }
+    0x0040963e mov qword [rsp + 0x50], rax                       |     *((rsp + 0x50)) = rax;
+    0x00409643 mov eax, 0xffffffff                               |     eax = 0xffffffff;
+    0x00409648 mov qword [rsp + 0x58], rax                       |     *((rsp + 0x58)) = rax;
+                                                                 | label_16:
+    0x0040964d mov dword [rsp + 0x18], ebp                       |     *((rsp + 0x18)) = ebp;
+    0x00409651 mov dword [rsp + 0x48], 1                         |     *((rsp + 0x48)) = 1;
+                                                                 | label_17:
+    0x00409659 lea rdi, [rsp + 0x80]                             |     
+    0x00409661 lea rsi, [rsp + 0x10]                             |     
+    0x00409666 call 0x405aa0                                     |     AttributeSet::remove(BloombergLP::ball::Attributeconst&) (rsp + 0x80, rsp + 0x10);
+    0x0040966b mov qword [r12 + 0x20], 0                         |     *((r12 + 0x20)) = 0;
+    0x00409674 mov qword [r12 + 0x28], 0xffffffffffffffff        |     *((r12 + 0x28)) = 0xffffffffffffffff;
+    0x0040967d mov rdi, r13                                      |     
+    0x00409680 mov rsi, r12                                      |     
+    0x00409683 lea rdx, [rsp + 0x80]                             |     
+    0x0040968b call 0x414610                                     |     BloombergLP::ball::AttributeContainerList::pushFront(BloombergLP::ball::AttributeContainerconst*) (r13, r12, rsp + 0x80);
+    0x00409690 mov rax, qword [rsp + 0xd0]                       |     rax = *((rsp + 0xd0));
+    0x00409698 mov qword [rsp + 0xc8], rax                       |     *((rsp + 0xc8)) = rax;
+    0x004096a0 cmp byte [rip + 0x260987], 0                      |     
+                                                                 |     if (*(obj.veryVeryVerbose) != 0) {
+    0x004096a7 je 0x409756                                       |         
+    0x004096ad mov edi, 0x66a000                                 |         edi = coutMutex;
+    0x004096b2 call 0x404640                                     |         pthread_mutex_lock ();
+    0x004096b7 call 0x404250                                     |         eax = pthread_self ();
+    0x004096bc movsxd rsi, eax                                   |         rsi = (int64_t) eax;
+    0x004096bf mov edi, 0x669f48                                 |         edi = std::__1::cout;
+    0x004096c4 call 0x404230                                     |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (unsigned long long) ();
+    0x004096c9 mov esi, 0x44b203                                 |         
+    0x004096ce mov edx, 2                                        |         
+    0x004096d3 mov rdi, rax                                      |         
+    0x004096d6 call 0x413940                                     |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44b203, 2);
+    0x004096db mov esi, 0x44b9ff                                 |         
+    0x004096e0 mov edx, 0x1d                                     |         
+    0x004096e5 mov rdi, rax                                      |         
+    0x004096e8 call 0x413940                                     |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, "\n\t\tRemoving attribute uuid = ", 0x1d);
+    0x004096ed mov rdi, rax                                      |         rdi = rax;
+    0x004096f0 mov esi, ebp                                      |         esi = ebp;
+    0x004096f2 call 0x4043c0                                     |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x004096f7 mov rbp, rax                                      |         
+    0x004096fa mov rax, qword [rax]                              |         rax = *(rax);
+    0x004096fd mov rsi, qword [rax - 0x18]                       |         rsi = *((rax - 0x18));
+    0x00409701 add rsi, rbp                                      |         rsi += rbp;
+    0x00409704 mov rdi, r13                                      |         rdi = r13;
+    0x00409707 call 0x404420                                     |         std::_1::ios_base::getloc()const ();
+    0x0040970c mov esi, 0x669e90                                 |         esi = std::__1::ctype<char>::id;
+    0x00409711 mov rdi, r13                                      |         rdi = r13;
+    0x00409714 call 0x404550                                     |         rax = std::_1::locale::use_facet(std::_1::locale::id&)const ();
+    0x00409719 mov rcx, qword [rax]                              |         rcx = *(rax);
+    0x0040971c mov rdi, rax                                      |         rdi = rax;
+    0x0040971f mov esi, 0xa                                      |         esi = 0xa;
+    0x00409724 call qword [rcx + 0x38]                           |         eax = uint64_t (*rcx + 0x38)() ();
+    0x00409727 mov ebx, eax                                      |         ebx = eax;
+    0x00409729 mov rdi, r13                                      |         rdi = r13;
+    0x0040972c call 0x4045e0                                     |         std::_1::locale::~locale() ();
+    0x00409731 movsx esi, bl                                     |         esi = (int32_t) bl;
+    0x00409734 mov rdi, rbp                                      |         rdi = rbp;
+    0x00409737 call 0x404210                                     |         std::_1::basic_ostream<char,std::_1::char_traits<char>>::put(char) ();
+    0x0040973c mov rdi, rbp                                      |         rdi = rbp;
+    0x0040973f call 0x4043e0                                     |         std::_1::basic_ostream<char,std::_1::char_traits<char>>::flush() ();
+    0x00409744 mov rdi, rbp                                      |         rdi = rbp;
+    0x00409747 call 0x4043e0                                     |         std::_1::basic_ostream<char,std::_1::char_traits<char>>::flush() ();
+    0x0040974c mov edi, 0x66a000                                 |         edi = coutMutex;
+    0x00409751 call 0x404720                                     |         pthread_mutex_unlock ();
+                                                                 |     }
+    0x00409756 xor ebp, ebp                                      |     ebp = 0;
+    0x00409758 jmp 0x40976d                                      |     
+                                                                 |     while (ebx == eax) {
+                                                                 | label_14:
+    0x00409760 inc rbp                                           |         rbp++;
+    0x00409763 cmp rbp, 0x21                                     |         
+                                                                 |         if (rbp == 0x21) {
+    0x00409767 je 0x409c00                                       |             goto label_41;
+                                                                 |         }
+    0x0040976d mov rax, qword [rsp + 0x60]                       |         rax = *((rsp + 0x60));
+    0x00409772 mov rsi, qword [rax + rbp*8]                      |         
+    0x00409776 mov rdi, r12                                      |         
+    0x00409779 call 0x414eb0                                     |         al = BloombergLP::ball::AttributeContext::hasRelevantActiveRules(BloombergLP::ball::Categoryconst*)const (r12, *((rax + rbp*8)));
+    0x0040977e lea r15, [rbp - 1]                                |         r15 = rbp - 1;
+    0x00409782 cmp r15, r14                                      |         
+    0x00409785 setg cl                                           |         cl = (r15 > r14) ? 1 : 0;
+    0x00409788 cmp cl, al                                        |         
+                                                                 |         if (cl != al) {
+    0x0040978a je 0x409827                                       |             
+    0x00409790 mov edi, 0x669f48                                 |             
+    0x00409795 mov esi, 0x44e5a5                                 |             
+    0x0040979a mov edx, 1                                        |             
+    0x0040979f call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (obj.std::__1::cout, 0x44e5a5, 1);
+    0x004097a4 mov esi, 0x44b203                                 |             
+    0x004097a9 mov edx, 2                                        |             
+    0x004097ae mov rdi, rax                                      |             
+    0x004097b1 call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44b203, 2);
+    0x004097b6 mov rdi, rax                                      |             rdi = rax;
+    0x004097b9 mov esi, r14d                                     |             esi = r14d;
+    0x004097bc call 0x4043c0                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x004097c1 mov esi, 0x44d180                                 |             
+    0x004097c6 mov edx, 1                                        |             
+    0x004097cb mov rdi, rax                                      |             
+    0x004097ce call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44d180, 1);
+    0x004097d3 mov esi, 0x44ba1d                                 |             
+    0x004097d8 mov edx, 1                                        |             
+    0x004097dd mov rdi, rax                                      |             
+    0x004097e0 call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44ba1d, 1);
+    0x004097e5 mov esi, 0x44b203                                 |             
+    0x004097ea mov edx, 2                                        |             
+    0x004097ef mov rdi, rax                                      |             
+    0x004097f2 call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44b203, 2);
+    0x004097f7 mov rdi, rax                                      |             rdi = rax;
+    0x004097fa mov esi, ebp                                      |             esi = ebp;
+    0x004097fc call 0x4043c0                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x00409801 mov esi, 0x44d0bd                                 |             
+    0x00409806 mov edx, 1                                        |             
+    0x0040980b mov rdi, rax                                      |             
+    0x0040980e call 0x413940                                     |             std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44d0bd, 1);
+    0x00409813 mov esi, 0x44ba1f                                 |             esi = "(j - 1 > i) == X.hasRelevantActiveRules(CATEGORIES[j])";
+    0x00409818 mov edi, 1                                        |             edi = 1;
+    0x0040981d mov edx, 0x3bd                                    |             edx = 0x3bd;
+    0x00409822 call 0x405860                                     |             symaSsErT(int ();
+                                                                 |         }
+    0x00409827 mov rax, qword [rsp + 0x60]                       |         rax = *((rsp + 0x60));
+    0x0040982c mov rdx, qword [rax + rbp*8]                      |         
+    0x00409830 mov rdi, r12                                      |         
+    0x00409833 lea rsi, [rsp + 0xc]                              |         
+    0x00409838 call 0x414ff0                                     |         BloombergLP::ball::AttributeContext::determineThresholdLevels(BloombergLP::ball::ThresholdAggregate*,BloombergLP::ball::Categoryconst*)const (r12, rsp + 0xc, *((rax + rbp*8)));
+    0x0040983d cmp byte [rip + 0x2607ea], 0                      |         
+                                                                 |         if (*(obj.veryVeryVerbose) != 0) {
+    0x00409844 je 0x409954                                       |             
+    0x0040984a mov edi, 0x66a000                                 |             edi = coutMutex;
+    0x0040984f call 0x404640                                     |             pthread_mutex_lock ();
+    0x00409854 call 0x404250                                     |             eax = pthread_self ();
+    0x00409859 movsxd rsi, eax                                   |             rsi = (int64_t) eax;
+    0x0040985c mov edi, 0x669f48                                 |             edi = std::__1::cout;
+    0x00409861 call 0x404230                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (unsigned long long) ();
+    0x00409866 mov esi, 0x44b203                                 |             
+    0x0040986b mov edx, 2                                        |             
+    0x00409870 mov rdi, rax                                      |             
+    0x00409873 call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44b203, 2);
+    0x00409878 mov esi, 0x44ba56                                 |             
+    0x0040987d mov edx, 0xc                                      |             
+    0x00409882 mov rdi, rax                                      |             
+    0x00409885 call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, "\n\t\tCategory ", 0xc);
+    0x0040988a mov rdi, rax                                      |             rdi = rax;
+    0x0040988d mov esi, ebp                                      |             esi = ebp;
+    0x0040988f call 0x4043c0                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x00409894 mov esi, 0x44ba63                                 |             
+    0x00409899 mov edx, 0x1c                                     |             
+    0x0040989e mov rdi, rax                                      |             
+    0x004098a1 call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, " -- hasRelevantActiveRules: ", 0x1c);
+    0x004098a6 mov rbx, rax                                      |             rbx = rax;
+    0x004098a9 mov rax, qword [rsp + 0x60]                       |             rax = *((rsp + 0x60));
+    0x004098ae mov rsi, qword [rax + rbp*8]                      |             
+    0x004098b2 mov rdi, r12                                      |             
+    0x004098b5 call 0x414eb0                                     |             al = BloombergLP::ball::AttributeContext::hasRelevantActiveRules(BloombergLP::ball::Categoryconst*)const (r12, *((rax + rbp*8)));
+    0x004098ba movzx esi, al                                     |             esi = (int32_t) al;
+    0x004098bd mov rdi, rbx                                      |             rdi = rbx;
+    0x004098c0 call 0x404140                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (bool) ();
+    0x004098c5 mov esi, 0x44ba80                                 |             
+    0x004098ca mov edx, 0x16                                     |             
+    0x004098cf mov rdi, rax                                      |             
+    0x004098d2 call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, " getThreasholdLevels: ", 0x16);
+    0x004098d7 lea rdi, [rsp + 0xc]                              |             
+    0x004098dc mov rsi, rax                                      |             
+    0x004098df xor edx, edx                                      |             
+    0x004098e1 mov ecx, 0xffffffff                               |             
+    0x004098e6 call 0x418c60                                     |             rax = BloombergLP::ball::ThresholdAggregate::print(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,int,int)const (rsp + 0xc, rax, 0, 0xffffffff);
+    0x004098eb mov rbx, rax                                      |             rbx = rax;
+    0x004098ee mov rax, qword [rax]                              |             rax = *(rax);
+    0x004098f1 mov rsi, qword [rax - 0x18]                       |             rsi = *((rax - 0x18));
+    0x004098f5 add rsi, rbx                                      |             rsi += rbx;
+    0x004098f8 mov rdi, r13                                      |             rdi = r13;
+    0x004098fb call 0x404420                                     |             std::_1::ios_base::getloc()const ();
+    0x00409900 mov esi, 0x669e90                                 |             esi = std::__1::ctype<char>::id;
+    0x00409905 mov rdi, r13                                      |             rdi = r13;
+    0x00409908 call 0x404550                                     |             rax = std::_1::locale::use_facet(std::_1::locale::id&)const ();
+    0x0040990d mov rcx, qword [rax]                              |             rcx = *(rax);
+    0x00409910 mov rdi, rax                                      |             rdi = rax;
+    0x00409913 mov esi, 0xa                                      |             esi = 0xa;
+    0x00409918 call qword [rcx + 0x38]                           |             eax = uint64_t (*rcx + 0x38)() ();
+    0x0040991b mov r12d, eax                                     |             r12d = eax;
+    0x0040991e mov rdi, r13                                      |             rdi = r13;
+    0x00409921 call 0x4045e0                                     |             std::_1::locale::~locale() ();
+    0x00409926 movsx esi, r12b                                   |             esi = (int32_t) r12b;
+    0x0040992a mov rdi, rbx                                      |             rdi = rbx;
+    0x0040992d call 0x404210                                     |             std::_1::basic_ostream<char,std::_1::char_traits<char>>::put(char) ();
+    0x00409932 mov r12, qword [rsp + 0xe0]                       |             r12 = *((rsp + 0xe0));
+    0x0040993a mov rdi, rbx                                      |             rdi = rbx;
+    0x0040993d call 0x4043e0                                     |             std::_1::basic_ostream<char,std::_1::char_traits<char>>::flush() ();
+    0x00409942 mov rdi, rbx                                      |             rdi = rbx;
+    0x00409945 call 0x4043e0                                     |             std::_1::basic_ostream<char,std::_1::char_traits<char>>::flush() ();
+    0x0040994a mov edi, 0x66a000                                 |             edi = coutMutex;
+    0x0040994f call 0x404720                                     |             pthread_mutex_unlock ();
+                                                                 |         }
+    0x00409954 mov rax, qword [rsp + 0x60]                       |         rax = *((rsp + 0x60));
+    0x00409959 mov rax, qword [rax + rbp*8]                      |         rax = *((rax + rbp*8));
+    0x0040995d movzx eax, byte [rax]                             |         eax = *(rax);
+    0x00409960 cmp al, byte [rsp + 0xc]                          |         
+                                                                 |         if (al != *((rsp + 0xc))) {
+    0x00409964 je 0x409a01                                       |             
+    0x0040996a mov edi, 0x669f48                                 |             
+    0x0040996f mov esi, 0x44e5a5                                 |             
+    0x00409974 mov edx, 1                                        |             
+    0x00409979 call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (obj.std::__1::cout, 0x44e5a5, 1);
+    0x0040997e mov esi, 0x44b203                                 |             
+    0x00409983 mov edx, 2                                        |             
+    0x00409988 mov rdi, rax                                      |             
+    0x0040998b call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44b203, 2);
+    0x00409990 mov rdi, rax                                      |             rdi = rax;
+    0x00409993 mov esi, r14d                                     |             esi = r14d;
+    0x00409996 call 0x4043c0                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x0040999b mov esi, 0x44d180                                 |             
+    0x004099a0 mov edx, 1                                        |             
+    0x004099a5 mov rdi, rax                                      |             
+    0x004099a8 call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44d180, 1);
+    0x004099ad mov esi, 0x44ba1d                                 |             
+    0x004099b2 mov edx, 1                                        |             
+    0x004099b7 mov rdi, rax                                      |             
+    0x004099ba call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44ba1d, 1);
+    0x004099bf mov esi, 0x44b203                                 |             
+    0x004099c4 mov edx, 2                                        |             
+    0x004099c9 mov rdi, rax                                      |             
+    0x004099cc call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44b203, 2);
+    0x004099d1 mov rdi, rax                                      |             rdi = rax;
+    0x004099d4 mov esi, ebp                                      |             esi = ebp;
+    0x004099d6 call 0x4043c0                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x004099db mov esi, 0x44d0bd                                 |             
+    0x004099e0 mov edx, 1                                        |             
+    0x004099e5 mov rdi, rax                                      |             
+    0x004099e8 call 0x413940                                     |             std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44d0bd, 1);
+    0x004099ed mov esi, 0x44ba97                                 |             esi = "CATEGORIES[j]->recordLevel() == levels.recordLevel()";
+    0x004099f2 mov edi, 1                                        |             edi = 1;
+    0x004099f7 mov edx, 0x3ca                                    |             edx = 0x3ca;
+    0x004099fc call 0x405860                                     |             symaSsErT(int ();
+                                                                 |         }
+    0x00409a01 cmp r15, r14                                      |         
+    0x00409a04 mov ebx, 0                                        |         ebx = 0;
+                                                                 |         if (r15 > r14) {
+    0x00409a09 cmovg ebx, ebp                                    |             ebx = ebp;
+                                                                 |         }
+    0x00409a0c movzx eax, byte [rsp + 0xd]                       |         eax = *((rsp + 0xd));
+    0x00409a11 cmp ebx, eax                                      |         
+                                                                 |         if (ebx != eax) {
+    0x00409a13 je 0x409ab0                                       |             
+    0x00409a19 mov edi, 0x669f48                                 |             
+    0x00409a1e mov esi, 0x44e5a5                                 |             
+    0x00409a23 mov edx, 1                                        |             
+    0x00409a28 call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (obj.std::__1::cout, 0x44e5a5, 1);
+    0x00409a2d mov esi, 0x44b203                                 |             
+    0x00409a32 mov edx, 2                                        |             
+    0x00409a37 mov rdi, rax                                      |             
+    0x00409a3a call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44b203, 2);
+    0x00409a3f mov rdi, rax                                      |             rdi = rax;
+    0x00409a42 mov esi, r14d                                     |             esi = r14d;
+    0x00409a45 call 0x4043c0                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x00409a4a mov esi, 0x44d180                                 |             
+    0x00409a4f mov edx, 1                                        |             
+    0x00409a54 mov rdi, rax                                      |             
+    0x00409a57 call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44d180, 1);
+    0x00409a5c mov esi, 0x44ba1d                                 |             
+    0x00409a61 mov edx, 1                                        |             
+    0x00409a66 mov rdi, rax                                      |             
+    0x00409a69 call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44ba1d, 1);
+    0x00409a6e mov esi, 0x44b203                                 |             
+    0x00409a73 mov edx, 2                                        |             
+    0x00409a78 mov rdi, rax                                      |             
+    0x00409a7b call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44b203, 2);
+    0x00409a80 mov rdi, rax                                      |             rdi = rax;
+    0x00409a83 mov esi, ebp                                      |             esi = ebp;
+    0x00409a85 call 0x4043c0                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x00409a8a mov esi, 0x44d0bd                                 |             
+    0x00409a8f mov edx, 1                                        |             
+    0x00409a94 mov rdi, rax                                      |             
+    0x00409a97 call 0x413940                                     |             std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44d0bd, 1);
+    0x00409a9c mov esi, 0x44bacc                                 |             esi = "level == levels.passLevel()";
+    0x00409aa1 mov edi, 1                                        |             edi = 1;
+    0x00409aa6 mov edx, 0x3cc                                    |             edx = 0x3cc;
+    0x00409aab call 0x405860                                     |             symaSsErT(int ();
+                                                                 |         }
+    0x00409ab0 movzx eax, byte [rsp + 0xe]                       |         eax = *((rsp + 0xe));
+    0x00409ab5 cmp ebx, eax                                      |         
+                                                                 |         if (ebx != eax) {
+    0x00409ab7 je 0x409b54                                       |             
+    0x00409abd mov edi, 0x669f48                                 |             
+    0x00409ac2 mov esi, 0x44e5a5                                 |             
+    0x00409ac7 mov edx, 1                                        |             
+    0x00409acc call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (obj.std::__1::cout, 0x44e5a5, 1);
+    0x00409ad1 mov esi, 0x44b203                                 |             
+    0x00409ad6 mov edx, 2                                        |             
+    0x00409adb mov rdi, rax                                      |             
+    0x00409ade call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44b203, 2);
+    0x00409ae3 mov rdi, rax                                      |             rdi = rax;
+    0x00409ae6 mov esi, r14d                                     |             esi = r14d;
+    0x00409ae9 call 0x4043c0                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x00409aee mov esi, 0x44d180                                 |             
+    0x00409af3 mov edx, 1                                        |             
+    0x00409af8 mov rdi, rax                                      |             
+    0x00409afb call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44d180, 1);
+    0x00409b00 mov esi, 0x44ba1d                                 |             
+    0x00409b05 mov edx, 1                                        |             
+    0x00409b0a mov rdi, rax                                      |             
+    0x00409b0d call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44ba1d, 1);
+    0x00409b12 mov esi, 0x44b203                                 |             
+    0x00409b17 mov edx, 2                                        |             
+    0x00409b1c mov rdi, rax                                      |             
+    0x00409b1f call 0x413940                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44b203, 2);
+    0x00409b24 mov rdi, rax                                      |             rdi = rax;
+    0x00409b27 mov esi, ebp                                      |             esi = ebp;
+    0x00409b29 call 0x4043c0                                     |             rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x00409b2e mov esi, 0x44d0bd                                 |             
+    0x00409b33 mov edx, 1                                        |             
+    0x00409b38 mov rdi, rax                                      |             
+    0x00409b3b call 0x413940                                     |             std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44d0bd, 1);
+    0x00409b40 mov esi, 0x44bae8                                 |             esi = "level == levels.triggerLevel()";
+    0x00409b45 mov edi, 1                                        |             edi = 1;
+    0x00409b4a mov edx, 0x3cd                                    |             edx = 0x3cd;
+    0x00409b4f call 0x405860                                     |             symaSsErT(int ();
+                                                                 |         }
+    0x00409b54 movzx eax, byte [rsp + 0xf]                       |         eax = *((rsp + 0xf));
+    0x00409b59 cmp ebx, eax                                      |         
+    0x00409b5b je 0x409760                                       |         
+                                                                 |     }
+    0x00409b61 mov edi, 0x669f48                                 |     
+    0x00409b66 mov esi, 0x44e5a5                                 |     
+    0x00409b6b mov edx, 1                                        |     
+    0x00409b70 call 0x413940                                     |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (obj.std::__1::cout, 0x44e5a5, 1);
+    0x00409b75 mov esi, 0x44b203                                 |     
+    0x00409b7a mov edx, 2                                        |     
+    0x00409b7f mov rdi, rax                                      |     
+    0x00409b82 call 0x413940                                     |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44b203, 2);
+    0x00409b87 mov rdi, rax                                      |     rdi = rax;
+    0x00409b8a mov esi, r14d                                     |     esi = r14d;
+    0x00409b8d call 0x4043c0                                     |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x00409b92 mov esi, 0x44d180                                 |     
+    0x00409b97 mov edx, 1                                        |     
+    0x00409b9c mov rdi, rax                                      |     
+    0x00409b9f call 0x413940                                     |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44d180, 1);
+    0x00409ba4 mov esi, 0x44ba1d                                 |     
+    0x00409ba9 mov edx, 1                                        |     
+    0x00409bae mov rdi, rax                                      |     
+    0x00409bb1 call 0x413940                                     |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44ba1d, 1);
+    0x00409bb6 mov esi, 0x44b203                                 |     
+    0x00409bbb mov edx, 2                                        |     
+    0x00409bc0 mov rdi, rax                                      |     
+    0x00409bc3 call 0x413940                                     |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44b203, 2);
+    0x00409bc8 mov rdi, rax                                      |     rdi = rax;
+    0x00409bcb mov esi, ebp                                      |     esi = ebp;
+    0x00409bcd call 0x4043c0                                     |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x00409bd2 mov esi, 0x44d0bd                                 |     
+    0x00409bd7 mov edx, 1                                        |     
+    0x00409bdc mov rdi, rax                                      |     
+    0x00409bdf call 0x413940                                     |     std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44d0bd, 1);
+    0x00409be4 mov esi, 0x44bb07                                 |     esi = "level == levels.triggerAllLevel()";
+    0x00409be9 mov edi, 1                                        |     edi = 1;
+    0x00409bee mov edx, 0x3ce                                    |     edx = 0x3ce;
+    0x00409bf3 call 0x405860                                     |     symaSsErT(int ();
+    0x00409bf8 jmp 0x409760                                      |     goto label_14;
+                                                                 | label_41:
+    0x00409c00 cmp dword [rsp + 0x48], 3                         |     
+                                                                 |     if (*((rsp + 0x48)) != 3) {
+    0x00409c05 jne 0x4095c0                                      |         goto label_15;
+                                                                 |     }
+    0x00409c0b cmp qword [rsp + 0x38], 0x17                      |     
+                                                                 |     if (*((rsp + 0x38)) == 0x17) {
+    0x00409c11 je 0x4095c0                                       |         goto label_15;
+                                                                 |     }
+    0x00409c17 mov rsi, qword [rsp + 0x18]                       |     rsi = *((rsp + 0x18));
+    0x00409c1c mov rdi, qword [rsp + 0x40]                       |     rdi = *((rsp + 0x40));
+    0x00409c21 mov rax, qword [rdi]                              |     rax = *(rdi);
+    0x00409c24 call qword [rax + 0x18]                           |     uint64_t (*rax + 0x18)() ();
+    0x00409c27 jmp 0x4095c0                                      |     goto label_15;
+                                                                 | label_40:
+    0x00409c2c call 0x421bc0                                     |     rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+    0x00409c31 mov ecx, dword [rsp + 0x48]                       |     ecx = *((rsp + 0x48));
+    0x00409c35 mov qword [rsp + 0x50], rax                       |     *((rsp + 0x50)) = rax;
+    0x00409c3a mov eax, 0xffffffff                               |     eax = 0xffffffff;
+    0x00409c3f mov qword [rsp + 0x58], rax                       |     *((rsp + 0x58)) = rax;
+    0x00409c44 cmp ecx, 3                                        |     
+                                                                 |     if (ecx == 3) {
+    0x00409c47 je 0x409c5b                                       |         goto label_42;
+                                                                 |     }
+    0x00409c49 cmp ecx, 1                                        |     
+                                                                 |     if (ecx != 1) {
+    0x00409c4c jne 0x40964d                                      |         goto label_16;
+                                                                 |     }
+    0x00409c52 mov dword [rsp + 0x18], ebp                       |     *((rsp + 0x18)) = ebp;
+    0x00409c56 jmp 0x409659                                      |     goto label_17;
+                                                                 | label_42:
+    0x00409c5b cmp qword [rsp + 0x38], 0x17                      |     
+                                                                 |     if (*((rsp + 0x38)) != 0x17) {
+    0x00409c61 je 0x409c73                                       |         
+    0x00409c63 mov rsi, qword [rsp + 0x18]                       |         rsi = *((rsp + 0x18));
+    0x00409c68 mov rdi, qword [rsp + 0x40]                       |         rdi = *((rsp + 0x40));
+    0x00409c6d mov rax, qword [rdi]                              |         rax = *(rdi);
+    0x00409c70 call qword [rax + 0x18]                           |         uint64_t (*rax + 0x18)() ();
+                                                                 |     }
+    0x00409c73 mov qword [rsp + 0x30], 0xffffffffffffffff        |     *((rsp + 0x30)) = 0xffffffffffffffff;
+    0x00409c7c jmp 0x40964d                                      |     goto label_16;
+                                                                 | label_39:
+    0x00409c81 xor ebx, ebx                                      |     ebx = 0;
+    0x00409c83 mov r14d, 0xffffffff                              |     r14d = 0xffffffff;
+    0x00409c89 lea rbp, [rsp + 0x10]                             |     rbp = rsp + 0x10;
+    0x00409c8e jmp 0x409c9b                                      |     goto label_43;
+                                                                 | label_18:
+    0x00409c90 inc ebx                                           |     ebx++;
+    0x00409c92 cmp ebx, 0x20                                     |     
+                                                                 |     if (ebx == 0x20) {
+    0x00409c95 je 0x409dc9                                       |         void (*0x409dc9)() ();
+                                                                 |     }
+                                                                 | label_43:
+    0x00409c9b mov rax, qword [rip + 0x260ade]                   |     rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x00409ca2 test rax, rax                                     |     
+                                                                 |     if (rax == 0) {
+    0x00409ca5 jne 0x409cac                                      |         
+    0x00409ca7 call 0x421bc0                                     |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                                 |     }
+    0x00409cac mov qword [rsp + 0x10], 0x44b382                  |     *((rsp + 0x10)) = "uuid";
+    0x00409cb5 mov dword [rsp + 0x48], 0                         |     *((rsp + 0x48)) = 0;
+    0x00409cbd test rax, rax                                     |     
+                                                                 |     if (rax == 0) {
+    0x00409cc0 jne 0x409cd2                                      |         
+    0x00409cc2 mov rax, qword [rip + 0x260ab7]                   |         rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x00409cc9 test rax, rax                                     |         
+                                                                 |         if (rax == 0) {
+    0x00409ccc je 0x409d79                                       |             goto label_44;
+                                                                 |         }
+                                                                 |     }
+    0x00409cd2 mov qword [rsp + 0x50], rax                       |     *((rsp + 0x50)) = rax;
+    0x00409cd7 mov qword [rsp + 0x58], r14                       |     *((rsp + 0x58)) = r14;
+                                                                 | label_19:
+    0x00409cdc mov dword [rsp + 0x18], ebx                       |     *((rsp + 0x18)) = ebx;
+    0x00409ce0 mov dword [rsp + 0x48], 1                         |     *((rsp + 0x48)) = 1;
+    0x00409ce8 mov rdi, r12                                      |     
+    0x00409ceb mov rsi, rbp                                      |     
+    0x00409cee call 0x414710                                     |     al = BloombergLP::ball::AttributeContainerList::hasValue(BloombergLP::ball::Attributeconst&)const (r12, rbp);
+    0x00409cf3 test al, al                                       |     
+                                                                 |     if (al != 0) {
+    0x00409cf5 je 0x409d4d                                       |         
+    0x00409cf7 mov edi, 0x669f48                                 |         
+    0x00409cfc mov esi, 0x44e5a5                                 |         
+    0x00409d01 mov edx, 1                                        |         
+    0x00409d06 call 0x413940                                     |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (obj.std::__1::cout, 0x44e5a5, 1);
+    0x00409d0b mov esi, 0x44b203                                 |         
+    0x00409d10 mov edx, 2                                        |         
+    0x00409d15 mov rdi, rax                                      |         
+    0x00409d18 call 0x413940                                     |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44b203, 2);
+    0x00409d1d mov rdi, rax                                      |         rdi = rax;
+    0x00409d20 mov esi, ebx                                      |         esi = ebx;
+    0x00409d22 call 0x4043c0                                     |         rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x00409d27 mov esi, 0x44d0bd                                 |         
+    0x00409d2c mov edx, 1                                        |         
+    0x00409d31 mov rdi, rax                                      |         
+    0x00409d34 call 0x413940                                     |         std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x44d0bd, 1);
+    0x00409d39 mov esi, 0x44bb29                                 |         esi = "false == X.hasAttribute(attribute)";
+    0x00409d3e mov edi, 1                                        |         edi = 1;
+    0x00409d43 mov edx, 0x3d6                                    |         edx = 0x3d6;
+    0x00409d48 call 0x405860                                     |         symaSsErT(int ();
+                                                                 |     }
+    0x00409d4d cmp dword [rsp + 0x48], 3                         |     
+                                                                 |     if (*((rsp + 0x48)) != 3) {
+    0x00409d52 jne 0x409c90                                      |         goto label_18;
+                                                                 |     }
+    0x00409d58 cmp qword [rsp + 0x38], 0x17                      |     
+                                                                 |     if (*((rsp + 0x38)) == 0x17) {
+    0x00409d5e je 0x409c90                                       |         goto label_18;
+                                                                 |     }
+                                                                 | label_44:
+    0x00409d79 call 0x421bc0                                     |     rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+    0x00409d7e mov ecx, dword [rsp + 0x48]                       |     ecx = *((rsp + 0x48));
+    0x00409d82 mov qword [rsp + 0x50], rax                       |     *((rsp + 0x50)) = rax;
+    0x00409d87 mov qword [rsp + 0x58], r14                       |     *((rsp + 0x58)) = r14;
+    0x00409d8c cmp ecx, 3                                        |     
+                                                                 |     if (ecx == 3) {
+    0x00409d8f je 0x409da3                                       |         goto label_45;
+                                                                 |     }
+    0x00409d91 cmp ecx, 1                                        |     
+                                                                 |     if (ecx != 1) {
+    0x00409d94 jne 0x409cdc                                      |         goto label_19;
+                                                                 |     }
+                                                                 | label_45:
+    0x00409da3 cmp qword [rsp + 0x38], 0x17                      |     
+                                                                 |     /* Beware that this jump is a conditional jump.
+                                                                 |      * r2dec transformed it as a return, due being the
+                                                                 |      * last instruction. Please, check 'pdda' output
+                                                                 |      * for more hints. */
+    0x00409da9 je 0x409dbb                                       |     return void (*0x409dbb)() ();
+                                                                 | }

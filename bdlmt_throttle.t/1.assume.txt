@@ -1,0 +1,51 @@
+    ; assembly                                                       | /* r2dec pseudo code output */
+                                                                     | /* bdlmt_throttle.t/assume @ 0x4066e0 */
+                                                                     | #include <stdint.h>
+                                                                     |  
+    ; (fcn) method.Case_Minus_1_Events_Dropped.threadJob__ ()        | uint64_t method_Case_Minus_1_Events_Dropped_threadJob_ (void) {
+                                                                     |     int64_t var_8h;
+                                                                     |     int64_t var_10h;
+                                                                     |     /* Case_Minus_1_Events_Dropped::threadJob() */
+    0x004066e0 push rbp                                              |     
+    0x004066e1 push rbx                                              |     
+    0x004066e2 sub rsp, 0x18                                         |     
+    0x004066e6 mov edi, 0x658340                                     |     
+    0x004066eb call 0x4141b0                                         |     BloombergLP::bslmt::Barrier::wait() (obj.Case_Minus_1_Events_Dropped::barrier);
+                                                                     |     do {
+    0x004066f0 mov eax, dword [rip + 0x251c42]                       |         eax = Case_Minus_1_Events_Dropped::atomicBarrier;
+    0x004066f6 test eax, eax                                         |         
+    0x004066f8 jne 0x4066f0                                          |         
+                                                                     |     } while (eax != 0);
+    0x004066fa mov ebp, 0xa                                          |     
+    0x004066ff lea rbx, [rsp + 8]                                    |     rbx = rsp + 8;
+    0x00406704 jmp 0x406714                                          |     
+                                                                     |     while (al == 0) {
+                                                                     | label_0:
+    0x00406710 dec ebp                                               |         ebp--;
+                                                                     |         if (ebp == 0) {
+    0x00406712 je 0x406758                                           |             goto label_1;
+                                                                     |         }
+    0x00406714 cmp dword [rip + 0x250f69], 1                         |         
+                                                                     |         if (*(0x00657684) == 1) {
+    0x0040671b jne 0x406730                                          |             
+    0x0040671d call 0x416440                                         |             BloombergLP::bsls::SystemTime::nowMonotonicClock() ();
+    0x00406722 jmp 0x406735                                          |             
+                                                                     |         } else {
+    0x00406730 call 0x4164d0                                         |             rax = BloombergLP::bsls::SystemTime::nowRealtimeClock() ();
+                                                                     |         }
+    0x00406735 mov qword [rsp + 8], rax                              |         *((rsp + 8)) = rax;
+    0x0040673a mov dword [rsp + 0x10], edx                           |         *((rsp + 0x10)) = edx;
+    0x0040673e mov edi, 0x657668                                     |         
+    0x00406743 mov rsi, rbx                                          |         
+    0x00406746 call 0x412ee0                                         |         al = BloombergLP::bdlmt::Throttle::requestPermission(BloombergLP::bsls::TimeIntervalconst&) (method.Case_Minus_1_Events_Dropped.threadJob__::bdlmt_throttle_iFtHrOtTlE, rbx);
+    0x0040674b test al, al                                           |         
+    0x0040674d je 0x406710                                           |         
+                                                                     |     }
+    0x0040674f lock inc dword [rip + 0x251bde]                       |     *(obj.Case_Minus_1_Events_Dropped::eventsSoFar)++;
+    0x00406756 jmp 0x406710                                          |     goto label_0;
+                                                                     | label_1:
+    0x00406758 add rsp, 0x18                                         |     
+    0x0040675c pop rbx                                               |     
+    0x0040675d pop rbp                                               |     
+    0x0040675e ret                                                   |     return rax;
+                                                                     | }

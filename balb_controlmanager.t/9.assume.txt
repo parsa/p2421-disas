@@ -1,0 +1,35 @@
+    ; assembly                                                                                               | /* r2dec pseudo code output */
+                                                                                                             | /* balb_controlmanager.t/assume @ 0x40d100 */
+                                                                                                             | #include <stdint.h>
+                                                                                                             |  
+    ; (fcn) method.BloombergLP::bdlb::String.copy_char_const__int__BloombergLP::bslma::Allocator_ ()         | int64_t method_BloombergLP::bdlb::String_copy_char_const_int_BloombergLP::bslma::Allocator_ (int64_t arg3, int64_t arg2, int64_t arg1) {
+                                                                                                             |     rdx = arg3;
+                                                                                                             |     rsi = arg2;
+                                                                                                             |     rdi = arg1;
+                                                                                                             |     /* BloombergLP::bdlb::String::copy(char const*, int, BloombergLP::bslma::Allocator*) */
+    0x0040d100 push r15                                                                                      |     
+    0x0040d102 push r14                                                                                      |     
+    0x0040d104 push rbx                                                                                      |     
+    0x0040d105 mov r15d, esi                                                                                 |     r15d = esi;
+    0x0040d108 mov r14, rdi                                                                                  |     r14 = rdi;
+    0x0040d10b lea esi, [r15 + 1]                                                                            |     esi = r15 + 1;
+    0x0040d10f mov rax, qword [rdx]                                                                          |     rax = *(rdx);
+    0x0040d112 mov rdi, rdx                                                                                  |     rdi = rdx;
+    0x0040d115 call qword [rax + 0x10]                                                                       |     rax = uint64_t (*rax + 0x10)(void, void, void) (rbx, r14, r15);
+    0x0040d118 mov rbx, rax                                                                                  |     rbx = rax;
+    0x0040d11b mov r15d, r15d                                                                                |     
+    0x0040d11e test r14, r14                                                                                 |     
+                                                                                                             |     if (r14 != 0) {
+    0x0040d121 je 0x40d131                                                                                   |         
+    0x0040d123 mov rdi, rbx                                                                                  |         
+    0x0040d126 mov rsi, r14                                                                                  |         
+    0x0040d129 mov rdx, r15                                                                                  |         
+    0x0040d12c call 0x404af0                                                                                 |         memcpy (rbx, r14, r15);
+                                                                                                             |     }
+    0x0040d131 mov byte [rbx + r15], 0                                                                       |     *((rbx + r15)) = 0;
+    0x0040d136 mov rax, rbx                                                                                  |     rax = rbx;
+    0x0040d139 pop rbx                                                                                       |     
+    0x0040d13a pop r14                                                                                       |     
+    0x0040d13c pop r15                                                                                       |     
+    0x0040d13e ret                                                                                           |     return rax;
+                                                                                                             | }

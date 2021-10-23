@@ -1,0 +1,16 @@
+    ; assembly                                                           | /* r2dec pseudo code output */
+                                                                         | /* balcl_commandline.t/none @ 0x465850 */
+                                                                         | #include <stdint.h>
+                                                                         |  
+    ; (fcn) method.BloombergLP::balcl::OptionValue.type___const ()       | int32_t method_BloombergLP::balcl::OptionValue_type_const (int64_t arg1) {
+                                                                         |     rdi = arg1;
+                                                                         |     /* BloombergLP::balcl::OptionValue::type() const */
+    0x00465850 mov ecx, dword [rdi + 0x40]                               |     ecx = *((rdi + 0x40));
+    0x00465853 lea edx, [rcx - 1]                                        |     edx = rcx - 1;
+    0x00465856 xor eax, eax                                              |     eax = 0;
+    0x00465858 cmp edx, 0x11                                             |     
+                                                                         |     if (edx < 0x11) {
+    0x0046585b cmovb eax, ecx                                            |         eax = ecx;
+                                                                         |     }
+    0x0046585e ret                                                       |     return eax;
+                                                                         | }

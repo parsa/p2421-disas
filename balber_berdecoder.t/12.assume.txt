@@ -1,0 +1,63 @@
+    ; assembly                                                                               | /* r2dec pseudo code output */
+                                                                                             | /* balber_berdecoder.t/assume @ 0x405470 */
+                                                                                             | #include <stdint.h>
+                                                                                             |  
+    ; (fcn) method.BloombergLP::s_baltst::MyChoiceWithDefaultValues.makeSelection1__ ()      | int64_t method_BloombergLP::s_baltst::MyChoiceWithDefaultValues_makeSelection1_ (int64_t arg1) {
+                                                                                             |     rdi = arg1;
+                                                                                             |     /* BloombergLP::s_baltst::MyChoiceWithDefaultValues::makeSelection1() */
+    0x00405470 push r14                                                                      |     
+    0x00405472 push rbx                                                                      |     
+    0x00405473 push rax                                                                      |     
+    0x00405474 mov rbx, rdi                                                                  |     rbx = rdi;
+    0x00405477 mov eax, dword [rdi + 0x30]                                                   |     eax = *((rdi + 0x30));
+    0x0040547a test eax, eax                                                                 |     
+                                                                                             |     if (eax != 0) {
+    0x0040547c je 0x4054ad                                                                   |         
+    0x0040547e cmp eax, 2                                                                    |         
+                                                                                             |         if (eax != 2) {
+    0x00405481 je 0x4054ad                                                                   |             
+    0x00405483 cmp eax, 1                                                                    |             
+                                                                                             |             if (eax != 1) {
+    0x00405486 jne 0x4054ad                                                                  |                 goto label_0;
+                                                                                             |             }
+    0x00405488 mov r14, qword [rbx + 0x18]                                                   |             r14 = *((rbx + 0x18));
+    0x0040548c mov qword [rbx + 0x18], 0                                                     |             *((rbx + 0x18)) = 0;
+    0x00405494 mov esi, 0x494b90                                                             |             
+    0x00405499 mov edx, 7                                                                    |             
+    0x0040549e mov ecx, 0x49a66a                                                             |             
+    0x004054a3 mov rdi, rbx                                                                  |             
+    0x004054a6 call 0x471870                                                                 |             bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>::privateAppend(char const*,unsigned long,char const*) (rbx, "default", 7, "string<...>::assign(char*...): string too long");
+    0x004054ab jmp 0x405502                                                                  |             
+                                                                                             |         }
+                                                                                             |     } else {
+                                                                                             | label_0:
+    0x004054ad mov dword [rbx + 0x30], 0xffffffff                                            |         *((rbx + 0x30)) = 0xffffffff;
+    0x004054b4 mov rax, qword [rbx + 0x38]                                                   |         rax = *((rbx + 0x38));
+    0x004054b8 test rax, rax                                                                 |         
+                                                                                             |         if (rax == 0) {
+    0x004054bb jne 0x4054ce                                                                  |             
+    0x004054bd mov rax, qword [rip + 0x2f1f2c]                                               |             rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x004054c4 test rax, rax                                                                 |             
+                                                                                             |             if (rax != 0) {
+    0x004054c7 jne 0x4054ce                                                                  |                 goto label_1;
+                                                                                             |             }
+    0x004054c9 call 0x46d200                                                                 |             rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                                                             |         }
+                                                                                             | label_1:
+    0x004054ce mov qword [rbx], 0                                                            |         *(rbx) = 0;
+    0x004054d5 mov qword [rbx + 0x28], rax                                                   |         *((rbx + 0x28)) = rax;
+    0x004054d9 movaps xmm0, xmmword [rip + 0x92240]                                          |         xmm0 = .comment;
+    0x004054e0 movups xmmword [rbx + 0x18], xmm0                                             |         __asm ("movups xmmword [rbx + 0x18], xmm0");
+    0x004054e4 mov esi, 0x494b90                                                             |         
+    0x004054e9 mov edx, 7                                                                    |         
+    0x004054ee mov ecx, 0x49a66a                                                             |         
+    0x004054f3 mov rdi, rbx                                                                  |         
+    0x004054f6 call 0x471870                                                                 |         bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>::privateAppend(char const*,unsigned long,char const*) (rbx, "default", 7, "string<...>::assign(char*...): string too long");
+    0x004054fb mov dword [rbx + 0x30], 1                                                     |         *((rbx + 0x30)) = 1;
+                                                                                             |     }
+    0x00405502 mov rax, rbx                                                                  |     rax = rbx;
+    0x00405505 add rsp, 8                                                                    |     
+    0x00405509 pop rbx                                                                       |     
+    0x0040550a pop r14                                                                       |     
+    0x0040550c ret                                                                           |     return rax;
+                                                                                             | }

@@ -1,0 +1,47 @@
+    ; assembly                                                                                   | /* r2dec pseudo code output */
+                                                                                                 | /* balber_berdecoder.t/assume @ 0x4050f0 */
+                                                                                                 | #include <stdint.h>
+                                                                                                 |  
+    ; (fcn) method.BloombergLP::s_baltst::MyChoiceWithDefaultValues.makeSelection0_int_ ()       | int64_t method_BloombergLP::s_baltst::MyChoiceWithDefaultValues_makeSelection0_int_ (int64_t arg2, int64_t arg1) {
+                                                                                                 |     rsi = arg2;
+                                                                                                 |     rdi = arg1;
+                                                                                                 |     /* BloombergLP::s_baltst::MyChoiceWithDefaultValues::makeSelection0(int) */
+    0x004050f0 push rbp                                                                          |     
+    0x004050f1 push rbx                                                                          |     
+    0x004050f2 push rax                                                                          |     
+    0x004050f3 mov ebp, esi                                                                      |     
+    0x004050f5 mov rbx, rdi                                                                      |     rbx = rdi;
+    0x004050f8 mov eax, dword [rdi + 0x30]                                                       |     eax = *((rdi + 0x30));
+    0x004050fb cmp eax, 2                                                                        |     
+                                                                                                 |     if (eax != 2) {
+    0x004050fe je 0x405129                                                                       |         
+    0x00405100 cmp eax, 1                                                                        |         
+                                                                                                 |         if (eax != 1) {
+    0x00405103 je 0x40510d                                                                       |             
+    0x00405105 test eax, eax                                                                     |             
+                                                                                                 |             if (eax != 0) {
+    0x00405107 jne 0x405129                                                                      |                 goto label_0;
+                                                                                                 |             }
+    0x00405109 mov dword [rbx], ebp                                                              |             *(rbx) = ebp;
+    0x0040510b jmp 0x405132                                                                      |             goto label_1;
+                                                                                                 |         }
+    0x0040510d cmp qword [rbx + 0x20], 0x17                                                      |         
+                                                                                                 |         if (*((rbx + 0x20)) != 0x17) {
+    0x00405112 je 0x405121                                                                       |             
+    0x00405114 mov rsi, qword [rbx]                                                              |             rsi = *(rbx);
+    0x00405117 mov rdi, qword [rbx + 0x28]                                                       |             rdi = *((rbx + 0x28));
+    0x0040511b mov rax, qword [rdi]                                                              |             rax = *(rdi);
+    0x0040511e call qword [rax + 0x18]                                                           |             uint64_t (*rax + 0x18)() ();
+                                                                                                 |         }
+    0x00405121 mov qword [rbx + 0x18], 0xffffffffffffffff                                        |         *((rbx + 0x18)) = 0xffffffffffffffff;
+                                                                                                 |     }
+                                                                                                 | label_0:
+    0x00405129 mov dword [rbx], ebp                                                              |     *(rbx) = ebp;
+    0x0040512b mov dword [rbx + 0x30], 0                                                         |     *((rbx + 0x30)) = 0;
+                                                                                                 | label_1:
+    0x00405132 mov rax, rbx                                                                      |     rax = rbx;
+    0x00405135 add rsp, 8                                                                        |     
+    0x00405139 pop rbx                                                                           |     
+    0x0040513a pop rbp                                                                           |     
+    0x0040513b ret                                                                               |     return rax;
+                                                                                                 | }

@@ -1,0 +1,101 @@
+    ; assembly                                                                       | /* r2dec pseudo code output */
+                                                                                     | /* balb_performancemonitor.t/none @ 0x422b70 */
+                                                                                     | #include <stdint.h>
+                                                                                     |  
+    ; (fcn) method.BloombergLP::bdlma::ConcurrentPool.reserveCapacity_int_ ()        | int64_t method_BloombergLP::bdlma::ConcurrentPool_reserveCapacity_int_ (int64_t arg2, int64_t arg1) {
+                                                                                     |     rsi = arg2;
+                                                                                     |     rdi = arg1;
+                                                                                     |     /* BloombergLP::bdlma::ConcurrentPool::reserveCapacity(int) */
+    0x00422b70 push r15                                                              |     
+    0x00422b72 push r14                                                              |     
+    0x00422b74 push r12                                                              |     
+    0x00422b76 push rbx                                                              |     
+    0x00422b77 push rax                                                              |     
+    0x00422b78 mov r15d, esi                                                         |     r15d = esi;
+    0x00422b7b mov rbx, rdi                                                          |     rbx = rdi;
+    0x00422b7e lea r14, [rdi + 0x38]                                                 |     r14 = rdi + 0x38;
+    0x00422b82 mov rdi, r14                                                          |     rdi = r14;
+    0x00422b85 call 0x4071b0                                                         |     pthread_mutex_lock ();
+    0x00422b8a xor edx, edx                                                          |     edx = 0;
+    0x00422b8c xchg qword [rbx + 0x20], rdx                                          |     tmp_0 = rbx + 0x20;
+                                                                                     |     rbx + 0x20 = rdx;
+                                                                                     |     rdx = tmp_0;
+    0x00422b90 test rdx, rdx                                                         |     
+                                                                                     |     if (rdx == 0) {
+    0x00422b93 je 0x422bd6                                                           |         goto label_0;
+                                                                                     |     }
+    0x00422b95 dec r15d                                                              |     r15d--;
+    0x00422b98 mov eax, r15d                                                         |     eax = r15d;
+    0x00422b9b mov rsi, rdx                                                          |     rsi = rdx;
+    0x00422b9e nop                                                                   |     
+                                                                                     |     do {
+    0x00422ba0 mov r15d, eax                                                         |         r15d = eax;
+    0x00422ba3 cmp qword [rsi + 0x10], 0                                             |         
+                                                                                     |         if (*((rsi + 0x10)) == 0) {
+    0x00422ba8 je 0x422bc0                                                           |             goto label_1;
+                                                                                     |         }
+    0x00422baa mov rsi, qword [rsi + 0x10]                                           |         rsi = *((rsi + 0x10));
+    0x00422bae lea eax, [r15 - 1]                                                    |         eax = r15 - 1;
+    0x00422bb2 test rsi, rsi                                                         |         
+    0x00422bb5 jne 0x422ba0                                                          |         
+                                                                                     |     } while (rsi != 0);
+    0x00422bb7 jmp 0x422bd6                                                          |     goto label_0;
+                                                                                     |     do {
+                                                                                     | label_1:
+    0x00422bc0 mov rcx, qword [rbx + 0x20]                                           |         rcx = *((rbx + 0x20));
+    0x00422bc4 mov qword [rsi + 0x10], rcx                                           |         *((rsi + 0x10)) = rcx;
+    0x00422bc8 mov rax, rcx                                                          |         rax = rcx;
+    0x00422bcb lock cmpxchg qword [rbx + 0x20], rdx                                  |         __asm ("lock cmpxchg qword [rbx + 0x20], rdx");
+    0x00422bd1 cmp rcx, rax                                                          |         
+    0x00422bd4 jne 0x422bc0                                                          |         
+                                                                                     |     } while (rcx != rax);
+                                                                                     | label_0:
+    0x00422bd6 test r15d, r15d                                                       |     
+                                                                                     |     if (r15d <= 0) {
+    0x00422bd9 jle 0x422c46                                                          |         goto label_2;
+                                                                                     |     }
+    0x00422bdb lea rdi, [rbx + 0x28]                                                 |     
+    0x00422bdf mov r12, qword [rbx + 8]                                              |     r12 = *((rbx + 8));
+    0x00422be3 mov esi, r15d                                                         |     
+    0x00422be6 imul rsi, r12                                                         |     rsi *= r12;
+    0x00422bea call 0x422ce0                                                         |     rax = BloombergLP::bdlma::InfrequentDeleteBlockList::allocate(unsigned long) (rbx + 0x28, r15d);
+    0x00422bef mov rcx, rax                                                          |     rcx = rax;
+    0x00422bf2 dec r15d                                                              |     r15d--;
+    0x00422bf5 movsxd rax, r15d                                                      |     rax = (int64_t) r15d;
+    0x00422bf8 imul rax, r12                                                         |     rax *= r12;
+    0x00422bfc mov rsi, rcx                                                          |     rsi = rcx;
+    0x00422bff add rsi, rax                                                          |     rsi += rax;
+    0x00422c02 test rax, rax                                                         |     
+                                                                                     |     if (rax <= 0) {
+    0x00422c05 jle 0x422c26                                                          |         goto label_3;
+                                                                                     |     }
+    0x00422c07 mov rax, rcx                                                          |     rax = rcx;
+    0x00422c0a nop word [rax + rax]                                                  |     
+                                                                                     |     do {
+    0x00422c10 mov dword [rax], 0                                                    |         *(rax) = 0;
+    0x00422c16 lea rdx, [rax + r12]                                                  |         rdx = rax + r12;
+    0x00422c1a mov qword [rax + 0x10], rdx                                           |         *((rax + 0x10)) = rdx;
+    0x00422c1e mov rax, rdx                                                          |         rax = rdx;
+    0x00422c21 cmp rdx, rsi                                                          |         
+    0x00422c24 jb 0x422c10                                                           |         
+                                                                                     |     } while (rdx < rsi);
+                                                                                     | label_3:
+    0x00422c26 mov dword [rsi], 0                                                    |     *(rsi) = 0;
+    0x00422c2c nop dword [rax]                                                       |     
+                                                                                     |     do {
+    0x00422c30 mov rdx, qword [rbx + 0x20]                                           |         rdx = *((rbx + 0x20));
+    0x00422c34 mov qword [rsi + 0x10], rdx                                           |         *((rsi + 0x10)) = rdx;
+    0x00422c38 mov rax, rdx                                                          |         rax = rdx;
+    0x00422c3b lock cmpxchg qword [rbx + 0x20], rcx                                  |         __asm ("lock cmpxchg qword [rbx + 0x20], rcx");
+    0x00422c41 cmp rdx, rax                                                          |         
+    0x00422c44 jne 0x422c30                                                          |         
+                                                                                     |     } while (rdx != rax);
+                                                                                     | label_2:
+    0x00422c46 mov rdi, r14                                                          |     rdi = r14;
+    0x00422c49 add rsp, 8                                                            |     
+    0x00422c4d pop rbx                                                               |     
+    0x00422c4e pop r12                                                               |     
+    0x00422c50 pop r14                                                               |     
+    0x00422c52 pop r15                                                               |     
+    0x00422c54 jmp 0x4072a0                                                          |     return pthread_mutex_unlock ();
+                                                                                     | }

@@ -1,0 +1,81 @@
+    ; assembly                                                                                                                               | /* r2dec pseudo code output */
+                                                                                                                                             | /* balb_testmessages.t/assume @ 0x405140 */
+                                                                                                                                             | #include <stdint.h>
+                                                                                                                                             |  
+    ; (fcn) method.BloombergLP::balb::SequenceWithAnonymityChoice1.operator_BloombergLP::balb::SequenceWithAnonymityChoice1_const_ ()        | int64_t method_BloombergLP::balb::SequenceWithAnonymityChoice1_operator_BloombergLP::balb::SequenceWithAnonymityChoice1_const_ (int64_t arg2, uint32_t arg1) {
+                                                                                                                                             |     rsi = arg2;
+                                                                                                                                             |     rdi = arg1;
+                                                                                                                                             |     /* BloombergLP::balb::SequenceWithAnonymityChoice1::operator=(BloombergLP::balb::SequenceWithAnonymityChoice1 const&) */
+    0x00405140 push rbp                                                                                                                      |     
+    0x00405141 push rbx                                                                                                                      |     
+    0x00405142 push rax                                                                                                                      |     
+    0x00405143 mov rbx, rdi                                                                                                                  |     rbx = rdi;
+    0x00405146 cmp rdi, rsi                                                                                                                  |     
+                                                                                                                                             |     if (rdi != rsi) {
+    0x00405149 je 0x4051d0                                                                                                                   |         
+    0x0040514f mov eax, dword [rsi + 0x30]                                                                                                   |         eax = *((rsi + 0x30));
+    0x00405152 cmp eax, 1                                                                                                                    |         
+                                                                                                                                             |         if (eax != 1) {
+    0x00405155 je 0x40516f                                                                                                                   |             
+    0x00405157 test eax, eax                                                                                                                 |             
+                                                                                                                                             |             if (eax == 0) {
+    0x00405159 jne 0x405179                                                                                                                  |                 
+    0x0040515b mov bpl, byte [rsi]                                                                                                           |                 bpl = *(rsi);
+    0x0040515e mov eax, dword [rbx + 0x30]                                                                                                   |                 eax = *((rbx + 0x30));
+    0x00405161 cmp eax, 1                                                                                                                    |                 
+                                                                                                                                             |                 if (eax != 1) {
+    0x00405164 je 0x4051aa                                                                                                                   |                     
+    0x00405166 test eax, eax                                                                                                                 |                     
+                                                                                                                                             |                     if (eax == 0) {
+    0x00405168 jne 0x4051c6                                                                                                                  |                         
+    0x0040516a mov byte [rbx], bpl                                                                                                           |                         *(rbx) = bpl;
+    0x0040516d jmp 0x4051d0                                                                                                                  |                         
+                                                                                                                                             |                     } else {
+    0x0040516f mov rdi, rbx                                                                                                                  |                         
+    0x00405172 call 0x405250                                                                                                                 |                         BloombergLP::balb::SequenceWithAnonymityChoice1::makeSelection6(bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>const&) (rbx, rsi);
+    0x00405177 jmp 0x4051d0                                                                                                                  |                         
+                                                                                                                                             |                     } else {
+    0x00405179 mov eax, dword [rbx + 0x30]                                                                                                   |                         eax = *((rbx + 0x30));
+                                                                                                                                             |                     }
+    0x0040517c test eax, eax                                                                                                                 |                     
+                                                                                                                                             |                     if (eax != 0) {
+    0x0040517e je 0x4051a1                                                                                                                   |                         
+    0x00405180 cmp eax, 1                                                                                                                    |                         
+                                                                                                                                             |                         if (eax != 1) {
+    0x00405183 jne 0x4051a1                                                                                                                  |                             goto label_0;
+                                                                                                                                             |                         }
+    0x00405185 cmp qword [rbx + 0x20], 0x17                                                                                                  |                         
+                                                                                                                                             |                         if (*((rbx + 0x20)) != 0x17) {
+    0x0040518a je 0x405199                                                                                                                   |                             
+    0x0040518c mov rsi, qword [rbx]                                                                                                          |                             rsi = *(rbx);
+    0x0040518f mov rdi, qword [rbx + 0x28]                                                                                                   |                             rdi = *((rbx + 0x28));
+    0x00405193 mov rax, qword [rdi]                                                                                                          |                             rax = *(rdi);
+    0x00405196 call qword [rax + 0x18]                                                                                                       |                             uint64_t (*rax + 0x18)() ();
+                                                                                                                                             |                         }
+    0x00405199 mov qword [rbx + 0x18], 0xffffffffffffffff                                                                                    |                         *((rbx + 0x18)) = 0xffffffffffffffff;
+                                                                                                                                             |                     }
+                                                                                                                                             | label_0:
+    0x004051a1 mov dword [rbx + 0x30], 0xffffffff                                                                                            |                     *((rbx + 0x30)) = 0xffffffff;
+    0x004051a8 jmp 0x4051d0                                                                                                                  |                     
+                                                                                                                                             |                 } else {
+    0x004051aa cmp qword [rbx + 0x20], 0x17                                                                                                  |                     
+                                                                                                                                             |                 }
+                                                                                                                                             |             }
+                                                                                                                                             |             if (*((rbx + 0x20)) != 0x17) {
+    0x004051af je 0x4051be                                                                                                                   |                 
+    0x004051b1 mov rsi, qword [rbx]                                                                                                          |                 rsi = *(rbx);
+    0x004051b4 mov rdi, qword [rbx + 0x28]                                                                                                   |                 rdi = *((rbx + 0x28));
+    0x004051b8 mov rax, qword [rdi]                                                                                                          |                 rax = *(rdi);
+    0x004051bb call qword [rax + 0x18]                                                                                                       |                 uint64_t (*rax + 0x18)() ();
+                                                                                                                                             |             }
+    0x004051be mov qword [rbx + 0x18], 0xffffffffffffffff                                                                                    |             *((rbx + 0x18)) = 0xffffffffffffffff;
+    0x004051c6 mov byte [rbx], bpl                                                                                                           |             *(rbx) = bpl;
+    0x004051c9 mov dword [rbx + 0x30], 0                                                                                                     |             *((rbx + 0x30)) = 0;
+                                                                                                                                             |         }
+                                                                                                                                             |     }
+    0x004051d0 mov rax, rbx                                                                                                                  |     rax = rbx;
+    0x004051d3 add rsp, 8                                                                                                                    |     
+    0x004051d7 pop rbx                                                                                                                       |     
+    0x004051d8 pop rbp                                                                                                                       |     
+    0x004051d9 ret                                                                                                                           |     return rax;
+                                                                                                                                             | }

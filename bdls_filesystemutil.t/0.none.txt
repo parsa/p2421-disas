@@ -1,0 +1,103 @@
+    ; assembly                                                                                                       | /* r2dec pseudo code output */
+                                                                                                                     | /* bdls_filesystemutil.t/none @ 0x42b1c0 */
+                                                                                                                     | #include <stdint.h>
+                                                                                                                     |  
+    ; (fcn) sym.localForkExec_bsl::basic_string_char__std::__1::char_traits_char___bsl::allocator_char____ ()        | uint64_t localForkExec_bsl::basic_string_char_std::_1::char_traits_char_bsl::allocator_char_ (int64_t arg1) {
+                                                                                                                     |     int64_t var_8h;
+                                                                                                                     |     int64_t var_10h;
+                                                                                                                     |     int64_t var_20h;
+                                                                                                                     |     int64_t var_28h;
+                                                                                                                     |     rdi = arg1;
+                                                                                                                     |     /* localForkExec(bsl::basic_string<char, std::__1::char_traits<char>, bsl::allocator<char> >) */
+    0x0042b1c0 push r15                                                                                              |     
+    0x0042b1c2 push r14                                                                                              |     
+    0x0042b1c4 push r12                                                                                              |     
+    0x0042b1c6 push rbx                                                                                              |     
+    0x0042b1c7 sub rsp, 0x38                                                                                         |     
+    0x0042b1cb mov r14, rdi                                                                                          |     r14 = rdi;
+    0x0042b1ce call 0x4066d0                                                                                         |     eax = fork ();
+    0x0042b1d3 test eax, eax                                                                                         |     
+                                                                                                                     |     if (eax != 0) {
+    0x0042b1d5 jne 0x42b2a7                                                                                          |         goto label_1;
+                                                                                                                     |     }
+    0x0042b1db xorps xmm0, xmm0                                                                                      |     __asm ("xorps xmm0, xmm0");
+    0x0042b1de movaps xmmword [rsp + 0x10], xmm0                                                                     |     *((rsp + 0x10)) = xmm0;
+    0x0042b1e3 mov qword [rsp + 0x20], 0                                                                             |     *((rsp + 0x20)) = 0;
+    0x0042b1ec mov rax, qword [rip + 0x27cddd]                                                                       |     rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x0042b1f3 test rax, rax                                                                                         |     
+                                                                                                                     |     if (rax == 0) {
+    0x0042b1f6 jne 0x42b1fd                                                                                          |         
+    0x0042b1f8 call 0x444da0                                                                                         |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                                                                                     |     }
+    0x0042b1fd mov qword [rsp + 0x28], rax                                                                           |     *((rsp + 0x28)) = rax;
+    0x0042b202 cmp qword [r14 + 0x20], 0x17                                                                          |     
+                                                                                                                     |     if (*((r14 + 0x20)) == 0x17) {
+    0x0042b207 jne 0x42b20e                                                                                          |         
+    0x0042b209 mov rbx, r14                                                                                          |         rbx = r14;
+    0x0042b20c jmp 0x42b211                                                                                          |         
+                                                                                                                     |     } else {
+    0x0042b20e mov rbx, qword [r14]                                                                                  |         rbx = *(r14);
+                                                                                                                     |     }
+    0x0042b211 mov r12, qword [r14 + 0x18]                                                                           |     r12 = *((r14 + 0x18));
+    0x0042b215 test r12, r12                                                                                         |     
+                                                                                                                     |     if (r12 <= 0) {
+    0x0042b218 jle 0x42b26d                                                                                          |         goto label_2;
+                                                                                                                     |     }
+    0x0042b21a add r12, rbx                                                                                          |     r12 += rbx;
+    0x0042b21d lea r14, [rsp + 0x10]                                                                                 |     r14 = rsp + 0x10;
+    0x0042b222 lea r15, [rsp + 8]                                                                                    |     r15 = rsp + 8;
+    0x0042b227 jmp 0x42b235                                                                                          |     goto label_3;
+                                                                                                                     | label_0:
+    0x0042b230 cmp rbx, r12                                                                                          |     
+                                                                                                                     |     if (rbx >= r12) {
+    0x0042b233 jae 0x42b26d                                                                                          |         goto label_2;
+                                                                                                                     |     }
+                                                                                                                     | label_3:
+    0x0042b235 mov qword [rsp + 8], rbx                                                                              |     *((rsp + 8)) = rbx;
+    0x0042b23a mov rdi, r14                                                                                          |     
+    0x0042b23d mov rsi, r15                                                                                          |     
+    0x0042b240 call 0x42e070                                                                                         |     unsigned long&bsl::vector<unsigned long,bsl::allocator<unsigned long>>::emplace_back<unsigned long>(unsigned long&&) (r14, r15);
+    0x0042b245 nop word cs:[rax + rax]                                                                               |     
+    0x0042b24f nop                                                                                                   |     
+                                                                                                                     |     do {
+    0x0042b250 movzx eax, byte [rbx]                                                                                 |         eax = *(rbx);
+    0x0042b253 or al, 0x20                                                                                           |         al |= 0x20;
+    0x0042b255 cmp al, 0x20                                                                                          |         
+                                                                                                                     |         if (al == 0x20) {
+    0x0042b257 je 0x42b260                                                                                           |             goto label_4;
+                                                                                                                     |         }
+    0x0042b259 inc rbx                                                                                               |         rbx++;
+    0x0042b25c jmp 0x42b250                                                                                          |         
+                                                                                                                     |     } while (1);
+                                                                                                                     | label_4:
+    0x0042b260 cmp rbx, r12                                                                                          |     
+                                                                                                                     |     if (rbx >= r12) {
+    0x0042b263 jae 0x42b230                                                                                          |         goto label_0;
+                                                                                                                     |     }
+    0x0042b265 mov byte [rbx], 0                                                                                     |     *(rbx) = 0;
+    0x0042b268 inc rbx                                                                                               |     rbx++;
+    0x0042b26b jmp 0x42b230                                                                                          |     goto label_0;
+                                                                                                                     | label_2:
+    0x0042b26d mov qword [rsp + 8], 0                                                                                |     *((rsp + 8)) = 0;
+    0x0042b276 lea rdi, [rsp + 0x10]                                                                                 |     
+    0x0042b27b lea rsi, [rsp + 8]                                                                                    |     
+    0x0042b280 call 0x42e070                                                                                         |     unsigned long&bsl::vector<unsigned long,bsl::allocator<unsigned long>>::emplace_back<unsigned long>(unsigned long&&) (rsp + 0x10, rsp + 8);
+    0x0042b285 mov rsi, qword [rsp + 0x10]                                                                           |     rsi = *((rsp + 0x10));
+    0x0042b28a mov rdi, qword [rsi]                                                                                  |     rdi = *(rsi);
+    0x0042b28d call 0x405d10                                                                                         |     execv ();
+    0x0042b292 mov rsi, qword [rsp + 0x10]                                                                           |     rsi = *((rsp + 0x10));
+    0x0042b297 test rsi, rsi                                                                                         |     
+                                                                                                                     |     if (rsi != 0) {
+    0x0042b29a je 0x42b2a7                                                                                           |         
+    0x0042b29c mov rdi, qword [rsp + 0x28]                                                                           |         rdi = *((rsp + 0x28));
+    0x0042b2a1 mov rax, qword [rdi]                                                                                  |         rax = *(rdi);
+    0x0042b2a4 call qword [rax + 0x18]                                                                               |         uint64_t (*rax + 0x18)() ();
+                                                                                                                     |     }
+                                                                                                                     | label_1:
+    0x0042b2a7 add rsp, 0x38                                                                                         |     
+    0x0042b2ab pop rbx                                                                                               |     
+    0x0042b2ac pop r12                                                                                               |     
+    0x0042b2ae pop r14                                                                                               |     
+    0x0042b2b0 pop r15                                                                                               |     
+    0x0042b2b2 ret                                                                                                   |     return rax;
+                                                                                                                     | }

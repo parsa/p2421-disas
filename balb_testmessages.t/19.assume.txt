@@ -1,0 +1,24 @@
+    ; assembly                                                                   | /* r2dec pseudo code output */
+                                                                                 | /* balb_testmessages.t/assume @ 0x404ed0 */
+                                                                                 | #include <stdint.h>
+                                                                                 |  
+    ; (fcn) method.BloombergLP::balb::Choice4.selectionName___const ()           | int32_t method_BloombergLP::balb::Choice4_selectionName_const (int64_t arg1) {
+                                                                                 |     rdi = arg1;
+                                                                                 |     /* BloombergLP::balb::Choice4::selectionName() const */
+    0x00404ed0 mov eax, dword [rdi + 0x20]                                       |     eax = *((rdi + 0x20));
+    0x00404ed3 test eax, eax                                                     |     
+                                                                                 |     if (eax != 0) {
+    0x00404ed5 je 0x404ee2                                                       |         
+    0x00404ed7 cmp eax, 1                                                        |         
+                                                                                 |         if (eax != 1) {
+    0x00404eda jne 0x404ee8                                                      |             goto label_0;
+                                                                                 |         }
+    0x00404edc mov eax, 0x448363                                                 |         eax = "selection2";
+    0x00404ee1 ret                                                               |         return eax;
+                                                                                 |     }
+    0x00404ee2 mov eax, 0x448358                                                 |     eax = "selection1";
+    0x00404ee7 ret                                                               |     return eax;
+                                                                                 | label_0:
+    0x00404ee8 mov eax, 0x448383                                                 |     eax = "(* UNDEFINED *)";
+    0x00404eed ret                                                               |     return eax;
+                                                                                 | }

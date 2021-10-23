@@ -1,0 +1,55 @@
+    ; assembly                                                   | /* r2dec pseudo code output */
+                                                                 | /* bslmt_sluice.t/assume @ 0x406bb0 */
+                                                                 | #include <stdint.h>
+                                                                 |  
+    ; (fcn) method.BloombergLP::bslmt::Sluice.enter__ ()         | int64_t method_BloombergLP::bslmt::Sluice_enter_ (int64_t arg1) {
+                                                                 |     rdi = arg1;
+                                                                 |     /* BloombergLP::bslmt::Sluice::enter() */
+    0x00406bb0 push r14                                          |     
+    0x00406bb2 push rbx                                          |     
+    0x00406bb3 push rax                                          |     
+    0x00406bb4 mov r14, rdi                                      |     r14 = rdi;
+    0x00406bb7 call 0x4039e0                                     |     pthread_mutex_lock ();
+    0x00406bbc mov rbx, qword [r14 + 0x30]                       |     rbx = *((r14 + 0x30));
+    0x00406bc0 test rbx, rbx                                     |     
+                                                                 |     if (rbx != 0) {
+    0x00406bc3 je 0x406bcb                                       |         
+    0x00406bc5 mov eax, dword [rbx]                              |         eax = *(rbx);
+    0x00406bc7 inc eax                                           |         eax++;
+    0x00406bc9 jmp 0x406c1f                                      |         
+                                                                 |     } else {
+    0x00406bcb mov rbx, qword [r14 + 0x38]                       |         rbx = *((r14 + 0x38));
+    0x00406bcf test rbx, rbx                                     |         
+                                                                 |         if (rbx != 0) {
+    0x00406bd2 je 0x406bde                                       |             
+    0x00406bd4 mov rax, qword [rbx + 0x30]                       |             rax = *((rbx + 0x30));
+    0x00406bd8 mov qword [r14 + 0x38], rax                       |             *((r14 + 0x38)) = rax;
+    0x00406bdc jmp 0x406c16                                      |             
+                                                                 |         } else {
+    0x00406bde mov rdi, qword [r14 + 0x48]                       |             rdi = *((r14 + 0x48));
+    0x00406be2 mov rax, qword [rdi]                              |             rax = *(rdi);
+    0x00406be5 mov esi, 0x38                                     |             esi = 0x38;
+    0x00406bea call qword [rax + 0x10]                           |             rax = uint64_t (*rax + 0x10)() ();
+    0x00406bed mov rbx, rax                                      |             rbx = rax;
+    0x00406bf0 mov eax, dword [r14 + 0x40]                       |             eax = *((r14 + 0x40));
+    0x00406bf4 mov qword [rbx], 0                                |             *(rbx) = 0;
+    0x00406bfb mov dword [rbx + 0x28], eax                       |             *((rbx + 0x28)) = eax;
+    0x00406bfe mov rdi, rbx                                      |             rdi = rbx;
+    0x00406c01 add rdi, 8                                        |             rdi += 8;
+    0x00406c05 xor esi, esi                                      |             esi = 0;
+    0x00406c07 xor edx, edx                                      |             edx = 0;
+    0x00406c09 call 0x403830                                     |             sem_init ();
+    0x00406c0e mov qword [rbx + 0x30], 0                         |             *((rbx + 0x30)) = 0;
+                                                                 |         }
+    0x00406c16 mov qword [r14 + 0x30], rbx                       |         *((r14 + 0x30)) = rbx;
+    0x00406c1a mov eax, 1                                        |         eax = 1;
+                                                                 |     }
+    0x00406c1f mov dword [rbx], eax                              |     *(rbx) = eax;
+    0x00406c21 mov rdi, r14                                      |     rdi = r14;
+    0x00406c24 call 0x403a80                                     |     pthread_mutex_unlock ();
+    0x00406c29 mov rax, rbx                                      |     rax = rbx;
+    0x00406c2c add rsp, 8                                        |     
+    0x00406c30 pop rbx                                           |     
+    0x00406c31 pop r14                                           |     
+    0x00406c33 ret                                               |     return rax;
+                                                                 | }

@@ -1,0 +1,187 @@
+    ; assembly                                           | /* r2dec pseudo code output */
+                                                         | /* bdlc_flathashset.t/assume @ 0x44ee50 */
+                                                         | #include <stdint.h>
+                                                         |  
+    ; (fcn) fcn.0044ee50 ()                              | uint64_t fcn_0044ee50 (int64_t arg3, int64_t arg2, int64_t arg1) {
+                                                         |     int64_t var_8h;
+                                                         |     int64_t var_10h;
+                                                         |     rdx = arg3;
+                                                         |     rsi = arg2;
+                                                         |     rdi = arg1;
+    0x0044ee50 push rbp                                  |     
+    0x0044ee51 push r15                                  |     
+    0x0044ee53 push r14                                  |     
+    0x0044ee55 push r13                                  |     
+    0x0044ee57 push r12                                  |     
+    0x0044ee59 push rbx                                  |     
+    0x0044ee5a sub rsp, 0x18                             |     
+    0x0044ee5e mov rbp, rdx                              |     
+    0x0044ee61 mov r15, rsi                              |     r15 = rsi;
+    0x0044ee64 mov r14, rdi                              |     r14 = rdi;
+    0x0044ee67 mov r12, qword [rsi + 0x28]               |     r12 = *((rsi + 0x28));
+    0x0044ee6b mov rdi, rsi                              |     rdi = rsi;
+    0x0044ee6e mov rsi, rdx                              |     rsi = rdx;
+    0x0044ee71 mov rdx, r12                              |     rdx = r12;
+    0x0044ee74 call 0x44f040                             |     rax = BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>,bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>,BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>>,SeedIsHash<bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>>,bsl::equal_to<bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>>>::findKey(bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>const&,unsigned long)const ();
+    0x0044ee79 mov rbx, rax                              |     rbx = rax;
+    0x0044ee7c mov rax, qword [r15 + 0x18]               |     rax = *((r15 + 0x18));
+    0x0044ee80 cmp rbx, rax                              |     
+                                                         |     if (rbx != rax) {
+    0x0044ee83 jne 0x44ef00                              |         goto label_0;
+                                                         |     }
+    0x0044ee85 mov qword [rsp + 8], rbp                  |     *((rsp + 8)) = rbp;
+    0x0044ee8a mov rax, rbx                              |     rax = rbx;
+    0x0044ee8d shr rax, 3                                |     rax >>= 3;
+    0x0044ee91 lea rcx, [rax*8]                          |     rcx = rax*8;
+    0x0044ee99 sub rcx, rax                              |     rcx -= rax;
+    0x0044ee9c cmp qword [r15 + 0x10], rcx               |     
+                                                         |     if (*((r15 + 0x10)) >= rcx) {
+    0x0044eea0 jb 0x44eebe                               |         
+    0x0044eea2 lea rax, [rbx + rbx]                      |         rax = rbx + rbx;
+    0x0044eea6 test rbx, rbx                             |         
+    0x0044eea9 mov esi, 0x20                             |         esi = 0x20;
+                                                         |         if (rbx != 0) {
+    0x0044eeae cmovne rsi, rax                           |             rsi = rax;
+                                                         |         }
+    0x0044eeb2 mov rdi, r15                              |         rdi = r15;
+    0x0044eeb5 call 0x44f1c0                             |         BloombergLP::bdlc::FlatHashTable<bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>,bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>,BloombergLP::bdlc::FlatHashSet_EntryUtil<bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>>,SeedIsHash<bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>>,bsl::equal_to<bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>>>::rehashRaw(unsigned long) ();
+    0x0044eeba mov rbx, qword [r15 + 0x18]               |         rbx = *((r15 + 0x18));
+                                                         |     }
+    0x0044eebe test rbx, rbx                             |     
+                                                         |     if (rbx == 0) {
+    0x0044eec1 je 0x44ef07                               |         goto label_1;
+                                                         |     }
+    0x0044eec3 mov cl, byte [r15 + 0x20]                 |     cl = *((r15 + 0x20));
+    0x0044eec7 mov rax, r12                              |     rax = r12;
+    0x0044eeca shr rax, cl                               |     rax >>= cl;
+    0x0044eecd mov rcx, qword [r15 + 8]                  |     rcx = *((r15 + 8));
+    0x0044eed1 shl rax, 4                                |     rax <<= 4;
+    0x0044eed5 lea rdx, [rbx - 1]                        |     rdx = rbx - 1;
+    0x0044eed9 xor esi, esi                              |     esi = 0;
+    0x0044eedb mov r8, qword [rsp + 8]                   |     r8 = *((rsp + 8));
+                                                         |     do {
+    0x0044eee0 movdqu xmm0, xmmword [rcx + rax]          |         __asm ("movdqu xmm0, xmmword [rcx + rax]");
+    0x0044eee5 pmovmskb edi, xmm0                        |         __asm ("pmovmskb edi, xmm0");
+    0x0044eee9 test di, di                               |         
+                                                         |         if (di != 0) {
+    0x0044eeec jne 0x44ef0e                              |             goto label_2;
+                                                         |         }
+    0x0044eeee add rax, 0x10                             |         rax += 0x10;
+    0x0044eef2 and rax, rdx                              |         rax &= rdx;
+    0x0044eef5 add rsi, 0x10                             |         rsi += 0x10;
+    0x0044eef9 cmp rsi, rbx                              |         
+    0x0044eefc jb 0x44eee0                               |         
+                                                         |     } while (rsi < rbx);
+    0x0044eefe jmp 0x44ef1a                              |     goto label_3;
+                                                         | label_0:
+    0x0044ef00 xor ecx, ecx                              |     ecx = 0;
+    0x0044ef02 jmp 0x44effb                              |     goto label_4;
+                                                         | label_1:
+    0x0044ef07 mov r8, qword [rsp + 8]                   |     r8 = *((rsp + 8));
+    0x0044ef0c jmp 0x44ef1a                              |     goto label_3;
+                                                         | label_2:
+    0x0044ef0e movzx ecx, di                             |     ecx = (int32_t) di;
+    0x0044ef11 bsf ecx, ecx                              |     __asm ("bsf ecx, ecx");
+    0x0044ef14 add rax, rcx                              |     rax += rcx;
+    0x0044ef17 mov rbx, rax                              |     rbx = rax;
+                                                         | label_3:
+    0x0044ef1a mov qword [rsp + 0x10], r12               |     *((rsp + 0x10)) = r12;
+    0x0044ef1f mov r12, qword [r15]                      |     r12 = *(r15);
+    0x0044ef22 mov rdi, qword [r15 + 0x38]               |     rdi = *((r15 + 0x38));
+    0x0044ef26 lea r13, [rbx + rbx*2]                    |     r13 = rbx * 3;
+    0x0044ef2a shl r13, 4                                |     r13 <<= 4;
+    0x0044ef2e lea rbp, [r12 + r13]                      |     rbp = r12 + r13;
+    0x0044ef32 test rdi, rdi                             |     
+                                                         |     if (rdi == 0) {
+    0x0044ef35 jne 0x44ef50                              |         
+    0x0044ef37 mov rdi, qword [rip + 0x253b4a]           |         rdi = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x0044ef3e test rdi, rdi                             |         
+                                                         |         if (rdi != 0) {
+    0x0044ef41 jne 0x44ef50                              |             goto label_5;
+                                                         |         }
+    0x0044ef43 call 0x457e60                             |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+    0x0044ef48 mov r8, qword [rsp + 8]                   |         r8 = *((rsp + 8));
+    0x0044ef4d mov rdi, rax                              |         rdi = rax;
+                                                         |     }
+                                                         | label_5:
+    0x0044ef50 mov rax, qword [r8 + 0x20]                |     rax = *((r8 + 0x20));
+    0x0044ef54 mov qword [rbp + 0x20], rax               |     *((rbp + 0x20)) = rax;
+    0x0044ef58 movups xmm0, xmmword [r8]                 |     __asm ("movups xmm0, xmmword [r8]");
+    0x0044ef5c movups xmm1, xmmword [r8 + 0x10]          |     __asm ("movups xmm1, xmmword [r8 + 0x10]");
+    0x0044ef61 movups xmmword [rbp + 0x10], xmm1         |     __asm ("movups xmmword [rbp + 0x10], xmm1");
+    0x0044ef65 movups xmmword [rbp], xmm0                |     __asm ("movups xmmword [rbp], xmm0");
+    0x0044ef69 mov qword [r12 + r13 + 0x28], rdi         |     *((r12 + r13 + 0x28)) = rdi;
+    0x0044ef6e cmp qword [r12 + r13 + 0x20], 0x17        |     
+                                                         |     if (*((r12 + r13 + 0x20)) != 0x17) {
+    0x0044ef74 je 0x44efe2                               |         
+    0x0044ef76 lea rcx, [r12 + r13 + 0x20]               |         rcx = r12 + r13 + 0x20;
+    0x0044ef7b mov rax, qword [r8 + 0x18]                |         rax = *((r8 + 0x18));
+    0x0044ef7f cmp rax, 0x17                             |         
+    0x0044ef83 mov esi, 0x17                             |         esi = 0x17;
+                                                         |         if (rax > 0x17) {
+    0x0044ef88 cmova rsi, rax                            |             rsi = rax;
+                                                         |         }
+    0x0044ef8c mov qword [rbp], 0                        |         *(rbp) = 0;
+    0x0044ef94 mov qword [r12 + r13 + 0x18], rax         |         *((r12 + r13 + 0x18)) = rax;
+    0x0044ef99 mov qword [rcx], rsi                      |         *(rcx) = rsi;
+    0x0044ef9c cmp rax, 0x18                             |         
+                                                         |         if (rax >= 0x18) {
+    0x0044efa0 jb 0x44efc1                               |             
+    0x0044efa2 inc rsi                                   |             rsi++;
+    0x0044efa5 mov rax, qword [rdi]                      |             rax = *(rdi);
+    0x0044efa8 mov r12, rcx                              |             r12 = rcx;
+    0x0044efab call qword [rax + 0x10]                   |             rax = uint64_t (*rax + 0x10)() ();
+    0x0044efae mov rcx, r12                              |             rcx = r12;
+    0x0044efb1 mov r8, qword [rsp + 8]                   |             r8 = *((rsp + 8));
+    0x0044efb6 mov qword [rbp], rax                      |             *(rbp) = rax;
+    0x0044efba cmp qword [r12], 0x17                     |             
+                                                         |             if (*(r12) != 0x17) {
+    0x0044efbf jne 0x44efc4                              |                 goto label_6;
+                                                         |             }
+                                                         |         }
+    0x0044efc1 mov rax, rbp                              |         rax = rbp;
+                                                         | label_6:
+    0x0044efc4 mov rdx, qword [rcx - 8]                  |         rdx = *((rcx - 8));
+    0x0044efc8 inc rdx                                   |         rdx++;
+                                                         |         if (rdx == 0) {
+    0x0044efcb je 0x44efe2                               |             goto label_7;
+                                                         |         }
+    0x0044efcd cmp qword [r8 + 0x20], 0x17               |         
+                                                         |         if (*((r8 + 0x20)) != 0x17) {
+    0x0044efd2 je 0x44efd7                               |             
+    0x0044efd4 mov r8, qword [r8]                        |             r8 = *(r8);
+                                                         |         }
+    0x0044efd7 mov rdi, rax                              |         
+    0x0044efda mov rsi, r8                               |         
+    0x0044efdd call 0x403e80                             |         memcpy (rax, r8, rdx);
+                                                         |     }
+                                                         | label_7:
+    0x0044efe2 mov rcx, qword [rsp + 0x10]               |     rcx = *((rsp + 0x10));
+    0x0044efe7 and cl, 0x7f                              |     cl &= 0x7f;
+    0x0044efea mov rax, qword [r15 + 8]                  |     rax = *((r15 + 8));
+    0x0044efee mov byte [rax + rbx], cl                  |     *((rax + rbx)) = cl;
+    0x0044eff1 inc qword [r15 + 0x10]                    |     *((r15 + 0x10))++;
+    0x0044eff5 mov rax, qword [r15 + 0x18]               |     rax = *((r15 + 0x18));
+    0x0044eff9 mov cl, 1                                 |     cl = 1;
+                                                         | label_4:
+    0x0044effb lea rdx, [rbx + rbx*2]                    |     rdx = rbx * 3;
+    0x0044efff shl rdx, 4                                |     rdx <<= 4;
+    0x0044f003 add rdx, qword [r15]                      |     rdx += *(r15);
+    0x0044f006 mov rsi, qword [r15 + 8]                  |     rsi = *((r15 + 8));
+    0x0044f00a add rsi, rbx                              |     rsi += rbx;
+    0x0044f00d not rbx                                   |     rbx = ~rbx;
+    0x0044f010 add rbx, rax                              |     rbx += rax;
+    0x0044f013 mov qword [r14], rdx                      |     *(r14) = rdx;
+    0x0044f016 mov qword [r14 + 8], rsi                  |     *((r14 + 8)) = rsi;
+    0x0044f01a mov qword [r14 + 0x10], rbx               |     *((r14 + 0x10)) = rbx;
+    0x0044f01e mov byte [r14 + 0x18], cl                 |     *((r14 + 0x18)) = cl;
+    0x0044f022 mov rax, r14                              |     rax = r14;
+    0x0044f025 add rsp, 0x18                             |     
+    0x0044f029 pop rbx                                   |     
+    0x0044f02a pop r12                                   |     
+    0x0044f02c pop r13                                   |     
+    0x0044f02e pop r14                                   |     
+    0x0044f030 pop r15                                   |     
+    0x0044f032 pop rbp                                   |     
+    0x0044f033 ret                                       |     return rax;
+                                                         | }

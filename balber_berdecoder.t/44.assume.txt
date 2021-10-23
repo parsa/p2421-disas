@@ -1,0 +1,47 @@
+    ; assembly                                                                                           | /* r2dec pseudo code output */
+                                                                                                         | /* balber_berdecoder.t/assume @ 0x45cef0 */
+                                                                                                         | #include <stdint.h>
+                                                                                                         |  
+    ; (fcn) method.BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice.makeMyChoice2__ ()         | int64_t method_BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice_makeMyChoice2_ (int64_t arg1) {
+                                                                                                         |     rdi = arg1;
+                                                                                                         |     /* BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::makeMyChoice2() */
+    0x0045cef0 push rbx                                                                                  |     
+    0x0045cef1 mov rbx, rdi                                                                              |     rbx = rdi;
+    0x0045cef4 mov eax, dword [rdi + 0x30]                                                               |     eax = *((rdi + 0x30));
+    0x0045cef7 test eax, eax                                                                             |     
+                                                                                                         |     if (eax != 0) {
+    0x0045cef9 je 0x45cf13                                                                               |         
+    0x0045cefb cmp eax, 1                                                                                |         
+                                                                                                         |         if (eax == 1) {
+    0x0045cefe jne 0x45cf13                                                                              |             
+    0x0045cf00 mov rdi, rbx                                                                              |             
+    0x0045cf03 xor esi, esi                                                                              |             
+    0x0045cf05 mov rdx, 0xffffffffffffffff                                                               |             
+    0x0045cf0c call 0x473910                                                                             |             bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>::erase(unsigned long,unsigned long) (rbx, 0, 0xffffffffffffffff);
+    0x0045cf11 jmp 0x45cf54                                                                              |             
+                                                                                                         |         }
+                                                                                                         |     } else {
+    0x0045cf13 mov dword [rbx + 0x30], 0xffffffff                                                        |         *((rbx + 0x30)) = 0xffffffff;
+    0x0045cf1a mov rax, qword [rbx + 0x38]                                                               |         rax = *((rbx + 0x38));
+    0x0045cf1e test rax, rax                                                                             |         
+                                                                                                         |         if (rax == 0) {
+    0x0045cf21 jne 0x45cf34                                                                              |             
+    0x0045cf23 mov rax, qword [rip + 0x29a4c6]                                                           |             rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x0045cf2a test rax, rax                                                                             |             
+                                                                                                         |             if (rax != 0) {
+    0x0045cf2d jne 0x45cf34                                                                              |                 goto label_0;
+                                                                                                         |             }
+    0x0045cf2f call 0x46d200                                                                             |             rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                                                                         |         }
+                                                                                                         | label_0:
+    0x0045cf34 mov qword [rbx], 0                                                                        |         *(rbx) = 0;
+    0x0045cf3b movaps xmm0, xmmword [rip + 0x3a7de]                                                      |         xmm0 = .comment;
+    0x0045cf42 movups xmmword [rbx + 0x18], xmm0                                                         |         __asm ("movups xmmword [rbx + 0x18], xmm0");
+    0x0045cf46 mov qword [rbx + 0x28], rax                                                               |         *((rbx + 0x28)) = rax;
+    0x0045cf4a mov byte [rbx], 0                                                                         |         *(rbx) = 0;
+    0x0045cf4d mov dword [rbx + 0x30], 1                                                                 |         *((rbx + 0x30)) = 1;
+                                                                                                         |     }
+    0x0045cf54 mov rax, rbx                                                                              |     rax = rbx;
+    0x0045cf57 pop rbx                                                                                   |     
+    0x0045cf58 ret                                                                                       |     return rax;
+                                                                                                         | }

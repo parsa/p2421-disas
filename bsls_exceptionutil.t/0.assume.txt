@@ -1,0 +1,12 @@
+    ; assembly                                       | /* r2dec pseudo code output */
+                                                     | /* bsls_exceptionutil.t/assume @ 0x400fb0 */
+                                                     | #include <stdint.h>
+                                                     |  
+    ; (fcn) sym.abortSignalHandler ()                | int8_t abortSignalHandler (void) {
+    0x00400fb0 push rax                              |     
+    0x00400fb1 mov al, byte [rip + 0x2021c5]         |     al = g_inTest;
+    0x00400fb7 mov edi, 0x603180                     |     edi = g_jumpBuffer;
+    0x00400fbc mov esi, 1                            |     esi = 1;
+    0x00400fc1 call 0x400d60                         |     siglongjmp ();
+    0x00400fc6 nop word cs:[rax + rax]               |     
+                                                     | }

@@ -1,0 +1,53 @@
+    ; assembly                                                                                       | /* r2dec pseudo code output */
+                                                                                                     | /* balb_testmessages.t/assume @ 0x41e430 */
+                                                                                                     | #include <stdint.h>
+                                                                                                     |  
+    ; (fcn) method.BloombergLP::bdlde::Utf8Util.numCodePointsRaw_char_const__unsigned_long_ ()       | int64_t method_BloombergLP::bdlde::Utf8Util_numCodePointsRaw_char_const_unsigned_long_ (int64_t arg2, uint32_t arg1) {
+                                                                                                     |     rsi = arg2;
+                                                                                                     |     rdi = arg1;
+                                                                                                     |     /* BloombergLP::bdlde::Utf8Util::numCodePointsRaw(char const*, unsigned long) */
+    0x0041e430 test rsi, rsi                                                                         |     
+                                                                                                     |     if (rsi <= 0) {
+    0x0041e433 jle 0x41e487                                                                          |         goto label_2;
+                                                                                                     |     }
+    0x0041e435 add rsi, rdi                                                                          |     rsi += rdi;
+    0x0041e438 xor eax, eax                                                                          |     eax = 0;
+    0x0041e43a jmp 0x41e45b                                                                          |     goto label_3;
+                                                                                                     | label_0:
+    0x0041e43c mov ecx, 2                                                                            |     ecx = 2;
+    0x0041e441 nop word cs:[rax + rax]                                                               |     
+    0x0041e44b nop dword [rax + rax]                                                                 |     
+                                                                                                     |     do {
+                                                                                                     | label_1:
+    0x0041e450 add rdi, rcx                                                                          |         rdi += rcx;
+    0x0041e453 inc rax                                                                               |         rax++;
+    0x0041e456 cmp rdi, rsi                                                                          |         
+                                                                                                     |         if (rdi >= rsi) {
+    0x0041e459 jae 0x41e486                                                                          |             goto label_4;
+                                                                                                     |         }
+                                                                                                     | label_3:
+    0x0041e45b movzx edx, byte [rdi]                                                                 |         edx = *(rdi);
+    0x0041e45e shr edx, 4                                                                            |         edx >>= 4;
+    0x0041e461 mov ecx, 1                                                                            |         ecx = 1;
+    0x0041e466 cmp edx, 8                                                                            |         
+    0x0041e469 jb 0x41e450                                                                           |         
+                                                                                                     |     } while (edx < 8);
+    0x0041e46b lea ecx, [rdx - 0xc]                                                                  |     ecx = rdx - 0xc;
+    0x0041e46e cmp ecx, 2                                                                            |     
+                                                                                                     |     if (ecx < 2) {
+    0x0041e471 jb 0x41e43c                                                                           |         goto label_0;
+                                                                                                     |     }
+    0x0041e473 cmp edx, 0xe                                                                          |     
+                                                                                                     |     if (edx == 0xe) {
+    0x0041e476 jne 0x41e47f                                                                          |         
+    0x0041e478 mov ecx, 3                                                                            |         ecx = 3;
+    0x0041e47d jmp 0x41e450                                                                          |         goto label_1;
+                                                                                                     |     }
+    0x0041e47f mov ecx, 4                                                                            |     ecx = 4;
+    0x0041e484 jmp 0x41e450                                                                          |     goto label_1;
+                                                                                                     | label_4:
+    0x0041e486 ret                                                                                   |     return rax;
+                                                                                                     | label_2:
+    0x0041e487 xor eax, eax                                                                          |     eax = 0;
+    0x0041e489 ret                                                                                   |     return rax;
+                                                                                                     | }

@@ -1,0 +1,55 @@
+    ; assembly                                                               | /* r2dec pseudo code output */
+                                                                             | /* bdlbb_blobstreambuf.t/assume @ 0x40cc90 */
+                                                                             | #include <stdint.h>
+                                                                             |  
+    ; (fcn) method.BloombergLP::bdlbb::InBlobStreamBuf.underflow__ ()        | int64_t method_BloombergLP::bdlbb::InBlobStreamBuf_underflow_ (int64_t arg1) {
+                                                                             |     rdi = arg1;
+                                                                             |     /* BloombergLP::bdlbb::InBlobStreamBuf::underflow() */
+    0x0040cc90 mov rcx, qword [rdi + 0x40]                                   |     rcx = *((rdi + 0x40));
+    0x0040cc94 mov eax, dword [rcx + 0x24]                                   |     eax = *((rcx + 0x24));
+    0x0040cc97 mov r9d, dword [rdi + 0x4c]                                   |     r9d = *((rdi + 0x4c));
+    0x0040cc9b mov edx, dword [rdi + 0x18]                                   |     edx = *((rdi + 0x18));
+    0x0040cc9e mov rsi, qword [rdi + 0x10]                                   |     rsi = *((rdi + 0x10));
+    0x0040cca2 sub edx, esi                                                  |     edx -= esi;
+    0x0040cca4 add edx, r9d                                                  |     edx += r9d;
+    0x0040cca7 cmp edx, eax                                                  |     
+                                                                             |     if (edx < eax) {
+    0x0040cca9 jge 0x40cd12                                                  |         
+    0x0040ccab mov r11, qword [rdi + 0x20]                                   |         r11 = *((rdi + 0x20));
+    0x0040ccaf sub r11, rsi                                                  |         r11 -= rsi;
+    0x0040ccb2 movsxd rsi, dword [rdi + 0x48]                                |         rsi = *((rdi + 0x48));
+    0x0040ccb6 mov r8, qword [rcx]                                           |         r8 = *(rcx);
+    0x0040ccb9 lea rdx, [rsi + rsi*2]                                        |         rdx = rsi * 3;
+    0x0040ccbd movsxd r10, dword [r8 + rdx*8 + 0x10]                         |         r10 = *((r8 + rdx*8 + 0x10));
+    0x0040ccc2 cmp r11, r10                                                  |         
+                                                                             |         if (r11 == r10) {
+    0x0040ccc5 jne 0x40cce5                                                  |             
+    0x0040ccc7 add r9d, r10d                                                 |             r9d += r10d;
+    0x0040ccca mov dword [rdi + 0x4c], r9d                                   |             *((rdi + 0x4c)) = r9d;
+    0x0040ccce inc esi                                                       |             esi++;
+    0x0040ccd0 mov dword [rdi + 0x48], esi                                   |             *((rdi + 0x48)) = esi;
+    0x0040ccd3 mov r8, qword [rcx]                                           |             r8 = *(rcx);
+    0x0040ccd6 movsxd rsi, esi                                               |             rsi = (int64_t) esi;
+    0x0040ccd9 lea rcx, [rsi + rsi*2]                                        |             rcx = rsi * 3;
+    0x0040ccdd mov r10d, dword [r8 + rcx*8 + 0x10]                           |             r10d = *((r8 + rcx*8 + 0x10));
+    0x0040cce2 xor r11d, r11d                                                |             r11d = 0;
+                                                                             |         }
+    0x0040cce5 lea rcx, [rsi + rsi*2]                                        |         rcx = rsi * 3;
+    0x0040cce9 sub eax, r9d                                                  |         eax -= r9d;
+    0x0040ccec cmp r10d, eax                                                 |         
+                                                                             |         if (r10d < eax) {
+    0x0040ccef cmovl eax, r10d                                               |             eax = r10d;
+                                                                             |         }
+    0x0040ccf3 mov rcx, qword [r8 + rcx*8]                                   |         rcx = *((r8 + rcx*8));
+    0x0040ccf7 cdqe                                                          |         rax = (int64_t) eax;
+    0x0040ccf9 lea rdx, [rcx + r11]                                          |         rdx = rcx + r11;
+    0x0040ccfd add rax, rcx                                                  |         rax += rcx;
+    0x0040cd00 mov qword [rdi + 0x10], rcx                                   |         *((rdi + 0x10)) = rcx;
+    0x0040cd04 mov qword [rdi + 0x18], rdx                                   |         *((rdi + 0x18)) = rdx;
+    0x0040cd08 mov qword [rdi + 0x20], rax                                   |         *((rdi + 0x20)) = rax;
+    0x0040cd0c movzx eax, byte [rcx + r11]                                   |         eax = *((rcx + r11));
+    0x0040cd11 ret                                                           |         return rax;
+                                                                             |     }
+    0x0040cd12 mov eax, 0xffffffff                                           |     eax = 0xffffffff;
+    0x0040cd17 ret                                                           |     return rax;
+                                                                             | }

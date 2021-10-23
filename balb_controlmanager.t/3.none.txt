@@ -1,0 +1,59 @@
+    ; assembly                                                                                   | /* r2dec pseudo code output */
+                                                                                                 | /* balb_controlmanager.t/none @ 0x40d370 */
+                                                                                                 | #include <stdint.h>
+                                                                                                 |  
+    ; (fcn) method.BloombergLP::bdlb::String.strrstr_char_const__int__char_const__int_ ()        | uint64_t method_BloombergLP::bdlb::String_strrstr_char_const_int_char_const_int_ (int64_t arg4, int64_t arg3, signed int64_t arg2, int64_t arg1) {
+                                                                                                 |     rcx = arg4;
+                                                                                                 |     rdx = arg3;
+                                                                                                 |     rsi = arg2;
+                                                                                                 |     rdi = arg1;
+                                                                                                 |     /* BloombergLP::bdlb::String::strrstr(char const*, int, char const*, int) */
+    0x0040d370 push r15                                                                          |     
+    0x0040d372 push r14                                                                          |     
+    0x0040d374 push r13                                                                          |     
+    0x0040d376 push r12                                                                          |     
+    0x0040d378 push rbx                                                                          |     
+    0x0040d379 mov r15, rdi                                                                      |     r15 = rdi;
+    0x0040d37c test ecx, ecx                                                                     |     
+                                                                                                 |     if (ecx == 0) {
+    0x0040d37e je 0x40d3b7                                                                       |         goto label_0;
+                                                                                                 |     }
+    0x0040d380 cmp esi, ecx                                                                      |     
+                                                                                                 |     if (esi < ecx) {
+    0x0040d382 jl 0x40d3b2                                                                       |         goto label_1;
+                                                                                                 |     }
+    0x0040d384 mov r14, rdx                                                                      |     r14 = rdx;
+    0x0040d387 movsxd r12, ecx                                                                   |     r12 = (int64_t) ecx;
+    0x0040d38a movsxd rbx, esi                                                                   |     rbx = (int64_t) esi;
+    0x0040d38d sub r15, r12                                                                      |     r15 -= r12;
+                                                                                                 |     do {
+    0x0040d390 lea r13, [r15 + rbx]                                                              |         r13 = r15 + rbx;
+    0x0040d394 mov rdi, r13                                                                      |         rdi = r13;
+    0x0040d397 mov rsi, r14                                                                      |         rsi = r14;
+    0x0040d39a mov rdx, r12                                                                      |         rdx = r12;
+    0x0040d39d call 0x404690                                                                     |         eax = bcmp ();
+    0x0040d3a2 test eax, eax                                                                     |         
+                                                                                                 |         if (eax == 0) {
+    0x0040d3a4 je 0x40d3c0                                                                       |             goto label_2;
+                                                                                                 |         }
+    0x0040d3a6 lea rax, [rbx - 1]                                                                |         rax = rbx - 1;
+    0x0040d3aa cmp rbx, r12                                                                      |         
+    0x0040d3ad mov rbx, rax                                                                      |         rbx = rax;
+    0x0040d3b0 jg 0x40d390                                                                       |         
+                                                                                                 |     } while (rbx > r12);
+                                                                                                 | label_1:
+    0x0040d3b2 xor r13d, r13d                                                                    |     r13d = 0;
+    0x0040d3b5 jmp 0x40d3c0                                                                      |     goto label_2;
+                                                                                                 | label_0:
+    0x0040d3b7 movsxd rax, esi                                                                   |     rax = (int64_t) esi;
+    0x0040d3ba add r15, rax                                                                      |     r15 += rax;
+    0x0040d3bd mov r13, r15                                                                      |     r13 = r15;
+                                                                                                 | label_2:
+    0x0040d3c0 mov rax, r13                                                                      |     rax = r15;
+    0x0040d3c3 pop rbx                                                                           |     
+    0x0040d3c4 pop r12                                                                           |     
+    0x0040d3c6 pop r13                                                                           |     
+    0x0040d3c8 pop r14                                                                           |     
+    0x0040d3ca pop r15                                                                           |     
+    0x0040d3cc ret                                                                               |     return rax;
+                                                                                                 | }

@@ -1,0 +1,32 @@
+    ; assembly                                                                           | /* r2dec pseudo code output */
+                                                                                         | /* baljsn_encoder.t/assume @ 0x4d0f30 */
+                                                                                         | #include <stdint.h>
+                                                                                         |  
+    ; (fcn) method.BloombergLP::s_baltst::SequenceWithAnonymityChoice1.reset__ ()        | int64_t method_BloombergLP::s_baltst::SequenceWithAnonymityChoice1_reset_ (int64_t arg1) {
+                                                                                         |     rdi = arg1;
+                                                                                         |     /* BloombergLP::s_baltst::SequenceWithAnonymityChoice1::reset() */
+    0x004d0f30 push rbx                                                                  |     
+    0x004d0f31 mov rbx, rdi                                                              |     rbx = rdi;
+    0x004d0f34 mov eax, dword [rdi + 0x30]                                               |     eax = *((rdi + 0x30));
+    0x004d0f37 test eax, eax                                                             |     
+                                                                                         |     if (eax != 0) {
+    0x004d0f39 je 0x4d0f5c                                                               |         
+    0x004d0f3b cmp eax, 1                                                                |         
+                                                                                         |         if (eax != 1) {
+    0x004d0f3e jne 0x4d0f5c                                                              |             goto label_0;
+                                                                                         |         }
+    0x004d0f40 cmp qword [rbx + 0x20], 0x17                                              |         
+                                                                                         |         if (*((rbx + 0x20)) != 0x17) {
+    0x004d0f45 je 0x4d0f54                                                               |             
+    0x004d0f47 mov rsi, qword [rbx]                                                      |             rsi = *(rbx);
+    0x004d0f4a mov rdi, qword [rbx + 0x28]                                               |             rdi = *((rbx + 0x28));
+    0x004d0f4e mov rax, qword [rdi]                                                      |             rax = *(rdi);
+    0x004d0f51 call qword [rax + 0x18]                                                   |             uint64_t (*rax + 0x18)() ();
+                                                                                         |         }
+    0x004d0f54 mov qword [rbx + 0x18], 0xffffffffffffffff                                |         *((rbx + 0x18)) = 0xffffffffffffffff;
+                                                                                         |     }
+                                                                                         | label_0:
+    0x004d0f5c mov dword [rbx + 0x30], 0xffffffff                                        |     *((rbx + 0x30)) = 0xffffffff;
+    0x004d0f63 pop rbx                                                                   |     
+    0x004d0f64 ret                                                                       |     return rax;
+                                                                                         | }

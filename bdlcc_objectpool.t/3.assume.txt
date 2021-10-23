@@ -1,0 +1,85 @@
+    ; assembly                                                   | /* r2dec pseudo code output */
+                                                                 | /* bdlcc_objectpool.t/assume @ 0x412220 */
+                                                                 | #include <stdint.h>
+                                                                 |  
+    ; (fcn) fcn.00412220 ()                                      | int64_t fcn_00412220 (int64_t arg4, int64_t arg3, uint32_t arg2, int64_t arg1) {
+                                                                 |     rcx = arg4;
+                                                                 |     rdx = arg3;
+                                                                 |     rsi = arg2;
+                                                                 |     rdi = arg1;
+    0x00412220 push rbp                                          |     
+    0x00412221 push r15                                          |     
+    0x00412223 push r14                                          |     
+    0x00412225 push r13                                          |     
+    0x00412227 push r12                                          |     
+    0x00412229 push rbx                                          |     
+    0x0041222a push rax                                          |     
+    0x0041222b mov r14, rcx                                      |     r14 = rcx;
+    0x0041222e mov r12, rdx                                      |     r12 = rdx;
+    0x00412231 mov r15, rsi                                      |     r15 = rsi;
+    0x00412234 mov qword [rsp], rdi                              |     *(rsp) = rdi;
+    0x00412238 mov r13, qword [rsi + 0x30]                       |     r13 = *((rsi + 0x30));
+    0x0041223c cmp qword [rsi + 0x38], 0x17                      |     
+                                                                 |     if (*((rsi + 0x38)) != 0x17) {
+    0x00412241 je 0x412249                                       |         
+    0x00412243 mov rbp, qword [r15 + 0x18]                       |         rbp = *((r15 + 0x18));
+    0x00412247 jmp 0x41224d                                      |         
+                                                                 |     } else {
+    0x00412249 lea rbp, [r15 + 0x18]                             |         rbp = r15 + 0x18;
+                                                                 |     }
+    0x0041224d mov rax, qword [r14]                              |     rax = *(r14);
+    0x00412250 mov esi, 0x58                                     |     esi = 0x58;
+    0x00412255 mov rdi, r14                                      |     rdi = r14;
+    0x00412258 call qword [rax + 0x10]                           |     rax = uint64_t (*rax + 0x10)() ();
+    0x0041225b mov rbx, rax                                      |     rbx = rax;
+    0x0041225e mov qword [rax], 0x412380                         |     *(rax) = fcn.00412380;
+    0x00412265 mov rax, qword [r12]                              |     rax = *(r12);
+    0x00412269 mov qword [rbx + 8], rax                          |     *((rbx + 8)) = rax;
+    0x0041226d mov rax, qword [r12 + 8]                          |     rax = *((r12 + 8));
+    0x00412272 mov qword [rbx + 0x10], rax                       |     *((rbx + 0x10)) = rax;
+    0x00412276 mov rax, qword [r12 + 0x10]                       |     rax = *((r12 + 0x10));
+    0x0041227b mov qword [rbx + 0x18], rax                       |     *((rbx + 0x18)) = rax;
+    0x0041227f mov rax, qword [r12 + 0x18]                       |     rax = *((r12 + 0x18));
+    0x00412284 mov qword [rbx + 0x20], rax                       |     *((rbx + 0x20)) = rax;
+    0x00412288 lea rdi, [rbx + 0x28]                             |     
+    0x0041228c mov qword [rbx + 0x28], 0                         |     *((rbx + 0x28)) = 0;
+    0x00412294 mov qword [rbx + 0x50], r14                       |     *((rbx + 0x50)) = r14;
+    0x00412298 movaps xmm0, xmmword [rip + 0x2c5c1]              |     xmm0 = .comment;
+    0x0041229f movups xmmword [rbx + 0x40], xmm0                 |     __asm ("movups xmmword [rbx + 0x40], xmm0");
+    0x004122a3 mov ecx, 0x44167d                                 |     
+    0x004122a8 mov rsi, rbp                                      |     
+    0x004122ab mov rdx, r13                                      |     
+    0x004122ae call 0x41b0a0                                     |     bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>::privateAppend(char const*,unsigned long,char const*) (rbx + 0x28, rbp, r13, "string<...>::assign<Iter>(i,j): string too long");
+    0x004122b3 mov edx, 0x417c20                                 |     
+    0x004122b8 mov rdi, qword [rsp]                              |     
+    0x004122bc mov rsi, r15                                      |     
+    0x004122bf mov rcx, rbx                                      |     
+    0x004122c2 call 0x418670                                     |     eax = BloombergLP::bslmt::ThreadUtilImpl<BloombergLP::bslmt::Platform::PosixThreads>::create(unsigned long*,BloombergLP::bslmt::ThreadAttributesconst&,void*(*)(void*),void*) (*(rsp), r15, sym.bslmt_EntryPointFunctorAdapter_invoker, rbx);
+    0x004122c7 mov ebp, eax                                      |     
+    0x004122c9 test eax, eax                                     |     
+                                                                 |     if (eax != 0) {
+    0x004122cb je 0x4122f6                                       |         
+    0x004122cd cmp qword [rbx + 0x48], 0x17                      |         
+                                                                 |         if (*((rbx + 0x48)) != 0x17) {
+    0x004122d2 je 0x4122e2                                       |             
+    0x004122d4 mov rsi, qword [rbx + 0x28]                       |             rsi = *((rbx + 0x28));
+    0x004122d8 mov rdi, qword [rbx + 0x50]                       |             rdi = *((rbx + 0x50));
+    0x004122dc mov rax, qword [rdi]                              |             rax = *(rdi);
+    0x004122df call qword [rax + 0x18]                           |             uint64_t (*rax + 0x18)() ();
+                                                                 |         }
+    0x004122e2 mov qword [rbx + 0x40], 0xffffffffffffffff        |         *((rbx + 0x40)) = 0xffffffffffffffff;
+    0x004122ea mov rax, qword [r14]                              |         rax = *(r14);
+    0x004122ed mov rdi, r14                                      |         rdi = r14;
+    0x004122f0 mov rsi, rbx                                      |         rsi = rbx;
+    0x004122f3 call qword [rax + 0x18]                           |         uint64_t (*rax + 0x18)() ();
+                                                                 |     }
+    0x004122f6 mov eax, ebp                                      |     eax = ebp;
+    0x004122f8 add rsp, 8                                        |     
+    0x004122fc pop rbx                                           |     
+    0x004122fd pop r12                                           |     
+    0x004122ff pop r13                                           |     
+    0x00412301 pop r14                                           |     
+    0x00412303 pop r15                                           |     
+    0x00412305 pop rbp                                           |     
+    0x00412306 ret                                               |     return rax;
+                                                                 | }

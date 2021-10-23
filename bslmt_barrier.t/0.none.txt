@@ -1,0 +1,69 @@
+    ; assembly                                           | /* r2dec pseudo code output */
+                                                         | /* bslmt_barrier.t/none @ 0x403e50 */
+                                                         | #include <stdint.h>
+                                                         |  
+    ; (fcn) sym.testThread5a ()                          | int64_t testThread5a (int64_t arg1) {
+                                                         |     int64_t var_8h;
+                                                         |     int64_t var_10h;
+                                                         |     rdi = arg1;
+    0x00403e50 push r14                                  |     
+    0x00403e52 push rbx                                  |     
+    0x00403e53 sub rsp, 0x18                             |     
+    0x00403e57 mov rbx, rdi                              |     rbx = rdi;
+    0x00403e5a mov eax, 1                                |     eax = 1;
+    0x00403e5f lock xadd dword [rdi + 0x78], eax         |     __asm ("lock xadd dword [rdi + 0x78], eax");
+    0x00403e64 test eax, eax                             |     
+                                                         |     if (eax != 0) {
+    0x00403e66 je 0x403e7e                               |         
+    0x00403e68 mov eax, dword [rbx + 0x84]               |         eax = *((rbx + 0x84));
+    0x00403e6e test eax, eax                             |         
+                                                         |         if (eax != 0) {
+    0x00403e70 je 0x403e88                               |             
+    0x00403e72 cmp eax, 1                                |             
+                                                         |             if (eax != 1) {
+    0x00403e75 jne 0x403e8f                              |                 goto label_0;
+                                                         |             }
+    0x00403e77 call 0x42f1e0                             |             BloombergLP::bsls::SystemTime::nowMonotonicClock() ();
+    0x00403e7c jmp 0x403e8d                              |             
+                                                         |         } else {
+    0x00403e7e mov rdi, rbx                              |             
+    0x00403e81 call 0x409280                             |             BloombergLP::bslmt::Barrier::wait() (rbx);
+    0x00403e86 jmp 0x403ee8                              |             goto label_1;
+                                                         |         }
+    0x00403e88 call 0x42f270                             |         eax = BloombergLP::bsls::SystemTime::nowRealtimeClock() ();
+                                                         |     }
+    0x00403e8d jmp 0x403e93                              |     goto label_2;
+                                                         | label_0:
+    0x00403e8f xor edx, edx                              |     edx = 0;
+    0x00403e91 xor eax, eax                              |     eax = 0;
+                                                         | label_2:
+    0x00403e93 mov qword [rsp + 8], rax                  |     *((rsp + 8)) = rax;
+    0x00403e98 mov dword [rsp + 0x10], edx               |     *((rsp + 0x10)) = edx;
+    0x00403e9c movsxd rax, dword [rbx + 0x7c]            |     rax = *((rbx + 0x7c));
+    0x00403ea0 imul rcx, rax, 0x431bde83                 |     rcx = rax * 0x431bde83;
+    0x00403ea7 mov rdx, rcx                              |     
+    0x00403eaa shr rdx, 0x3f                             |     rdx >>= 0x3f;
+    0x00403eae sar rcx, 0x32                             |     rcx >>= 0x32;
+    0x00403eb2 add ecx, edx                              |     ecx += edx;
+    0x00403eb4 movsxd rsi, ecx                           |     rsi = (int64_t) ecx;
+    0x00403eb7 imul ecx, esi, 0xf4240                    |     ecx = esi * 0xf4240;
+    0x00403ebd sub eax, ecx                              |     eax -= ecx;
+    0x00403ebf imul edx, eax, 0x3e8                      |     edx = eax * 0x3e8;
+    0x00403ec5 lea r14, [rsp + 8]                        |     r14 = rsp + 8;
+    0x00403eca mov rdi, r14                              |     
+    0x00403ecd call 0x42f390                             |     BloombergLP::bsls::TimeInterval::addInterval(long long,int) (r14, rsi, rcx);
+    0x00403ed2 mov rdi, rbx                              |     
+    0x00403ed5 mov rsi, r14                              |     
+    0x00403ed8 call 0x4091d0                             |     eax = BloombergLP::bslmt::Barrier::timedWait(BloombergLP::bsls::TimeIntervalconst&) (rbx, r14);
+    0x00403edd test eax, eax                             |     
+                                                         |     if (eax != 0) {
+    0x00403edf je 0x403ee8                               |         
+    0x00403ee1 lock inc dword [rbx + 0x80]               |         *((rbx + 0x80))++;
+                                                         |     }
+                                                         | label_1:
+    0x00403ee8 mov rax, rbx                              |     rax = rbx;
+    0x00403eeb add rsp, 0x18                             |     
+    0x00403eef pop rbx                                   |     
+    0x00403ef0 pop r14                                   |     
+    0x00403ef2 ret                                       |     return rax;
+                                                         | }

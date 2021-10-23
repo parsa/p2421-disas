@@ -1,0 +1,60 @@
+    ; assembly                                                                                   | /* r2dec pseudo code output */
+                                                                                                 | /* bdlmt_multiqueuethreadpool.t/none @ 0x437d30 */
+                                                                                                 | #include <stdint.h>
+                                                                                                 |  
+    ; (fcn) method.BloombergLP::bdlmt::ThreadPool.enqueueJob_bsl::function_void_____ ()          | int64_t method_BloombergLP::bdlmt::ThreadPool_enqueueJob_bsl::function_void_ (uint32_t arg2, int64_t arg1) {
+                                                                                                 |     rsi = arg2;
+                                                                                                 |     rdi = arg1;
+                                                                                                 |     /* BloombergLP::bdlmt::ThreadPool::enqueueJob(bsl::function<void ()>&&) */
+    0x00437d30 push r15                                                                          |     
+    0x00437d32 push r14                                                                          |     
+    0x00437d34 push rbx                                                                          |     
+    0x00437d35 cmp qword [rsi + 0x40], 0                                                         |     
+                                                                                                 |     if (*((rsi + 0x40)) != 0) {
+    0x00437d3a je 0x437dd6                                                                       |         
+    0x00437d40 mov r15, rsi                                                                      |         r15 = rsi;
+    0x00437d43 mov rbx, rdi                                                                      |         rbx = rdi;
+    0x00437d46 lea r14, [rdi + 0x38]                                                             |         r14 = rdi + 0x38;
+    0x00437d4a mov rdi, r14                                                                      |         rdi = r14;
+    0x00437d4d call 0x405bd0                                                                     |         pthread_mutex_lock ();
+    0x00437d52 cmp dword [rbx + 0xfc], 0                                                         |         
+                                                                                                 |         if (*((rbx + 0xfc)) != 0) {
+    0x00437d59 je 0x437dc1                                                                       |             
+    0x00437d5b mov rdi, rbx                                                                      |             
+    0x00437d5e mov rsi, r15                                                                      |             
+    0x00437d61 call 0x4381f0                                                                     |             bsl::deque<bsl::function<void()>,bsl::allocator<bsl::function<void()>>>::push_back(bsl::function<void()>&&) (rbx, r15);
+    0x00437d66 cmp qword [rbx + 0x100], 0                                                        |             
+                                                                                                 |             if (*((rbx + 0x100)) != 0) {
+    0x00437d6e je 0x437db5                                                                       |                 
+    0x00437d70 mov rax, qword [rbx + 0x100]                                                      |                 rax = *((rbx + 0x100));
+    0x00437d77 mov dword [rax + 0x48], 1                                                         |                 *((rax + 0x48)) = 1;
+    0x00437d7e mov rdi, qword [rbx + 0x100]                                                      |                 rdi = *((rbx + 0x100));
+    0x00437d85 call 0x405440                                                                     |                 pthread_cond_signal ();
+    0x00437d8a mov rax, qword [rbx + 0x100]                                                      |                 rax = *((rbx + 0x100));
+    0x00437d91 mov rax, qword [rax + 0x38]                                                       |                 rax = *((rax + 0x38));
+    0x00437d95 mov qword [rbx + 0x100], rax                                                      |                 *((rbx + 0x100)) = rax;
+    0x00437d9c cmp qword [rbx + 0x100], 0                                                        |                 
+                                                                                                 |                 if (*((rbx + 0x100)) == 0) {
+    0x00437da4 je 0x437db5                                                                       |                     goto label_0;
+                                                                                                 |                 }
+    0x00437da6 mov rax, qword [rbx + 0x100]                                                      |                 rax = *((rbx + 0x100));
+    0x00437dad mov qword [rax + 0x40], 0                                                         |                 *((rax + 0x40)) = 0;
+                                                                                                 |             }
+                                                                                                 | label_0:
+    0x00437db5 mov rdi, rbx                                                                      |             
+    0x00437db8 call 0x4373e0                                                                     |             eax = BloombergLP::bdlmt::ThreadPool::startThreadIfNeeded() (rbx);
+    0x00437dbd mov ebx, eax                                                                      |             ebx = eax;
+    0x00437dbf jmp 0x437dc6                                                                      |             
+                                                                                                 |         } else {
+    0x00437dc1 mov ebx, 0xffffffff                                                               |             ebx = 0xffffffff;
+                                                                                                 |         }
+    0x00437dc6 mov rdi, r14                                                                      |         rdi = r14;
+    0x00437dc9 call 0x405cf0                                                                     |         pthread_mutex_unlock ();
+    0x00437dce mov eax, ebx                                                                      |         eax = ebx;
+    0x00437dd0 pop rbx                                                                           |         
+    0x00437dd1 pop r14                                                                           |         
+    0x00437dd3 pop r15                                                                           |         
+    0x00437dd5 ret                                                                               |         return rax;
+                                                                                                 |     }
+    0x00437dd6 call 0x405370                                                                     |     return abort ();
+                                                                                                 | }

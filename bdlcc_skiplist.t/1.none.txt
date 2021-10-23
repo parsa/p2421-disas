@@ -1,0 +1,22 @@
+    ; assembly                                                                           | /* r2dec pseudo code output */
+                                                                                         | /* bdlcc_skiplist.t/none @ 0x64a560 */
+                                                                                         | #include <stdint.h>
+                                                                                         |  
+    ; (fcn) method.BloombergLP::bdlcc::SkipList_Control.decrementRefCount__ ()           | int32_t method_BloombergLP::bdlcc::SkipList_Control_decrementRefCount_ (uint32_t arg1) {
+                                                                                         |     rdi = arg1;
+                                                                                         |     /* BloombergLP::bdlcc::SkipList_Control::decrementRefCount() */
+    0x0064a560 mov ecx, dword [rdi]                                                      |     ecx = *(rdi);
+    0x0064a562 nop word cs:[rax + rax]                                                   |     
+    0x0064a56c nop dword [rax]                                                           |     
+                                                                                         |     do {
+    0x0064a570 lea edx, [rcx - 1]                                                        |         edx = rcx - 1;
+    0x0064a573 mov eax, ecx                                                              |         eax = ecx;
+    0x0064a575 lock cmpxchg dword [rdi], edx                                             |         __asm ("lock cmpxchg dword [rdi], edx");
+    0x0064a579 cmp ecx, eax                                                              |         
+    0x0064a57b mov ecx, eax                                                              |         ecx = eax;
+    0x0064a57d jne 0x64a570                                                              |         
+                                                                                         |     } while (ecx != eax);
+    0x0064a57f and edx, 0xfffff                                                          |     edx &= 0xfffff;
+    0x0064a585 mov eax, edx                                                              |     eax = edx;
+    0x0064a587 ret                                                                       |     return eax;
+                                                                                         | }

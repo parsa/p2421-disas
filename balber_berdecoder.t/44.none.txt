@@ -1,0 +1,42 @@
+    ; assembly                                                                                           | /* r2dec pseudo code output */
+                                                                                                         | /* balber_berdecoder.t/none @ 0x45cdc0 */
+                                                                                                         | #include <stdint.h>
+                                                                                                         |  
+    ; (fcn) method.BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice.makeMyChoice2__ ()         | int64_t method_BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice_makeMyChoice2_ (uint32_t arg1) {
+                                                                                                         |     rdi = arg1;
+                                                                                                         |     /* BloombergLP::s_baltst::MySequenceWithAnonymousChoiceChoice::makeMyChoice2() */
+    0x0045cdc0 push rbx                                                                                  |     
+    0x0045cdc1 mov rbx, rdi                                                                              |     rbx = rdi;
+    0x0045cdc4 cmp dword [rdi + 0x30], 1                                                                 |     
+                                                                                                         |     if (*((rdi + 0x30)) == 1) {
+    0x0045cdc8 jne 0x45cddd                                                                              |         
+    0x0045cdca mov rdi, rbx                                                                              |         
+    0x0045cdcd xor esi, esi                                                                              |         
+    0x0045cdcf mov rdx, 0xffffffffffffffff                                                               |         
+    0x0045cdd6 call 0x473cd0                                                                             |         bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>::erase(unsigned long,unsigned long) (rbx, 0, 0xffffffffffffffff);
+    0x0045cddb jmp 0x45ce1e                                                                              |         
+                                                                                                         |     } else {
+    0x0045cddd mov dword [rbx + 0x30], 0xffffffff                                                        |         *((rbx + 0x30)) = 0xffffffff;
+    0x0045cde4 mov rax, qword [rbx + 0x38]                                                               |         rax = *((rbx + 0x38));
+    0x0045cde8 test rax, rax                                                                             |         
+                                                                                                         |         if (rax == 0) {
+    0x0045cdeb jne 0x45cdfe                                                                              |             
+    0x0045cded mov rax, qword [rip + 0x29a5fc]                                                           |             rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x0045cdf4 test rax, rax                                                                             |             
+                                                                                                         |             if (rax != 0) {
+    0x0045cdf7 jne 0x45cdfe                                                                              |                 goto label_0;
+                                                                                                         |             }
+    0x0045cdf9 call 0x46d5b0                                                                             |             rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                                                                         |         }
+                                                                                                         | label_0:
+    0x0045cdfe mov qword [rbx], 0                                                                        |         *(rbx) = 0;
+    0x0045ce05 movaps xmm0, xmmword [rip + 0x37ec4]                                                      |         xmm0 = .comment;
+    0x0045ce0c movups xmmword [rbx + 0x18], xmm0                                                         |         __asm ("movups xmmword [rbx + 0x18], xmm0");
+    0x0045ce10 mov qword [rbx + 0x28], rax                                                               |         *((rbx + 0x28)) = rax;
+    0x0045ce14 mov byte [rbx], 0                                                                         |         *(rbx) = 0;
+    0x0045ce17 mov dword [rbx + 0x30], 1                                                                 |         *((rbx + 0x30)) = 1;
+                                                                                                         |     }
+    0x0045ce1e mov rax, rbx                                                                              |     rax = rbx;
+    0x0045ce21 pop rbx                                                                                   |     
+    0x0045ce22 ret                                                                                       |     return rax;
+                                                                                                         | }

@@ -1,0 +1,19 @@
+    ; assembly                               | /* r2dec pseudo code output */
+                                             | /* bdlcc_objectcatalog.t/assume @ 0x4062b0 */
+                                             | #include <stdint.h>
+                                             |  
+    ; (fcn) sym.verifyStateThread ()         | uint32_t verifyStateThread (void) {
+    0x004062b0 push rbx                      |     
+    0x004062b1 mov edi, 0x72d180             |     
+    0x004062b6 call 0x4c6560                 |     BloombergLP::bslmt::Barrier::wait() (obj.OBJECTCATALOG_TEST_CASE_14::barrier);
+    0x004062bb mov ebx, 0x3e8                |     ebx = 0x3e8;
+                                             |     do {
+    0x004062c0 mov edi, 0x72d0d0             |         
+    0x004062c5 call 0x4176b0                 |         eax = BloombergLP::bdlcc::ObjectCatalog<int>::verifyState()const (obj.OBJECTCATALOG_TEST_CASE_14::catalog);
+    0x004062ca dec ebx                       |         ebx--;
+    0x004062cc jne 0x4062c0                  |         
+                                             |     } while (ebx != 0);
+    0x004062ce xor eax, eax                  |     eax = 0;
+    0x004062d0 pop rbx                       |     
+    0x004062d1 ret                           |     return eax;
+                                             | }

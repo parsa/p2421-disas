@@ -1,0 +1,98 @@
+    ; assembly                                                                                           | /* r2dec pseudo code output */
+                                                                                                         | /* ball_administration.t/none @ 0x411780 */
+                                                                                                         | #include <stdint.h>
+                                                                                                         |  
+    ; (fcn) method.BloombergLP::ball::Record.addAttribute_BloombergLP::ball::Attribute_const_ ()         | uint64_t method_BloombergLP::ball::Record_addAttribute_BloombergLP::ball::Attribute_const_ (int64_t arg2, int64_t arg1) {
+                                                                                                         |     int64_t var_18h;
+                                                                                                         |     uint32_t var_20h;
+                                                                                                         |     int64_t var_28h;
+                                                                                                         |     int64_t var_30h;
+                                                                                                         |     int64_t var_38h;
+                                                                                                         |     int64_t var_50h;
+                                                                                                         |     uint32_t var_58h;
+                                                                                                         |     int64_t var_60h;
+                                                                                                         |     int64_t var_68h;
+                                                                                                         |     int64_t var_78h;
+                                                                                                         |     rsi = arg2;
+                                                                                                         |     rdi = arg1;
+                                                                                                         |     /* BloombergLP::ball::Record::addAttribute(BloombergLP::ball::Attribute const&) */
+    0x00411780 push r15                                                                                  |     
+    0x00411782 push r14                                                                                  |     
+    0x00411784 push r13                                                                                  |     
+    0x00411786 push r12                                                                                  |     
+    0x00411788 push rbx                                                                                  |     
+    0x00411789 sub rsp, 0x80                                                                             |     
+    0x00411790 mov r12, rsi                                                                              |     r12 = rsi;
+    0x00411793 mov r14, rdi                                                                              |     r14 = rdi;
+    0x00411796 mov r15, qword [rip + 0x287233]                                                           |     r15 = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x0041179d test r15, r15                                                                             |     
+                                                                                                         |     if (r15 == 0) {
+    0x004117a0 jne 0x4117aa                                                                              |         
+    0x004117a2 call 0x431870                                                                             |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+    0x004117a7 mov r15, rax                                                                              |         r15 = rax;
+                                                                                                         |     }
+    0x004117aa mov r13, qword [r12]                                                                      |     r13 = *(r12);
+    0x004117ae mov qword [rsp], 0                                                                        |     *(rsp) = 0;
+    0x004117b6 mov qword [rsp + 0x20], 0x17                                                              |     *((rsp + 0x20)) = 0x17;
+    0x004117bf mov qword [rsp + 0x28], r15                                                               |     *((rsp + 0x28)) = r15;
+    0x004117c4 mov rdi, r13                                                                              |     
+    0x004117c7 call 0x405080                                                                             |     rax = strlen (r13);
+    0x004117cc mov qword [rsp + 0x18], 0                                                                 |     *((rsp + 0x18)) = 0;
+    0x004117d5 mov rbx, rsp                                                                              |     rbx = rsp;
+    0x004117d8 mov ecx, 0x459c1e                                                                         |     
+    0x004117dd mov rdi, rbx                                                                              |     
+    0x004117e0 mov rsi, r13                                                                              |     
+    0x004117e3 mov rdx, rax                                                                              |     
+    0x004117e6 call 0x4361d0                                                                             |     bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>::privateAppend(char const*,unsigned long,char const*) (rbx, r13, rax, "string<...>::assign(char*...): string too long");
+    0x004117eb cmp qword [rsp + 0x20], 0x17                                                              |     
+                                                                                                         |     if (*((rsp + 0x20)) != 0x17) {
+    0x004117f1 je 0x4117f7                                                                               |         
+    0x004117f3 mov rbx, qword [rsp]                                                                      |         rbx = *(rsp);
+                                                                                                         |     }
+    0x004117f7 mov qword [rsp + 0x30], rbx                                                               |     *((rsp + 0x30)) = rbx;
+    0x004117fc lea rdi, [rsp + 0x38]                                                                     |     
+    0x00411801 add r12, 8                                                                                |     r12 += 8;
+    0x00411805 mov rsi, r12                                                                              |     
+    0x00411808 mov rdx, r15                                                                              |     
+    0x0041180b call 0x4125f0                                                                             |     BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int,long long,bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>>>::VariantImp(BloombergLP::bdlb::VariantImp<BloombergLP::bslmf::TypeList<int,long long,bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>>>const&,BloombergLP::bslma::Allocator*) (rsp + 0x38, r12, r15);
+    0x00411810 add r14, 0x108                                                                            |     r14 += 0x108;
+    0x00411817 mov eax, 0xffffffff                                                                       |     eax = 0xffffffff;
+    0x0041181c mov qword [rsp + 0x78], rax                                                               |     *((rsp + 0x78)) = rax;
+    0x00411821 mov rsi, rsp                                                                              |     
+    0x00411824 mov rdi, r14                                                                              |     
+    0x00411827 call 0x4120d0                                                                             |     bsl::vector<BloombergLP::ball::ManagedAttribute,bsl::allocator<BloombergLP::ball::ManagedAttribute>>::push_back(BloombergLP::ball::ManagedAttribute&&) (r14, rsp);
+    0x0041182c mov eax, dword [rsp + 0x68]                                                               |     eax = *((rsp + 0x68));
+    0x00411830 test eax, eax                                                                             |     
+                                                                                                         |     if (eax != 0) {
+    0x00411832 je 0x411862                                                                               |         
+    0x00411834 cmp eax, 3                                                                                |         
+                                                                                                         |         if (eax == 3) {
+    0x00411837 jne 0x41185a                                                                              |             
+    0x00411839 cmp qword [rsp + 0x58], 0x17                                                              |             
+                                                                                                         |             if (*((rsp + 0x58)) != 0x17) {
+    0x0041183f je 0x411851                                                                               |                 
+    0x00411841 mov rsi, qword [rsp + 0x38]                                                               |                 rsi = *((rsp + 0x38));
+    0x00411846 mov rdi, qword [rsp + 0x60]                                                               |                 rdi = *((rsp + 0x60));
+    0x0041184b mov rax, qword [rdi]                                                                      |                 rax = *(rdi);
+    0x0041184e call qword [rax + 0x18]                                                                   |                 uint64_t (*rax + 0x18)() ();
+                                                                                                         |             }
+    0x00411851 mov qword [rsp + 0x50], 0xffffffffffffffff                                                |             *((rsp + 0x50)) = 0xffffffffffffffff;
+                                                                                                         |         }
+    0x0041185a mov dword [rsp + 0x68], 0                                                                 |         *((rsp + 0x68)) = 0;
+                                                                                                         |     }
+    0x00411862 cmp qword [rsp + 0x20], 0x17                                                              |     
+                                                                                                         |     if (*((rsp + 0x20)) != 0x17) {
+    0x00411868 je 0x411879                                                                               |         
+    0x0041186a mov rsi, qword [rsp]                                                                      |         rsi = *(rsp);
+    0x0041186e mov rdi, qword [rsp + 0x28]                                                               |         rdi = *((rsp + 0x28));
+    0x00411873 mov rax, qword [rdi]                                                                      |         rax = *(rdi);
+    0x00411876 call qword [rax + 0x18]                                                                   |         uint64_t (*rax + 0x18)() ();
+                                                                                                         |     }
+    0x00411879 add rsp, 0x80                                                                             |     
+    0x00411880 pop rbx                                                                                   |     
+    0x00411881 pop r12                                                                                   |     
+    0x00411883 pop r13                                                                                   |     
+    0x00411885 pop r14                                                                                   |     
+    0x00411887 pop r15                                                                                   |     
+    0x00411889 ret                                                                                       |     return rax;
+                                                                                                         | }

@@ -1,0 +1,169 @@
+    ; assembly                                                                                                           | /* r2dec pseudo code output */
+                                                                                                                         | /* baljsn_datumutil.t/none @ 0x442780 */
+                                                                                                                         | #include <stdint.h>
+                                                                                                                         |  
+    ; (fcn) method.BloombergLP::bdlb::BitStringUtil.assign_unsigned_long__unsigned_long__bool__unsigned_long_ ()         | int64_t method_BloombergLP::bdlb::BitStringUtil_assign_unsigned_long_unsigned_long_bool_unsigned_long_ (uint32_t arg4, int64_t arg2, int64_t arg1) {
+                                                                                                                         |     rcx = arg4;
+                                                                                                                         |     rsi = arg2;
+                                                                                                                         |     rdi = arg1;
+                                                                                                                         |     /* BloombergLP::bdlb::BitStringUtil::assign(unsigned long*, unsigned long, bool, unsigned long) */
+    0x00442780 push r14                                                                                                  |     
+    0x00442782 push rbx                                                                                                  |     
+    0x00442783 test rcx, rcx                                                                                             |     
+                                                                                                                         |     if (rcx == 0) {
+    0x00442786 je 0x442934                                                                                               |         goto label_1;
+                                                                                                                         |     }
+    0x0044278c mov r8, rcx                                                                                               |     r8 = rcx;
+    0x0044278f mov r14, rsi                                                                                              |     r14 = rsi;
+    0x00442792 shr r14, 6                                                                                                |     r14 >>= 6;
+    0x00442796 and esi, 0x3f                                                                                             |     esi &= 0x3f;
+    0x00442799 mov r9d, 0x40                                                                                             |     r9d = 0x40;
+    0x0044279f sub r9d, esi                                                                                              |     r9d -= esi;
+    0x004427a2 cmp r9, rcx                                                                                               |     
+                                                                                                                         |     if (r9 > rcx) {
+    0x004427a5 cmova r9, rcx                                                                                             |         r9 = rcx;
+                                                                                                                         |     }
+    0x004427a9 test dl, dl                                                                                               |     
+                                                                                                                         |     if (dl != 0) {
+    0x004427ab je 0x4427db                                                                                               |         
+    0x004427ad lea ecx, [rsi + r9]                                                                                       |         ecx = rsi + r9;
+    0x004427b1 mov rbx, 0xffffffffffffffff                                                                               |         rbx = 0xffffffffffffffff;
+    0x004427b8 mov rax, 0xffffffffffffffff                                                                               |         rax = 0xffffffffffffffff;
+    0x004427bf shl rax, cl                                                                                               |         rax <<= cl;
+    0x004427c2 cmp ecx, 0x3f                                                                                             |         
+                                                                                                                         |         if (ecx <= 0x3f) {
+    0x004427c5 ja 0x4427cd                                                                                               |             
+    0x004427c7 not rax                                                                                                   |             rax = ~rax;
+    0x004427ca mov rbx, rax                                                                                              |             rbx = rax;
+                                                                                                                         |         }
+    0x004427cd mov ecx, esi                                                                                              |         ecx = esi;
+    0x004427cf shr rbx, cl                                                                                               |         rbx >>= cl;
+    0x004427d2 shl rbx, cl                                                                                               |         rbx <<= cl;
+    0x004427d5 or qword [rdi + r14*8], rbx                                                                               |         *((rdi + r14*8)) |= rbx;
+    0x004427d9 jmp 0x442808                                                                                              |         
+                                                                                                                         |     } else {
+    0x004427db mov rax, 0xffffffffffffffff                                                                               |         rax = 0xffffffffffffffff;
+    0x004427e2 mov ecx, esi                                                                                              |         ecx = esi;
+    0x004427e4 shl rax, cl                                                                                               |         rax <<= cl;
+    0x004427e7 mov rbx, 0xffffffffffffffff                                                                               |         rbx = 0xffffffffffffffff;
+    0x004427ee not rax                                                                                                   |         rax = ~rax;
+    0x004427f1 lea ecx, [r9 + rsi]                                                                                       |         ecx = r9 + rsi;
+    0x004427f5 shl rbx, cl                                                                                               |         rbx <<= cl;
+    0x004427f8 cmp ecx, 0x40                                                                                             |         
+                                                                                                                         |         if (ecx >= 0x40) {
+    0x004427fb jae 0x442938                                                                                              |             goto label_2;
+                                                                                                                         |         }
+                                                                                                                         | label_0:
+    0x00442801 or rbx, rax                                                                                               |         rbx |= rax;
+    0x00442804 and qword [rdi + r14*8], rbx                                                                              |         *((rdi + r14*8)) &= rbx;
+                                                                                                                         |     }
+    0x00442808 mov rcx, r8                                                                                               |     rcx = r8;
+    0x0044280b sub rcx, r9                                                                                               |     rcx -= r9;
+    0x0044280e cmp rcx, 0x40                                                                                             |     
+                                                                                                                         |     if (rcx < 0x40) {
+    0x00442812 jb 0x442912                                                                                               |         goto label_3;
+                                                                                                                         |     }
+    0x00442818 movzx r11d, dl                                                                                            |     r11d = (int32_t) dl;
+    0x0044281c neg r11                                                                                                   |     r11 = -r11;
+    0x0044281f sub r8, r9                                                                                                |     r8 -= r9;
+    0x00442822 add r8, 0xffffffffffffffc0                                                                                |     r8 += 0xffffffffffffffc0;
+    0x00442826 cmp r8, 0xc0                                                                                              |     
+                                                                                                                         |     if (r8 < 0xc0) {
+    0x0044282d jb 0x442900                                                                                               |         goto label_4;
+                                                                                                                         |     }
+    0x00442833 shr r8, 6                                                                                                 |     r8 >>= 6;
+    0x00442837 inc r8                                                                                                    |     r8++;
+    0x0044283a mov r9, r8                                                                                                |     r9 = r8;
+    0x0044283d and r9, 0xfffffffffffffffc                                                                                |     r9 &= 0xfffffffffffffffc;
+    0x00442841 movq xmm0, r11                                                                                            |     xmm0 = r11;
+    0x00442846 pshufd xmm0, xmm0, 0x44                                                                                   |     __asm ("pshufd xmm0, xmm0, 0x44");
+    0x0044284b lea rax, [r9 - 4]                                                                                         |     rax = r9 - 4;
+    0x0044284f mov rsi, rax                                                                                              |     rsi = rax;
+    0x00442852 shr rsi, 2                                                                                                |     rsi >>= 2;
+    0x00442856 inc rsi                                                                                                   |     rsi++;
+    0x00442859 mov r10d, esi                                                                                             |     r10d = esi;
+    0x0044285c and r10d, 3                                                                                               |     r10d &= 3;
+    0x00442860 cmp rax, 0xc                                                                                              |     
+                                                                                                                         |     if (rax < 0xc) {
+    0x00442864 jae 0x44286a                                                                                              |         
+    0x00442866 xor ebx, ebx                                                                                              |         ebx = 0;
+    0x00442868 jmp 0x4428b9                                                                                              |         goto label_5;
+                                                                                                                         |     }
+    0x0044286a lea rax, [rdi + r14*8 + 0x78]                                                                             |     rax = rdi + r14*8 + 0x78;
+    0x0044286f and rsi, 0xfffffffffffffffc                                                                               |     rsi &= 0xfffffffffffffffc;
+    0x00442873 neg rsi                                                                                                   |     rsi = -rsi;
+    0x00442876 xor ebx, ebx                                                                                              |     ebx = 0;
+    0x00442878 nop dword [rax + rax]                                                                                     |     
+                                                                                                                         |     do {
+    0x00442880 movdqu xmmword [rax + rbx*8 - 0x70], xmm0                                                                 |         __asm ("movdqu xmmword [rax + rbx*8 - 0x70], xmm0");
+    0x00442886 movdqu xmmword [rax + rbx*8 - 0x60], xmm0                                                                 |         __asm ("movdqu xmmword [rax + rbx*8 - 0x60], xmm0");
+    0x0044288c movdqu xmmword [rax + rbx*8 - 0x50], xmm0                                                                 |         __asm ("movdqu xmmword [rax + rbx*8 - 0x50], xmm0");
+    0x00442892 movdqu xmmword [rax + rbx*8 - 0x40], xmm0                                                                 |         __asm ("movdqu xmmword [rax + rbx*8 - 0x40], xmm0");
+    0x00442898 movdqu xmmword [rax + rbx*8 - 0x30], xmm0                                                                 |         __asm ("movdqu xmmword [rax + rbx*8 - 0x30], xmm0");
+    0x0044289e movdqu xmmword [rax + rbx*8 - 0x20], xmm0                                                                 |         __asm ("movdqu xmmword [rax + rbx*8 - 0x20], xmm0");
+    0x004428a4 movdqu xmmword [rax + rbx*8 - 0x10], xmm0                                                                 |         __asm ("movdqu xmmword [rax + rbx*8 - 0x10], xmm0");
+    0x004428aa movdqu xmmword [rax + rbx*8], xmm0                                                                        |         __asm ("movdqu xmmword [rax + rbx*8], xmm0");
+    0x004428af add rbx, 0x10                                                                                             |         rbx += 0x10;
+    0x004428b3 add rsi, 4                                                                                                |         rsi += 4;
+    0x004428b7 jne 0x442880                                                                                              |         
+                                                                                                                         |     } while (rsi != 0);
+                                                                                                                         | label_5:
+    0x004428b9 mov rax, r9                                                                                               |     rax = r9;
+    0x004428bc shl rax, 6                                                                                                |     rax <<= 6;
+    0x004428c0 test r10, r10                                                                                             |     
+                                                                                                                         |     if (r10 == 0) {
+    0x004428c3 je 0x4428f4                                                                                               |         goto label_6;
+                                                                                                                         |     }
+    0x004428c5 add rbx, r14                                                                                              |     rbx += r14;
+    0x004428c8 lea rsi, [rdi + rbx*8 + 0x18]                                                                             |     rsi = rdi + rbx*8 + 0x18;
+    0x004428cd shl r10, 5                                                                                                |     r10 <<= 5;
+    0x004428d1 xor ebx, ebx                                                                                              |     ebx = 0;
+    0x004428d3 nop word cs:[rax + rax]                                                                                   |     
+    0x004428dd nop dword [rax]                                                                                           |     
+                                                                                                                         |     do {
+    0x004428e0 movdqu xmmword [rsi + rbx - 0x10], xmm0                                                                   |         __asm ("movdqu xmmword [rsi + rbx - 0x10], xmm0");
+    0x004428e6 movdqu xmmword [rsi + rbx], xmm0                                                                          |         __asm ("movdqu xmmword [rsi + rbx], xmm0");
+    0x004428eb add rbx, 0x20                                                                                             |         rbx += 0x20;
+    0x004428ef cmp r10, rbx                                                                                              |         
+    0x004428f2 jne 0x4428e0                                                                                              |         
+                                                                                                                         |     } while (r10 != rbx);
+                                                                                                                         | label_6:
+    0x004428f4 add r14, r9                                                                                               |     r14 += r9;
+    0x004428f7 sub rcx, rax                                                                                              |     rcx -= rax;
+    0x004428fa cmp r8, r9                                                                                                |     
+                                                                                                                         |     if (r8 == r9) {
+    0x004428fd je 0x442912                                                                                               |         goto label_3;
+                                                                                                                         |     }
+    0x004428ff nop                                                                                                       |     
+                                                                                                                         |     do {
+                                                                                                                         | label_4:
+    0x00442900 mov qword [rdi + r14*8 + 8], r11                                                                          |         *((rdi + r14*8 + 8)) = r11;
+    0x00442905 inc r14                                                                                                   |         r14++;
+    0x00442908 add rcx, 0xffffffffffffffc0                                                                               |         rcx += 0xffffffffffffffc0;
+    0x0044290c cmp rcx, 0x3f                                                                                             |         
+    0x00442910 ja 0x442900                                                                                               |         
+                                                                                                                         |     } while (rcx > 0x3f);
+                                                                                                                         | label_3:
+    0x00442912 test rcx, rcx                                                                                             |     
+                                                                                                                         |     if (rcx != 0) {
+    0x00442915 je 0x442934                                                                                               |         
+    0x00442917 mov rax, 0xffffffffffffffff                                                                               |         rax = 0xffffffffffffffff;
+    0x0044291e shl rax, cl                                                                                               |         rax <<= cl;
+    0x00442921 test dl, dl                                                                                               |         
+                                                                                                                         |         if (dl != 0) {
+    0x00442923 je 0x44292f                                                                                               |             
+    0x00442925 not rax                                                                                                   |             rax = ~rax;
+    0x00442928 or qword [rdi + r14*8 + 8], rax                                                                           |             *((rdi + r14*8 + 8)) |= rax;
+    0x0044292d jmp 0x442934                                                                                              |             
+                                                                                                                         |         } else {
+    0x0044292f and qword [rdi + r14*8 + 8], rax                                                                          |             *((rdi + r14*8 + 8)) &= rax;
+                                                                                                                         |         }
+                                                                                                                         |     }
+                                                                                                                         | label_1:
+    0x00442934 pop rbx                                                                                                   |     
+    0x00442935 pop r14                                                                                                   |     r14 = rbx;
+    0x00442937 ret                                                                                                       |     return rax;
+                                                                                                                         | label_2:
+    0x00442938 xor ebx, ebx                                                                                              |     ebx = 0;
+    0x0044293a jmp 0x442801                                                                                              |     goto label_0;
+                                                                                                                         | }

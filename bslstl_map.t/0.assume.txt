@@ -1,0 +1,127 @@
+    ; assembly                                                                       | /* r2dec pseudo code output */
+                                                                                     | /* bslstl_map.t/assume @ 0x402c60 */
+                                                                                     | #include <stdint.h>
+                                                                                     |  
+    ; (fcn) method.UsageExample::TradeMatcher.placeBuyOrder_double__int_ ()          | int64_t method_UsageExample::TradeMatcher_placeBuyOrder_double_int_ (int64_t arg2, int64_t arg1, int64_t arg7) {
+                                                                                     |     int64_t var_ch;
+                                                                                     |     rsi = arg2;
+                                                                                     |     rdi = arg1;
+                                                                                     |     xmm0 = arg7;
+                                                                                     |     /* UsageExample::TradeMatcher::placeBuyOrder(double, int) */
+    0x00402c60 push rbp                                                              |     
+    0x00402c61 push r15                                                              |     
+    0x00402c63 push r14                                                              |     
+    0x00402c65 push r12                                                              |     
+    0x00402c67 push rbx                                                              |     
+    0x00402c68 sub rsp, 0x10                                                         |     
+    0x00402c6c mov r12d, esi                                                         |     r12d = esi;
+    0x00402c6f mov r14, rdi                                                          |     r14 = rdi;
+    0x00402c72 movsd qword [rsp], xmm0                                               |     *(rsp) = xmm0;
+    0x00402c77 lea r15, [rdi + 0x20]                                                 |     r15 = rdi + 0x20;
+    0x00402c7b mov rbx, qword [rdi + 0x30]                                           |     rbx = *((rdi + 0x30));
+    0x00402c7f nop                                                                   |     
+                                                                                     | label_0:
+    0x00402c80 mov rax, qword [r14 + 0x28]                                           |     rax = *((r14 + 0x28));
+    0x00402c84 mov rcx, r15                                                          |     rcx = r15;
+    0x00402c87 test rax, rax                                                         |     
+                                                                                     |     if (rax == 0) {
+    0x00402c8a je 0x402cbc                                                           |         goto label_1;
+                                                                                     |     }
+    0x00402c8c movsd xmm0, qword [rsp]                                               |     xmm0 = *(rsp);
+    0x00402c91 mov rcx, r15                                                          |     rcx = r15;
+    0x00402c94 nop word cs:[rax + rax]                                               |     
+    0x00402c9e nop                                                                   |     
+                                                                                     |     do {
+    0x00402ca0 movsd xmm1, qword [rax + 0x18]                                        |         xmm1 = *((rax + 0x18));
+    0x00402ca5 xor edx, edx                                                          |         edx = 0;
+    0x00402ca7 ucomisd xmm1, xmm0                                                    |         __asm ("ucomisd xmm1, xmm0");
+                                                                                     |         if (rax > 0) {
+    0x00402cab cmova rcx, rax                                                        |             rcx = rax;
+                                                                                     |         }
+    0x00402caf setbe dl                                                              |         dl = (rax <= 0) ? 1 : 0;
+    0x00402cb2 mov rax, qword [rax + rdx*8 + 8]                                      |         rax = *((rax + rdx*8 + 8));
+    0x00402cb7 test rax, rax                                                         |         
+    0x00402cba jne 0x402ca0                                                          |         
+                                                                                     |     } while (rax != 0);
+                                                                                     | label_1:
+    0x00402cbc cmp rbx, rcx                                                          |     
+                                                                                     |     if (rbx == rcx) {
+    0x00402cbf je 0x402cf9                                                           |         goto label_2;
+                                                                                     |     }
+    0x00402cc1 mov eax, dword [rbx + 0x20]                                           |     eax = *((rbx + 0x20));
+    0x00402cc4 sub eax, r12d                                                         |     eax -= r12d;
+                                                                                     |     if (eax > 0) {
+    0x00402cc7 jg 0x402d6d                                                           |         goto label_3;
+                                                                                     |     }
+    0x00402ccd mov rdi, rbx                                                          |     
+    0x00402cd0 call 0x6daf10                                                         |     rax = BloombergLP::bslalg::RbTreeUtil::next(BloombergLP::bslalg::RbTreeNodeconst*) (rbx);
+    0x00402cd5 mov rbp, rax                                                          |     
+    0x00402cd8 mov rdi, r15                                                          |     
+    0x00402cdb mov rsi, rbx                                                          |     
+    0x00402cde call 0x6db2c0                                                         |     BloombergLP::bslalg::RbTreeUtil::remove(BloombergLP::bslalg::RbTreeAnchor*,BloombergLP::bslalg::RbTreeNode*) (r15, rbx);
+    0x00402ce3 mov rax, qword [r14 + 0x10]                                           |     rax = *((r14 + 0x10));
+    0x00402ce7 mov qword [rbx], rax                                                  |     *(rbx) = rax;
+    0x00402cea mov qword [r14 + 0x10], rbx                                           |     *((r14 + 0x10)) = rbx;
+    0x00402cee mov rbx, rbp                                                          |     rbx = rbp;
+    0x00402cf1 sub r12d, dword [rbp + 0x20]                                          |     r12d -= *((rbp + 0x20));
+                                                                                     |     if (r12d != 0) {
+    0x00402cf5 jne 0x402c80                                                          |         goto label_0;
+                                                                                     |     }
+    0x00402cf7 jmp 0x402d70                                                          |     goto label_4;
+                                                                                     | label_2:
+    0x00402cf9 test r12d, r12d                                                       |     
+                                                                                     |     if (r12d <= 0) {
+    0x00402cfc jle 0x402d70                                                          |         goto label_4;
+                                                                                     |     }
+    0x00402cfe lea rsi, [r14 + 0x60]                                                 |     rsi = r14 + 0x60;
+    0x00402d02 mov rcx, qword [r14 + 0x68]                                           |     rcx = *((r14 + 0x68));
+    0x00402d06 test rcx, rcx                                                         |     
+                                                                                     |     if (rcx == 0) {
+    0x00402d09 je 0x402d4b                                                           |         goto label_5;
+                                                                                     |     }
+    0x00402d0b movsd xmm0, qword [rsp]                                               |     xmm0 = *(rsp);
+    0x00402d10 mov rax, rsi                                                          |     rax = rsi;
+    0x00402d13 nop word cs:[rax + rax]                                               |     
+    0x00402d1d nop dword [rax]                                                       |     
+                                                                                     |     do {
+    0x00402d20 movsd xmm1, qword [rcx + 0x18]                                        |         xmm1 = *((rcx + 0x18));
+    0x00402d25 xor edx, edx                                                          |         edx = 0;
+    0x00402d27 ucomisd xmm1, xmm0                                                    |         __asm ("ucomisd xmm1, xmm0");
+                                                                                     |         if (rcx <= 0) {
+    0x00402d2b cmovbe rax, rcx                                                       |             rax = rcx;
+                                                                                     |         }
+    0x00402d2f seta dl                                                               |         dl = (rcx > 0) ? 1 : 0;
+    0x00402d32 mov rcx, qword [rcx + rdx*8 + 8]                                      |         rcx = *((rcx + rdx*8 + 8));
+    0x00402d37 test rcx, rcx                                                         |         
+    0x00402d3a jne 0x402d20                                                          |         
+                                                                                     |     } while (rcx != 0);
+    0x00402d3c cmp rax, rsi                                                          |     
+                                                                                     |     if (rax != rsi) {
+    0x00402d3f je 0x402d4b                                                           |         
+    0x00402d41 ucomisd xmm0, qword [rax + 0x18]                                      |         __asm ("ucomisd xmm0, qword [rax + 0x18]");
+    0x00402d46 mov rsi, rax                                                          |         rsi = rax;
+                                                                                     |         if (rax <= rsi) {
+    0x00402d49 jbe 0x402d67                                                          |             goto label_6;
+                                                                                     |         }
+                                                                                     |     }
+                                                                                     | label_5:
+    0x00402d4b add r14, 0x40                                                         |     r14 += 0x40;
+    0x00402d4f mov dword [rsp + 0xc], 0                                              |     *((rsp + 0xc)) = 0;
+    0x00402d57 mov rdx, rsp                                                          |     
+    0x00402d5a lea rcx, [rsp + 0xc]                                                  |     
+    0x00402d5f mov rdi, r14                                                          |     
+    0x00402d62 call 0x6900a0                                                         |     eax = BloombergLP::bslstl::TreeIterator<bsl::pair<doubleconst,int>,BloombergLP::bslstl::TreeNode<bsl::pair<doubleconst,int>>,long>bsl::map<double,int,std::_1::greater<double>,bsl::allocator<bsl::pair<doubleconst,int>>>::emplace_hint<doubleconst&,int>(BloombergLP::bslstl::TreeIterator<bsl::pair<doubleconst,int>const,BloombergLP::bslstl::TreeNode<bsl::pair<doubleconst,int>>,long>,doubleconst&,int&&) (r14, rsi, rsp, rsp + 0xc);
+                                                                                     | label_6:
+    0x00402d67 add dword [rax + 0x20], r12d                                          |     *((rax + 0x20)) += r12d;
+    0x00402d6b jmp 0x402d70                                                          |     goto label_4;
+                                                                                     | label_3:
+    0x00402d6d mov dword [rbx + 0x20], eax                                           |     *((rbx + 0x20)) = eax;
+                                                                                     | label_4:
+    0x00402d70 add rsp, 0x10                                                         |     
+    0x00402d74 pop rbx                                                               |     
+    0x00402d75 pop r12                                                               |     
+    0x00402d77 pop r14                                                               |     
+    0x00402d79 pop r15                                                               |     
+    0x00402d7b pop rbp                                                               |     
+    0x00402d7c ret                                                                   |     return rax;
+                                                                                     | }

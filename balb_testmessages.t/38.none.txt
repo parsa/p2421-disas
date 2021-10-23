@@ -1,0 +1,40 @@
+    ; assembly                                                                               | /* r2dec pseudo code output */
+                                                                                             | /* balb_testmessages.t/none @ 0x40b640 */
+                                                                                             | #include <stdint.h>
+                                                                                             |  
+    ; (fcn) method.BloombergLP::balb::SequenceWithAnonymityChoice.makeSelection1__ ()        | int64_t method_BloombergLP::balb::SequenceWithAnonymityChoice_makeSelection1_ (int64_t arg1) {
+                                                                                             |     rdi = arg1;
+                                                                                             |     /* BloombergLP::balb::SequenceWithAnonymityChoice::makeSelection1() */
+    0x0040b640 push rbx                                                                      |     
+    0x0040b641 mov rbx, rdi                                                                  |     rbx = rdi;
+    0x0040b644 mov eax, dword [rdi + 0x170]                                                  |     eax = *((rdi + 0x170));
+    0x0040b64a cmp eax, 2                                                                    |     
+                                                                                             |     if (eax != 2) {
+    0x0040b64d je 0x40b65d                                                                   |         
+    0x0040b64f test eax, eax                                                                 |         
+                                                                                             |         if (eax == 0) {
+    0x0040b651 jne 0x40b679                                                                  |             
+    0x0040b653 mov rdi, rbx                                                                  |             
+    0x0040b656 call 0x409810                                                                 |             BloombergLP::balb::Sequence6::reset() (rbx);
+    0x0040b65b jmp 0x40b69c                                                                  |             
+                                                                                             |         } else {
+    0x0040b65d cmp qword [rbx + 0x20], 0x17                                                  |             
+                                                                                             |             if (*((rbx + 0x20)) != 0x17) {
+    0x0040b662 je 0x40b671                                                                   |                 
+    0x0040b664 mov rsi, qword [rbx]                                                          |                 rsi = *(rbx);
+    0x0040b667 mov rdi, qword [rbx + 0x28]                                                   |                 rdi = *((rbx + 0x28));
+    0x0040b66b mov rax, qword [rdi]                                                          |                 rax = *(rdi);
+    0x0040b66e call qword [rax + 0x18]                                                       |                 uint64_t (*rax + 0x18)() ();
+                                                                                             |             }
+    0x0040b671 mov qword [rbx + 0x18], 0xffffffffffffffff                                    |             *((rbx + 0x18)) = 0xffffffffffffffff;
+                                                                                             |         }
+    0x0040b679 mov dword [rbx + 0x170], 0xffffffff                                           |         *((rbx + 0x170)) = 0xffffffff;
+    0x0040b683 mov rsi, qword [rbx + 0x178]                                                  |         
+    0x0040b68a mov rdi, rbx                                                                  |         
+    0x0040b68d call 0x408740                                                                 |         BloombergLP::balb::Sequence6::Sequence6(BloombergLP::bslma::Allocator*) (rbx, *((rbx + 0x178)));
+    0x0040b692 mov dword [rbx + 0x170], 0                                                    |         *((rbx + 0x170)) = 0;
+                                                                                             |     }
+    0x0040b69c mov rax, rbx                                                                  |     rax = rbx;
+    0x0040b69f pop rbx                                                                       |     
+    0x0040b6a0 ret                                                                           |     return rax;
+                                                                                             | }

@@ -1,0 +1,51 @@
+    ; assembly                                                                                                                                   | /* r2dec pseudo code output */
+                                                                                                                                                 | /* bblb_schedulegenerationutil.t/none @ 0x40cf00 */
+                                                                                                                                                 | #include <stdint.h>
+                                                                                                                                                 |  
+    ; (fcn) method.BloombergLP::bdlt::Calendar.getNextBusinessDay_BloombergLP::bdlt::Date__BloombergLP::bdlt::Date_const__int__const ()          | int32_t method_BloombergLP::bdlt::Calendar_getNextBusinessDay_BloombergLP::bdlt::Date_BloombergLP::bdlt::Date_const_int_const (int64_t arg4, int64_t arg3, int64_t arg2, int64_t arg1) {
+                                                                                                                                                 |     rcx = arg4;
+                                                                                                                                                 |     rdx = arg3;
+                                                                                                                                                 |     rsi = arg2;
+                                                                                                                                                 |     rdi = arg1;
+                                                                                                                                                 |     /* BloombergLP::bdlt::Calendar::getNextBusinessDay(BloombergLP::bdlt::Date*, BloombergLP::bdlt::Date const&, int) const */
+    0x0040cf00 push rbp                                                                                                                          |     
+    0x0040cf01 push r14                                                                                                                          |     
+    0x0040cf03 push rbx                                                                                                                          |     
+    0x0040cf04 mov ebp, ecx                                                                                                                      |     
+    0x0040cf06 mov r14, rsi                                                                                                                      |     r14 = rsi;
+    0x0040cf09 mov eax, dword [rdx]                                                                                                              |     eax = *(rdx);
+    0x0040cf0b mov ecx, dword [rdi]                                                                                                              |     ecx = *(rdi);
+    0x0040cf0d sub eax, ecx                                                                                                                      |     eax -= ecx;
+    0x0040cf0f test ebp, ebp                                                                                                                     |     
+                                                                                                                                                 |     if (ebp == 0) {
+    0x0040cf11 je 0x40cf42                                                                                                                       |         goto label_0;
+                                                                                                                                                 |     }
+    0x0040cf13 mov rbx, rdi                                                                                                                      |     rbx = rdi;
+    0x0040cf16 nop word cs:[rax + rax]                                                                                                           |     
+                                                                                                                                                 |     do {
+    0x0040cf20 inc eax                                                                                                                           |         eax++;
+    0x0040cf22 movsxd rsi, eax                                                                                                                   |         rsi = (int64_t) eax;
+    0x0040cf25 mov rdi, qword [rbx + 0xa8]                                                                                                       |         
+    0x0040cf2c mov rdx, qword [rbx + 0xc8]                                                                                                       |         
+    0x0040cf33 call 0x418c60                                                                                                                     |         eax = BloombergLP::bdlb::BitStringUtil::find0AtMinIndex(unsigned longconst*,unsigned long,unsigned long) (*((rbx + 0xa8)), rsi, *((rbx + 0xc8)));
+    0x0040cf38 test eax, eax                                                                                                                     |         
+                                                                                                                                                 |         if (eax < 0) {
+    0x0040cf3a js 0x40cf4b                                                                                                                       |             goto label_1;
+                                                                                                                                                 |         }
+    0x0040cf3c dec ebp                                                                                                                           |         ebp--;
+    0x0040cf3e jne 0x40cf20                                                                                                                      |         
+                                                                                                                                                 |     } while (ebp != 0);
+    0x0040cf40 mov ecx, dword [rbx]                                                                                                              |     ecx = *(rbx);
+                                                                                                                                                 | label_0:
+    0x0040cf42 add ecx, eax                                                                                                                      |     ecx += eax;
+    0x0040cf44 mov dword [r14], ecx                                                                                                              |     *(r14) = ecx;
+    0x0040cf47 xor eax, eax                                                                                                                      |     eax = 0;
+    0x0040cf49 jmp 0x40cf50                                                                                                                      |     goto label_2;
+                                                                                                                                                 | label_1:
+    0x0040cf4b mov eax, 1                                                                                                                        |     eax = 1;
+                                                                                                                                                 | label_2:
+    0x0040cf50 pop rbx                                                                                                                           |     
+    0x0040cf51 pop r14                                                                                                                           |     
+    0x0040cf53 pop rbp                                                                                                                           |     
+    0x0040cf54 ret                                                                                                                               |     return eax;
+                                                                                                                                                 | }

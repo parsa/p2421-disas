@@ -1,0 +1,70 @@
+    ; assembly                                                                                           | /* r2dec pseudo code output */
+                                                                                                         | /* balb_controlmanager.t/none @ 0x40d2d0 */
+                                                                                                         | #include <stdint.h>
+                                                                                                         |  
+    ; (fcn) method.BloombergLP::bdlb::String.strstrCaseless_char_const__int__char_const__int_ ()         | int64_t method_BloombergLP::bdlb::String_strstrCaseless_char_const_int_char_const_int_ (int64_t arg4, int64_t arg3, signed int64_t arg2, int64_t arg1) {
+                                                                                                         |     rcx = arg4;
+                                                                                                         |     rdx = arg3;
+                                                                                                         |     rsi = arg2;
+                                                                                                         |     rdi = arg1;
+                                                                                                         |     /* BloombergLP::bdlb::String::strstrCaseless(char const*, int, char const*, int) */
+    0x0040d2d0 push rbx                                                                                  |     
+    0x0040d2d1 mov rax, rdi                                                                              |     rax = rdi;
+    0x0040d2d4 test ecx, ecx                                                                             |     
+                                                                                                         |     if (ecx == 0) {
+    0x0040d2d6 je 0x40d362                                                                               |         goto label_1;
+                                                                                                         |     }
+    0x0040d2dc cmp esi, ecx                                                                              |     
+                                                                                                         |     if (esi < ecx) {
+    0x0040d2de jl 0x40d360                                                                               |         goto label_2;
+                                                                                                         |     }
+    0x0040d2e4 movsxd r9, esi                                                                            |     r9 = (int64_t) esi;
+    0x0040d2e7 add r9, rax                                                                               |     r9 += rax;
+    0x0040d2ea movsxd r8, ecx                                                                            |     r8 = (int64_t) ecx;
+    0x0040d2ed sub r9, r8                                                                                |     r9 -= r8;
+    0x0040d2f0 xor esi, esi                                                                              |     esi = 0;
+    0x0040d2f2 cmp r9, rax                                                                               |     
+                                                                                                         |     if (r9 < rax) {
+    0x0040d2f5 jb 0x40d360                                                                               |         goto label_2;
+                                                                                                         |     }
+    0x0040d2f7 mov r10, qword [rip + 0x2a122]                                                            |     r10 = BloombergLP::bdlb::CharType::s_toLower_p;
+    0x0040d2fe test ecx, ecx                                                                             |     
+    0x0040d300 cmovs ecx, esi                                                                            |     __asm ("cmovs ecx, esi");
+    0x0040d303 mov r11, rcx                                                                              |     r11 = rcx;
+    0x0040d306 neg r11                                                                                   |     r11 = -r11;
+    0x0040d309 nop dword [rax]                                                                           |     
+                                                                                                         | label_0:
+    0x0040d310 mov rdi, 0xffffffffffffffff                                                               |     rdi = 0xffffffffffffffff;
+    0x0040d317 nop word [rax + rax]                                                                      |     
+                                                                                                         |     do {
+    0x0040d320 lea rsi, [r11 + rdi]                                                                      |         rsi = r11 + rdi;
+    0x0040d324 cmp rsi, 0xffffffffffffffff                                                               |         
+                                                                                                         |         if (rsi == -1) {
+    0x0040d328 je 0x40d350                                                                               |             goto label_3;
+                                                                                                         |         }
+    0x0040d32a movzx esi, byte [rax + rdi + 1]                                                           |         esi = *((rax + rdi + 1));
+    0x0040d32f movzx esi, byte [r10 + rsi]                                                               |         esi = *((r10 + rsi));
+    0x0040d334 movzx ebx, byte [rdx + rdi + 1]                                                           |         ebx = *((rdx + rdi + 1));
+    0x0040d339 inc rdi                                                                                   |         rdi++;
+    0x0040d33c cmp sil, byte [r10 + rbx]                                                                 |         
+    0x0040d340 je 0x40d320                                                                               |         
+                                                                                                         |     } while (sil == *((r10 + rbx)));
+    0x0040d342 jmp 0x40d353                                                                              |     goto label_4;
+                                                                                                         | label_3:
+    0x0040d350 mov rdi, rcx                                                                              |     rdi = rcx;
+                                                                                                         | label_4:
+    0x0040d353 cmp rdi, r8                                                                               |     
+                                                                                                         |     if (rdi >= r8) {
+    0x0040d356 jge 0x40d362                                                                              |         goto label_1;
+                                                                                                         |     }
+    0x0040d358 inc rax                                                                                   |     rax++;
+    0x0040d35b cmp rax, r9                                                                               |     
+                                                                                                         |     if (rax <= r9) {
+    0x0040d35e jbe 0x40d310                                                                              |         goto label_0;
+                                                                                                         |     }
+                                                                                                         | label_2:
+    0x0040d360 xor eax, eax                                                                              |     eax = 0;
+                                                                                                         | label_1:
+    0x0040d362 pop rbx                                                                                   |     
+    0x0040d363 ret                                                                                       |     return rax;
+                                                                                                         | }

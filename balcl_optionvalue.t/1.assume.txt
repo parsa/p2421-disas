@@ -1,0 +1,203 @@
+    ; assembly                                           | /* r2dec pseudo code output */
+                                                         | /* balcl_optionvalue.t/assume @ 0x4050f0 */
+                                                         | #include <stdint.h>
+                                                         |  
+    ; (fcn) method.example1.main__ ()                    | int64_t method_example1_main_ (void) {
+                                                         |     int64_t var_8h;
+                                                         |     uint32_t var_10h;
+                                                         |     int64_t var_18h;
+                                                         |     int64_t var_20h;
+                                                         |     int64_t var_21h;
+                                                         |     int64_t var_28h;
+                                                         |     uint32_t var_60h;
+                                                         |     int64_t var_68h;
+                                                         |     uint32_t var_70h;
+                                                         |     int64_t var_74h;
+                                                         |     uint32_t var_b0h;
+                                                         |     int64_t var_b8h;
+                                                         |     /* example1::main() */
+    0x004050f0 push rbx                                  |     
+    0x004050f1 sub rsp, 0xc0                             |     
+    0x004050f8 mov dword [rsp + 0x60], 0                 |     *((rsp + 0x60)) = 0;
+    0x00405100 mov rax, qword [rip + 0x31a919]           |     rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x00405107 test rax, rax                             |     
+                                                         |     if (rax == 0) {
+    0x0040510a jne 0x405111                              |         
+    0x0040510c call 0x4a5830                             |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                         |     }
+    0x00405111 mov qword [rsp + 0x68], rax               |     *((rsp + 0x68)) = rax;
+    0x00405116 mov esi, 0x4d5f05                         |     esi = "false == valueA.hasNonVoidType()";
+    0x0040511b xor edi, edi                              |     edi = 0;
+    0x0040511d mov edx, 0x821                            |     edx = 0x821;
+    0x00405122 call 0x405440                             |     (anonymousnamespace)::aSsErT(bool,char const*,int) ();
+    0x00405127 lea rdi, [rsp + 0x20]                     |     
+    0x0040512c call 0x49f630                             |     eax = BloombergLP::balcl::OptionValue::type()const (rsp + 0x20);
+    0x00405131 xor edi, edi                              |     edi = 0;
+    0x00405133 test eax, eax                             |     
+    0x00405135 setne dil                                 |     dil = (eax != 0) ? 1 : 0;
+    0x00405139 mov esi, 0x4d5f26                         |     esi = "balcl::OptionType::e_VOID == valueA.type()";
+    0x0040513e mov edx, 0x822                            |     edx = 0x822;
+    0x00405143 call 0x405440                             |     (anonymousnamespace)::aSsErT(bool,char const*,int) ();
+    0x00405148 mov dword [rsp + 0xb0], 3                 |     *((rsp + 0xb0)) = 3;
+    0x00405153 mov rax, qword [rip + 0x31a8c6]           |     rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x0040515a test rax, rax                             |     
+                                                         |     if (rax != 0) {
+    0x0040515d je 0x405166                               |         
+    0x0040515f mov ecx, 3                                |         ecx = 3;
+    0x00405164 jmp 0x405172                              |         
+                                                         |     } else {
+    0x00405166 call 0x4a5830                             |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+    0x0040516b mov ecx, dword [rsp + 0xb0]               |         ecx = *((rsp + 0xb0));
+                                                         |     }
+    0x00405172 mov qword [rsp + 0xb8], rax               |     *((rsp + 0xb8)) = rax;
+    0x0040517a mov dword [rsp + 0x70], 5                 |     *((rsp + 0x70)) = 5;
+    0x00405182 mov byte [rsp + 0x74], 1                  |     *((rsp + 0x74)) = 1;
+    0x00405187 xor edi, edi                              |     edi = 0;
+    0x00405189 test ecx, ecx                             |     
+    0x0040518b sete dil                                  |     dil = (ecx == 0) ? 1 : 0;
+    0x0040518f mov esi, 0x4d5f51                         |     esi = "true == valueB.hasNonVoidType()";
+    0x00405194 mov edx, 0x82a                            |     edx = 0x82a;
+    0x00405199 call 0x405440                             |     (anonymousnamespace)::aSsErT(bool,char const*,int) ();
+    0x0040519e lea rbx, [rsp + 0x70]                     |     rbx = rsp + 0x70;
+    0x004051a3 mov rdi, rbx                              |     
+    0x004051a6 call 0x49f630                             |     eax = BloombergLP::balcl::OptionValue::type()const (rbx);
+    0x004051ab xor edi, edi                              |     edi = 0;
+    0x004051ad cmp eax, 3                                |     
+    0x004051b0 setne dil                                 |     dil = (eax != 3) ? 1 : 0;
+    0x004051b4 mov esi, 0x4d5f71                         |     esi = "balcl::OptionType::e_INT == valueB.type()";
+    0x004051b9 mov edx, 0x82b                            |     edx = 0x82b;
+    0x004051be call 0x405440                             |     (anonymousnamespace)::aSsErT(bool,char const*,int) ();
+    0x004051c3 xor edi, edi                              |     edi = 0;
+    0x004051c5 cmp dword [rsp + 0x70], 5                 |     
+    0x004051ca setne dil                                 |     dil = (*((rsp + 0x70)) != 5) ? 1 : 0;
+    0x004051ce mov esi, 0x4d5f9b                         |     esi = "5 == valueB.the<int>()";
+    0x004051d3 mov edx, 0x82c                            |     edx = 0x82c;
+    0x004051d8 call 0x405440                             |     (anonymousnamespace)::aSsErT(bool,char const*,int) ();
+    0x004051dd mov edx, dword [rsp + 0x60]               |     edx = *((rsp + 0x60));
+    0x004051e1 mov al, 1                                 |     al = 1;
+    0x004051e3 cmp edx, dword [rsp + 0xb0]               |     
+                                                         |     if (edx == *((rsp + 0xb0))) {
+    0x004051ea jne 0x405215                              |         
+    0x004051ec test edx, edx                             |         
+                                                         |         if (edx != 0) {
+    0x004051ee je 0x405213                               |             
+    0x004051f0 mov byte [rsp + 0x10], 1                  |             *((rsp + 0x10)) = 1;
+    0x004051f5 mov qword [rsp + 0x18], rbx               |             *((rsp + 0x18)) = rbx;
+    0x004051fa lea rdi, [rsp + 0x20]                     |             
+    0x004051ff lea rsi, [rsp + 0x10]                     |             
+    0x00405204 call 0x496ae0                             |             _ZNK11BloombergLP4bdlb10VariantImpINS_5bslmf8TypeListIJNS0_13NullableValueIbEENS4_IcEENS4_IiEENS4_IxEENS4_IdEENS4_IN3bsl12basic_stringIcNSt3_111char_traitsIcEENSA_9allocatorIcEEEEEENS4_INS_4bdlt8DatetimeEEENS4_INSJ_4DateEEENS4_INSJ_4TimeEEENS4_INSA_6vec (rsp + 0x20, rsp + 0x10, rdx);
+    0x00405209 cmp byte [rsp + 0x10], 0                  |             
+    0x0040520e sete al                                   |             al = (*((rsp + 0x10)) == 0) ? 1 : 0;
+    0x00405211 jmp 0x405215                              |             
+                                                         |         } else {
+    0x00405213 xor eax, eax                              |             eax = 0;
+                                                         |         }
+                                                         |     }
+    0x00405215 xor al, 1                                 |     al ^= 1;
+    0x00405217 movzx edi, al                             |     edi = (int32_t) al;
+    0x0040521a mov esi, 0x4d5fb2                         |     esi = "valueA != valueB";
+    0x0040521f mov edx, 0x82e                            |     edx = 0x82e;
+    0x00405224 call 0x405440                             |     (anonymousnamespace)::aSsErT(bool,char const*,int) ();
+    0x00405229 mov edx, dword [rsp + 0xb0]               |     edx = *((rsp + 0xb0));
+    0x00405230 test edx, edx                             |     
+                                                         |     if (edx != 0) {
+    0x00405232 je 0x40524e                               |         
+    0x00405234 lea rdi, [rsp + 0x70]                     |         
+    0x00405239 lea rsi, [rsp + 0x10]                     |         
+    0x0040523e call 0x4968b0                             |         _ZN11BloombergLP4bdlb10VariantImpINS_5bslmf8TypeListIJNS0_13NullableValueIbEENS4_IcEENS4_IiEENS4_IxEENS4_IdEENS4_IN3bsl12basic_stringIcNSt3_111char_traitsIcEENSA_9allocatorIcEEEEEENS4_INS_4bdlt8DatetimeEEENS4_INSJ_4DateEEENS4_INSJ_4TimeEEENS4_INSA_6vect (rsp + 0x70, rsp + 0x10);
+    0x00405243 mov dword [rsp + 0xb0], 0                 |         *((rsp + 0xb0)) = 0;
+                                                         |     }
+    0x0040524e xor edi, edi                              |     edi = 0;
+    0x00405250 cmp dword [rsp + 0x60], 0                 |     
+    0x00405255 setne dil                                 |     dil = (*((rsp + 0x60)) != 0) ? 1 : 0;
+    0x00405259 mov esi, 0x4d5fc3                         |     esi = "valueA == valueB";
+    0x0040525e mov edx, 0x835                            |     edx = 0x835;
+    0x00405263 call 0x405440                             |     (anonymousnamespace)::aSsErT(bool,char const*,int) ();
+    0x00405268 mov edx, dword [rsp + 0x60]               |     edx = *((rsp + 0x60));
+    0x0040526c test edx, edx                             |     
+                                                         |     if (edx != 0) {
+    0x0040526e je 0x405287                               |         
+    0x00405270 lea rdi, [rsp + 0x20]                     |         
+    0x00405275 lea rsi, [rsp + 0x10]                     |         
+    0x0040527a call 0x4968b0                             |         _ZN11BloombergLP4bdlb10VariantImpINS_5bslmf8TypeListIJNS0_13NullableValueIbEENS4_IcEENS4_IiEENS4_IxEENS4_IdEENS4_IN3bsl12basic_stringIcNSt3_111char_traitsIcEENSA_9allocatorIcEEEEEENS4_INS_4bdlt8DatetimeEEENS4_INSJ_4DateEEENS4_INSJ_4TimeEEENS4_INSA_6vect (rsp + 0x20, rsp + 0x10);
+    0x0040527f mov dword [rsp + 0x60], 0                 |         *((rsp + 0x60)) = 0;
+                                                         |     }
+    0x00405287 lea rdi, [rsp + 0x20]                     |     
+    0x0040528c mov esi, 5                                |     
+    0x00405291 call 0x49f130                             |     BloombergLP::balcl::OptionValue::init(BloombergLP::balcl::OptionType::Enum) (rsp + 0x20, 5);
+    0x00405296 xor edi, edi                              |     edi = 0;
+    0x00405298 cmp dword [rsp + 0x60], 0                 |     
+    0x0040529d sete dil                                  |     dil = (*((rsp + 0x60)) == 0) ? 1 : 0;
+    0x004052a1 mov esi, 0x4d5fd4                         |     esi = "true == valueA.hasNonVoidType()";
+    0x004052a6 mov edx, 0x83a                            |     edx = 0x83a;
+    0x004052ab call 0x405440                             |     (anonymousnamespace)::aSsErT(bool,char const*,int) ();
+    0x004052b0 lea rdi, [rsp + 0x20]                     |     
+    0x004052b5 call 0x49f630                             |     eax = BloombergLP::balcl::OptionValue::type()const (rsp + 0x20);
+    0x004052ba xor edi, edi                              |     edi = 0;
+    0x004052bc cmp eax, 5                                |     
+    0x004052bf setne dil                                 |     dil = (eax != 5) ? 1 : 0;
+    0x004052c3 mov esi, 0x4d5ff4                         |     esi = "balcl::OptionType::e_DOUBLE == valueA.type()";
+    0x004052c8 mov edx, 0x83b                            |     edx = 0x83b;
+    0x004052cd call 0x405440                             |     (anonymousnamespace)::aSsErT(bool,char const*,int) ();
+    0x004052d2 xorpd xmm0, xmm0                          |     __asm ("xorpd xmm0, xmm0");
+    0x004052d6 cmpneqsd xmm0, qword [rsp + 0x20]         |     __asm ("cmpneqsd xmm0, qword [rsp + 0x20]");
+    0x004052dd movq rdi, xmm0                            |     rdi = xmm0;
+    0x004052e2 and edi, 1                                |     edi &= 1;
+    0x004052e5 mov esi, 0x4d6021                         |     esi = "double() == valueA.the<double>()";
+    0x004052ea mov edx, 0x83c                            |     edx = 0x83c;
+    0x004052ef call 0x405440                             |     (anonymousnamespace)::aSsErT(bool,char const*,int) ();
+    0x004052f4 movabs rax, 0x4018000000000000            |     rax = 0x4018000000000000;
+    0x004052fe mov qword [rsp + 0x20], rax               |     *((rsp + 0x20)) = rax;
+    0x00405303 mov byte [rsp + 0x28], 1                  |     *((rsp + 0x28)) = 1;
+    0x00405308 mov esi, 0x4d6042                         |     esi = "6.0 == valueA.the<double>()";
+    0x0040530d xor edi, edi                              |     edi = 0;
+    0x0040530f mov edx, 0x83f                            |     edx = 0x83f;
+    0x00405314 call 0x405440                             |     (anonymousnamespace)::aSsErT(bool,char const*,int) ();
+    0x00405319 lea rax, [rsp + 8]                        |     rax = rsp + 8;
+    0x0040531e mov qword [rsp + 0x10], rax               |     *((rsp + 0x10)) = rax;
+    0x00405323 mov edx, dword [rsp + 0x60]               |     edx = *((rsp + 0x60));
+    0x00405327 lea rdi, [rsp + 0x20]                     |     
+    0x0040532c lea rsi, [rsp + 0x10]                     |     
+    0x00405331 call 0x497190                             |     _ZN11BloombergLP4bdlb10VariantImpINS_5bslmf8TypeListIJNS0_13NullableValueIbEENS4_IcEENS4_IiEENS4_IxEENS4_IdEENS4_IN3bsl12basic_stringIcNSt3_111char_traitsIcEENSA_9allocatorIcEEEEEENS4_INS_4bdlt8DatetimeEEENS4_INSJ_4DateEEENS4_INSJ_4TimeEEENS4_INSA_6vect (rsp + 0x20, rsp + 0x10);
+    0x00405336 lea rax, [rsp + 0x28]                     |     rax = rsp + 0x28;
+    0x0040533b mov ecx, dword [rsp + 0x60]               |     ecx = *((rsp + 0x60));
+    0x0040533f dec ecx                                   |     ecx--;
+                                                         |     /* switch table (1 cases) at 0x4cf510 */
+    0x00405341 jmp qword [rcx*8 + 0x4cf510]              |     
+                                                         |     do {
+    0x0040534d movzx edi, byte [rax]                     |         edi = *(rax);
+    0x00405350 mov esi, 0x4d605e                         |         esi = "true == valueA.isNull()";
+    0x00405355 mov edx, 0x845                            |         edx = 0x845;
+    0x0040535a call 0x405440                             |         (anonymousnamespace)::aSsErT(bool,char const*,int) ();
+    0x0040535f lea rdi, [rsp + 0x20]                     |         
+    0x00405364 call 0x49f630                             |         eax = BloombergLP::balcl::OptionValue::type()const (rsp + 0x20);
+    0x00405369 xor edi, edi                              |         edi = 0;
+    0x0040536b cmp eax, 5                                |         
+    0x0040536e setne dil                                 |         dil = (eax != 5) ? 1 : 0;
+    0x00405372 mov esi, 0x4d5ff4                         |         esi = "balcl::OptionType::e_DOUBLE == valueA.type()";
+    0x00405377 mov edx, 0x846                            |         edx = 0x846;
+    0x0040537c call 0x405440                             |         (anonymousnamespace)::aSsErT(bool,char const*,int) ();
+    0x00405381 mov edx, dword [rsp + 0xb0]               |         edx = *((rsp + 0xb0));
+    0x00405388 test edx, edx                             |         
+                                                         |         if (edx != 0) {
+    0x0040538a je 0x40539b                               |             
+    0x0040538c lea rdi, [rsp + 0x70]                     |             
+    0x00405391 lea rsi, [rsp + 0x10]                     |             
+    0x00405396 call 0x4968b0                             |             _ZN11BloombergLP4bdlb10VariantImpINS_5bslmf8TypeListIJNS0_13NullableValueIbEENS4_IcEENS4_IiEENS4_IxEENS4_IdEENS4_IN3bsl12basic_stringIcNSt3_111char_traitsIcEENSA_9allocatorIcEEEEEENS4_INS_4bdlt8DatetimeEEENS4_INSJ_4DateEEENS4_INSJ_4TimeEEENS4_INSA_6vect (rsp + 0x70, rsp + 0x10);
+                                                         |         }
+    0x0040539b mov edx, dword [rsp + 0x60]               |         edx = *((rsp + 0x60));
+    0x0040539f test edx, edx                             |         
+                                                         |         if (edx != 0) {
+    0x004053a1 je 0x4053b2                               |             
+    0x004053a3 lea rdi, [rsp + 0x20]                     |             
+    0x004053a8 lea rsi, [rsp + 0x70]                     |             
+    0x004053ad call 0x4968b0                             |             eax = _ZN11BloombergLP4bdlb10VariantImpINS_5bslmf8TypeListIJNS0_13NullableValueIbEENS4_IcEENS4_IiEENS4_IxEENS4_IdEENS4_IN3bsl12basic_stringIcNSt3_111char_traitsIcEENSA_9allocatorIcEEEEEENS4_INS_4bdlt8DatetimeEEENS4_INSJ_4DateEEENS4_INSJ_4TimeEEENS4_INSA_6vect (rsp + 0x20, rsp + 0x70);
+                                                         |         }
+    0x004053b2 xor eax, eax                              |         eax = 0;
+    0x004053b4 add rsp, 0xc0                             |         
+    0x004053bb pop rbx                                   |         
+    0x004053bc ret                                       |         return rax;
+    0x004053bd lea rax, [rsp + 0x21]                     |         rax = rsp + 0x21;
+    0x004053c2 jmp 0x40534d                              |         
+                                                         |     } while (1);
+                                                         | }

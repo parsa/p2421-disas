@@ -1,0 +1,42 @@
+    ; assembly                                                                                       | /* r2dec pseudo code output */
+                                                                                                     | /* balb_controlmanager.t/none @ 0x40cf60 */
+                                                                                                     | #include <stdint.h>
+                                                                                                     |  
+    ; (fcn) method.BloombergLP::bdlb::String.areEqualCaseless_char_const__char_const__int_ ()        | int64_t method_BloombergLP::bdlb::String_areEqualCaseless_char_const_char_const_int_ (int64_t arg3, int64_t arg2, uint32_t arg1) {
+                                                                                                     |     rdx = arg3;
+                                                                                                     |     rsi = arg2;
+                                                                                                     |     rdi = arg1;
+                                                                                                     |     /* BloombergLP::bdlb::String::areEqualCaseless(char const*, char const*, int) */
+    0x0040cf60 test edx, edx                                                                         |     
+                                                                                                     |     if (edx <= 0) {
+    0x0040cf62 jle 0x40cfa4                                                                          |         goto label_0;
+                                                                                                     |     }
+    0x0040cf64 mov r8, qword [rip + 0x2a4b5]                                                         |     r8 = BloombergLP::bdlb::CharType::s_toLower_p;
+    0x0040cf6b mov r9d, edx                                                                          |     r9d = edx;
+    0x0040cf6e xor r11d, r11d                                                                        |     r11d = 0;
+    0x0040cf71 nop word cs:[rax + rax]                                                               |     
+    0x0040cf7b nop dword [rax + rax]                                                                 |     
+                                                                                                     |     do {
+    0x0040cf80 movzx eax, byte [rdi + r11]                                                           |         eax = *((rdi + r11));
+    0x0040cf85 movzx r10d, byte [r8 + rax]                                                           |         r10d = *((r8 + rax));
+    0x0040cf8a xor eax, eax                                                                          |         eax = 0;
+    0x0040cf8c test r10b, r10b                                                                       |         
+                                                                                                     |         if (r10b == 0) {
+    0x0040cf8f je 0x40cfae                                                                           |             goto label_1;
+                                                                                                     |         }
+    0x0040cf91 movzx ecx, byte [rsi + r11]                                                           |         ecx = *((rsi + r11));
+    0x0040cf96 cmp r10b, byte [r8 + rcx]                                                             |         
+                                                                                                     |         if (r10b != *((r8 + rcx))) {
+    0x0040cf9a jne 0x40cfae                                                                          |             goto label_1;
+                                                                                                     |         }
+    0x0040cf9c inc r11                                                                               |         r11++;
+    0x0040cf9f cmp r9, r11                                                                           |         
+    0x0040cfa2 jne 0x40cf80                                                                          |         
+                                                                                                     |     } while (r9 != r11);
+                                                                                                     | label_0:
+    0x0040cfa4 movsxd rax, edx                                                                       |     rax = (int64_t) edx;
+    0x0040cfa7 cmp byte [rdi + rax], 0                                                               |     
+    0x0040cfab sete al                                                                               |     al = (*((rdi + rax)) == 0) ? 1 : 0;
+                                                                                                     | label_1:
+    0x0040cfae ret                                                                                   |     return rax;
+                                                                                                     | }

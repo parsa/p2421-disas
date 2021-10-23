@@ -1,0 +1,50 @@
+    ; assembly                                                   | /* r2dec pseudo code output */
+                                                                 | /* bslmt_sluice.t/none @ 0x406c80 */
+                                                                 | #include <stdint.h>
+                                                                 |  
+    ; (fcn) method.BloombergLP::bslmt::Sluice.enter__ ()         | int64_t method_BloombergLP::bslmt::Sluice_enter_ (int64_t arg1) {
+                                                                 |     rdi = arg1;
+                                                                 |     /* BloombergLP::bslmt::Sluice::enter() */
+    0x00406c80 push r14                                          |     
+    0x00406c82 push rbx                                          |     
+    0x00406c83 push rax                                          |     
+    0x00406c84 mov r14, rdi                                      |     r14 = rdi;
+    0x00406c87 call 0x4039e0                                     |     pthread_mutex_lock ();
+    0x00406c8c mov rbx, qword [r14 + 0x30]                       |     rbx = *((r14 + 0x30));
+    0x00406c90 test rbx, rbx                                     |     
+                                                                 |     if (rbx == 0) {
+    0x00406c93 jne 0x406ce4                                      |         
+    0x00406c95 mov rbx, qword [r14 + 0x38]                       |         rbx = *((r14 + 0x38));
+    0x00406c99 test rbx, rbx                                     |         
+                                                                 |         if (rbx != 0) {
+    0x00406c9c je 0x406ca8                                       |             
+    0x00406c9e mov rax, qword [rbx + 0x30]                       |             rax = *((rbx + 0x30));
+    0x00406ca2 mov qword [r14 + 0x38], rax                       |             *((r14 + 0x38)) = rax;
+    0x00406ca6 jmp 0x406ce0                                      |             
+                                                                 |         } else {
+    0x00406ca8 mov rdi, qword [r14 + 0x48]                       |             rdi = *((r14 + 0x48));
+    0x00406cac mov rax, qword [rdi]                              |             rax = *(rdi);
+    0x00406caf mov esi, 0x38                                     |             esi = 0x38;
+    0x00406cb4 call qword [rax + 0x10]                           |             rax = uint64_t (*rax + 0x10)() ();
+    0x00406cb7 mov rbx, rax                                      |             rbx = rax;
+    0x00406cba mov eax, dword [r14 + 0x40]                       |             eax = *((r14 + 0x40));
+    0x00406cbe mov qword [rbx], 0                                |             *(rbx) = 0;
+    0x00406cc5 mov dword [rbx + 0x28], eax                       |             *((rbx + 0x28)) = eax;
+    0x00406cc8 mov rdi, rbx                                      |             rdi = rbx;
+    0x00406ccb add rdi, 8                                        |             rdi += 8;
+    0x00406ccf xor esi, esi                                      |             esi = 0;
+    0x00406cd1 xor edx, edx                                      |             edx = 0;
+    0x00406cd3 call 0x403830                                     |             sem_init ();
+    0x00406cd8 mov qword [rbx + 0x30], 0                         |             *((rbx + 0x30)) = 0;
+                                                                 |         }
+    0x00406ce0 mov qword [r14 + 0x30], rbx                       |         *((r14 + 0x30)) = rbx;
+                                                                 |     }
+    0x00406ce4 inc dword [rbx]                                   |     *(rbx)++;
+    0x00406ce6 mov rdi, r14                                      |     rdi = r14;
+    0x00406ce9 call 0x403a80                                     |     pthread_mutex_unlock ();
+    0x00406cee mov rax, rbx                                      |     rax = rbx;
+    0x00406cf1 add rsp, 8                                        |     
+    0x00406cf5 pop rbx                                           |     
+    0x00406cf6 pop r14                                           |     
+    0x00406cf8 ret                                               |     return rax;
+                                                                 | }

@@ -1,0 +1,66 @@
+    ; assembly                                                           | /* r2dec pseudo code output */
+                                                                         | /* balcl_commandline.t/assume @ 0x473bc0 */
+                                                                         | #include <stdint.h>
+                                                                         |  
+    ; (fcn) method.BloombergLP::bdlb::Tokenizer.begin___const ()         | int64_t method_BloombergLP::bdlb::Tokenizer_begin_const (uint32_t arg2, int64_t arg1) {
+                                                                         |     rsi = arg2;
+                                                                         |     rdi = arg1;
+                                                                         |     /* BloombergLP::bdlb::Tokenizer::begin() const */
+    0x00473bc0 push rbx                                                  |     
+    0x00473bc1 mov rbx, rdi                                              |     rbx = rdi;
+    0x00473bc4 mov rax, qword [rsi + 0x100]                              |     rax = *((rsi + 0x100));
+    0x00473bcb mov rcx, qword [rsi + 0x128]                              |     rcx = *((rsi + 0x128));
+    0x00473bd2 mov qword [rdi], rsi                                      |     *(rdi) = rsi;
+    0x00473bd5 mov qword [rdi + 8], rax                                  |     *((rdi + 8)) = rax;
+    0x00473bd9 mov qword [rdi + 0x10], rax                               |     *((rdi + 0x10)) = rax;
+    0x00473bdd mov qword [rdi + 0x18], rax                               |     *((rdi + 0x18)) = rax;
+    0x00473be1 mov qword [rdi + 0x20], rcx                               |     *((rdi + 0x20)) = rcx;
+    0x00473be5 mov byte [rdi + 0x28], 0                                  |     *((rdi + 0x28)) = 0;
+    0x00473be9 test rcx, rcx                                             |     
+                                                                         |     if (rcx == 0) {
+    0x00473bec je 0x473c17                                               |         goto label_0;
+                                                                         |     }
+    0x00473bee cmp rax, rcx                                              |     
+                                                                         |     if (rax == rcx) {
+    0x00473bf1 je 0x473c37                                               |         goto label_1;
+                                                                         |     }
+    0x00473bf3 nop word cs:[rax + rax]                                   |     
+    0x00473bfd nop dword [rax]                                           |     
+                                                                         |     do {
+    0x00473c00 movzx edx, byte [rax]                                     |         edx = *(rax);
+    0x00473c03 cmp byte [rsi + rdx], 1                                   |         
+                                                                         |         if (*((rsi + rdx)) != 1) {
+    0x00473c07 jne 0x473c37                                              |             goto label_1;
+                                                                         |         }
+    0x00473c09 inc rax                                                   |         rax++;
+    0x00473c0c mov qword [rbx + 8], rax                                  |         *((rbx + 8)) = rax;
+    0x00473c10 cmp rcx, rax                                              |         
+    0x00473c13 jne 0x473c00                                              |         
+                                                                         |     } while (rcx != rax);
+    0x00473c15 jmp 0x473c37                                              |     goto label_1;
+                                                                         | label_0:
+    0x00473c17 mov cl, byte [rax]                                        |     cl = *(rax);
+    0x00473c19 test cl, cl                                               |     
+                                                                         |     if (cl == 0) {
+    0x00473c1b je 0x473c37                                               |         goto label_1;
+                                                                         |     }
+    0x00473c1d inc rax                                                   |     rax++;
+                                                                         |     do {
+    0x00473c20 movzx ecx, cl                                             |         ecx = (int32_t) cl;
+    0x00473c23 cmp byte [rsi + rcx], 1                                   |         
+                                                                         |         if (*((rsi + rcx)) != 1) {
+    0x00473c27 jne 0x473c37                                              |             goto label_1;
+                                                                         |         }
+    0x00473c29 mov qword [rbx + 8], rax                                  |         *((rbx + 8)) = rax;
+    0x00473c2d movzx ecx, byte [rax]                                     |         ecx = *(rax);
+    0x00473c30 inc rax                                                   |         rax++;
+    0x00473c33 test cl, cl                                               |         
+    0x00473c35 jne 0x473c20                                              |         
+                                                                         |     } while (cl != 0);
+                                                                         | label_1:
+    0x00473c37 mov rdi, rbx                                              |     
+    0x00473c3a call 0x473200                                             |     BloombergLP::bdlb::TokenizerIterator::operator++() (rbx);
+    0x00473c3f mov rax, rbx                                              |     rax = rbx;
+    0x00473c42 pop rbx                                                   |     
+    0x00473c43 ret                                                       |     return rax;
+                                                                         | }

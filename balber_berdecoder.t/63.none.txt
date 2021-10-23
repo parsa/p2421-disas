@@ -1,0 +1,82 @@
+    ; assembly                                                           | /* r2dec pseudo code output */
+                                                                         | /* balber_berdecoder.t/none @ 0x46bcf0 */
+                                                                         | #include <stdint.h>
+                                                                         |  
+    ; (fcn) method.BloombergLP::bdlt::Time.setMillisecond_int_ ()        | int64_t method_BloombergLP::bdlt::Time_setMillisecond_int_ (int64_t arg2, int64_t arg1) {
+                                                                         |     char * var_8h;
+                                                                         |     char * var_10h;
+                                                                         |     int64_t var_18h;
+                                                                         |     char * var_20h;
+                                                                         |     int64_t var_28h;
+                                                                         |     rsi = arg2;
+                                                                         |     rdi = arg1;
+                                                                         |     /* BloombergLP::bdlt::Time::setMillisecond(int) */
+    0x0046bcf0 push rbp                                                  |     
+    0x0046bcf1 push r14                                                  |     
+    0x0046bcf3 push rbx                                                  |     
+    0x0046bcf4 sub rsp, 0x30                                             |     
+    0x0046bcf8 mov ebp, esi                                              |     
+    0x0046bcfa mov rbx, rdi                                              |     rbx = rdi;
+    0x0046bcfd movabs r14, 0x4000000000                                  |     r14 = 0x4000000000;
+    0x0046bd07 mov rcx, qword [rdi]                                      |     rcx = *(rdi);
+    0x0046bd0a cmp rcx, r14                                              |     
+                                                                         |     if (rcx < r14) {
+    0x0046bd0d jl 0x46bdb0                                               |         goto label_0;
+                                                                         |     }
+    0x0046bd13 movabs rax, 0xffffffbfffffffff                            |     rax = 0xffffffbfffffffff;
+    0x0046bd1d and rcx, rax                                              |     rcx &= rax;
+                                                                         |     do {
+    0x0046bd20 movabs rax, 0x141dd75fff                                  |         rax = 0x141dd75fff;
+    0x0046bd2a cmp rcx, rax                                              |         
+                                                                         |         if (rcx <= rax) {
+    0x0046bd2d jg 0x46bd97                                               |             
+    0x0046bd2f movabs rdx, 0x20c49ba5e353f7cf                            |             rdx = 0x20c49ba5e353f7cf;
+    0x0046bd39 mov rax, rcx                                              |             rax = rcx;
+    0x0046bd3c imul rdx                                                  |             rdx:rax = rax * rdx;
+    0x0046bd3f mov rax, rdx                                              |             rax = rdx;
+    0x0046bd42 shr rax, 0x3f                                             |             rax >>= 0x3f;
+    0x0046bd46 sar rdx, 7                                                |             rdx >>= 7;
+    0x0046bd4a add rdx, rax                                              |             rdx += rax;
+    0x0046bd4d imul rax, rdx, 0x3e8                                      |             rax = rdx * 0x3e8;
+    0x0046bd54 mov rsi, rcx                                              |             rsi = rcx;
+    0x0046bd57 sub rsi, rax                                              |             rsi -= rax;
+    0x0046bd5a movabs rdx, 0x431bde82d7b634db                            |             rdx = 0x431bde82d7b634db;
+    0x0046bd64 mov rax, rcx                                              |             rax = rcx;
+    0x0046bd67 imul rdx                                                  |             rdx:rax = rax * rdx;
+    0x0046bd6a mov rax, rdx                                              |             rax = rdx;
+    0x0046bd6d shr rax, 0x3f                                             |             rax >>= 0x3f;
+    0x0046bd71 sar rdx, 0x12                                             |             rdx >>= 0x12;
+    0x0046bd75 add rdx, rax                                              |             rdx += rax;
+    0x0046bd78 imul rax, rdx, 0xf4240                                    |             rax = rdx * 0xf4240;
+    0x0046bd7f movsxd rdx, ebp                                           |             rdx = (int64_t) ebp;
+    0x0046bd82 imul rdx, rdx, 0x3e8                                      |             rdx *= 0x3e8;
+    0x0046bd89 add rdx, rcx                                              |             rdx += rcx;
+    0x0046bd8c sub rax, rcx                                              |             rax -= rcx;
+    0x0046bd8f add rax, rdx                                              |             rax += rdx;
+    0x0046bd92 add rax, rsi                                              |             rax += rsi;
+    0x0046bd95 jmp 0x46bda1                                              |             
+                                                                         |         } else {
+    0x0046bd97 movsxd rax, ebp                                           |             rax = (int64_t) ebp;
+    0x0046bd9a imul rax, rax, 0x3e8                                      |             rax *= 0x3e8;
+                                                                         |         }
+    0x0046bda1 or rax, r14                                               |         rax |= r14;
+    0x0046bda4 mov qword [rbx], rax                                      |         *(rbx) = rax;
+    0x0046bda7 add rsp, 0x30                                             |         
+    0x0046bdab pop rbx                                                   |         
+    0x0046bdac pop r14                                                   |         
+    0x0046bdae pop rbp                                                   |         
+    0x0046bdaf ret                                                       |         return rax;
+                                                                         | label_0:
+    0x0046bdb0 mov edi, 0x6f73e0                                         |         
+    0x0046bdb5 call 0x46f4e0                                             |         eax = BloombergLP::bsls::Review::updateCount(BloombergLP::bsls::Atomic_TypeTraits<BloombergLP::bsls::AtomicOperations_ALL_ALL_ClangIntrinsics>::Int*) (method.BloombergLP::bdlt::Time.invalidMicrosecondsFromMidnight___const::__0::operator_____const::count);
+    0x0046bdba mov qword [rsp + 8], 0x4ccc90                             |         *((rsp + 8)) = "detected invalid 'bdlt::Time'; see TEAM 579660115";
+    0x0046bdc3 mov qword [rsp + 0x10], 0x4cccc2                          |         *((rsp + 0x10)) = "/home/parsa/experiments/assumptions/crush/ccm-none/groups/bdl/bdlt/bdlt_time.cpp";
+    0x0046bdcc mov dword [rsp + 0x18], 0xcb                              |         *((rsp + 0x18)) = 0xcb;
+    0x0046bdd4 mov qword [rsp + 0x20], 0x4cd8e2                          |         *((rsp + 0x20)) = "R-INV";
+    0x0046bddd mov dword [rsp + 0x28], eax                               |         *((rsp + 0x28)) = eax;
+    0x0046bde1 lea rdi, [rsp + 8]                                        |         rdi = rsp + 8;
+    0x0046bde6 call 0x46f500                                             |         BloombergLP::bsls::Review::invokeHandler(BloombergLP::bsls::ReviewViolationconst&) ();
+    0x0046bdeb imul rcx, qword [rbx], 0x3e8                              |         rcx = *(rbx) * 0x3e8;
+    0x0046bdf2 jmp 0x46bd20                                              |         
+                                                                         |     } while (1);
+                                                                         | }

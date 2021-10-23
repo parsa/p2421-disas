@@ -1,0 +1,29 @@
+    ; assembly                                               | /* r2dec pseudo code output */
+                                                             | /* bdlmt_throttle.t/assume @ 0x405030 */
+                                                             | #include <stdint.h>
+                                                             |  
+    ; (fcn) method.Case_Allow_None.threadJobInit__ ()        | int32_t method_Case_Allow_None_threadJobInit_ (void) {
+                                                             |     /* Case_Allow_None::threadJobInit() */
+    0x00405030 push rbp                                      |     
+    0x00405031 push r15                                      |     
+    0x00405033 push r14                                      |     
+    0x00405035 push rbx                                      |     
+    0x00405036 sub rsp, 0x18                                 |     
+    0x0040503a nop word [rax + rax]                          |     
+                                                             |     do {
+    0x00405040 mov eax, dword [rip + 0x25321a]               |         eax = Case_Allow_None::atomicBarrier;
+    0x00405046 test eax, eax                                 |         
+    0x00405048 js 0x405040                                   |         
+                                                             |     } while (eax < 0);
+    0x0040504a mov eax, dword [rip + 0x253210]               |     eax = Case_Allow_None::atomicBarrier;
+    0x00405050 test eax, eax                                 |     
+                                                             |     if (eax > 0) {
+    0x00405052 jg 0x405279                                   |         void (*0x405279)() ();
+                                                             |     }
+    0x00405058 xor r15d, r15d                                |     r15d = 0;
+    0x0040505b xor ebx, ebx                                  |     ebx = 0;
+    0x0040505d and ebx, 7                                    |     ebx &= 7;
+    0x00405060 xor ebp, ebp                                  |     ebp = 0;
+    0x00405062 xor r14d, r14d                                |     r14d = 0;
+    0x00405065 jmp qword [rbx*8 + 0x43b910]                  |     
+                                                             | }

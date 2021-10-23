@@ -1,0 +1,31 @@
+    ; assembly                                                                               | /* r2dec pseudo code output */
+                                                                                             | /* bblb_schedulegenerationutil.t/assume @ 0x40e640 */
+                                                                                             | #include <stdint.h>
+                                                                                             |  
+    ; (fcn) method.BloombergLP::bdlt::DayOfWeekSet_Iter.DayOfWeekSet_Iter_int__int_ ()       | void method_BloombergLP::bdlt::DayOfWeekSet_Iter_DayOfWeekSet_Iter_int_int_ (uint32_t arg3, uint32_t arg2, int64_t arg1) {
+                                                                                             |     rdx = arg3;
+                                                                                             |     rsi = arg2;
+                                                                                             |     rdi = arg1;
+                                                                                             |     /* BloombergLP::bdlt::DayOfWeekSet_Iter::DayOfWeekSet_Iter(int, int) */
+    0x0040e640 mov byte [rdi], sil                                                           |     *(rdi) = sil;
+    0x0040e643 mov byte [rdi + 1], dl                                                        |     *((rdi + 1)) = dl;
+    0x0040e646 cmp dl, 7                                                                     |     
+                                                                                             |     if (dl > 7) {
+    0x0040e649 ja 0x40e66f                                                                   |         goto label_0;
+                                                                                             |     }
+    0x0040e64b and esi, 0xfe                                                                 |     esi &= 0xfe;
+    0x0040e651 nop word cs:[rax + rax]                                                       |     
+    0x0040e65b nop dword [rax + rax]                                                         |     
+                                                                                             |     do {
+    0x0040e660 bt esi, edx                                                                   |         
+                                                                                             |         if (((esi >> edx) & 1) < 0) {
+    0x0040e663 jb 0x40e66f                                                                   |             goto label_0;
+                                                                                             |         }
+    0x0040e665 inc edx                                                                       |         edx++;
+    0x0040e667 mov byte [rdi + 1], dl                                                        |         *((rdi + 1)) = dl;
+    0x0040e66a cmp edx, 8                                                                    |         
+    0x0040e66d jne 0x40e660                                                                  |         
+                                                                                             |     } while (edx != 8);
+                                                                                             | label_0:
+    0x0040e66f ret                                                                           |     
+                                                                                             | }

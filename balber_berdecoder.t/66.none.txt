@@ -1,0 +1,16 @@
+    ; assembly                           | /* r2dec pseudo code output */
+                                         | /* balber_berdecoder.t/none @ 0x46efa0 */
+                                         | #include <stdint.h>
+                                         |  
+    ; (fcn) sym.foo_int_ ()              | int32_t foo_int_ (int64_t arg1) {
+                                         |     rdi = arg1;
+                                         |     /* foo(int*) */
+    0x0046efa0 test rdi, rdi             |     
+                                         |     if (rdi != 0) {
+    0x0046efa3 je 0x46efa6               |         
+    0x0046efa5 ret                       |         return;
+                                         |     }
+    0x0046efa6 mov edi, 0x4cd66d         |     edi = "WOOPS";
+    0x0046efab xor eax, eax              |     eax = 0;
+    0x0046efad jmp 0x404180              |     return printf ();
+                                         | }

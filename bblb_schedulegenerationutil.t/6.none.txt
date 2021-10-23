@@ -1,0 +1,63 @@
+    ; assembly                                                                                                                                               | /* r2dec pseudo code output */
+                                                                                                                                                             | /* bblb_schedulegenerationutil.t/none @ 0x410740 */
+                                                                                                                                                             | #include <stdint.h>
+                                                                                                                                                             |  
+    ; (fcn) method.BloombergLP::bdlt::PackedCalendar.addWeekendDaysTransition_BloombergLP::bdlt::Date_const__BloombergLP::bdlt::DayOfWeekSet_const_ ()       | void method_BloombergLP::bdlt::PackedCalendar_addWeekendDaysTransition_BloombergLP::bdlt::Date_const_BloombergLP::bdlt::DayOfWeekSet_const_ (int64_t arg3, int64_t arg2, int64_t arg1) {
+                                                                                                                                                             |     int64_t var_4h;
+                                                                                                                                                             |     rdx = arg3;
+                                                                                                                                                             |     rsi = arg2;
+                                                                                                                                                             |     rdi = arg1;
+                                                                                                                                                             |     /* BloombergLP::bdlt::PackedCalendar::addWeekendDaysTransition(BloombergLP::bdlt::Date const&, BloombergLP::bdlt::DayOfWeekSet const&) */
+    0x00410740 push rax                                                                                                                                      |     
+    0x00410741 mov r10d, dword [rsi]                                                                                                                         |     r10d = *(rsi);
+    0x00410744 mov dword [rsp], r10d                                                                                                                         |     *(rsp) = r10d;
+    0x00410748 mov r8b, byte [rdx]                                                                                                                           |     r8b = *(rdx);
+    0x0041074b mov byte [rsp + 4], r8b                                                                                                                       |     *((rsp + 4)) = r8b;
+    0x00410750 mov rsi, qword [rdi + 8]                                                                                                                      |     rsi = *((rdi + 8));
+    0x00410754 mov r9, qword [rdi + 0x10]                                                                                                                    |     r9 = *((rdi + 0x10));
+    0x00410758 mov rcx, r9                                                                                                                                   |     rcx = *((rdi + 0x10));
+    0x0041075b sub rcx, rsi                                                                                                                                  |     rcx -= rsi;
+                                                                                                                                                             |     if (rcx == 0) {
+    0x0041075e je 0x410798                                                                                                                                   |         goto label_0;
+                                                                                                                                                             |     }
+    0x00410760 sar rcx, 3                                                                                                                                    |     rcx >>= 3;
+    0x00410764 nop word cs:[rax + rax]                                                                                                                       |     
+    0x0041076e nop                                                                                                                                           |     
+                                                                                                                                                             |     do {
+    0x00410770 mov rdx, rcx                                                                                                                                  |         rdx = rcx;
+    0x00410773 shr rdx, 1                                                                                                                                    |         rdx >>= 1;
+    0x00410776 mov rax, rdx                                                                                                                                  |         rax = rdx;
+    0x00410779 not rax                                                                                                                                       |         rax = ~rax;
+    0x0041077c add rax, rcx                                                                                                                                  |         rax += rcx;
+    0x0041077f cmp dword [rsi + rdx*8], r10d                                                                                                                 |         
+                                                                                                                                                             |         if (*((rsi + rdx*8)) >= r10d) {
+    0x00410783 cmovge rax, rdx                                                                                                                               |             rax = rdx;
+                                                                                                                                                             |         }
+    0x00410787 lea rcx, [rsi + rdx*8 + 8]                                                                                                                    |         rcx = rsi + rdx*8 + 8;
+                                                                                                                                                             |         if (*((rsi + rdx*8)) < r10d) {
+    0x0041078c cmovl rsi, rcx                                                                                                                                |             rsi = rcx;
+                                                                                                                                                             |         }
+    0x00410790 mov rcx, rax                                                                                                                                  |         rcx = rax;
+    0x00410793 test rax, rax                                                                                                                                 |         
+    0x00410796 jne 0x410770                                                                                                                                  |         
+                                                                                                                                                             |     } while (rax != 0);
+                                                                                                                                                             | label_0:
+    0x00410798 cmp rsi, r9                                                                                                                                   |     
+                                                                                                                                                             |     if (rsi != r9) {
+    0x0041079b je 0x4107a8                                                                                                                                   |         
+    0x0041079d cmp dword [rsi], r10d                                                                                                                         |         
+                                                                                                                                                             |         if (*(rsi) != r10d) {
+    0x004107a0 jne 0x4107a8                                                                                                                                  |             goto label_1;
+                                                                                                                                                             |         }
+    0x004107a2 mov byte [rsi + 4], r8b                                                                                                                       |         *((rsi + 4)) = r8b;
+    0x004107a6 pop rax                                                                                                                                       |         
+    0x004107a7 ret                                                                                                                                           |         return;
+                                                                                                                                                             |     }
+                                                                                                                                                             | label_1:
+    0x004107a8 add rdi, 8                                                                                                                                    |     rdi += 8;
+    0x004107ac mov rcx, rsp                                                                                                                                  |     
+    0x004107af mov edx, 1                                                                                                                                    |     
+    0x004107b4 call 0x413440                                                                                                                                 |     bsl::vector<bsl::pair<BloombergLP::bdlt::Date,BloombergLP::bdlt::DayOfWeekSet>,bsl::allocator<bsl::pair<BloombergLP::bdlt::Date,BloombergLP::bdlt::DayOfWeekSet>>>::insert(bsl::pair<BloombergLP::bdlt::Date,BloombergLP::bdlt::DayOfWeekSet>const*,unsigned long,bsl::pair<BloombergLP::bdlt::Date,BloombergLP::bdlt::DayOfWeekSet>const&) (rdi, rsi, 1, rsp);
+    0x004107b9 pop rax                                                                                                                                       |     
+    0x004107ba ret                                                                                                                                           |     
+                                                                                                                                                             | }

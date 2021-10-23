@@ -1,0 +1,228 @@
+    ; assembly                                                                                                   | /* r2dec pseudo code output */
+                                                                                                                 | /* balm_collectorrepository.t/assume @ 0x41cb70 */
+                                                                                                                 | #include <stdint.h>
+                                                                                                                 |  
+    ; (fcn) method.BloombergLP::balm::MetricRegistry.setUserData_char_const__int__void_const__bool_ ()           | int64_t method_BloombergLP::balm::MetricRegistry_setUserData_char_const_int_void_const_bool_ (uint32_t arg5, int64_t arg4, int64_t arg3, int64_t arg2, int64_t arg1) {
+                                                                                                                 |     int64_t var_8h;
+                                                                                                                 |     uint32_t var_14h;
+                                                                                                                 |     int64_t var_18h;
+                                                                                                                 |     uint32_t var_24h;
+                                                                                                                 |     int64_t var_28h;
+                                                                                                                 |     int64_t var_40h;
+                                                                                                                 |     uint32_t var_48h;
+                                                                                                                 |     int64_t var_50h;
+                                                                                                                 |     r8 = arg5;
+                                                                                                                 |     rcx = arg4;
+                                                                                                                 |     rdx = arg3;
+                                                                                                                 |     rsi = arg2;
+                                                                                                                 |     rdi = arg1;
+                                                                                                                 |     /* BloombergLP::balm::MetricRegistry::setUserData(char const*, int, void const*, bool) */
+    0x0041cb70 push rbp                                                                                          |     
+    0x0041cb71 push r15                                                                                          |     
+    0x0041cb73 push r14                                                                                          |     
+    0x0041cb75 push r13                                                                                          |     
+    0x0041cb77 push r12                                                                                          |     
+    0x0041cb79 push rbx                                                                                          |     
+    0x0041cb7a sub rsp, 0x58                                                                                     |     
+    0x0041cb7e mov dword [rsp + 0x24], r8d                                                                       |     *((rsp + 0x24)) = r8d;
+    0x0041cb83 mov qword [rsp + 0x18], rcx                                                                       |     *((rsp + 0x18)) = rcx;
+    0x0041cb88 mov r12d, edx                                                                                     |     r12d = edx;
+    0x0041cb8b mov rbp, rsi                                                                                      |     
+    0x0041cb8e mov r13, rdi                                                                                      |     r13 = rdi;
+    0x0041cb91 test edx, edx                                                                                     |     
+    0x0041cb93 lea r15, [rdi + 0x150]                                                                            |     r15 = rdi + 0x150;
+    0x0041cb9a mov rdi, r15                                                                                      |     rdi = r15;
+    0x0041cb9d call 0x4043f0                                                                                     |     pthread_rwlock_wrlock ();
+    0x0041cba2 mov rax, qword [rip + 0x24e26f]                                                                   |     rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x0041cba9 test rax, rax                                                                                     |     
+                                                                                                                 |     if (rax == 0) {
+    0x0041cbac jne 0x41cbb3                                                                                      |         
+    0x0041cbae call 0x424490                                                                                     |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                                                                                 |     }
+    0x0041cbb3 mov qword [rsp + 0x28], 0                                                                         |     *((rsp + 0x28)) = 0;
+    0x0041cbbc mov qword [rsp + 0x48], 0x17                                                                      |     *((rsp + 0x48)) = 0x17;
+    0x0041cbc5 mov qword [rsp + 0x50], rax                                                                       |     *((rsp + 0x50)) = rax;
+    0x0041cbca mov rdi, rbp                                                                                      |     
+    0x0041cbcd call 0x403fc0                                                                                     |     rax = strlen (rbp);
+    0x0041cbd2 mov qword [rsp + 0x40], 0                                                                         |     *((rsp + 0x40)) = 0;
+    0x0041cbdb lea rdi, [rsp + 0x28]                                                                             |     
+    0x0041cbe0 mov ecx, 0x44d332                                                                                 |     
+    0x0041cbe5 mov rsi, rbp                                                                                      |     
+    0x0041cbe8 mov rdx, rax                                                                                      |     
+    0x0041cbeb call 0x4285d0                                                                                     |     bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>::privateAppend(char const*,unsigned long,char const*) (rsp + 0x28, rbp, rax, "string<...>::assign(char*...): string too long");
+    0x0041cbf0 lea rbp, [r13 + 0x20]                                                                             |     rbp = r13 + 0x20;
+    0x0041cbf4 lea rdi, [rsp + 0x14]                                                                             |     
+    0x0041cbf9 lea rcx, [rsp + 0x28]                                                                             |     rcx = rsp + 0x28;
+    0x0041cbfe mov rsi, rbp                                                                                      |     
+    0x0041cc01 mov rdx, r13                                                                                      |     
+    0x0041cc04 call 0x41daf0                                                                                     |     rax = BloombergLP::bslalg::RbTreeNode*BloombergLP::bslalg::RbTreeUtil::findUniqueInsertLocation<BloombergLP::bslstl::SetComparator<bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>,std::_1::less<bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>>>,bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>>(int*,BloombergLP::bslalg::RbTreeAnchor*,BloombergLP::bslstl::SetComparator<bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>,std::_1::less<bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>>>&,bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>const&) (rsp + 0x14, rbp, r13);
+    0x0041cc09 mov r14, rax                                                                                      |     r14 = rax;
+    0x0041cc0c cmp dword [rsp + 0x14], 0                                                                         |     
+                                                                                                                 |     if (*((rsp + 0x14)) != 0) {
+    0x0041cc11 je 0x41cc3b                                                                                       |         
+    0x0041cc13 lea rsi, [rsp + 0x28]                                                                             |         
+    0x0041cc18 mov rdi, r13                                                                                      |         
+    0x0041cc1b call 0x41dc60                                                                                     |         rax = BloombergLP::bslalg::RbTreeNode*BloombergLP::bslstl::TreeNodePool<bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>,bsl::allocator<bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>>>::emplaceIntoNewNode<bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>>(bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>&&) (r13, rsp + 0x28);
+    0x0041cc20 mov rbx, rax                                                                                      |         rbx = rax;
+    0x0041cc23 mov edx, dword [rsp + 0x14]                                                                       |         
+    0x0041cc27 shr edx, 0x1f                                                                                     |         edx >>= 0x1f;
+    0x0041cc2a mov rdi, rbp                                                                                      |         
+    0x0041cc2d mov rsi, r14                                                                                      |         
+    0x0041cc30 mov rcx, rax                                                                                      |         rcx = rax;
+    0x0041cc33 call 0x422d60                                                                                     |         BloombergLP::bslalg::RbTreeUtil::insertAt(BloombergLP::bslalg::RbTreeAnchor*,BloombergLP::bslalg::RbTreeNode*,bool,BloombergLP::bslalg::RbTreeNode*) (rbp, r14, *((rsp + 0x14)));
+    0x0041cc38 mov r14, rbx                                                                                      |         r14 = rbx;
+                                                                                                                 |     }
+    0x0041cc3b lea rbx, [r14 + 0x18]                                                                             |     rbx = r14 + 0x18;
+    0x0041cc3f cmp qword [r14 + 0x38], 0x17                                                                      |     
+                                                                                                                 |     if (*((r14 + 0x38)) != 0x17) {
+    0x0041cc44 je 0x41cc49                                                                                       |         
+    0x0041cc46 mov rbx, qword [rbx]                                                                              |         rbx = *(rbx);
+                                                                                                                 |     }
+    0x0041cc49 cmp qword [rsp + 0x48], 0x17                                                                      |     
+                                                                                                                 |     if (*((rsp + 0x48)) != 0x17) {
+    0x0041cc4f je 0x41cc61                                                                                       |         
+    0x0041cc51 mov rsi, qword [rsp + 0x28]                                                                       |         rsi = *((rsp + 0x28));
+    0x0041cc56 mov rdi, qword [rsp + 0x50]                                                                       |         rdi = *((rsp + 0x50));
+    0x0041cc5b mov rax, qword [rdi]                                                                              |         rax = *(rdi);
+    0x0041cc5e call qword [rax + 0x18]                                                                           |         uint64_t (*rax + 0x18)() ();
+                                                                                                                 |     }
+    0x0041cc61 mov qword [rsp + 8], rbx                                                                          |     *((rsp + 8)) = rbx;
+    0x0041cc66 cmp byte [rsp + 0x24], 0                                                                          |     
+                                                                                                                 |     if (*((rsp + 0x24)) == 0) {
+    0x0041cc6b je 0x41cd8c                                                                                       |         goto label_1;
+                                                                                                                 |     }
+    0x0041cc71 lea rdi, [r13 + 0x108]                                                                            |     
+    0x0041cc78 lea rsi, [rsp + 8]                                                                                |     
+    0x0041cc7d mov qword [rsp], r15                                                                              |     *(rsp) = r15;
+    0x0041cc81 call 0x41d5d0                                                                                     |     rax = bsl::map<char const*,bsl::vector<voidconst*,bsl::allocator<voidconst*>>,BloombergLP::bdlb::CStringLess,bsl::allocator<bsl::pair<char const*const,bsl::vector<voidconst*,bsl::allocator<voidconst*>>>>>::operator [] (char const*const&) (r13 + 0x108, rsp + 8);
+    0x0041cc86 mov rbp, rax                                                                                      |     
+    0x0041cc89 mov rcx, qword [rax]                                                                              |     rcx = *(rax);
+    0x0041cc8c mov rax, qword [rax + 8]                                                                          |     rax = *((rax + 8));
+    0x0041cc90 sub rax, rcx                                                                                      |     rax -= rcx;
+    0x0041cc93 sar rax, 3                                                                                        |     rax >>= 3;
+    0x0041cc97 mov edx, r12d                                                                                     |     edx = r12d;
+    0x0041cc9a cmp rax, rdx                                                                                      |     
+                                                                                                                 |     if (rax <= rdx) {
+    0x0041cc9d ja 0x41ccc1                                                                                       |         
+    0x0041cc9f lea eax, [r12 + 1]                                                                                |         eax = r12 + 1;
+    0x0041cca4 movsxd rsi, eax                                                                                   |         rsi = (int64_t) eax;
+    0x0041cca7 mov qword [rsp + 0x28], 0                                                                         |         *((rsp + 0x28)) = 0;
+    0x0041ccb0 lea rdx, [rsp + 0x28]                                                                             |         
+    0x0041ccb5 mov rdi, rbp                                                                                      |         
+    0x0041ccb8 call 0x43df00                                                                                     |         bsl::vector<unsigned long,bsl::allocator<unsigned long>>::resize(unsigned long,unsigned longconst&) (rbp, rsi, rsp + 0x28);
+    0x0041ccbd mov rcx, qword [rbp]                                                                              |         rcx = *(rbp);
+                                                                                                                 |     }
+    0x0041ccc1 movsxd rax, r12d                                                                                  |     rax = (int64_t) r12d;
+    0x0041ccc4 mov rdx, qword [rsp + 0x18]                                                                       |     rdx = *((rsp + 0x18));
+    0x0041ccc9 mov qword [rcx + rax*8], rdx                                                                      |     *((rcx + rax*8)) = rdx;
+    0x0041cccd lea r14, [r13 + 0x60]                                                                             |     r14 = r13 + 0x60;
+    0x0041ccd1 mov r15, qword [r13 + 0x68]                                                                       |     r15 = *((r13 + 0x68));
+    0x0041ccd5 mov rbp, r14                                                                                      |     
+    0x0041ccd8 test r15, r15                                                                                     |     
+                                                                                                                 |     if (r15 == 0) {
+    0x0041ccdb je 0x41cd0f                                                                                       |         goto label_2;
+                                                                                                                 |     }
+    0x0041ccdd mov rbx, qword [rsp + 8]                                                                          |     rbx = *((rsp + 8));
+    0x0041cce2 mov rbp, r14                                                                                      |     
+    0x0041cce5 nop word cs:[rax + rax]                                                                           |     
+    0x0041ccef nop                                                                                               |     
+                                                                                                                 |     do {
+    0x0041ccf0 mov rdi, qword [r15 + 0x18]                                                                       |         
+    0x0041ccf4 mov rsi, rbx                                                                                      |         
+    0x0041ccf7 call 0x4042b0                                                                                     |         eax = strcmp (*((r15 + 0x18)), rbx);
+    0x0041ccfc test eax, eax                                                                                     |         
+    0x0041ccfe cmovns rbp, r15                                                                                   |         __asm ("cmovns rbp, r15");
+    0x0041cd02 shr eax, 0x1f                                                                                     |         eax >>= 0x1f;
+    0x0041cd05 mov r15, qword [r15 + rax*8 + 8]                                                                  |         r15 = *((r15 + rax*8 + 8));
+    0x0041cd0a test r15, r15                                                                                     |         
+    0x0041cd0d jne 0x41ccf0                                                                                      |         
+                                                                                                                 |     } while (r15 != 0);
+                                                                                                                 | label_2:
+    0x0041cd0f mov r15, qword [rsp]                                                                              |     r15 = *(rsp);
+    0x0041cd13 nop word cs:[rax + rax]                                                                           |     
+    0x0041cd1d nop dword [rax]                                                                                   |     
+                                                                                                                 | label_0:
+    0x0041cd20 cmp rbp, r14                                                                                      |     
+                                                                                                                 |     if (rbp == r14) {
+    0x0041cd23 je 0x41cdf4                                                                                       |         goto label_3;
+                                                                                                                 |     }
+    0x0041cd29 mov rax, qword [rsp + 8]                                                                          |     rax = *((rsp + 8));
+    0x0041cd2e mov rsi, qword [rbp + 0x18]                                                                       |     rsi = *((rbp + 0x18));
+    0x0041cd32 mov dl, byte [rax]                                                                                |     dl = *(rax);
+    0x0041cd34 test dl, dl                                                                                       |     
+    0x0041cd36 sete cl                                                                                           |     cl = (dl == 0) ? 1 : 0;
+                                                                                                                 |     if (dl == 0) {
+    0x0041cd39 je 0x41cd67                                                                                       |         goto label_4;
+                                                                                                                 |     }
+    0x0041cd3b cmp dl, byte [rsi]                                                                                |     
+                                                                                                                 |     if (dl != *(rsi)) {
+    0x0041cd3d jne 0x41cd67                                                                                      |         goto label_4;
+                                                                                                                 |     }
+    0x0041cd3f mov edx, 1                                                                                        |     edx = 1;
+    0x0041cd44 nop word cs:[rax + rax]                                                                           |     
+    0x0041cd4e nop                                                                                               |     
+                                                                                                                 |     do {
+    0x0041cd50 movzx ebx, byte [rax + rdx]                                                                       |         ebx = *((rax + rdx));
+    0x0041cd54 test bl, bl                                                                                       |         
+    0x0041cd56 sete cl                                                                                           |         cl = (bl == 0) ? 1 : 0;
+                                                                                                                 |         if (bl == 0) {
+    0x0041cd59 je 0x41cd67                                                                                       |             goto label_4;
+                                                                                                                 |         }
+    0x0041cd5b lea rdi, [rdx + 1]                                                                                |         rdi = rdx + 1;
+    0x0041cd5f cmp bl, byte [rsi + rdx]                                                                          |         
+    0x0041cd62 mov rdx, rdi                                                                                      |         rdx = rdi;
+    0x0041cd65 je 0x41cd50                                                                                       |         
+                                                                                                                 |     } while (bl == *((rsi + rdx)));
+                                                                                                                 | label_4:
+    0x0041cd67 test cl, cl                                                                                       |     
+                                                                                                                 |     if (cl != 0) {
+    0x0041cd69 je 0x41cdf4                                                                                       |         
+    0x0041cd6f mov rdi, r13                                                                                      |         
+    0x0041cd72 mov edx, r12d                                                                                     |         
+    0x0041cd75 mov rcx, qword [rsp + 0x18]                                                                       |         
+    0x0041cd7a call 0x41ba10                                                                                     |         BloombergLP::balm::MetricRegistry::setCurrentUserData(char const*,int,voidconst*) (r13, rsi, r12d, *((rsp + 0x18)));
+    0x0041cd7f mov rdi, rbp                                                                                      |         
+    0x0041cd82 call 0x422cc0                                                                                     |         rax = BloombergLP::bslalg::RbTreeUtil::next(BloombergLP::bslalg::RbTreeNodeconst*) (rbp);
+    0x0041cd87 mov rbp, rax                                                                                      |         
+    0x0041cd8a jmp 0x41cd20                                                                                      |         goto label_0;
+                                                                                                                 | label_1:
+    0x0041cd8c lea rdi, [r13 + 0xc8]                                                                             |         
+    0x0041cd93 lea rsi, [rsp + 8]                                                                                |         
+    0x0041cd98 call 0x41d5d0                                                                                     |         rax = bsl::map<char const*,bsl::vector<voidconst*,bsl::allocator<voidconst*>>,BloombergLP::bdlb::CStringLess,bsl::allocator<bsl::pair<char const*const,bsl::vector<voidconst*,bsl::allocator<voidconst*>>>>>::operator [] (char const*const&) (r13 + 0xc8, rsp + 8);
+    0x0041cd9d mov rbp, rax                                                                                      |         
+    0x0041cda0 mov rsi, qword [rax]                                                                              |         rsi = *(rax);
+    0x0041cda3 mov rax, qword [rax + 8]                                                                          |         rax = *((rax + 8));
+    0x0041cda7 sub rax, rsi                                                                                      |         rax -= rsi;
+    0x0041cdaa sar rax, 3                                                                                        |         rax >>= 3;
+    0x0041cdae mov edx, r12d                                                                                     |         edx = r12d;
+    0x0041cdb1 cmp rax, rdx                                                                                      |         
+                                                                                                                 |         if (rax <= rdx) {
+    0x0041cdb4 ja 0x41cdd8                                                                                       |             
+    0x0041cdb6 lea eax, [r12 + 1]                                                                                |             eax = r12 + 1;
+    0x0041cdbb movsxd rsi, eax                                                                                   |             rsi = (int64_t) eax;
+    0x0041cdbe mov qword [rsp + 0x28], 0                                                                         |             *((rsp + 0x28)) = 0;
+    0x0041cdc7 lea rdx, [rsp + 0x28]                                                                             |             
+    0x0041cdcc mov rdi, rbp                                                                                      |             
+    0x0041cdcf call 0x43df00                                                                                     |             bsl::vector<unsigned long,bsl::allocator<unsigned long>>::resize(unsigned long,unsigned longconst&) (rbp, rsi, rsp + 0x28);
+    0x0041cdd4 mov rsi, qword [rbp]                                                                              |             rsi = *(rbp);
+                                                                                                                 |         }
+    0x0041cdd8 movsxd rax, r12d                                                                                  |         rax = (int64_t) r12d;
+    0x0041cddb mov rcx, qword [rsp + 0x18]                                                                       |         
+    0x0041cde0 mov qword [rsi + rax*8], rcx                                                                      |         *((rsi + rax*8)) = rcx;
+    0x0041cde4 mov rsi, qword [rsp + 8]                                                                          |         
+    0x0041cde9 mov rdi, r13                                                                                      |         
+    0x0041cdec mov edx, r12d                                                                                     |         
+    0x0041cdef call 0x41ba10                                                                                     |         BloombergLP::balm::MetricRegistry::setCurrentUserData(char const*,int,voidconst*) (r13, *((rsp + 8)), r12d, *((rsp + 0x18)));
+                                                                                                                 |     }
+                                                                                                                 | label_3:
+    0x0041cdf4 mov rdi, r15                                                                                      |     rdi = r15;
+    0x0041cdf7 call 0x4044d0                                                                                     |     pthread_rwlock_unlock ();
+    0x0041cdfc add rsp, 0x58                                                                                     |     
+    0x0041ce00 pop rbx                                                                                           |     
+    0x0041ce01 pop r12                                                                                           |     
+    0x0041ce03 pop r13                                                                                           |     
+    0x0041ce05 pop r14                                                                                           |     
+    0x0041ce07 pop r15                                                                                           |     
+    0x0041ce09 pop rbp                                                                                           |     
+    0x0041ce0a ret                                                                                               |     return rax;
+                                                                                                                 | }

@@ -1,0 +1,38 @@
+    ; assembly                                                                                   | /* r2dec pseudo code output */
+                                                                                                 | /* baljsn_encoder.t/assume @ 0x4d0580 */
+                                                                                                 | #include <stdint.h>
+                                                                                                 |  
+    ; (fcn) method.BloombergLP::s_baltst::SequenceWithAnonymityChoice.makeSelection1__ ()        | int64_t method_BloombergLP::s_baltst::SequenceWithAnonymityChoice_makeSelection1_ (int64_t arg1) {
+                                                                                                 |     rdi = arg1;
+                                                                                                 |     /* BloombergLP::s_baltst::SequenceWithAnonymityChoice::makeSelection1() */
+    0x004d0580 push rbx                                                                          |     
+    0x004d0581 mov rbx, rdi                                                                      |     rbx = rdi;
+    0x004d0584 mov eax, dword [rdi + 0x170]                                                      |     eax = *((rdi + 0x170));
+    0x004d058a cmp rax, 3                                                                        |     
+                                                                                                 |     if (rax <= 3) {
+    0x004d058e ja 0x4d05bd                                                                       |         
+                                                                                                 |         /* switch table (4 cases) at 0x64a4e8 */
+    0x004d0590 jmp qword [rax*8 + 0x64a4e8]                                                      |         
+    0x004d0597 mov rdi, rbx                                                                      |         
+    0x004d059a call 0x4c4bf0                                                                     |         BloombergLP::s_baltst::Sequence6::reset() (rbx);
+    0x004d059f jmp 0x4d05e0                                                                      |         goto label_0;
+    0x004d05a1 cmp qword [rbx + 0x20], 0x17                                                      |         
+                                                                                                 |         if (*((rbx + 0x20)) != 0x17) {
+    0x004d05a6 je 0x4d05b5                                                                       |             
+    0x004d05a8 mov rsi, qword [rbx]                                                              |             rsi = *(rbx);
+    0x004d05ab mov rdi, qword [rbx + 0x28]                                                       |             rdi = *((rbx + 0x28));
+    0x004d05af mov rax, qword [rdi]                                                              |             rax = *(rdi);
+    0x004d05b2 call qword [rax + 0x18]                                                           |             uint64_t (*rax + 0x18)() ();
+                                                                                                 |         }
+    0x004d05b5 mov qword [rbx + 0x18], 0xffffffffffffffff                                        |         *((rbx + 0x18)) = 0xffffffffffffffff;
+                                                                                                 |     }
+    0x004d05bd mov dword [rbx + 0x170], 0xffffffff                                               |     *((rbx + 0x170)) = 0xffffffff;
+    0x004d05c7 mov rsi, qword [rbx + 0x178]                                                      |     
+    0x004d05ce mov rdi, rbx                                                                      |     
+    0x004d05d1 call 0x4c3140                                                                     |     BloombergLP::s_baltst::Sequence6::Sequence6(BloombergLP::bslma::Allocator*) (rbx, *((rbx + 0x178)));
+    0x004d05d6 mov dword [rbx + 0x170], 0                                                        |     *((rbx + 0x170)) = 0;
+                                                                                                 | label_0:
+    0x004d05e0 mov rax, rbx                                                                      |     rax = rbx;
+    0x004d05e3 pop rbx                                                                           |     
+    0x004d05e4 ret                                                                               |     return rax;
+                                                                                                 | }

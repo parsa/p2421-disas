@@ -1,0 +1,46 @@
+    ; assembly                                                                                               | /* r2dec pseudo code output */
+                                                                                                             | /* balb_testmessages.t/assume @ 0x40a450 */
+                                                                                                             | #include <stdint.h>
+                                                                                                             |  
+    ; (fcn) method.BloombergLP::balb::Choice3.makeSelection1_BloombergLP::balb::Sequence6_const_ ()          | int64_t method_BloombergLP::balb::Choice3_makeSelection1_BloombergLP::balb::Sequence6_const_ (int64_t arg2, int64_t arg1) {
+                                                                                                             |     rsi = arg2;
+                                                                                                             |     rdi = arg1;
+                                                                                                             |     /* BloombergLP::balb::Choice3::makeSelection1(BloombergLP::balb::Sequence6 const&) */
+    0x0040a450 push r14                                                                                      |     
+    0x0040a452 push rbx                                                                                      |     
+    0x0040a453 push rax                                                                                      |     
+    0x0040a454 mov r14, rsi                                                                                  |     r14 = rsi;
+    0x0040a457 mov rbx, rdi                                                                                  |     rbx = rdi;
+    0x0040a45a mov eax, dword [rdi + 0x170]                                                                  |     eax = *((rdi + 0x170));
+    0x0040a460 cmp rax, 3                                                                                    |     
+                                                                                                             |     if (rax <= 3) {
+    0x0040a464 ja 0x40a496                                                                                   |         
+                                                                                                             |         /* switch table (4 cases) at 0x446180 */
+    0x0040a466 jmp qword [rax*8 + 0x446180]                                                                  |         
+    0x0040a46d mov rdi, rbx                                                                                  |         
+    0x0040a470 mov rsi, r14                                                                                  |         
+    0x0040a473 call 0x4095a0                                                                                 |         BloombergLP::balb::Sequence6::operator=(BloombergLP::balb::Sequence6const&) (rbx, r14);
+    0x0040a478 jmp 0x40a4bc                                                                                  |         goto label_0;
+    0x0040a47a cmp qword [rbx + 0x20], 0x17                                                                  |         
+                                                                                                             |         if (*((rbx + 0x20)) != 0x17) {
+    0x0040a47f je 0x40a48e                                                                                   |             
+    0x0040a481 mov rsi, qword [rbx]                                                                          |             rsi = *(rbx);
+    0x0040a484 mov rdi, qword [rbx + 0x28]                                                                   |             rdi = *((rbx + 0x28));
+    0x0040a488 mov rax, qword [rdi]                                                                          |             rax = *(rdi);
+    0x0040a48b call qword [rax + 0x18]                                                                       |             uint64_t (*rax + 0x18)() ();
+                                                                                                             |         }
+    0x0040a48e mov qword [rbx + 0x18], 0xffffffffffffffff                                                    |         *((rbx + 0x18)) = 0xffffffffffffffff;
+                                                                                                             |     }
+    0x0040a496 mov dword [rbx + 0x170], 0xffffffff                                                           |     *((rbx + 0x170)) = 0xffffffff;
+    0x0040a4a0 mov rdx, qword [rbx + 0x178]                                                                  |     
+    0x0040a4a7 mov rdi, rbx                                                                                  |     
+    0x0040a4aa mov rsi, r14                                                                                  |     
+    0x0040a4ad call 0x408c40                                                                                 |     BloombergLP::balb::Sequence6::Sequence6(BloombergLP::balb::Sequence6const&,BloombergLP::bslma::Allocator*) (rbx, r14, *((rbx + 0x178)));
+    0x0040a4b2 mov dword [rbx + 0x170], 0                                                                    |     *((rbx + 0x170)) = 0;
+                                                                                                             | label_0:
+    0x0040a4bc mov rax, rbx                                                                                  |     rax = rbx;
+    0x0040a4bf add rsp, 8                                                                                    |     
+    0x0040a4c3 pop rbx                                                                                       |     
+    0x0040a4c4 pop r14                                                                                       |     
+    0x0040a4c6 ret                                                                                           |     return rax;
+                                                                                                             | }

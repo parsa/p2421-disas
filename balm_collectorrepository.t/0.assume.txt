@@ -1,0 +1,51 @@
+    ; assembly                                                                                                                   | /* r2dec pseudo code output */
+                                                                                                                                 | /* balm_collectorrepository.t/assume @ 0x41cae0 */
+                                                                                                                                 | #include <stdint.h>
+                                                                                                                                 |  
+    ; (fcn) method.BloombergLP::balm::MetricRegistry.setUserData_BloombergLP::balm::MetricId_const__int__void_const_ ()          | int64_t method_BloombergLP::balm::MetricRegistry_setUserData_BloombergLP::balm::MetricId_const_int_void_const_ (int64_t arg4, int64_t arg3, int64_t arg2) {
+                                                                                                                                 |     int64_t var_8h;
+                                                                                                                                 |     rcx = arg4;
+                                                                                                                                 |     rdx = arg3;
+                                                                                                                                 |     rsi = arg2;
+                                                                                                                                 |     /* BloombergLP::balm::MetricRegistry::setUserData(BloombergLP::balm::MetricId const&, int, void const*) */
+    0x0041cae0 push r15                                                                                                          |     
+    0x0041cae2 push r14                                                                                                          |     
+    0x0041cae4 push r13                                                                                                          |     
+    0x0041cae6 push r12                                                                                                          |     
+    0x0041cae8 push rbx                                                                                                          |     
+    0x0041cae9 sub rsp, 0x10                                                                                                     |     
+    0x0041caed mov r14, rcx                                                                                                      |     r14 = rcx;
+    0x0041caf0 mov r12d, edx                                                                                                     |     r12d = edx;
+    0x0041caf3 test edx, edx                                                                                                     |     
+    0x0041caf5 mov rbx, qword [rsi]                                                                                              |     rbx = *(rsi);
+    0x0041caf8 lea r15, [rbx + 0x48]                                                                                             |     r15 = rbx + 0x48;
+    0x0041cafc mov rdi, r15                                                                                                      |     rdi = r15;
+    0x0041caff call 0x4044e0                                                                                                     |     pthread_mutex_lock ();
+    0x0041cb04 mov r13d, r12d                                                                                                    |     r13d = r12d;
+    0x0041cb07 mov rcx, qword [rbx + 0x28]                                                                                       |     rcx = *((rbx + 0x28));
+    0x0041cb0b mov rax, qword [rbx + 0x30]                                                                                       |     rax = *((rbx + 0x30));
+    0x0041cb0f sub rax, rcx                                                                                                      |     rax -= rcx;
+    0x0041cb12 sar rax, 3                                                                                                        |     rax >>= 3;
+    0x0041cb16 cmp rax, r13                                                                                                      |     
+                                                                                                                                 |     if (rax <= r13) {
+    0x0041cb19 ja 0x41cb3e                                                                                                       |         
+    0x0041cb1b add rbx, 0x28                                                                                                     |         rbx += 0x28;
+    0x0041cb1f inc r12d                                                                                                          |         r12d++;
+    0x0041cb22 mov qword [rsp + 8], 0                                                                                            |         *((rsp + 8)) = 0;
+    0x0041cb2b lea rdx, [rsp + 8]                                                                                                |         
+    0x0041cb30 mov rdi, rbx                                                                                                      |         
+    0x0041cb33 mov rsi, r12                                                                                                      |         
+    0x0041cb36 call 0x43df00                                                                                                     |         bsl::vector<unsigned long,bsl::allocator<unsigned long>>::resize(unsigned long,unsigned longconst&) (rbx, r12, rsp + 8);
+    0x0041cb3b mov rcx, qword [rbx]                                                                                              |         rcx = *(rbx);
+                                                                                                                                 |     }
+    0x0041cb3e mov qword [rcx + r13*8], r14                                                                                      |     *((rcx + r13*8)) = r14;
+    0x0041cb42 mov rdi, r15                                                                                                      |     rdi = r15;
+    0x0041cb45 call 0x4045c0                                                                                                     |     pthread_mutex_unlock ();
+    0x0041cb4a add rsp, 0x10                                                                                                     |     
+    0x0041cb4e pop rbx                                                                                                           |     
+    0x0041cb4f pop r12                                                                                                           |     
+    0x0041cb51 pop r13                                                                                                           |     
+    0x0041cb53 pop r14                                                                                                           |     
+    0x0041cb55 pop r15                                                                                                           |     
+    0x0041cb57 ret                                                                                                               |     return rax;
+                                                                                                                                 | }

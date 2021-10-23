@@ -1,0 +1,68 @@
+    ; assembly                                                                                                           | /* r2dec pseudo code output */
+                                                                                                                         | /* balb_testmessages.t/assume @ 0x4111f0 */
+                                                                                                                         | #include <stdint.h>
+                                                                                                                         |  
+    ; (fcn) method.BloombergLP::balb::SequenceWithAnonymity.SequenceWithAnonymity_BloombergLP::bslma::Allocator_ ()      | int64_t method_BloombergLP::balb::SequenceWithAnonymity_SequenceWithAnonymity_BloombergLP::bslma::Allocator_ (int64_t arg2, int64_t arg1) {
+                                                                                                                         |     rsi = arg2;
+                                                                                                                         |     rdi = arg1;
+                                                                                                                         |     /* BloombergLP::balb::SequenceWithAnonymity::SequenceWithAnonymity(BloombergLP::bslma::Allocator*) */
+    0x004111f0 push r15                                                                                                  |     
+    0x004111f2 push r14                                                                                                  |     
+    0x004111f4 push r13                                                                                                  |     
+    0x004111f6 push r12                                                                                                  |     
+    0x004111f8 push rbx                                                                                                  |     
+    0x004111f9 mov rbx, rsi                                                                                              |     rbx = rsi;
+    0x004111fc mov r15, rdi                                                                                              |     r15 = rdi;
+    0x004111ff mov rax, rsi                                                                                              |     rax = rsi;
+    0x00411202 test rsi, rsi                                                                                             |     
+                                                                                                                         |     if (rsi == 0) {
+    0x00411205 jne 0x411218                                                                                              |         
+    0x00411207 mov rax, qword [rip + 0x26e942]                                                                           |         rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x0041120e test rax, rax                                                                                             |         
+                                                                                                                         |         if (rax != 0) {
+    0x00411211 jne 0x411218                                                                                              |             goto label_0;
+                                                                                                                         |         }
+    0x00411213 call 0x4206c0                                                                                             |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                                                                                         |     }
+                                                                                                                         | label_0:
+    0x00411218 mov byte [r15 + 0x18], 0                                                                                  |     *((r15 + 0x18)) = 0;
+    0x0041121d mov qword [r15 + 0x20], rax                                                                               |     *((r15 + 0x20)) = rax;
+    0x00411221 mov dword [r15 + 0x58], 0xffffffff                                                                        |     *((r15 + 0x58)) = 0xffffffff;
+    0x00411229 test rbx, rbx                                                                                             |     
+                                                                                                                         |     if (rbx != 0) {
+    0x0041122c je 0x411249                                                                                               |         
+    0x0041122e mov qword [r15 + 0x60], rbx                                                                               |         *((r15 + 0x60)) = rbx;
+    0x00411232 lea r13, [r15 + 0x1d8]                                                                                    |         r13 = r15 + 0x1d8;
+    0x00411239 mov dword [r15 + 0x1d8], 0xffffffff                                                                       |         *((r15 + 0x1d8)) = 0xffffffff;
+    0x00411244 mov rax, rbx                                                                                              |         rax = rbx;
+    0x00411247 jmp 0x411281                                                                                              |         
+                                                                                                                         |     } else {
+    0x00411249 mov rax, qword [rip + 0x26e900]                                                                           |         rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x00411250 test rax, rax                                                                                             |         
+                                                                                                                         |         if (rax == 0) {
+    0x00411253 jne 0x41125a                                                                                              |             
+    0x00411255 call 0x4206c0                                                                                             |             rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                                                                                         |         }
+    0x0041125a mov qword [r15 + 0x60], rax                                                                               |         *((r15 + 0x60)) = rax;
+    0x0041125e lea r13, [r15 + 0x1d8]                                                                                    |         r13 = r15 + 0x1d8;
+    0x00411265 mov dword [r15 + 0x1d8], 0xffffffff                                                                       |         *((r15 + 0x1d8)) = 0xffffffff;
+    0x00411270 mov rax, qword [rip + 0x26e8d9]                                                                           |         rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x00411277 test rax, rax                                                                                             |         
+                                                                                                                         |         if (rax != 0) {
+    0x0041127a jne 0x411281                                                                                              |             goto label_1;
+                                                                                                                         |         }
+    0x0041127c call 0x4206c0                                                                                             |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                                                                                         |     }
+                                                                                                                         | label_1:
+    0x00411281 lea r12, [r15 + 0x68]                                                                                     |     r12 = r15 + 0x68;
+    0x00411285 mov qword [r15 + 0x1e0], rax                                                                              |     *((r15 + 0x1e0)) = rax;
+    0x0041128c lea rdi, [r15 + 0x1e8]                                                                                    |     
+    0x00411293 mov rsi, rbx                                                                                              |     
+    0x00411296 call 0x408790                                                                                             |     BloombergLP::balb::Sequence6::Sequence6(BloombergLP::bslma::Allocator*) (r15 + 0x1e8, rbx);
+    0x0041129b pop rbx                                                                                                   |     
+    0x0041129c pop r12                                                                                                   |     
+    0x0041129e pop r13                                                                                                   |     
+    0x004112a0 pop r14                                                                                                   |     
+    0x004112a2 pop r15                                                                                                   |     
+    0x004112a4 ret                                                                                                       |     return rax;
+                                                                                                                         | }

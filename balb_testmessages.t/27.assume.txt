@@ -1,0 +1,24 @@
+    ; assembly                                                                   | /* r2dec pseudo code output */
+                                                                                 | /* balb_testmessages.t/assume @ 0x413ad0 */
+                                                                                 | #include <stdint.h>
+                                                                                 |  
+    ; (fcn) method.BloombergLP::balb::Request.selectionName___const ()           | int32_t method_BloombergLP::balb::Request_selectionName_const (int64_t arg1) {
+                                                                                 |     rdi = arg1;
+                                                                                 |     /* BloombergLP::balb::Request::selectionName() const */
+    0x00413ad0 mov eax, dword [rdi + 0x368]                                      |     eax = *((rdi + 0x368));
+    0x00413ad6 test eax, eax                                                     |     
+                                                                                 |     if (eax != 0) {
+    0x00413ad8 je 0x413ae5                                                       |         
+    0x00413ada cmp eax, 1                                                        |         
+                                                                                 |         if (eax != 1) {
+    0x00413add jne 0x413aeb                                                      |             goto label_0;
+                                                                                 |         }
+    0x00413adf mov eax, 0x44853c                                                 |         eax = "featureRequest";
+    0x00413ae4 ret                                                               |         return eax;
+                                                                                 |     }
+    0x00413ae5 mov eax, 0x44852e                                                 |     eax = "simpleRequest";
+    0x00413aea ret                                                               |     return eax;
+                                                                                 | label_0:
+    0x00413aeb mov eax, 0x448383                                                 |     eax = "(* UNDEFINED *)";
+    0x00413af0 ret                                                               |     return eax;
+                                                                                 | }

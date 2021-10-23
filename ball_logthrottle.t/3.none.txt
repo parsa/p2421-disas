@@ -1,0 +1,328 @@
+    ; assembly                                                   | /* r2dec pseudo code output */
+                                                                 | /* ball_logthrottle.t/none @ 0x406e10 */
+                                                                 | #include <stdint.h>
+                                                                 |  
+    ; (fcn) method.Usage.radiationMonitorPrintfDaemon__ ()       | int64_t method_Usage_radiationMonitorPrintfDaemon_ (void) {
+                                                                 |     int64_t var_8h;
+                                                                 |     int64_t var_10h;
+                                                                 |     int64_t var_18h;
+                                                                 |     int64_t var_24h;
+                                                                 |     int64_t var_28h;
+                                                                 |     int64_t var_48h;
+                                                                 |     char * var_50h;
+                                                                 |     /* Usage::radiationMonitorPrintfDaemon() */
+    0x00406e10 push r14                                          |     
+    0x00406e12 push rbx                                          |     
+    0x00406e13 sub rsp, 0x58                                     |     
+    0x00406e17 mov rax, qword [rip + 0x2bcbaa]                   |     rax = .comment;
+    0x00406e1e test rax, rax                                     |     
+                                                                 |     if (rax == 0) {
+    0x00406e21 je 0x407162                                       |         goto label_6;
+                                                                 |     }
+                                                                 | label_3:
+    0x00406e27 call 0x457750                                     |     rax = BloombergLP::bsls::SystemTime::nowMonotonicClock() ();
+    0x00406e2c imul rax, rax, 0x3b9aca00                         |     rax *= 0x3b9aca00;
+    0x00406e33 movsxd rcx, edx                                   |     rcx = (int64_t) edx;
+    0x00406e36 add rcx, rax                                      |     rcx += rax;
+    0x00406e39 cvtsi2sd xmm0, rcx                                |     __asm ("cvtsi2sd xmm0, rcx");
+    0x00406e3e divsd xmm0, qword [rip + 0x75172]                 |     __asm ("divsd xmm0, qword [0x0047bfb8]");
+    0x00406e46 movsd qword [rsp + 0x48], xmm0                    |     *((rsp + 0x48)) = xmm0;
+    0x00406e4c mov qword [rsp + 0x50], 0x6c36f0                  |     *((rsp + 0x50)) = "333333";
+    0x00406e55 mov eax, dword [rip + 0x2bcb65]                   |     eax = Usage::radiationMonitorPrintfDaemon()::BALL_LOG_CATEGORYHOLDER;
+    0x00406e5b cmp eax, 0xa0                                     |     
+                                                                 |     if (eax >= 0xa0) {
+    0x00406e60 jge 0x407176                                      |         goto label_7;
+                                                                 |     }
+                                                                 | label_4:
+    0x00406e66 lea rdi, [rsp + 0x48]                             |     
+    0x00406e6b call 0x406350                                     |     methodUsage::RadiationMeterReceiver::yield() (rsp + 0x48);
+    0x00406e70 ucomisd xmm0, qword [rip + 0x75138]               |     __asm ("ucomisd xmm0, qword [0x0047bfb0]");
+                                                                 |     if (eax == 0xa0) {
+    0x00406e78 jne 0x406e80                                      |         
+                                                                 |         if (eax != 0xa0) {
+    0x00406e7a jnp 0x40714d                                      |             goto label_8;
+                                                                 |         }
+                                                                 |     }
+    0x00406e80 lea r14, [rsp + 0x10]                             |     r14 = rsp + 0x10;
+    0x00406e85 lea rbx, [rsp + 0x48]                             |     rbx = rsp + 0x48;
+    0x00406e8a jmp 0x406eb8                                      |     goto label_9;
+                                                                 | label_1:
+    0x00406e8c mov eax, dword [rip + 0x2bcb2e]                   |     eax = Usage::radiationMonitorPrintfDaemon()::BALL_LOG_CATEGORYHOLDER;
+    0x00406e92 cmp eax, 0xa0                                     |     
+                                                                 |     if (eax >= 0xa0) {
+    0x00406e97 jge 0x40704e                                      |         goto label_10;
+                                                                 |     }
+    0x00406e9d nop dword [rax]                                   |     
+                                                                 |     do {
+                                                                 | label_0:
+    0x00406ea0 mov rdi, rbx                                      |         
+    0x00406ea3 call 0x406350                                     |         methodUsage::RadiationMeterReceiver::yield() (rbx);
+    0x00406ea8 ucomisd xmm0, qword [rip + 0x75100]               |         __asm ("ucomisd xmm0, qword [0x0047bfb0]");
+                                                                 |         if (eax == 0xa0) {
+    0x00406eb0 jne 0x406eb8                                      |             
+                                                                 |             if (eax != 0xa0) {
+    0x00406eb2 jnp 0x40714d                                      |                 goto label_8;
+                                                                 |             }
+                                                                 |         }
+                                                                 | label_9:
+    0x00406eb8 ucomisd xmm0, qword [rip + 0x75108]               |         __asm ("ucomisd xmm0, qword [0x0047bfc8]");
+    0x00406ec0 movsd qword [rsp + 8], xmm0                       |         *((rsp + 8)) = xmm0;
+                                                                 |         if (eax <= 0xa0) {
+    0x00406ec6 jbe 0x406f30                                      |             goto label_11;
+                                                                 |         }
+    0x00406ec8 mov eax, dword [rip + 0x2bcaf2]                   |         eax = Usage::radiationMonitorPrintfDaemon()::BALL_LOG_CATEGORYHOLDER;
+    0x00406ece cmp eax, 0x60                                     |         
+    0x00406ed1 jl 0x406ea0                                       |         
+                                                                 |     } while (eax < 0x60);
+    0x00406ed3 mov edi, 0x6c39c0                                 |     
+    0x00406ed8 mov esi, 0x60                                     |     
+    0x00406edd call 0x42a270                                     |     al = BloombergLP::ball::Log::isCategoryEnabled(BloombergLP::ball::CategoryHolderconst*,int) (method.Usage.radiationMonitorPrintfDaemon__::BALL_LOG_CATEGORYHOLDER, 0x60);
+    0x00406ee2 test al, al                                       |     
+                                                                 |     if (al == 0) {
+    0x00406ee4 je 0x406ea0                                       |         goto label_0;
+                                                                 |     }
+    0x00406ee6 mov rsi, qword [rip + 0x2bcadb]                   |     
+    0x00406eed mov edx, 0x47c2ba                                 |     
+    0x00406ef2 mov rdi, r14                                      |     
+    0x00406ef5 mov ecx, 0x26e                                    |     
+    0x00406efa mov r8d, 0x60                                     |     
+    0x00406f00 call 0x42a3e0                                     |     BloombergLP::ball::Log_Formatter::Log_Formatter(BloombergLP::ball::Categoryconst*,char const*,int,int) (r14, *(0x006c39c8), "/home/parsa/experiments/assumptions/crush/ccm-none/groups/bal/ball/ball_logthrottle.t.cpp", 0x26e, 0x60);
+    0x00406f05 mov rdi, qword [rsp + 0x28]                       |     
+    0x00406f0a movsxd rsi, dword [rsp + 0x24]                    |     rsi = *((rsp + 0x24));
+    0x00406f0f mov edx, 0x47c37f                                 |     
+    0x00406f14 movsd xmm0, qword [rsp + 8]                       |     xmm0 = *((rsp + 8));
+    0x00406f1a mov al, 1                                         |     al = 1;
+    0x00406f1c call 0x429fd0                                     |     BloombergLP::ball::Log::format(char*,unsigned long,char const*,_) (*((rsp + 0x28)), rsi, "Serious radiation reading of %g", rcx, r8, r9);
+                                                                 | label_2:
+    0x00406f21 mov rdi, r14                                      |     
+    0x00406f24 call 0x42a470                                     |     BloombergLP::ball::Log_Formatter::~Log_Formatter() (r14);
+    0x00406f29 jmp 0x406ea0                                      |     goto label_0;
+                                                                 | label_11:
+    0x00406f30 ucomisd xmm0, qword [rip + 0x75098]               |     __asm ("ucomisd xmm0, qword [0x0047bfd0]");
+                                                                 |     if (al <= 0) {
+    0x00406f38 jbe 0x406f80                                      |         goto label_12;
+                                                                 |     }
+    0x00406f3a mov eax, dword [rip + 0x2bca80]                   |     eax = Usage::radiationMonitorPrintfDaemon()::BALL_LOG_CATEGORYHOLDER;
+    0x00406f40 cmp eax, 0x80                                     |     
+                                                                 |     if (eax < 0x80) {
+    0x00406f45 jl 0x406ea0                                       |         goto label_0;
+                                                                 |     }
+    0x00406f4b mov edi, 0x6c39c0                                 |     
+    0x00406f50 mov esi, 0x80                                     |     
+    0x00406f55 call 0x42a270                                     |     al = BloombergLP::ball::Log::isCategoryEnabled(BloombergLP::ball::CategoryHolderconst*,int) (method.Usage.radiationMonitorPrintfDaemon__::BALL_LOG_CATEGORYHOLDER, 0x80);
+    0x00406f5a test al, al                                       |     
+                                                                 |     if (al == 0) {
+    0x00406f5c je 0x406ea0                                       |         goto label_0;
+                                                                 |     }
+    0x00406f62 mov eax, dword [rip + 0x2bca8c]                   |     eax = *(0x006c39f4);
+    0x00406f68 test eax, eax                                     |     
+                                                                 |     if (eax == 0) {
+    0x00406f6a je 0x406fe5                                       |         goto label_13;
+                                                                 |     }
+    0x00406f6c cmp eax, 1                                        |     
+                                                                 |     if (eax != 1) {
+    0x00406f6f jne 0x406fec                                      |         goto label_14;
+                                                                 |     }
+    0x00406f71 call 0x457750                                     |     BloombergLP::bsls::SystemTime::nowMonotonicClock() ();
+    0x00406f76 jmp 0x406fea                                      |     goto label_15;
+                                                                 | label_12:
+    0x00406f80 ucomisd xmm0, qword [rip + 0x75050]               |     __asm ("ucomisd xmm0, qword [0x0047bfd8]");
+                                                                 |     if (eax > 1) {
+    0x00406f88 ja 0x406e8c                                       |         goto label_1;
+                                                                 |     }
+    0x00406f8e ucomisd xmm0, qword [rip + 0x7504a]               |     __asm ("ucomisd xmm0, qword [0x0047bfe0]");
+                                                                 |     if (eax <= 1) {
+    0x00406f96 jbe 0x406ea0                                      |         goto label_0;
+                                                                 |     }
+    0x00406f9c mov eax, dword [rip + 0x2bca1e]                   |     eax = Usage::radiationMonitorPrintfDaemon()::BALL_LOG_CATEGORYHOLDER;
+    0x00406fa2 cmp eax, 0xc0                                     |     
+                                                                 |     if (eax < 0xc0) {
+    0x00406fa7 jl 0x406ea0                                       |         goto label_0;
+                                                                 |     }
+    0x00406fad mov edi, 0x6c39c0                                 |     
+    0x00406fb2 mov esi, 0xc0                                     |     
+    0x00406fb7 call 0x42a270                                     |     al = BloombergLP::ball::Log::isCategoryEnabled(BloombergLP::ball::CategoryHolderconst*,int) (method.Usage.radiationMonitorPrintfDaemon__::BALL_LOG_CATEGORYHOLDER, 0xc0);
+    0x00406fbc test al, al                                       |     
+                                                                 |     if (al == 0) {
+    0x00406fbe je 0x406ea0                                       |         goto label_0;
+                                                                 |     }
+    0x00406fc4 mov eax, dword [rip + 0x2bca6a]                   |     eax = *(0x006c3a34);
+    0x00406fca test eax, eax                                     |     
+                                                                 |     if (eax == 0) {
+    0x00406fcc je 0x4070e4                                       |         goto label_16;
+                                                                 |     }
+    0x00406fd2 cmp eax, 1                                        |     
+                                                                 |     if (eax != 1) {
+    0x00406fd5 jne 0x4070eb                                      |         goto label_17;
+                                                                 |     }
+    0x00406fdb call 0x457750                                     |     BloombergLP::bsls::SystemTime::nowMonotonicClock() ();
+    0x00406fe0 jmp 0x4070e9                                      |     goto label_18;
+                                                                 | label_13:
+    0x00406fe5 call 0x4577e0                                     |     eax = BloombergLP::bsls::SystemTime::nowRealtimeClock() ();
+                                                                 | label_15:
+    0x00406fea jmp 0x406ff0                                      |     goto label_19;
+                                                                 | label_14:
+    0x00406fec xor edx, edx                                      |     edx = 0;
+    0x00406fee xor eax, eax                                      |     eax = 0;
+                                                                 | label_19:
+    0x00406ff0 mov qword [rsp + 0x10], rax                       |     *((rsp + 0x10)) = rax;
+    0x00406ff5 mov dword [rsp + 0x18], edx                       |     *((rsp + 0x18)) = edx;
+    0x00406ff9 mov edi, 0x6c39d8                                 |     
+    0x00406ffe mov rsi, r14                                      |     
+    0x00407001 call 0x447c10                                     |     al = BloombergLP::bdlmt::Throttle::requestPermission(BloombergLP::bsls::TimeIntervalconst&) (method.Usage.radiationMonitorPrintfDaemon__::ball_logthrottle_tHrOtTlE, r14);
+    0x00407006 test al, al                                       |     
+                                                                 |     if (al == 0) {
+    0x00407008 je 0x406ea0                                       |         goto label_0;
+                                                                 |     }
+    0x0040700e mov rsi, qword [rip + 0x2bc9b3]                   |     
+    0x00407015 mov edx, 0x47c2ba                                 |     
+    0x0040701a mov rdi, r14                                      |     
+    0x0040701d mov ecx, 0x277                                    |     
+    0x00407022 mov r8d, 0x80                                     |     
+    0x00407028 call 0x42a3e0                                     |     BloombergLP::ball::Log_Formatter::Log_Formatter(BloombergLP::ball::Categoryconst*,char const*,int,int) (r14, *(0x006c39c8), "/home/parsa/experiments/assumptions/crush/ccm-none/groups/bal/ball/ball_logthrottle.t.cpp", 0x277, 0x80);
+    0x0040702d mov rdi, qword [rsp + 0x28]                       |     
+    0x00407032 movsxd rsi, dword [rsp + 0x24]                    |     rsi = *((rsp + 0x24));
+    0x00407037 mov edx, 0x47c39f                                 |     
+    0x0040703c movsd xmm0, qword [rsp + 8]                       |     xmm0 = *((rsp + 8));
+    0x00407042 mov al, 1                                         |     al = 1;
+    0x00407044 call 0x429fd0                                     |     BloombergLP::ball::Log::format(char*,unsigned long,char const*,_) (*((rsp + 0x28)), rsi, "Radiation reading of %g", rcx, r8, r9);
+    0x00407049 jmp 0x406f21                                      |     goto label_2;
+                                                                 | label_10:
+    0x0040704e mov edi, 0x6c39c0                                 |     
+    0x00407053 mov esi, 0xa0                                     |     
+    0x00407058 call 0x42a270                                     |     al = BloombergLP::ball::Log::isCategoryEnabled(BloombergLP::ball::CategoryHolderconst*,int) (method.Usage.radiationMonitorPrintfDaemon__::BALL_LOG_CATEGORYHOLDER, 0xa0);
+    0x0040705d test al, al                                       |     
+                                                                 |     if (al == 0) {
+    0x0040705f je 0x406ea0                                       |         goto label_0;
+                                                                 |     }
+    0x00407065 mov eax, dword [rip + 0x2bc9a9]                   |     eax = *(0x006c3a14);
+    0x0040706b test eax, eax                                     |     
+                                                                 |     if (eax != 0) {
+    0x0040706d je 0x40707b                                       |         
+    0x0040706f cmp eax, 1                                        |         
+                                                                 |         if (eax != 1) {
+    0x00407072 jne 0x407082                                      |             goto label_20;
+                                                                 |         }
+    0x00407074 call 0x457750                                     |         BloombergLP::bsls::SystemTime::nowMonotonicClock() ();
+    0x00407079 jmp 0x407080                                      |         
+                                                                 |     } else {
+    0x0040707b call 0x4577e0                                     |         eax = BloombergLP::bsls::SystemTime::nowRealtimeClock() ();
+                                                                 |     }
+    0x00407080 jmp 0x407086                                      |     goto label_21;
+                                                                 | label_20:
+    0x00407082 xor edx, edx                                      |     edx = 0;
+    0x00407084 xor eax, eax                                      |     eax = 0;
+                                                                 | label_21:
+    0x00407086 mov qword [rsp + 0x10], rax                       |     *((rsp + 0x10)) = rax;
+    0x0040708b mov dword [rsp + 0x18], edx                       |     *((rsp + 0x18)) = edx;
+    0x0040708f mov edi, 0x6c39f8                                 |     
+    0x00407094 mov rsi, r14                                      |     
+    0x00407097 call 0x447c10                                     |     al = BloombergLP::bdlmt::Throttle::requestPermission(BloombergLP::bsls::TimeIntervalconst&) (0x6c39f8, r14);
+    0x0040709c test al, al                                       |     
+                                                                 |     if (al == 0) {
+    0x0040709e je 0x406ea0                                       |         goto label_0;
+                                                                 |     }
+    0x004070a4 mov rsi, qword [rip + 0x2bc91d]                   |     
+    0x004070ab mov edx, 0x47c2ba                                 |     
+    0x004070b0 mov rdi, r14                                      |     
+    0x004070b3 mov ecx, 0x280                                    |     
+    0x004070b8 mov r8d, 0xa0                                     |     
+    0x004070be call 0x42a3e0                                     |     BloombergLP::ball::Log_Formatter::Log_Formatter(BloombergLP::ball::Categoryconst*,char const*,int,int) (r14, *(0x006c39c8), "/home/parsa/experiments/assumptions/crush/ccm-none/groups/bal/ball/ball_logthrottle.t.cpp", 0x280, 0xa0);
+    0x004070c3 mov rdi, qword [rsp + 0x28]                       |     
+    0x004070c8 movsxd rsi, dword [rsp + 0x24]                    |     rsi = *((rsp + 0x24));
+    0x004070cd mov edx, 0x47c39f                                 |     
+    0x004070d2 movsd xmm0, qword [rsp + 8]                       |     xmm0 = *((rsp + 8));
+    0x004070d8 mov al, 1                                         |     al = 1;
+    0x004070da call 0x429fd0                                     |     BloombergLP::ball::Log::format(char*,unsigned long,char const*,_) (*((rsp + 0x28)), rsi, "Radiation reading of %g", rcx, r8, r9);
+    0x004070df jmp 0x406f21                                      |     goto label_2;
+                                                                 | label_16:
+    0x004070e4 call 0x4577e0                                     |     eax = BloombergLP::bsls::SystemTime::nowRealtimeClock() ();
+                                                                 | label_18:
+    0x004070e9 jmp 0x4070ef                                      |     goto label_22;
+                                                                 | label_17:
+    0x004070eb xor edx, edx                                      |     edx = 0;
+    0x004070ed xor eax, eax                                      |     eax = 0;
+                                                                 | label_22:
+    0x004070ef mov qword [rsp + 0x10], rax                       |     *((rsp + 0x10)) = rax;
+    0x004070f4 mov dword [rsp + 0x18], edx                       |     *((rsp + 0x18)) = edx;
+    0x004070f8 mov edi, 0x6c3a18                                 |     
+    0x004070fd mov rsi, r14                                      |     
+    0x00407100 call 0x447c10                                     |     al = BloombergLP::bdlmt::Throttle::requestPermission(BloombergLP::bsls::TimeIntervalconst&) (obj.Usage::radiationMonitorPrintfDaemon__::ball_logthrottle_tHrOtTlE, r14);
+    0x00407105 test al, al                                       |     
+                                                                 |     if (al == 0) {
+    0x00407107 je 0x406ea0                                       |         goto label_0;
+                                                                 |     }
+    0x0040710d mov rsi, qword [rip + 0x2bc8b4]                   |     
+    0x00407114 mov edx, 0x47c2ba                                 |     
+    0x00407119 mov rdi, r14                                      |     
+    0x0040711c mov ecx, 0x28a                                    |     
+    0x00407121 mov r8d, 0xc0                                     |     
+    0x00407127 call 0x42a3e0                                     |     BloombergLP::ball::Log_Formatter::Log_Formatter(BloombergLP::ball::Categoryconst*,char const*,int,int) (r14, *(0x006c39c8), "/home/parsa/experiments/assumptions/crush/ccm-none/groups/bal/ball/ball_logthrottle.t.cpp", 0x28a, 0xc0);
+    0x0040712c mov rdi, qword [rsp + 0x28]                       |     
+    0x00407131 movsxd rsi, dword [rsp + 0x24]                    |     rsi = *((rsp + 0x24));
+    0x00407136 mov edx, 0x47c39f                                 |     
+    0x0040713b movsd xmm0, qword [rsp + 8]                       |     xmm0 = *((rsp + 8));
+    0x00407141 mov al, 1                                         |     al = 1;
+    0x00407143 call 0x429fd0                                     |     BloombergLP::ball::Log::format(char*,unsigned long,char const*,_) (*((rsp + 0x28)), rsi, "Radiation reading of %g", rcx, r8, r9);
+    0x00407148 jmp 0x406f21                                      |     goto label_2;
+                                                                 | label_8:
+    0x0040714d mov eax, dword [rip + 0x2bc86d]                   |     eax = Usage::radiationMonitorPrintfDaemon()::BALL_LOG_CATEGORYHOLDER;
+    0x00407153 cmp eax, 0xa0                                     |     
+                                                                 |     if (eax >= 0xa0) {
+    0x00407158 jge 0x4071d3                                      |         goto label_23;
+                                                                 |     }
+                                                                 | label_5:
+    0x0040715a add rsp, 0x58                                     |     
+    0x0040715e pop rbx                                           |     
+    0x0040715f pop r14                                           |     
+    0x00407161 ret                                               |     return rax;
+                                                                 | label_6:
+    0x00407162 mov edi, 0x6c39c0                                 |     
+    0x00407167 mov esi, 0x47c2a8                                 |     
+    0x0040716c call 0x42a210                                     |     BloombergLP::ball::Log::setCategory(BloombergLP::ball::CategoryHolder*,char const*) (method.Usage.radiationMonitorPrintfDaemon__::BALL_LOG_CATEGORYHOLDER, "RADIATION.MONITOR");
+    0x00407171 jmp 0x406e27                                      |     goto label_3;
+                                                                 | label_7:
+    0x00407176 mov edi, 0x6c39c0                                 |     
+    0x0040717b mov esi, 0xa0                                     |     
+    0x00407180 call 0x42a270                                     |     al = BloombergLP::ball::Log::isCategoryEnabled(BloombergLP::ball::CategoryHolderconst*,int) (method.Usage.radiationMonitorPrintfDaemon__::BALL_LOG_CATEGORYHOLDER, 0xa0);
+    0x00407185 test al, al                                       |     
+                                                                 |     if (al == 0) {
+    0x00407187 je 0x406e66                                       |         goto label_4;
+                                                                 |     }
+    0x0040718d mov rsi, qword [rip + 0x2bc834]                   |     
+    0x00407194 lea rdi, [rsp + 0x10]                             |     
+    0x00407199 mov edx, 0x47c2ba                                 |     
+    0x0040719e mov ecx, 0x266                                    |     
+    0x004071a3 mov r8d, 0xa0                                     |     
+    0x004071a9 call 0x42a3e0                                     |     eax = BloombergLP::ball::Log_Formatter::Log_Formatter(BloombergLP::ball::Categoryconst*,char const*,int,int) (rsp + 0x10, *(0x006c39c8), "/home/parsa/experiments/assumptions/crush/ccm-none/groups/bal/ball/ball_logthrottle.t.cpp", 0x266, 0xa0);
+    0x004071ae mov rdi, qword [rsp + 0x28]                       |     
+    0x004071b3 movsxd rsi, dword [rsp + 0x24]                    |     rsi = *((rsp + 0x24));
+    0x004071b8 mov edx, 0x47c314                                 |     
+    0x004071bd xor eax, eax                                      |     eax = 0;
+    0x004071bf call 0x429fd0                                     |     BloombergLP::ball::Log::format(char*,unsigned long,char const*,_) (*((rsp + 0x28)), rsi, "Start gathering data.", rcx, r8, r9);
+    0x004071c4 lea rdi, [rsp + 0x10]                             |     
+    0x004071c9 call 0x42a470                                     |     BloombergLP::ball::Log_Formatter::~Log_Formatter() (rsp + 0x10);
+    0x004071ce jmp 0x406e66                                      |     goto label_4;
+                                                                 | label_23:
+    0x004071d3 mov edi, 0x6c39c0                                 |     
+    0x004071d8 mov esi, 0xa0                                     |     
+    0x004071dd call 0x42a270                                     |     al = BloombergLP::ball::Log::isCategoryEnabled(BloombergLP::ball::CategoryHolderconst*,int) (method.Usage.radiationMonitorPrintfDaemon__::BALL_LOG_CATEGORYHOLDER, 0xa0);
+    0x004071e2 test al, al                                       |     
+                                                                 |     if (al == 0) {
+    0x004071e4 je 0x40715a                                       |         goto label_5;
+                                                                 |     }
+    0x004071ea mov rsi, qword [rip + 0x2bc7d7]                   |     
+    0x004071f1 lea rdi, [rsp + 0x10]                             |     
+    0x004071f6 mov edx, 0x47c2ba                                 |     
+    0x004071fb mov ecx, 0x28e                                    |     
+    0x00407200 mov r8d, 0xa0                                     |     
+    0x00407206 call 0x42a3e0                                     |     eax = BloombergLP::ball::Log_Formatter::Log_Formatter(BloombergLP::ball::Categoryconst*,char const*,int,int) (rsp + 0x10, *(0x006c39c8), "/home/parsa/experiments/assumptions/crush/ccm-none/groups/bal/ball/ball_logthrottle.t.cpp", 0x28e, 0xa0);
+    0x0040720b mov rdi, qword [rsp + 0x28]                       |     
+    0x00407210 movsxd rsi, dword [rsp + 0x24]                    |     rsi = *((rsp + 0x24));
+    0x00407215 mov edx, 0x47c348                                 |     
+    0x0040721a xor eax, eax                                      |     eax = 0;
+    0x0040721c call 0x429fd0                                     |     BloombergLP::ball::Log::format(char*,unsigned long,char const*,_) (*((rsp + 0x28)), rsi, "Finished gathering data.", rcx, r8, r9);
+    0x00407221 lea rdi, [rsp + 0x10]                             |     
+    0x00407226 call 0x42a470                                     |     BloombergLP::ball::Log_Formatter::~Log_Formatter() (rsp + 0x10);
+    0x0040722b jmp 0x40715a                                      |     goto label_5;
+                                                                 | }

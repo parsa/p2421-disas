@@ -1,0 +1,45 @@
+    ; assembly                                                                           | /* r2dec pseudo code output */
+                                                                                         | /* balb_filecleanerutil.t/assume @ 0x4135e0 */
+                                                                                         | #include <stdint.h>
+                                                                                         |  
+                                                                                         | uint16_t rotate_right16 (uint16_t value, uint32_t count) {
+                                                                                         |     const uint16_t mask = (CHAR_BIT * sizeof (value)) - 1;
+                                                                                         |     count &= mask;
+                                                                                         |     return (value >> count) | (value << (-count & mask));
+                                                                                         | }
+                                                                                         |  
+    ; (fcn) method.BloombergLP::bdlt::PosixDateImpUtil.lastDayOfMonth_int__int_ ()       | int32_t method_BloombergLP::bdlt::PosixDateImpUtil_lastDayOfMonth_int_int_ (uint32_t arg2, uint32_t arg1) {
+                                                                                         |     rsi = arg2;
+                                                                                         |     rdi = arg1;
+                                                                                         |     /* BloombergLP::bdlt::PosixDateImpUtil::lastDayOfMonth(int, int) */
+    0x004135e0 mov eax, esi                                                              |     eax = esi;
+    0x004135e2 mov ecx, dword [rax*4 + 0x43d390]                                         |     ecx = *((rax*4 + method.BloombergLP::bdlt._anonymous_namespace_::normDaysPerMonth));
+    0x004135e9 xor eax, eax                                                              |     eax = 0;
+    0x004135eb cmp esi, 2                                                                |     
+                                                                                         |     if (esi == 2) {
+    0x004135ee jne 0x413630                                                              |         
+    0x004135f0 mov edx, edi                                                              |         edx = edi;
+    0x004135f2 and edx, 3                                                                |         edx &= 3;
+                                                                                         |         if (edx != 0) {
+    0x004135f5 jne 0x413630                                                              |             goto label_0;
+                                                                                         |         }
+    0x004135f7 imul eax, edi, 0x5c29                                                     |         eax = edi * 0x5c29;
+    0x004135fd mov edx, eax                                                              |         edx = eax;
+    0x004135ff ror dx, 2                                                                 |         dx = rotate_right16 (dx, 2);
+    0x00413603 movzx edx, dx                                                             |         edx = (int32_t) dx;
+    0x00413606 cmp edx, 0x28f                                                            |         
+    0x0041360c seta sil                                                                  |         sil = (edx > 0x28f) ? 1 : 0;
+    0x00413610 ror ax, 4                                                                 |         ax = rotate_right16 (ax, 4);
+    0x00413614 movzx eax, ax                                                             |         eax = (int32_t) ax;
+    0x00413617 cmp eax, 0xa4                                                             |         
+    0x0041361c setb al                                                                   |         al = (eax < 0xa4) ? 1 : 0;
+    0x0041361f cmp edi, 0x6d9                                                            |         
+    0x00413625 setb dl                                                                   |         dl = (edi < 0x6d9) ? 1 : 0;
+    0x00413628 or dl, al                                                                 |         dl |= al;
+    0x0041362a or dl, sil                                                                |         dl |= sil;
+    0x0041362d movzx eax, dl                                                             |         eax = (int32_t) dl;
+                                                                                         |     }
+                                                                                         | label_0:
+    0x00413630 add eax, ecx                                                              |     eax += ecx;
+    0x00413632 ret                                                                       |     return eax;
+                                                                                         | }

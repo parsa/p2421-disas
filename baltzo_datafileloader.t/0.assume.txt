@@ -1,0 +1,256 @@
+    ; assembly                                                                                                                       | /* r2dec pseudo code output */
+                                                                                                                                     | /* baltzo_datafileloader.t/assume @ 0x40da10 */
+                                                                                                                                     | #include <stdint.h>
+                                                                                                                                     |  
+    ; (fcn) method.BloombergLP::baltzo::Zoneinfo.addTransition_long_long__BloombergLP::baltzo::LocalTimeDescriptor_const_ ()         | int64_t method_BloombergLP::baltzo::Zoneinfo_addTransition_long_long_BloombergLP::baltzo::LocalTimeDescriptor_const_ (int64_t arg3, int64_t arg2, int64_t arg1) {
+                                                                                                                                     |     int64_t var_7h;
+                                                                                                                                     |     uint32_t var_8h;
+                                                                                                                                     |     int64_t var_10h;
+                                                                                                                                     |     uint32_t var_18h;
+                                                                                                                                     |     int64_t var_20h;
+                                                                                                                                     |     rdx = arg3;
+                                                                                                                                     |     rsi = arg2;
+                                                                                                                                     |     rdi = arg1;
+                                                                                                                                     |     /* BloombergLP::baltzo::Zoneinfo::addTransition(long long, BloombergLP::baltzo::LocalTimeDescriptor const&) */
+    0x0040da10 push rbp                                                                                                              |     
+    0x0040da11 push r15                                                                                                              |     
+    0x0040da13 push r14                                                                                                              |     
+    0x0040da15 push r13                                                                                                              |     
+    0x0040da17 push r12                                                                                                              |     
+    0x0040da19 push rbx                                                                                                              |     
+    0x0040da1a sub rsp, 0x28                                                                                                         |     
+    0x0040da1e mov r13, rdx                                                                                                          |     r13 = rdx;
+    0x0040da21 mov r12, rsi                                                                                                          |     r12 = rsi;
+    0x0040da24 mov r15, rdi                                                                                                          |     r15 = rdi;
+    0x0040da27 lea rbp, [rdi + 0x50]                                                                                                 |     rbp = rdi + 0x50;
+    0x0040da2b mov rax, qword [rdi + 0x58]                                                                                           |     rax = *((rdi + 0x58));
+    0x0040da2f test rax, rax                                                                                                         |     
+    0x0040da32 mov qword [rsp + 8], rbp                                                                                              |     *((rsp + 8)) = rbp;
+                                                                                                                                     |     if (rax == 0) {
+    0x0040da37 je 0x40da80                                                                                                           |         goto label_4;
+                                                                                                                                     |     }
+    0x0040da39 xor ebx, ebx                                                                                                          |     ebx = 0;
+    0x0040da3b nop dword [rax + rax]                                                                                                 |     
+                                                                                                                                     |     do {
+    0x0040da40 mov rbp, rax                                                                                                          |         
+    0x0040da43 lea rdx, [rax + 0x18]                                                                                                 |         rdx = rax + 0x18;
+    0x0040da47 mov rsi, r13                                                                                                          |         
+    0x0040da4a call 0x40d520                                                                                                         |         al = BloombergLP::baltzo::Zoneinfo::DescriptorLess::operator()(BloombergLP::baltzo::LocalTimeDescriptorconst&,BloombergLP::baltzo::LocalTimeDescriptorconst&)const (rdi, r13);
+    0x0040da4f test al, al                                                                                                           |         
+                                                                                                                                     |         if (al == 0) {
+    0x0040da51 cmove rbx, rbp                                                                                                        |             rbx = rbp;
+                                                                                                                                     |         }
+    0x0040da55 xor al, 1                                                                                                             |         al ^= 1;
+    0x0040da57 movzx ecx, al                                                                                                         |         ecx = (int32_t) al;
+    0x0040da5a mov rax, qword [rbp + rcx*8 + 8]                                                                                      |         rax = *((rbp + rcx*8 + 8));
+    0x0040da5f test rax, rax                                                                                                         |         
+    0x0040da62 jne 0x40da40                                                                                                          |         
+                                                                                                                                     |     } while (rax != 0);
+    0x0040da64 lea r14d, [rcx + rcx - 1]                                                                                             |     r14d = rcx + rcx - 1;
+    0x0040da69 test rbx, rbx                                                                                                         |     
+                                                                                                                                     |     if (rbx != 0) {
+    0x0040da6c je 0x40da86                                                                                                           |         
+    0x0040da6e lea rsi, [rbx + 0x18]                                                                                                 |         
+    0x0040da72 mov rdx, r13                                                                                                          |         rdx = r13;
+    0x0040da75 call 0x40d520                                                                                                         |         al = BloombergLP::baltzo::Zoneinfo::DescriptorLess::operator()(BloombergLP::baltzo::LocalTimeDescriptorconst&,BloombergLP::baltzo::LocalTimeDescriptorconst&)const (rdi, rbx + 0x18);
+    0x0040da7a test al, al                                                                                                           |         
+                                                                                                                                     |         if (al != 0) {
+    0x0040da7c jne 0x40da86                                                                                                          |             goto label_5;
+                                                                                                                                     |         }
+    0x0040da7e jmp 0x40daac                                                                                                          |         goto label_6;
+                                                                                                                                     | label_4:
+    0x0040da80 mov r14d, 0xffffffff                                                                                                  |         r14d = 0xffffffff;
+                                                                                                                                     |     }
+                                                                                                                                     | label_5:
+    0x0040da86 lea rdi, [r15 + 0x30]                                                                                                 |     
+    0x0040da8a mov rsi, r13                                                                                                          |     
+    0x0040da8d call 0x4100e0                                                                                                         |     rax = BloombergLP::bslalg::RbTreeNode*BloombergLP::bslstl::TreeNodePool<BloombergLP::baltzo::LocalTimeDescriptor,bsl::allocator<BloombergLP::baltzo::LocalTimeDescriptor>>::emplaceIntoNewNode<BloombergLP::baltzo::LocalTimeDescriptorconst&>(BloombergLP::baltzo::LocalTimeDescriptorconst&) (r15 + 0x30, r13);
+    0x0040da92 mov rbx, rax                                                                                                          |     rbx = rax;
+    0x0040da95 shr r14d, 0x1f                                                                                                        |     r14d >>= 0x1f;
+    0x0040da99 mov rdi, qword [rsp + 8]                                                                                              |     
+    0x0040da9e mov rsi, rbp                                                                                                          |     
+    0x0040daa1 mov edx, r14d                                                                                                         |     
+    0x0040daa4 mov rcx, rax                                                                                                          |     rcx = rax;
+    0x0040daa7 call 0x41e880                                                                                                         |     BloombergLP::bslalg::RbTreeUtil::insertAt(BloombergLP::bslalg::RbTreeAnchor*,BloombergLP::bslalg::RbTreeNode*,bool,BloombergLP::bslalg::RbTreeNode*) (*((rsp + 8)), rbp, r14d);
+                                                                                                                                     | label_6:
+    0x0040daac add rbx, 0x18                                                                                                         |     rbx += 0x18;
+    0x0040dab0 mov qword [rsp + 0x18], r12                                                                                           |     *((rsp + 0x18)) = r12;
+    0x0040dab5 mov qword [rsp + 0x20], rbx                                                                                           |     *((rsp + 0x20)) = rbx;
+    0x0040daba lea rdi, [r15 + 0x70]                                                                                                 |     rdi = r15 + 0x70;
+    0x0040dabe mov rbx, qword [r15 + 0x70]                                                                                           |     rbx = *((r15 + 0x70));
+    0x0040dac2 mov rax, qword [r15 + 0x78]                                                                                           |     rax = *((r15 + 0x78));
+    0x0040dac6 mov rdx, rax                                                                                                          |     rdx = *((r15 + 0x78));
+    0x0040dac9 sub rdx, rbx                                                                                                          |     rdx -= rbx;
+                                                                                                                                     |     if (rdx == 0) {
+    0x0040dacc je 0x40dbab                                                                                                           |         goto label_7;
+                                                                                                                                     |     }
+    0x0040dad2 sar rdx, 4                                                                                                            |     rdx >>= 4;
+    0x0040dad6 mov rcx, rdx                                                                                                          |     rcx = rdx;
+    0x0040dad9 jmp 0x40dae8                                                                                                          |     
+                                                                                                                                     |     while (*((rbx + rsi)) >= r12) {
+                                                                                                                                     | label_0:
+    0x0040dae0 mov rdx, rcx                                                                                                          |         rdx = rcx;
+    0x0040dae3 test rcx, rcx                                                                                                         |         
+                                                                                                                                     |         if (rcx == 0) {
+    0x0040dae6 je 0x40db05                                                                                                           |             goto label_8;
+                                                                                                                                     |         }
+    0x0040dae8 shr rcx, 1                                                                                                            |         rcx >>= 1;
+    0x0040daeb mov rsi, rcx                                                                                                          |         rsi = rcx;
+    0x0040daee shl rsi, 4                                                                                                            |         rsi <<= 4;
+    0x0040daf2 cmp qword [rbx + rsi], r12                                                                                            |         
+    0x0040daf6 jge 0x40dae0                                                                                                          |         
+                                                                                                                                     |     }
+    0x0040daf8 not rcx                                                                                                               |     rcx = ~rcx;
+    0x0040dafb add rcx, rdx                                                                                                          |     rcx += rdx;
+    0x0040dafe lea rbx, [rbx + rsi + 0x10]                                                                                           |     rbx = rbx + rsi + 0x10;
+    0x0040db03 jmp 0x40dae0                                                                                                          |     goto label_0;
+                                                                                                                                     | label_8:
+    0x0040db05 cmp rbx, rax                                                                                                          |     
+                                                                                                                                     |     if (rbx == rax) {
+    0x0040db08 je 0x40db94                                                                                                           |         goto label_9;
+                                                                                                                                     |     }
+    0x0040db0e cmp qword [rbx], r12                                                                                                  |     
+                                                                                                                                     |     if (*(rbx) != r12) {
+    0x0040db11 jne 0x40db94                                                                                                          |         goto label_9;
+                                                                                                                                     |     }
+    0x0040db17 mov rbp, qword [r15 + 0x58]                                                                                           |     rbp = *((r15 + 0x58));
+    0x0040db1b test rbp, rbp                                                                                                         |     
+                                                                                                                                     |     if (rbp == 0) {
+    0x0040db1e je 0x40db67                                                                                                           |         goto label_10;
+                                                                                                                                     |     }
+    0x0040db20 mov r14, qword [rbx + 8]                                                                                              |     r14 = *((rbx + 8));
+    0x0040db24 mov r12, qword [rsp + 8]                                                                                              |     r12 = *((rsp + 8));
+    0x0040db29 nop dword [rax]                                                                                                       |     
+                                                                                                                                     |     do {
+    0x0040db30 lea rsi, [rbp + 0x18]                                                                                                 |         
+    0x0040db34 mov rdx, r14                                                                                                          |         rdx = r14;
+    0x0040db37 call 0x40d520                                                                                                         |         al = BloombergLP::baltzo::Zoneinfo::DescriptorLess::operator()(BloombergLP::baltzo::LocalTimeDescriptorconst&,BloombergLP::baltzo::LocalTimeDescriptorconst&)const (rdi, rbp + 0x18);
+    0x0040db3c test al, al                                                                                                           |         
+                                                                                                                                     |         if (al == 0) {
+    0x0040db3e cmove r12, rbp                                                                                                        |             r12 = rbp;
+                                                                                                                                     |         }
+    0x0040db42 movzx eax, al                                                                                                         |         eax = (int32_t) al;
+    0x0040db45 mov rbp, qword [rbp + rax*8 + 8]                                                                                      |         rbp = *((rbp + rax*8 + 8));
+    0x0040db4a test rbp, rbp                                                                                                         |         
+    0x0040db4d jne 0x40db30                                                                                                          |         
+                                                                                                                                     |     } while (rbp != 0);
+    0x0040db4f cmp r12, qword [rsp + 8]                                                                                              |     
+                                                                                                                                     |     if (r12 != *((rsp + 8))) {
+    0x0040db54 je 0x40db67                                                                                                           |         
+    0x0040db56 lea rdx, [r12 + 0x18]                                                                                                 |         rdx = r12 + 0x18;
+    0x0040db5b mov rsi, r14                                                                                                          |         
+    0x0040db5e call 0x40d520                                                                                                         |         al = BloombergLP::baltzo::Zoneinfo::DescriptorLess::operator()(BloombergLP::baltzo::LocalTimeDescriptorconst&,BloombergLP::baltzo::LocalTimeDescriptorconst&)const (rdi, r14);
+    0x0040db63 test al, al                                                                                                           |         
+                                                                                                                                     |         if (al == 0) {
+    0x0040db65 je 0x40db6c                                                                                                           |             goto label_11;
+                                                                                                                                     |         }
+                                                                                                                                     |     }
+                                                                                                                                     | label_10:
+    0x0040db67 mov r12, qword [rsp + 8]                                                                                              |     r12 = *((rsp + 8));
+                                                                                                                                     | label_11:
+    0x0040db6c movups xmm0, xmmword [rsp + 0x18]                                                                                     |     __asm ("movups xmm0, xmmword [rsp + 0x18]");
+    0x0040db71 movups xmmword [rbx], xmm0                                                                                            |     __asm ("movups xmmword [rbx], xmm0");
+    0x0040db74 mov rbx, qword [r15 + 0x70]                                                                                           |     rbx = *((r15 + 0x70));
+    0x0040db78 mov rbp, qword [r15 + 0x78]                                                                                           |     rbp = *((r15 + 0x78));
+    0x0040db7c cmp rbx, rbp                                                                                                          |     
+                                                                                                                                     |     if (rbx == rbp) {
+    0x0040db7f je 0x40dc3a                                                                                                           |         goto label_12;
+                                                                                                                                     |     }
+    0x0040db85 cmp qword [r12 + 0x40], 0x17                                                                                          |     
+                                                                                                                                     |     if (*((r12 + 0x40)) != 0x17) {
+    0x0040db8b je 0x40dbba                                                                                                           |         
+    0x0040db8d mov rax, qword [r12 + 0x20]                                                                                           |         rax = *((r12 + 0x20));
+    0x0040db92 jmp 0x40dbbf                                                                                                          |         goto label_13;
+                                                                                                                                     | label_9:
+    0x0040db94 lea rcx, [rsp + 0x18]                                                                                                 |         
+    0x0040db99 mov edx, 1                                                                                                            |         
+    0x0040db9e mov rsi, rbx                                                                                                          |         
+    0x0040dba1 call 0x410310                                                                                                         |         bsl::vector<BloombergLP::baltzo::ZoneinfoTransition,bsl::allocator<BloombergLP::baltzo::ZoneinfoTransition>>::insert(BloombergLP::baltzo::ZoneinfoTransitionconst*,unsigned long,BloombergLP::baltzo::ZoneinfoTransitionconst&) (rdi, rbx, 1, rsp + 0x18);
+    0x0040dba6 jmp 0x40dc7c                                                                                                          |         goto label_14;
+                                                                                                                                     | label_7:
+    0x0040dbab lea rsi, [rsp + 0x18]                                                                                                 |         
+    0x0040dbb0 call 0x40edf0                                                                                                         |         bsl::vector<BloombergLP::baltzo::ZoneinfoTransition,bsl::allocator<BloombergLP::baltzo::ZoneinfoTransition>>::push_back(BloombergLP::baltzo::ZoneinfoTransitionconst&) (rdi, rsp + 0x18);
+    0x0040dbb5 jmp 0x40dc7c                                                                                                          |         goto label_14;
+                                                                                                                                     |     }
+    0x0040dbba lea rax, [r12 + 0x20]                                                                                                 |     rax = r12 + 0x20;
+                                                                                                                                     | label_13:
+    0x0040dbbf mov qword [rsp + 0x10], rax                                                                                           |     *((rsp + 0x10)) = rax;
+    0x0040dbc4 mov r14d, dword [r12 + 0x18]                                                                                          |     r14d = *((r12 + 0x18));
+    0x0040dbc9 mov dl, byte [r12 + 0x1c]                                                                                             |     dl = *((r12 + 0x1c));
+    0x0040dbce mov r13, qword [r12 + 0x38]                                                                                           |     r13 = *((r12 + 0x38));
+    0x0040dbd3 mov byte [rsp + 7], dl                                                                                                |     *((rsp + 7)) = dl;
+    0x0040dbd7 jmp 0x40dc09                                                                                                          |     goto label_15;
+                                                                                                                                     | label_2:
+    0x0040dbd9 mov rsi, qword [rsi + 8]                                                                                              |     rsi = *((rsi + 8));
+                                                                                                                                     | label_3:
+    0x0040dbdd mov rdi, qword [rsp + 0x10]                                                                                           |     rdi = *((rsp + 0x10));
+    0x0040dbe2 mov rdx, r13                                                                                                          |     rdx = r13;
+    0x0040dbe5 call 0x405f60                                                                                                         |     eax = bcmp ();
+    0x0040dbea test eax, eax                                                                                                         |     
+    0x0040dbec movzx edx, byte [rsp + 7]                                                                                             |     edx = *((rsp + 7));
+                                                                                                                                     |     if (eax == 0) {
+    0x0040dbf1 je 0x40dc7c                                                                                                           |         goto label_14;
+                                                                                                                                     |     }
+    0x0040dbf7 nop word [rax + rax]                                                                                                  |     
+                                                                                                                                     |     do {
+                                                                                                                                     | label_1:
+    0x0040dc00 add rbx, 0x10                                                                                                         |         rbx += 0x10;
+    0x0040dc04 cmp rbp, rbx                                                                                                          |         
+                                                                                                                                     |         if (rbp == rbx) {
+    0x0040dc07 je 0x40dc3a                                                                                                           |             goto label_12;
+                                                                                                                                     |         }
+                                                                                                                                     | label_15:
+    0x0040dc09 mov rsi, qword [rbx + 8]                                                                                              |         rsi = *((rbx + 8));
+    0x0040dc0d cmp r14d, dword [rsi]                                                                                                 |         
+    0x0040dc10 jne 0x40dc00                                                                                                          |         
+                                                                                                                                     |     } while (r14d != *(rsi));
+    0x0040dc12 test dl, dl                                                                                                           |     
+    0x0040dc14 setne al                                                                                                              |     al = (dl != 0) ? 1 : 0;
+    0x0040dc17 cmp byte [rsi + 4], 0                                                                                                 |     
+    0x0040dc1b setne cl                                                                                                              |     cl = (*((rsi + 4)) != 0) ? 1 : 0;
+    0x0040dc1e xor cl, al                                                                                                            |     cl ^= al;
+                                                                                                                                     |     if (*((rsi + 4)) != 0) {
+    0x0040dc20 jne 0x40dc00                                                                                                          |         goto label_1;
+                                                                                                                                     |     }
+    0x0040dc22 cmp r13, qword [rsi + 0x20]                                                                                           |     
+                                                                                                                                     |     if (r13 != *((rsi + 0x20))) {
+    0x0040dc26 jne 0x40dc00                                                                                                          |         goto label_1;
+                                                                                                                                     |     }
+    0x0040dc28 test r13, r13                                                                                                         |     
+                                                                                                                                     |     if (r13 == 0) {
+    0x0040dc2b je 0x40dc7c                                                                                                           |         goto label_14;
+                                                                                                                                     |     }
+    0x0040dc2d cmp qword [rsi + 0x28], 0x17                                                                                          |     
+                                                                                                                                     |     if (*((rsi + 0x28)) != 0x17) {
+    0x0040dc32 jne 0x40dbd9                                                                                                          |         goto label_2;
+                                                                                                                                     |     }
+    0x0040dc34 add rsi, 8                                                                                                            |     rsi += 8;
+    0x0040dc38 jmp 0x40dbdd                                                                                                          |     goto label_3;
+                                                                                                                                     | label_12:
+    0x0040dc3a mov rdi, r12                                                                                                          |     
+    0x0040dc3d call 0x41e7e0                                                                                                         |     BloombergLP::bslalg::RbTreeUtil::next(BloombergLP::bslalg::RbTreeNodeconst*) (r12);
+    0x0040dc42 mov rdi, qword [rsp + 8]                                                                                              |     
+    0x0040dc47 mov rsi, r12                                                                                                          |     
+    0x0040dc4a call 0x41eb90                                                                                                         |     BloombergLP::bslalg::RbTreeUtil::remove(BloombergLP::bslalg::RbTreeAnchor*,BloombergLP::bslalg::RbTreeNode*) (*((rsp + 8)), r12);
+    0x0040dc4f cmp qword [r12 + 0x40], 0x17                                                                                          |     
+                                                                                                                                     |     if (*((r12 + 0x40)) != 0x17) {
+    0x0040dc55 je 0x40dc67                                                                                                           |         
+    0x0040dc57 mov rsi, qword [r12 + 0x20]                                                                                           |         rsi = *((r12 + 0x20));
+    0x0040dc5c mov rdi, qword [r12 + 0x48]                                                                                           |         rdi = *((r12 + 0x48));
+    0x0040dc61 mov rax, qword [rdi]                                                                                                  |         rax = *(rdi);
+    0x0040dc64 call qword [rax + 0x18]                                                                                               |         uint64_t (*rax + 0x18)() ();
+                                                                                                                                     |     }
+    0x0040dc67 mov qword [r12 + 0x38], 0xffffffffffffffff                                                                            |     *((r12 + 0x38)) = 0xffffffffffffffff;
+    0x0040dc70 mov rax, qword [r15 + 0x40]                                                                                           |     rax = *((r15 + 0x40));
+    0x0040dc74 mov qword [r12], rax                                                                                                  |     *(r12) = rax;
+    0x0040dc78 mov qword [r15 + 0x40], r12                                                                                           |     *((r15 + 0x40)) = r12;
+                                                                                                                                     | label_14:
+    0x0040dc7c add rsp, 0x28                                                                                                         |     
+    0x0040dc80 pop rbx                                                                                                               |     
+    0x0040dc81 pop r12                                                                                                               |     
+    0x0040dc83 pop r13                                                                                                               |     
+    0x0040dc85 pop r14                                                                                                               |     
+    0x0040dc87 pop r15                                                                                                               |     
+    0x0040dc89 pop rbp                                                                                                               |     
+    0x0040dc8a ret                                                                                                                   |     return rax;
+                                                                                                                                     | }

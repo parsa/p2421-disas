@@ -1,0 +1,149 @@
+    ; assembly                                                                                               | /* r2dec pseudo code output */
+                                                                                                             | /* bdlat_symbolicconverter.t/assume @ 0x40ec50 */
+                                                                                                             | #include <stdint.h>
+                                                                                                             |  
+    ; (fcn) method.BloombergLP::test::MixedSequence.MixedSequence_BloombergLP::bslma::Allocator_ ()          | int64_t method_BloombergLP::test::MixedSequence_MixedSequence_BloombergLP::bslma::Allocator_ (int64_t arg2, uint32_t arg1) {
+                                                                                                             |     rsi = arg2;
+                                                                                                             |     rdi = arg1;
+                                                                                                             |     /* BloombergLP::test::MixedSequence::MixedSequence(BloombergLP::bslma::Allocator*) */
+    0x0040ec50 push r15                                                                                      |     
+    0x0040ec52 push r14                                                                                      |     
+    0x0040ec54 push rbx                                                                                      |     
+    0x0040ec55 mov r14, rsi                                                                                  |     r14 = rsi;
+    0x0040ec58 mov rbx, rdi                                                                                  |     rbx = rdi;
+    0x0040ec5b test rsi, rsi                                                                                 |     
+                                                                                                             |     if (rsi != 0) {
+    0x0040ec5e je 0x40ec74                                                                                   |         
+    0x0040ec60 lea r15, [rbx + 0x30]                                                                         |         r15 = rbx + 0x30;
+    0x0040ec64 mov dword [rbx + 0x30], 0xffffffff                                                            |         *((rbx + 0x30)) = 0xffffffff;
+    0x0040ec6b mov qword [rbx + 0x38], r14                                                                   |         *((rbx + 0x38)) = r14;
+    0x0040ec6f mov rax, r14                                                                                  |         rax = r14;
+    0x0040ec72 jmp 0x40ecd1                                                                                  |         
+                                                                                                             |     } else {
+    0x0040ec74 mov rax, qword [rip + 0x241ac5]                                                               |         rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x0040ec7b test rax, rax                                                                                 |         
+                                                                                                             |         if (rax == 0) {
+    0x0040ec7e jne 0x40ec85                                                                                  |             
+    0x0040ec80 call 0x411f30                                                                                 |             rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                                                                             |         }
+    0x0040ec85 mov dword [rbx + 0x30], 0xffffffff                                                            |         *((rbx + 0x30)) = 0xffffffff;
+    0x0040ec8c test rax, rax                                                                                 |         
+                                                                                                             |         if (rax == 0) {
+    0x0040ec8f jne 0x40eca2                                                                                  |             
+    0x0040ec91 mov rax, qword [rip + 0x241aa8]                                                               |             rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x0040ec98 test rax, rax                                                                                 |             
+                                                                                                             |             if (rax != 0) {
+    0x0040ec9b jne 0x40eca2                                                                                  |                 goto label_0;
+                                                                                                             |             }
+    0x0040ec9d call 0x411f30                                                                                 |             rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                                                                             |         }
+                                                                                                             | label_0:
+    0x0040eca2 lea r15, [rbx + 0x30]                                                                         |         r15 = rbx + 0x30;
+    0x0040eca6 mov qword [rbx + 0x38], rax                                                                   |         *((rbx + 0x38)) = rax;
+    0x0040ecaa mov rax, qword [rip + 0x241a8f]                                                               |         rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x0040ecb1 test rax, rax                                                                                 |         
+                                                                                                             |         if (rax == 0) {
+    0x0040ecb4 jne 0x40ecbb                                                                                  |             
+    0x0040ecb6 call 0x411f30                                                                                 |             rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                                                                             |         }
+    0x0040ecbb test rax, rax                                                                                 |         
+                                                                                                             |         if (rax != 0) {
+    0x0040ecbe jne 0x40ecd1                                                                                  |             goto label_1;
+                                                                                                             |         }
+    0x0040ecc0 mov rax, qword [rip + 0x241a79]                                                               |         rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x0040ecc7 test rax, rax                                                                                 |         
+                                                                                                             |         if (rax != 0) {
+    0x0040ecca jne 0x40ecd1                                                                                  |             goto label_1;
+                                                                                                             |         }
+    0x0040eccc call 0x411f30                                                                                 |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                                                                             |     }
+                                                                                                             | label_1:
+    0x0040ecd1 mov qword [rbx + 0x40], 0                                                                     |     *((rbx + 0x40)) = 0;
+    0x0040ecd9 movaps xmm0, xmmword [rip + 0x28a90]                                                          |     xmm0 = .comment;
+    0x0040ece0 movups xmmword [rbx + 0x58], xmm0                                                             |     __asm ("movups xmmword [rbx + 0x58], xmm0");
+    0x0040ece4 mov qword [rbx + 0x68], rax                                                                   |     *((rbx + 0x68)) = rax;
+    0x0040ece8 mov byte [rbx + 0x40], 0                                                                      |     *((rbx + 0x40)) = 0;
+    0x0040ecec mov byte [rbx + 0x70], 0                                                                      |     *((rbx + 0x70)) = 0;
+    0x0040ecf0 mov byte [rbx + 0x74], 0                                                                      |     *((rbx + 0x74)) = 0;
+    0x0040ecf4 mov qword [rbx + 0x78], 0                                                                     |     *((rbx + 0x78)) = 0;
+    0x0040ecfc mov rax, r14                                                                                  |     rax = r14;
+    0x0040ecff test r14, r14                                                                                 |     
+                                                                                                             |     if (r14 == 0) {
+    0x0040ed02 jne 0x40ed2b                                                                                  |         
+    0x0040ed04 mov rax, qword [rip + 0x241a35]                                                               |         rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x0040ed0b test rax, rax                                                                                 |         
+                                                                                                             |         if (rax == 0) {
+    0x0040ed0e jne 0x40ed15                                                                                  |             
+    0x0040ed10 call 0x411f30                                                                                 |             rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                                                                             |         }
+    0x0040ed15 test rax, rax                                                                                 |         
+                                                                                                             |         if (rax != 0) {
+    0x0040ed18 jne 0x40ed2b                                                                                  |             goto label_2;
+                                                                                                             |         }
+    0x0040ed1a mov rax, qword [rip + 0x241a1f]                                                               |         rax = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x0040ed21 test rax, rax                                                                                 |         
+                                                                                                             |         if (rax != 0) {
+    0x0040ed24 jne 0x40ed2b                                                                                  |             goto label_2;
+                                                                                                             |         }
+    0x0040ed26 call 0x411f30                                                                                 |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+                                                                                                             |     }
+                                                                                                             | label_2:
+    0x0040ed2b mov qword [rbx + 0x80], 0                                                                     |     *((rbx + 0x80)) = 0;
+    0x0040ed36 movaps xmm0, xmmword [rip + 0x28a33]                                                          |     xmm0 = .comment;
+    0x0040ed3d movups xmmword [rbx + 0x98], xmm0                                                             |     __asm ("movups xmmword [rbx + 0x98], xmm0");
+    0x0040ed44 mov qword [rbx + 0xa8], rax                                                                   |     *((rbx + 0xa8)) = rax;
+    0x0040ed4b mov byte [rbx + 0x80], 0                                                                      |     *((rbx + 0x80)) = 0;
+    0x0040ed52 test r14, r14                                                                                 |     
+                                                                                                             |     if (r14 != 0) {
+    0x0040ed55 je 0x40ed63                                                                                   |         
+    0x0040ed57 mov dword [rbx + 0xb0], 0                                                                     |         *((rbx + 0xb0)) = 0;
+    0x0040ed61 jmp 0x40edba                                                                                  |         
+                                                                                                             |     } else {
+    0x0040ed63 mov r14, qword [rip + 0x2419d6]                                                               |         r14 = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x0040ed6a test r14, r14                                                                                 |         
+                                                                                                             |         if (r14 == 0) {
+    0x0040ed6d jne 0x40ed77                                                                                  |             
+    0x0040ed6f call 0x411f30                                                                                 |             rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+    0x0040ed74 mov r14, rax                                                                                  |             r14 = rax;
+                                                                                                             |         }
+    0x0040ed77 mov dword [rbx + 0xb0], 0                                                                     |         *((rbx + 0xb0)) = 0;
+    0x0040ed81 test r14, r14                                                                                 |         
+                                                                                                             |         if (r14 != 0) {
+    0x0040ed84 jne 0x40edba                                                                                  |             goto label_3;
+                                                                                                             |         }
+    0x0040ed86 mov r14, qword [rip + 0x2419b3]                                                               |         r14 = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x0040ed8d test r14, r14                                                                                 |         
+                                                                                                             |         if (r14 != 0) {
+    0x0040ed90 je 0x40ed99                                                                                   |             
+    0x0040ed92 test r14, r14                                                                                 |             
+                                                                                                             |             if (r14 != 0) {
+    0x0040ed95 jne 0x40edba                                                                                  |                 goto label_3;
+                                                                                                             |             }
+    0x0040ed97 jmp 0x40eda6                                                                                  |             
+                                                                                                             |         } else {
+    0x0040ed99 call 0x411f30                                                                                 |             rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+    0x0040ed9e mov r14, rax                                                                                  |             r14 = rax;
+    0x0040eda1 test r14, r14                                                                                 |             
+                                                                                                             |             if (r14 != 0) {
+    0x0040eda4 jne 0x40edba                                                                                  |                 goto label_3;
+                                                                                                             |             }
+                                                                                                             |         }
+    0x0040eda6 mov r14, qword [rip + 0x241993]                                                               |         r14 = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x0040edad test r14, r14                                                                                 |         
+                                                                                                             |         if (r14 != 0) {
+    0x0040edb0 jne 0x40edba                                                                                  |             goto label_3;
+                                                                                                             |         }
+    0x0040edb2 call 0x411f30                                                                                 |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+    0x0040edb7 mov r14, rax                                                                                  |         r14 = rax;
+                                                                                                             |     }
+                                                                                                             | label_3:
+    0x0040edba mov qword [rbx + 0xb8], 0                                                                     |     *((rbx + 0xb8)) = 0;
+    0x0040edc5 movaps xmm0, xmmword [rip + 0x289a4]                                                          |     xmm0 = .comment;
+    0x0040edcc movups xmmword [rbx + 0xd0], xmm0                                                             |     __asm ("movups xmmword [rbx + 0xd0], xmm0");
+    0x0040edd3 mov qword [rbx + 0xe0], r14                                                                   |     *((rbx + 0xe0)) = r14;
+    0x0040edda mov byte [rbx + 0xb8], 0                                                                      |     *((rbx + 0xb8)) = 0;
+    0x0040ede1 pop rbx                                                                                       |     
+    0x0040ede2 pop r14                                                                                       |     
+    0x0040ede4 pop r15                                                                                       |     
+    0x0040ede6 ret                                                                                           |     return rax;
+                                                                                                             | }

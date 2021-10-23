@@ -1,0 +1,29 @@
+    ; assembly                                                                               | /* r2dec pseudo code output */
+                                                                                             | /* bblb_schedulegenerationutil.t/none @ 0x40e6e0 */
+                                                                                             | #include <stdint.h>
+                                                                                             |  
+    ; (fcn) method.BloombergLP::bdlt::DayOfWeekSet_Iter.DayOfWeekSet_Iter_int__int_ ()       | uint32_t method_BloombergLP::bdlt::DayOfWeekSet_Iter_DayOfWeekSet_Iter_int_int_ (int64_t arg1) {
+                                                                                             |     rdi = arg1;
+                                                                                             |     /* BloombergLP::bdlt::DayOfWeekSet_Iter::DayOfWeekSet_Iter(int, int) */
+    0x0040e6e0 mov byte [rdi], sil                                                           |     *(rdi) = sil;
+    0x0040e6e3 mov byte [rdi + 1], dl                                                        |     *((rdi + 1)) = dl;
+    0x0040e6e6 cmp dl, 7                                                                     |     
+                                                                                             |     if (dl > 7) {
+    0x0040e6e9 jg 0x40e702                                                                   |         goto label_0;
+                                                                                             |     }
+    0x0040e6eb movzx eax, sil                                                                |     eax = (int32_t) sil;
+    0x0040e6ef nop                                                                           |     
+                                                                                             |     do {
+    0x0040e6f0 movzx ecx, dl                                                                 |         ecx = (int32_t) dl;
+    0x0040e6f3 bt eax, ecx                                                                   |         
+                                                                                             |         if (((eax >> ecx) & 1) < 0) {
+    0x0040e6f6 jb 0x40e702                                                                   |             goto label_0;
+                                                                                             |         }
+    0x0040e6f8 inc dl                                                                        |         dl++;
+    0x0040e6fa mov byte [rdi + 1], dl                                                        |         *((rdi + 1)) = dl;
+    0x0040e6fd cmp dl, 8                                                                     |         
+    0x0040e700 jne 0x40e6f0                                                                  |         
+                                                                                             |     } while (dl != 8);
+                                                                                             | label_0:
+    0x0040e702 ret                                                                           |     return eax;
+                                                                                             | }

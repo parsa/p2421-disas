@@ -1,0 +1,20 @@
+    ; assembly                                               | /* r2dec pseudo code output */
+                                                             | /* balm_publicationscheduler.t/none @ 0x406510 */
+                                                             | #include <stdint.h>
+                                                             |  
+    ; (fcn) method.Action.typeString_Action::Type_ ()        | int64_t method_Action_typeString_Action::Type_ (uint32_t arg1) {
+                                                             |     rdi = arg1;
+                                                             |     /* Action::typeString(Action::Type) */
+    0x00406510 cmp edi, 1                                    |     
+    0x00406513 mov eax, 0x463527                             |     eax = "SCHEDULE_DEFAULT";
+    0x00406518 mov ecx, 0x463538                             |     ecx = "Invalid Action Type";
+                                                             |     if (edi == 1) {
+    0x0040651d cmove rcx, rax                                |         rcx = rax;
+                                                             |     }
+    0x00406521 test edi, edi                                 |     
+    0x00406523 mov eax, 0x463515                             |     eax = "SCHEDULE_CATEGORY";
+                                                             |     if (edi != 0) {
+    0x00406528 cmovne rax, rcx                               |         rax = rcx;
+                                                             |     }
+    0x0040652c ret                                           |     return rax;
+                                                             | }

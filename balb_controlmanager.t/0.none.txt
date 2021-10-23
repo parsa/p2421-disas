@@ -1,0 +1,367 @@
+    ; assembly                                                                                           | /* r2dec pseudo code output */
+                                                                                                         | /* balb_controlmanager.t/none @ 0x435070 */
+                                                                                                         | #include <stdint.h>
+                                                                                                         |  
+                                                                                                         | uint64_t rotate_left64 (uint64_t value, uint32_t count) {
+                                                                                                         |     const uint64_t mask = (CHAR_BIT * sizeof (value)) - 1;
+                                                                                                         |     count &= mask;
+                                                                                                         |     return (value << count) | (value >> (-count & mask));
+                                                                                                         | }
+                                                                                                         |  
+    ; (fcn) method.BloombergLP::bslh::SpookyHashAlgorithmImp.update_void_const__unsigned_long_ ()        | int64_t method_BloombergLP::bslh::SpookyHashAlgorithmImp_update_void_const_unsigned_long_ (int64_t arg3, void * arg2, void * s1) {
+                                                                                                         |     void * var_8h;
+                                                                                                         |     int64_t var_10h;
+                                                                                                         |     int64_t var_18h;
+                                                                                                         |     int64_t var_20h;
+                                                                                                         |     void * s2;
+                                                                                                         |     int64_t var_30h;
+                                                                                                         |     int64_t var_38h;
+                                                                                                         |     void * var_40h;
+                                                                                                         |     int64_t var_48h;
+                                                                                                         |     int64_t var_50h;
+                                                                                                         |     rdx = arg3;
+                                                                                                         |     rsi = arg2;
+                                                                                                         |     rdi = s1;
+                                                                                                         |     /* BloombergLP::bslh::SpookyHashAlgorithmImp::update(void const*, unsigned long) */
+    0x00435070 push rbp                                                                                  |     
+    0x00435071 push r15                                                                                  |     
+    0x00435073 push r14                                                                                  |     
+    0x00435075 push r13                                                                                  |     
+    0x00435077 push r12                                                                                  |     
+    0x00435079 push rbx                                                                                  |     
+    0x0043507a sub rsp, 0x58                                                                             |     
+    0x0043507e mov rbp, rdx                                                                              |     
+    0x00435081 mov qword [rsp + 8], rdi                                                                  |     *((rsp + 8)) = rdi;
+    0x00435086 movzx edi, byte [rdi + 0x128]                                                             |     edi = *((rdi + 0x128));
+    0x0043508d lea rbx, [rdi + rdx]                                                                      |     rbx = rdi + rdx;
+    0x00435091 cmp rbx, 0xbf                                                                             |     
+                                                                                                         |     if (rbx <= 0xbf) {
+    0x00435098 ja 0x4350bd                                                                               |         
+    0x0043509a mov r14, qword [rsp + 8]                                                                  |         r14 = *((rsp + 8));
+    0x0043509f add rdi, r14                                                                              |         rdi += r14;
+    0x004350a2 mov rdx, rbp                                                                              |         
+    0x004350a5 call 0x404af0                                                                             |         memcpy (rdi, rsi, rbp);
+    0x004350aa add qword [r14 + 0x120], rbp                                                              |         *((r14 + 0x120)) += rbp;
+    0x004350b1 mov byte [r14 + 0x128], bl                                                                |         *((r14 + 0x128)) = bl;
+    0x004350b8 jmp 0x43557f                                                                              |         goto label_0;
+                                                                                                         |     }
+    0x004350bd mov rcx, qword [rsp + 8]                                                                  |     rcx = *((rsp + 8));
+    0x004350c2 mov rax, qword [rcx + 0x120]                                                              |     rax = *((rcx + 0x120));
+    0x004350c9 mov r9, qword [rcx + 0xc0]                                                                |     r9 = *((rcx + 0xc0));
+    0x004350d0 mov r10, qword [rcx + 0xc8]                                                               |     r10 = *((rcx + 0xc8));
+    0x004350d7 cmp rax, 0xc0                                                                             |     
+    0x004350dd mov qword [rsp + 0x18], rbp                                                               |     *((rsp + 0x18)) = rbp;
+    0x004350e2 mov qword [rsp + 0x28], rsi                                                               |     *((rsp + 0x28)) = rsi;
+                                                                                                         |     if (rax < 0xc0) {
+    0x004350e7 jae 0x435112                                                                              |         
+    0x004350e9 movabs r11, 0xdeadbeefdeadbeef                                                            |         r11 = 0xdeadbeefdeadbeef;
+    0x004350f3 mov r8, r9                                                                                |         r8 = r9;
+    0x004350f6 mov qword [rsp + 0x20], r10                                                               |         *((rsp + 0x20)) = r10;
+    0x004350fb mov rdx, r11                                                                              |         rdx = r11;
+    0x004350fe mov rcx, r9                                                                               |         rcx = r9;
+    0x00435101 mov r14, r10                                                                              |         r14 = r10;
+    0x00435104 mov r13, r11                                                                              |         r13 = r11;
+    0x00435107 mov r15, r9                                                                               |         r15 = r9;
+    0x0043510a mov rbx, r10                                                                              |         rbx = r10;
+    0x0043510d mov r12, r11                                                                              |         r12 = r11;
+    0x00435110 jmp 0x435162                                                                              |         
+                                                                                                         |     } else {
+    0x00435112 mov rsi, qword [rsp + 8]                                                                  |         rsi = *((rsp + 8));
+    0x00435117 mov r11, qword [rsi + 0xd0]                                                               |         r11 = *((rsi + 0xd0));
+    0x0043511e mov r8, qword [rsi + 0xd8]                                                                |         r8 = *((rsi + 0xd8));
+    0x00435125 mov rdx, qword [rsi + 0xe0]                                                               |         rdx = *((rsi + 0xe0));
+    0x0043512c mov qword [rsp + 0x20], rdx                                                               |         *((rsp + 0x20)) = rdx;
+    0x00435131 mov rdx, qword [rsi + 0xe8]                                                               |         rdx = *((rsi + 0xe8));
+    0x00435138 mov rcx, qword [rsi + 0xf0]                                                               |         rcx = *((rsi + 0xf0));
+    0x0043513f mov r14, qword [rsi + 0xf8]                                                               |         r14 = *((rsi + 0xf8));
+    0x00435146 mov r13, qword [rsi + 0x100]                                                              |         r13 = *((rsi + 0x100));
+    0x0043514d mov r15, qword [rsi + 0x108]                                                              |         r15 = *((rsi + 0x108));
+    0x00435154 mov rbx, qword [rsi + 0x110]                                                              |         rbx = *((rsi + 0x110));
+    0x0043515b mov r12, qword [rsi + 0x118]                                                              |         r12 = *((rsi + 0x118));
+                                                                                                         |     }
+    0x00435162 mov qword [rsp + 0x10], rdx                                                               |     *((rsp + 0x10)) = rdx;
+    0x00435167 add rax, qword [rsp + 0x18]                                                               |     rax += *((rsp + 0x18));
+    0x0043516c mov rdx, qword [rsp + 8]                                                                  |     rdx = *((rsp + 8));
+    0x00435171 mov qword [rdx + 0x120], rax                                                              |     *((rdx + 0x120)) = rax;
+    0x00435178 test dil, dil                                                                             |     
+                                                                                                         |     if (dil != 0) {
+    0x0043517b je 0x4353a5                                                                               |         
+    0x00435181 mov al, 0xc0                                                                              |         al = 0xc0;
+    0x00435183 sub al, dil                                                                               |         al -= dil;
+    0x00435186 add rdi, qword [rsp + 8]                                                                  |         rdi += *((rsp + 8));
+    0x0043518b movzx edx, al                                                                             |         edx = (int32_t) al;
+    0x0043518e mov qword [rsp + 0x50], rdx                                                               |         *((rsp + 0x50)) = rdx;
+    0x00435193 mov rsi, qword [rsp + 0x28]                                                               |         
+    0x00435198 mov qword [rsp + 0x48], r10                                                               |         *((rsp + 0x48)) = r10;
+    0x0043519d mov qword [rsp + 0x40], r9                                                                |         *((rsp + 0x40)) = r9;
+    0x004351a2 mov qword [rsp + 0x38], r11                                                               |         *((rsp + 0x38)) = r11;
+    0x004351a7 mov qword [rsp + 0x30], r8                                                                |         *((rsp + 0x30)) = r8;
+    0x004351ac mov rbp, rcx                                                                              |         
+    0x004351af call 0x404af0                                                                             |         memcpy (rdi, *((rsp + 0x28)), rdx);
+    0x004351b4 mov rcx, rbp                                                                              |         rcx = rbp;
+    0x004351b7 mov r8, qword [rsp + 0x30]                                                                |         r8 = *((rsp + 0x30));
+    0x004351bc mov r11, qword [rsp + 0x38]                                                               |         r11 = *((rsp + 0x38));
+    0x004351c1 mov r9, qword [rsp + 0x40]                                                                |         r9 = *((rsp + 0x40));
+    0x004351c6 mov r10, qword [rsp + 0x48]                                                               |         r10 = *((rsp + 0x48));
+    0x004351cb mov rdi, qword [rsp + 8]                                                                  |         rdi = *((rsp + 8));
+    0x004351d0 add r9, qword [rdi]                                                                       |         r9 += *(rdi);
+    0x004351d3 xor r12, r9                                                                               |         r12 ^= r9;
+    0x004351d6 rol r9, 0xb                                                                               |         r9 = rotate_left64 (r9, 0xb);
+    0x004351da add r12, r10                                                                              |         r12 += r10;
+    0x004351dd add r10, qword [rdi + 8]                                                                  |         r10 += *((rdi + 8));
+    0x004351e1 xor r9, r10                                                                               |         r9 ^= r10;
+    0x004351e4 rol r10, 0x20                                                                             |         r10 = rotate_left64 (r10, 0x20);
+    0x004351e8 xor r11, rbx                                                                              |         r11 ^= rbx;
+    0x004351eb add r9, r11                                                                               |         r9 += r11;
+    0x004351ee add r11, qword [rdi + 0x10]                                                               |         r11 += *((rdi + 0x10));
+    0x004351f2 xor r10, r11                                                                              |         r10 ^= r11;
+    0x004351f5 rol r11, 0x2b                                                                             |         r11 = rotate_left64 (r11, 0x2b);
+    0x004351f9 xor r8, r12                                                                               |         r8 ^= r12;
+    0x004351fc add r10, r8                                                                               |         r10 += r8;
+    0x004351ff add r8, qword [rdi + 0x18]                                                                |         r8 += *((rdi + 0x18));
+    0x00435203 xor r11, r8                                                                               |         r11 ^= r8;
+    0x00435206 rol r8, 0x1f                                                                              |         r8 = rotate_left64 (r8, 0x1f);
+    0x0043520a mov rbp, qword [rsp + 0x20]                                                               |         rbp = *((rsp + 0x20));
+    0x0043520f xor rbp, r9                                                                               |         rbp ^= r9;
+    0x00435212 add r11, rbp                                                                              |         r11 += rbp;
+    0x00435215 add rbp, qword [rdi + 0x20]                                                               |         rbp += *((rdi + 0x20));
+    0x00435219 xor r8, rbp                                                                               |         r8 ^= rbp;
+    0x0043521c rol rbp, 0x11                                                                             |         rbp = rotate_left64 (rbp, 0x11);
+    0x00435220 mov rax, qword [rsp + 0x10]                                                               |         rax = *((rsp + 0x10));
+    0x00435225 xor rax, r10                                                                              |         rax ^= r10;
+    0x00435228 add r8, rax                                                                               |         r8 += rax;
+    0x0043522b add rax, qword [rdi + 0x28]                                                               |         rax += *((rdi + 0x28));
+    0x0043522f xor rbp, rax                                                                              |         rbp ^= rax;
+    0x00435232 rol rax, 0x1c                                                                             |         rax = rotate_left64 (rax, 0x1c);
+    0x00435236 xor rcx, r11                                                                              |         rcx ^= r11;
+    0x00435239 add rbp, rcx                                                                              |         rbp += rcx;
+    0x0043523c add rcx, qword [rdi + 0x30]                                                               |         rcx += *((rdi + 0x30));
+    0x00435240 xor rax, rcx                                                                              |         rax ^= rcx;
+    0x00435243 rol rcx, 0x27                                                                             |         rcx = rotate_left64 (rcx, 0x27);
+    0x00435247 xor r14, r8                                                                               |         r14 ^= r8;
+    0x0043524a add rax, r14                                                                              |         rax += r14;
+    0x0043524d add r14, qword [rdi + 0x38]                                                               |         r14 += *((rdi + 0x38));
+    0x00435251 xor rcx, r14                                                                              |         rcx ^= r14;
+    0x00435254 rol r14, 0x39                                                                             |         r14 = rotate_left64 (r14, 0x39);
+    0x00435258 xor r13, rbp                                                                              |         r13 ^= rbp;
+    0x0043525b add rcx, r13                                                                              |         rcx += r13;
+    0x0043525e add r13, qword [rdi + 0x40]                                                               |         r13 += *((rdi + 0x40));
+    0x00435262 xor r14, r13                                                                              |         r14 ^= r13;
+    0x00435265 rol r13, 0x37                                                                             |         r13 = rotate_left64 (r13, 0x37);
+    0x00435269 xor r15, rax                                                                              |         r15 ^= rax;
+    0x0043526c add r14, r15                                                                              |         r14 += r15;
+    0x0043526f add r15, qword [rdi + 0x48]                                                               |         r15 += *((rdi + 0x48));
+    0x00435273 xor r13, r15                                                                              |         r13 ^= r15;
+    0x00435276 rol r15, 0x36                                                                             |         r15 = rotate_left64 (r15, 0x36);
+    0x0043527a xor rbx, rcx                                                                              |         rbx ^= rcx;
+    0x0043527d add r13, rbx                                                                              |         r13 += rbx;
+    0x00435280 add rbx, qword [rdi + 0x50]                                                               |         rbx += *((rdi + 0x50));
+    0x00435284 xor r15, rbx                                                                              |         r15 ^= rbx;
+    0x00435287 rol rbx, 0x16                                                                             |         rbx = rotate_left64 (rbx, 0x16);
+    0x0043528b xor r12, r14                                                                              |         r12 ^= r14;
+    0x0043528e add r15, r12                                                                              |         r15 += r12;
+    0x00435291 add r12, qword [rdi + 0x58]                                                               |         r12 += *((rdi + 0x58));
+    0x00435295 xor rbx, r12                                                                              |         rbx ^= r12;
+    0x00435298 rol r12, 0x2e                                                                             |         r12 = rotate_left64 (r12, 0x2e);
+    0x0043529c xor r9, r13                                                                               |         r9 ^= r13;
+    0x0043529f add rbx, r9                                                                               |         rbx += r9;
+    0x004352a2 add r9, qword [rdi + 0x60]                                                                |         r9 += *((rdi + 0x60));
+    0x004352a6 xor r12, r9                                                                               |         r12 ^= r9;
+    0x004352a9 rol r9, 0xb                                                                               |         r9 = rotate_left64 (r9, 0xb);
+    0x004352ad xor r10, r15                                                                              |         r10 ^= r15;
+    0x004352b0 add r12, r10                                                                              |         r12 += r10;
+    0x004352b3 add r10, qword [rdi + 0x68]                                                               |         r10 += *((rdi + 0x68));
+    0x004352b7 xor r9, r10                                                                               |         r9 ^= r10;
+    0x004352ba rol r10, 0x20                                                                             |         r10 = rotate_left64 (r10, 0x20);
+    0x004352be xor r11, rbx                                                                              |         r11 ^= rbx;
+    0x004352c1 add r9, r11                                                                               |         r9 += r11;
+    0x004352c4 add r11, qword [rdi + 0x70]                                                               |         r11 += *((rdi + 0x70));
+    0x004352c8 xor r10, r11                                                                              |         r10 ^= r11;
+    0x004352cb rol r11, 0x2b                                                                             |         r11 = rotate_left64 (r11, 0x2b);
+    0x004352cf xor r8, r12                                                                               |         r8 ^= r12;
+    0x004352d2 add r10, r8                                                                               |         r10 += r8;
+    0x004352d5 add r8, qword [rdi + 0x78]                                                                |         r8 += *((rdi + 0x78));
+    0x004352d9 xor r11, r8                                                                               |         r11 ^= r8;
+    0x004352dc rol r8, 0x1f                                                                              |         r8 = rotate_left64 (r8, 0x1f);
+    0x004352e0 xor rbp, r9                                                                               |         rbp ^= r9;
+    0x004352e3 add r11, rbp                                                                              |         r11 += rbp;
+    0x004352e6 add rbp, qword [rdi + 0x80]                                                               |         rbp += *((rdi + 0x80));
+    0x004352ed xor r8, rbp                                                                               |         r8 ^= rbp;
+    0x004352f0 rol rbp, 0x11                                                                             |         rbp = rotate_left64 (rbp, 0x11);
+    0x004352f4 xor rax, r10                                                                              |         rax ^= r10;
+    0x004352f7 add r8, rax                                                                               |         r8 += rax;
+    0x004352fa add rax, qword [rdi + 0x88]                                                               |         rax += *((rdi + 0x88));
+    0x00435301 xor rbp, rax                                                                              |         rbp ^= rax;
+    0x00435304 rol rax, 0x1c                                                                             |         rax = rotate_left64 (rax, 0x1c);
+    0x00435308 xor rcx, r11                                                                              |         rcx ^= r11;
+    0x0043530b add rbp, rcx                                                                              |         rbp += rcx;
+    0x0043530e add rcx, qword [rdi + 0x90]                                                               |         rcx += *((rdi + 0x90));
+    0x00435315 xor rax, rcx                                                                              |         rax ^= rcx;
+    0x00435318 rol rcx, 0x27                                                                             |         rcx = rotate_left64 (rcx, 0x27);
+    0x0043531c xor r14, r8                                                                               |         r14 ^= r8;
+    0x0043531f add rax, r14                                                                              |         rax += r14;
+    0x00435322 add r14, qword [rdi + 0x98]                                                               |         r14 += *((rdi + 0x98));
+    0x00435329 xor r13, rbp                                                                              |         r13 ^= rbp;
+    0x0043532c xor rcx, r14                                                                              |         rcx ^= r14;
+    0x0043532f rol r14, 0x39                                                                             |         r14 = rotate_left64 (r14, 0x39);
+    0x00435333 add rcx, r13                                                                              |         rcx += r13;
+    0x00435336 add r13, qword [rdi + 0xa0]                                                               |         r13 += *((rdi + 0xa0));
+    0x0043533d mov rdx, qword [rsp + 0x50]                                                               |         rdx = *((rsp + 0x50));
+    0x00435342 add qword [rsp + 0x28], rdx                                                               |         *((rsp + 0x28)) += rdx;
+    0x00435347 mov rsi, qword [rsp + 0x18]                                                               |         rsi = *((rsp + 0x18));
+    0x0043534c sub rsi, rdx                                                                              |         rsi -= rdx;
+    0x0043534f xor r14, r13                                                                              |         r14 ^= r13;
+    0x00435352 rol r13, 0x37                                                                             |         r13 = rotate_left64 (r13, 0x37);
+    0x00435356 mov qword [rsp + 0x10], rax                                                               |         *((rsp + 0x10)) = rax;
+    0x0043535b xor r15, rax                                                                              |         r15 ^= rax;
+    0x0043535e add r14, r15                                                                              |         r14 += r15;
+    0x00435361 add r15, qword [rdi + 0xa8]                                                               |         r15 += *((rdi + 0xa8));
+    0x00435368 xor rbx, rcx                                                                              |         rbx ^= rcx;
+    0x0043536b xor r13, r15                                                                              |         r13 ^= r15;
+    0x0043536e rol r15, 0x36                                                                             |         r15 = rotate_left64 (r15, 0x36);
+    0x00435372 xor r12, r14                                                                              |         r12 ^= r14;
+    0x00435375 add r13, rbx                                                                              |         r13 += rbx;
+    0x00435378 add rbx, qword [rdi + 0xb0]                                                               |         rbx += *((rdi + 0xb0));
+    0x0043537f xor r9, r13                                                                               |         r9 ^= r13;
+    0x00435382 xor r15, rbx                                                                              |         r15 ^= rbx;
+    0x00435385 rol rbx, 0x16                                                                             |         rbx = rotate_left64 (rbx, 0x16);
+    0x00435389 add r15, r12                                                                              |         r15 += r12;
+    0x0043538c add r12, qword [rdi + 0xb8]                                                               |         r12 += *((rdi + 0xb8));
+    0x00435393 xor r10, r15                                                                              |         r10 ^= r15;
+    0x00435396 xor rbx, r12                                                                              |         rbx ^= r12;
+    0x00435399 rol r12, 0x2e                                                                             |         r12 = rotate_left64 (r12, 0x2e);
+    0x0043539d add rbx, r9                                                                               |         rbx += r9;
+    0x004353a0 mov rdi, rsi                                                                              |         rdi = rsi;
+    0x004353a3 jmp 0x4353af                                                                              |         
+                                                                                                         |     } else {
+    0x004353a5 mov rbp, qword [rsp + 0x20]                                                               |         rbp = *((rsp + 0x20));
+    0x004353aa mov rdi, qword [rsp + 0x18]                                                               |         rdi = *((rsp + 0x18));
+                                                                                                         |     }
+    0x004353af movabs rdx, 0xaaaaaaaaaaaaaaab                                                            |     rdx = 0xaaaaaaaaaaaaaaab;
+    0x004353b9 mov rax, rdi                                                                              |     rax = rdi;
+    0x004353bc mul rdx                                                                                   |     rdx:rax = rax * rdx;
+    0x004353bf shr rdx, 6                                                                                |     rdx >>= 6;
+    0x004353c3 lea rsi, [rdx + rdx*2]                                                                    |     rsi = rdx * 3;
+    0x004353c7 shl rsi, 5                                                                                |     rsi <<= 5;
+    0x004353cb mov rax, qword [rsp + 0x28]                                                               |     rax = *((rsp + 0x28));
+    0x004353d0 add rsi, rax                                                                              |     rsi += rax;
+    0x004353d3 mov rdx, rax                                                                              |     rdx = rax;
+    0x004353d6 sub rdx, rsi                                                                              |     rdx -= rsi;
+    0x004353d9 add rdx, rdi                                                                              |     rdx += rdi;
+    0x004353dc mov qword [rsp + 0x18], rdx                                                               |     *((rsp + 0x18)) = rdx;
+    0x004353e1 cmp rax, rsi                                                                              |     
+                                                                                                         |     if (rax >= rsi) {
+    0x004353e4 jae 0x4354ca                                                                              |         goto label_1;
+                                                                                                         |     }
+    0x004353ea mov rdx, qword [rsp + 0x10]                                                               |     rdx = *((rsp + 0x10));
+    0x004353ef nop                                                                                       |     
+                                                                                                         |     do {
+    0x004353f0 add r9, qword [rax]                                                                       |         r9 += *(rax);
+    0x004353f3 xor r12, r9                                                                               |         r12 ^= r9;
+    0x004353f6 rol r9, 0xb                                                                               |         r9 = rotate_left64 (r9, 0xb);
+    0x004353fa add r12, r10                                                                              |         r12 += r10;
+    0x004353fd add r10, qword [rax + 8]                                                                  |         r10 += *((rax + 8));
+    0x00435401 xor r9, r10                                                                               |         r9 ^= r10;
+    0x00435404 rol r10, 0x20                                                                             |         r10 = rotate_left64 (r10, 0x20);
+    0x00435408 xor r11, rbx                                                                              |         r11 ^= rbx;
+    0x0043540b add r9, r11                                                                               |         r9 += r11;
+    0x0043540e add r11, qword [rax + 0x10]                                                               |         r11 += *((rax + 0x10));
+    0x00435412 xor r10, r11                                                                              |         r10 ^= r11;
+    0x00435415 rol r11, 0x2b                                                                             |         r11 = rotate_left64 (r11, 0x2b);
+    0x00435419 xor r8, r12                                                                               |         r8 ^= r12;
+    0x0043541c add r10, r8                                                                               |         r10 += r8;
+    0x0043541f add r8, qword [rax + 0x18]                                                                |         r8 += *((rax + 0x18));
+    0x00435423 xor r11, r8                                                                               |         r11 ^= r8;
+    0x00435426 rol r8, 0x1f                                                                              |         r8 = rotate_left64 (r8, 0x1f);
+    0x0043542a xor rbp, r9                                                                               |         rbp ^= r9;
+    0x0043542d add r11, rbp                                                                              |         r11 += rbp;
+    0x00435430 add rbp, qword [rax + 0x20]                                                               |         rbp += *((rax + 0x20));
+    0x00435434 xor r8, rbp                                                                               |         r8 ^= rbp;
+    0x00435437 rol rbp, 0x11                                                                             |         rbp = rotate_left64 (rbp, 0x11);
+    0x0043543b xor rdx, r10                                                                              |         rdx ^= r10;
+    0x0043543e add r8, rdx                                                                               |         r8 += rdx;
+    0x00435441 add rdx, qword [rax + 0x28]                                                               |         rdx += *((rax + 0x28));
+    0x00435445 xor rbp, rdx                                                                              |         rbp ^= rdx;
+    0x00435448 rol rdx, 0x1c                                                                             |         rdx = rotate_left64 (rdx, 0x1c);
+    0x0043544c xor rcx, r11                                                                              |         rcx ^= r11;
+    0x0043544f add rbp, rcx                                                                              |         rbp += rcx;
+    0x00435452 add rcx, qword [rax + 0x30]                                                               |         rcx += *((rax + 0x30));
+    0x00435456 xor rdx, rcx                                                                              |         rdx ^= rcx;
+    0x00435459 rol rcx, 0x27                                                                             |         rcx = rotate_left64 (rcx, 0x27);
+    0x0043545d xor r14, r8                                                                               |         r14 ^= r8;
+    0x00435460 add rdx, r14                                                                              |         rdx += r14;
+    0x00435463 add r14, qword [rax + 0x38]                                                               |         r14 += *((rax + 0x38));
+    0x00435467 xor rcx, r14                                                                              |         rcx ^= r14;
+    0x0043546a rol r14, 0x39                                                                             |         r14 = rotate_left64 (r14, 0x39);
+    0x0043546e xor r13, rbp                                                                              |         r13 ^= rbp;
+    0x00435471 add rcx, r13                                                                              |         rcx += r13;
+    0x00435474 add r13, qword [rax + 0x40]                                                               |         r13 += *((rax + 0x40));
+    0x00435478 xor r14, r13                                                                              |         r14 ^= r13;
+    0x0043547b rol r13, 0x37                                                                             |         r13 = rotate_left64 (r13, 0x37);
+    0x0043547f xor r15, rdx                                                                              |         r15 ^= rdx;
+    0x00435482 add r14, r15                                                                              |         r14 += r15;
+    0x00435485 add r15, qword [rax + 0x48]                                                               |         r15 += *((rax + 0x48));
+    0x00435489 xor r13, r15                                                                              |         r13 ^= r15;
+    0x0043548c rol r15, 0x36                                                                             |         r15 = rotate_left64 (r15, 0x36);
+    0x00435490 xor rbx, rcx                                                                              |         rbx ^= rcx;
+    0x00435493 add r13, rbx                                                                              |         r13 += rbx;
+    0x00435496 add rbx, qword [rax + 0x50]                                                               |         rbx += *((rax + 0x50));
+    0x0043549a xor r15, rbx                                                                              |         r15 ^= rbx;
+    0x0043549d rol rbx, 0x16                                                                             |         rbx = rotate_left64 (rbx, 0x16);
+    0x004354a1 xor r12, r14                                                                              |         r12 ^= r14;
+    0x004354a4 add r15, r12                                                                              |         r15 += r12;
+    0x004354a7 add r12, qword [rax + 0x58]                                                               |         r12 += *((rax + 0x58));
+    0x004354ab xor r9, r13                                                                               |         r9 ^= r13;
+    0x004354ae xor rbx, r12                                                                              |         rbx ^= r12;
+    0x004354b1 rol r12, 0x2e                                                                             |         r12 = rotate_left64 (r12, 0x2e);
+    0x004354b5 xor r10, r15                                                                              |         r10 ^= r15;
+    0x004354b8 add rbx, r9                                                                               |         rbx += r9;
+    0x004354bb add rax, 0x60                                                                             |         rax += 0x60;
+    0x004354bf cmp rsi, rax                                                                              |         
+    0x004354c2 ja 0x4353f0                                                                               |         
+                                                                                                         |     } while (rsi > rax);
+    0x004354c8 jmp 0x4354cf                                                                              |     goto label_2;
+                                                                                                         | label_1:
+    0x004354ca mov rdx, qword [rsp + 0x10]                                                               |     
+                                                                                                         | label_2:
+    0x004354cf mov qword [rsp + 0x40], r9                                                                |     *((rsp + 0x40)) = r9;
+    0x004354d4 mov qword [rsp + 0x48], r10                                                               |     *((rsp + 0x48)) = r10;
+    0x004354d9 mov qword [rsp + 0x38], r11                                                               |     *((rsp + 0x38)) = r11;
+    0x004354de mov qword [rsp + 0x30], r8                                                                |     *((rsp + 0x30)) = r8;
+    0x004354e3 mov qword [rsp + 0x20], rbp                                                               |     *((rsp + 0x20)) = rbp;
+    0x004354e8 mov qword [rsp + 0x10], rdx                                                               |     *((rsp + 0x10)) = rdx;
+    0x004354ed mov rax, qword [rsp + 0x18]                                                               |     rax = *((rsp + 0x18));
+    0x004354f2 mov rdi, qword [rsp + 8]                                                                  |     
+    0x004354f7 mov byte [rdi + 0x128], al                                                                |     *((rdi + 0x128)) = al;
+    0x004354fd movzx edx, al                                                                             |     edx = (int32_t) al;
+    0x00435500 mov rbp, rcx                                                                              |     
+    0x00435503 call 0x404af0                                                                             |     memcpy (*((rsp + 8)), rsi, *((rsp + 0x10)));
+    0x00435508 mov rax, qword [rsp + 8]                                                                  |     rax = *((rsp + 8));
+    0x0043550d mov rcx, qword [rsp + 0x40]                                                               |     rcx = *((rsp + 0x40));
+    0x00435512 mov qword [rax + 0xc0], rcx                                                               |     *((rax + 0xc0)) = rcx;
+    0x00435519 mov rcx, qword [rsp + 0x48]                                                               |     rcx = *((rsp + 0x48));
+    0x0043551e mov qword [rax + 0xc8], rcx                                                               |     *((rax + 0xc8)) = rcx;
+    0x00435525 mov rcx, qword [rsp + 0x38]                                                               |     rcx = *((rsp + 0x38));
+    0x0043552a mov qword [rax + 0xd0], rcx                                                               |     *((rax + 0xd0)) = rcx;
+    0x00435531 mov rcx, qword [rsp + 0x30]                                                               |     rcx = *((rsp + 0x30));
+    0x00435536 mov qword [rax + 0xd8], rcx                                                               |     *((rax + 0xd8)) = rcx;
+    0x0043553d mov rcx, qword [rsp + 0x20]                                                               |     rcx = *((rsp + 0x20));
+    0x00435542 mov qword [rax + 0xe0], rcx                                                               |     *((rax + 0xe0)) = rcx;
+    0x00435549 mov rcx, qword [rsp + 0x10]                                                               |     rcx = *((rsp + 0x10));
+    0x0043554e mov qword [rax + 0xe8], rcx                                                               |     *((rax + 0xe8)) = rcx;
+    0x00435555 mov qword [rax + 0xf0], rbp                                                               |     *((rax + 0xf0)) = rbp;
+    0x0043555c mov qword [rax + 0xf8], r14                                                               |     *((rax + 0xf8)) = r14;
+    0x00435563 mov qword [rax + 0x100], r13                                                              |     *((rax + 0x100)) = r13;
+    0x0043556a mov qword [rax + 0x108], r15                                                              |     *((rax + 0x108)) = r15;
+    0x00435571 mov qword [rax + 0x110], rbx                                                              |     *((rax + 0x110)) = rbx;
+    0x00435578 mov qword [rax + 0x118], r12                                                              |     *((rax + 0x118)) = r12;
+                                                                                                         | label_0:
+    0x0043557f add rsp, 0x58                                                                             |     
+    0x00435583 pop rbx                                                                                   |     
+    0x00435584 pop r12                                                                                   |     
+    0x00435586 pop r13                                                                                   |     
+    0x00435588 pop r14                                                                                   |     
+    0x0043558a pop r15                                                                                   |     
+    0x0043558c pop rbp                                                                                   |     
+    0x0043558d ret                                                                                       |     return rax;
+                                                                                                         | }

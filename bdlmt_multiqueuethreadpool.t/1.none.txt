@@ -1,0 +1,45 @@
+    ; assembly                                                                                   | /* r2dec pseudo code output */
+                                                                                                 | /* bdlmt_multiqueuethreadpool.t/none @ 0x432f50 */
+                                                                                                 | #include <stdint.h>
+                                                                                                 |  
+    ; (fcn) method.BloombergLP::bdlmt::MultiQueueThreadPool_Queue.waitWhilePausing__ ()          | uint64_t method_BloombergLP::bdlmt::MultiQueueThreadPool_Queue_waitWhilePausing_ (int64_t arg1) {
+                                                                                                 |     rdi = arg1;
+                                                                                                 |     /* BloombergLP::bdlmt::MultiQueueThreadPool_Queue::waitWhilePausing() */
+    0x00432f50 push r15                                                                          |     
+    0x00432f52 push r14                                                                          |     
+    0x00432f54 push rbx                                                                          |     
+    0x00432f55 mov r15, rdi                                                                      |     r15 = rdi;
+    0x00432f58 lea r14, [rdi + 0x50]                                                             |     r14 = rdi + 0x50;
+    0x00432f5c mov rdi, r14                                                                      |     rdi = r14;
+    0x00432f5f call 0x405bd0                                                                     |     pthread_mutex_lock ();
+    0x00432f64 call 0x405710                                                                     |     rax = pthread_self ();
+    0x00432f69 mov rcx, qword [r15 + 0x110]                                                      |     rcx = *((r15 + 0x110));
+    0x00432f70 cmp rax, rcx                                                                      |     
+                                                                                                 |     if (rax == rcx) {
+    0x00432f73 je 0x432fa4                                                                       |         goto label_0;
+                                                                                                 |     }
+    0x00432f75 cmp qword [rip + 0x35a04], rcx                                                    |     
+                                                                                                 |     if (*(obj.BloombergLP::bslmt::ThreadUtilImpl_BloombergLP::bslmt::Platform::PosixThreads_::INVALID_HANDLE) == rcx) {
+    0x00432f7c je 0x432fa4                                                                       |         goto label_0;
+                                                                                                 |     }
+    0x00432f7e lea rbx, [r15 + 0x78]                                                             |     rbx = r15 + 0x78;
+    0x00432f82 nop word cs:[rax + rax]                                                           |     
+    0x00432f8c nop dword [rax]                                                                   |     
+                                                                                                 |     do {
+    0x00432f90 cmp dword [r15 + 0x44], 2                                                         |         
+                                                                                                 |         if (*((r15 + 0x44)) != 2) {
+    0x00432f95 jne 0x432fa4                                                                      |             goto label_0;
+                                                                                                 |         }
+    0x00432f97 mov rdi, rbx                                                                      |         rdi = rbx;
+    0x00432f9a mov rsi, r14                                                                      |         rsi = r14;
+    0x00432f9d call 0x405a60                                                                     |         pthread_cond_wait ();
+    0x00432fa2 jmp 0x432f90                                                                      |         
+                                                                                                 |     } while (1);
+                                                                                                 | label_0:
+    0x00432fa4 dec dword [r15 + 0xb0]                                                            |     *((r15 + 0xb0))--;
+    0x00432fab mov rdi, r14                                                                      |     rdi = r14;
+    0x00432fae pop rbx                                                                           |     
+    0x00432faf pop r14                                                                           |     
+    0x00432fb1 pop r15                                                                           |     
+    0x00432fb3 jmp 0x405cf0                                                                      |     return pthread_mutex_unlock ();
+                                                                                                 | }

@@ -1,0 +1,40 @@
+    ; assembly                                                           | /* r2dec pseudo code output */
+                                                                         | /* balb_testmessages.t/none @ 0x40a940 */
+                                                                         | #include <stdint.h>
+                                                                         |  
+    ; (fcn) method.BloombergLP::balb::Choice3.makeSelection1__ ()        | int64_t method_BloombergLP::balb::Choice3_makeSelection1_ (int64_t arg1) {
+                                                                         |     rdi = arg1;
+                                                                         |     /* BloombergLP::balb::Choice3::makeSelection1() */
+    0x0040a940 push rbx                                                  |     
+    0x0040a941 mov rbx, rdi                                              |     rbx = rdi;
+    0x0040a944 mov eax, dword [rdi + 0x170]                              |     eax = *((rdi + 0x170));
+    0x0040a94a cmp eax, 2                                                |     
+                                                                         |     if (eax != 2) {
+    0x0040a94d je 0x40a95d                                               |         
+    0x0040a94f test eax, eax                                             |         
+                                                                         |         if (eax == 0) {
+    0x0040a951 jne 0x40a979                                              |             
+    0x0040a953 mov rdi, rbx                                              |             
+    0x0040a956 call 0x409810                                             |             BloombergLP::balb::Sequence6::reset() (rbx);
+    0x0040a95b jmp 0x40a99c                                              |             
+                                                                         |         } else {
+    0x0040a95d cmp qword [rbx + 0x20], 0x17                              |             
+                                                                         |             if (*((rbx + 0x20)) != 0x17) {
+    0x0040a962 je 0x40a971                                               |                 
+    0x0040a964 mov rsi, qword [rbx]                                      |                 rsi = *(rbx);
+    0x0040a967 mov rdi, qword [rbx + 0x28]                               |                 rdi = *((rbx + 0x28));
+    0x0040a96b mov rax, qword [rdi]                                      |                 rax = *(rdi);
+    0x0040a96e call qword [rax + 0x18]                                   |                 uint64_t (*rax + 0x18)() ();
+                                                                         |             }
+    0x0040a971 mov qword [rbx + 0x18], 0xffffffffffffffff                |             *((rbx + 0x18)) = 0xffffffffffffffff;
+                                                                         |         }
+    0x0040a979 mov dword [rbx + 0x170], 0xffffffff                       |         *((rbx + 0x170)) = 0xffffffff;
+    0x0040a983 mov rsi, qword [rbx + 0x178]                              |         
+    0x0040a98a mov rdi, rbx                                              |         
+    0x0040a98d call 0x408740                                             |         BloombergLP::balb::Sequence6::Sequence6(BloombergLP::bslma::Allocator*) (rbx, *((rbx + 0x178)));
+    0x0040a992 mov dword [rbx + 0x170], 0                                |         *((rbx + 0x170)) = 0;
+                                                                         |     }
+    0x0040a99c mov rax, rbx                                              |     rax = rbx;
+    0x0040a99f pop rbx                                                   |     
+    0x0040a9a0 ret                                                       |     return rax;
+                                                                         | }

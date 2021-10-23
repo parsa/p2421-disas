@@ -1,0 +1,40 @@
+    ; assembly                                                                                                       | /* r2dec pseudo code output */
+                                                                                                                     | /* bblb_schedulegenerationutil.t/none @ 0x4106e0 */
+                                                                                                                     | #include <stdint.h>
+                                                                                                                     |  
+    ; (fcn) method.BloombergLP::bdlt::PackedCalendar.addWeekendDays_BloombergLP::bdlt::DayOfWeekSet_const_ ()        | int64_t method_BloombergLP::bdlt::PackedCalendar_addWeekendDays_BloombergLP::bdlt::DayOfWeekSet_const_ (int64_t arg4, int64_t arg2, uint32_t arg1) {
+                                                                                                                     |     int64_t var_4h;
+                                                                                                                     |     rcx = arg4;
+                                                                                                                     |     rsi = arg2;
+                                                                                                                     |     rdi = arg1;
+                                                                                                                     |     /* BloombergLP::bdlt::PackedCalendar::addWeekendDays(BloombergLP::bdlt::DayOfWeekSet const&) */
+    0x004106e0 push r14                                                                                              |     
+    0x004106e2 push rbx                                                                                              |     
+    0x004106e3 push rax                                                                                              |     
+    0x004106e4 mov r14, rsi                                                                                          |     r14 = rsi;
+    0x004106e7 mov rax, qword [rdi + 8]                                                                              |     rax = *((rdi + 8));
+    0x004106eb cmp qword [rdi + 0x10], rax                                                                           |     
+                                                                                                                     |     if (*((rdi + 0x10)) != rax) {
+    0x004106ef je 0x4106f9                                                                                           |         
+    0x004106f1 mov cl, byte [r14]                                                                                    |         cl = *(r14);
+    0x004106f4 or byte [rax + 4], cl                                                                                 |         *((rax + 4)) |= cl;
+    0x004106f7 jmp 0x410729                                                                                          |         
+                                                                                                                     |     } else {
+    0x004106f9 mov rbx, rdi                                                                                          |         rbx = rdi;
+    0x004106fc add rbx, 8                                                                                            |         rbx += 8;
+    0x00410700 mov edi, 1                                                                                            |         edi = 1;
+    0x00410705 mov esi, 1                                                                                            |         esi = 1;
+    0x0041070a mov edx, 1                                                                                            |         
+    0x0041070f call 0x413e50                                                                                         |         eax = BloombergLP::bdlt::PosixDateImpUtil::ymdToSerial(int,int,int) (edi, esi, 1, rcx);
+    0x00410714 mov dword [rsp], eax                                                                                  |         *(rsp) = eax;
+    0x00410717 mov al, byte [r14]                                                                                    |         al = *(r14);
+    0x0041071a mov byte [rsp + 4], al                                                                                |         *((rsp + 4)) = al;
+    0x0041071e mov rsi, rsp                                                                                          |         
+    0x00410721 mov rdi, rbx                                                                                          |         
+    0x00410724 call 0x412e70                                                                                         |         bsl::vector<bsl::pair<BloombergLP::bdlt::Date,BloombergLP::bdlt::DayOfWeekSet>,bsl::allocator<bsl::pair<BloombergLP::bdlt::Date,BloombergLP::bdlt::DayOfWeekSet>>>::push_back(bsl::pair<BloombergLP::bdlt::Date,BloombergLP::bdlt::DayOfWeekSet>&&) (rbx, rsp);
+                                                                                                                     |     }
+    0x00410729 add rsp, 8                                                                                            |     
+    0x0041072d pop rbx                                                                                               |     
+    0x0041072e pop r14                                                                                               |     
+    0x00410730 ret                                                                                                   |     return rax;
+                                                                                                                     | }

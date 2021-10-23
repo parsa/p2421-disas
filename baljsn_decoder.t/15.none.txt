@@ -1,0 +1,145 @@
+    ; assembly                                                                   | /* r2dec pseudo code output */
+                                                                                 | /* baljsn_decoder.t/none @ 0x47ea00 */
+                                                                                 | #include <stdint.h>
+                                                                                 |  
+    ; (fcn) method.BloombergLP::balxml::MiniReader.advanceToNextNode__ ()        | int64_t method_BloombergLP::balxml::MiniReader_advanceToNextNode_ (int64_t arg1) {
+                                                                                 |     rdi = arg1;
+                                                                                 |     /* BloombergLP::balxml::MiniReader::advanceToNextNode() */
+    0x0047ea00 push rbx                                                          |     
+    0x0047ea01 mov rbx, rdi                                                      |     rbx = rdi;
+    0x0047ea04 mov rax, qword [rdi + 0x1c0]                                      |     rax = *((rdi + 0x1c0));
+    0x0047ea0b mov qword [rdi + 0x1c8], rax                                      |     *((rdi + 0x1c8)) = rax;
+    0x0047ea12 jmp 0x47ea39                                                      |     goto label_1;
+    0x0047ea20 mov rdi, rbx                                                      |     
+    0x0047ea23 call 0x47ec00                                                     |     BloombergLP::balxml::MiniReader::preAdvance() (rbx);
+                                                                                 | label_0:
+    0x0047ea28 mov rdi, rbx                                                      |     
+    0x0047ea2b call 0x47edb0                                                     |     eax = BloombergLP::balxml::MiniReader::scanOpenTag() (rbx);
+    0x0047ea30 cmp eax, 2                                                        |     
+                                                                                 |     if (eax != 2) {
+    0x0047ea33 jne 0x47eb0f                                                      |         goto label_2;
+                                                                                 |     }
+                                                                                 |     do {
+                                                                                 | label_1:
+    0x0047ea39 mov eax, dword [rbx + 0x10]                                       |         eax = *((rbx + 0x10));
+    0x0047ea3c cmp rax, 3                                                        |         
+                                                                                 |         if (rax > 3) {
+    0x0047ea40 ja 0x47eb1f                                                       |             goto label_3;
+                                                                                 |         }
+                                                                                 |         /* switch table (4 cases) at 0x61ca98 */
+    0x0047ea46 jmp qword [rax*8 + 0x61ca98]                                      |         
+    0x0047ea4d mov rax, qword [rbx + 0x1c0]                                      |         rax = *((rbx + 0x1c0));
+    0x0047ea54 cmp rax, qword [rbx + 0x1b8]                                      |         
+                                                                                 |         if (rax >= *((rbx + 0x1b8))) {
+    0x0047ea5b jb 0x47ea74                                                       |             
+    0x0047ea5d mov rdi, rbx                                                      |             
+    0x0047ea60 call 0x47d0e0                                                     |             eax = BloombergLP::balxml::MiniReader::readInput() (rbx);
+    0x0047ea65 test eax, eax                                                     |             
+                                                                                 |             if (eax == 0) {
+    0x0047ea67 je 0x47eb16                                                       |                 goto label_4;
+                                                                                 |             }
+    0x0047ea6d mov rax, qword [rbx + 0x1c0]                                      |             rax = *((rbx + 0x1c0));
+                                                                                 |         }
+    0x0047ea74 movsx ecx, byte [rax]                                             |         ecx = *(rax);
+    0x0047ea77 cmp ecx, 0x3c                                                     |         
+                                                                                 |         if (ecx == 0x3c) {
+    0x0047ea7a je 0x47eae0                                                       |             goto label_5;
+                                                                                 |         }
+    0x0047ea7c test ecx, ecx                                                     |         
+                                                                                 |         if (ecx == 0) {
+    0x0047ea7e jne 0x47eac7                                                      |             
+    0x0047ea80 jmp 0x47eb16                                                      |             goto label_4;
+    0x0047ea90 mov rdi, rbx                                                      |             
+    0x0047ea93 call 0x47ec00                                                     |             BloombergLP::balxml::MiniReader::preAdvance() (rbx);
+    0x0047ea98 mov rax, qword [rbx + 0x1c0]                                      |             rax = *((rbx + 0x1c0));
+    0x0047ea9f cmp rax, qword [rbx + 0x1b8]                                      |             
+                                                                                 |             if (rax >= *((rbx + 0x1b8))) {
+    0x0047eaa6 jb 0x47eabb                                                       |                 
+    0x0047eaa8 mov rdi, rbx                                                      |                 
+    0x0047eaab call 0x47d0e0                                                     |                 eax = BloombergLP::balxml::MiniReader::readInput() (rbx);
+    0x0047eab0 test eax, eax                                                     |                 
+                                                                                 |                 if (eax == 0) {
+    0x0047eab2 je 0x47eb16                                                       |                     goto label_4;
+                                                                                 |                 }
+    0x0047eab4 mov rax, qword [rbx + 0x1c0]                                      |                 rax = *((rbx + 0x1c0));
+                                                                                 |             }
+    0x0047eabb movsx ecx, byte [rax]                                             |             ecx = *(rax);
+    0x0047eabe cmp ecx, 0x3c                                                     |             
+                                                                                 |             if (ecx == 0x3c) {
+    0x0047eac1 je 0x47eae0                                                       |                 goto label_5;
+                                                                                 |             }
+    0x0047eac3 test ecx, ecx                                                     |             
+                                                                                 |             if (ecx == 0) {
+    0x0047eac5 je 0x47eb16                                                       |                 goto label_4;
+                                                                                 |             }
+                                                                                 |         }
+    0x0047eac7 mov rdi, rbx                                                      |         
+    0x0047eaca call 0x47f150                                                     |         eax = BloombergLP::balxml::MiniReader::scanText() (rbx);
+    0x0047eacf cmp eax, 2                                                        |         
+    0x0047ead2 je 0x47ea39                                                       |         
+                                                                                 |     } while (eax == 2);
+    0x0047ead8 jmp 0x47eb0f                                                      |     goto label_2;
+                                                                                 | label_5:
+    0x0047eae0 cmp rax, qword [rbx + 0x1b8]                                      |     
+                                                                                 |     if (rax < *((rbx + 0x1b8))) {
+    0x0047eae7 jb 0x47eb00                                                       |         goto label_6;
+                                                                                 |     }
+    0x0047eae9 mov rdi, rbx                                                      |     
+    0x0047eaec call 0x47d0e0                                                     |     eax = BloombergLP::balxml::MiniReader::readInput() (rbx);
+    0x0047eaf1 test eax, eax                                                     |     
+                                                                                 |     if (eax == 0) {
+    0x0047eaf3 je 0x47ea28                                                       |         goto label_0;
+                                                                                 |     }
+    0x0047eaf9 mov rax, qword [rbx + 0x1c0]                                      |     rax = *((rbx + 0x1c0));
+                                                                                 | label_6:
+    0x0047eb00 inc rax                                                           |     rax++;
+    0x0047eb03 mov qword [rbx + 0x1c0], rax                                      |     *((rbx + 0x1c0)) = rax;
+    0x0047eb0a jmp 0x47ea28                                                      |     goto label_0;
+                                                                                 | label_2:
+    0x0047eb0f cmp eax, 1                                                        |     
+                                                                                 |     if (eax != 1) {
+    0x0047eb12 je 0x47eb2e                                                       |         
+    0x0047eb14 jmp 0x47eb7c                                                      |         goto label_7;
+                                                                                 | label_4:
+    0x0047eb16 mov dword [rbx + 0x10], 3                                         |         *((rbx + 0x10)) = 3;
+    0x0047eb1d jmp 0x47eb2e                                                      |         goto label_8;
+                                                                                 | label_3:
+    0x0047eb1f mov eax, 0xffffffff                                               |         eax = 0xffffffff;
+    0x0047eb24 pop rbx                                                           |         
+    0x0047eb25 ret                                                               |         return rax;
+    0x0047eb26 mov rdi, rbx                                                      |         
+    0x0047eb29 call 0x47ec00                                                     |         BloombergLP::balxml::MiniReader::preAdvance() (rbx);
+                                                                                 |     }
+                                                                                 | label_8:
+    0x0047eb2e mov rax, qword [rbx + 0x380]                                      |     rax = *((rbx + 0x380));
+    0x0047eb35 test rax, rax                                                     |     
+                                                                                 |     if (rax != 0) {
+    0x0047eb38 je 0x47eb5f                                                       |         
+    0x0047eb3a imul rax, rax, 0x38                                               |         rax *= 0x38;
+    0x0047eb3e mov rcx, qword [rbx + 0x388]                                      |         rcx = *((rbx + 0x388));
+    0x0047eb45 lea rdx, [rax + rcx - 0x38]                                       |         rdx = rax + rcx - 0x38;
+    0x0047eb4a cmp qword [rax + rcx - 0x18], 0x17                                |         
+                                                                                 |         if (*((rax + rcx - 0x18)) != 0x17) {
+    0x0047eb50 je 0x47eb55                                                       |             
+    0x0047eb52 mov rdx, qword [rdx]                                              |             rdx = *(rdx);
+                                                                                 |         }
+    0x0047eb55 mov esi, 0x61cd4a                                                 |         esi = "No End Element tags for the Element";
+    0x0047eb5a mov rdi, rbx                                                      |         rdi = rbx;
+    0x0047eb5d jmp 0x47eb74                                                      |         
+                                                                                 |     } else {
+    0x0047eb5f mov eax, 1                                                        |         eax = 1;
+    0x0047eb64 test byte [rbx + 0x14], 2                                         |         
+                                                                                 |         if ((*((rbx + 0x14)) & 2) != 0) {
+    0x0047eb68 jne 0x47eb7c                                                      |             goto label_7;
+                                                                                 |         }
+    0x0047eb6a mov esi, 0x61cd6e                                                 |         esi = "Root Element not found";
+    0x0047eb6f mov rdi, rbx                                                      |         rdi = rbx;
+    0x0047eb72 xor edx, edx                                                      |         edx = 0;
+                                                                                 |     }
+    0x0047eb74 xor ecx, ecx                                                      |     ecx = 0;
+    0x0047eb76 pop rbx                                                           |     
+    0x0047eb77 jmp 0x47cb60                                                      |     void (*0x47cb60)() ();
+                                                                                 | label_7:
+    0x0047eb7c pop rbx                                                           |     
+    0x0047eb7d ret                                                               |     return rax;
+                                                                                 | }

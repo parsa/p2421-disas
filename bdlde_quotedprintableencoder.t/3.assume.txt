@@ -1,0 +1,48 @@
+    ; assembly                                                                                           | /* r2dec pseudo code output */
+                                                                                                         | /* bdlde_quotedprintableencoder.t/assume @ 0x41ecd0 */
+                                                                                                         | #include <stdint.h>
+                                                                                                         |  
+    ; (fcn) method.BloombergLP::bdlde::QuotedPrintableEncoder.appendAsHex_char__char__bool_ ()           | uint64_t method_BloombergLP::bdlde::QuotedPrintableEncoder_appendAsHex_char_char_bool_ (int64_t arg4, int64_t arg3, int64_t arg2, int64_t arg1) {
+                                                                                                         |     rcx = arg4;
+                                                                                                         |     rdx = arg3;
+                                                                                                         |     rsi = arg2;
+                                                                                                         |     rdi = arg1;
+                                                                                                         |     /* BloombergLP::bdlde::QuotedPrintableEncoder::appendAsHex(char*, char, bool) */
+    0x0041ecd0 movzx eax, dl                                                                             |     eax = (int32_t) dl;
+    0x0041ecd3 and edx, 0xf                                                                              |     edx &= 0xf;
+    0x0041ecd6 mov dl, byte [rdx + 0x44fde5]                                                             |     dl = *((rdx + str.0123456789ABCDEF));
+    0x0041ecdc mov byte [rdi + 0x20], dl                                                                 |     *((rdi + 0x20)) = dl;
+    0x0041ecdf shr rax, 4                                                                                |     rax >>= 4;
+    0x0041ece3 mov al, byte [rax + 0x44fde5]                                                             |     al = *((rax + str.0123456789ABCDEF));
+    0x0041ece9 mov dword [rdi + 0x28], 2                                                                 |     *((rdi + 0x28)) = 2;
+    0x0041ecf0 mov byte [rdi + 0x21], al                                                                 |     *((rdi + 0x21)) = al;
+    0x0041ecf3 mov eax, dword [rdi + 4]                                                                  |     eax = *((rdi + 4));
+    0x0041ecf6 mov edx, dword [rdi + 8]                                                                  |     edx = *((rdi + 8));
+    0x0041ecf9 sub edx, dword [rdi + 0x2c]                                                               |     edx -= *((rdi + 0x2c));
+    0x0041ecfc lea eax, [rcx + rax - 3]                                                                  |     eax = rcx + rax - 3;
+    0x0041ed00 cmp edx, eax                                                                              |     
+                                                                                                         |     if (edx < eax) {
+    0x0041ed02 jge 0x41ed0f                                                                              |         
+    0x0041ed04 mov byte [rsi], 0x3d                                                                      |         *(rsi) = 0x3d;
+    0x0041ed07 inc dword [rdi + 8]                                                                       |         *((rdi + 8))++;
+    0x0041ed0a mov byte [rdi + 0x31], 0                                                                  |         *((rdi + 0x31)) = 0;
+    0x0041ed0e ret                                                                                       |         return rax;
+                                                                                                         |     }
+    0x0041ed0f mov dword [rdi + 0x28], 3                                                                 |     *((rdi + 0x28)) = 3;
+    0x0041ed16 mov byte [rdi + 0x22], 0x3d                                                               |     *((rdi + 0x22)) = 0x3d;
+    0x0041ed1a mov byte [rsi], 0x3d                                                                      |     *(rsi) = 0x3d;
+    0x0041ed1d inc dword [rdi + 8]                                                                       |     *((rdi + 8))++;
+    0x0041ed20 movsxd rax, dword [rdi + 0x28]                                                            |     rax = *((rdi + 0x28));
+    0x0041ed24 lea ecx, [rax + 1]                                                                        |     ecx = rax + 1;
+    0x0041ed27 mov dword [rdi + 0x28], ecx                                                               |     *((rdi + 0x28)) = ecx;
+    0x0041ed2a mov byte [rdi + rax + 0x20], 0xa                                                          |     *((rdi + rax + 0x20)) = 0xa;
+    0x0041ed2f movsxd rax, dword [rdi + 0x28]                                                            |     rax = *((rdi + 0x28));
+    0x0041ed33 lea ecx, [rax + 1]                                                                        |     ecx = rax + 1;
+    0x0041ed36 mov dword [rdi + 0x28], ecx                                                               |     *((rdi + 0x28)) = ecx;
+    0x0041ed39 mov byte [rdi + rax + 0x20], 0xd                                                          |     *((rdi + rax + 0x20)) = 0xd;
+    0x0041ed3e mov eax, dword [rdi + 8]                                                                  |     eax = *((rdi + 8));
+    0x0041ed41 add eax, 2                                                                                |     eax += 2;
+    0x0041ed44 mov dword [rdi + 0x2c], eax                                                               |     *((rdi + 0x2c)) = eax;
+    0x0041ed47 mov byte [rdi + 0x31], 0                                                                  |     *((rdi + 0x31)) = 0;
+    0x0041ed4b ret                                                                                       |     return rax;
+                                                                                                         | }

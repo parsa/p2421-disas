@@ -1,0 +1,96 @@
+    ; assembly                                                                           | /* r2dec pseudo code output */
+                                                                                         | /* ball_asyncfileobserver.t/none @ 0x42e420 */
+                                                                                         | #include <stdint.h>
+                                                                                         |  
+    ; (fcn) method.BloombergLP::ball::AsyncFileObserver.startPublicationThread__ ()      | int64_t method_BloombergLP::ball::AsyncFileObserver_startPublicationThread_ (int64_t arg1) {
+                                                                                         |     int64_t var_8h;
+                                                                                         |     int64_t var_20h;
+                                                                                         |     int64_t var_38h;
+                                                                                         |     uint32_t var_40h;
+                                                                                         |     int64_t var_48h;
+                                                                                         |     rdi = arg1;
+                                                                                         |     /* BloombergLP::ball::AsyncFileObserver::startPublicationThread() */
+    0x0042e420 push rbp                                                                  |     
+    0x0042e421 push r14                                                                  |     
+    0x0042e423 push rbx                                                                  |     
+    0x0042e424 sub rsp, 0x50                                                             |     
+    0x0042e428 mov rbx, rdi                                                              |     rbx = rdi;
+    0x0042e42b lea r14, [rdi + 0x6c0]                                                    |     r14 = rdi + 0x6c0;
+    0x0042e432 mov rdi, r14                                                              |     rdi = r14;
+    0x0042e435 call 0x4079c0                                                             |     pthread_mutex_lock ();
+    0x0042e43a mov rax, qword [rip + 0x85d17]                                            |     rax = BloombergLP::bslmt::ThreadUtilImpl<BloombergLP::bslmt::Platform::PosixThreads>::INVALID_HANDLE;
+    0x0042e441 xor ebp, ebp                                                              |     ebp = 0;
+    0x0042e443 cmp rax, qword [rbx + 0x4e0]                                              |     
+                                                                                         |     if (rax != *((rbx + 0x4e0))) {
+    0x0042e44a jne 0x42e524                                                              |         goto label_1;
+                                                                                         |     }
+    0x0042e450 xor eax, eax                                                              |     eax = 0;
+    0x0042e452 xchg dword [rbx + 0x658], eax                                             |     tmp_0 = rbx + 0x658;
+                                                                                         |     rbx + 0x658 = eax;
+                                                                                         |     eax = tmp_0;
+    0x0042e458 jmp 0x42e465                                                              |     
+                                                                                         |     while (rax < rdx) {
+    0x0042e460 call 0x407060                                                             |         sched_yield ();
+    0x0042e465 mov rcx, qword [rbx + 0x560]                                              |         rcx = *((rbx + 0x560));
+    0x0042e46c test ecx, 0x1000000                                                       |         
+                                                                                         |         if ((ecx & 0x1000000) == 0) {
+    0x0042e472 je 0x42e4be                                                               |             goto label_2;
+                                                                                         |         }
+                                                                                         | label_0:
+    0x0042e474 mov rax, rcx                                                              |         rax = rcx;
+    0x0042e477 sar rax, 0x1c                                                             |         rax >>= 0x1c;
+    0x0042e47b mov edx, ecx                                                              |         edx = ecx;
+    0x0042e47d and edx, 0xffffff                                                         |         edx &= 0xffffff;
+    0x0042e483 cmp rax, rdx                                                              |         
+    0x0042e486 jl 0x42e460                                                               |         
+                                                                                         |     }
+    0x0042e488 mov rax, rcx                                                              |     rax = rcx;
+    0x0042e48b and rax, 0xfffffffff0ffffff                                               |     rax &= 0xfffffffff0ffffff;
+    0x0042e491 lea edx, [rcx + 0x1000000]                                                |     edx = rcx + 0x1000000;
+    0x0042e497 and edx, 0xf000000                                                        |     edx &= 0xf000000;
+    0x0042e49d or rdx, rax                                                               |     rdx |= rax;
+    0x0042e4a0 mov rax, rcx                                                              |     rax = rcx;
+    0x0042e4a3 lock cmpxchg qword [rbx + 0x560], rdx                                     |     __asm ("lock cmpxchg qword [rbx + 0x560], rdx");
+    0x0042e4ac cmp rcx, rax                                                              |     
+                                                                                         |     if (rcx != rax) {
+    0x0042e4af cmovne rdx, rax                                                           |         rdx = rax;
+                                                                                         |     }
+    0x0042e4b3 mov rcx, rdx                                                              |     rcx = rdx;
+    0x0042e4b6 test ecx, 0x1000000                                                       |     
+                                                                                         |     if ((ecx & 0x1000000) != 0) {
+    0x0042e4bc jne 0x42e474                                                              |         goto label_0;
+                                                                                         |     }
+                                                                                         | label_2:
+    0x0042e4be lea rdi, [rsp + 8]                                                        |     
+    0x0042e4c3 call 0x46dc10                                                             |     BloombergLP::bslmt::ThreadAttributes::ThreadAttributes() (rsp + 8);
+    0x0042e4c8 lea rdi, [rsp + 0x20]                                                     |     
+    0x0042e4cd mov rbp, qword [rsp + 0x38]                                               |     rbp = *((rsp + 0x38));
+    0x0042e4d2 mov qword [rsp + 0x38], 0                                                 |     *((rsp + 0x38)) = 0;
+    0x0042e4db mov esi, 0x497826                                                         |     
+    0x0042e4e0 mov edx, 0xd                                                              |     
+    0x0042e4e5 mov ecx, 0x497834                                                         |     
+    0x0042e4ea call 0x471c30                                                             |     bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>::privateAppend(char const*,unsigned long,char const*) (rsp + 0x20, "asyncobserver", 0xd, "string<>::operator=(basic_string_view&): string too long");
+    0x0042e4ef lea rdi, [rbx + 0x4e0]                                                    |     
+    0x0042e4f6 add rbx, 0x670                                                            |     rbx += 0x670;
+    0x0042e4fd lea rsi, [rsp + 8]                                                        |     
+    0x0042e502 mov rdx, rbx                                                              |     
+    0x0042e505 call 0x42f050                                                             |     eax = intBloombergLP::bslmt::ThreadUtil::create<bsl::function<void()>>(unsigned long*,BloombergLP::bslmt::ThreadAttributesconst&,bsl::function<void()>const&) (rbx + 0x4e0, rsp + 8, rbx);
+    0x0042e50a mov ebp, eax                                                              |     
+    0x0042e50c cmp qword [rsp + 0x40], 0x17                                              |     
+                                                                                         |     if (*((rsp + 0x40)) != 0x17) {
+    0x0042e512 je 0x42e524                                                               |         
+    0x0042e514 mov rsi, qword [rsp + 0x20]                                               |         rsi = *((rsp + 0x20));
+    0x0042e519 mov rdi, qword [rsp + 0x48]                                               |         rdi = *((rsp + 0x48));
+    0x0042e51e mov rax, qword [rdi]                                                      |         rax = *(rdi);
+    0x0042e521 call qword [rax + 0x18]                                                   |         uint64_t (*rax + 0x18)() ();
+                                                                                         |     }
+                                                                                         | label_1:
+    0x0042e524 mov rdi, r14                                                              |     rdi = r14;
+    0x0042e527 call 0x407ae0                                                             |     pthread_mutex_unlock ();
+    0x0042e52c mov eax, ebp                                                              |     eax = ebp;
+    0x0042e52e add rsp, 0x50                                                             |     
+    0x0042e532 pop rbx                                                                   |     
+    0x0042e533 pop r14                                                                   |     
+    0x0042e535 pop rbp                                                                   |     
+    0x0042e536 ret                                                                       |     return rax;
+                                                                                         | }

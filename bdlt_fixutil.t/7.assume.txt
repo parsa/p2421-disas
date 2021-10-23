@@ -1,0 +1,212 @@
+    ; assembly                                                                                               | /* r2dec pseudo code output */
+                                                                                                             | /* bdlt_fixutil.t/assume @ 0x43c080 */
+                                                                                                             | #include <stdint.h>
+                                                                                                             |  
+    ; (fcn) method.BloombergLP::bdlt::FixUtil.parse_BloombergLP::bdlt::Datetime__char_const__int_ ()         | int64_t method_BloombergLP::bdlt::FixUtil_parse_BloombergLP::bdlt::Datetime_char_const_int_ (int64_t arg1) {
+                                                                                                             |     int64_t var_8h;
+                                                                                                             |     signed int64_t var_10h;
+                                                                                                             |     char * var_18h;
+                                                                                                             |     char * var_20h;
+                                                                                                             |     int64_t var_28h;
+                                                                                                             |     char * var_30h;
+                                                                                                             |     int64_t var_38h;
+                                                                                                             |     rdi = arg1;
+                                                                                                             |     /* BloombergLP::bdlt::FixUtil::parse(BloombergLP::bdlt::Datetime*, char const*, int) */
+    0x0043c080 push r15                                                                                      |     
+    0x0043c082 push r14                                                                                      |     
+    0x0043c084 push r13                                                                                      |     
+    0x0043c086 push r12                                                                                      |     
+    0x0043c088 push rbx                                                                                      |     
+    0x0043c089 sub rsp, 0x40                                                                                 |     
+    0x0043c08d mov r14, rdi                                                                                  |     r14 = rdi;
+    0x0043c090 movabs rax, 0x800000141dd76000                                                                |     rax = 0x800000141dd76000;
+    0x0043c09a mov qword [rsp + 8], rax                                                                      |     *((rsp + 8)) = rax;
+    0x0043c09f mov dword [rsp + 0x10], 0                                                                     |     *((rsp + 0x10)) = 0;
+    0x0043c0a7 lea rdi, [rsp + 8]                                                                            |     
+    0x0043c0ac call 0x43c3a0                                                                                 |     eax = BloombergLP::bdlt::FixUtil::parse(BloombergLP::bdlt::DatetimeTz*,char const*,int) (rsp + 8, rsi, rdx);
+    0x0043c0b1 test eax, eax                                                                                 |     
+                                                                                                             |     if (eax != 0) {
+    0x0043c0b3 jne 0x43c25b                                                                                  |         goto label_2;
+                                                                                                             |     }
+    0x0043c0b9 movabs r15, 0x8000000000000000                                                                |     r15 = 0x8000000000000000;
+    0x0043c0c3 movabs r12, 0x141dd76000                                                                      |     r12 = 0x141dd76000;
+    0x0043c0cd cmp dword [rsp + 0x10], 0                                                                     |     
+                                                                                                             |     if (*((rsp + 0x10)) <= 0) {
+    0x0043c0d2 jle 0x43c147                                                                                  |         goto label_3;
+                                                                                                             |     }
+    0x0043c0d4 mov edi, 1                                                                                    |     edi = 1;
+    0x0043c0d9 mov esi, 1                                                                                    |     esi = 1;
+    0x0043c0de mov edx, 1                                                                                    |     
+    0x0043c0e3 call 0x43cc20                                                                                 |     eax = BloombergLP::bdlt::PosixDateImpUtil::ymdToSerial(int,int,int) (edi, esi, 1, rcx);
+    0x0043c0e8 dec eax                                                                                       |     eax--;
+    0x0043c0ea movsxd rcx, dword [rsp + 0x10]                                                                |     rcx = *((rsp + 0x10));
+    0x0043c0ef and eax, 0x3ffffff                                                                            |     eax &= 0x3ffffff;
+    0x0043c0f4 imul rax, r12                                                                                 |     rax *= r12;
+    0x0043c0f8 imul rbx, rcx, 0x3938700                                                                      |     rbx = rcx * 0x3938700;
+    0x0043c0ff add rbx, rax                                                                                  |     rbx += rax;
+    0x0043c102 movabs rcx, 0x32e73fb956a1b897                                                                |     rcx = 0x32e73fb956a1b897;
+    0x0043c10c mov rax, rbx                                                                                  |     rax = rbx;
+    0x0043c10f mul rcx                                                                                       |     rdx:rax = rax * rcx;
+    0x0043c112 shr rdx, 0x22                                                                                 |     rdx >>= 0x22;
+    0x0043c116 mov rax, rdx                                                                                  |     rax = rdx;
+    0x0043c119 shl rax, 0x25                                                                                 |     rax <<= 0x25;
+    0x0043c11d imul rdx, r12                                                                                 |     rdx *= r12;
+    0x0043c121 sub rbx, rdx                                                                                  |     rbx -= rdx;
+    0x0043c124 or rbx, rax                                                                                   |     rbx |= rax;
+    0x0043c127 or rbx, r15                                                                                   |     rbx |= r15;
+    0x0043c12a mov r13, qword [rsp + 8]                                                                      |     r13 = *((rsp + 8));
+    0x0043c12f test r13, r13                                                                                 |     
+    0x0043c132 jns 0x43c269                                                                                  |     
+                                                                                                             |     while (1) {
+    0x0043c138 mov eax, 0xffffffff                                                                           |         eax = 0xffffffff;
+    0x0043c13d cmp rbx, r13                                                                                  |         
+                                                                                                             |         if (rbx > r13) {
+    0x0043c140 jbe 0x43c1c0                                                                                  |             
+    0x0043c142 jmp 0x43c25b                                                                                  |             goto label_2;
+                                                                                                             |             if (rbx >= r13) {
+                                                                                                             | label_3:
+    0x0043c147 jns 0x43c1c0                                                                                  |                 goto label_4;
+                                                                                                             |             }
+    0x0043c149 mov edi, 0x270f                                                                               |             
+    0x0043c14e mov esi, 0xc                                                                                  |             
+    0x0043c153 mov edx, 0x1f                                                                                 |             
+    0x0043c158 call 0x43cc20                                                                                 |             eax = BloombergLP::bdlt::PosixDateImpUtil::ymdToSerial(int,int,int) (0x270f, 0xc, 0x1f, rcx);
+    0x0043c15d movsxd rcx, dword [rsp + 0x10]                                                                |             rcx = *((rsp + 0x10));
+    0x0043c162 dec eax                                                                                       |             eax--;
+    0x0043c164 and eax, 0x3ffffff                                                                            |             eax &= 0x3ffffff;
+    0x0043c169 imul rax, r12                                                                                 |             rax *= r12;
+    0x0043c16d imul rcx, rcx, 0x3938700                                                                      |             rcx *= 0x3938700;
+    0x0043c174 add rcx, r12                                                                                  |             rcx += r12;
+    0x0043c177 lea rbx, [rax + rcx - 1]                                                                      |             rbx = rax + rcx - 1;
+    0x0043c17c movabs rcx, 0x32e73fb956a1b897                                                                |             rcx = 0x32e73fb956a1b897;
+    0x0043c186 mov rax, rbx                                                                                  |             rax = rbx;
+    0x0043c189 mul rcx                                                                                       |             rdx:rax = rax * rcx;
+    0x0043c18c shr rdx, 0x22                                                                                 |             rdx >>= 0x22;
+    0x0043c190 mov rax, rdx                                                                                  |             rax = rdx;
+    0x0043c193 shl rax, 0x25                                                                                 |             rax <<= 0x25;
+    0x0043c197 imul rdx, r12                                                                                 |             rdx *= r12;
+    0x0043c19b sub rbx, rdx                                                                                  |             rbx -= rdx;
+    0x0043c19e or rbx, rax                                                                                   |             rbx |= rax;
+    0x0043c1a1 or rbx, r15                                                                                   |             rbx |= r15;
+    0x0043c1a4 mov r13, qword [rsp + 8]                                                                      |             r13 = *((rsp + 8));
+    0x0043c1a9 test r13, r13                                                                                 |             
+                                                                                                             |             if (r13 >= 0) {
+    0x0043c1ac jns 0x43c333                                                                                  |                 goto label_5;
+                                                                                                             |             }
+                                                                                                             | label_1:
+    0x0043c1b2 mov eax, 0xffffffff                                                                           |             eax = 0xffffffff;
+    0x0043c1b7 cmp rbx, r13                                                                                  |             
+                                                                                                             |             if (rbx < r13) {
+    0x0043c1ba jb 0x43c25b                                                                                   |                 goto label_2;
+                                                                                                             |             }
+                                                                                                             |         }
+                                                                                                             | label_4:
+    0x0043c1c0 mov rbx, qword [rsp + 8]                                                                      |         rbx = *((rsp + 8));
+    0x0043c1c5 test rbx, rbx                                                                                 |         
+                                                                                                             |         if (rbx >= 0) {
+    0x0043c1c8 jns 0x43c2ce                                                                                  |             goto label_6;
+                                                                                                             |         }
+                                                                                                             | label_0:
+    0x0043c1ce movsxd rax, dword [rsp + 0x10]                                                                |         rax = *((rsp + 0x10));
+    0x0043c1d3 test rax, rax                                                                                 |         
+                                                                                                             |         if (rax != 0) {
+    0x0043c1d6 je 0x43c256                                                                                   |             
+    0x0043c1d8 neg rax                                                                                       |             rax = -rax;
+    0x0043c1db movabs rcx, 0x1ffffffc00                                                                      |             rcx = 0x1ffffffc00;
+    0x0043c1e5 mov rdx, rbx                                                                                  |             rdx = rbx;
+    0x0043c1e8 and rdx, rcx                                                                                  |             rdx &= rcx;
+    0x0043c1eb movabs rsi, 0xffffffebe228a000                                                                |             rsi = 0xffffffebe228a000;
+    0x0043c1f5 add rsi, rdx                                                                                  |             rsi += rdx;
+    0x0043c1f8 shr rsi, 0xa                                                                                  |             rsi >>= 0xa;
+    0x0043c1fc or rcx, 0x3ff                                                                                 |             rcx |= 0x3ff;
+    0x0043c203 and rcx, rbx                                                                                  |             rcx &= rbx;
+    0x0043c206 shr rbx, 0x25                                                                                 |             rbx >>= 0x25;
+    0x0043c20a and ebx, 0x3ffffff                                                                            |             ebx &= 0x3ffffff;
+    0x0043c210 imul rbx, r12                                                                                 |             rbx *= r12;
+    0x0043c214 xor edx, edx                                                                                  |             edx = 0;
+    0x0043c216 cmp rsi, 0x35a4e9                                                                             |             
+                                                                                                             |             if (rsi >= 0x35a4e9) {
+    0x0043c21d cmovae rdx, rcx                                                                               |                 rdx = rcx;
+                                                                                                             |             }
+    0x0043c221 add rdx, rbx                                                                                  |             rdx += rbx;
+    0x0043c224 imul rbx, rax, 0x3938700                                                                      |             rbx = rax * 0x3938700;
+    0x0043c22b add rbx, rdx                                                                                  |             rbx += rdx;
+    0x0043c22e movabs rcx, 0x32e73fb956a1b897                                                                |             rcx = 0x32e73fb956a1b897;
+    0x0043c238 mov rax, rbx                                                                                  |             rax = rbx;
+    0x0043c23b mul rcx                                                                                       |             rdx:rax = rax * rcx;
+    0x0043c23e shr rdx, 0x22                                                                                 |             rdx >>= 0x22;
+    0x0043c242 mov rax, rdx                                                                                  |             rax = rdx;
+    0x0043c245 shl rax, 0x25                                                                                 |             rax <<= 0x25;
+    0x0043c249 imul rdx, r12                                                                                 |             rdx *= r12;
+    0x0043c24d sub rbx, rdx                                                                                  |             rbx -= rdx;
+    0x0043c250 or rbx, rax                                                                                   |             rbx |= rax;
+    0x0043c253 or rbx, r15                                                                                   |             rbx |= r15;
+                                                                                                             |         }
+    0x0043c256 mov qword [r14], rbx                                                                          |         *(r14) = rbx;
+    0x0043c259 xor eax, eax                                                                                  |         eax = 0;
+                                                                                                             | label_2:
+    0x0043c25b add rsp, 0x40                                                                                 |         
+    0x0043c25f pop rbx                                                                                       |         
+    0x0043c260 pop r12                                                                                       |         
+    0x0043c262 pop r13                                                                                       |         
+    0x0043c264 pop r14                                                                                       |         
+    0x0043c266 pop r15                                                                                       |         
+    0x0043c268 ret                                                                                           |         return rax;
+    0x0043c269 mov edi, 0x678b18                                                                             |         
+    0x0043c26e call 0x440850                                                                                 |         eax = BloombergLP::bsls::Review::updateCount(BloombergLP::bsls::Atomic_TypeTraits<BloombergLP::bsls::AtomicOperations_ALL_ALL_ClangIntrinsics>::Int*) (method.BloombergLP::bdlt::Datetime.validateAndTraceLogRepresentation___const::lambda__1::operator_____const::count);
+    0x0043c273 mov qword [rsp + 0x18], 0x451c60                                                              |         *((rsp + 0x18)) = "detected invalid 'bdlt::Datetime'; see TEAM 579660115";
+    0x0043c27c mov qword [rsp + 0x20], 0x451c96                                                              |         *((rsp + 0x20)) = "/home/parsa/experiments/assumptions/crush/ccm-assume/groups/bdl/bdlt/bdlt_datetime.h";
+    0x0043c285 mov dword [rsp + 0x28], 0x466                                                                 |         *((rsp + 0x28)) = 0x466;
+    0x0043c28d mov qword [rsp + 0x30], 0x469f9a                                                              |         *((rsp + 0x30)) = "R-INV";
+    0x0043c296 mov dword [rsp + 0x38], eax                                                                   |         *((rsp + 0x38)) = eax;
+    0x0043c29a lea rdi, [rsp + 0x18]                                                                         |         rdi = rsp + 0x18;
+    0x0043c29f call 0x440870                                                                                 |         BloombergLP::bsls::Review::invokeHandler(BloombergLP::bsls::ReviewViolationconst&) ();
+    0x0043c2a4 mov rax, r13                                                                                  |         rax = r13;
+    0x0043c2a7 shr rax, 0x20                                                                                 |         rax >>= 0x20;
+    0x0043c2ab shl r13, 0x25                                                                                 |         r13 <<= 0x25;
+    0x0043c2af movabs rcx, 0x7fffffe000000000                                                                |         rcx = 0x7fffffe000000000;
+    0x0043c2b9 add rcx, r13                                                                                  |         rcx += r13;
+    0x0043c2bc imul r13, rax, 0x3e8                                                                          |         r13 = rax * 0x3e8;
+    0x0043c2c3 or r13, rcx                                                                                   |         r13 |= rcx;
+    0x0043c2c6 or r13, r15                                                                                   |         r13 |= r15;
+    0x0043c2c9 jmp 0x43c138                                                                                  |         
+                                                                                                             |     }
+                                                                                                             | label_6:
+    0x0043c2ce mov edi, 0x678b18                                                                             |     
+    0x0043c2d3 call 0x440850                                                                                 |     eax = BloombergLP::bsls::Review::updateCount(BloombergLP::bsls::Atomic_TypeTraits<BloombergLP::bsls::AtomicOperations_ALL_ALL_ClangIntrinsics>::Int*) (method.BloombergLP::bdlt::Datetime.validateAndTraceLogRepresentation___const::lambda__1::operator_____const::count);
+    0x0043c2d8 mov qword [rsp + 0x18], 0x451c60                                                              |     *((rsp + 0x18)) = "detected invalid 'bdlt::Datetime'; see TEAM 579660115";
+    0x0043c2e1 mov qword [rsp + 0x20], 0x451c96                                                              |     *((rsp + 0x20)) = "/home/parsa/experiments/assumptions/crush/ccm-assume/groups/bdl/bdlt/bdlt_datetime.h";
+    0x0043c2ea mov dword [rsp + 0x28], 0x466                                                                 |     *((rsp + 0x28)) = 0x466;
+    0x0043c2f2 mov qword [rsp + 0x30], 0x469f9a                                                              |     *((rsp + 0x30)) = "R-INV";
+    0x0043c2fb mov dword [rsp + 0x38], eax                                                                   |     *((rsp + 0x38)) = eax;
+    0x0043c2ff lea rdi, [rsp + 0x18]                                                                         |     rdi = rsp + 0x18;
+    0x0043c304 call 0x440870                                                                                 |     BloombergLP::bsls::Review::invokeHandler(BloombergLP::bsls::ReviewViolationconst&) ();
+    0x0043c309 mov rax, rbx                                                                                  |     rax = rbx;
+    0x0043c30c shr rax, 0x20                                                                                 |     rax >>= 0x20;
+    0x0043c310 shl rbx, 0x25                                                                                 |     rbx <<= 0x25;
+    0x0043c314 movabs rcx, 0x7fffffe000000000                                                                |     rcx = 0x7fffffe000000000;
+    0x0043c31e add rcx, rbx                                                                                  |     rcx += rbx;
+    0x0043c321 imul rbx, rax, 0x3e8                                                                          |     rbx = rax * 0x3e8;
+    0x0043c328 or rbx, rcx                                                                                   |     rbx |= rcx;
+    0x0043c32b or rbx, r15                                                                                   |     rbx |= r15;
+    0x0043c32e jmp 0x43c1ce                                                                                  |     goto label_0;
+                                                                                                             | label_5:
+    0x0043c333 mov edi, 0x678b18                                                                             |     
+    0x0043c338 call 0x440850                                                                                 |     eax = BloombergLP::bsls::Review::updateCount(BloombergLP::bsls::Atomic_TypeTraits<BloombergLP::bsls::AtomicOperations_ALL_ALL_ClangIntrinsics>::Int*) (method.BloombergLP::bdlt::Datetime.validateAndTraceLogRepresentation___const::lambda__1::operator_____const::count);
+    0x0043c33d mov qword [rsp + 0x18], 0x451c60                                                              |     *((rsp + 0x18)) = "detected invalid 'bdlt::Datetime'; see TEAM 579660115";
+    0x0043c346 mov qword [rsp + 0x20], 0x451c96                                                              |     *((rsp + 0x20)) = "/home/parsa/experiments/assumptions/crush/ccm-assume/groups/bdl/bdlt/bdlt_datetime.h";
+    0x0043c34f mov dword [rsp + 0x28], 0x466                                                                 |     *((rsp + 0x28)) = 0x466;
+    0x0043c357 mov qword [rsp + 0x30], 0x469f9a                                                              |     *((rsp + 0x30)) = "R-INV";
+    0x0043c360 mov dword [rsp + 0x38], eax                                                                   |     *((rsp + 0x38)) = eax;
+    0x0043c364 lea rdi, [rsp + 0x18]                                                                         |     rdi = rsp + 0x18;
+    0x0043c369 call 0x440870                                                                                 |     BloombergLP::bsls::Review::invokeHandler(BloombergLP::bsls::ReviewViolationconst&) ();
+    0x0043c36e mov rax, r13                                                                                  |     rax = r13;
+    0x0043c371 shr rax, 0x20                                                                                 |     rax >>= 0x20;
+    0x0043c375 shl r13, 0x25                                                                                 |     r13 <<= 0x25;
+    0x0043c379 movabs rcx, 0x7fffffe000000000                                                                |     rcx = 0x7fffffe000000000;
+    0x0043c383 add rcx, r13                                                                                  |     rcx += r13;
+    0x0043c386 imul r13, rax, 0x3e8                                                                          |     r13 = rax * 0x3e8;
+    0x0043c38d or r13, rcx                                                                                   |     r13 |= rcx;
+    0x0043c390 or r13, r15                                                                                   |     r13 |= r15;
+    0x0043c393 jmp 0x43c1b2                                                                                  |     goto label_1;
+                                                                                                             | }

@@ -1,0 +1,46 @@
+    ; assembly                                                                                                   | /* r2dec pseudo code output */
+                                                                                                                 | /* bdlmt_throttle.t/none @ 0x404dc0 */
+                                                                                                                 | #include <stdint.h>
+                                                                                                                 |  
+    ; (fcn) method.Case_Usage.reportError_std::__1::basic_ostream_char__std::__1::char_traits_char____ ()        | int32_t method_Case_Usage_reportError_std::_1::basic_ostream_char_std::_1::char_traits_char_ (int64_t arg1) {
+                                                                                                                 |     int64_t var_8h;
+                                                                                                                 |     rdi = arg1;
+                                                                                                                 |     /* Case_Usage::reportError(std::__1::basic_ostream<char, std::__1::char_traits<char> >&) */
+    0x00404dc0 push rbx                                                                                          |     
+    0x00404dc1 sub rsp, 0x10                                                                                     |     
+    0x00404dc5 mov rbx, rdi                                                                                      |     rbx = rdi;
+    0x00404dc8 mov eax, dword [rip + 0x252756]                                                                   |     eax = *(0x00657524);
+    0x00404dce test eax, eax                                                                                     |     
+                                                                                                                 |     if (eax != 0) {
+    0x00404dd0 je 0x404dde                                                                                       |         
+    0x00404dd2 cmp eax, 1                                                                                        |         
+                                                                                                                 |         if (eax != 1) {
+    0x00404dd5 jne 0x404de5                                                                                      |             goto label_0;
+                                                                                                                 |         }
+    0x00404dd7 call 0x4168b0                                                                                     |         BloombergLP::bsls::SystemTime::nowMonotonicClock() ();
+    0x00404ddc jmp 0x404de3                                                                                      |         
+                                                                                                                 |     } else {
+    0x00404dde call 0x416940                                                                                     |         eax = BloombergLP::bsls::SystemTime::nowRealtimeClock() ();
+                                                                                                                 |     }
+    0x00404de3 jmp 0x404de9                                                                                      |     goto label_1;
+                                                                                                                 | label_0:
+    0x00404de5 xor edx, edx                                                                                      |     edx = 0;
+    0x00404de7 xor eax, eax                                                                                      |     eax = 0;
+                                                                                                                 | label_1:
+    0x00404de9 mov qword [rsp], rax                                                                              |     *(rsp) = rax;
+    0x00404ded mov dword [rsp + 8], edx                                                                          |     *((rsp + 8)) = edx;
+    0x00404df1 mov rsi, rsp                                                                                      |     
+    0x00404df4 mov edi, 0x657508                                                                                 |     
+    0x00404df9 call 0x413300                                                                                     |     al = BloombergLP::bdlmt::Throttle::requestPermission(BloombergLP::bsls::TimeIntervalconst&) (method.Case_Usage.reportError_std::__1::basic_ostream_char__std::__1::char_traits_char____::throttle, rsp);
+    0x00404dfe test al, al                                                                                       |     
+                                                                                                                 |     if (al != 0) {
+    0x00404e00 je 0x404e14                                                                                       |         
+    0x00404e02 mov esi, 0x43dae5                                                                                 |         
+    0x00404e07 mov edx, 0x34                                                                                     |         
+    0x00404e0c mov rdi, rbx                                                                                      |         
+    0x00404e0f call 0x412cf0                                                                                     |         std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rbx, "Help!  I'm being held prisoner in a microprocessor!\n", 0x34);
+                                                                                                                 |     }
+    0x00404e14 add rsp, 0x10                                                                                     |     
+    0x00404e18 pop rbx                                                                                           |     
+    0x00404e19 ret                                                                                               |     return eax;
+                                                                                                                 | }

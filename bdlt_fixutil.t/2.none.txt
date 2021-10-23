@@ -1,0 +1,58 @@
+    ; assembly                                                                                                                                               | /* r2dec pseudo code output */
+                                                                                                                                                             | /* bdlt_fixutil.t/none @ 0x43ab50 */
+                                                                                                                                                             | #include <stdint.h>
+                                                                                                                                                             |  
+    ; (fcn) method.BloombergLP::bdlt::FixUtil.generate_char__int__BloombergLP::bdlt::DateTz_const__BloombergLP::bdlt::FixUtilConfiguration_const_ ()         | int64_t method_BloombergLP::bdlt::FixUtil_generate_char_int_BloombergLP::bdlt::DateTz_const_BloombergLP::bdlt::FixUtilConfiguration_const_ (char * arg4, uint32_t arg3, signed int64_t arg2, char * arg1) {
+                                                                                                                                                             |     void * s2;
+                                                                                                                                                             |     rcx = arg4;
+                                                                                                                                                             |     rdx = arg3;
+                                                                                                                                                             |     rsi = arg2;
+                                                                                                                                                             |     rdi = arg1;
+                                                                                                                                                             |     /* BloombergLP::bdlt::FixUtil::generate(char*, int, BloombergLP::bdlt::DateTz const&, BloombergLP::bdlt::FixUtilConfiguration const&) */
+    0x0043ab50 push rbp                                                                                                                                      |     
+    0x0043ab51 push r14                                                                                                                                      |     
+    0x0043ab53 push rbx                                                                                                                                      |     
+    0x0043ab54 sub rsp, 0x10                                                                                                                                 |     
+    0x0043ab58 mov r14, rdi                                                                                                                                  |     r14 = rdi;
+    0x0043ab5b cmp esi, 0xf                                                                                                                                  |     
+                                                                                                                                                             |     if (esi >= 0xf) {
+    0x0043ab5e jl 0x43ab79                                                                                                                                   |         
+    0x0043ab60 mov rdi, r14                                                                                                                                  |         
+    0x0043ab63 mov rsi, rdx                                                                                                                                  |         
+    0x0043ab66 mov rdx, rcx                                                                                                                                  |         
+    0x0043ab69 call 0x43abd0                                                                                                                                 |         eax = BloombergLP::bdlt::FixUtil::generateRaw(char*,BloombergLP::bdlt::DateTzconst&,BloombergLP::bdlt::FixUtilConfigurationconst&) (r14, rdx, rcx);
+    0x0043ab6e mov ebp, eax                                                                                                                                  |         
+    0x0043ab70 cdqe                                                                                                                                          |         rax = (int64_t) eax;
+    0x0043ab72 mov byte [r14 + rax], 0                                                                                                                       |         *((r14 + rax)) = 0;
+    0x0043ab77 jmp 0x43abbb                                                                                                                                  |         
+                                                                                                                                                             |     } else {
+    0x0043ab79 mov ebx, esi                                                                                                                                  |         ebx = esi;
+    0x0043ab7b lea rdi, [rsp + 2]                                                                                                                            |         
+    0x0043ab80 mov rsi, rdx                                                                                                                                  |         
+    0x0043ab83 mov rdx, rcx                                                                                                                                  |         
+    0x0043ab86 call 0x43abd0                                                                                                                                 |         eax = BloombergLP::bdlt::FixUtil::generateRaw(char*,BloombergLP::bdlt::DateTzconst&,BloombergLP::bdlt::FixUtilConfigurationconst&) (rsp + 2, rdx, rcx);
+    0x0043ab8b mov ebp, eax                                                                                                                                  |         
+    0x0043ab8d cmp eax, ebx                                                                                                                                  |         
+                                                                                                                                                             |         if (eax < ebx) {
+    0x0043ab8f jge 0x43abab                                                                                                                                  |             
+    0x0043ab91 movsxd rbx, ebp                                                                                                                               |             rbx = (int64_t) ebp;
+    0x0043ab94 lea rsi, [rsp + 2]                                                                                                                            |             
+    0x0043ab99 mov rdi, r14                                                                                                                                  |             
+    0x0043ab9c mov rdx, rbx                                                                                                                                  |             
+    0x0043ab9f call 0x4045b0                                                                                                                                 |             memcpy (r14, rsp + 2, rbx);
+    0x0043aba4 mov byte [r14 + rbx], 0                                                                                                                       |             *((r14 + rbx)) = 0;
+    0x0043aba9 jmp 0x43abbb                                                                                                                                  |             
+                                                                                                                                                             |         } else {
+    0x0043abab movsxd rdx, ebx                                                                                                                               |             rdx = (int64_t) ebx;
+    0x0043abae lea rsi, [rsp + 2]                                                                                                                            |             
+    0x0043abb3 mov rdi, r14                                                                                                                                  |             
+    0x0043abb6 call 0x4045b0                                                                                                                                 |             memcpy (r14, rsp + 2, rdx);
+                                                                                                                                                             |         }
+                                                                                                                                                             |     }
+    0x0043abbb mov eax, ebp                                                                                                                                  |     eax = ebp;
+    0x0043abbd add rsp, 0x10                                                                                                                                 |     
+    0x0043abc1 pop rbx                                                                                                                                       |     
+    0x0043abc2 pop r14                                                                                                                                       |     
+    0x0043abc4 pop rbp                                                                                                                                       |     
+    0x0043abc5 ret                                                                                                                                           |     return rax;
+                                                                                                                                                             | }

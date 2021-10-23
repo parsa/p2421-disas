@@ -1,0 +1,60 @@
+    ; assembly                                                                                   | /* r2dec pseudo code output */
+                                                                                                 | /* balb_controlmanager.t/assume @ 0x40d430 */
+                                                                                                 | #include <stdint.h>
+                                                                                                 |  
+    ; (fcn) method.BloombergLP::bdlb::String.strrstr_char_const__int__char_const__int_ ()        | uint64_t method_BloombergLP::bdlb::String_strrstr_char_const_int_char_const_int_ (int64_t arg4, int64_t arg3, uint32_t arg2, int64_t arg1) {
+                                                                                                 |     rcx = arg4;
+                                                                                                 |     rdx = arg3;
+                                                                                                 |     rsi = arg2;
+                                                                                                 |     rdi = arg1;
+                                                                                                 |     /* BloombergLP::bdlb::String::strrstr(char const*, int, char const*, int) */
+    0x0040d430 push r15                                                                          |     
+    0x0040d432 push r14                                                                          |     
+    0x0040d434 push r13                                                                          |     
+    0x0040d436 push r12                                                                          |     
+    0x0040d438 push rbx                                                                          |     
+    0x0040d439 mov r15, rdi                                                                      |     r15 = rdi;
+    0x0040d43c test ecx, ecx                                                                     |     
+                                                                                                 |     if (ecx == 0) {
+    0x0040d43e je 0x40d477                                                                       |         goto label_0;
+                                                                                                 |     }
+    0x0040d440 cmp esi, ecx                                                                      |     
+                                                                                                 |     if (esi < ecx) {
+    0x0040d442 jb 0x40d472                                                                       |         goto label_1;
+                                                                                                 |     }
+    0x0040d444 mov r14, rdx                                                                      |     r14 = rdx;
+    0x0040d447 mov r12d, ecx                                                                     |     r12d = ecx;
+    0x0040d44a mov ebx, esi                                                                      |     ebx = esi;
+    0x0040d44c sub r15, r12                                                                      |     r15 -= r12;
+    0x0040d44f nop                                                                               |     
+                                                                                                 |     do {
+    0x0040d450 lea r13, [r15 + rbx]                                                              |         r13 = r15 + rbx;
+    0x0040d454 mov rdi, r13                                                                      |         rdi = r13;
+    0x0040d457 mov rsi, r14                                                                      |         rsi = r14;
+    0x0040d45a mov rdx, r12                                                                      |         rdx = r12;
+    0x0040d45d call 0x404690                                                                     |         eax = bcmp ();
+    0x0040d462 test eax, eax                                                                     |         
+                                                                                                 |         if (eax == 0) {
+    0x0040d464 je 0x40d47f                                                                       |             goto label_2;
+                                                                                                 |         }
+    0x0040d466 lea rax, [rbx - 1]                                                                |         rax = rbx - 1;
+    0x0040d46a cmp rbx, r12                                                                      |         
+    0x0040d46d mov rbx, rax                                                                      |         rbx = rax;
+    0x0040d470 jg 0x40d450                                                                       |         
+                                                                                                 |     } while (rbx > r12);
+                                                                                                 | label_1:
+    0x0040d472 xor r13d, r13d                                                                    |     r13d = 0;
+    0x0040d475 jmp 0x40d47f                                                                      |     goto label_2;
+                                                                                                 | label_0:
+    0x0040d477 mov eax, esi                                                                      |     eax = esi;
+    0x0040d479 add r15, rax                                                                      |     r15 += rax;
+    0x0040d47c mov r13, r15                                                                      |     r13 = r15;
+                                                                                                 | label_2:
+    0x0040d47f mov rax, r13                                                                      |     rax = r15;
+    0x0040d482 pop rbx                                                                           |     
+    0x0040d483 pop r12                                                                           |     
+    0x0040d485 pop r13                                                                           |     
+    0x0040d487 pop r14                                                                           |     
+    0x0040d489 pop r15                                                                           |     
+    0x0040d48b ret                                                                               |     return rax;
+                                                                                                 | }

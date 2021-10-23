@@ -1,0 +1,28 @@
+    ; assembly                                               | /* r2dec pseudo code output */
+                                                             | /* bdlmt_throttle.t/assume @ 0x4053c0 */
+                                                             | #include <stdint.h>
+                                                             |  
+    ; (fcn) method.Case_Allow_All.threadJobInit__ ()         | int32_t method_Case_Allow_All_threadJobInit_ (void) {
+                                                             |     /* Case_Allow_All::threadJobInit() */
+    0x004053c0 push rbp                                      |     
+    0x004053c1 push r14                                      |     
+    0x004053c3 push rbx                                      |     
+    0x004053c4 sub rsp, 0x10                                 |     
+    0x004053c8 nop dword [rax + rax]                         |     
+                                                             |     do {
+    0x004053d0 mov eax, dword [rip + 0x252e9a]               |         eax = Case_Allow_All::atomicBarrier;
+    0x004053d6 test eax, eax                                 |         
+    0x004053d8 js 0x4053d0                                   |         
+                                                             |     } while (eax < 0);
+    0x004053da mov eax, dword [rip + 0x252e90]               |     eax = Case_Allow_All::atomicBarrier;
+    0x004053e0 test eax, eax                                 |     
+                                                             |     if (eax > 0) {
+    0x004053e2 jg 0x4055b3                                   |         void (*0x4055b3)() ();
+                                                             |     }
+    0x004053e8 xor r14d, r14d                                |     r14d = 0;
+    0x004053eb xor eax, eax                                  |     eax = 0;
+    0x004053ed and eax, 7                                    |     eax &= 7;
+    0x004053f0 xor ebx, ebx                                  |     ebx = 0;
+    0x004053f2 xor ebp, ebp                                  |     ebp = 0;
+    0x004053f4 jmp qword [rax*8 + 0x43b950]                  |     
+                                                             | }

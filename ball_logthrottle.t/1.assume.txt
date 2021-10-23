@@ -1,0 +1,104 @@
+    ; assembly                                                                                                                       | /* r2dec pseudo code output */
+                                                                                                                                     | /* ball_logthrottle.t/assume @ 0x446c30 */
+                                                                                                                                     | #include <stdint.h>
+                                                                                                                                     |  
+    ; (fcn) method.BloombergLP::bdlmt::Throttle.requestPermissionIfValid_bool__int__BloombergLP::bsls::TimeInterval_const_ ()        | int64_t method_BloombergLP::bdlmt::Throttle_requestPermissionIfValid_bool_int_BloombergLP::bsls::TimeInterval_const_ (int64_t arg4, signed int64_t arg3, int64_t arg2, uint32_t arg1) {
+                                                                                                                                     |     rcx = arg4;
+                                                                                                                                     |     rdx = arg3;
+                                                                                                                                     |     rsi = arg2;
+                                                                                                                                     |     rdi = arg1;
+                                                                                                                                     |     /* BloombergLP::bdlmt::Throttle::requestPermissionIfValid(bool*, int, BloombergLP::bsls::TimeInterval const&) */
+    0x00446c30 push rbx                                                                                                              |     
+    0x00446c31 mov eax, 0xffffffff                                                                                                   |     eax = 0xffffffff;
+    0x00446c36 test edx, edx                                                                                                         |     
+                                                                                                                                     |     if (edx <= 0) {
+    0x00446c38 jle 0x446c48                                                                                                          |         goto label_0;
+                                                                                                                                     |     }
+    0x00446c3a mov r9d, dword [rdi + 0x18]                                                                                           |     r9d = *((rdi + 0x18));
+    0x00446c3e cmp r9d, edx                                                                                                          |     
+                                                                                                                                     |     if (r9d >= edx) {
+    0x00446c41 jge 0x446c4a                                                                                                          |         goto label_1;
+                                                                                                                                     |     }
+    0x00446c43 test r9d, r9d                                                                                                         |     
+    0x00446c46 je 0x446c4a                                                                                                           |     
+                                                                                                                                     |     while (r8 > r10) {
+                                                                                                                                     | label_0:
+    0x00446c48 pop rbx                                                                                                               |         
+    0x00446c49 ret                                                                                                                   |         return eax;
+                                                                                                                                     | label_1:
+    0x00446c4a mov r11, qword [rcx]                                                                                                  |         r11 = *(rcx);
+    0x00446c4d movabs r8, 0x225c17d04                                                                                                |         r8 = 0x225c17d04;
+    0x00446c57 add r8, r11                                                                                                           |         r8 += r11;
+    0x00446c5a movabs r10, 0x44b82fa08                                                                                               |         r10 = 0x44b82fa08;
+    0x00446c64 cmp r8, r10                                                                                                           |         
+    0x00446c67 ja 0x446c48                                                                                                           |         
+                                                                                                                                     |     }
+    0x00446c69 movabs r10, 0x8000000000000000                                                                                        |     r10 = 0x8000000000000000;
+    0x00446c73 imul r8, r11, 0x3b9aca00                                                                                              |     r8 = r11 * 0x3b9aca00;
+    0x00446c7a test r11, r11                                                                                                         |     
+                                                                                                                                     |     if (r11 < 0) {
+    0x00446c7d js 0x446c93                                                                                                           |         goto label_2;
+                                                                                                                                     |     }
+    0x00446c7f mov rbx, r8                                                                                                           |     rbx = r8;
+    0x00446c82 not rbx                                                                                                               |     rbx = ~rbx;
+    0x00446c85 add rbx, r10                                                                                                          |     rbx += r10;
+    0x00446c88 movsxd r11, dword [rcx + 8]                                                                                           |     r11 = *((rcx + 8));
+    0x00446c8c cmp rbx, r11                                                                                                          |     
+                                                                                                                                     |     if (rbx < r11) {
+    0x00446c8f jl 0x446c48                                                                                                           |         goto label_0;
+                                                                                                                                     |     }
+    0x00446c91 jmp 0x446ca2                                                                                                          |     goto label_3;
+                                                                                                                                     | label_2:
+    0x00446c93 mov rbx, r10                                                                                                          |     rbx = r10;
+    0x00446c96 sub rbx, r8                                                                                                           |     rbx -= r8;
+    0x00446c99 movsxd r11, dword [rcx + 8]                                                                                           |     r11 = *((rcx + 8));
+    0x00446c9d cmp rbx, r11                                                                                                          |     
+                                                                                                                                     |     if (rbx > r11) {
+    0x00446ca0 jg 0x446c48                                                                                                           |         goto label_0;
+                                                                                                                                     |     }
+                                                                                                                                     | label_3:
+    0x00446ca2 cmp r9d, edx                                                                                                          |     
+                                                                                                                                     |     if (r9d < edx) {
+    0x00446ca5 jge 0x446cab                                                                                                          |         
+    0x00446ca7 xor eax, eax                                                                                                          |         eax = 0;
+    0x00446ca9 jmp 0x446cf4                                                                                                          |         goto label_4;
+                                                                                                                                     |     }
+    0x00446cab mov rcx, qword [rdi + 8]                                                                                              |     rcx = *((rdi + 8));
+    0x00446caf mov al, 1                                                                                                             |     al = 1;
+    0x00446cb1 cmp rcx, r10                                                                                                          |     
+                                                                                                                                     |     if (rcx == r10) {
+    0x00446cb4 je 0x446cf4                                                                                                           |         goto label_4;
+                                                                                                                                     |     }
+    0x00446cb6 movsxd rax, r11d                                                                                                      |     rax = (int64_t) r11d;
+    0x00446cb9 add r8, rax                                                                                                           |     r8 += rax;
+    0x00446cbc mov eax, edx                                                                                                          |     eax = edx;
+    0x00446cbe imul rcx, rax                                                                                                         |     rcx *= rax;
+    0x00446cc2 mov r9, rcx                                                                                                           |     r9 = rcx;
+    0x00446cc5 sub r9, qword [rdi + 0x10]                                                                                            |     r9 -= *((rdi + 0x10));
+    0x00446cc9 mov rax, qword [rdi]                                                                                                  |     rax = *(rdi);
+    0x00446ccc add r9, r8                                                                                                            |     r9 += r8;
+    0x00446ccf nop                                                                                                                   |     
+                                                                                                                                     |     do {
+    0x00446cd0 mov rdx, r8                                                                                                           |         rdx = r8;
+    0x00446cd3 sub rdx, rax                                                                                                          |         rdx -= rax;
+    0x00446cd6 cmp rdx, rcx                                                                                                          |         
+                                                                                                                                     |         if (rdx < rcx) {
+    0x00446cd9 jl 0x446cee                                                                                                           |             goto label_5;
+                                                                                                                                     |         }
+    0x00446cdb lea rbx, [rax + rcx]                                                                                                  |         rbx = rax + rcx;
+    0x00446cdf cmp qword [rdi + 0x10], rdx                                                                                           |         
+                                                                                                                                     |         if (*((rdi + 0x10)) <= rdx) {
+    0x00446ce3 cmovle rbx, r9                                                                                                        |             rbx = r9;
+                                                                                                                                     |         }
+    0x00446ce7 lock cmpxchg qword [rdi], rbx                                                                                         |         __asm ("lock cmpxchg qword [rdi], rbx");
+    0x00446cec jne 0x446cd0                                                                                                          |         
+                                                                                                                                     |     } while (*((rdi + 0x10)) != rdx);
+                                                                                                                                     | label_5:
+    0x00446cee cmp rdx, rcx                                                                                                          |     
+    0x00446cf1 setge al                                                                                                              |     al = (rdx >= rcx) ? 1 : 0;
+                                                                                                                                     | label_4:
+    0x00446cf4 mov byte [rsi], al                                                                                                    |     *(rsi) = al;
+    0x00446cf6 xor eax, eax                                                                                                          |     eax = 0;
+    0x00446cf8 pop rbx                                                                                                               |     
+    0x00446cf9 ret                                                                                                                   |     return rax;
+                                                                                                                                     | }

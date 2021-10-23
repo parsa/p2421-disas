@@ -1,0 +1,195 @@
+    ; assembly                                                                   | /* r2dec pseudo code output */
+                                                                                 | /* bdlt_calendarutil.t/assume @ 0x403040 */
+                                                                                 | #include <stdint.h>
+                                                                                 |  
+    ; (fcn) sym.parseCalendar_char_const__BloombergLP::bdlt::Date_const_ ()      | uint64_t parseCalendar_char_const_BloombergLP::bdlt::Date_const_ (uint32_t arg3, char * s, int64_t arg1) {
+                                                                                 |     int64_t var_8h;
+                                                                                 |     int64_t var_10h;
+                                                                                 |     int64_t var_18h;
+                                                                                 |     int64_t var_20h;
+                                                                                 |     rdx = arg3;
+                                                                                 |     rsi = s;
+                                                                                 |     rdi = arg1;
+                                                                                 |     /* parseCalendar(char const*, BloombergLP::bdlt::Date const&) */
+    0x00403040 push rbp                                                          |     
+    0x00403041 push r15                                                          |     
+    0x00403043 push r14                                                          |     
+    0x00403045 push r13                                                          |     
+    0x00403047 push r12                                                          |     
+    0x00403049 push rbx                                                          |     
+    0x0040304a sub rsp, 0x28                                                     |     
+    0x0040304e mov r14, rdx                                                      |     r14 = rdx;
+    0x00403051 mov rbx, rsi                                                      |     rbx = rsi;
+    0x00403054 mov r12, rdi                                                      |     r12 = rdi;
+    0x00403057 mov rdi, rsi                                                      |     
+    0x0040305a call 0x402be0                                                     |     rax = strlen (rsi);
+    0x0040305f mov r15, rax                                                      |     r15 = rax;
+    0x00403062 test r15d, r15d                                                   |     
+                                                                                 |     if (r15d != 0) {
+    0x00403065 je 0x403087                                                       |         
+    0x00403067 mov eax, dword [r14]                                              |         eax = *(r14);
+    0x0040306a lea eax, [r15 + rax - 1]                                          |         eax = r15 + rax - 1;
+    0x0040306f mov dword [rsp + 0x10], eax                                       |         *((rsp + 0x10)) = eax;
+    0x00403073 lea rdx, [rsp + 0x10]                                             |         
+    0x00403078 mov rdi, r12                                                      |         
+    0x0040307b mov rsi, r14                                                      |         
+    0x0040307e xor ecx, ecx                                                      |         
+    0x00403080 call 0x40c0a0                                                     |         BloombergLP::bdlt::Calendar::Calendar(BloombergLP::bdlt::Dateconst&,BloombergLP::bdlt::Dateconst&,BloombergLP::bslma::Allocator*) (r12, r14, rsp + 0x10, 0);
+    0x00403085 jmp 0x403091                                                      |         
+                                                                                 |     } else {
+    0x00403087 mov rdi, r12                                                      |         
+    0x0040308a xor esi, esi                                                      |         
+    0x0040308c call 0x40c060                                                     |         BloombergLP::bdlt::Calendar::Calendar(BloombergLP::bslma::Allocator*) (r12, 0, rdx);
+                                                                                 |     }
+    0x00403091 mov ecx, dword [r14]                                              |     ecx = *(r14);
+    0x00403094 mov dword [rsp], ecx                                              |     *(rsp) = ecx;
+    0x00403097 test r15d, r15d                                                   |     
+                                                                                 |     if (r15d <= 0) {
+    0x0040309a jle 0x4030ce                                                      |         goto label_3;
+                                                                                 |     }
+    0x0040309c mov eax, r15d                                                     |     eax = r15d;
+    0x0040309f xor ebp, ebp                                                      |     ebp = 0;
+    0x004030a1 jmp 0x4030bc                                                      |     
+                                                                                 |     while (dl == 0x7c) {
+                                                                                 | label_0:
+    0x004030b0 inc rbp                                                           |         rbp++;
+    0x004030b3 cmp rax, rbp                                                      |         
+                                                                                 |         if (rax == rbp) {
+    0x004030b6 je 0x4031b8                                                       |             goto label_4;
+                                                                                 |         }
+    0x004030bc movzx edx, byte [rbx + rbp]                                       |         edx = *((rbx + rbp));
+    0x004030c0 cmp dl, 0x7c                                                      |         
+    0x004030c3 je 0x4030b0                                                       |         
+                                                                                 |     }
+    0x004030c5 cmp dl, 0x2e                                                      |     
+                                                                                 |     if (dl == 0x2e) {
+    0x004030c8 je 0x4030b0                                                       |         goto label_0;
+                                                                                 |     }
+    0x004030ca mov eax, ebp                                                      |     eax = ebp;
+    0x004030cc jmp 0x4030d2                                                      |     goto label_5;
+                                                                                 | label_3:
+    0x004030ce xor ebp, ebp                                                      |     ebp = 0;
+    0x004030d0 xor eax, eax                                                      |     eax = 0;
+                                                                                 | label_5:
+    0x004030d2 mov qword [rsp + 0x20], r14                                       |     *((rsp + 0x20)) = r14;
+    0x004030d7 cmp eax, r15d                                                     |     
+    0x004030da mov qword [rsp + 0x18], r15                                       |     *((rsp + 0x18)) = r15;
+                                                                                 |     if (eax >= r15d) {
+    0x004030df jge 0x403155                                                      |         goto label_6;
+                                                                                 |     }
+    0x004030e1 mov r13d, eax                                                     |     r13d = eax;
+    0x004030e4 mov r14d, r15d                                                    |     r14d = r15d;
+    0x004030e7 movabs r15, 0x400100000000001                                     |     r15 = 0x400100000000001;
+    0x004030f1 jmp 0x40310a                                                      |     
+                                                                                 |     while (1) {
+                                                                                 | label_1:
+    0x00403100 inc ebp                                                           |         ebp++;
+                                                                                 | label_2:
+    0x00403102 inc r13                                                           |         r13++;
+    0x00403105 cmp r14, r13                                                      |         
+                                                                                 |         if (r14 == r13) {
+    0x00403108 je 0x403155                                                       |             goto label_6;
+                                                                                 |         }
+    0x0040310a movzx eax, byte [rbx + r13]                                       |         eax = *((rbx + r13));
+    0x0040310f lea edx, [rax - 0x42]                                             |         edx = rax - 0x42;
+    0x00403112 cmp dl, 0x3a                                                      |         
+                                                                                 |         if (dl > 0x3a) {
+    0x00403115 ja 0x403130                                                       |             goto label_7;
+                                                                                 |         }
+    0x00403117 movzx edx, dl                                                     |         edx = (int32_t) dl;
+    0x0040311a bt r15, rdx                                                       |         
+                                                                                 |         if (((r15 >> rdx) & 1) >= 0) {
+    0x0040311e jae 0x403130                                                      |             goto label_7;
+                                                                                 |         }
+    0x00403120 cmp al, 0x7c                                                      |         
+                                                                                 |         if (al != 0x7c) {
+    0x00403122 jne 0x403136                                                      |             goto label_8;
+                                                                                 |         }
+    0x00403124 jmp 0x403100                                                      |         
+                                                                                 |     }
+                                                                                 | label_7:
+    0x00403130 cmp al, 0x2e                                                      |     
+    0x00403132 cmp al, 0x7c                                                      |     
+                                                                                 |     if (al == 0x7c) {
+    0x00403134 je 0x403100                                                       |         goto label_1;
+                                                                                 |     }
+                                                                                 | label_8:
+    0x00403136 cmp al, 0x6e                                                      |     
+                                                                                 |     if (al == 0x6e) {
+    0x00403138 je 0x403140                                                       |         goto label_9;
+                                                                                 |     }
+    0x0040313a cmp al, 0x2e                                                      |     
+                                                                                 |     if (al == 0x2e) {
+    0x0040313c je 0x403100                                                       |         goto label_1;
+                                                                                 |     }
+    0x0040313e jmp 0x40314e                                                      |     goto label_10;
+                                                                                 | label_9:
+    0x00403140 mov rdi, r12                                                      |     
+    0x00403143 mov rsi, rsp                                                      |     
+    0x00403146 call 0x40c2b0                                                     |     BloombergLP::bdlt::Calendar::addHoliday(BloombergLP::bdlt::Dateconst&) (r12, rsp);
+    0x0040314b mov ecx, dword [rsp]                                              |     ecx = *(rsp);
+                                                                                 | label_10:
+    0x0040314e inc ecx                                                           |     ecx++;
+    0x00403150 mov dword [rsp], ecx                                              |     *(rsp) = ecx;
+    0x00403153 jmp 0x403102                                                      |     goto label_2;
+                                                                                 | label_6:
+    0x00403155 mov rcx, qword [rsp + 0x18]                                       |     rcx = *((rsp + 0x18));
+    0x0040315a cmp ebp, ecx                                                      |     
+    0x0040315c mov rbx, qword [rsp + 0x20]                                       |     rbx = *((rsp + 0x20));
+                                                                                 |     if (ebp < ecx) {
+    0x00403161 jge 0x4031b8                                                      |         
+    0x00403163 test ebp, ebp                                                     |         
+                                                                                 |         if (ebp == 0) {
+    0x00403165 je 0x4031f8                                                       |             goto label_11;
+                                                                                 |         }
+    0x0040316b mov eax, dword [rbx]                                              |         eax = *(rbx);
+    0x0040316d not ebp                                                           |         ebp = ~ebp;
+    0x0040316f add ebp, ecx                                                      |         ebp += ecx;
+    0x00403171 lea ecx, [rbp + rax]                                              |         ecx = rbp + rax;
+    0x00403175 mov dword [rsp + 8], ecx                                          |         *((rsp + 8)) = ecx;
+    0x00403179 cmp ecx, eax                                                      |         
+                                                                                 |         if (ecx >= eax) {
+    0x0040317b jl 0x40319e                                                       |             
+    0x0040317d lea rdi, [r12 + 0xa8]                                             |             rdi = r12 + 0xa8;
+    0x00403185 movsxd rax, ebp                                                   |             rax = (int64_t) ebp;
+    0x00403188 add rax, 0x40                                                     |             rax += 0x40;
+    0x0040318c shr rax, 6                                                        |             rax >>= 6;
+    0x00403190 mov esi, 1                                                        |             esi = 1;
+                                                                                 |             if (rax != 0) {
+    0x00403195 cmovne rsi, rax                                                   |                 rsi = rax;
+                                                                                 |             }
+    0x00403199 call 0x431360                                                     |             bsl::vector<unsigned long,bsl::allocator<unsigned long>>::reserve(unsigned long) (rdi, rsi);
+                                                                                 |         }
+    0x0040319e lea rdx, [rsp + 8]                                                |         
+    0x004031a3 mov rdi, r12                                                      |         
+    0x004031a6 mov rsi, rbx                                                      |         
+    0x004031a9 call 0x410920                                                     |         BloombergLP::bdlt::PackedCalendar::setValidRange(BloombergLP::bdlt::Dateconst&,BloombergLP::bdlt::Dateconst&) (r12, rbx, rsp + 8, rcx);
+    0x004031ae mov rdi, r12                                                      |         
+    0x004031b1 call 0x40bd50                                                     |         BloombergLP::bdlt::Calendar::synchronizeCache() (r12);
+    0x004031b6 jmp 0x4031f8                                                      |         
+                                                                                 |     } else {
+                                                                                 | label_4:
+    0x004031b8 mov rdi, r12                                                      |         
+    0x004031bb call 0x410530                                                     |         BloombergLP::bdlt::PackedCalendar::removeAll() (r12, rsi);
+    0x004031c0 lea rdi, [r12 + 0xa8]                                             |         rdi = r12 + 0xa8;
+    0x004031c8 mov rax, qword [r12 + 0xa8]                                       |         rax = *((r12 + 0xa8));
+    0x004031d0 cmp qword [r12 + 0xb0], rax                                       |         
+                                                                                 |         if (*((r12 + 0xb0)) != rax) {
+    0x004031d8 je 0x4031e2                                                       |             
+    0x004031da mov qword [r12 + 0xb0], rax                                       |             *((r12 + 0xb0)) = rax;
+                                                                                 |         }
+    0x004031e2 mov esi, 1                                                        |         
+    0x004031e7 call 0x431170                                                     |         bsl::vector<unsigned long,bsl::allocator<unsigned long>>::resize(unsigned long) (rdi, 1);
+    0x004031ec mov qword [r12 + 0xc8], 0                                         |         *((r12 + 0xc8)) = 0;
+                                                                                 |     }
+                                                                                 | label_11:
+    0x004031f8 mov rax, r12                                                      |     rax = r12;
+    0x004031fb add rsp, 0x28                                                     |     
+    0x004031ff pop rbx                                                           |     
+    0x00403200 pop r12                                                           |     
+    0x00403202 pop r13                                                           |     
+    0x00403204 pop r14                                                           |     
+    0x00403206 pop r15                                                           |     
+    0x00403208 pop rbp                                                           |     
+    0x00403209 ret                                                               |     return rax;
+                                                                                 | }

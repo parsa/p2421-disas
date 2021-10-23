@@ -1,0 +1,30 @@
+    ; assembly                                                                                       | /* r2dec pseudo code output */
+                                                                                                     | /* baljsn_encoder.t/none @ 0x4b6840 */
+                                                                                                     | #include <stdint.h>
+                                                                                                     |  
+    ; (fcn) method.BloombergLP::s_baltst::MySequenceWithChoiceChoice.makeSelection_int_ ()           | int32_t method_BloombergLP::s_baltst::MySequenceWithChoiceChoice_makeSelection_int_ (uint32_t arg2, uint32_t arg1) {
+                                                                                                     |     rsi = arg2;
+                                                                                                     |     rdi = arg1;
+                                                                                                     |     /* BloombergLP::s_baltst::MySequenceWithChoiceChoice::makeSelection(int) */
+    0x004b6840 cmp esi, 0xffffffff                                                                   |     
+                                                                                                     |     if (esi != 0xffffffff) {
+    0x004b6843 je 0x4b6864                                                                           |         
+    0x004b6845 mov eax, 0xffffffff                                                                   |         eax = 0xffffffff;
+    0x004b684a test esi, esi                                                                         |         
+                                                                                                     |         if (esi != 0) {
+    0x004b684c jne 0x4b686d                                                                          |             goto label_0;
+                                                                                                     |         }
+    0x004b684e xor eax, eax                                                                          |         eax = 0;
+    0x004b6850 cmp dword [rdi + 4], 0                                                                |         
+    0x004b6854 mov dword [rdi], 0                                                                    |         *(rdi) = 0;
+                                                                                                     |         if (*((rdi + 4)) == 0) {
+    0x004b685a je 0x4b686d                                                                           |             goto label_0;
+                                                                                                     |         }
+    0x004b685c mov dword [rdi + 4], 0                                                                |         *((rdi + 4)) = 0;
+    0x004b6863 ret                                                                                   |         return eax;
+                                                                                                     |     }
+    0x004b6864 mov dword [rdi + 4], 0xffffffff                                                       |     *((rdi + 4)) = 0xffffffff;
+    0x004b686b xor eax, eax                                                                          |     eax = 0;
+                                                                                                     | label_0:
+    0x004b686d ret                                                                                   |     return eax;
+                                                                                                     | }

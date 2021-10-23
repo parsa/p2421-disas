@@ -1,0 +1,86 @@
+    ; assembly                                                                       | /* r2dec pseudo code output */
+                                                                                     | /* ball_attributecontext.t/assume @ 0x4059e0 */
+                                                                                     | #include <stdint.h>
+                                                                                     |  
+    ; (fcn) method.AttributeSet.insert_BloombergLP::ball::Attribute_const_ ()        | int64_t method_AttributeSet_insert_BloombergLP::ball::Attribute_const_ (int64_t arg2, int64_t arg1) {
+                                                                                     |     rsi = arg2;
+                                                                                     |     rdi = arg1;
+                                                                                     |     /* AttributeSet::insert(BloombergLP::ball::Attribute const&) */
+    0x004059e0 push rbp                                                              |     
+    0x004059e1 push r15                                                              |     
+    0x004059e3 push r14                                                              |     
+    0x004059e5 push r13                                                              |     
+    0x004059e7 push r12                                                              |     
+    0x004059e9 push rbx                                                              |     
+    0x004059ea push rax                                                              |     
+    0x004059eb mov r15, rsi                                                          |     r15 = rsi;
+    0x004059ee mov r14, rdi                                                          |     r14 = rdi;
+    0x004059f1 lea r12, [rdi + 8]                                                    |     r12 = rdi + 8;
+    0x004059f5 mov rax, qword [rdi + 0x30]                                           |     rax = *((rdi + 0x30));
+    0x004059f9 add r14, 0x28                                                         |     r14 += 0x28;
+    0x004059fd test rax, rax                                                         |     
+                                                                                     |     if (rax == 0) {
+    0x00405a00 je 0x405a66                                                           |         goto label_0;
+                                                                                     |     }
+    0x00405a02 xor ebp, ebp                                                          |     ebp = 0;
+    0x00405a04 nop word cs:[rax + rax]                                               |     
+    0x00405a0e nop                                                                   |     
+                                                                                     |     do {
+    0x00405a10 mov rbx, rax                                                          |         rbx = rax;
+    0x00405a13 lea rdx, [rax + 0x18]                                                 |         rdx = rax + 0x18;
+    0x00405a17 mov rdi, r12                                                          |         
+    0x00405a1a mov rsi, r15                                                          |         
+    0x00405a1d call 0x413df0                                                         |         al = AttributeComparator::operator()(BloombergLP::ball::Attributeconst&,BloombergLP::ball::Attributeconst&)const (r12, r15);
+    0x00405a22 test al, al                                                           |         
+                                                                                     |         if (al == 0) {
+    0x00405a24 cmove rbp, rbx                                                        |             
+                                                                                     |         }
+    0x00405a28 xor al, 1                                                             |         al ^= 1;
+    0x00405a2a movzx ecx, al                                                         |         ecx = (int32_t) al;
+    0x00405a2d mov rax, qword [rbx + rcx*8 + 8]                                      |         rax = *((rbx + rcx*8 + 8));
+    0x00405a32 test rax, rax                                                         |         
+    0x00405a35 jne 0x405a10                                                          |         
+                                                                                     |     } while (rax != 0);
+    0x00405a37 lea r13d, [rcx + rcx - 1]                                             |     r13d = rcx + rcx - 1;
+    0x00405a3c test rbp, rbp                                                         |     
+                                                                                     |     if (rbp != 0) {
+    0x00405a3f je 0x405a6f                                                           |         
+    0x00405a41 add rbp, 0x18                                                         |         rbp += 0x18;
+    0x00405a45 mov rdi, r12                                                          |         
+    0x00405a48 mov rsi, rbp                                                          |         
+    0x00405a4b mov rdx, r15                                                          |         rdx = r15;
+    0x00405a4e call 0x413df0                                                         |         al = AttributeComparator::operator()(BloombergLP::ball::Attributeconst&,BloombergLP::ball::Attributeconst&)const (r12, rbp);
+    0x00405a53 test al, al                                                           |         
+                                                                                     |         if (al != 0) {
+    0x00405a55 jne 0x405a6f                                                          |             goto label_1;
+                                                                                     |         }
+    0x00405a57 add rsp, 8                                                            |         
+    0x00405a5b pop rbx                                                               |         
+    0x00405a5c pop r12                                                               |         
+    0x00405a5e pop r13                                                               |         
+    0x00405a60 pop r14                                                               |         
+    0x00405a62 pop r15                                                               |         
+    0x00405a64 pop rbp                                                               |         
+    0x00405a65 ret                                                                   |         return rax;
+                                                                                     | label_0:
+    0x00405a66 mov r13d, 0xffffffff                                                  |         r13d = 0xffffffff;
+    0x00405a6c mov rbx, r14                                                          |         rbx = r14;
+                                                                                     |     }
+                                                                                     | label_1:
+    0x00405a6f mov rdi, r12                                                          |     
+    0x00405a72 mov rsi, r15                                                          |     
+    0x00405a75 call 0x413c00                                                         |     rax = BloombergLP::bslalg::RbTreeNode*BloombergLP::bslstl::TreeNodePool<BloombergLP::ball::Attribute,bsl::allocator<BloombergLP::ball::Attribute>>::emplaceIntoNewNode<BloombergLP::ball::Attributeconst&>(BloombergLP::ball::Attributeconst&) (r12, r15);
+    0x00405a7a shr r13d, 0x1f                                                        |     r13d >>= 0x1f;
+    0x00405a7e mov rdi, r14                                                          |     rdi = r14;
+    0x00405a81 mov rsi, rbx                                                          |     rsi = rbx;
+    0x00405a84 mov edx, r13d                                                         |     edx = r13d;
+    0x00405a87 mov rcx, rax                                                          |     rcx = rax;
+    0x00405a8a add rsp, 8                                                            |     
+    0x00405a8e pop rbx                                                               |     
+    0x00405a8f pop r12                                                               |     
+    0x00405a91 pop r13                                                               |     
+    0x00405a93 pop r14                                                               |     
+    0x00405a95 pop r15                                                               |     
+    0x00405a97 pop rbp                                                               |     
+    0x00405a98 jmp 0x420490                                                          |     return void (*0x420490)() ();
+                                                                                     | }

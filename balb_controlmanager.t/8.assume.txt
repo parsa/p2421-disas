@@ -1,0 +1,38 @@
+    ; assembly                                                                                               | /* r2dec pseudo code output */
+                                                                                                             | /* balb_controlmanager.t/assume @ 0x40d0c0 */
+                                                                                                             | #include <stdint.h>
+                                                                                                             |  
+    ; (fcn) method.BloombergLP::bdlb::String.areEqualCaseless_char_const__int__char_const__int_ ()           | uint32_t method_BloombergLP::bdlb::String_areEqualCaseless_char_const_int_char_const_int_ (int64_t arg4, int64_t arg3, uint32_t arg2, int64_t arg1) {
+                                                                                                             |     rcx = arg4;
+                                                                                                             |     rdx = arg3;
+                                                                                                             |     rsi = arg2;
+                                                                                                             |     rdi = arg1;
+                                                                                                             |     /* BloombergLP::bdlb::String::areEqualCaseless(char const*, int, char const*, int) */
+    0x0040d0c0 cmp esi, ecx                                                                                  |     
+                                                                                                             |     if (esi != ecx) {
+    0x0040d0c2 jne 0x40d0f6                                                                                  |         goto label_0;
+                                                                                                             |     }
+    0x0040d0c4 mov r8, qword [rip + 0x2a3b5]                                                                 |     r8 = BloombergLP::bdlb::CharType::s_toLower_p;
+    0x0040d0cb mov r9d, esi                                                                                  |     r9d = esi;
+    0x0040d0ce xor ecx, ecx                                                                                  |     ecx = 0;
+                                                                                                             |     do {
+    0x0040d0d0 mov rsi, rcx                                                                                  |         rsi = rcx;
+    0x0040d0d3 cmp r9, rcx                                                                                   |         
+                                                                                                             |         if (r9 == rcx) {
+    0x0040d0d6 je 0x40d0ef                                                                                   |             goto label_1;
+                                                                                                             |         }
+    0x0040d0d8 movzx ecx, byte [rdi + rsi]                                                                   |         ecx = *((rdi + rsi));
+    0x0040d0dc movzx r10d, byte [r8 + rcx]                                                                   |         r10d = *((r8 + rcx));
+    0x0040d0e1 movzx eax, byte [rdx + rsi]                                                                   |         eax = *((rdx + rsi));
+    0x0040d0e5 lea rcx, [rsi + 1]                                                                            |         rcx = rsi + 1;
+    0x0040d0e9 cmp r10b, byte [r8 + rax]                                                                     |         
+    0x0040d0ed je 0x40d0d0                                                                                   |         
+                                                                                                             |     } while (r10b == *((r8 + rax)));
+                                                                                                             | label_1:
+    0x0040d0ef cmp rsi, r9                                                                                   |     
+    0x0040d0f2 setae al                                                                                      |     al = (rsi >= r9) ? 1 : 0;
+    0x0040d0f5 ret                                                                                           |     return eax;
+                                                                                                             | label_0:
+    0x0040d0f6 xor eax, eax                                                                                  |     eax = 0;
+    0x0040d0f8 ret                                                                                           |     return eax;
+                                                                                                             | }

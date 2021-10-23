@@ -1,0 +1,290 @@
+    ; assembly                                                   | /* r2dec pseudo code output */
+                                                                 | /* bsls_stackaddressutil.t/none @ 0x4030d0 */
+                                                                 | #include <stdint.h>
+                                                                 |  
+    ; (fcn) method.MULTITHREADED_TEST.topOfTheStack_int_ ()      | int64_t method_MULTITHREADED_TEST_topOfTheStack_int_ (int64_t arg1) {
+                                                                 |     rdi = arg1;
+                                                                 |     /* MULTITHREADED_TEST::topOfTheStack(int) */
+    0x004030d0 push rbp                                          |     
+    0x004030d1 push r15                                          |     
+    0x004030d3 push r14                                          |     
+    0x004030d5 push r12                                          |     
+    0x004030d7 push rbx                                          |     
+    0x004030d8 sub rsp, 0xf0                                     |     
+    0x004030df mov r14d, edi                                     |     r14d = edi;
+    0x004030e2 mov eax, dword [rip + 0x209c04]                   |     eax = MULTITHREADED_TEST::framesToCaptureBase;
+    0x004030e8 lea ecx, [rax + r14]                              |     ecx = rax + r14;
+    0x004030ec test eax, eax                                     |     
+    0x004030ee mov r15d, 0x1e                                    |     r15d = 0x1e;
+                                                                 |     if (eax != 0) {
+    0x004030f4 cmovne r15d, ecx                                  |         r15d = ecx;
+                                                                 |     }
+    0x004030f8 cmp r15d, 0x1f                                    |     
+                                                                 |     if (r15d >= 0x1f) {
+    0x004030fc jl 0x403148                                       |         
+    0x004030fe mov edi, 0x4098c0                                 |         
+    0x00403103 call 0x408c70                                     |         BloombergLP::bsls::BslTestUtil::printStringNoFlush(char const*) ("framesToCapture: ");
+    0x00403108 mov edi, r15d                                     |         
+    0x0040310b call 0x408d10                                     |         BloombergLP::bsls::debugprint(int) (r15d);
+    0x00403110 mov edi, 0x40a0c3                                 |         
+    0x00403115 call 0x408c70                                     |         BloombergLP::bsls::BslTestUtil::printStringNoFlush(char const*) (0x40a0c3);
+    0x0040311a call 0x408c60                                     |         eax = BloombergLP::bsls::BslTestUtil::flush() ();
+    0x0040311f mov edi, 0x40a04b                                 |         
+    0x00403124 mov edx, 0x4098d2                                 |         edx = "framesToCapture <= k_MAX_FRAMES_TO_CAPTURE";
+    0x00403129 mov esi, 0xf2                                     |         esi = 0xf2;
+    0x0040312e xor eax, eax                                      |         eax = 0;
+    0x00403130 call 0x402b20                                     |         printf ("Error /home/parsa/experiments/assumptions/crush/ccm-none/groups/bsl/bsls/bsls_stackaddressutil.t.cpp(%d): %s    (failed)\n");
+    0x00403135 mov eax, dword [rip + 0x209bd5]                   |         eax = (anonymous namespace)::testStatus;
+    0x0040313b cmp eax, 0x64                                     |         
+                                                                 |         if (eax > 0x64) {
+    0x0040313e ja 0x403148                                       |             goto label_0;
+                                                                 |         }
+    0x00403140 inc eax                                           |         eax++;
+    0x00403142 mov dword [rip + 0x209bc8], eax                   |         *(obj._anonymous_namespace_::testStatus) = eax;
+                                                                 |     }
+                                                                 | label_0:
+    0x00403148 mov rdi, rsp                                      |     
+    0x0040314b mov esi, r15d                                     |     esi = r15d;
+    0x0040314e call 0x408e70                                     |     eax = BloombergLP::bsls::StackAddressUtil::getStackAddresses(void**,int) (rsp);
+    0x00403153 cmp eax, r15d                                     |     
+                                                                 |     if (eax != r15d) {
+    0x00403156 je 0x4031cd                                       |         
+    0x00403158 cmp dword [rip + 0x209b8d], 0                     |         
+                                                                 |         if (*(obj.MULTITHREADED_TEST::framesToCaptureBase) == 0) {
+    0x0040315f je 0x4031cd                                       |             goto label_1;
+                                                                 |         }
+    0x00403161 mov ebx, eax                                      |         ebx = eax;
+    0x00403163 mov edi, 0x4098fd                                 |         
+    0x00403168 call 0x408c70                                     |         BloombergLP::bsls::BslTestUtil::printStringNoFlush(char const*) ("rc: ");
+    0x0040316d mov edi, ebx                                      |         
+    0x0040316f call 0x408d10                                     |         BloombergLP::bsls::debugprint(int) (ebx);
+    0x00403174 mov edi, 0x409902                                 |         
+    0x00403179 call 0x408c70                                     |         BloombergLP::bsls::BslTestUtil::printStringNoFlush(char const*) (0x409902);
+    0x0040317e call 0x408c60                                     |         BloombergLP::bsls::BslTestUtil::flush() ();
+    0x00403183 mov edi, 0x4098c0                                 |         
+    0x00403188 call 0x408c70                                     |         BloombergLP::bsls::BslTestUtil::printStringNoFlush(char const*) ("framesToCapture: ");
+    0x0040318d mov edi, r15d                                     |         
+    0x00403190 call 0x408d10                                     |         BloombergLP::bsls::debugprint(int) (r15d);
+    0x00403195 mov edi, 0x40a0c3                                 |         
+    0x0040319a call 0x408c70                                     |         BloombergLP::bsls::BslTestUtil::printStringNoFlush(char const*) (0x40a0c3);
+    0x0040319f call 0x408c60                                     |         eax = BloombergLP::bsls::BslTestUtil::flush() ();
+    0x004031a4 mov edi, 0x40a04b                                 |         
+    0x004031a9 mov edx, 0x409904                                 |         edx = "rc == framesToCapture";
+    0x004031ae mov esi, 0xf9                                     |         esi = 0xf9;
+    0x004031b3 xor eax, eax                                      |         eax = 0;
+    0x004031b5 call 0x402b20                                     |         printf ("Error /home/parsa/experiments/assumptions/crush/ccm-none/groups/bsl/bsls/bsls_stackaddressutil.t.cpp(%d): %s    (failed)\n");
+    0x004031ba mov eax, dword [rip + 0x209b50]                   |         eax = (anonymous namespace)::testStatus;
+    0x004031c0 cmp eax, 0x64                                     |         
+                                                                 |         if (eax > 0x64) {
+    0x004031c3 ja 0x4031cd                                       |             goto label_1;
+                                                                 |         }
+    0x004031c5 inc eax                                           |         eax++;
+    0x004031c7 mov dword [rip + 0x209b43], eax                   |         *(obj._anonymous_namespace_::testStatus) = eax;
+                                                                 |     }
+                                                                 | label_1:
+    0x004031cd mov eax, dword [rip + 0x209195]                   |     eax = MULTITHREADED_TEST::mode;
+    0x004031d3 cmp eax, 1                                        |     
+                                                                 |     if (eax == 1) {
+    0x004031d6 je 0x4032d2                                       |         goto label_2;
+                                                                 |     }
+    0x004031dc test eax, eax                                     |     
+                                                                 |     if (eax != 0) {
+    0x004031de jne 0x403440                                      |         goto label_3;
+                                                                 |     }
+    0x004031e4 movsxd rax, r14d                                  |     rax = (int64_t) r14d;
+    0x004031e7 imul rax, rax, 0xf0                               |     rax *= 0xf0;
+    0x004031ee lea rdi, [rax + 0x60c370]                         |     
+    0x004031f5 movsxd rdx, r15d                                  |     rdx = (int64_t) r15d;
+    0x004031f8 shl rdx, 3                                        |     rdx <<= 3;
+    0x004031fc mov rsi, rsp                                      |     
+    0x004031ff call 0x402f60                                     |     eax = memcpy (rax + obj.MULTITHREADED_TEST::addressDataBase, rsp, rdx);
+    0x00403204 test r14d, r14d                                   |     
+                                                                 |     if (r14d != 0) {
+    0x00403207 jne 0x403440                                      |         goto label_3;
+                                                                 |     }
+    0x0040320d cmp dword [rip + 0x209ad8], 0                     |     
+                                                                 |     if (*(obj.MULTITHREADED_TEST::framesToCaptureBase) != 0) {
+    0x00403214 je 0x40323f                                       |         
+    0x00403216 mov edi, 0x40a04b                                 |         
+    0x0040321b mov edx, 0x40991a                                 |         edx = "0 == framesToCaptureBase";
+    0x00403220 mov esi, 0x101                                    |         esi = 0x101;
+    0x00403225 xor eax, eax                                      |         eax = 0;
+    0x00403227 call 0x402b20                                     |         printf ("Error /home/parsa/experiments/assumptions/crush/ccm-none/groups/bsl/bsls/bsls_stackaddressutil.t.cpp(%d): %s    (failed)\n");
+    0x0040322c mov eax, dword [rip + 0x209ade]                   |         eax = (anonymous namespace)::testStatus;
+    0x00403232 cmp eax, 0x64                                     |         
+                                                                 |         if (eax > 0x64) {
+    0x00403235 ja 0x40323f                                       |             goto label_4;
+                                                                 |         }
+    0x00403237 inc eax                                           |         eax++;
+    0x00403239 mov dword [rip + 0x209ad1], eax                   |         *(obj._anonymous_namespace_::testStatus) = eax;
+                                                                 |     }
+                                                                 | label_4:
+    0x0040323f mov edx, 1                                        |     edx = 1;
+    0x00403244 mov rcx, qword [rsp]                              |     rcx = *(rsp);
+    0x00403248 nop dword [rax + rax]                             |     
+                                                                 |     do {
+    0x00403250 lea rax, [rdx + 1]                                |         rax = rdx + 1;
+    0x00403254 cmp rdx, 0x1d                                     |         
+                                                                 |         if (rdx > 0x1d) {
+    0x00403258 ja 0x403269                                       |             goto label_5;
+                                                                 |         }
+    0x0040325a mov rsi, qword [rsp + rdx*8]                      |         rsi = *((rsp + rdx*8));
+    0x0040325e mov rdx, rax                                      |         rdx = rax;
+    0x00403261 cmp rcx, rsi                                      |         
+    0x00403264 mov rcx, rsi                                      |         rcx = rsi;
+    0x00403267 jne 0x403250                                      |         
+                                                                 |     } while (rcx != rsi);
+                                                                 | label_5:
+    0x00403269 dec rax                                           |     rax--;
+    0x0040326c nop dword [rax]                                   |     
+                                                                 |     do {
+    0x00403270 lea rbp, [rax + 1]                                |         rbp = rax + 1;
+    0x00403274 cmp rax, 0x1d                                     |         
+                                                                 |         if (rax > 0x1d) {
+    0x00403278 ja 0x403288                                       |             goto label_6;
+                                                                 |         }
+    0x0040327a mov rcx, qword [rsp + rax*8]                      |         rcx = *((rsp + rax*8));
+    0x0040327e cmp qword [rsp + rax*8 - 8], rcx                  |         
+    0x00403283 mov rax, rbp                                      |         rax = rbp;
+    0x00403286 je 0x403270                                       |         
+                                                                 |     } while (*((rsp + rax*8 - 8)) == rcx);
+                                                                 | label_6:
+    0x00403288 lea rbx, [rbp - 1]                                |     rbx = rbp - 1;
+    0x0040328c cmp ebx, 9                                        |     
+                                                                 |     if (ebx <= 9) {
+    0x0040328f jbe 0x4033f1                                      |         goto label_7;
+                                                                 |     }
+    0x00403295 cmp ebx, 0x1d                                     |     
+                                                                 |     if (ebx < 0x1d) {
+    0x00403298 jb 0x40343a                                       |         goto label_8;
+                                                                 |     }
+    0x0040329e mov edi, 0x409933                                 |     
+    0x004032a3 call 0x408c70                                     |     BloombergLP::bsls::BslTestUtil::printStringNoFlush(char const*) ("ii: ");
+    0x004032a8 mov edi, ebx                                      |     
+    0x004032aa call 0x408d10                                     |     BloombergLP::bsls::debugprint(int) (ebx);
+    0x004032af mov edi, 0x40a0c3                                 |     
+    0x004032b4 call 0x408c70                                     |     BloombergLP::bsls::BslTestUtil::printStringNoFlush(char const*) (0x40a0c3);
+    0x004032b9 call 0x408c60                                     |     eax = BloombergLP::bsls::BslTestUtil::flush() ();
+    0x004032be mov edi, 0x40a04b                                 |     edi = "Error /home/parsa/experiments/assumptions/crush/ccm-none/groups/bsl/bsls/bsls_stackaddressutil.t.cpp(%d): %s    (failed)\n";
+    0x004032c3 mov edx, 0x409941                                 |     edx = "ii < k_MAX_FRAMES_TO_CAPTURE - 1";
+    0x004032c8 mov esi, 0x11c                                    |     esi = 0x11c;
+    0x004032cd jmp 0x403420                                      |     goto label_9;
+                                                                 | label_2:
+    0x004032d2 cmp dword [rip + 0x209a13], 0                     |     
+                                                                 |     if (*(obj.MULTITHREADED_TEST::framesToCaptureBase) == 0) {
+    0x004032d9 jne 0x403304                                      |         
+    0x004032db mov edi, 0x40a04b                                 |         
+    0x004032e0 mov edx, 0x40991f                                 |         edx = 0x40991f;
+    0x004032e5 mov esi, 0x121                                    |         esi = 0x121;
+    0x004032ea xor eax, eax                                      |         eax = 0;
+    0x004032ec call 0x402b20                                     |         printf ("Error /home/parsa/experiments/assumptions/crush/ccm-none/groups/bsl/bsls/bsls_stackaddressutil.t.cpp(%d): %s    (failed)\n");
+    0x004032f1 mov eax, dword [rip + 0x209a19]                   |         eax = (anonymous namespace)::testStatus;
+    0x004032f7 cmp eax, 0x64                                     |         
+                                                                 |         if (eax > 0x64) {
+    0x004032fa ja 0x403304                                       |             goto label_10;
+                                                                 |         }
+    0x004032fc inc eax                                           |         eax++;
+    0x004032fe mov dword [rip + 0x209a0c], eax                   |         *(obj._anonymous_namespace_::testStatus) = eax;
+                                                                 |     }
+                                                                 | label_10:
+    0x00403304 movsxd rax, r14d                                  |     rax = (int64_t) r14d;
+    0x00403307 imul rax, rax, 0xf0                               |     rax *= 0xf0;
+    0x0040330e lea rbp, [rax + 0x60c370]                         |     rbp = rax + obj_MULTITHREADED_TEST::addressDataBase;
+    0x00403315 movsxd r12, r15d                                  |     r12 = (int64_t) r15d;
+    0x00403318 lea rdx, [r12*8]                                  |     rdx = r12*8;
+    0x00403320 mov rdi, rsp                                      |     rdi = rsp;
+    0x00403323 mov rsi, rbp                                      |     rsi = rbp;
+    0x00403326 call 0x402d90                                     |     eax = bcmp ();
+    0x0040332b test eax, eax                                     |     
+                                                                 |     if (eax == 0) {
+    0x0040332d je 0x403440                                       |         goto label_3;
+                                                                 |     }
+    0x00403333 test r15d, r15d                                   |     
+                                                                 |     if (r15d <= 0) {
+    0x00403336 jle 0x403440                                      |         goto label_3;
+                                                                 |     }
+    0x0040333c xor ebx, ebx                                      |     ebx = 0;
+    0x0040333e nop                                               |     
+                                                                 |     do {
+    0x00403340 mov rax, qword [rsp + rbx*8]                      |         rax = *((rsp + rbx*8));
+    0x00403344 mov rcx, qword [rbp + rbx*8]                      |         rcx = *((rbp + rbx*8));
+    0x00403349 cmp rax, rcx                                      |         
+                                                                 |         if (rax != rcx) {
+    0x0040334c jne 0x403364                                      |             goto label_11;
+                                                                 |         }
+    0x0040334e cmp rax, rcx                                      |         
+                                                                 |         if (rax != rcx) {
+    0x00403351 jne 0x403440                                      |             goto label_3;
+                                                                 |         }
+    0x00403357 inc rbx                                           |         rbx++;
+    0x0040335a cmp rbx, r12                                      |         
+    0x0040335d jl 0x403340                                       |         
+                                                                 |     } while (rbx < r12);
+    0x0040335f jmp 0x403440                                      |     goto label_3;
+                                                                 | label_11:
+    0x00403364 mov edi, 0x409962                                 |     
+    0x00403369 call 0x408c70                                     |     BloombergLP::bsls::BslTestUtil::printStringNoFlush(char const*) ("idMod: ");
+    0x0040336e mov edi, r14d                                     |     
+    0x00403371 call 0x408d10                                     |     BloombergLP::bsls::debugprint(int) (r14d);
+    0x00403376 mov edi, 0x409902                                 |     
+    0x0040337b call 0x408c70                                     |     BloombergLP::bsls::BslTestUtil::printStringNoFlush(char const*) (0x409902);
+    0x00403380 call 0x408c60                                     |     BloombergLP::bsls::BslTestUtil::flush() ();
+    0x00403385 mov edi, 0x409933                                 |     
+    0x0040338a call 0x408c70                                     |     BloombergLP::bsls::BslTestUtil::printStringNoFlush(char const*) ("ii: ");
+    0x0040338f mov edi, ebx                                      |     
+    0x00403391 call 0x408d10                                     |     BloombergLP::bsls::debugprint(int) (ebx);
+    0x00403396 mov edi, 0x409902                                 |     
+    0x0040339b call 0x408c70                                     |     BloombergLP::bsls::BslTestUtil::printStringNoFlush(char const*) (0x409902);
+    0x004033a0 call 0x408c60                                     |     BloombergLP::bsls::BslTestUtil::flush() ();
+    0x004033a5 mov edi, 0x4098c0                                 |     
+    0x004033aa call 0x408c70                                     |     BloombergLP::bsls::BslTestUtil::printStringNoFlush(char const*) ("framesToCapture: ");
+    0x004033af mov edi, r15d                                     |     
+    0x004033b2 call 0x408d10                                     |     BloombergLP::bsls::debugprint(int) (r15d);
+    0x004033b7 mov edi, 0x40a0c3                                 |     
+    0x004033bc call 0x408c70                                     |     BloombergLP::bsls::BslTestUtil::printStringNoFlush(char const*) (0x40a0c3);
+    0x004033c1 call 0x408c60                                     |     eax = BloombergLP::bsls::BslTestUtil::flush() ();
+    0x004033c6 mov edi, 0x40a04b                                 |     
+    0x004033cb mov edx, 0x40996a                                 |     edx = "(match = addresses[ii] == addressDataBase[idMod][ii])";
+    0x004033d0 mov esi, 0x128                                    |     esi = 0x128;
+    0x004033d5 xor eax, eax                                      |     eax = 0;
+    0x004033d7 call 0x402b20                                     |     printf ("Error /home/parsa/experiments/assumptions/crush/ccm-none/groups/bsl/bsls/bsls_stackaddressutil.t.cpp(%d): %s    (failed)\n");
+    0x004033dc mov eax, dword [rip + 0x20992e]                   |     eax = (anonymous namespace)::testStatus;
+    0x004033e2 cmp eax, 0x64                                     |     
+                                                                 |     if (eax <= 0x64) {
+    0x004033e5 ja 0x403440                                       |         
+    0x004033e7 inc eax                                           |         eax++;
+    0x004033e9 mov dword [rip + 0x209921], eax                   |         *(obj._anonymous_namespace_::testStatus) = eax;
+    0x004033ef jmp 0x403440                                      |         goto label_3;
+                                                                 | label_7:
+    0x004033f1 mov edi, 0x409933                                 |         
+    0x004033f6 call 0x408c70                                     |         BloombergLP::bsls::BslTestUtil::printStringNoFlush(char const*) ("ii: ");
+    0x004033fb mov edi, ebx                                      |         
+    0x004033fd call 0x408d10                                     |         BloombergLP::bsls::debugprint(int) (ebx);
+    0x00403402 mov edi, 0x40a0c3                                 |         
+    0x00403407 call 0x408c70                                     |         BloombergLP::bsls::BslTestUtil::printStringNoFlush(char const*) (0x40a0c3);
+    0x0040340c call 0x408c60                                     |         eax = BloombergLP::bsls::BslTestUtil::flush() ();
+    0x00403411 mov edi, 0x40a04b                                 |         
+    0x00403416 mov edx, 0x409938                                 |         edx = "10 <= ii";
+    0x0040341b mov esi, 0x11b                                    |         esi = 0x11b;
+                                                                 | label_9:
+    0x00403420 xor eax, eax                                      |         eax = 0;
+    0x00403422 call 0x402b20                                     |         printf ("Error /home/parsa/experiments/assumptions/crush/ccm-none/groups/bsl/bsls/bsls_stackaddressutil.t.cpp(%d): %s    (failed)\n");
+    0x00403427 mov eax, dword [rip + 0x2098e3]                   |         eax = (anonymous namespace)::testStatus;
+    0x0040342d cmp eax, 0x64                                     |         
+                                                                 |         if (eax <= 0x64) {
+    0x00403430 ja 0x40343a                                       |             
+    0x00403432 inc eax                                           |             eax++;
+    0x00403434 mov dword [rip + 0x2098d6], eax                   |             *(obj._anonymous_namespace_::testStatus) = eax;
+                                                                 |         }
+                                                                 | label_8:
+    0x0040343a mov dword [rip + 0x2098ac], ebp                   |         *(obj.MULTITHREADED_TEST::framesToCaptureBase) = ebp;
+                                                                 |     }
+                                                                 | label_3:
+    0x00403440 add rsp, 0xf0                                     |     
+    0x00403447 pop rbx                                           |     
+    0x00403448 pop r12                                           |     
+    0x0040344a pop r14                                           |     
+    0x0040344c pop r15                                           |     
+    0x0040344e pop rbp                                           |     
+    0x0040344f ret                                               |     return rax;
+                                                                 | }

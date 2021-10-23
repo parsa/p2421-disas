@@ -1,0 +1,43 @@
+    ; assembly                                                                                                                   | /* r2dec pseudo code output */
+                                                                                                                                 | /* ball_logthrottle.t/assume @ 0x446af0 */
+                                                                                                                                 | #include <stdint.h>
+                                                                                                                                 |  
+    ; (fcn) method.BloombergLP::bdlmt::Throttle.initialize_int__long_long__BloombergLP::bsls::SystemClockType::Enum_ ()          | int64_t method_BloombergLP::bdlmt::Throttle_initialize_int_long_long_BloombergLP::bsls::SystemClockType::Enum_ (int64_t arg4, int64_t arg3, int64_t arg2, int64_t arg1) {
+                                                                                                                                 |     rcx = arg4;
+                                                                                                                                 |     rdx = arg3;
+                                                                                                                                 |     rsi = arg2;
+                                                                                                                                 |     rdi = arg1;
+                                                                                                                                 |     /* BloombergLP::bdlmt::Throttle::initialize(int, long long, BloombergLP::bsls::SystemClockType::Enum) */
+    0x00446af0 movabs rax, 0xfb9c8bf28a8c0000                                                                                    |     rax = 0xfb9c8bf28a8c0000;
+    0x00446afa xchg qword [rdi], rax                                                                                             |     tmp_0 = rdi;
+                                                                                                                                 |     rdi = rax;
+                                                                                                                                 |     rax = tmp_0;
+    0x00446afd test esi, esi                                                                                                     |     
+                                                                                                                                 |     if (esi != 0) {
+    0x00446aff je 0x446b0c                                                                                                       |         
+    0x00446b01 test rdx, rdx                                                                                                     |         
+                                                                                                                                 |         if (rdx != 0) {
+    0x00446b04 je 0x446b18                                                                                                       |             
+    0x00446b06 mov qword [rdi + 8], rdx                                                                                          |             *((rdi + 8)) = rdx;
+    0x00446b0a jmp 0x446b29                                                                                                      |             
+                                                                                                                                 |         } else {
+    0x00446b0c movabs rax, 0x7fffffffffffffff                                                                                    |             rax = 0x7fffffffffffffff;
+    0x00446b16 jmp 0x446b25                                                                                                      |             
+                                                                                                                                 |         } else {
+    0x00446b18 movabs rax, 0x7fffffffffffffff                                                                                    |             rax = 0x7fffffffffffffff;
+    0x00446b22 inc rax                                                                                                           |             rax++;
+                                                                                                                                 |         }
+    0x00446b25 mov qword [rdi + 8], rax                                                                                          |         *((rdi + 8)) = rax;
+                                                                                                                                 |     }
+    0x00446b29 mov eax, esi                                                                                                      |     eax = esi;
+    0x00446b2b imul rax, rdx                                                                                                     |     rax *= rdx;
+    0x00446b2f mov qword [rdi + 0x10], rax                                                                                       |     *((rdi + 0x10)) = rax;
+    0x00446b33 test rdx, rdx                                                                                                     |     
+    0x00446b36 mov eax, 0x7fffffff                                                                                               |     eax = 0x7fffffff;
+                                                                                                                                 |     if (rdx != 0) {
+    0x00446b3b cmovne eax, esi                                                                                                   |         eax = esi;
+                                                                                                                                 |     }
+    0x00446b3e mov dword [rdi + 0x18], eax                                                                                       |     *((rdi + 0x18)) = eax;
+    0x00446b41 mov dword [rdi + 0x1c], ecx                                                                                       |     *((rdi + 0x1c)) = ecx;
+    0x00446b44 ret                                                                                                               |     return rax;
+                                                                                                                                 | }

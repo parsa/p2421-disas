@@ -1,0 +1,36 @@
+    ; assembly                                                                                               | /* r2dec pseudo code output */
+                                                                                                             | /* balb_controlmanager.t/none @ 0x40d000 */
+                                                                                                             | #include <stdint.h>
+                                                                                                             |  
+    ; (fcn) method.BloombergLP::bdlb::String.copy_char_const__int__BloombergLP::bslma::Allocator_ ()         | uint64_t method_BloombergLP::bdlb::String_copy_char_const_int_BloombergLP::bslma::Allocator_ (int64_t arg3, int64_t arg2, int64_t arg1) {
+                                                                                                             |     rdx = arg3;
+                                                                                                             |     rsi = arg2;
+                                                                                                             |     rdi = arg1;
+                                                                                                             |     /* BloombergLP::bdlb::String::copy(char const*, int, BloombergLP::bslma::Allocator*) */
+    0x0040d000 push r15                                                                                      |     
+    0x0040d002 push r14                                                                                      |     
+    0x0040d004 push rbx                                                                                      |     
+    0x0040d005 mov r15d, esi                                                                                 |     r15d = esi;
+    0x0040d008 mov r14, rdi                                                                                  |     r14 = rdi;
+    0x0040d00b lea eax, [r15 + 1]                                                                            |     eax = r15 + 1;
+    0x0040d00f movsxd rsi, eax                                                                               |     rsi = (int64_t) eax;
+    0x0040d012 mov rax, qword [rdx]                                                                          |     rax = *(rdx);
+    0x0040d015 mov rdi, rdx                                                                                  |     rdi = rdx;
+    0x0040d018 call qword [rax + 0x10]                                                                       |     rax = uint64_t (*rax + 0x10)(void, void, void) (rbx, r14, r15);
+    0x0040d01b mov rbx, rax                                                                                  |     rbx = rax;
+    0x0040d01e movsxd r15, r15d                                                                              |     r15 = (int64_t) r15d;
+    0x0040d021 test r14, r14                                                                                 |     
+                                                                                                             |     if (r14 != 0) {
+    0x0040d024 je 0x40d034                                                                                   |         
+    0x0040d026 mov rdi, rbx                                                                                  |         
+    0x0040d029 mov rsi, r14                                                                                  |         
+    0x0040d02c mov rdx, r15                                                                                  |         
+    0x0040d02f call 0x404af0                                                                                 |         memcpy (rbx, r14, r15);
+                                                                                                             |     }
+    0x0040d034 mov byte [rbx + r15], 0                                                                       |     *((rbx + r15)) = 0;
+    0x0040d039 mov rax, rbx                                                                                  |     rax = rbx;
+    0x0040d03c pop rbx                                                                                       |     
+    0x0040d03d pop r14                                                                                       |     
+    0x0040d03f pop r15                                                                                       |     
+    0x0040d041 ret                                                                                           |     return rax;
+                                                                                                             | }

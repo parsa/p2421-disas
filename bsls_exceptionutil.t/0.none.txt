@@ -1,0 +1,17 @@
+    ; assembly                                       | /* r2dec pseudo code output */
+                                                     | /* bsls_exceptionutil.t/none @ 0x400fb0 */
+                                                     | #include <stdint.h>
+                                                     |  
+    ; (fcn) sym.abortSignalHandler ()                | void abortSignalHandler (void) {
+    0x00400fb0 push rax                              |     
+    0x00400fb1 cmp byte [rip + 0x2021c4], 0          |     
+                                                     |     if (*(obj.g_inTest) == 0) {
+    0x00400fb8 jne 0x400fbc                          |         
+    0x00400fba pop rax                               |         
+    0x00400fbb ret                                   |         return;
+                                                     |     }
+    0x00400fbc mov edi, 0x603180                     |     edi = g_jumpBuffer;
+    0x00400fc1 mov esi, 1                            |     esi = 1;
+    0x00400fc6 call 0x400d60                         |     siglongjmp ();
+    0x00400fcb nop dword [rax + rax]                 |     
+                                                     | }

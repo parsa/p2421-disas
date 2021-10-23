@@ -1,0 +1,310 @@
+    ; assembly                                                                                                                       | /* r2dec pseudo code output */
+                                                                                                                                     | /* balber_berutil.t/none @ 0x476d60 */
+                                                                                                                                     | #include <stdint.h>
+                                                                                                                                     |  
+                                                                                                                                     | uint8_t rotate_right8 (uint8_t value, uint32_t count) {
+                                                                                                                                     |     const uint8_t mask = (CHAR_BIT * sizeof (value)) - 1;
+                                                                                                                                     |     count &= mask;
+                                                                                                                                     |     return (value >> count) | (value << (-count & mask));
+                                                                                                                                     | }
+                                                                                                                                     |  
+    ; (fcn) method.BloombergLP::bdldfp::DecimalImpUtil.normalize_BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128_ ()      | int64_t method_BloombergLP::bdldfp::DecimalImpUtil_normalize_BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128_ (int64_t arg2, int64_t arg1) {
+                                                                                                                                     |     int64_t var_ch;
+                                                                                                                                     |     int64_t var_10h;
+                                                                                                                                     |     rsi = arg2;
+                                                                                                                                     |     rdi = arg1;
+                                                                                                                                     |     /* BloombergLP::bdldfp::DecimalImpUtil::normalize(BloombergLP::bdldfp::DecimalImpUtil_IntelDfp::ValueType128) */
+    0x00476d60 push rbp                                                                                                              |     
+    0x00476d61 push r15                                                                                                              |     
+    0x00476d63 push r14                                                                                                              |     
+    0x00476d65 push r13                                                                                                              |     
+    0x00476d67 push r12                                                                                                              |     
+    0x00476d69 push rbx                                                                                                              |     
+    0x00476d6a sub rsp, 0x18                                                                                                         |     
+    0x00476d6e mov r14, rsi                                                                                                          |     r14 = rsi;
+    0x00476d71 mov r12, rdi                                                                                                          |     r12 = rdi;
+    0x00476d74 call 0x4a2ad0                                                                                                         |     eax = _bid128_class ();
+    0x00476d79 mov edx, 0xffffffff                                                                                                   |     edx = 0xffffffff;
+    0x00476d7e cmp eax, 9                                                                                                            |     
+                                                                                                                                     |     if (eax <= 9) {
+    0x00476d81 ja 0x476d8c                                                                                                           |         
+    0x00476d83 cdqe                                                                                                                  |         rax = (int64_t) eax;
+    0x00476d85 mov edx, dword [rax*4 + 0x50a780]                                                                                     |         edx = *((rax*4 + 0x50a780));
+                                                                                                                                     |     }
+    0x00476d8c movabs rax, 0x6000000000000000                                                                                        |     rax = 0x6000000000000000;
+    0x00476d96 mov rcx, r14                                                                                                          |     rcx = r14;
+    0x00476d99 and rcx, rax                                                                                                          |     rcx &= rax;
+    0x00476d9c cmp rcx, rax                                                                                                          |     
+                                                                                                                                     |     if (rcx != rax) {
+    0x00476d9f jne 0x476e76                                                                                                          |         goto label_1;
+                                                                                                                                     |     }
+    0x00476da5 movabs rax, 0x7fffffffffff                                                                                            |     rax = 0x7fffffffffff;
+    0x00476daf and rax, r14                                                                                                          |     rax &= r14;
+    0x00476db2 movabs rbp, 0x20000000000000                                                                                          |     
+    0x00476dbc or rbp, rax                                                                                                           |     rbp |= rax;
+    0x00476dbf mov r15, r14                                                                                                          |     r15 = r14;
+    0x00476dc2 shr r15, 0x2f                                                                                                         |     r15 >>= 0x2f;
+    0x00476dc6 and r15d, 0x3fff                                                                                                      |     r15d &= 0x3fff;
+    0x00476dcd cmp edx, 4                                                                                                            |     
+                                                                                                                                     |     if (edx > 4) {
+    0x00476dd0 ja 0x476ea1                                                                                                           |         goto label_2;
+                                                                                                                                     |     }
+                                                                                                                                     | label_0:
+    0x00476dd6 mov eax, edx                                                                                                          |     eax = edx;
+                                                                                                                                     |     /* switch table (5 cases) at 0x50a758 */
+    0x00476dd8 jmp qword [rax*8 + 0x50a758]                                                                                          |     
+    0x00476ddf cmp r15d, 0x17ff                                                                                                      |     
+                                                                                                                                     |     if (r15d > 0x17ff) {
+    0x00476de6 jg 0x476ea6                                                                                                           |         goto label_3;
+                                                                                                                                     |     }
+    0x00476dec movabs rsi, 0xcccccccccccccccd                                                                                        |     rsi = 0xcccccccccccccccd;
+    0x00476df6 movabs r8, 0x1999999999999999                                                                                         |     r8 = 0x1999999999999999;
+                                                                                                                                     |     do {
+    0x00476e00 mov rax, rbp                                                                                                          |         rax = rbp;
+    0x00476e03 mul rsi                                                                                                               |         rdx:rax = rax * rsi;
+    0x00476e06 mov rbx, rdx                                                                                                          |         rbx = rdx;
+    0x00476e09 shr rbx, 3                                                                                                            |         rbx >>= 3;
+    0x00476e0d lea rax, [rbx + rbx]                                                                                                  |         rax = rbx + rbx;
+    0x00476e11 lea rax, [rax + rax*4]                                                                                                |         rax *= 5;
+    0x00476e15 mov rcx, rbp                                                                                                          |         rcx = rbp;
+    0x00476e18 sub rcx, rax                                                                                                          |         rcx -= rax;
+    0x00476e1b mov rax, r12                                                                                                          |         rax = r12;
+    0x00476e1e mul rsi                                                                                                               |         rdx:rax = rax * rsi;
+    0x00476e21 shr rdx, 3                                                                                                            |         rdx >>= 3;
+    0x00476e25 lea rax, [rdx + rdx]                                                                                                  |         rax = rdx + rdx;
+    0x00476e29 lea rax, [rax + rax*4]                                                                                                |         rax *= 5;
+    0x00476e2d mov edi, r12d                                                                                                         |         edi = r12d;
+    0x00476e30 sub edi, eax                                                                                                          |         edi -= eax;
+    0x00476e32 lea rax, [rcx + rcx*2]                                                                                                |         rax = rcx * 3;
+    0x00476e36 lea eax, [rdi + rax*2]                                                                                                |         eax = rdi + rax*2;
+    0x00476e39 imul edi, eax, 0xffffffcd                                                                                             |         edi = eax * 0xffffffcd;
+    0x00476e3c ror dil, 1                                                                                                            |         dil = rotate_right8 (dil, 1);
+    0x00476e3f cmp dil, 0x19                                                                                                         |         
+                                                                                                                                     |         if (dil > 0x19) {
+    0x00476e43 ja 0x476ea6                                                                                                           |             goto label_3;
+                                                                                                                                     |         }
+    0x00476e45 imul eax, eax, 0xcd                                                                                                   |         eax *= 0xcd;
+    0x00476e4b movzx eax, ax                                                                                                         |         eax = (int32_t) ax;
+    0x00476e4e shr eax, 0xb                                                                                                          |         eax >>= 0xb;
+    0x00476e51 imul rcx, r8                                                                                                          |         rcx *= r8;
+    0x00476e55 add rcx, rdx                                                                                                          |         rcx += rdx;
+    0x00476e58 movzx r12d, al                                                                                                        |         r12d = (int32_t) al;
+    0x00476e5c add r12, rcx                                                                                                          |         r12 += rcx;
+    0x00476e5f inc r15d                                                                                                              |         r15d++;
+    0x00476e62 mov rbp, rbx                                                                                                          |         
+    0x00476e65 cmp r15d, 0x1800                                                                                                      |         
+    0x00476e6c jne 0x476e00                                                                                                          |         
+                                                                                                                                     |     } while (r15d != 0x1800);
+    0x00476e6e mov r15d, 0x1800                                                                                                      |     r15d = 0x1800;
+    0x00476e74 jmp 0x476ea9                                                                                                          |     goto label_4;
+                                                                                                                                     | label_1:
+    0x00476e76 mov r15, r14                                                                                                          |     r15 = r14;
+    0x00476e79 shr r15, 0x31                                                                                                         |     r15 >>= 0x31;
+    0x00476e7d and r15d, 0x3fff                                                                                                      |     r15d &= 0x3fff;
+    0x00476e84 add r15d, 0xffffe7e0                                                                                                  |     r15d += 0xffffe7e0;
+    0x00476e8b movabs rbp, 0x1ffffffffffff                                                                                           |     
+    0x00476e95 and rbp, r14                                                                                                          |     rbp &= r14;
+    0x00476e98 cmp edx, 4                                                                                                            |     
+                                                                                                                                     |     if (edx <= 4) {
+    0x00476e9b jbe 0x476dd6                                                                                                          |         goto label_0;
+                                                                                                                                     |     }
+                                                                                                                                     | label_2:
+    0x00476ea1 jmp 0x4770f0                                                                                                          |     goto label_5;
+                                                                                                                                     | label_3:
+    0x00476ea6 mov rbx, rbp                                                                                                          |     rbx = rbp;
+                                                                                                                                     | label_4:
+    0x00476ea9 mov rdi, 0xffffffffffffffff                                                                                           |     rdi = 0xffffffffffffffff;
+    0x00476eb0 call 0x4b6c50                                                                                                         |     rax = _bid128_from_uint64 ();
+    0x00476eb5 mov rbp, rax                                                                                                          |     
+    0x00476eb8 mov r13, rdx                                                                                                          |     r13 = rdx;
+    0x00476ebb mov edi, 1                                                                                                            |     edi = 1;
+    0x00476ec0 call 0x4b6c50                                                                                                         |     rax = _bid128_from_uint64 ();
+    0x00476ec5 mov rcx, rdx                                                                                                          |     rcx = rdx;
+    0x00476ec8 mov dword [rsp + 0xc], 0                                                                                              |     *((rsp + 0xc)) = 0;
+    0x00476ed0 lea r8, [rsp + 0xc]                                                                                                   |     r8 = rsp + 0xc;
+    0x00476ed5 mov rdi, rbp                                                                                                          |     rdi = rbp;
+    0x00476ed8 mov rsi, r13                                                                                                          |     rsi = r13;
+    0x00476edb mov rdx, rax                                                                                                          |     rdx = rax;
+    0x00476ede call 0x48d7e0                                                                                                         |     rax = _bid128_add ();
+    0x00476ee3 mov r13, rax                                                                                                          |     r13 = rax;
+    0x00476ee6 mov qword [rsp + 0x10], rdx                                                                                           |     *((rsp + 0x10)) = rdx;
+    0x00476eeb mov eax, dword [rsp + 0xc]                                                                                            |     eax = *((rsp + 0xc));
+    0x00476eef mov ebp, 0x21                                                                                                         |     
+    0x00476ef4 test al, 1                                                                                                            |     
+                                                                                                                                     |     if ((al & 1) == 0) {
+    0x00476ef6 jne 0x476f01                                                                                                          |         
+    0x00476ef8 mov ebp, 0x22                                                                                                         |         
+    0x00476efd test al, 0x1c                                                                                                         |         
+                                                                                                                                     |         if ((al & 0x1c) == 0) {
+    0x00476eff je 0x476f08                                                                                                           |             goto label_6;
+                                                                                                                                     |         }
+                                                                                                                                     |     }
+    0x00476f01 call 0x404a50                                                                                                         |     errno_location ();
+    0x00476f06 mov dword [rax], ebp                                                                                                  |     *(rax) = ebp;
+                                                                                                                                     | label_6:
+    0x00476f08 mov rdi, rbx                                                                                                          |     rdi = rbx;
+    0x00476f0b call 0x4b6c50                                                                                                         |     rax = _bid128_from_uint64 ();
+    0x00476f10 mov dword [rsp + 0xc], 0                                                                                              |     *((rsp + 0xc)) = 0;
+    0x00476f18 lea r8, [rsp + 0xc]                                                                                                   |     r8 = rsp + 0xc;
+    0x00476f1d mov rdi, rax                                                                                                          |     rdi = rax;
+    0x00476f20 mov rsi, rdx                                                                                                          |     rsi = rdx;
+    0x00476f23 mov rdx, r13                                                                                                          |     rdx = r13;
+    0x00476f26 mov rcx, qword [rsp + 0x10]                                                                                           |     rcx = *((rsp + 0x10));
+    0x00476f2b call 0x4a2450                                                                                                         |     rax = _bid128_mul ();
+    0x00476f30 mov r13, rax                                                                                                          |     r13 = rax;
+    0x00476f33 mov rbp, rdx                                                                                                          |     
+    0x00476f36 mov eax, dword [rsp + 0xc]                                                                                            |     eax = *((rsp + 0xc));
+    0x00476f3a mov ebx, 0x21                                                                                                         |     ebx = 0x21;
+    0x00476f3f test al, 1                                                                                                            |     
+                                                                                                                                     |     if ((al & 1) == 0) {
+    0x00476f41 jne 0x476f4c                                                                                                          |         
+    0x00476f43 mov ebx, 0x22                                                                                                         |         ebx = 0x22;
+    0x00476f48 test al, 0x1c                                                                                                         |         
+                                                                                                                                     |         if ((al & 0x1c) == 0) {
+    0x00476f4a je 0x476f53                                                                                                           |             goto label_7;
+                                                                                                                                     |         }
+                                                                                                                                     |     }
+    0x00476f4c call 0x404a50                                                                                                         |     errno_location ();
+    0x00476f51 mov dword [rax], ebx                                                                                                  |     *(rax) = ebx;
+                                                                                                                                     | label_7:
+    0x00476f53 mov rdi, r12                                                                                                          |     rdi = r12;
+    0x00476f56 call 0x4b6c50                                                                                                         |     rax = _bid128_from_uint64 ();
+    0x00476f5b mov rcx, rdx                                                                                                          |     rcx = rdx;
+    0x00476f5e mov dword [rsp + 0xc], 0                                                                                              |     *((rsp + 0xc)) = 0;
+    0x00476f66 lea r8, [rsp + 0xc]                                                                                                   |     r8 = rsp + 0xc;
+    0x00476f6b mov rdi, r13                                                                                                          |     rdi = r13;
+    0x00476f6e mov rsi, rbp                                                                                                          |     rsi = rbp;
+    0x00476f71 mov rdx, rax                                                                                                          |     rdx = rax;
+    0x00476f74 call 0x48d7e0                                                                                                         |     rax = _bid128_add ();
+    0x00476f79 mov r12, rax                                                                                                          |     r12 = rax;
+    0x00476f7c mov rbp, rdx                                                                                                          |     
+    0x00476f7f mov eax, dword [rsp + 0xc]                                                                                            |     eax = *((rsp + 0xc));
+    0x00476f83 mov ebx, 0x21                                                                                                         |     ebx = 0x21;
+    0x00476f88 test al, 1                                                                                                            |     
+                                                                                                                                     |     if ((al & 1) == 0) {
+    0x00476f8a jne 0x476f95                                                                                                          |         
+    0x00476f8c mov ebx, 0x22                                                                                                         |         ebx = 0x22;
+    0x00476f91 test al, 0x1c                                                                                                         |         
+                                                                                                                                     |         if ((al & 0x1c) == 0) {
+    0x00476f93 je 0x476f9c                                                                                                           |             goto label_8;
+                                                                                                                                     |         }
+                                                                                                                                     |     }
+    0x00476f95 call 0x404a50                                                                                                         |     errno_location ();
+    0x00476f9a mov dword [rax], ebx                                                                                                  |     *(rax) = ebx;
+                                                                                                                                     | label_8:
+    0x00476f9c mov dword [rsp + 0xc], 0                                                                                              |     *((rsp + 0xc)) = 0;
+    0x00476fa4 lea rcx, [rsp + 0xc]                                                                                                  |     rcx = rsp + 0xc;
+    0x00476fa9 mov rdi, r12                                                                                                          |     rdi = r12;
+    0x00476fac mov rsi, rbp                                                                                                          |     rsi = rbp;
+    0x00476faf mov edx, r15d                                                                                                         |     edx = r15d;
+    0x00476fb2 call 0x4a6730                                                                                                         |     rax = _bid128_scalbn ();
+    0x00476fb7 mov r15, rax                                                                                                          |     r15 = rax;
+    0x00476fba mov rbx, rdx                                                                                                          |     rbx = rdx;
+    0x00476fbd mov eax, dword [rsp + 0xc]                                                                                            |     eax = *((rsp + 0xc));
+    0x00476fc1 test al, 1                                                                                                            |     
+                                                                                                                                     |     if ((al & 1) != 0) {
+    0x00476fc3 jne 0x477068                                                                                                          |         goto label_9;
+                                                                                                                                     |     }
+    0x00476fc9 test al, 8                                                                                                            |     
+                                                                                                                                     |     if ((al & 8) != 0) {
+    0x00476fcb jne 0x47707f                                                                                                          |         goto label_10;
+                                                                                                                                     |     }
+                                                                                                                                     |     do {
+    0x00476fd1 test r14, r14                                                                                                         |         
+                                                                                                                                     |         if (r14 >= 0) {
+    0x00476fd4 jns 0x4770f0                                                                                                          |             goto label_5;
+                                                                                                                                     |         }
+    0x00476fda jmp 0x47708f                                                                                                          |         goto label_11;
+    0x00476fdf test r14, r14                                                                                                         |         
+                                                                                                                                     |         if (r14 < 0) {
+    0x00476fe2 js 0x477097                                                                                                           |             goto label_12;
+                                                                                                                                     |         }
+    0x00476fe8 mov dword [rsp + 0xc], 0                                                                                              |         *((rsp + 0xc)) = 0;
+    0x00476ff0 lea rsi, [rsp + 0xc]                                                                                                  |         rsi = rsp + 0xc;
+    0x00476ff5 mov edi, 0x50a7ca                                                                                                     |         edi = 0x50a7ca;
+    0x00476ffa call 0x4a7b80                                                                                                         |         _bid128_from_string ();
+    0x00476fff jmp 0x477021                                                                                                          |         goto label_13;
+    0x00477001 test r14, r14                                                                                                         |         
+                                                                                                                                     |         if (r14 < 0) {
+    0x00477004 js 0x4770b0                                                                                                           |             goto label_14;
+                                                                                                                                     |         }
+    0x0047700a mov dword [rsp + 0xc], 0                                                                                              |         *((rsp + 0xc)) = 0;
+    0x00477012 lea rsi, [rsp + 0xc]                                                                                                  |         rsi = rsp + 0xc;
+    0x00477017 mov edi, 0x50a57d                                                                                                     |         edi = 0x50a57d;
+    0x0047701c call 0x4a7b80                                                                                                         |         rax = _bid128_from_string ();
+                                                                                                                                     | label_13:
+    0x00477021 mov r15, rax                                                                                                          |         r15 = rax;
+    0x00477024 mov rbx, rdx                                                                                                          |         rbx = rdx;
+    0x00477027 test byte [rsp + 0xc], 0x18                                                                                           |         
+                                                                                                                                     |         if ((*((rsp + 0xc)) & 0x18) == 0) {
+    0x0047702c je 0x4770f0                                                                                                           |             goto label_5;
+                                                                                                                                     |         }
+    0x00477032 call 0x404a50                                                                                                         |         errno_location ();
+    0x00477037 mov dword [rax], 0x22                                                                                                 |         *(rax) = 0x22;
+    0x0047703d jmp 0x4770f0                                                                                                          |         goto label_5;
+    0x00477042 xor edi, edi                                                                                                          |         edi = 0;
+    0x00477044 call 0x4b6bf0                                                                                                         |         rax = _bid128_from_int32 ();
+    0x00477049 mov dword [rsp + 0xc], 0                                                                                              |         *((rsp + 0xc)) = 0;
+    0x00477051 lea rcx, [rsp + 0xc]                                                                                                  |         rcx = rsp + 0xc;
+    0x00477056 mov rdi, rax                                                                                                          |         rdi = rax;
+    0x00477059 mov rsi, rdx                                                                                                          |         rsi = rdx;
+    0x0047705c xor edx, edx                                                                                                          |         edx = 0;
+    0x0047705e call 0x4a6730                                                                                                         |         _bid128_scalbn ();
+    0x00477063 jmp 0x4770ea                                                                                                          |         goto label_15;
+                                                                                                                                     | label_9:
+    0x00477068 call 0x404a50                                                                                                         |         errno_location ();
+    0x0047706d mov dword [rax], 0x21                                                                                                 |         *(rax) = 0x21;
+    0x00477073 mov eax, dword [rsp + 0xc]                                                                                            |         eax = *((rsp + 0xc));
+    0x00477077 test al, 8                                                                                                            |         
+    0x00477079 je 0x476fd1                                                                                                           |         
+                                                                                                                                     |     } while ((al & 8) == 0);
+                                                                                                                                     | label_10:
+    0x0047707f call 0x404a50                                                                                                         |     errno_location ();
+    0x00477084 mov dword [rax], 0x22                                                                                                 |     *(rax) = 0x22;
+    0x0047708a test r14, r14                                                                                                         |     
+                                                                                                                                     |     if (r14 < 0) {
+    0x0047708d jns 0x4770f0                                                                                                          |         
+                                                                                                                                     | label_11:
+    0x0047708f mov rdi, r15                                                                                                          |         rdi = r15;
+    0x00477092 mov rsi, rbx                                                                                                          |         rsi = rbx;
+    0x00477095 jmp 0x4770e5                                                                                                          |         goto label_16;
+                                                                                                                                     | label_12:
+    0x00477097 mov dword [rsp + 0xc], 0                                                                                              |         *((rsp + 0xc)) = 0;
+    0x0047709f lea rsi, [rsp + 0xc]                                                                                                  |         rsi = rsp + 0xc;
+    0x004770a4 mov edi, 0x50a7ca                                                                                                     |         edi = 0x50a7ca;
+    0x004770a9 call 0x4a7b80                                                                                                         |         _bid128_from_string ();
+    0x004770ae jmp 0x4770c7                                                                                                          |         goto label_17;
+                                                                                                                                     | label_14:
+    0x004770b0 mov dword [rsp + 0xc], 0                                                                                              |         *((rsp + 0xc)) = 0;
+    0x004770b8 lea rsi, [rsp + 0xc]                                                                                                  |         rsi = rsp + 0xc;
+    0x004770bd mov edi, 0x50a57d                                                                                                     |         edi = 0x50a57d;
+    0x004770c2 call 0x4a7b80                                                                                                         |         rax = _bid128_from_string ();
+                                                                                                                                     | label_17:
+    0x004770c7 mov rbx, rax                                                                                                          |         rbx = rax;
+    0x004770ca mov rbp, rdx                                                                                                          |         
+    0x004770cd test byte [rsp + 0xc], 0x18                                                                                           |         
+                                                                                                                                     |         if ((*((rsp + 0xc)) & 0x18) != 0) {
+    0x004770d2 je 0x4770df                                                                                                           |             
+    0x004770d4 call 0x404a50                                                                                                         |             errno_location ();
+    0x004770d9 mov dword [rax], 0x22                                                                                                 |             *(rax) = 0x22;
+                                                                                                                                     |         }
+    0x004770df mov rdi, rbx                                                                                                          |         rdi = rbx;
+    0x004770e2 mov rsi, rbp                                                                                                          |         rsi = rbp;
+                                                                                                                                     | label_16:
+    0x004770e5 call 0x4a2a70                                                                                                         |         rax = _bid128_negate ();
+                                                                                                                                     | label_15:
+    0x004770ea mov r15, rax                                                                                                          |         r15 = rax;
+    0x004770ed mov rbx, rdx                                                                                                          |         rbx = rdx;
+                                                                                                                                     |     }
+                                                                                                                                     | label_5:
+    0x004770f0 mov rax, r15                                                                                                          |     rax = r15;
+    0x004770f3 mov rdx, rbx                                                                                                          |     rdx = rbx;
+    0x004770f6 add rsp, 0x18                                                                                                         |     
+    0x004770fa pop rbx                                                                                                               |     
+    0x004770fb pop r12                                                                                                               |     
+    0x004770fd pop r13                                                                                                               |     
+    0x004770ff pop r14                                                                                                               |     
+    0x00477101 pop r15                                                                                                               |     
+    0x00477103 pop rbp                                                                                                               |     
+    0x00477104 ret                                                                                                                   |     return rax;
+                                                                                                                                     | }

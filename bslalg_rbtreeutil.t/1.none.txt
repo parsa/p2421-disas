@@ -1,0 +1,358 @@
+    ; assembly                                                                                                                   | /* r2dec pseudo code output */
+                                                                                                                                 | /* bslalg_rbtreeutil.t/none @ 0x487ae0 */
+                                                                                                                                 | #include <stdint.h>
+                                                                                                                                 |  
+    ; (fcn) sym.char_const_ggParseNode_IntNode__void____IntNode__int___IntNode__char_const__void___const__IntNode__int__ ()      | uint64_t char_const_ggParseNode_IntNode_void_IntNode_int_IntNode_char_const_void_const_IntNode_int_ (int64_t arg3, int64_t arg2, int64_t arg1) {
+                                                                                                                                 |     int64_t var_8h;
+                                                                                                                                 |     int64_t var_10h;
+                                                                                                                                 |     rdx = arg3;
+                                                                                                                                 |     rsi = arg2;
+                                                                                                                                 |     rdi = arg1;
+                                                                                                                                 |     /* char const* ggParseNode<IntNode, void (*)(IntNode*, int)>(IntNode**, char const*, void (* const&)(IntNode*, int)) */
+                                                                                                                                 | label_0:
+    0x00487ae0 push rbp                                                                                                          |     
+    0x00487ae1 push r15                                                                                                          |     
+    0x00487ae3 push r14                                                                                                          |     
+    0x00487ae5 push r13                                                                                                          |     
+    0x00487ae7 push r12                                                                                                          |     
+    0x00487ae9 push rbx                                                                                                          |     
+    0x00487aea sub rsp, 0x18                                                                                                     |     
+    0x00487aee mov qword [rsp + 0x10], rdx                                                                                       |     *((rsp + 0x10)) = rdx;
+    0x00487af3 mov r15, rsi                                                                                                      |     r15 = rsi;
+    0x00487af6 mov r12, qword [rdi]                                                                                              |     r12 = *(rdi);
+    0x00487af9 lea rax, [r12 + 0x20]                                                                                             |     rax = r12 + 0x20;
+    0x00487afe mov qword [rsp + 8], rdi                                                                                          |     *((rsp + 8)) = rdi;
+    0x00487b03 mov qword [rdi], rax                                                                                              |     *(rdi) = rax;
+    0x00487b06 mov bl, byte [rsi]                                                                                                |     bl = *(rsi);
+    0x00487b08 mov r14, rsi                                                                                                      |     r14 = rsi;
+    0x00487b0b test bl, bl                                                                                                       |     
+                                                                                                                                 |     if (bl == 0) {
+    0x00487b0d je 0x487b3e                                                                                                       |         goto label_2;
+                                                                                                                                 |     }
+    0x00487b0f call 0x401d10                                                                                                     |     rax = ctype_b_loc ();
+    0x00487b14 mov rax, qword [rax]                                                                                              |     rax = *(rax);
+    0x00487b17 mov r14, r15                                                                                                      |     r14 = r15;
+    0x00487b1a nop word [rax + rax]                                                                                              |     
+                                                                                                                                 |     do {
+    0x00487b20 movsx rcx, bl                                                                                                     |         rcx = (int64_t) bl;
+    0x00487b24 test byte [rax + rcx*2 + 1], 0x20                                                                                 |         
+                                                                                                                                 |         if ((*((rax + rcx*2 + 1)) & 0x20) == 0) {
+    0x00487b29 je 0x487b39                                                                                                       |             goto label_3;
+                                                                                                                                 |         }
+    0x00487b2b movzx ebx, byte [r14 + 1]                                                                                         |         ebx = *((r14 + 1));
+    0x00487b30 inc r14                                                                                                           |         r14++;
+    0x00487b33 test bl, bl                                                                                                       |         
+    0x00487b35 jne 0x487b20                                                                                                      |         
+                                                                                                                                 |     } while (bl != 0);
+    0x00487b37 jmp 0x487b3e                                                                                                      |     goto label_2;
+                                                                                                                                 | label_3:
+    0x00487b39 cmp bl, 0x7b                                                                                                      |     
+                                                                                                                                 |     if (bl != 0x7b) {
+    0x00487b3c je 0x487b4d                                                                                                       |         
+                                                                                                                                 | label_2:
+    0x00487b3e mov edi, 0x49793e                                                                                                 |         
+    0x00487b43 mov rsi, r15                                                                                                      |         rsi = r15;
+    0x00487b46 xor eax, eax                                                                                                      |         eax = 0;
+    0x00487b48 call 0x401b60                                                                                                     |         printf ("Parse error *currentChar == '{': %s\n");
+                                                                                                                                 |     }
+    0x00487b4d mov bpl, byte [r14 + 1]                                                                                           |     bpl = *((r14 + 1));
+    0x00487b51 inc r14                                                                                                           |     r14++;
+    0x00487b54 call 0x401d10                                                                                                     |     rax = ctype_b_loc ();
+    0x00487b59 mov r13, rax                                                                                                      |     r13 = rax;
+    0x00487b5c test bpl, bpl                                                                                                     |     
+                                                                                                                                 |     if (bpl == 0) {
+    0x00487b5f je 0x487b88                                                                                                       |         goto label_4;
+                                                                                                                                 |     }
+    0x00487b61 mov rax, qword [r13]                                                                                              |     rax = *(r13);
+    0x00487b65 nop word cs:[rax + rax]                                                                                           |     
+    0x00487b6f nop                                                                                                               |     
+                                                                                                                                 |     do {
+    0x00487b70 movsx rcx, bpl                                                                                                    |         rcx = (int64_t) bpl;
+    0x00487b74 test byte [rax + rcx*2 + 1], 0x20                                                                                 |         
+                                                                                                                                 |         if ((*((rax + rcx*2 + 1)) & 0x20) == 0) {
+    0x00487b79 je 0x487b8a                                                                                                       |             goto label_5;
+                                                                                                                                 |         }
+    0x00487b7b movzx ebp, byte [r14 + 1]                                                                                         |         ebp = *((r14 + 1));
+    0x00487b80 inc r14                                                                                                           |         r14++;
+    0x00487b83 test bpl, bpl                                                                                                     |         
+    0x00487b86 jne 0x487b70                                                                                                      |         
+                                                                                                                                 |     } while (bpl != 0);
+                                                                                                                                 | label_4:
+    0x00487b88 xor ebp, ebp                                                                                                      |     ebp = 0;
+                                                                                                                                 | label_5:
+    0x00487b8a mov rax, qword [r13]                                                                                              |     rax = *(r13);
+    0x00487b8e movsx rcx, bpl                                                                                                    |     rcx = (int64_t) bpl;
+    0x00487b92 test byte [rax + rcx*2 + 1], 8                                                                                    |     
+                                                                                                                                 |     if ((*((rax + rcx*2 + 1)) & 8) == 0) {
+    0x00487b97 jne 0x487ba8                                                                                                      |         
+    0x00487b99 mov edi, 0x497963                                                                                                 |         
+    0x00487b9e mov rsi, r15                                                                                                      |         rsi = r15;
+    0x00487ba1 xor eax, eax                                                                                                      |         eax = 0;
+    0x00487ba3 call 0x401b60                                                                                                     |         printf ("Parse error isdigit(*currentChar): %s\n");
+                                                                                                                                 |     }
+    0x00487ba8 mov rax, qword [rsp + 0x10]                                                                                       |     rax = *((rsp + 0x10));
+    0x00487bad mov rbx, qword [rax]                                                                                              |     rbx = *(rax);
+    0x00487bb0 mov rdi, r14                                                                                                      |     
+    0x00487bb3 xor esi, esi                                                                                                      |     
+    0x00487bb5 mov edx, 0xa                                                                                                      |     
+    0x00487bba call 0x401d80                                                                                                     |     eax = strtol (r14, 0, 0xa);
+    0x00487bbf mov rdi, r12                                                                                                      |     rdi = r12;
+    0x00487bc2 mov esi, eax                                                                                                      |     esi = eax;
+    0x00487bc4 call rbx                                                                                                          |     void (*rbx)() ();
+    0x00487bc6 mov rcx, qword [r13]                                                                                              |     rcx = *(r13);
+    0x00487bca nop word [rax + rax]                                                                                              |     
+                                                                                                                                 |     do {
+    0x00487bd0 movsx rax, byte [r14]                                                                                             |         rax = *(r14);
+    0x00487bd4 movzx edx, word [rcx + rax*2]                                                                                     |         edx = *((rcx + rax*2));
+    0x00487bd8 inc r14                                                                                                           |         r14++;
+    0x00487bdb test edx, 0x800                                                                                                   |         
+    0x00487be1 jne 0x487bd0                                                                                                      |         
+                                                                                                                                 |     } while ((edx & 0x800) != 0);
+    0x00487be3 lea rbp, [r14 - 1]                                                                                                |     rbp = r14 - 1;
+    0x00487be7 test al, al                                                                                                       |     
+                                                                                                                                 |     if (al == 0) {
+    0x00487be9 je 0x487c27                                                                                                       |         goto label_6;
+                                                                                                                                 |     }
+    0x00487beb test edx, 0x2000                                                                                                  |     
+                                                                                                                                 |     if ((edx & 0x2000) == 0) {
+    0x00487bf1 je 0x487c19                                                                                                       |         goto label_7;
+                                                                                                                                 |     }
+    0x00487bf3 nop word cs:[rax + rax]                                                                                           |     
+    0x00487bfd nop dword [rax]                                                                                                   |     
+                                                                                                                                 |     do {
+    0x00487c00 movsx rax, byte [r14]                                                                                             |         rax = *(r14);
+    0x00487c04 test rax, rax                                                                                                     |         
+                                                                                                                                 |         if (rax == 0) {
+    0x00487c07 je 0x487c24                                                                                                       |             goto label_8;
+                                                                                                                                 |         }
+    0x00487c09 inc r14                                                                                                           |         r14++;
+    0x00487c0c test byte [rcx + rax*2 + 1], 0x20                                                                                 |         
+    0x00487c11 jne 0x487c00                                                                                                      |         
+                                                                                                                                 |     } while ((*((rcx + rax*2 + 1)) & 0x20) != 0);
+    0x00487c13 dec r14                                                                                                           |     r14--;
+    0x00487c16 mov rbp, r14                                                                                                      |     
+                                                                                                                                 | label_7:
+    0x00487c19 cmp al, 0x3a                                                                                                      |     
+    0x00487c1b mov rbx, qword [rsp + 8]                                                                                          |     rbx = *((rsp + 8));
+                                                                                                                                 |     if (al == 0x3a) {
+    0x00487c20 jne 0x487c2c                                                                                                      |         
+    0x00487c22 jmp 0x487c3b                                                                                                      |         goto label_9;
+                                                                                                                                 | label_8:
+    0x00487c24 mov rbp, r14                                                                                                      |         
+                                                                                                                                 | label_6:
+    0x00487c27 mov rbx, qword [rsp + 8]                                                                                          |         rbx = *((rsp + 8));
+                                                                                                                                 |     }
+    0x00487c2c mov edi, 0x49798a                                                                                                 |     
+    0x00487c31 mov rsi, r15                                                                                                      |     rsi = r15;
+    0x00487c34 xor eax, eax                                                                                                      |     eax = 0;
+    0x00487c36 call 0x401b60                                                                                                     |     printf ("Parse error ':' == *currentChar: %s\n");
+                                                                                                                                 | label_9:
+    0x00487c3b mov al, byte [rbp + 1]                                                                                            |     al = *((rbp + 1));
+    0x00487c3e inc rbp                                                                                                           |     rbp++;
+    0x00487c41 test al, al                                                                                                       |     
+                                                                                                                                 |     if (al == 0) {
+    0x00487c43 je 0x487c72                                                                                                       |         goto label_10;
+                                                                                                                                 |     }
+    0x00487c45 mov rcx, qword [r13]                                                                                              |     rcx = *(r13);
+    0x00487c49 nop dword [rax]                                                                                                   |     
+                                                                                                                                 |     do {
+    0x00487c50 movsx rdx, al                                                                                                     |         rdx = (int64_t) al;
+    0x00487c54 test byte [rcx + rdx*2 + 1], 0x20                                                                                 |         
+                                                                                                                                 |         if ((*((rcx + rdx*2 + 1)) & 0x20) == 0) {
+    0x00487c59 je 0x487c68                                                                                                       |             goto label_11;
+                                                                                                                                 |         }
+    0x00487c5b movzx eax, byte [rbp + 1]                                                                                         |         eax = *((rbp + 1));
+    0x00487c5f inc rbp                                                                                                           |         rbp++;
+    0x00487c62 test al, al                                                                                                       |         
+    0x00487c64 jne 0x487c50                                                                                                      |         
+                                                                                                                                 |     } while (al != 0);
+    0x00487c66 jmp 0x487c72                                                                                                      |     goto label_10;
+                                                                                                                                 | label_11:
+    0x00487c68 mov ecx, eax                                                                                                      |     ecx = eax;
+    0x00487c6a or cl, 0x10                                                                                                       |     cl |= 0x10;
+    0x00487c6d cmp cl, 0x52                                                                                                      |     
+                                                                                                                                 |     if (cl != 0x52) {
+    0x00487c70 je 0x487c84                                                                                                       |         
+                                                                                                                                 | label_10:
+    0x00487c72 mov edi, 0x4979af                                                                                                 |         
+    0x00487c77 mov rsi, r15                                                                                                      |         rsi = r15;
+    0x00487c7a xor eax, eax                                                                                                      |         eax = 0;
+    0x00487c7c call 0x401b60                                                                                                     |         printf ("Parse error 'R' == *currentChar || 'B' == *currentChar: %s\n");
+    0x00487c81 mov al, byte [rbp]                                                                                                |         al = *(rbp);
+                                                                                                                                 |     }
+    0x00487c84 xor ecx, ecx                                                                                                      |     ecx = 0;
+    0x00487c86 cmp al, 0x52                                                                                                      |     
+    0x00487c88 setne cl                                                                                                          |     cl = (al != 0x52) ? 1 : 0;
+    0x00487c8b mov qword [r12], rcx                                                                                              |     *(r12) = rcx;
+    0x00487c8f xorps xmm0, xmm0                                                                                                  |     __asm ("xorps xmm0, xmm0");
+    0x00487c92 movups xmmword [r12 + 8], xmm0                                                                                    |     __asm ("movups xmmword [r12 + 8], xmm0");
+    0x00487c98 mov al, byte [rbp + 1]                                                                                            |     al = *((rbp + 1));
+    0x00487c9b test al, al                                                                                                       |     
+                                                                                                                                 |     if (al == 0) {
+    0x00487c9d je 0x487ccb                                                                                                       |         goto label_12;
+                                                                                                                                 |     }
+    0x00487c9f lea rcx, [r12 + 8]                                                                                                |     rcx = r12 + 8;
+    0x00487ca4 mov rdx, qword [r13]                                                                                              |     rdx = *(r13);
+    0x00487ca8 add rbp, 2                                                                                                        |     rbp += 2;
+    0x00487cac nop dword [rax]                                                                                                   |     
+                                                                                                                                 |     do {
+    0x00487cb0 movsx rsi, al                                                                                                     |         rsi = (int64_t) al;
+    0x00487cb4 test byte [rdx + rsi*2 + 1], 0x20                                                                                 |         
+                                                                                                                                 |         if ((*((rdx + rsi*2 + 1)) & 0x20) == 0) {
+    0x00487cb9 je 0x487cd0                                                                                                       |             goto label_13;
+                                                                                                                                 |         }
+    0x00487cbb movzx eax, byte [rbp]                                                                                             |         eax = *(rbp);
+    0x00487cbf inc rbp                                                                                                           |         rbp++;
+    0x00487cc2 test al, al                                                                                                       |         
+    0x00487cc4 jne 0x487cb0                                                                                                      |         
+                                                                                                                                 |     } while (al != 0);
+    0x00487cc6 dec rbp                                                                                                           |     rbp--;
+    0x00487cc9 jmp 0x487ce3                                                                                                      |     goto label_14;
+                                                                                                                                 | label_12:
+    0x00487ccb inc rbp                                                                                                           |     rbp++;
+    0x00487cce jmp 0x487ce3                                                                                                      |     goto label_14;
+                                                                                                                                 | label_13:
+    0x00487cd0 cmp al, 0x2e                                                                                                      |     
+                                                                                                                                 |     if (al == 0x2e) {
+    0x00487cd2 je 0x487e10                                                                                                       |         goto label_15;
+                                                                                                                                 |     }
+    0x00487cd8 dec rbp                                                                                                           |     rbp--;
+    0x00487cdb cmp al, 0x7d                                                                                                      |     
+                                                                                                                                 |     if (al == 0x7d) {
+    0x00487cdd je 0x487dfb                                                                                                       |         goto label_16;
+                                                                                                                                 |     }
+                                                                                                                                 | label_14:
+    0x00487ce3 mov rax, qword [rbx]                                                                                              |     rax = *(rbx);
+    0x00487ce6 mov qword [r12 + 8], rax                                                                                          |     *((r12 + 8)) = rax;
+    0x00487ceb mov rdi, rbx                                                                                                      |     rdi = rbx;
+    0x00487cee mov rsi, rbp                                                                                                      |     rsi = rbp;
+    0x00487cf1 mov rdx, qword [rsp + 0x10]                                                                                       |     rdx = *((rsp + 0x10));
+    0x00487cf6 call 0x487ae0                                                                                                     |     rax = char const*ggParseNode<IntNode,void(*)(IntNode*,int)>(IntNode**,char const*,void(*const&)(IntNode*,int)) ();
+                                                                                                                                 |     goto label_0;
+    0x00487cfb mov rbp, rax                                                                                                      |     
+    0x00487cfe mov rax, qword [r12 + 8]                                                                                          |     rax = *((r12 + 8));
+    0x00487d03 mov rcx, qword [rax]                                                                                              |     rcx = *(rax);
+    0x00487d06 and ecx, 1                                                                                                        |     ecx &= 1;
+    0x00487d09 or rcx, r12                                                                                                       |     rcx |= r12;
+    0x00487d0c mov qword [rax], rcx                                                                                              |     *(rax) = rcx;
+                                                                                                                                 | label_1:
+    0x00487d0f mov al, byte [rbp]                                                                                                |     al = *(rbp);
+    0x00487d12 test al, al                                                                                                       |     
+                                                                                                                                 |     if (al == 0) {
+    0x00487d14 je 0x487d3c                                                                                                       |         goto label_17;
+                                                                                                                                 |     }
+    0x00487d16 mov rcx, qword [r13]                                                                                              |     rcx = *(r13);
+    0x00487d1a nop word [rax + rax]                                                                                              |     
+                                                                                                                                 |     do {
+    0x00487d20 movsx rdx, al                                                                                                     |         rdx = (int64_t) al;
+    0x00487d24 test byte [rcx + rdx*2 + 1], 0x20                                                                                 |         
+                                                                                                                                 |         if ((*((rcx + rdx*2 + 1)) & 0x20) == 0) {
+    0x00487d29 je 0x487d38                                                                                                       |             goto label_18;
+                                                                                                                                 |         }
+    0x00487d2b movzx eax, byte [rbp + 1]                                                                                         |         eax = *((rbp + 1));
+    0x00487d2f inc rbp                                                                                                           |         rbp++;
+    0x00487d32 test al, al                                                                                                       |         
+    0x00487d34 jne 0x487d20                                                                                                      |         
+                                                                                                                                 |     } while (al != 0);
+    0x00487d36 jmp 0x487d3c                                                                                                      |     goto label_17;
+                                                                                                                                 | label_18:
+    0x00487d38 cmp al, 0x2c                                                                                                      |     
+                                                                                                                                 |     if (al != 0x2c) {
+    0x00487d3a je 0x487d4b                                                                                                       |         
+                                                                                                                                 | label_17:
+    0x00487d3c mov edi, 0x4979eb                                                                                                 |         
+    0x00487d41 mov rsi, r15                                                                                                      |         rsi = r15;
+    0x00487d44 xor eax, eax                                                                                                      |         eax = 0;
+    0x00487d46 call 0x401b60                                                                                                     |         printf ("Parse error ',' == *currentChar: %s\n");
+                                                                                                                                 |     }
+    0x00487d4b mov al, byte [rbp + 1]                                                                                            |     al = *((rbp + 1));
+    0x00487d4e test al, al                                                                                                       |     
+                                                                                                                                 |     if (al == 0) {
+    0x00487d50 je 0x487d78                                                                                                       |         goto label_19;
+                                                                                                                                 |     }
+    0x00487d52 mov rcx, qword [r13]                                                                                              |     rcx = *(r13);
+    0x00487d56 add rbp, 2                                                                                                        |     rbp += 2;
+    0x00487d5a nop word [rax + rax]                                                                                              |     
+                                                                                                                                 |     do {
+    0x00487d60 movsx rdx, al                                                                                                     |         rdx = (int64_t) al;
+    0x00487d64 test byte [rcx + rdx*2 + 1], 0x20                                                                                 |         
+                                                                                                                                 |         if ((*((rcx + rdx*2 + 1)) & 0x20) == 0) {
+    0x00487d69 je 0x487d7d                                                                                                       |             goto label_20;
+                                                                                                                                 |         }
+    0x00487d6b movzx eax, byte [rbp]                                                                                             |         eax = *(rbp);
+    0x00487d6f inc rbp                                                                                                           |         rbp++;
+    0x00487d72 test al, al                                                                                                       |         
+    0x00487d74 jne 0x487d60                                                                                                      |         
+                                                                                                                                 |     } while (al != 0);
+    0x00487d76 jmp 0x487d8c                                                                                                      |     goto label_21;
+                                                                                                                                 | label_19:
+    0x00487d78 inc rbp                                                                                                           |     rbp++;
+    0x00487d7b jmp 0x487d8f                                                                                                      |     goto label_22;
+                                                                                                                                 | label_20:
+    0x00487d7d cmp al, 0x2e                                                                                                      |     
+                                                                                                                                 |     if (al == 0x2e) {
+    0x00487d7f jne 0x487d8c                                                                                                      |         
+    0x00487d81 mov qword [r12 + 0x10], 0                                                                                         |         *((r12 + 0x10)) = 0;
+    0x00487d8a jmp 0x487dbb                                                                                                      |         
+                                                                                                                                 |     } else {
+                                                                                                                                 | label_21:
+    0x00487d8c dec rbp                                                                                                           |         rbp--;
+                                                                                                                                 | label_22:
+    0x00487d8f mov rax, qword [rbx]                                                                                              |         rax = *(rbx);
+    0x00487d92 mov qword [r12 + 0x10], rax                                                                                       |         *((r12 + 0x10)) = rax;
+    0x00487d97 mov rdi, rbx                                                                                                      |         rdi = rbx;
+    0x00487d9a mov rsi, rbp                                                                                                      |         rsi = rbp;
+    0x00487d9d mov rdx, qword [rsp + 0x10]                                                                                       |         rdx = *((rsp + 0x10));
+    0x00487da2 call 0x487ae0                                                                                                     |         rax = char const*ggParseNode<IntNode,void(*)(IntNode*,int)>(IntNode**,char const*,void(*const&)(IntNode*,int)) ();
+                                                                                                                                 |         goto label_0;
+    0x00487da7 mov rbp, rax                                                                                                      |         
+    0x00487daa mov rax, qword [r12 + 0x10]                                                                                       |         rax = *((r12 + 0x10));
+    0x00487daf mov rcx, qword [rax]                                                                                              |         rcx = *(rax);
+    0x00487db2 and ecx, 1                                                                                                        |         ecx &= 1;
+    0x00487db5 or rcx, r12                                                                                                       |         rcx |= r12;
+    0x00487db8 mov qword [rax], rcx                                                                                              |         *(rax) = rcx;
+                                                                                                                                 |     }
+    0x00487dbb mov al, byte [rbp]                                                                                                |     al = *(rbp);
+    0x00487dbe test al, al                                                                                                       |     
+                                                                                                                                 |     if (al == 0) {
+    0x00487dc0 je 0x487dec                                                                                                       |         goto label_23;
+                                                                                                                                 |     }
+    0x00487dc2 mov rcx, qword [r13]                                                                                              |     rcx = *(r13);
+    0x00487dc6 nop word cs:[rax + rax]                                                                                           |     
+                                                                                                                                 |     do {
+    0x00487dd0 movsx rdx, al                                                                                                     |         rdx = (int64_t) al;
+    0x00487dd4 test byte [rcx + rdx*2 + 1], 0x20                                                                                 |         
+                                                                                                                                 |         if ((*((rcx + rdx*2 + 1)) & 0x20) == 0) {
+    0x00487dd9 je 0x487de8                                                                                                       |             goto label_24;
+                                                                                                                                 |         }
+    0x00487ddb movzx eax, byte [rbp + 1]                                                                                         |         eax = *((rbp + 1));
+    0x00487ddf inc rbp                                                                                                           |         rbp++;
+    0x00487de2 test al, al                                                                                                       |         
+    0x00487de4 jne 0x487dd0                                                                                                      |         
+                                                                                                                                 |     } while (al != 0);
+    0x00487de6 jmp 0x487dec                                                                                                      |     goto label_23;
+                                                                                                                                 | label_24:
+    0x00487de8 cmp al, 0x7d                                                                                                      |     
+                                                                                                                                 |     if (al != 0x7d) {
+    0x00487dea je 0x487dfb                                                                                                       |         
+                                                                                                                                 | label_23:
+    0x00487dec mov edi, 0x497a10                                                                                                 |         
+    0x00487df1 mov rsi, r15                                                                                                      |         rsi = r15;
+    0x00487df4 xor eax, eax                                                                                                      |         eax = 0;
+    0x00487df6 call 0x401b60                                                                                                     |         printf ("Parse error '}' == *currentChar: %s\n");
+                                                                                                                                 |     }
+                                                                                                                                 | label_16:
+    0x00487dfb inc rbp                                                                                                           |     rbp++;
+    0x00487dfe mov rax, rbp                                                                                                      |     rax = rbp;
+    0x00487e01 add rsp, 0x18                                                                                                     |     
+    0x00487e05 pop rbx                                                                                                           |     
+    0x00487e06 pop r12                                                                                                           |     
+    0x00487e08 pop r13                                                                                                           |     
+    0x00487e0a pop r14                                                                                                           |     
+    0x00487e0c pop r15                                                                                                           |     
+    0x00487e0e pop rbp                                                                                                           |     
+    0x00487e0f ret                                                                                                               |     return rax;
+                                                                                                                                 | label_15:
+    0x00487e10 mov qword [rcx], 0                                                                                                |     *(rcx) = 0;
+    0x00487e17 jmp 0x487d0f                                                                                                      |     goto label_1;
+                                                                                                                                 | }

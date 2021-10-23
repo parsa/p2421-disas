@@ -1,0 +1,28 @@
+    ; assembly                                                                           | /* r2dec pseudo code output */
+                                                                                         | /* balb_controlmanager.t/assume @ 0x4104e0 */
+                                                                                         | #include <stdint.h>
+                                                                                         |  
+    ; (fcn) method.BloombergLP::bslstl::Function_Rep.allocateBuf_unsigned_long_ ()       | uint64_t method_BloombergLP::bslstl::Function_Rep_allocateBuf_unsigned_long_ (uint32_t arg2, uint32_t arg1) {
+                                                                                         |     rsi = arg2;
+                                                                                         |     rdi = arg1;
+                                                                                         |     /* BloombergLP::bslstl::Function_Rep::allocateBuf(unsigned long) */
+    0x004104e0 push rbx                                                                  |     
+    0x004104e1 mov rbx, rdi                                                              |     rbx = rdi;
+    0x004104e4 cmp qword [rdi + 0x38], 0                                                 |     
+    0x004104e9 cmp rsi, 0x31                                                             |     
+                                                                                         |     if (rsi >= 0x31) {
+    0x004104ed jb 0x41050b                                                               |         
+    0x004104ef lea rax, [rsi + 0x31]                                                     |         rax = rsi + 0x31;
+    0x004104f3 cmp rsi, 0xffffffffffffffcf                                               |         
+                                                                                         |         if (rsi <= 0xffffffffffffffcf) {
+    0x004104f7 cmovbe rax, rsi                                                           |             rax = rsi;
+                                                                                         |         }
+    0x004104fb mov rdi, qword [rbx + 0x30]                                               |         rdi = *((rbx + 0x30));
+    0x004104ff mov rcx, qword [rdi]                                                      |         rcx = *(rdi);
+    0x00410502 mov rsi, rax                                                              |         rsi = rax;
+    0x00410505 call qword [rcx + 0x10]                                                   |         rax = uint64_t (*rcx + 0x10)() ();
+    0x00410508 mov qword [rbx], rax                                                      |         *(rbx) = rax;
+                                                                                         |     }
+    0x0041050b pop rbx                                                                   |     
+    0x0041050c ret                                                                       |     return rax;
+                                                                                         | }

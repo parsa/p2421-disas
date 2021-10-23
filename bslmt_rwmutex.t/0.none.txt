@@ -1,0 +1,92 @@
+    ; assembly                                                                                                                                                       | /* r2dec pseudo code output */
+                                                                                                                                                                     | /* bslmt_rwmutex.t/none @ 0x408150 */
+                                                                                                                                                                     | #include <stdint.h>
+                                                                                                                                                                     |  
+    ; (fcn) method.int_BloombergLP::bslmt::ThreadUtil.createWithAllocator_ReaderThread__unsigned_long__ReaderThread_const__BloombergLP::bslma::Allocator_ ()         | uint64_t method_int_BloombergLP::bslmt::ThreadUtil_createWithAllocator_ReaderThread_unsigned_long_ReaderThread_const_BloombergLP::bslma::Allocator_ (int64_t arg3, int64_t arg2, int64_t arg1) {
+                                                                                                                                                                     |     int64_t var_18h;
+                                                                                                                                                                     |     uint32_t var_38h;
+                                                                                                                                                                     |     int64_t var_40h;
+                                                                                                                                                                     |     rdx = arg3;
+                                                                                                                                                                     |     rsi = arg2;
+                                                                                                                                                                     |     rdi = arg1;
+                                                                                                                                                                     |     /* int BloombergLP::bslmt::ThreadUtil::createWithAllocator<ReaderThread>(unsigned long*, ReaderThread const&, BloombergLP::bslma::Allocator*) */
+    0x00408150 push rbp                                                                                                                                              |     
+    0x00408151 push r15                                                                                                                                              |     
+    0x00408153 push r14                                                                                                                                              |     
+    0x00408155 push rbx                                                                                                                                              |     
+    0x00408156 sub rsp, 0x48                                                                                                                                         |     
+    0x0040815a mov r14, rdx                                                                                                                                          |     r14 = rdx;
+    0x0040815d mov rbp, rsi                                                                                                                                          |     
+    0x00408160 mov r15, rdi                                                                                                                                          |     r15 = rdi;
+    0x00408163 test rdx, rdx                                                                                                                                         |     
+                                                                                                                                                                     |     if (rdx == 0) {
+    0x00408166 jne 0x40817c                                                                                                                                          |         
+    0x00408168 mov r14, qword [rip + 0x242801]                                                                                                                       |         r14 = BloombergLP::bslma::Default::s_defaultAllocator;
+    0x0040816f test r14, r14                                                                                                                                         |         
+                                                                                                                                                                     |         if (r14 != 0) {
+    0x00408172 jne 0x40817c                                                                                                                                          |             goto label_0;
+                                                                                                                                                                     |         }
+    0x00408174 call 0x432700                                                                                                                                         |         rax = BloombergLP::bslma::Default::determineAndReturnDefaultAllocator() ();
+    0x00408179 mov r14, rax                                                                                                                                          |         r14 = rax;
+                                                                                                                                                                     |     }
+                                                                                                                                                                     | label_0:
+    0x0040817c mov rax, qword [r14]                                                                                                                                  |     rax = *(r14);
+    0x0040817f mov esi, 0x50                                                                                                                                         |     esi = 0x50;
+    0x00408184 mov rdi, r14                                                                                                                                          |     rdi = r14;
+    0x00408187 call qword [rax + 0x10]                                                                                                                               |     rax = uint64_t (*rax + 0x10)() ();
+    0x0040818a mov rbx, rax                                                                                                                                          |     rbx = rax;
+    0x0040818d mov qword [rax], 0x4082e0                                                                                                                             |     *(rax) = method.BloombergLP::bslmt::EntryPointFunctorAdapter_ReaderThread_.invokerFunction_void_;
+    0x00408194 movups xmm0, xmmword [rbp]                                                                                                                            |     __asm ("movups xmm0, xmmword [rbp]");
+    0x00408198 movups xmmword [rax + 8], xmm0                                                                                                                        |     __asm ("movups xmmword [rax + 8], xmm0");
+    0x0040819c mov rax, qword [rbp + 0x10]                                                                                                                           |     rax = *((rbp + 0x10));
+    0x004081a0 mov qword [rbx + 0x18], rax                                                                                                                           |     *((rbx + 0x18)) = rax;
+    0x004081a4 lea rdi, [rbx + 0x20]                                                                                                                                 |     
+    0x004081a8 mov qword [rbx + 0x20], 0                                                                                                                             |     *((rbx + 0x20)) = 0;
+    0x004081b0 mov qword [rbx + 0x48], r14                                                                                                                           |     *((rbx + 0x48)) = r14;
+    0x004081b4 movaps xmm0, xmmword [rip + 0x2ac05]                                                                                                                  |     xmm0 = .comment;
+    0x004081bb movups xmmword [rbx + 0x38], xmm0                                                                                                                     |     __asm ("movups xmmword [rbx + 0x38], xmm0");
+    0x004081bf mov ecx, 0x4332d5                                                                                                                                     |     
+    0x004081c4 xor esi, esi                                                                                                                                          |     
+    0x004081c6 xor edx, edx                                                                                                                                          |     
+    0x004081c8 call 0x40f410                                                                                                                                         |     bsl::basic_string<char,std::_1::char_traits<char>,bsl::allocator<char>>::privateAppend(char const*,unsigned long,char const*) (rbx + 0x20, 0, 0, "string<...>::assign<Iter>(i,j): string too long");
+    0x004081cd mov rdi, rsp                                                                                                                                          |     
+    0x004081d0 call 0x40ce90                                                                                                                                         |     BloombergLP::bslmt::ThreadAttributes::ThreadAttributes() (rsp);
+    0x004081d5 mov rsi, rsp                                                                                                                                          |     
+    0x004081d8 mov edx, 0x40c3b0                                                                                                                                     |     
+    0x004081dd mov rdi, r15                                                                                                                                          |     
+    0x004081e0 mov rcx, rbx                                                                                                                                          |     
+    0x004081e3 call 0x40d380                                                                                                                                         |     eax = BloombergLP::bslmt::ThreadUtilImpl<BloombergLP::bslmt::Platform::PosixThreads>::create(unsigned long*,BloombergLP::bslmt::ThreadAttributesconst&,void*(*)(void*),void*) (r15, rsp, sym.bslmt_EntryPointFunctorAdapter_invoker, rbx);
+    0x004081e8 mov ebp, eax                                                                                                                                          |     
+    0x004081ea cmp qword [rsp + 0x38], 0x17                                                                                                                          |     
+                                                                                                                                                                     |     if (*((rsp + 0x38)) != 0x17) {
+    0x004081f0 je 0x408202                                                                                                                                           |         
+    0x004081f2 mov rsi, qword [rsp + 0x18]                                                                                                                           |         rsi = *((rsp + 0x18));
+    0x004081f7 mov rdi, qword [rsp + 0x40]                                                                                                                           |         rdi = *((rsp + 0x40));
+    0x004081fc mov rax, qword [rdi]                                                                                                                                  |         rax = *(rdi);
+    0x004081ff call qword [rax + 0x18]                                                                                                                               |         uint64_t (*rax + 0x18)() ();
+                                                                                                                                                                     |     }
+    0x00408202 test ebp, ebp                                                                                                                                         |     
+                                                                                                                                                                     |     if (ebp != 0) {
+    0x00408204 je 0x40822f                                                                                                                                           |         
+    0x00408206 cmp qword [rbx + 0x40], 0x17                                                                                                                          |         
+                                                                                                                                                                     |         if (*((rbx + 0x40)) != 0x17) {
+    0x0040820b je 0x40821b                                                                                                                                           |             
+    0x0040820d mov rsi, qword [rbx + 0x20]                                                                                                                           |             rsi = *((rbx + 0x20));
+    0x00408211 mov rdi, qword [rbx + 0x48]                                                                                                                           |             rdi = *((rbx + 0x48));
+    0x00408215 mov rax, qword [rdi]                                                                                                                                  |             rax = *(rdi);
+    0x00408218 call qword [rax + 0x18]                                                                                                                               |             uint64_t (*rax + 0x18)() ();
+                                                                                                                                                                     |         }
+    0x0040821b mov qword [rbx + 0x38], 0xffffffffffffffff                                                                                                            |         *((rbx + 0x38)) = 0xffffffffffffffff;
+    0x00408223 mov rax, qword [r14]                                                                                                                                  |         rax = *(r14);
+    0x00408226 mov rdi, r14                                                                                                                                          |         rdi = r14;
+    0x00408229 mov rsi, rbx                                                                                                                                          |         rsi = rbx;
+    0x0040822c call qword [rax + 0x18]                                                                                                                               |         uint64_t (*rax + 0x18)() ();
+                                                                                                                                                                     |     }
+    0x0040822f mov eax, ebp                                                                                                                                          |     eax = ebp;
+    0x00408231 add rsp, 0x48                                                                                                                                         |     
+    0x00408235 pop rbx                                                                                                                                               |     
+    0x00408236 pop r14                                                                                                                                               |     
+    0x00408238 pop r15                                                                                                                                               |     
+    0x0040823a pop rbp                                                                                                                                               |     
+    0x0040823b ret                                                                                                                                                   |     return rax;
+                                                                                                                                                                     | }

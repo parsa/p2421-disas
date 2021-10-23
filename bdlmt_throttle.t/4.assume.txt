@@ -1,0 +1,94 @@
+    ; assembly                                           | /* r2dec pseudo code output */
+                                                         | /* bdlmt_throttle.t/assume @ 0x404e10 */
+                                                         | #include <stdint.h>
+                                                         |  
+    ; (fcn) method.Case_Allow_None.threadJobIf__ ()      | int64_t method_Case_Allow_None_threadJobIf_ (void) {
+                                                         |     int64_t var_8h;
+                                                         |     /* Case_Allow_None::threadJobIf() */
+    0x00404e10 push rbp                                  |     
+    0x00404e11 push r14                                  |     
+    0x00404e13 push rbx                                  |     
+    0x00404e14 sub rsp, 0x10                             |     
+    0x00404e18 nop dword [rax + rax]                     |     
+                                                         |     do {
+    0x00404e20 mov eax, dword [rip + 0x25343a]           |         eax = Case_Allow_None::atomicBarrier;
+    0x00404e26 test eax, eax                             |         
+    0x00404e28 js 0x404e20                               |         
+                                                         |     } while (eax < 0);
+    0x00404e2a mov eax, dword [rip + 0x253430]           |     eax = Case_Allow_None::atomicBarrier;
+    0x00404e30 test eax, eax                             |     
+    0x00404e32 jle 0x404e3d                              |     
+                                                         |     while (eax > 0) {
+    0x00404e34 add rsp, 0x10                             |         
+    0x00404e38 pop rbx                                   |         
+    0x00404e39 pop r14                                   |         
+    0x00404e3b pop rbp                                   |         
+    0x00404e3c ret                                       |         return eax;
+    0x00404e3d xor ebx, ebx                              |         ebx = 0;
+    0x00404e3f mov r14, rsp                              |         r14 = rsp;
+    0x00404e42 xor ebp, ebp                              |         ebp = 0;
+    0x00404e44 jmp 0x404e6f                              |         goto label_1;
+                                                         | label_0:
+    0x00404e50 movsxd rax, ebp                           |         rax = (int64_t) ebp;
+    0x00404e53 lock add qword [rip + 0x2533fd], rax      |         *(obj.Case_Allow_None::eventsSoFar) += rax;
+    0x00404e5b mov eax, dword [rip + 0x2533ff]           |         eax = Case_Allow_None::atomicBarrier;
+    0x00404e61 mov ebx, 0                                |         ebx = 0;
+    0x00404e66 mov ebp, 0                                |         
+    0x00404e6b test eax, eax                             |         
+    0x00404e6d jg 0x404e34                               |         
+                                                         |     }
+                                                         |     do {
+                                                         | label_1:
+    0x00404e6f cmp dword [rip + 0x2526ce], 1             |         
+                                                         |         if (*(0x00657544) == 1) {
+    0x00404e76 jne 0x404e80                              |             
+    0x00404e78 call 0x416440                             |             BloombergLP::bsls::SystemTime::nowMonotonicClock() ();
+    0x00404e7d jmp 0x404e85                              |             
+                                                         |         } else {
+    0x00404e80 call 0x4164d0                             |             rax = BloombergLP::bsls::SystemTime::nowRealtimeClock() ();
+                                                         |         }
+    0x00404e85 mov qword [rsp], rax                      |         *(rsp) = rax;
+    0x00404e89 mov dword [rsp + 8], edx                  |         *((rsp + 8)) = edx;
+    0x00404e8d mov edi, 0x657528                         |         
+    0x00404e92 mov rsi, r14                              |         
+    0x00404e95 call 0x412ee0                             |         al = BloombergLP::bdlmt::Throttle::requestPermission(BloombergLP::bsls::TimeIntervalconst&) (method.Case_Allow_None.threadJobIf__::bdlmt_throttle_iFtHrOtTlE, r14);
+    0x00404e9a test al, al                               |         
+                                                         |         if (al != 0) {
+    0x00404e9c je 0x404ec0                               |             
+    0x00404e9e mov esi, 0x43d68a                         |             esi = "0 && \"Action rejected\\n\";
+    0x00404ea3 mov edi, 1                                |             edi = 1;
+    0x00404ea8 mov edx, 0x1eb                            |             edx = 0x1eb;
+    0x00404ead call 0x404f40                             |             (anonymousnamespace)::aSsErT(bool,char const*,int) ();
+    0x00404eb2 jmp 0x404ec2                              |             
+                                                         |         } else {
+    0x00404ec0 inc ebp                                   |             ebp++;
+                                                         |         }
+    0x00404ec2 inc ebx                                   |         ebx++;
+    0x00404ec4 cmp ebx, 0x400                            |         
+    0x00404eca jne 0x404e6f                              |         
+                                                         |     } while (ebx != 0x400);
+    0x00404ecc cmp ebp, 0x400                            |     
+                                                         |     if (ebp == 0x400) {
+    0x00404ed2 je 0x404e50                               |         goto label_0;
+                                                         |     }
+    0x00404ed8 mov edi, 0x6580a8                         |     
+    0x00404edd mov esi, 0x43d6b9                         |     
+    0x00404ee2 mov edx, 5                                |     
+    0x00404ee7 call 0x4128e0                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (obj.std::__1::cout, 0x43d6b9, 5);
+    0x00404eec mov esi, 0x43f0ce                         |     
+    0x00404ef1 mov edx, 2                                |     
+    0x00404ef6 mov rdi, rax                              |     
+    0x00404ef9 call 0x4128e0                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x43f0ce, 2);
+    0x00404efe mov rdi, rax                              |     rdi = rax;
+    0x00404f01 mov esi, ebp                              |     esi = ebp;
+    0x00404f03 call 0x404670                             |     rax = std::_1::basic_ostream<char,std::_1::char_traits<char>>::operator << (int) ();
+    0x00404f08 mov esi, 0x43f63d                         |     
+    0x00404f0d mov edx, 1                                |     
+    0x00404f12 mov rdi, rax                              |     
+    0x00404f15 call 0x4128e0                             |     std::_1::basic_ostream<char,std::_1::char_traits<char>>&std::_1::_put_character_sequence<char,std::_1::char_traits<char>>(std::_1::basic_ostream<char,std::_1::char_traits<char>>&,char const*,unsigned long) (rax, 0x43f63d, 1);
+    0x00404f1a mov esi, 0x43d6a3                         |     esi = "k_TIGHT_ITERATIONS == delta";
+    0x00404f1f mov edi, 1                                |     edi = 1;
+    0x00404f24 mov edx, 0x1f1                            |     edx = 0x1f1;
+    0x00404f29 call 0x404f40                             |     (anonymousnamespace)::aSsErT(bool,char const*,int) ();
+    0x00404f2e jmp 0x404e50                              |     goto label_0;
+                                                         | }
